@@ -1,0 +1,15 @@
+@import '~normalize.css/normalize.css';
+
+html {
+    font-size: 14px;
+}
+
+body {
+    background: #fff;
+    color: #333;
+}
+
+.appContainer {
+    margin: 0 auto;
+    max-width: 800px;
+}

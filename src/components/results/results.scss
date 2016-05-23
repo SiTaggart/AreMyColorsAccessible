@@ -1,0 +1,30 @@
+.contrastResults {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.contrastResult {
+    flex: 1;
+}
+
+.contrastResults-heading {
+    font-size: 15vw;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.contrastResult {
+    width: 33.333333%;
+}
+
+.contrastResult-rating {
+    font-size: 4vw;
+    margin: 0;
+}
+
+.contrastResult-desc {
+    &--large {
+        font-size: 18px;
+    }
+}
