@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import Colorable from 'colorable';
 import './home-styles.scss';
 import Results from '../results';
 import ColorInputs from '../colorInputs';
@@ -28,9 +29,34 @@ class Home extends Component {
     }
 
     render() {
+        let foreground = this.state.foreground;
+        let background = this.state.background;
+        let colorInfo = Colorable([foreground, background])[0].combinations[0];
+
+        // Same foreground and background
+        if (colorInfo === undefined) {
+            colorInfo = {
+                contrast: 0,
+                accessibility: {
+                    aaa: false,
+                    aa: false,
+                    aaaLarge: false,
+                    aaLarge: false
+                }
+            };
+        }
+
+
+        let styles = {
+            container: {
+                background: background,
+                color: foreground
+            }
+        };
+
         return (
-            <main className="home">
-                <Results />
+            <main className="home" style={styles.container}>
+                <Results {...colorInfo} />
                 <ColorInputs
                     {...this.props}
                     {...this.state}
@@ -44,7 +70,9 @@ class Home extends Component {
 }
 
 Home.propTypes = {
-    children: PropTypes.node
+    background: PropTypes.string,
+    children: PropTypes.node,
+    foreground: PropTypes.string
 };
 
 export default Home;

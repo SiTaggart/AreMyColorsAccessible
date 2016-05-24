@@ -2,13 +2,47 @@ import React, { Component, PropTypes } from 'react';
 import './results.scss';
 
 class Results extends Component {
+
+    constructor(props) {
+        super(props);
+    }
+
     render() {
+        let ratio = this.props.contrast.toFixed(2);
+        let smallTextRating;
+        let boldTextRating = this.props.accessibility.aaaLarge ? this.props.accessibility.aaaLarge : this.props.accessibility.aaLarge ;
+        let largeTextRating = this.props.accessibility.aaaLarge ? this.props.accessibility.aaaLarge : this.props.accessibility.aaLarge ;
+
+        if (this.props.accessibility.aaa) {
+            smallTextRating = 'AAA';
+        } else {
+            smallTextRating = this.props.accessibility.aa ? 'AA' : 'Fail';
+        }
+
+        if (this.props.accessibility.aaaLarge) {
+            boldTextRating = largeTextRating = 'AAA';
+        } else {
+            boldTextRating = this.props.accessibility.aaLarge ? 'AA' : 'Fail';
+            largeTextRating = boldTextRating;
+        }
+
+        let overallRating;
+
+        if (smallTextRating === 'AAA' || smallTextRating === 'AA') {
+            overallRating = 'Yup';
+        } else if (smallTextRating === 'Fail' && largeTextRating === 'AA') {
+            overallRating = 'Kinda';
+        } else {
+            overallRating = 'Nope';
+        }
+
+
         return (
             <div className="contrastResults">
-                <h1 className="contrastResults-heading">{'Nope'}</h1>
+                <h1 className="contrastResults-heading">{overallRating + ' ' + ratio}</h1>
                 <div className="contrastResult">
                     <h2 className="contrastResult-rating">
-                        {'AAA'}
+                        {smallTextRating}
                     </h2>
                     <p className="contrastResult-desc">
                         {'Small Text (14pt)'}
@@ -16,7 +50,7 @@ class Results extends Component {
                 </div>
                 <div className="contrastResult">
                     <h2 className="contrastResult-rating">
-                        {'Fail'}
+                        {boldTextRating}
                     </h2>
                     <p className="contrastResult-desc">
                         <strong>{'Bold Text (14pt)'}</strong>
@@ -24,7 +58,7 @@ class Results extends Component {
                 </div>
                 <div className="contrastResult">
                     <h2 className="contrastResult-rating">
-                        {'AA'}
+                        {largeTextRating}
                     </h2>
                     <p className="contrastResult-desc contrastResult-desc--large">
                         {'Large Text (18pt)'}
@@ -35,8 +69,10 @@ class Results extends Component {
     }
 }
 
-Results.PropTypes = {
-    children: PropTypes.node
+Results.propTypes = {
+    children: PropTypes.node,
+    contrast: PropTypes.number,
+    accessibility: PropTypes.object
 };
 
 export default Results;
