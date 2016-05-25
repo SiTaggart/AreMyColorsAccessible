@@ -9,8 +9,8 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            background: '#fff',
-            foreground: '#333'
+            background: '#1276CE',
+            foreground: '#fff'
         };
         this.setBackgroundColor = this.setBackgroundColor.bind(this);
         this.setForegroundColor = this.setForegroundColor.bind(this);
@@ -31,10 +31,11 @@ class Home extends Component {
     render() {
         let foreground = this.state.foreground;
         let background = this.state.background;
-        let colorInfo = Colorable([foreground, background])[0].combinations[0];
+        let colorInfo;
 
-        // Same foreground and background
-        if (colorInfo === undefined) {
+        try {
+            colorInfo = Colorable([foreground, background])[0].combinations[0];
+        } catch(e) {
             colorInfo = {
                 contrast: 0,
                 accessibility: {
@@ -45,7 +46,6 @@ class Home extends Component {
                 }
             };
         }
-
 
         let styles = {
             container: {

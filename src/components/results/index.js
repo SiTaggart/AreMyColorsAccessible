@@ -39,7 +39,7 @@ class Results extends Component {
 
         return (
             <div className="contrastResults">
-                <h1 className="contrastResults-heading">{overallRating + ' ' + ratio}</h1>
+                <h1 className="contrastResults-heading">{overallRating}</h1>
                 <div className="contrastResult">
                     <h2 className="contrastResult-rating">
                         {smallTextRating}
@@ -64,15 +64,28 @@ class Results extends Component {
                         {'Large Text (18pt)'}
                     </p>
                 </div>
+                <div className="contrastResult">
+                    <h2 className="contrastResult-rating">
+                        {ratio}
+                    </h2>
+                    <p className="contrastResult-desc">
+                        {'Ratio'}
+                    </p>
+                </div>
             </div>
         );
     }
 }
 
 Results.propTypes = {
+    accessibility: PropTypes.shape({
+        aa: PropTypes.bool,
+        aaa: PropTypes.bool,
+        aaLarge: PropTypes.bool,
+        aaaLarge: PropTypes.bool
+    }),
     children: PropTypes.node,
-    contrast: PropTypes.number,
-    accessibility: PropTypes.object
+    contrast: PropTypes.number
 };
 
 export default Results;

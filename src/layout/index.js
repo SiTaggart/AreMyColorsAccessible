@@ -7,7 +7,7 @@ class IndexLayout extends Component {
         return (
             <div className="appContainer">
                 {this.props.children}
-                <footer>
+                <footer className="footer">
                     <nav role="navigation">
                         <ul>
                             <li><Link to="/">{'Home'}</Link></li>

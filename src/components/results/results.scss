@@ -1,29 +1,66 @@
+@import '../global/global';
+
 .contrastResults {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 800px;
     text-align: center;
 }
 
 .contrastResult {
-    flex: 1;
+    flex: 1 1 auto;
+    margin-bottom: 4rem;
 }
 
 .contrastResults-heading {
-    font-size: 15vw;
-    margin-bottom: 4rem;
+    font-size: 20vw;
+    margin-bottom: 3rem;
     width: 100%;
+
+    @include breakpoint($small-screen) {
+        margin-bottom: 4rem;
+    }
+
+    @include breakpoint($medium-screen) {
+        font-size: 15vw;
+        margin-bottom: 5rem;
+    }
+
+    @include breakpoint($xlarge-screen) {
+        font-size: 10vw;
+    }
 }
 
 .contrastResult {
-    width: 33.333333%;
+    width: 50%;
+
+    @include breakpoint($small-screen) {
+        width: 25%;
+    }
 }
 
 .contrastResult-rating {
-    font-size: 4vw;
+    font-size: 10vw;
     margin: 0;
+
+    @include breakpoint($small-screen) {
+        font-size: 6vw;
+    }
+
+    @include breakpoint($medium-screen) {
+        font-size: 4vw;
+    }
+
+    @include breakpoint($xlarge-screen) {
+        font-size: 3vw;
+    }
 }
 
 .contrastResult-desc {
+    margin: 0;
+
     &--large {
         font-size: 18px;
     }

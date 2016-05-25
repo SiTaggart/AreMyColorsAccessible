@@ -34,10 +34,16 @@ class ColorInputs extends Component {
     render() {
         let foreground = this.props.foreground;
         let background = this.props.background;
-        let light = Color(background).light();
+        let light;
         let textColor;
 
-        textColor = light ? '#333' : '#fff';
+        try {
+            light = Color(background).light();
+        } catch(e) {
+            light = true;
+        }
+
+        textColor = light ? '#222' : '#fff';
 
         let styles = {
             form: {
@@ -51,38 +57,38 @@ class ColorInputs extends Component {
 
         return (
             <form className="form" style={styles.form}>
-                <fieldset>
-                    <div className="form-control">
-                        <label htmlFor="foreground">{'Foreground'}</label>
-                        <input
-                            id="foreground"
-                            type="text"
-                            value={foreground}
-                            onChange={this.handleForegroundChange}
-                            style={styles.input}
-                        />
-                        <HslSliders
-                            id="foreground-hsl"
-                            value={foreground}
-                            onChange={this.handleForegroundChange}
-                        />
-                    </div>
-                    <div className="form-control">
-                        <label htmlFor="background">{'background'}</label>
-                        <input
-                            id="background"
-                            type="text"
-                            value={background}
-                            onChange={this.handleBackgroundChange}
-                            style={styles.input}
-                        />
-                        <HslSliders
-                            id="background-hsl"
-                            value={background}
-                            onChange={this.handleBackgroundChange}
-                        />
-                    </div>
-                </fieldset>
+                <div className="form-control">
+                    <label className="form-label" htmlFor="foreground">{'Foreground'}</label>
+                    <input
+                        className="form-input"
+                        id="foreground"
+                        type="text"
+                        value={foreground}
+                        onChange={this.handleForegroundChange}
+                        style={styles.input}
+                    />
+                    <HslSliders
+                        id="foreground-hsl"
+                        value={foreground}
+                        onChange={this.handleForegroundChange}
+                    />
+                </div>
+                <div className="form-control">
+                    <label className="form-label" htmlFor="background">{'Background'}</label>
+                    <input
+                        className="form-input"
+                        id="background"
+                        type="text"
+                        value={background}
+                        onChange={this.handleBackgroundChange}
+                        style={styles.input}
+                    />
+                    <HslSliders
+                        id="background-hsl"
+                        value={background}
+                        onChange={this.handleBackgroundChange}
+                    />
+                </div>
             </form>
         );
     }
