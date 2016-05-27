@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import Color from 'color';
 import HslSliders from 'react-hsl-sliders';
 import './colorInputs.scss';
 
@@ -34,16 +33,7 @@ class ColorInputs extends Component {
     render() {
         let foreground = this.props.foreground;
         let background = this.props.background;
-        let light;
-        let textColor;
-
-        try {
-            light = Color(background).light();
-        } catch(e) {
-            light = true;
-        }
-
-        textColor = light ? '#222' : '#fff';
+        let textColor = this.props.isLight ? '#222' : '#fff';
 
         let styles = {
             form: {
@@ -98,6 +88,7 @@ ColorInputs.propTypes = {
     background: PropTypes.string.isRequired,
     children: PropTypes.node,
     foreground: PropTypes.string.isRequired,
+    isLight: PropTypes.bool.isRequired,
     setBackgroundColor: PropTypes.func,
     setForegroundColor: PropTypes.func
 };

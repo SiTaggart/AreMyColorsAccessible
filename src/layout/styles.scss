@@ -8,6 +8,12 @@
     box-sizing: border-box;
 }
 
+html,
+body,
+#app {
+    height: 100%;
+}
+
 html {
     font-size: 14px;
 }
@@ -20,6 +26,10 @@ body {
 
 h1, h2, h3, h4, h5, h6, strong {
     font-weight: 900;
+}
+
+.appContainer {
+    height: 100%;
 }
 
 .footer {
@@ -39,5 +49,9 @@ h1, h2, h3, h4, h5, h6, strong {
     li {
         display: inline-block;
         padding: 0 1rem;
+    }
+
+    a {
+        transition: color 400ms ease-in;
     }
 }

@@ -8,10 +8,6 @@ class Home extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            background: '#1276CE',
-            foreground: '#fff'
-        };
         this.setBackgroundColor = this.setBackgroundColor.bind(this);
         this.setForegroundColor = this.setForegroundColor.bind(this);
     }
@@ -21,16 +17,16 @@ class Home extends Component {
     }
 
     setBackgroundColor(hex) {
-        this.setState({background: hex});
+        this.props.setBackgroundColor(hex);
     }
 
     setForegroundColor(hex) {
-        this.setState({foreground: hex});
+        this.props.setForegroundColor(hex);
     }
 
     render() {
-        let foreground = this.state.foreground;
-        let background = this.state.background;
+        let foreground = this.props.siteData.foreground;
+        let background = this.props.siteData.background;
         let colorInfo;
 
         try {
@@ -47,19 +43,13 @@ class Home extends Component {
             };
         }
 
-        let styles = {
-            container: {
-                background: background,
-                color: foreground
-            }
-        };
-
         return (
-            <main className="home" style={styles.container}>
+            <main className="home">
                 <Results {...colorInfo} />
                 <ColorInputs
-                    {...this.props}
-                    {...this.state}
+                    background={this.props.siteData.background}
+                    foreground={this.props.siteData.foreground}
+                    isLight={this.props.siteData.isLight}
                     setForegroundColor={this.setForegroundColor}
                     setBackgroundColor={this.setBackgroundColor}
                 />
@@ -70,9 +60,14 @@ class Home extends Component {
 }
 
 Home.propTypes = {
-    background: PropTypes.string,
     children: PropTypes.node,
-    foreground: PropTypes.string
+    setBackgroundColor: PropTypes.func,
+    setForegroundColor: PropTypes.func,
+    siteData: PropTypes.shape({
+        background: PropTypes.string,
+        foreground: PropTypes.string,
+        isLight: PropTypes.bool
+    })
 };
 
 export default Home;
