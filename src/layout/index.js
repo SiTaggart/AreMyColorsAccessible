@@ -10,12 +10,16 @@ class IndexLayout extends Component {
         this.state = {
             siteData: {
                 background: '#1276CE',
-                foreground: '#fff',
+                foreground: '#FFFFFF',
                 isLight: false
             }
         };
         this.setBackgroundColor = this.setBackgroundColor.bind(this);
         this.setForegroundColor = this.setForegroundColor.bind(this);
+    }
+
+    componentDidMount() {
+        console.log('check params');
     }
 
     checkBackgroundLightness(hex) {

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import HslSliders from 'react-hsl-sliders';
+import HslSlider from '../hsl-slider';
 import './colorInputs.scss';
 
 class ColorInputs extends Component {
@@ -57,7 +57,7 @@ class ColorInputs extends Component {
                         onChange={this.handleForegroundChange}
                         style={styles.input}
                     />
-                    <HslSliders
+                    <HslSlider
                         id="foreground-hsl"
                         value={foreground}
                         onChange={this.handleForegroundChange}
@@ -73,7 +73,7 @@ class ColorInputs extends Component {
                         onChange={this.handleBackgroundChange}
                         style={styles.input}
                     />
-                    <HslSliders
+                    <HslSlider
                         id="background-hsl"
                         value={background}
                         onChange={this.handleBackgroundChange}

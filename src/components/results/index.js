@@ -45,7 +45,7 @@ class Results extends Component {
                         {smallTextRating}
                     </h2>
                     <p className="contrastResult-desc">
-                        {'Small Text (14pt)'}
+                        {'Small Text (14pt) - 4.5'}
                     </p>
                 </div>
                 <div className="contrastResult">
@@ -53,7 +53,7 @@ class Results extends Component {
                         {boldTextRating}
                     </h2>
                     <p className="contrastResult-desc">
-                        <strong>{'Bold Text (14pt)'}</strong>
+                        <strong>{'Bold Text (14pt) - 3.0'}</strong>
                     </p>
                 </div>
                 <div className="contrastResult">
@@ -61,7 +61,7 @@ class Results extends Component {
                         {largeTextRating}
                     </h2>
                     <p className="contrastResult-desc contrastResult-desc--large">
-                        {'Large Text (18pt)'}
+                        {'Large Text (18pt) - 3.0'}
                     </p>
                 </div>
                 <div className="contrastResult">

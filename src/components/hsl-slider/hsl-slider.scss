@@ -1,0 +1,13 @@
+@import "input-range";
+
+.form-hsl-sliders {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.5rem;
+}
+
+.form-hsl-slider {
+    flex: 1 0 auto;
+    padding: 0 .5rem;
+    width: 33.3333%;
+}

@@ -12,10 +12,6 @@ class Home extends Component {
         this.setForegroundColor = this.setForegroundColor.bind(this);
     }
 
-    componentDidMount() {
-        console.log('check params');
-    }
-
     setBackgroundColor(hex) {
         this.props.setBackgroundColor(hex);
     }
