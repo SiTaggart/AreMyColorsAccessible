@@ -1,12 +1,19 @@
 import React, { Component, PropTypes } from 'react';
+import { Container, LayoutSmall } from '../layouts';
+import './about.scss';
 
 class About extends Component {
     render() {
         return (
-            <main>
-                <h1>{'About'}</h1>
+            <Container className="about">
+                <LayoutSmall>
+                    <h1>{'About'}</h1>
+                    <p>
+                        something
+                    </p>
+                </LayoutSmall>
                 {this.props.children}
-            </main>
+            </Container>
         );
     }
 }
