@@ -31,7 +31,7 @@ class Results extends Component {
         if ((smallTextRating === 'AAA' || smallTextRating === 'AA') && this.props.colorBrightness >= 125 && this.props.colorDifference >= 500) {
             overallRating = 'Yup';
         } else if ((smallTextRating === 'AAA' || smallTextRating === 'AA')) {
-            overallRating = 'Kinda';
+            overallRating = 'Yeah...';
         } else if (smallTextRating === 'Fail' && largeTextRating === 'AA') {
             overallRating = 'Kinda';
         } else {
