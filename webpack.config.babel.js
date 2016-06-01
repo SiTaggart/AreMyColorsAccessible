@@ -1,6 +1,7 @@
-import path from 'path'
-import webpack from 'webpack'
-import WebpackNotifierPlugin from 'webpack-notifier'
+import autoprefixer from 'autoprefixer';
+import path from 'path';
+import webpack from 'webpack';
+import WebpackNotifierPlugin from 'webpack-notifier';
 
 let config = {
     context: path.join(__dirname, 'src'),
@@ -39,7 +40,7 @@ let config = {
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loaders: ['style', 'css', 'sass']
+                loaders: ['style', 'css', 'postcss', 'sass']
             },
             {
                 test: /\.(jpg|png|ttf|eot|woff|woff2|svg)$/,
@@ -52,21 +53,24 @@ let config = {
             }
         ]
     },
+    postcss: function () {
+        return [autoprefixer];
+    },
     plugins: [
         new WebpackNotifierPlugin()
     ]
-}
+};
 
 if (process.env.NODE_ENV === 'production') {
-    config.devtool = 'source-map'
-    config.devServer = {}
+    config.devtool = 'source-map';
+    config.devServer = {};
     config.plugins = [
         new webpack.DefinePlugin({
             'process.env': {
                 'NODE_ENV': JSON.stringify('production')
             }
         })
-    ]
+    ];
 }
 
-export default config
+export default config;

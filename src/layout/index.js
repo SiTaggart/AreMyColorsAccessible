@@ -1,5 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
+import debounce from 'lodash/debounce';
+import isEmpty from 'lodash/isEmpty';
+import qs from 'query-string';
 import Color from 'color';
 import './styles.scss';
 
@@ -14,12 +17,17 @@ class IndexLayout extends Component {
                 isLight: false
             }
         };
+        this.componentDidMount = this.componentDidMount.bind(this);
         this.setBackgroundColor = this.setBackgroundColor.bind(this);
         this.setForegroundColor = this.setForegroundColor.bind(this);
+        this.updateHash = this.updateHash.bind(this);
     }
 
     componentDidMount() {
-        console.log('check params');
+        let query = this.props.location.query;
+        if(isEmpty(query)) return;
+        query.isLight = (query.isLight == 'true');
+        this.setState({siteData: query});
     }
 
     checkBackgroundLightness(hex) {
@@ -38,13 +46,18 @@ class IndexLayout extends Component {
         let siteData = this.state.siteData;
         siteData.background = hex;
         siteData.isLight = this.checkBackgroundLightness(hex);
-        this.setState({siteData: siteData});
+        this.setState({siteData: siteData}, debounce(this.updateHash, 200));
     }
 
     setForegroundColor(hex) {
         let siteData = this.state.siteData;
         siteData.foreground = hex;
-        this.setState({siteData: siteData});
+        this.setState({siteData: siteData}, debounce(this.updateHash, 200));
+    }
+
+    updateHash() {
+        const query = '?' + qs.stringify(this.state.siteData);
+        window.history.pushState(this.state, 'Are My Colors Accessible', query);
     }
 
     render() {
@@ -80,7 +93,10 @@ class IndexLayout extends Component {
 }
 
 IndexLayout.propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
+    location: PropTypes.shape({
+        query: PropTypes.object
+    })
 };
 
 export default IndexLayout;

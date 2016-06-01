@@ -9,7 +9,7 @@ class About extends Component {
                 <LayoutSmall>
                     <h1>{'About'}</h1>
                     <p>
-                        something
+                        {'something'}
                     </p>
                 </LayoutSmall>
                 {this.props.children}

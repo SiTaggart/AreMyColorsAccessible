@@ -25,6 +25,7 @@
     "react-router": "^2.4.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "babel-core": "^6.8.0",
     "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.4",
@@ -39,6 +40,7 @@
     "file-loader": "^0.8.5",
     "json-loader": "^0.5.4",
     "node-sass": "^3.7.0",
+    "postcss-loader": "^0.9.1",
     "rimraf": "^2.5.2",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.1",
