@@ -28,10 +28,8 @@ class Results extends Component {
 
         let overallRating;
 
-        if ((smallTextRating === 'AAA' || smallTextRating === 'AA') && this.props.colorBrightness >= 125 && this.props.colorDifference >= 500) {
+        if ((smallTextRating === 'AAA' || smallTextRating === 'AA')) {
             overallRating = 'Yup';
-        } else if ((smallTextRating === 'AAA' || smallTextRating === 'AA')) {
-            overallRating = 'Yeah...';
         } else if (smallTextRating === 'Fail' && largeTextRating === 'AA') {
             overallRating = 'Kinda';
         } else {
@@ -74,22 +72,6 @@ class Results extends Component {
                         {'Ratio'}
                     </p>
                 </div>
-                <div className="contrastResult">
-                    <h2 className="contrastResult-rating">
-                        {this.props.colorBrightness}
-                    </h2>
-                    <p className="contrastResult-desc">
-                        {'Brightness >= 125'}
-                    </p>
-                </div>
-                <div className="contrastResult">
-                    <h2 className="contrastResult-rating">
-                        {this.props.colorDifference}
-                    </h2>
-                    <p className="contrastResult-desc">
-                        {'Difference >= 500'}
-                    </p>
-                </div>
             </div>
         );
     }
@@ -103,8 +85,6 @@ Results.propTypes = {
         aaaLarge: PropTypes.bool
     }),
     children: PropTypes.node,
-    colorBrightness: PropTypes.number,
-    colorDifference: PropTypes.number,
     contrast: PropTypes.number
 };
 

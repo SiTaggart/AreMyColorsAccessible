@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import Color from 'color';
+import debounce from 'lodash/debounce';
+import isEqual from 'lodash/isEqual';
 import './hsl-slider.scss';
 
 class HslSlider extends Component {
@@ -33,19 +35,26 @@ class HslSlider extends Component {
         });
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return !isEqual(this.state, nextState);
+    }
+
     handleHueChange(e) {
-        this.setState({hue: e.target.value});
-        this.updateColor();
+        this.setState({
+            'hue': parseInt(e.target.value)
+        }, debounce(this.updateColor, 200));
     }
 
     handleSaturationChange(e) {
-        this.setState({saturation: e.target.value});
-        this.updateColor();
+        this.setState({
+            'saturation': parseInt(e.target.value)
+        }, debounce(this.updateColor, 200));
     }
 
     handleLightnessChange(e) {
-        this.setState({lightness: e.target.value});
-        this.updateColor();
+        this.setState({
+            'lightness': parseInt(e.target.value)
+        }, debounce(this.updateColor, 200));
     }
 
     renderRangeInput(range) {
@@ -65,7 +74,7 @@ class HslSlider extends Component {
                     min={range.min}
                     onChange={range.handleOnChange}
                     type="range"
-                    value={range.value}
+                    defaultValue={range.value}
                 />
             </div>
         );
