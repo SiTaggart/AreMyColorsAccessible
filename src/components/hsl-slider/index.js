@@ -8,7 +8,7 @@ class HslSlider extends Component {
 
     constructor(props) {
         super(props);
-        let hsl = Color(this.props.value).hsl();
+        const hsl = Color(this.props.value).hsl();
         this.state = {
             hue: hsl.h,
             saturation: hsl.s,
@@ -58,7 +58,7 @@ class HslSlider extends Component {
     }
 
     renderRangeInput(range) {
-        let id = this.props.id + '-' + range.label;
+        const id = this.props.id + '-' + range.label;
         return(
             <div key={id} className="form-hsl-slider">
                 <label
@@ -81,7 +81,7 @@ class HslSlider extends Component {
     }
 
     updateColor() {
-        let hex = Color({
+        const hex = Color({
             h: this.state.hue,
             s: this.state.saturation,
             l: this.state.lightness
@@ -92,7 +92,7 @@ class HslSlider extends Component {
     }
 
     render() {
-        let hslRanges = [
+        const hslRanges = [
             {
                 label: 'Hue',
                 min: 0,

@@ -40,9 +40,9 @@ class Home extends Component {
     }
 
     render() {
-        let foreground = this.props.siteData.foreground;
-        let background = this.props.siteData.background;
-        let colorInfo = this.getColorInfo(background, foreground);
+        const foreground = this.props.siteData.foreground;
+        const background = this.props.siteData.background;
+        const colorInfo = this.getColorInfo(background, foreground);
 
         return (
             <Container className="home">

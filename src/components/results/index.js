@@ -8,7 +8,7 @@ class Results extends Component {
     }
 
     render() {
-        let ratio = this.props.contrast.toFixed(2);
+        const ratio = this.props.contrast.toFixed(2);
         let smallTextRating;
         let boldTextRating = this.props.accessibility.aaaLarge ? this.props.accessibility.aaaLarge : this.props.accessibility.aaLarge ;
         let largeTextRating = this.props.accessibility.aaaLarge ? this.props.accessibility.aaaLarge : this.props.accessibility.aaLarge ;

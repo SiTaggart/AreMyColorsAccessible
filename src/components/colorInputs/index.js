@@ -31,11 +31,11 @@ class ColorInputs extends Component {
     }
 
     render() {
-        let foreground = this.props.foreground;
-        let background = this.props.background;
-        let textColor = this.props.isLight ? '#222' : '#fff';
+        const foreground = this.props.foreground;
+        const background = this.props.background;
+        const textColor = this.props.isLight ? '#222' : '#fff';
 
-        let styles = {
+        const styles = {
             form: {
                 color: textColor
             },
