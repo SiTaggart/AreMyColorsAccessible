@@ -17,6 +17,8 @@
   "license": "MIT",
   "dependencies": {
     "colorable": "^1.0.5",
+    "compression": "^1.6.2",
+    "express": "^4.13.4",
     "lodash": "^4.12.0",
     "normalize.css": "^4.1.1",
     "query-string": "^4.1.0",
