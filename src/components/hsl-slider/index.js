@@ -25,14 +25,14 @@ class HslSlider extends Component {
         let hsl;
         try {
             hsl = Color(newProps.value).hsl();
+            this.setState({
+                hue: hsl.h,
+                saturation: hsl.s,
+                lightness: hsl.l
+            });
         } catch (error) {
             console.error('bad hsl');
         }
-        this.setState({
-            hue: hsl.h,
-            saturation: hsl.s,
-            lightness: hsl.l
-        });
     }
 
     shouldComponentUpdate(nextProps, nextState) {

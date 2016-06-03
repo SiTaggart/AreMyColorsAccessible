@@ -24,7 +24,7 @@ class IndexLayout extends Component {
     }
 
     componentDidMount() {
-        let query = this.props.location.query;
+        const query = this.props.location.query;
         if(isEmpty(query)) return;
         query.isLight = (query.isLight == 'true');
         this.setState({siteData: query});
@@ -61,19 +61,17 @@ class IndexLayout extends Component {
     }
 
     render() {
-        let footerLinksColor = this.state.siteData.isLight ? '#222' : '#fff';
-        let styles = {
-            container: {
-                background: this.state.siteData.background,
-                color: this.state.siteData.foreground
-            },
+        const footerLinksColor = this.state.siteData.isLight ? '#222' : '#fff';
+        const styles = {
             footerLinks: {
                 color: footerLinksColor
             }
         };
+        document.body.style.backgroundColor = this.state.siteData.background;
+        document.body.style.color = this.state.siteData.foreground;
 
         return (
-            <div className="appContainer" style={styles.container}>
+            <div className="appContainer">
                 {React.cloneElement(this.props.children, {
                     siteData: this.state.siteData,
                     setBackgroundColor: this.setBackgroundColor,

@@ -18,6 +18,7 @@
     width: 100%;
 
     @include breakpoint($small-screen) {
+        font-size: 18vw;
         margin-bottom: 4rem;
     }
 

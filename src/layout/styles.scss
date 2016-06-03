@@ -15,13 +15,14 @@ body,
 }
 
 html {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 body {
     background: #fff;
     color: #333;
     font-family: 'Lato', sans-serif;
+    line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6, strong {
@@ -29,16 +30,44 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 .heading-1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
+    text-align: center;
+
+    @include breakpoint($small-screen) {
+        font-size: 3rem;
+    }
+}
+
+a {
+    color: currentColor
+}
+
+.blockquote {
+    margin: 3rem 1rem;
+
+    @include breakpoint($medium-screen) {
+        margin: 3rem -3rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+        font-style: italic;
+    }
+
+    cite {
+        font-size: 1rem;
+        font-style: normal;
+    }
 }
 
 .appContainer {
-    height: 100%;
+    @include breakpoint($small-screen) {
+        height: 100%;
+    }
 }
 
 .footer {
-    bottom: 0;
-    position: absolute;
+    padding: 5rem 0 1rem;
     text-align: center;
     width: 100%;
 }

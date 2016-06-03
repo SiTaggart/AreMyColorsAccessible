@@ -1,12 +1,20 @@
+@import '../global/global';
+
 .home {
-    height: 85%;
     position: relative;
 
+    @include breakpoint($small-screen) {
+        height: 85%;
+    }
+
     .form {
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        right: 0;
         width: 100%;
+
+        @include breakpoint($small-screen) {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+        }
     }
 }
