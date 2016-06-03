@@ -6,4 +6,8 @@ var app = express();
 app.use(compression());
 
 app.use(express.static(__dirname + '/build'));
-app.listen(process.env.PORT || 5000);
+
+app.get('*', function(req, res) {
+    res.sendFile('./build/index.html', { root : __dirname});
+});
+app.listen(process.env.PORT || 5002);
