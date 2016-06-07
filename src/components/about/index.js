@@ -58,9 +58,6 @@ class About extends Component {
                     <p>
                         {'Accessibility doesn\'t have to be ugly.'}
                     </p>
-                    <p>
-                        {'I also resent having to use the American spelling of colour in this URL.'}
-                    </p>
                 </LayoutSmall>
                 {this.props.children}
             </Container>
