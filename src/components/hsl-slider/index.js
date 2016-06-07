@@ -74,7 +74,7 @@ class HslSlider extends Component {
                     min={range.min}
                     onChange={range.handleOnChange}
                     type="range"
-                    defaultValue={range.value}
+                    value={range.value}
                 />
             </div>
         );

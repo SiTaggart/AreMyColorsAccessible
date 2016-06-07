@@ -14,21 +14,21 @@
 
 .contrastResults-heading {
     font-size: 20vw;
-    margin-bottom: 3rem;
+    margin: 3rem 0;
     width: 100%;
 
     @include breakpoint($small-screen) {
         font-size: 18vw;
-        margin-bottom: 4rem;
+        margin: 4rem 0;
     }
 
     @include breakpoint($medium-screen) {
         font-size: 15vw;
-        margin-bottom: 5rem;
+        margin: 5rem 0;
     }
 
     @include breakpoint($xlarge-screen) {
-        font-size: 10vw;
+        font-size: 9vw;
     }
 }
 

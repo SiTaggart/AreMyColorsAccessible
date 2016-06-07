@@ -15,18 +15,19 @@ class Home extends Component {
 
     getColorInfo(background, foreground) {
         let colorInfo;
+        const dummyColorInfo = {
+            contrast: 0,
+            accessibility: {
+                aaa: false,
+                aa: false,
+                aaaLarge: false,
+                aaLarge: false
+            }
+        };
         try {
-            colorInfo = Colorable([foreground, background])[0].combinations[0];
+            colorInfo = !Colorable([foreground, background])[0].combinations.length ? dummyColorInfo : Colorable([foreground, background])[0].combinations[0];
         } catch(e) {
-            colorInfo = {
-                contrast: 0,
-                accessibility: {
-                    aaa: false,
-                    aa: false,
-                    aaaLarge: false,
-                    aaLarge: false
-                }
-            };
+            colorInfo = dummyColorInfo;
         }
         return colorInfo;
     }
@@ -47,7 +48,7 @@ class Home extends Component {
         return (
             <Container className="home">
                 <LayoutSmall>
-                    <Results {...colorInfo} />
+                    <Results {...colorInfo} isLight={this.props.siteData.isLight} />
                 </LayoutSmall>
                 <LayoutLarge>
                     <ColorInputs

@@ -7,11 +7,28 @@ class Results extends Component {
         super(props);
     }
 
+    renderAreYouSerious() {
+        let styles = {
+            seriouslyContainer: {
+                color: this.props.isLight ? '#222' : '#fff'
+            }
+        };
+        return(
+            <div className="contrastResult" style={styles.seriouslyContainer}>
+                <h2 className="contrastResult-rating">
+                    {'Seriously?'}
+                </h2>
+            </div>
+        );
+    }
+
     render() {
         const ratio = this.props.contrast.toFixed(2);
-        let smallTextRating;
+        let areYouSerious = false;
         let boldTextRating = this.props.accessibility.aaaLarge ? this.props.accessibility.aaaLarge : this.props.accessibility.aaLarge ;
         let largeTextRating = this.props.accessibility.aaaLarge ? this.props.accessibility.aaaLarge : this.props.accessibility.aaLarge ;
+        let overallRating;
+        let smallTextRating;
 
         if (this.props.accessibility.aaa) {
             smallTextRating = 'AAA';
@@ -26,8 +43,6 @@ class Results extends Component {
             largeTextRating = boldTextRating;
         }
 
-        let overallRating;
-
         if ((smallTextRating === 'AAA' || smallTextRating === 'AA')) {
             overallRating = 'Yup';
         } else if (smallTextRating === 'Fail' && largeTextRating === 'AA') {
@@ -36,6 +51,9 @@ class Results extends Component {
             overallRating = 'Nope';
         }
 
+        if(ratio < 1.3) {
+            areYouSerious = this.renderAreYouSerious();
+        }
 
         return (
             <div className="contrastResults">
@@ -72,6 +90,7 @@ class Results extends Component {
                         {'Ratio'}
                     </p>
                 </div>
+                {areYouSerious}
             </div>
         );
     }
@@ -85,7 +104,8 @@ Results.propTypes = {
         aaaLarge: PropTypes.bool
     }),
     children: PropTypes.node,
-    contrast: PropTypes.number
+    contrast: PropTypes.number,
+    isLight: PropTypes.bool
 };
 
 export default Results;
