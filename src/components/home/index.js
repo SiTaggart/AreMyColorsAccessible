@@ -10,10 +10,10 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.setBackgroundColor = this.setBackgroundColor.bind(this);
-        this.setForegroundColor = this.setForegroundColor.bind(this);
+        this.setTextColorColor = this.setTextColorColor.bind(this);
     }
 
-    getColorInfo(background, foreground) {
+    getColorInfo(background, textColor) {
         let colorInfo;
         const dummyColorInfo = {
             contrast: 0,
@@ -25,7 +25,7 @@ class Home extends Component {
             }
         };
         try {
-            colorInfo = !Colorable([foreground, background])[0].combinations.length ? dummyColorInfo : Colorable([foreground, background])[0].combinations[0];
+            colorInfo = !Colorable([textColor, background])[0].combinations.length ? dummyColorInfo : Colorable([textColor, background])[0].combinations[0];
         } catch(e) {
             colorInfo = dummyColorInfo;
         }
@@ -36,14 +36,14 @@ class Home extends Component {
         this.props.setBackgroundColor(hex);
     }
 
-    setForegroundColor(hex) {
-        this.props.setForegroundColor(hex);
+    setTextColorColor(hex) {
+        this.props.setTextColorColor(hex);
     }
 
     render() {
-        const foreground = this.props.siteData.foreground;
+        const textColor = this.props.siteData.textColor;
         const background = this.props.siteData.background;
-        const colorInfo = this.getColorInfo(background, foreground);
+        const colorInfo = this.getColorInfo(background, textColor);
 
         return (
             <Container className="home">
@@ -53,9 +53,9 @@ class Home extends Component {
                 <LayoutLarge>
                     <ColorInputs
                         background={this.props.siteData.background}
-                        foreground={this.props.siteData.foreground}
+                        textColor={this.props.siteData.textColor}
                         isLight={this.props.siteData.isLight}
-                        setForegroundColor={this.setForegroundColor}
+                        setTextColorColor={this.setTextColorColor}
                         setBackgroundColor={this.setBackgroundColor}
                     />
                 </LayoutLarge>
@@ -68,10 +68,10 @@ class Home extends Component {
 Home.propTypes = {
     children: PropTypes.node,
     setBackgroundColor: PropTypes.func,
-    setForegroundColor: PropTypes.func,
+    setTextColorColor: PropTypes.func,
     siteData: PropTypes.shape({
         background: PropTypes.string,
-        foreground: PropTypes.string,
+        textColor: PropTypes.string,
         isLight: PropTypes.bool
     })
 };

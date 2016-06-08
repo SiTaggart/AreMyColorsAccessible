@@ -7,7 +7,7 @@ class ColorInputs extends Component {
     constructor(props) {
         super(props);
         this.handleBackgroundChange = this.handleBackgroundChange.bind(this);
-        this.handleForegroundChange = this.handleForegroundChange.bind(this);
+        this.handleTextColorChange = this.handleTextColorChange.bind(this);
     }
 
     handleBackgroundChange(e) {
@@ -20,27 +20,27 @@ class ColorInputs extends Component {
         this.props.setBackgroundColor(newBackgroundColor);
     }
 
-    handleForegroundChange(e) {
-        let newForegroundColor;
+    handleTextColorChange(e) {
+        let newTextColorColor;
         if(!e.target) {
-            newForegroundColor = e;
+            newTextColorColor = e;
         } else {
-            newForegroundColor = e.target.value;
+            newTextColorColor = e.target.value;
         }
-        this.props.setForegroundColor(newForegroundColor);
+        this.props.setTextColorColor(newTextColorColor);
     }
 
     render() {
-        const foreground = this.props.foreground;
+        const textColor = this.props.textColor;
         const background = this.props.background;
-        const textColor = this.props.isLight ? '#222' : '#fff';
+        const formTextColor = this.props.isLight ? '#222' : '#fff';
 
         const styles = {
             form: {
-                color: textColor
+                color: formTextColor
             },
             input: {
-                borderColor: textColor,
+                borderColor: formTextColor,
                 color: 'inherit'
             }
         };
@@ -48,19 +48,19 @@ class ColorInputs extends Component {
         return (
             <form className="form" style={styles.form}>
                 <div className="form-control">
-                    <label className="form-label" htmlFor="foreground">{'Foreground'}</label>
+                    <label className="form-label" htmlFor="textColor">{'Text Color'}</label>
                     <input
                         className="form-input"
-                        id="foreground"
+                        id="textColor"
                         type="text"
-                        value={foreground}
-                        onChange={this.handleForegroundChange}
+                        value={textColor}
+                        onChange={this.handleTextColorChange}
                         style={styles.input}
                     />
                     <HslSlider
-                        id="foreground-hsl"
-                        value={foreground}
-                        onChange={this.handleForegroundChange}
+                        id="textColor-hsl"
+                        value={textColor}
+                        onChange={this.handleTextColorChange}
                     />
                 </div>
                 <div className="form-control">
@@ -87,10 +87,10 @@ class ColorInputs extends Component {
 ColorInputs.propTypes = {
     background: PropTypes.string.isRequired,
     children: PropTypes.node,
-    foreground: PropTypes.string.isRequired,
     isLight: PropTypes.bool.isRequired,
     setBackgroundColor: PropTypes.func,
-    setForegroundColor: PropTypes.func
+    setTextColorColor: PropTypes.func,
+    textColor: PropTypes.string.isRequired
 };
 
 export default ColorInputs;

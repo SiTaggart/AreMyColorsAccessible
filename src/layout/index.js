@@ -13,13 +13,13 @@ class IndexLayout extends Component {
         this.state = {
             siteData: {
                 background: '#1276CE',
-                foreground: '#FFFFFF',
+                textColor: '#FFFFFF',
                 isLight: false
             }
         };
         this.componentDidMount = this.componentDidMount.bind(this);
         this.setBackgroundColor = this.setBackgroundColor.bind(this);
-        this.setForegroundColor = this.setForegroundColor.bind(this);
+        this.setTextColorColor = this.setTextColorColor.bind(this);
         this.updateHash = this.updateHash.bind(this);
     }
 
@@ -49,9 +49,9 @@ class IndexLayout extends Component {
         this.setState({siteData: siteData}, debounce(this.updateHash, 200));
     }
 
-    setForegroundColor(hex) {
+    setTextColorColor(hex) {
         let siteData = this.state.siteData;
-        siteData.foreground = hex;
+        siteData.textColor = hex;
         this.setState({siteData: siteData}, debounce(this.updateHash, 200));
     }
 
@@ -68,14 +68,14 @@ class IndexLayout extends Component {
             }
         };
         document.body.style.backgroundColor = this.state.siteData.background;
-        document.body.style.color = this.state.siteData.foreground;
+        document.body.style.color = this.state.siteData.textColor;
 
         return (
             <div className="appContainer">
                 {React.cloneElement(this.props.children, {
                     siteData: this.state.siteData,
                     setBackgroundColor: this.setBackgroundColor,
-                    setForegroundColor: this.setForegroundColor
+                    setTextColorColor: this.setTextColorColor
                 })}
                 <footer className="footer">
                     <nav role="navigation">
