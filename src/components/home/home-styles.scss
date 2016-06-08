@@ -4,17 +4,6 @@
     position: relative;
 
     @include breakpoint($small-screen) {
-        height: 85%;
-    }
-
-    .form {
-        width: 100%;
-
-        @include breakpoint($small-screen) {
-            bottom: 0;
-            left: 0;
-            position: absolute;
-            right: 0;
-        }
+        min-height: 85%;
     }
 }

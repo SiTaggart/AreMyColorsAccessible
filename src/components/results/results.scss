@@ -4,7 +4,16 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
     text-align: center;
+
+    @include breakpoint($small-screen) {
+        margin-bottom: 3rem;
+    }
+
+    @include breakpoint($medium-screen) {
+        margin-bottom: 5rem;
+    }
 }
 
 .contrastResult {
