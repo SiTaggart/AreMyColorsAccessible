@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './results.scss';
 
 class Results extends Component {
@@ -63,7 +64,8 @@ class Results extends Component {
                         {smallTextRating}
                     </h2>
                     <p className="contrastResult-desc">
-                        {'Small Text (14pt) - 4.5'}
+                        Small Text - 4.5 <br/>
+                        &lt; 14pt or 18px
                     </p>
                 </div>
                 <div className="contrastResult">
@@ -71,7 +73,10 @@ class Results extends Component {
                         {boldTextRating}
                     </h2>
                     <p className="contrastResult-desc">
-                        <strong>{'Bold Text (14pt) - 3.0'}</strong>
+                        <strong>
+                            Bold Text - 3.0 <br/>
+                            &lt; 14pt or 18px
+                        </strong>
                     </p>
                 </div>
                 <div className="contrastResult">
@@ -79,7 +84,8 @@ class Results extends Component {
                         {largeTextRating}
                     </h2>
                     <p className="contrastResult-desc contrastResult-desc--large">
-                        {'Large Text (18pt) - 3.0'}
+                        Large Text - 3.0 <br/>
+                        &gt; 18pt or 24px
                     </p>
                 </div>
                 <div className="contrastResult">

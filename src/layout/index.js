@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import debounce from 'lodash/debounce';
 import isEmpty from 'lodash/isEmpty';
@@ -24,10 +25,7 @@ class IndexLayout extends Component {
     }
 
     componentDidMount() {
-        const query = this.props.location.query;
-        if(isEmpty(query)) return;
-        query.isLight = (query.isLight == 'true');
-        this.setState({siteData: query});
+        this.getQueryParams();
     }
 
     checkBackgroundLightness(hex) {
@@ -40,6 +38,13 @@ class IndexLayout extends Component {
         }
 
         return light;
+    }
+
+    getQueryParams() {
+        const query = this.props.location.query;
+        if(isEmpty(query)) return;
+        query.isLight = (query.isLight == 'true');
+        this.setState({siteData: query});
     }
 
     setBackgroundColor(hex) {

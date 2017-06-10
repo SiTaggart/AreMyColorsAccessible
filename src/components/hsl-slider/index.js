@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Color from 'color';
 import debounce from 'lodash/debounce';
 import isEqual from 'lodash/isEqual';
@@ -31,7 +32,7 @@ class HslSlider extends Component {
                 lightness: hsl.l
             });
         } catch (error) {
-            console.error('bad hsl');
+            // console.error('bad hsl');
         }
     }
 
