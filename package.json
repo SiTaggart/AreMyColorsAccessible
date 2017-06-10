@@ -1,6 +1,6 @@
 {
-  "name": "react-boilerplate",
-  "version": "0.3.1",
+  "name": "aremycolorsaccessible",
+  "version": "0.4.0",
   "scripts": {
     "start": "webpack-dev-server --hot --inline --progress",
     "prebuild": "npm run clean",
@@ -9,10 +9,10 @@
     "clean": "rimraf build",
     "copy": "cp -r public/* build"
   },
-  "author": "Riccardo Bartoli <info@rblab.com> (http://rblab.com/)",
+  "author": "Simon Taggart <me@simontaggart.com> (http://simontaggart.com/)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rbartoli/react-boilerplate"
+    "url": "git+https://github.com/SiTaggart/AreMyColorsAccessible"
   },
   "license": "MIT",
   "dependencies": {
