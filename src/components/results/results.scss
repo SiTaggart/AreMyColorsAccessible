@@ -1,76 +1,76 @@
 @import '../global/global';
 
 .contrastResults {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-    text-align: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  text-align: center;
 
-    @include breakpoint($small-screen) {
-        margin-bottom: 3rem;
-    }
+  @include breakpoint($small-screen) {
+    margin-bottom: 3rem;
+  }
 
-    @include breakpoint($medium-screen) {
-        margin-bottom: 5rem;
-    }
+  @include breakpoint($medium-screen) {
+    margin-bottom: 5rem;
+  }
 }
 
 .contrastResult {
-    flex: 1 1 auto;
-    margin-bottom: 2rem;
+  flex: 1 1 auto;
+  margin-bottom: 2rem;
 }
 
 .contrastResults-heading {
-    font-size: 20vw;
-    margin: 3rem 0;
-    width: 100%;
+  font-size: 20vw;
+  margin: 3rem 0;
+  width: 100%;
 
-    @include breakpoint($small-screen) {
-        font-size: 18vw;
-        margin: 4rem 0;
-    }
+  @include breakpoint($small-screen) {
+    font-size: 18vw;
+    margin: 4rem 0;
+  }
 
-    @include breakpoint($medium-screen) {
-        font-size: 15vw;
-        margin: 5rem 0;
-    }
+  @include breakpoint($medium-screen) {
+    font-size: 15vw;
+    margin: 5rem 0;
+  }
 
-    @include breakpoint($xlarge-screen) {
-        font-size: 9vw;
-    }
+  @include breakpoint($xlarge-screen) {
+    font-size: 9vw;
+  }
 }
 
 .contrastResult {
-    width: 50%;
+  width: 50%;
 
-    @include breakpoint($small-screen) {
-        width: 25%;
-    }
+  @include breakpoint($small-screen) {
+    width: 25%;
+  }
 }
 
 .contrastResult-rating {
-    font-size: 10vw;
-    margin: 0;
+  font-size: 10vw;
+  margin: 0;
 
-    @include breakpoint($small-screen) {
-        font-size: 6vw;
-    }
+  @include breakpoint($small-screen) {
+    font-size: 6vw;
+  }
 
-    @include breakpoint($medium-screen) {
-        font-size: 4vw;
-    }
+  @include breakpoint($medium-screen) {
+    font-size: 4vw;
+  }
 
-    @include breakpoint($xlarge-screen) {
-        font-size: 3vw;
-    }
+  @include breakpoint($xlarge-screen) {
+    font-size: 3vw;
+  }
 }
 
 .contrastResult-desc {
-    font-size: 14pt;
-    margin: 0;
+  font-size: 14pt;
+  margin: 0;
 
-    &--large {
-        font-size: 18pt;
-    }
+  &--large {
+    font-size: 18pt;
+  }
 }
