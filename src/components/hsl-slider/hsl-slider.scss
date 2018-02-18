@@ -1,21 +1,21 @@
 @import '../global/global';
-@import "input-range";
+@import 'input-range';
 
 .form-hsl-sliders {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    @include breakpoint($medium-screen) {
-        margin: 0 -.5rem;
-    }
+  @include breakpoint($medium-screen) {
+    margin: 0 -0.5rem;
+  }
 }
 
 .form-hsl-slider {
-    width: 100%;
+  width: 100%;
 
-    @include breakpoint($medium-screen) {
-        flex: 1 0 auto;
-        padding: 0 .5rem;
-        width: 33.3333%;
-    }
+  @include breakpoint($medium-screen) {
+    flex: 1 0 auto;
+    padding: 0 0.5rem;
+    width: 33.3333%;
+  }
 }
