@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Colorable from 'colorable';
-import './home-styles.scss';
-import { Container, LayoutSmall, LayoutLarge } from '../layouts';
+import Container from '../layouts/container';
+import LayoutSmall from '../layouts/layout-small';
+import LayoutLarge from '../layouts/layout-large';
 import Results from '../results';
 import ColorInputs from '../colorInputs';
+import './home-styles.scss';
 
 class Home extends Component {
   constructor(props) {

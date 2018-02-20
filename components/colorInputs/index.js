@@ -49,7 +49,7 @@ class ColorInputs extends Component {
       <form className="form" style={styles.form}>
         <div className="form-control">
           <label className="form-label" htmlFor="textColor">
-            {'Text Color'}
+            Text Color
           </label>
           <input
             className="form-input"
@@ -63,7 +63,7 @@ class ColorInputs extends Component {
         </div>
         <div className="form-control">
           <label className="form-label" htmlFor="background">
-            {'Background'}
+            Background
           </label>
           <input
             className="form-input"

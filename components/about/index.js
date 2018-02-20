@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Container, LayoutSmall } from '../layouts';
+import Container from '../layouts/container';
+import LayoutSmall from '../layouts/layout-small';
 import './about.scss';
 
 class About extends Component {
@@ -16,9 +17,9 @@ class About extends Component {
         <LayoutSmall>
           <h1 className="heading-1">{'Are my Colours Accessible?'}</h1>
           <p>
-            {
-              'Why? Well, apart from being an excuse to use a domain name, colour contrast and the use of colour is extremely important for certain groups of people with varying levels of visional impairment.'
-            }
+            Why? Well, apart from being an excuse to use a domain name, colour contrast and the use
+            of colour is extremely important for certain groups of people with varying levels of
+            visional impairment.
           </p>
           <blockquote className="blockquote">
             <p>
@@ -40,7 +41,7 @@ class About extends Component {
                 &ndash;{' '}
                 <a href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast">
                   Guideline 1.4 Distinguishable:
-                </a>
+                </a>{' '}
                 WCAG 2.0 Guidelines
               </cite>
             </p>
@@ -53,24 +54,30 @@ class About extends Component {
                 &ndash;{' '}
                 <a href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast">
                   1.4.3 Contrast (Minimum):
-                </a>
+                </a>{' '}
                 WCAG 2.0 Guidelines
               </cite>
             </p>
           </blockquote>
           <p>
-            {
-              'For text-based information to be perceivable by users of all visual ability, and to safely meet WCAG 2.0, AA requirements, you should aim for a minimum contrast ratio of 4.5:1 for normal text 14pt and above, and 3.0:1 for large text 18pt and above or bold text, 14pt and above.'
-            }
+            For text-based information to be perceivable by all users regardless of level of sight
+            and to safely meet WCAG 2.0, AA requirements, you should aim for a minimum contrast
+            ratio of 4.5:1 for all text content. There are 2 exceptions to this; large text that is
+            18pt or 24px and above or <strong>bold</strong> text that is 14pt or 18px and above,
+            where the minimum contrast ratio can be 3.0:1
           </p>
           <p>
-            {'Building upon and heavily influenced by the excellent '}
-            <a href="http://jxnblk.com/colorable/">Colorable</a>
-            {
-              ", I wanted more context around the result. When you share the outcome with your colleagues, all the results, rules and what you're aiming for, is easily understandable for when you have those awkward conversations with designers and marketers."
-            }
+            Building upon and heavily influenced by the excellent{' '}
+            <a href="http://jxnblk.com/colorable/">Colorable</a>, I wanted more context around the
+            result. When you share the outcome with your colleagues, all the results, rules and what
+            you're aiming for, is easily understandable for when you have those awkward
+            conversations with designers and marketers.
           </p>
-          <p>{"Accessibility doesn't have to be ugly."}</p>
+          <p>Accessibility doesn't have to be ugly.</p>
+          <p>
+            Built by <a href="http://www.simontaggart.com">Simon Taggart</a>,{' '}
+            <a href="https://github.com/SiTaggart/AreMyColorsAccessible">code on GitHub</a>.
+          </p>
         </LayoutSmall>
         {this.props.children}
       </Container>

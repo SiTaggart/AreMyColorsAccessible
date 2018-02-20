@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
+import Link from 'next/link';
+import Head from 'next/head';
 import debounce from 'lodash/debounce';
 import isEmpty from 'lodash/isEmpty';
 import qs from 'query-string';
 import Color from 'color';
-import './styles.scss';
+import '../../../styles/index.scss';
 
-class IndexLayout extends Component {
+class LayoutShared extends Component {
+  static defaultProps = {
+    title: 'Are My Colours Accessible'
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +22,6 @@ class IndexLayout extends Component {
         isLight: false
       }
     };
-    this.componentDidMount = this.componentDidMount.bind(this);
     this.setBackgroundColor = this.setBackgroundColor.bind(this);
     this.setTextColorColor = this.setTextColorColor.bind(this);
     this.updateHash = this.updateHash.bind(this);
@@ -40,10 +44,10 @@ class IndexLayout extends Component {
   }
 
   getQueryParams() {
-    const query = this.props.location.query;
-    if (isEmpty(query)) return;
+    if (isEmpty(window.location.search)) return;
+    const query = qs.parse(window.location.search);
     query.isLight = query.isLight == 'true';
-    this.setState({ siteData: query });
+    this.setState({ siteData: Object.assign({}, query) });
   }
 
   setBackgroundColor(hex) {
@@ -65,33 +69,41 @@ class IndexLayout extends Component {
   }
 
   render() {
-    const footerLinksColor = this.state.siteData.isLight ? '#222' : '#fff';
     const styles = {
       footerLinks: {
-        color: footerLinksColor
+        color: this.state.siteData.isLight ? '#222' : '#fff'
       }
     };
-    document.body.style.backgroundColor = this.state.siteData.background;
-    document.body.style.color = this.state.siteData.textColor;
 
     return (
       <div className="appContainer">
+        <Head>
+          <title>{this.props.title}</title>
+          <style>{`
+            body {
+              background-color: ${this.state.siteData.background};
+              color: ${this.state.siteData.textColor};
+            }
+          `}</style>
+        </Head>
+
         {React.cloneElement(this.props.children, {
           siteData: this.state.siteData,
           setBackgroundColor: this.setBackgroundColor,
           setTextColorColor: this.setTextColorColor
         })}
+
         <footer className="footer">
-          <nav role="navigation">
+          <nav>
             <ul>
               <li>
-                <Link style={styles.footerLinks} to="/">
-                  {'Home'}
+                <Link href="/">
+                  <a style={styles.footerLinks}>Home</a>
                 </Link>
               </li>
               <li>
-                <Link style={styles.footerLinks} to="/about">
-                  {'About'}
+                <Link href="/about">
+                  <a style={styles.footerLinks}>About</a>
                 </Link>
               </li>
             </ul>
@@ -102,11 +114,12 @@ class IndexLayout extends Component {
   }
 }
 
-IndexLayout.propTypes = {
+LayoutShared.propTypes = {
   children: PropTypes.node,
   location: PropTypes.shape({
     query: PropTypes.object
-  })
+  }),
+  title: PropTypes.string
 };
 
-export default IndexLayout;
+export default LayoutShared;

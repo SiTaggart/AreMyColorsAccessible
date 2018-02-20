@@ -74,7 +74,7 @@ class Results extends Component {
           <p className="contrastResult-desc">
             <strong>
               Bold Text - 3.0 <br />
-              &lt; 14pt or 18px
+              &gt; 14pt or 18px
             </strong>
           </p>
         </div>
