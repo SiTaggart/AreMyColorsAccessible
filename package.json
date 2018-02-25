@@ -5,13 +5,10 @@
     "node": "8.1.x"
   },
   "scripts": {
-    "prebuild": "npm run clean",
     "build": "next build",
-    "postbuild": "npm run copy",
-    "clean": "rimraf build",
-    "copy": "cp -r public/* build",
     "dev": "next",
     "precommit": "lint-staged",
+    "heroku-postbuild": "next build",
     "start": "next start"
   },
   "lint-staged": {
