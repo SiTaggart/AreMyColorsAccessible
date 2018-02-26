@@ -1,0 +1,9 @@
+@import '../../styles/utils';
+
+.home {
+  position: relative;
+
+  @include breakpoint($small-screen) {
+    min-height: 85%;
+  }
+}

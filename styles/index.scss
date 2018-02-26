@@ -1,0 +1,94 @@
+@import './utils';
+@import url(//fonts.googleapis.com/css?family=Lato:400,900);
+@import '~normalize.css/normalize.css';
+
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 900;
+}
+
+.heading-1 {
+  font-size: 2.4rem;
+  text-align: center;
+
+  @include breakpoint($small-screen) {
+    font-size: 3rem;
+  }
+}
+
+a {
+  color: currentColor;
+}
+
+.blockquote {
+  margin: 3rem 1rem;
+
+  @include breakpoint($medium-screen) {
+    margin: 3rem -3rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    font-style: italic;
+  }
+
+  cite {
+    font-size: 1rem;
+    font-style: normal;
+  }
+}
+
+.appContainer {
+  @include breakpoint($small-screen) {
+    height: 100%;
+  }
+}
+
+.footer {
+  padding: 5rem 0 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+nav {
+  ul {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    padding: 0 1rem;
+  }
+
+  a {
+    transition: color 400ms ease-in;
+  }
+}

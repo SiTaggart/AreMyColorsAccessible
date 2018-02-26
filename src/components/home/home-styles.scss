@@ -1,9 +1,0 @@
-@import '../global/global';
-
-.home {
-    position: relative;
-
-    @include breakpoint($small-screen) {
-        min-height: 85%;
-    }
-}
