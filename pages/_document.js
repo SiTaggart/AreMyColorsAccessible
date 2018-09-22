@@ -5,13 +5,12 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
             name="description"
             content="Make sure the colours you choose in your designs are accessible to people of all abilities, by choosing colour combinations that pass WCAG 2.0 recommendated colour contrast ratio guidelines."
           />
-          <link rel="stylesheet" href="/_next/static/style.css" />
           <script
             dangerouslySetInnerHTML={{
               __html: `

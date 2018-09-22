@@ -17,7 +17,10 @@
     "heroku-postbuild": "next build"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "author": "Simon Taggart <me@simontaggart.com> (http://simontaggart.com/)",
   "repository": {
@@ -26,27 +29,27 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@zeit/next-bundle-analyzer": "^0.1.1",
-    "@zeit/next-sass": "0.2.0",
+    "@zeit/next-bundle-analyzer": "^0.1.2",
+    "@zeit/next-sass": "1.0.1",
     "autoprefixer": "9.1.5",
     "breakpoint-sass": "2.7.1",
     "colorable": "1.0.5",
     "compression": "^1.7.3",
     "eslint": "5.6.0",
-    "eslint-config-prettier": "3.0.1",
+    "eslint-config-prettier": "3.1.0",
     "eslint-plugin-prettier": "2.6.2",
     "express": "^4.16.3",
-    "lint-staged": "7.2.2",
+    "lint-staged": "7.3.0",
     "lodash": "4.17.11",
-    "next": "6.1.2",
+    "next": "7.0.0",
     "next-compose-plugins": "^2.1.1",
     "node-sass": "4.9.3",
     "normalize.css": "8.0.0",
-    "prettier": "1.14.2",
+    "prettier": "1.14.3",
     "prop-types": "15.6.2",
     "query-string": "6.1.0",
-    "react": "16.5.1",
-    "react-dom": "16.5.1"
+    "react": "16.5.2",
+    "react-dom": "16.5.2"
   },
   "prettier": {
     "printWidth": 100,
