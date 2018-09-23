@@ -1,3 +1,4 @@
 {
-  "extends": ["plugin:prettier/recommended"]
+  "parser": "babel-eslint",
+  "extends": ["standard", "standard-jsx", "prettier", "prettier/standard", "prettier/react"]
 }

@@ -92,7 +92,7 @@ class HslSlider extends Component {
       s: this.state.saturation,
       l: this.state.lightness
     }).hexString();
-    if (hex != this.props.value) {
+    if (hex !== this.props.value) {
       this.props.onChange(hex);
     }
   }
