@@ -16,7 +16,7 @@
     "precommit": "lint-staged",
     "heroku-postbuild": "next build",
     "jest": "node ./node_modules/.bin/jest",
-    "lint": "node ./node_modules/.bin/eslint './**/*.js",
+    "lint": "node ./node_modules/.bin/eslint './**/*.js'",
     "test": "jest"
   },
   "lint-staged": {
