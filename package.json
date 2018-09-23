@@ -15,9 +15,9 @@
     "analyze_bundle:server": "BUNDLE_ANALYZE=server npm run build",
     "precommit": "lint-staged",
     "heroku-postbuild": "next build",
-    "jest": "node ./node_modules/.bin/jest",
+    "jest": "NODE_ENV=test node ./node_modules/.bin/jest",
     "lint": "node ./node_modules/.bin/eslint './**/*.js'",
-    "test": "jest"
+    "test": "NODE_ENV=test jest"
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
@@ -35,8 +35,8 @@
     "@babel/core": "^7.1.0",
     "@zeit/next-bundle-analyzer": "0.1.2",
     "@zeit/next-sass": "1.0.1",
-    "babel-core": "^7.0.0-bridge.0",
     "autoprefixer": "9.1.5",
+    "babel-core": "^7.0.0-bridge.0",
     "breakpoint-sass": "2.7.1",
     "colorable": "1.0.5",
     "compression": "1.7.3",
@@ -57,8 +57,6 @@
     "singleQuote": true
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^9.0.0",
     "babel-jest": "^23.6.0",
     "cypress": "3.1.0",
@@ -78,6 +76,8 @@
     "jest": "23.6.0",
     "lint-staged": "7.3.0",
     "prettier": "^1.14.3",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.5.2",
     "regenerator-runtime": "^0.12.1"
   }
 }
