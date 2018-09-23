@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import './results.scss';
 
 class Results extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   renderAreYouSerious() {
     let styles = {
       seriouslyContainer: {
