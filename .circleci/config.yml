@@ -64,7 +64,7 @@ jobs:
             - ~/.npm
             - ~/.cache
       - run:
-          command: npm build
+          command: npm run build
       - run:
           command: npm start
           background: true
