@@ -55,7 +55,7 @@ class Results extends Component {
 
     return (
       <div className="contrastResults">
-        <h1 className="contrastResults-heading" aria-live="polite" aria-atomic="true">
+        <h1 aria-atomic="true" aria-live="polite" className="contrastResults-heading">
           {overallRating}
         </h1>
         <div className="contrastResult">
@@ -98,7 +98,6 @@ Results.propTypes = {
     aaLarge: PropTypes.bool,
     aaaLarge: PropTypes.bool
   }),
-  children: PropTypes.node,
   contrast: PropTypes.number,
   isLight: PropTypes.bool
 };

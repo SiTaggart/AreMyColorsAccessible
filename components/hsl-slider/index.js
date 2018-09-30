@@ -14,25 +14,11 @@ class HslSlider extends Component {
       saturation: hsl.s,
       lightness: hsl.l
     };
-    this.renderRangeInput = this.renderRangeInput.bind(this);
     this.handleHueChange = this.handleHueChange.bind(this);
     this.handleSaturationChange = this.handleSaturationChange.bind(this);
     this.handleLightnessChange = this.handleLightnessChange.bind(this);
+    this.renderRangeInput = this.renderRangeInput.bind(this);
     this.updateColor = this.updateColor.bind(this);
-  }
-
-  componentWillReceiveProps(newProps) {
-    let hsl;
-    try {
-      hsl = Color(newProps.value).hsl();
-      this.setState({
-        hue: hsl.h,
-        saturation: hsl.s,
-        lightness: hsl.l
-      });
-    } catch (error) {
-      // console.error('bad hsl');
-    }
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -69,21 +55,35 @@ class HslSlider extends Component {
   renderRangeInput(range) {
     const id = this.props.id + '-' + range.label;
     return (
-      <div key={id} className="form-hsl-slider">
+      <div className="form-hsl-slider" key={id}>
         <label className="form-label" htmlFor={id}>
           {range.label} {range.value + range.symbol}
         </label>
         <input
           className="form-range"
+          defaultValue={range.value}
           id={id}
           max={range.max}
           min={range.min}
           onInput={range.handleOnChange}
           type="range"
-          defaultValue={range.value}
         />
       </div>
     );
+  }
+
+  setHSLColorState(value) {
+    let hsl;
+    try {
+      hsl = Color(value).hsl();
+      this.setState({
+        hue: hsl.h,
+        saturation: hsl.s,
+        lightness: hsl.l
+      });
+    } catch (error) {
+      // console.error('bad hsl');
+    }
   }
 
   updateColor() {
@@ -129,10 +129,9 @@ class HslSlider extends Component {
 }
 
 HslSlider.propTypes = {
-  children: PropTypes.node,
   id: PropTypes.string.isRequired,
-  onChange: PropTypes.func,
-  value: PropTypes.string
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired
 };
 
 export default HslSlider;

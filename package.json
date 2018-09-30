@@ -17,7 +17,7 @@
     "heroku-postbuild": "next build",
     "jest": "NODE_ENV=test jest",
     "lint": "eslint './**/*.js'",
-    "test": "NODE_ENV=test jest",
+    "test": "npm run lint && NODE_ENV=test jest",
     "cypress:open": "npm run dev & cypress open",
     "cypress:run": "cypress run"
   },

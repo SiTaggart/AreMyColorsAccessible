@@ -1,8 +1,24 @@
 {
   "parser": "babel-eslint",
-  "extends": ["standard", "standard-jsx", "prettier", "prettier/standard", "prettier/react"],
+  "extends": [
+    "standard",
+    "standard-jsx",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/standard",
+    "prettier/react"
+  ],
   "plugins": ["cypress"],
   "env": {
     "cypress/globals": true
+  },
+  "rules": {
+    "react/no-unused-prop-types": [2],
+    "react/jsx-sort-props": [2]
+  },
+  "settings": {
+    "react": {
+      "version": "16.5.2"
+    }
   }
 }
