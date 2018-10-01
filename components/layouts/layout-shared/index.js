@@ -119,7 +119,7 @@ LayoutShared.propTypes = {
   location: PropTypes.shape({
     query: PropTypes.object
   }),
-  title: PropTypes.string
+  title: PropTypes.string.isRequired
 };
 
 export default LayoutShared;
