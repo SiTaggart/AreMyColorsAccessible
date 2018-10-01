@@ -29,14 +29,16 @@ class About extends Component {
                 &ndash;{' '}
                 <a href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#perceivable">
                   Principle 1: Perceivable
-                </a>, WCAG 2.0 Guidelines
+                </a>
+                , WCAG 2.0 Guidelines
               </cite>
             </p>
           </blockquote>
           <blockquote className="blockquote">
             <p>
               Make it easier for users to see and hear content including separating foreground from
-              background.<br />
+              background.
+              <br />
               <cite>
                 &ndash;{' '}
                 <a href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast">
@@ -49,7 +51,8 @@ class About extends Component {
           <blockquote className="blockquote">
             <p>
               The visual presentation of text and images of text has a contrast ratio of at least
-              4.5:1, except for the following: (Level AA).<br />
+              4.5:1, except for the following: (Level AA).
+              <br />
               <cite>
                 &ndash;{' '}
                 <a href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast">
@@ -70,26 +73,24 @@ class About extends Component {
             Building upon and heavily influenced by the excellent{' '}
             <a href="http://jxnblk.com/colorable/">Colorable</a>, I wanted more context around the
             result. When you share the outcome with your colleagues, all the results, rules and what
-            you're aiming for, is easily understandable for when you have those awkward
+            you&rsquo;re aiming for, is easily understandable for when you have those awkward
             conversations with designers and marketers.
           </p>
-          <p>Accessibility doesn't have to be ugly.</p>
+          <p>Accessibility doesn&rsquo;t have to be ugly.</p>
           <p>
             Built by <a href="http://www.simontaggart.com">Simon Taggart</a>,{' '}
             <a href="https://github.com/SiTaggart/AreMyColorsAccessible">code on GitHub</a>.
           </p>
         </LayoutSmall>
-        {this.props.children}
       </Container>
     );
   }
 }
 
 About.propTypes = {
-  children: PropTypes.node,
   siteData: PropTypes.shape({
     isLight: PropTypes.bool
-  })
+  }).isRequired
 };
 
 export default About;

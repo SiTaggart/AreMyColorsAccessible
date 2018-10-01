@@ -57,20 +57,18 @@ class Home extends Component {
         <LayoutLarge>
           <ColorInputs
             background={this.props.siteData.background}
-            textColor={this.props.siteData.textColor}
             isLight={this.props.siteData.isLight}
-            setTextColorColor={this.setTextColorColor}
             setBackgroundColor={this.setBackgroundColor}
+            setTextColorColor={this.setTextColorColor}
+            textColor={this.props.siteData.textColor}
           />
         </LayoutLarge>
-        {this.props.children}
       </Container>
     );
   }
 }
 
 Home.propTypes = {
-  children: PropTypes.node,
   setBackgroundColor: PropTypes.func,
   setTextColorColor: PropTypes.func,
   siteData: PropTypes.shape({

@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import './results.scss';
 
 class Results extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   renderAreYouSerious() {
     let styles = {
       seriouslyContainer: {
@@ -23,14 +19,10 @@ class Results extends Component {
   render() {
     const ratio = this.props.contrast.toFixed(2);
     let areYouSerious = false;
-    let boldTextRating = this.props.accessibility.aaaLarge
-      ? this.props.accessibility.aaaLarge
-      : this.props.accessibility.aaLarge;
-    let largeTextRating = this.props.accessibility.aaaLarge
-      ? this.props.accessibility.aaaLarge
-      : this.props.accessibility.aaLarge;
-    let overallRating;
-    let smallTextRating;
+    let boldTextRating = '';
+    let largeTextRating = '';
+    let overallRating = 'Nope';
+    let smallTextRating = '';
 
     if (this.props.accessibility.aaa) {
       smallTextRating = 'AAA';
@@ -49,8 +41,6 @@ class Results extends Component {
       overallRating = 'Yup';
     } else if (smallTextRating === 'Fail' && largeTextRating === 'AA') {
       overallRating = 'Kinda';
-    } else {
-      overallRating = 'Nope';
     }
 
     if (ratio < 1.3) {
@@ -59,7 +49,7 @@ class Results extends Component {
 
     return (
       <div className="contrastResults">
-        <h1 className="contrastResults-heading" aria-live="polite" aria-atomic="true">
+        <h1 aria-atomic="true" aria-live="polite" className="contrastResults-heading">
           {overallRating}
         </h1>
         <div className="contrastResult">
@@ -101,10 +91,9 @@ Results.propTypes = {
     aaa: PropTypes.bool,
     aaLarge: PropTypes.bool,
     aaaLarge: PropTypes.bool
-  }),
-  children: PropTypes.node,
-  contrast: PropTypes.number,
-  isLight: PropTypes.bool
+  }).isRequired,
+  contrast: PropTypes.number.isRequired,
+  isLight: PropTypes.bool.isRequired
 };
 
 export default Results;

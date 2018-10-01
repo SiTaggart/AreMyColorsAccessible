@@ -1,8 +1,11 @@
+import React from 'react';
 import About from '../components/about';
 import LayoutShared from '../components/layouts/layout-shared';
 
-export default () => (
+const AboutPage = () => (
   <LayoutShared>
     <About />
   </LayoutShared>
 );
+
+export default AboutPage;

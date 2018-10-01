@@ -46,7 +46,7 @@ class LayoutShared extends Component {
   getQueryParams() {
     if (isEmpty(window.location.search)) return;
     const query = qs.parse(window.location.search);
-    query.isLight = query.isLight == 'true';
+    query.isLight = query.isLight === 'true';
     this.setState({ siteData: Object.assign({}, query) });
   }
 
@@ -119,7 +119,7 @@ LayoutShared.propTypes = {
   location: PropTypes.shape({
     query: PropTypes.object
   }),
-  title: PropTypes.string
+  title: PropTypes.string.isRequired
 };
 
 export default LayoutShared;

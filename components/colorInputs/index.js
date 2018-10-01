@@ -4,10 +4,18 @@ import HslSlider from '../hsl-slider';
 import './colorInputs.scss';
 
 class ColorInputs extends Component {
+  textColorRef = React.createRef();
+  backgroundColorRef = React.createRef();
+
   constructor(props) {
     super(props);
     this.handleBackgroundChange = this.handleBackgroundChange.bind(this);
     this.handleTextColorChange = this.handleTextColorChange.bind(this);
+  }
+
+  componentDidUpdate() {
+    this.textColorRef.current.setHSLColorState(this.props.textColor);
+    this.backgroundColorRef.current.setHSLColorState(this.props.background);
   }
 
   handleBackgroundChange(e) {
@@ -54,12 +62,17 @@ class ColorInputs extends Component {
           <input
             className="form-input"
             id="textColor"
-            type="text"
-            value={textColor}
             onChange={this.handleTextColorChange}
             style={styles.input}
+            type="text"
+            value={textColor}
           />
-          <HslSlider id="textColor-hsl" value={textColor} onChange={this.handleTextColorChange} />
+          <HslSlider
+            id="textColor-hsl"
+            onChange={this.handleTextColorChange}
+            ref={this.textColorRef}
+            value={textColor}
+          />
         </div>
         <div className="form-control">
           <label className="form-label" htmlFor="background">
@@ -68,15 +81,16 @@ class ColorInputs extends Component {
           <input
             className="form-input"
             id="background"
-            type="text"
-            value={background}
             onChange={this.handleBackgroundChange}
             style={styles.input}
+            type="text"
+            value={background}
           />
           <HslSlider
             id="background-hsl"
-            value={background}
             onChange={this.handleBackgroundChange}
+            ref={this.backgroundColorRef}
+            value={background}
           />
         </div>
       </form>
@@ -86,7 +100,6 @@ class ColorInputs extends Component {
 
 ColorInputs.propTypes = {
   background: PropTypes.string.isRequired,
-  children: PropTypes.node,
   isLight: PropTypes.bool.isRequired,
   setBackgroundColor: PropTypes.func,
   setTextColorColor: PropTypes.func,

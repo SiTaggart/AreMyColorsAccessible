@@ -1,3 +1,4 @@
+import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 
 export default class MyDocument extends Document {
@@ -6,10 +7,10 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta content="width=device-width, initial-scale=1" name="viewport" />
           <meta
-            name="description"
             content="Make sure the colours you choose in your designs are accessible to people of all abilities, by choosing colour combinations that pass WCAG 2.0 recommendated colour contrast ratio guidelines."
+            name="description"
           />
           <script
             dangerouslySetInnerHTML={{

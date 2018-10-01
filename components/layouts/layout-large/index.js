@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import './layout-large.scss';
 
 class LayoutLarge extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="layout layout--large" {...this.props}>
