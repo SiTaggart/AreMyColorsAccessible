@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
-import HslSlider from '../index';
+import HslSlider from '..';
 
 describe('hsl-slider', () => {
   let onChangeMock = null;

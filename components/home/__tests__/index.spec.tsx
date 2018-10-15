@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import Home from '../index';
+import Home from '..';
 
 describe('About', () => {
   let siteData = {};

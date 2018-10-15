@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import LayoutShared from '../index';
+import LayoutShared from '..';
 
 describe('Layout Shared', () => {
   let ChildComponent;

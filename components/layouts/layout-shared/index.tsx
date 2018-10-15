@@ -113,7 +113,6 @@ class LayoutShared extends Component {
     );
   }
 }
-
 LayoutShared.propTypes = {
   children: PropTypes.node,
   location: PropTypes.shape({
@@ -121,5 +120,4 @@ LayoutShared.propTypes = {
   }),
   title: PropTypes.string.isRequired
 };
-
 export default LayoutShared;

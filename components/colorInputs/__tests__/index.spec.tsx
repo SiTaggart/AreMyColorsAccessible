@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import ColorInputs from '../index';
+import ColorInputs from '..';
 
 describe('About', () => {
   let setBackgroundColor;

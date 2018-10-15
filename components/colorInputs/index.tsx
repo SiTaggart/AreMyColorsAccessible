@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import HslSlider from '../hsl-slider';
 import './colorInputs.scss';
 
 class ColorInputs extends Component {
-  textColorRef = React.createRef();
-  backgroundColorRef = React.createRef();
+  private textColorRef = React.createRef();
+  private backgroundColorRef = React.createRef();
 
   constructor(props) {
     super(props);

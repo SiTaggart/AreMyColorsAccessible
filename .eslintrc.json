@@ -8,7 +8,7 @@
     "prettier/standard",
     "prettier/react"
   ],
-  "plugins": ["cypress"],
+  "plugins": ["typescript", "cypress"],
   "env": {
     "cypress/globals": true
   },
@@ -20,5 +20,14 @@
     "react": {
       "version": "16.5.2"
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "parser": "typescript-eslint-parser",
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
 }
