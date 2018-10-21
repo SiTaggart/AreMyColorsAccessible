@@ -98,7 +98,7 @@ describe('ColorCombos', () => {
   });
 
   it('should throw when not passed an array or object', () => {
-    expect(ColorCombos('red')).toThrowError('Must provide an array or object');
+    expect(ColorCombos('red')).toEqual(false);
   });
 
   it('should return a compact combo when passed compact', () => {

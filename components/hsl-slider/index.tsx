@@ -10,9 +10,9 @@ class HslSlider extends Component {
     super(props);
     const hsl = Color(this.props.value).hsl();
     this.state = {
-      hue: hsl.h,
-      saturation: hsl.s,
-      lightness: hsl.l
+      hue: hsl.color[0],
+      saturation: hsl.color[1],
+      lightness: hsl.color[2]
     };
     this.handleHueChange = this.handleHueChange.bind(this);
     this.handleSaturationChange = this.handleSaturationChange.bind(this);
@@ -77,9 +77,9 @@ class HslSlider extends Component {
     try {
       hsl = Color(value).hsl();
       this.setState({
-        hue: hsl.h,
-        saturation: hsl.s,
-        lightness: hsl.l
+        hue: hsl.color[0],
+        saturation: hsl.color[1],
+        lightness: hsl.color[2]
       });
     } catch (error) {
       // console.error('bad hsl');
@@ -91,7 +91,7 @@ class HslSlider extends Component {
       h: this.state.hue,
       s: this.state.saturation,
       l: this.state.lightness
-    }).hexString();
+    }).hex();
     if (hex !== this.props.value) {
       this.props.onChange(hex);
     }

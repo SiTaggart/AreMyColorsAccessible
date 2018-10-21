@@ -12,7 +12,7 @@ const MINIMUMS: { aa: number; aaLarge: number; aaa: number; aaaLarge: number } =
 const ColorCombos = (
   colors: Array<string> | { [name: string]: string },
   options: Options = {}
-): Array<any> | never => {
+): Array<any> | false => {
   let arr: Array<any> = [];
   let results: Array<any> = [];
 
@@ -36,7 +36,8 @@ const ColorCombos = (
         arr = [...new Set(arr)];
       }
     } else {
-      throw new Error('Must provide an array or object');
+      console.log('Must provide an array or object');
+      return false;
     }
   } else {
     if (options.uniq) {
