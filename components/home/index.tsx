@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Colorable from 'colorable';
+import ColorCombos from '../../utils/color-combos';
 import Container from '../layouts/container';
 import LayoutSmall from '../layouts/layout-small';
 import LayoutLarge from '../layouts/layout-large';
@@ -27,9 +27,9 @@ class Home extends Component {
       }
     };
     try {
-      colorInfo = !Colorable([textColor, background])[0].combinations.length
+      colorInfo = !ColorCombos([textColor, background])[0].combinations.length
         ? dummyColorInfo
-        : Colorable([textColor, background])[0].combinations[0];
+        : ColorCombos([textColor, background])[0].combinations[0];
     } catch (e) {
       colorInfo = dummyColorInfo;
     }

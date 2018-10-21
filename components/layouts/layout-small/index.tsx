@@ -1,19 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component, ReactNodeArray } from 'react';
 import './layout-small.scss';
 
-class LayoutSmall extends Component {
+type LayoutSmallProps = {
+  children?: ReactNodeArray;
+};
+
+class LayoutSmall extends Component<LayoutSmallProps, {}> {
   render() {
-    return (
-      <div className="layout layout--small" {...this.props}>
-        {this.props.children}
-      </div>
-    );
+    return <div className="layout layout--small">{this.props.children}</div>;
   }
 }
-
-LayoutSmall.propTypes = {
-  children: PropTypes.node
-};
 
 export default LayoutSmall;

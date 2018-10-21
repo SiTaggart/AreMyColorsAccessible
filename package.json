@@ -41,7 +41,8 @@
     "autoprefixer": "9.2.1",
     "babel-core": "7.0.0-bridge.0",
     "breakpoint-sass": "2.7.1",
-    "colorable": "1.0.5",
+    "classnames": "2.2.6",
+    "color": "3.1.0",
     "compression": "1.7.3",
     "express": "4.16.4",
     "lodash": "4.17.11",
@@ -60,6 +61,7 @@
     "singleQuote": true
   },
   "devDependencies": {
+    "@types/classnames": "2.2.6",
     "@types/color": "3.0.0",
     "@types/enzyme": "3.1.14",
     "@types/jest": "23.3.5",

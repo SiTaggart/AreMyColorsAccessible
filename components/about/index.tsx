@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Container from '../layouts/container';
 import LayoutSmall from '../layouts/layout-small';
 import './about.scss';
 
-class About extends Component {
+type AboutProps = {
+  siteData: {
+    isLight?: boolean;
+  };
+};
+
+class About extends Component<AboutProps, {}> {
   render() {
     const textColor = this.props.siteData.isLight ? '#222' : '#fff';
     const styles = {
@@ -86,11 +91,4 @@ class About extends Component {
     );
   }
 }
-
-About.propTypes = {
-  siteData: PropTypes.shape({
-    isLight: PropTypes.bool
-  }).isRequired
-};
-
 export default About;

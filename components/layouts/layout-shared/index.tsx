@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component, ReactElement } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import debounce from 'lodash/debounce';
@@ -8,12 +7,26 @@ import qs from 'query-string';
 import Color from 'color';
 import '../../../styles/index.scss';
 
-class LayoutShared extends Component {
+type LayoutSharedProps = {
+  children: ReactElement<any>;
+  location?: {
+    query?: object;
+  };
+  title: string;
+};
+
+type SiteData = { background: string; textColor: string; isLight: boolean };
+
+type LayoutSharedState = {
+  siteData: SiteData;
+};
+
+class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
   static defaultProps = {
     title: 'Are My Colours Accessible'
   };
 
-  constructor(props) {
+  constructor(props: LayoutSharedProps) {
     super(props);
     this.state = {
       siteData: {
@@ -31,11 +44,11 @@ class LayoutShared extends Component {
     this.getQueryParams();
   }
 
-  checkBackgroundLightness(hex) {
+  checkBackgroundLightness(hex: string) {
     let light;
 
     try {
-      light = Color(hex).light();
+      light = Color(hex).isLight();
     } catch (e) {
       light = true;
     }
@@ -46,18 +59,20 @@ class LayoutShared extends Component {
   getQueryParams() {
     if (isEmpty(window.location.search)) return;
     const query = qs.parse(window.location.search);
+    console.log(query);
     query.isLight = query.isLight === 'true';
+    console.log(query.isLight);
     this.setState({ siteData: Object.assign({}, query) });
   }
 
-  setBackgroundColor(hex) {
+  setBackgroundColor(hex: string) {
     let siteData = this.state.siteData;
     siteData.background = hex;
     siteData.isLight = this.checkBackgroundLightness(hex);
     this.setState({ siteData: siteData }, debounce(this.updateHash, 200));
   }
 
-  setTextColorColor(hex) {
+  setTextColorColor(hex: string) {
     let siteData = this.state.siteData;
     siteData.textColor = hex;
     this.setState({ siteData: siteData }, debounce(this.updateHash, 200));
@@ -113,11 +128,4 @@ class LayoutShared extends Component {
     );
   }
 }
-LayoutShared.propTypes = {
-  children: PropTypes.node,
-  location: PropTypes.shape({
-    query: PropTypes.object
-  }),
-  title: PropTypes.string.isRequired
-};
 export default LayoutShared;
