@@ -1,9 +1,9 @@
 import React, { Component, ReactNodeArray } from 'react';
 import './layout-small.scss';
 
-type LayoutSmallProps = {
+interface LayoutSmallProps {
   children?: ReactNodeArray;
-};
+}
 
 class LayoutSmall extends Component<LayoutSmallProps, {}> {
   render() {

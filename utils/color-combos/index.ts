@@ -1,6 +1,10 @@
 import Color from 'color';
 
-type Options = { threshold?: number; compact?: boolean; uniq?: boolean };
+interface Options {
+  threshold?: number;
+  compact?: boolean;
+  uniq?: boolean;
+}
 
 const MINIMUMS: { aa: number; aaLarge: number; aaa: number; aaaLarge: number } = {
   aa: 4.5,

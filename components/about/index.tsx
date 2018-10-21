@@ -3,22 +3,10 @@ import Container from '../layouts/container';
 import LayoutSmall from '../layouts/layout-small';
 import './about.scss';
 
-type AboutProps = {
-  siteData: {
-    isLight?: boolean;
-  };
-};
-
-class About extends Component<AboutProps, {}> {
+class About extends Component<{}, {}> {
   render() {
-    const textColor = this.props.siteData.isLight ? '#222' : '#fff';
-    const styles = {
-      textColor: {
-        color: textColor
-      }
-    };
     return (
-      <Container className="about" style={styles.textColor}>
+      <Container className="about">
         <LayoutSmall>
           <h1 className="heading-1">{'Are my Colours Accessible?'}</h1>
           <p>

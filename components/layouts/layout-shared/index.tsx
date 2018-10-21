@@ -7,19 +7,23 @@ import qs from 'query-string';
 import Color from 'color';
 import '../../../styles/index.scss';
 
-type LayoutSharedProps = {
+interface LayoutSharedProps {
   children: ReactElement<any>;
   location?: {
     query?: object;
   };
   title: string;
-};
+}
 
-type SiteData = { background: string; textColor: string; isLight: boolean };
+interface SiteData {
+  background: string;
+  textColor: string;
+  isLight: boolean;
+}
 
-type LayoutSharedState = {
+interface LayoutSharedState {
   siteData: SiteData;
-};
+}
 
 class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
   static defaultProps = {
@@ -59,9 +63,7 @@ class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
   getQueryParams() {
     if (isEmpty(window.location.search)) return;
     const query = qs.parse(window.location.search);
-    console.log(query);
     query.isLight = query.isLight === 'true';
-    console.log(query.isLight);
     this.setState({ siteData: Object.assign({}, query) });
   }
 

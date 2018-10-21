@@ -2,11 +2,11 @@ import React, { Component, ReactChild } from 'react';
 import ClassNames from 'classnames';
 import './container.scss';
 
-type ContainerProps = {
+interface ContainerProps {
   children?: ReactChild;
   className?: string;
   style?: Object;
-};
+}
 
 class Container extends Component<ContainerProps, {}> {
   render() {
