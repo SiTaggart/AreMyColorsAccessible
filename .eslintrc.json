@@ -26,7 +26,8 @@
       "files": ["**/*.ts", "**/*.tsx"],
       "parser": "typescript-eslint-parser",
       "rules": {
-        "no-undef": "off"
+        "no-undef": "off",
+        "typescript/no-unused-vars": "error"
       }
     }
   ]
