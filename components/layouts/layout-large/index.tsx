@@ -1,8 +1,8 @@
-import React, { Component, ReactNodeArray } from 'react';
+import React, { Component } from 'react';
 import './layout-large.scss';
 
 interface LayoutLargeProps {
-  children?: ReactNodeArray;
+  children?: JSX.Element[] | JSX.Element;
 }
 
 class LayoutLarge extends Component<LayoutLargeProps, {}> {

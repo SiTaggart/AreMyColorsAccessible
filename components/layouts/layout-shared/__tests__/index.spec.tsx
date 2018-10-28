@@ -1,13 +1,13 @@
 /* eslint-env jest */
 
-import React from 'react';
+import React, { SFC } from 'react';
 import ReactDOM from 'react-dom';
-import { shallow } from 'enzyme';
+import { shallow, ShallowWrapper } from 'enzyme';
 import LayoutShared from '..';
 
 describe('Layout Shared', () => {
-  let ChildComponent;
-  let wrapper;
+  let ChildComponent: SFC;
+  let wrapper: ShallowWrapper;
 
   beforeAll(() => {
     ChildComponent = function ChildComponent() {
@@ -16,7 +16,7 @@ describe('Layout Shared', () => {
   });
 
   beforeEach(() => {
-    wrapper = shallow(
+    wrapper = shallow<LayoutShared>(
       <LayoutShared title="are my colors accessible">
         <ChildComponent />
       </LayoutShared>

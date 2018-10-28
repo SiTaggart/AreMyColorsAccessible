@@ -1,4 +1,5 @@
 import Color from 'color';
+import { ColorCombinationTypes, ColorCombosTypes } from '../../types/index';
 
 interface Options {
   threshold?: number;
@@ -6,19 +7,19 @@ interface Options {
   uniq?: boolean;
 }
 
-const MINIMUMS: { aa: number; aaLarge: number; aaa: number; aaaLarge: number } = {
-  aa: 4.5,
-  aaLarge: 3,
-  aaa: 7,
-  aaaLarge: 4.5
-};
-
 const ColorCombos = (
   colors: Array<string> | { [name: string]: string },
   options: Options = {}
-): Array<any> | false => {
-  let arr: Array<any> = [];
-  let results: Array<any> = [];
+): Array<ColorCombosTypes> | false => {
+  let arr: Array<Color> = [];
+  let results: Array<ColorCombosTypes> = [];
+
+  const MINIMUMS: { aa: number; aaLarge: number; aaa: number; aaaLarge: number } = {
+    aa: 4.5,
+    aaLarge: 3,
+    aaa: 7,
+    aaaLarge: 4.5
+  };
 
   const DEFAULT_OPTIONS: Options = {
     threshold: 0,
@@ -26,7 +27,7 @@ const ColorCombos = (
     uniq: true
   };
 
-  options = Object.assign(DEFAULT_OPTIONS, options);
+  const combinedOptions = Object.assign<Options, Options>(DEFAULT_OPTIONS, options);
 
   if (!Array.isArray(colors)) {
     if (typeof colors === 'object') {
@@ -36,7 +37,7 @@ const ColorCombos = (
         }
       }
 
-      if (options.uniq) {
+      if (combinedOptions.uniq) {
         arr = [...new Set(arr)];
       }
     } else {
@@ -44,32 +45,41 @@ const ColorCombos = (
       return false;
     }
   } else {
-    if (options.uniq) {
+    if (combinedOptions.uniq) {
       colors = [...new Set(colors)];
     }
+
     arr = colors.map(color => Color(color));
   }
 
   results = arr.map(color => {
-    var result = options.compact ? {} : Object.assign({}, color);
+    let result: ColorCombosTypes = combinedOptions.compact ? {} : Object.assign({}, color as any);
+
     result.hex = color.hex();
+
     result.combinations = arr
       .filter(bg => color !== bg)
-      .filter(bg => color.contrast(bg) > options.threshold)
+      .filter(bg => color.contrast(bg) > combinedOptions.threshold!)
       .map(bg => {
-        let combination = options.compact ? {} : Object.assign({}, bg);
+        let combination: ColorCombinationTypes = combinedOptions.compact
+          ? {}
+          : Object.assign({}, bg as any);
+
         combination = Object.assign(combination, {
           hex: bg.hex(),
           contrast: color.contrast(bg)
         });
+
         combination.accessibility = {
-          aa: combination.contrast >= MINIMUMS.aa,
-          aaLarge: combination.contrast >= MINIMUMS.aaLarge,
-          aaa: combination.contrast >= MINIMUMS.aaa,
-          aaaLarge: combination.contrast >= MINIMUMS.aaaLarge
+          aa: combination.contrast! >= MINIMUMS.aa,
+          aaLarge: combination.contrast! >= MINIMUMS.aaLarge,
+          aaa: combination.contrast! >= MINIMUMS.aaa,
+          aaaLarge: combination.contrast! >= MINIMUMS.aaaLarge
         };
+
         return combination;
       });
+
     return result;
   });
 

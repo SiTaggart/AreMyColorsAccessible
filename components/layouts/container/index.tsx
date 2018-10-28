@@ -1,9 +1,9 @@
-import React, { Component, ReactChild } from 'react';
+import React, { Component } from 'react';
 import ClassNames from 'classnames';
 import './container.scss';
 
 interface ContainerProps {
-  children?: ReactChild;
+  children?: JSX.Element[] | JSX.Element;
   className?: string;
   style?: Object;
 }

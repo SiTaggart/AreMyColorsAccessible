@@ -1,6 +1,7 @@
 import React, { Component, ReactElement } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import { SiteData } from '../../../types';
 import debounce from 'lodash/debounce';
 import isEmpty from 'lodash/isEmpty';
 import qs from 'query-string';
@@ -13,12 +14,6 @@ interface LayoutSharedProps {
     query?: object;
   };
   title: string;
-}
-
-interface SiteData {
-  background: string;
-  textColor: string;
-  isLight: boolean;
 }
 
 interface LayoutSharedState {
