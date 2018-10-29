@@ -25,15 +25,19 @@ interface Range {
   symbol: string;
 }
 
+interface HSLColorTypes extends Color {
+  color: Array<number>;
+}
+
 class HslSlider extends Component<HslSliderProps, HslSliderState> {
   constructor(props: HslSliderProps) {
     super(props);
-    const hsl: Color = Color(this.props.value).hsl();
+    const hsl: Partial<HSLColorTypes> = Color(this.props.value).hsl();
     this.state = this.roundHSLValues(hsl);
     this.updateColor = this.updateColor.bind(this);
   }
 
-  shouldComponentUpdate(nextProps: HslSliderProps, nextState: HslSliderState): boolean {
+  shouldComponentUpdate(_nextProps: HslSliderProps, nextState: HslSliderState): boolean {
     return !isEqual(this.state, nextState);
   }
 
@@ -84,16 +88,16 @@ class HslSlider extends Component<HslSliderProps, HslSliderState> {
     );
   };
 
-  private roundHSLValues = (hsl: Color): HslSliderState => {
+  private roundHSLValues = (hsl: Partial<HSLColorTypes>): HslSliderState => {
     return {
-      hue: Math.round(hsl.color[0]),
-      saturation: Math.round(hsl.color[1]),
-      lightness: Math.round(hsl.color[2])
+      hue: Math.round(hsl.color![0]),
+      saturation: Math.round(hsl.color![1]),
+      lightness: Math.round(hsl.color![2])
     };
   };
 
   public setHSLColorState = (value: string): void => {
-    let hsl: Color;
+    let hsl: Partial<HSLColorTypes>;
     try {
       hsl = Color(value).hsl();
       this.setState(this.roundHSLValues(hsl));

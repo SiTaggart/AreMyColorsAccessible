@@ -1,4 +1,4 @@
-import React, { Component, ReactElement } from 'react';
+import React, { Component, ReactNode } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { SiteData } from '../../../types';
@@ -7,9 +7,10 @@ import isEmpty from 'lodash/isEmpty';
 import qs from 'query-string';
 import Color from 'color';
 import '../../../styles/index.scss';
+import { HomeProps } from 'components/home';
 
 interface LayoutSharedProps {
-  children: ReactElement<any>;
+  children: (args: HomeProps) => ReactNode;
   location?: {
     query?: object;
   };
@@ -99,7 +100,7 @@ class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
           `}</style>
         </Head>
 
-        {React.cloneElement(this.props.children, {
+        {this.props.children({
           siteData: this.state.siteData,
           setBackgroundColor: this.setBackgroundColor,
           setTextColorColor: this.setTextColorColor

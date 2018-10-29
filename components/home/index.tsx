@@ -8,7 +8,7 @@ import Results from '../results';
 import ColorInputs from '../colorInputs';
 import './home-styles.scss';
 
-interface HomeProps {
+export interface HomeProps {
   setBackgroundColor: (...args: any[]) => any;
   setTextColorColor: (...args: any[]) => any;
   siteData: SiteData;

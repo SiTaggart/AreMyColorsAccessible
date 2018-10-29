@@ -97,10 +97,6 @@ describe('ColorCombos', () => {
     ]);
   });
 
-  it('should return false when not passed an array or object', () => {
-    expect(ColorCombos('red')).toEqual(false);
-  });
-
   it('should return a compact combo when passed compact', () => {
     expect(ColorCombos(mockColorArray, { compact: true })).toEqual([
       {

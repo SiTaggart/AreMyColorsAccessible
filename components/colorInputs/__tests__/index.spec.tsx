@@ -2,13 +2,13 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { mount } from 'enzyme';
+import { mount, ReactWrapper } from 'enzyme';
 import ColorInputs from '..';
 
 describe('About', () => {
-  let setBackgroundColor;
-  let setTextColor;
-  let wrapper;
+  let setBackgroundColor: jest.Mock;
+  let setTextColor: jest.Mock;
+  let wrapper: ReactWrapper;
 
   beforeAll(() => {
     setBackgroundColor = jest.fn();
@@ -30,7 +30,13 @@ describe('About', () => {
 
   it('renders without crashing', () => {
     ReactDOM.render(
-      <ColorInputs background="#000" isLight={false} textColor="#fff" />,
+      <ColorInputs
+        background="#000"
+        isLight={false}
+        setBackgroundColor={setBackgroundColor}
+        setTextColorColor={setTextColor}
+        textColor="#fff"
+      />,
       document.createElement('div')
     );
   });

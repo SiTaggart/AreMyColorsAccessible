@@ -4,9 +4,10 @@ import React, { SFC } from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, ShallowWrapper } from 'enzyme';
 import LayoutShared from '..';
+import { HomeProps } from 'components/home';
 
 describe('Layout Shared', () => {
-  let ChildComponent: SFC;
+  let ChildComponent: SFC<HomeProps>;
   let wrapper: ShallowWrapper;
   let instance: LayoutShared;
 
@@ -19,7 +20,7 @@ describe('Layout Shared', () => {
   beforeEach(() => {
     wrapper = shallow(
       <LayoutShared title="are my colors accessible">
-        <ChildComponent />
+        {props => <ChildComponent {...props} />}
       </LayoutShared>
     );
 
@@ -29,7 +30,7 @@ describe('Layout Shared', () => {
   it('renders without crashing', () => {
     ReactDOM.render(
       <LayoutShared title="are my colors accessible">
-        <ChildComponent />
+        {props => <ChildComponent {...props} />}
       </LayoutShared>,
       document.createElement('div')
     );
@@ -57,7 +58,7 @@ describe('Layout Shared', () => {
     );
     const newwrapper = shallow(
       <LayoutShared title="are my colors accessible">
-        <ChildComponent />
+        {props => <ChildComponent {...props} />}
       </LayoutShared>
     );
     expect(newwrapper.instance().state).toEqual({
