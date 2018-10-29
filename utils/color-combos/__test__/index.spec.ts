@@ -97,7 +97,7 @@ describe('ColorCombos', () => {
     ]);
   });
 
-  it('should throw when not passed an array or object', () => {
+  it('should return false when not passed an array or object', () => {
     expect(ColorCombos('red')).toEqual(false);
   });
 

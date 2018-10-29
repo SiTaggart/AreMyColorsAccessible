@@ -8,6 +8,7 @@ import LayoutShared from '..';
 describe('Layout Shared', () => {
   let ChildComponent: SFC;
   let wrapper: ShallowWrapper;
+  let instance: LayoutShared;
 
   beforeAll(() => {
     ChildComponent = function ChildComponent() {
@@ -16,11 +17,13 @@ describe('Layout Shared', () => {
   });
 
   beforeEach(() => {
-    wrapper = shallow<LayoutShared>(
+    wrapper = shallow(
       <LayoutShared title="are my colors accessible">
         <ChildComponent />
       </LayoutShared>
     );
+
+    instance = wrapper.instance() as LayoutShared;
   });
 
   it('renders without crashing', () => {
@@ -63,24 +66,24 @@ describe('Layout Shared', () => {
   });
 
   it('should update state when setBackgorundColor is called with a hex', () => {
-    wrapper.instance().setBackgroundColor('#000');
-    expect(wrapper.instance().state.siteData.background).toEqual('#000');
+    instance.setBackgroundColor('#000');
+    expect(instance.state.siteData.background).toEqual('#000');
   });
 
   it('should update state with isLight when setBackgroundColor is called with a light color', () => {
-    wrapper.instance().setBackgroundColor('#ccc');
-    expect(wrapper.instance().state.siteData.isLight).toEqual(true);
+    instance.setBackgroundColor('#ccc');
+    expect(instance.state.siteData.isLight).toEqual(true);
   });
 
   it('should update state when setTextColorColor is called with a hex', () => {
-    wrapper.instance().setTextColorColor('#fefefe');
-    expect(wrapper.instance().state.siteData.textColor).toEqual('#fefefe');
+    instance.setTextColorColor('#fefefe');
+    expect(instance.state.siteData.textColor).toEqual('#fefefe');
   });
 
   it('should update the url with the state when updateHash is called', () => {
-    wrapper.instance().setBackgroundColor('#777');
-    wrapper.instance().setTextColorColor('#ddd');
-    wrapper.instance().updateHash();
+    instance.setBackgroundColor('#777');
+    instance.setTextColorColor('#ddd');
+    instance.updateHash();
     expect(window.location.search).toEqual('?background=%23777&isLight=false&textColor=%23ddd');
   });
 });

@@ -41,7 +41,7 @@ const ColorCombos = (
         arr = [...new Set(arr)];
       }
     } else {
-      console.log('Must provide an array or object');
+      console.error('Must provide an array or object');
       return false;
     }
   } else {

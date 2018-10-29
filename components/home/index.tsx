@@ -44,8 +44,6 @@ class Home extends Component<HomeProps, {}> {
       colorInfo = dummyColorInfo;
     }
 
-    console.log(colorInfo);
-
     return colorInfo;
   }
 
