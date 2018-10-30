@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Container from '../layouts/container';
 import LayoutSmall from '../layouts/layout-small';
 import './about.scss';
 
-class About extends Component {
+class About extends Component<{}, {}> {
   render() {
-    const textColor = this.props.siteData.isLight ? '#222' : '#fff';
-    const styles = {
-      textColor: {
-        color: textColor
-      }
-    };
     return (
-      <Container className="about" style={styles.textColor}>
+      <Container className="about">
         <LayoutSmall>
           <h1 className="heading-1">{'Are my Colours Accessible?'}</h1>
           <p>
@@ -86,11 +79,4 @@ class About extends Component {
     );
   }
 }
-
-About.propTypes = {
-  siteData: PropTypes.shape({
-    isLight: PropTypes.bool
-  }).isRequired
-};
-
 export default About;

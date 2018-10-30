@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { ColorCombinationTypes } from '../../types';
 import './results.scss';
 
-class Results extends Component {
+interface ResultsProps extends ColorCombinationTypes {
+  isLight: boolean;
+}
+
+class Results extends Component<ResultsProps, {}> {
   renderAreYouSerious() {
     let styles = {
       seriouslyContainer: {
         color: this.props.isLight ? '#222' : '#fff'
       }
     };
+
     return (
       <div className="contrastResult" style={styles.seriouslyContainer}>
         <h2 className="contrastResult-rating">{'Seriously?'}</h2>
@@ -17,23 +22,23 @@ class Results extends Component {
   }
 
   render() {
-    const ratio = this.props.contrast.toFixed(2);
-    let areYouSerious = false;
+    const ratio = parseFloat(this.props.contrast!.toFixed(2));
+    let areYouSerious = null;
     let boldTextRating = '';
     let largeTextRating = '';
     let overallRating = 'Nope';
     let smallTextRating = '';
 
-    if (this.props.accessibility.aaa) {
+    if (this.props.accessibility!.aaa) {
       smallTextRating = 'AAA';
     } else {
-      smallTextRating = this.props.accessibility.aa ? 'AA' : 'Fail';
+      smallTextRating = this.props.accessibility!.aa ? 'AA' : 'Fail';
     }
 
-    if (this.props.accessibility.aaaLarge) {
+    if (this.props.accessibility!.aaaLarge) {
       boldTextRating = largeTextRating = 'AAA';
     } else {
-      boldTextRating = this.props.accessibility.aaLarge ? 'AA' : 'Fail';
+      boldTextRating = this.props.accessibility!.aaLarge ? 'AA' : 'Fail';
       largeTextRating = boldTextRating;
     }
 
@@ -84,16 +89,5 @@ class Results extends Component {
     );
   }
 }
-
-Results.propTypes = {
-  accessibility: PropTypes.shape({
-    aa: PropTypes.bool,
-    aaa: PropTypes.bool,
-    aaLarge: PropTypes.bool,
-    aaaLarge: PropTypes.bool
-  }).isRequired,
-  contrast: PropTypes.number.isRequired,
-  isLight: PropTypes.bool.isRequired
-};
 
 export default Results;

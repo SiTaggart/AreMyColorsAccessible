@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Colorable from 'colorable';
+import { SiteData, ColorCombinationTypes } from '../../types';
+import ColorCombos from '../../utils/color-combos';
 import Container from '../layouts/container';
 import LayoutSmall from '../layouts/layout-small';
 import LayoutLarge from '../layouts/layout-large';
@@ -8,16 +8,23 @@ import Results from '../results';
 import ColorInputs from '../colorInputs';
 import './home-styles.scss';
 
-class Home extends Component {
-  constructor(props) {
+export interface HomeProps {
+  setBackgroundColor: (...args: any[]) => any;
+  setTextColorColor: (...args: any[]) => any;
+  siteData: SiteData;
+}
+
+class Home extends Component<HomeProps, {}> {
+  constructor(props: HomeProps) {
     super(props);
     this.setBackgroundColor = this.setBackgroundColor.bind(this);
     this.setTextColorColor = this.setTextColorColor.bind(this);
   }
 
-  getColorInfo(background, textColor) {
-    let colorInfo;
-    const dummyColorInfo = {
+  getColorInfo(background: string, textColor: string) {
+    let colorInfo: Partial<ColorCombinationTypes>;
+
+    const dummyColorInfo: Partial<ColorCombinationTypes> = {
       contrast: 0,
       accessibility: {
         aaa: false,
@@ -26,21 +33,26 @@ class Home extends Component {
         aaLarge: false
       }
     };
+
     try {
-      colorInfo = !Colorable([textColor, background])[0].combinations.length
-        ? dummyColorInfo
-        : Colorable([textColor, background])[0].combinations[0];
+      if (ColorCombos([textColor, background]) !== false) {
+        const colors = ColorCombos([textColor, background]) as any;
+        colorInfo = colors[0].combinations![0];
+      } else {
+        colorInfo = dummyColorInfo;
+      }
     } catch (e) {
       colorInfo = dummyColorInfo;
     }
+
     return colorInfo;
   }
 
-  setBackgroundColor(hex) {
+  setBackgroundColor(hex: string) {
     this.props.setBackgroundColor(hex);
   }
 
-  setTextColorColor(hex) {
+  setTextColorColor(hex: string) {
     this.props.setTextColorColor(hex);
   }
 
@@ -67,15 +79,5 @@ class Home extends Component {
     );
   }
 }
-
-Home.propTypes = {
-  setBackgroundColor: PropTypes.func,
-  setTextColorColor: PropTypes.func,
-  siteData: PropTypes.shape({
-    background: PropTypes.string,
-    textColor: PropTypes.string,
-    isLight: PropTypes.bool
-  })
-};
 
 export default Home;

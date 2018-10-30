@@ -1,58 +1,74 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component, ReactNode } from 'react';
 import Color from 'color';
 import debounce from 'lodash/debounce';
 import isEqual from 'lodash/isEqual';
 import './hsl-slider.scss';
 
-class HslSlider extends Component {
-  constructor(props) {
+interface HslSliderProps {
+  id: string;
+  onChange: (...args: any[]) => any;
+  value: string;
+}
+
+interface HslSliderState {
+  hue: number;
+  saturation: number;
+  lightness: number;
+}
+
+interface Range {
+  label: string;
+  min: number;
+  max: number;
+  value: number;
+  handleOnChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
+  symbol: string;
+}
+
+interface HSLColorTypes extends Color {
+  color: Array<number>;
+}
+
+class HslSlider extends Component<HslSliderProps, HslSliderState> {
+  constructor(props: HslSliderProps) {
     super(props);
-    const hsl = Color(this.props.value).hsl();
-    this.state = {
-      hue: hsl.h,
-      saturation: hsl.s,
-      lightness: hsl.l
-    };
-    this.handleHueChange = this.handleHueChange.bind(this);
-    this.handleSaturationChange = this.handleSaturationChange.bind(this);
-    this.handleLightnessChange = this.handleLightnessChange.bind(this);
-    this.renderRangeInput = this.renderRangeInput.bind(this);
+    const hsl: Partial<HSLColorTypes> = Color(this.props.value).hsl();
+    this.state = this.roundHSLValues(hsl);
     this.updateColor = this.updateColor.bind(this);
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(_nextProps: HslSliderProps, nextState: HslSliderState): boolean {
     return !isEqual(this.state, nextState);
   }
 
-  handleHueChange(e) {
+  private handleHueChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     this.setState(
       {
         hue: parseInt(e.target.value)
       },
       debounce(this.updateColor, 200)
     );
-  }
+  };
 
-  handleSaturationChange(e) {
+  private handleSaturationChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     this.setState(
       {
         saturation: parseInt(e.target.value)
       },
       debounce(this.updateColor, 200)
     );
-  }
+  };
 
-  handleLightnessChange(e) {
+  private handleLightnessChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     this.setState(
       {
         lightness: parseInt(e.target.value)
       },
       debounce(this.updateColor, 200)
     );
-  }
+  };
 
-  renderRangeInput(range) {
+  private renderRangeInput = (range: Range): ReactNode => {
     const id = this.props.id + '-' + range.label;
     return (
       <div className="form-hsl-slider" key={id}>
@@ -61,7 +77,7 @@ class HslSlider extends Component {
         </label>
         <input
           className="form-range"
-          defaultValue={range.value}
+          defaultValue={range.value.toString()}
           id={id}
           max={range.max}
           min={range.min}
@@ -70,35 +86,39 @@ class HslSlider extends Component {
         />
       </div>
     );
-  }
+  };
 
-  setHSLColorState(value) {
-    let hsl;
+  private roundHSLValues = (hsl: Partial<HSLColorTypes>): HslSliderState => {
+    return {
+      hue: Math.round(hsl.color![0]),
+      saturation: Math.round(hsl.color![1]),
+      lightness: Math.round(hsl.color![2])
+    };
+  };
+
+  public setHSLColorState = (value: string): void => {
+    let hsl: Partial<HSLColorTypes>;
     try {
       hsl = Color(value).hsl();
-      this.setState({
-        hue: hsl.h,
-        saturation: hsl.s,
-        lightness: hsl.l
-      });
+      this.setState(this.roundHSLValues(hsl));
     } catch (error) {
       // console.error('bad hsl');
     }
-  }
+  };
 
-  updateColor() {
+  public updateColor = (): void => {
     const hex = Color({
       h: this.state.hue,
       s: this.state.saturation,
       l: this.state.lightness
-    }).hexString();
+    }).hex();
     if (hex !== this.props.value) {
       this.props.onChange(hex);
     }
-  }
+  };
 
   render() {
-    const hslRanges = [
+    const hslRanges: Array<Range> = [
       {
         label: 'Hue',
         min: 0,
@@ -124,14 +144,9 @@ class HslSlider extends Component {
         symbol: '%'
       }
     ];
+
     return <div className="form-hsl-sliders">{hslRanges.map(this.renderRangeInput)}</div>;
   }
 }
-
-HslSlider.propTypes = {
-  id: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired
-};
 
 export default HslSlider;

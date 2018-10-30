@@ -1,13 +1,15 @@
 /* eslint-env jest */
 
-import React from 'react';
+import React, { SFC } from 'react';
 import ReactDOM from 'react-dom';
-import { shallow } from 'enzyme';
-import LayoutShared from '../index';
+import { shallow, ShallowWrapper } from 'enzyme';
+import LayoutShared from '..';
+import { HomeProps } from 'components/home';
 
 describe('Layout Shared', () => {
-  let ChildComponent;
-  let wrapper;
+  let ChildComponent: SFC<HomeProps>;
+  let wrapper: ShallowWrapper;
+  let instance: LayoutShared;
 
   beforeAll(() => {
     ChildComponent = function ChildComponent() {
@@ -18,15 +20,17 @@ describe('Layout Shared', () => {
   beforeEach(() => {
     wrapper = shallow(
       <LayoutShared title="are my colors accessible">
-        <ChildComponent />
+        {props => <ChildComponent {...props} />}
       </LayoutShared>
     );
+
+    instance = wrapper.instance() as LayoutShared;
   });
 
   it('renders without crashing', () => {
     ReactDOM.render(
       <LayoutShared title="are my colors accessible">
-        <ChildComponent />
+        {props => <ChildComponent {...props} />}
       </LayoutShared>,
       document.createElement('div')
     );
@@ -54,7 +58,7 @@ describe('Layout Shared', () => {
     );
     const newwrapper = shallow(
       <LayoutShared title="are my colors accessible">
-        <ChildComponent />
+        {props => <ChildComponent {...props} />}
       </LayoutShared>
     );
     expect(newwrapper.instance().state).toEqual({
@@ -63,24 +67,24 @@ describe('Layout Shared', () => {
   });
 
   it('should update state when setBackgorundColor is called with a hex', () => {
-    wrapper.instance().setBackgroundColor('#000');
-    expect(wrapper.instance().state.siteData.background).toEqual('#000');
+    instance.setBackgroundColor('#000');
+    expect(instance.state.siteData.background).toEqual('#000');
   });
 
   it('should update state with isLight when setBackgroundColor is called with a light color', () => {
-    wrapper.instance().setBackgroundColor('#ccc');
-    expect(wrapper.instance().state.siteData.isLight).toEqual(true);
+    instance.setBackgroundColor('#ccc');
+    expect(instance.state.siteData.isLight).toEqual(true);
   });
 
   it('should update state when setTextColorColor is called with a hex', () => {
-    wrapper.instance().setTextColorColor('#fefefe');
-    expect(wrapper.instance().state.siteData.textColor).toEqual('#fefefe');
+    instance.setTextColorColor('#fefefe');
+    expect(instance.state.siteData.textColor).toEqual('#fefefe');
   });
 
   it('should update the url with the state when updateHash is called', () => {
-    wrapper.instance().setBackgroundColor('#777');
-    wrapper.instance().setTextColorColor('#ddd');
-    wrapper.instance().updateHash();
+    instance.setBackgroundColor('#777');
+    instance.setTextColorColor('#ddd');
+    instance.updateHash();
     expect(window.location.search).toEqual('?background=%23777&isLight=false&textColor=%23ddd');
   });
 });

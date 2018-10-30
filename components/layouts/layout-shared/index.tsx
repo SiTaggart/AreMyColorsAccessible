@@ -1,19 +1,32 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component, ReactNode } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import { SiteData } from '../../../types';
 import debounce from 'lodash/debounce';
 import isEmpty from 'lodash/isEmpty';
 import qs from 'query-string';
 import Color from 'color';
 import '../../../styles/index.scss';
+import { HomeProps } from 'components/home';
 
-class LayoutShared extends Component {
+interface LayoutSharedProps {
+  children: (args: HomeProps) => ReactNode;
+  location?: {
+    query?: object;
+  };
+  title: string;
+}
+
+interface LayoutSharedState {
+  siteData: SiteData;
+}
+
+class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
   static defaultProps = {
     title: 'Are My Colours Accessible'
   };
 
-  constructor(props) {
+  constructor(props: LayoutSharedProps) {
     super(props);
     this.state = {
       siteData: {
@@ -31,11 +44,11 @@ class LayoutShared extends Component {
     this.getQueryParams();
   }
 
-  checkBackgroundLightness(hex) {
+  checkBackgroundLightness(hex: string) {
     let light;
 
     try {
-      light = Color(hex).light();
+      light = Color(hex).isLight();
     } catch (e) {
       light = true;
     }
@@ -45,19 +58,19 @@ class LayoutShared extends Component {
 
   getQueryParams() {
     if (isEmpty(window.location.search)) return;
-    const query = qs.parse(window.location.search);
+    const query = qs.parse(window.location.search) as any;
     query.isLight = query.isLight === 'true';
-    this.setState({ siteData: Object.assign({}, query) });
+    this.setState({ siteData: Object.assign({}, query as SiteData) });
   }
 
-  setBackgroundColor(hex) {
+  setBackgroundColor(hex: string) {
     let siteData = this.state.siteData;
     siteData.background = hex;
     siteData.isLight = this.checkBackgroundLightness(hex);
     this.setState({ siteData: siteData }, debounce(this.updateHash, 200));
   }
 
-  setTextColorColor(hex) {
+  setTextColorColor(hex: string) {
     let siteData = this.state.siteData;
     siteData.textColor = hex;
     this.setState({ siteData: siteData }, debounce(this.updateHash, 200));
@@ -87,7 +100,7 @@ class LayoutShared extends Component {
           `}</style>
         </Head>
 
-        {React.cloneElement(this.props.children, {
+        {this.props.children({
           siteData: this.state.siteData,
           setBackgroundColor: this.setBackgroundColor,
           setTextColorColor: this.setTextColorColor
@@ -113,13 +126,4 @@ class LayoutShared extends Component {
     );
   }
 }
-
-LayoutShared.propTypes = {
-  children: PropTypes.node,
-  location: PropTypes.shape({
-    query: PropTypes.object
-  }),
-  title: PropTypes.string.isRequired
-};
-
 export default LayoutShared;

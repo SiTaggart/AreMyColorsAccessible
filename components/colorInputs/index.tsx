@@ -1,24 +1,31 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import HslSlider from '../hsl-slider';
 import './colorInputs.scss';
 
-class ColorInputs extends Component {
-  textColorRef = React.createRef();
-  backgroundColorRef = React.createRef();
+interface ColorInputsProps {
+  background: string;
+  isLight: boolean;
+  setBackgroundColor: (...args: any[]) => any;
+  setTextColorColor: (...args: any[]) => any;
+  textColor: string;
+}
 
-  constructor(props) {
+class ColorInputs extends Component<ColorInputsProps, {}> {
+  private textColorRef = React.createRef<HslSlider>();
+  private backgroundColorRef = React.createRef<HslSlider>();
+
+  constructor(props: ColorInputsProps) {
     super(props);
     this.handleBackgroundChange = this.handleBackgroundChange.bind(this);
     this.handleTextColorChange = this.handleTextColorChange.bind(this);
   }
 
   componentDidUpdate() {
-    this.textColorRef.current.setHSLColorState(this.props.textColor);
-    this.backgroundColorRef.current.setHSLColorState(this.props.background);
+    this.textColorRef.current!.setHSLColorState(this.props.textColor);
+    this.backgroundColorRef.current!.setHSLColorState(this.props.background);
   }
 
-  handleBackgroundChange(e) {
+  handleBackgroundChange(e: React.ChangeEvent<HTMLInputElement>): void {
     let newBackgroundColor;
     if (!e.target) {
       newBackgroundColor = e;
@@ -28,7 +35,7 @@ class ColorInputs extends Component {
     this.props.setBackgroundColor(newBackgroundColor);
   }
 
-  handleTextColorChange(e) {
+  handleTextColorChange(e: React.ChangeEvent<HTMLInputElement>): void {
     let newTextColorColor;
     if (!e.target) {
       newTextColorColor = e;
@@ -42,7 +49,6 @@ class ColorInputs extends Component {
     const textColor = this.props.textColor;
     const background = this.props.background;
     const formTextColor = this.props.isLight ? '#222' : '#fff';
-
     const styles = {
       form: {
         color: formTextColor
@@ -97,13 +103,5 @@ class ColorInputs extends Component {
     );
   }
 }
-
-ColorInputs.propTypes = {
-  background: PropTypes.string.isRequired,
-  isLight: PropTypes.bool.isRequired,
-  setBackgroundColor: PropTypes.func,
-  setTextColorColor: PropTypes.func,
-  textColor: PropTypes.string.isRequired
-};
 
 export default ColorInputs;
