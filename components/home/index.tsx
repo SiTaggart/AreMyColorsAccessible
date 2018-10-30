@@ -36,7 +36,8 @@ class Home extends Component<HomeProps, {}> {
 
     try {
       if (ColorCombos([textColor, background]) !== false) {
-        colorInfo = ColorCombos([textColor, background])[0].combinations[0];
+        const colors = ColorCombos([textColor, background]) as any;
+        colorInfo = colors[0].combinations![0];
       } else {
         colorInfo = dummyColorInfo;
       }

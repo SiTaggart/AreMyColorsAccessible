@@ -58,7 +58,7 @@ class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
 
   getQueryParams() {
     if (isEmpty(window.location.search)) return;
-    const query: Partial<SiteData> = qs.parse(window.location.search);
+    const query = qs.parse(window.location.search) as any;
     query.isLight = query.isLight === 'true';
     this.setState({ siteData: Object.assign({}, query as SiteData) });
   }

@@ -20,6 +20,7 @@ export interface ColorCombosTypes {
   hex?: string;
   model?: string;
   valpha?: number;
+  [key: number]: ColorCombosTypes;
 }
 
 export interface SiteData {

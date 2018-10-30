@@ -8,7 +8,7 @@
     "old_dev": "next",
     "old_start": "NODE_ENV=production next start -p $PORT",
     "build": "next build",
-    "dev": "node server.ts",
+    "dev": "node server.js",
     "start": "NODE_ENV=production node server.ts -p $PORT",
     "analyze_bundle": "BUNDLE_ANALYZE=both npm run build",
     "analyze_bundle:browser": "BUNDLE_ANALYZE=browser npm run build",
