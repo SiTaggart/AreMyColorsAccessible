@@ -1,7 +1,5 @@
 {
-  "editor.formatOnSave": true,
-  "prettier.disableLanguages": [
-    "vue"
-  ],
-  "eslint.autoFixOnSave": true
+  "prettier.disableLanguages": ["vue"],
+  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": true
 }

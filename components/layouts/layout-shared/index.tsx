@@ -1,13 +1,13 @@
 import React, { Component, ReactNode } from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
 import { SiteData } from '../../../types';
 import debounce from 'lodash/debounce';
 import isEmpty from 'lodash/isEmpty';
 import qs from 'query-string';
 import Color from 'color';
+import { HomeProps } from '../../home';
+import Footer from '../../footer';
 import '../../../styles/index.scss';
-import { HomeProps } from 'components/home';
 
 interface LayoutSharedProps {
   children: (args: HomeProps) => ReactNode;
@@ -106,22 +106,7 @@ class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
           setTextColorColor: this.setTextColorColor
         })}
 
-        <footer className="footer">
-          <nav>
-            <ul>
-              <li>
-                <Link href="/">
-                  <a style={styles.footerLinks}>Home</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about">
-                  <a style={styles.footerLinks}>About</a>
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </footer>
+        <Footer styles={styles} />
       </div>
     );
   }

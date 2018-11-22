@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import './index.scss';
 
 interface I{{pascalCase name}}Props {
   children: ReactNode;
