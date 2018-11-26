@@ -7,7 +7,7 @@ interface I{{pascalCase name}}Props {
 
 const {{pascalCase name}}: React.FunctionComponent<I{{pascalCase name}}Props> = (props: I{{pascalCase name}}Props) => {
   return (
-    <div>
+    <div className="{{camelCase name}}">
       {props.children}
     </div>
   );

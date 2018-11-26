@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import HslSlider from '../hsl-slider';
-import './colorInputs.scss';
+import FormLabel from '../form-label';
+import FormInput from '../form-input';
+import FormControl from '../form-control';
+import Form from '../form';
 
 interface ColorInputsProps {
   background: string;
@@ -60,17 +63,13 @@ class ColorInputs extends Component<ColorInputsProps, {}> {
     };
 
     return (
-      <form className="form" style={styles.form}>
-        <div className="form-control">
-          <label className="form-label" htmlFor="textColor">
-            Text Color
-          </label>
-          <input
-            className="form-input"
+      <Form style={styles.form}>
+        <FormControl>
+          <FormLabel htmlFor="textColor">Text Color</FormLabel>
+          <FormInput
             id="textColor"
             onChange={this.handleTextColorChange}
             style={styles.input}
-            type="text"
             value={textColor}
           />
           <HslSlider
@@ -79,17 +78,13 @@ class ColorInputs extends Component<ColorInputsProps, {}> {
             ref={this.textColorRef}
             value={textColor}
           />
-        </div>
-        <div className="form-control">
-          <label className="form-label" htmlFor="background">
-            Background
-          </label>
-          <input
-            className="form-input"
+        </FormControl>
+        <FormControl>
+          <FormLabel htmlFor="background">Background</FormLabel>
+          <FormInput
             id="background"
             onChange={this.handleBackgroundChange}
             style={styles.input}
-            type="text"
             value={background}
           />
           <HslSlider
@@ -98,8 +93,8 @@ class ColorInputs extends Component<ColorInputsProps, {}> {
             ref={this.backgroundColorRef}
             value={background}
           />
-        </div>
-      </form>
+        </FormControl>
+      </Form>
     );
   }
 }

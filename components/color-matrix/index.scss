@@ -1,3 +1,20 @@
-@import '../../styles/utils';
+.colorMatrix {
+  margin-top: 3rem;
+}
 
-.colorMatrix {}
+.colorMatrix-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.colorMatrix-tr {
+}
+
+.colorMatrix-th {
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.colorMatrix-td {
+  padding: 0.5rem;
+}

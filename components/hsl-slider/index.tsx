@@ -1,13 +1,17 @@
 import React, { Component, ReactNode } from 'react';
 import Color from 'color';
+import classNames from 'classnames';
 import debounce from 'lodash/debounce';
 import isEqual from 'lodash/isEqual';
 import './hsl-slider.scss';
+import FormLabel from '../form-label';
+import FormRange from '../form-range';
 
 interface HslSliderProps {
   id: string;
   onChange: (...args: any[]) => any;
   value: string;
+  variant?: 'compact' | null;
 }
 
 interface HslSliderState {
@@ -71,18 +75,23 @@ class HslSlider extends Component<HslSliderProps, HslSliderState> {
   private renderRangeInput = (range: Range): ReactNode => {
     const id = this.props.id + '-' + range.label;
     return (
-      <div className="form-hsl-slider" key={id}>
-        <label className="form-label" htmlFor={id}>
-          {range.label} {range.value + range.symbol}
-        </label>
-        <input
-          className="form-range"
+      <div
+        className={classNames('form-hsl-slider', {
+          'form-hsl-slider--compact': this.props.variant === 'compact'
+        })}
+        key={id}
+      >
+        <FormLabel htmlFor={id}>
+          {this.props.variant === 'compact'
+            ? `${range.label.substring(0, 1)}`
+            : `${range.label} ${range.value + range.symbol}`}
+        </FormLabel>
+        <FormRange
           defaultValue={range.value.toString()}
           id={id}
           max={range.max}
           min={range.min}
           onInput={range.handleOnChange}
-          type="range"
         />
       </div>
     );
@@ -145,7 +154,15 @@ class HslSlider extends Component<HslSliderProps, HslSliderState> {
       }
     ];
 
-    return <div className="form-hsl-sliders">{hslRanges.map(this.renderRangeInput)}</div>;
+    return (
+      <div
+        className={classNames('form-hsl-sliders', {
+          'form-hsl-sliders--compact': this.props.variant === 'compact'
+        })}
+      >
+        {hslRanges.map(this.renderRangeInput)}
+      </div>
+    );
   }
 }
 

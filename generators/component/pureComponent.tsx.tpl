@@ -15,6 +15,6 @@ export default class {{pascalCase name}} extends PureComponent<I{{pascalCase nam
   }
 
   render() {
-    return <div>{this.props.children}</div>;
+    return <div className="{{camelCase name}}">{this.props.children}</div>;
   }
 }

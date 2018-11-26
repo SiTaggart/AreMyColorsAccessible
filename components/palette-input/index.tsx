@@ -1,5 +1,7 @@
 import React, { FormEvent } from 'react';
 import './index.scss';
+import FormLabel from '../form-label';
+import FormInput from '../form-input';
 
 interface IPaletteInputProps {
   onColorAdd: (colors: string) => void;
@@ -16,23 +18,18 @@ const PaletteInput: React.FunctionComponent<IPaletteInputProps> = (props: IPalet
   return (
     <form className="paletteForm" onSubmit={handleFormSubmit}>
       <div className="paletteForm-element">
-        <label className="paletteForm-label" htmlFor="palette-form-input">
-          Add a color(s)
-        </label>
-        <input
-          aria-describedby={props.errorMessage ? 'error-message-label' : undefined}
-          autoComplete="off"
+        <h1>
+          <FormLabel className="paletteForm-label" htmlFor="palette-form-input">
+            Add the colours from your palette
+          </FormLabel>
+        </h1>
+        <FormInput
           className="paletteForm-input"
-          defaultValue=""
+          defaultValue="#fff #dedede #5F98E1 #6638F0 #B0F566 #333 #000, #555"
+          errorMessage={props.errorMessage}
           id="palette-form-input"
           name="paletteFormInput"
-          type="text"
         />
-        {props.errorMessage && (
-          <div className="paletteForm-error" id="error-message-label">
-            {props.errorMessage}
-          </div>
-        )}
       </div>
     </form>
   );

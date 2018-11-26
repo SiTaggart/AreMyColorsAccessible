@@ -15,6 +15,6 @@ export default class {{pascalCase name}} extends Component<I{{pascalCase name}}P
   }
 
   render() {
-    return <div>{this.props.children}</div>;
+    return <div className="{{camelCase name}}">{this.props.children}</div>;
   }
 }
