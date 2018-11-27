@@ -3,7 +3,6 @@ import Color from 'color';
 import Container from '../components/layouts/container';
 import LayoutFull from '../components/layouts/layout-full';
 
-import '../styles/index.scss';
 import Footer from '../components/footer';
 import PaletteInput from '../components/palette-input';
 import ColorMatrix from '../components/color-matrix';

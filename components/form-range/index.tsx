@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import './form-range.scss';
 
 interface IFormRangeProps {
   defaultValue: string;

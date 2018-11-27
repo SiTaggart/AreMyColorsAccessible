@@ -2,7 +2,7 @@ import React from 'react';
 import ClassNames from 'classnames';
 import { Levels } from '../../types';
 import colorRating from '../../utils/color-rating';
-import './index.scss';
+import './color-card.scss';
 
 interface IColorCardProps {
   accessibility: Levels;

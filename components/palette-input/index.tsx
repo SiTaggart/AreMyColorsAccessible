@@ -1,5 +1,5 @@
 import React, { FormEvent } from 'react';
-import './index.scss';
+import './palette-input.scss';
 import FormLabel from '../form-label';
 import FormInput from '../form-input';
 

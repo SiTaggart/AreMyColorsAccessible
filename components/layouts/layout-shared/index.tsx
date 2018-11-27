@@ -7,7 +7,6 @@ import qs from 'query-string';
 import Color from 'color';
 import { HomeProps } from '../../home';
 import Footer from '../../footer';
-import '../../../styles/index.scss';
 
 interface LayoutSharedProps {
   children: (args: HomeProps) => ReactNode;

@@ -51,7 +51,7 @@
     "compression": "1.7.3",
     "express": "4.16.4",
     "lodash": "4.17.11",
-    "next": "7.0.2",
+    "next": "^7.0.2-canary.27",
     "next-compose-plugins": "2.1.1",
     "node-sass": "4.10.0",
     "normalize.css": "8.0.1",
@@ -63,7 +63,15 @@
   "prettier": {
     "printWidth": 100,
     "tabWidth": 2,
-    "singleQuote": true
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "**/*.scss",
+        "options": {
+          "singleQuote": false
+        }
+      }
+    ]
   },
   "devDependencies": {
     "@types/classnames": "2.2.6",

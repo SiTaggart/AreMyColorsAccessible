@@ -1,5 +1,5 @@
 import React, { PureComponent, ReactNode } from 'react';
-import './index.scss';
+import './{{kebabCase name}}.scss';
 
 interface I{{pascalCase name}}Props {
   children: ReactNode;

@@ -53,7 +53,7 @@ module.exports = plop => {
         },
         {
           type: 'add',
-          path: folderPath + '/index.scss',
+          path: folderPath + '/{{kebabCase name}}.scss',
           templateFile: 'component/component.scss.tpl'
         }
       ];

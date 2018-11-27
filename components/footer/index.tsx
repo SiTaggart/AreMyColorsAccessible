@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import './index.scss';
+import './footer.scss';
 
 interface IFooterProps {
   styles?: { footerLinks?: object };

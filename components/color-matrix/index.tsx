@@ -3,7 +3,7 @@ import { ColorCombosTypes } from '../../types';
 import ColorCard from '../color-card';
 import HslSlider from '../hsl-slider';
 import FormInput from '../form-input';
-import './index.scss';
+import './color-matrix.scss';
 
 interface IColorMatrixProps {
   colors: string[];

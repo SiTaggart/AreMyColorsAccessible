@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import './index.scss';
+import './form-input.scss';
 
 interface IFormInputProps {
   ariaLabel?: string;
