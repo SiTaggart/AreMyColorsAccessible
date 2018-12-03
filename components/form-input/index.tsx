@@ -8,7 +8,8 @@ interface IFormInputProps {
   errorMessage?: string;
   id: string;
   name?: string;
-  onChange?: (args: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onInput?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   style?: {};
   value?: string;
 }
@@ -27,6 +28,7 @@ const FormInput: React.FunctionComponent<IFormInputProps> = (props: IFormInputPr
         id={props.id}
         name={props.name}
         onChange={props.onChange}
+        onInput={props.onInput}
         style={props.style}
         type="text"
         value={props.value}

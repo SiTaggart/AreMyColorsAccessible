@@ -6,17 +6,14 @@ import LayoutFull from '../components/layouts/layout-full';
 import Footer from '../components/footer';
 import PaletteInput from '../components/palette-input';
 import ColorMatrix from '../components/color-matrix';
-import ColorCombos from '../utils/color-combos';
-import { ColorCombosTypes } from '../types';
 
 interface IPaletteState {
   colors: string[];
-  colorCombinations: Array<ColorCombosTypes> | false;
   hasError: boolean;
 }
 
 class Palette extends React.Component<{}, IPaletteState> {
-  state = { colors: [], colorCombinations: [], hasError: false };
+  state = { colors: [], hasError: false };
 
   mergeColorsWithState = (colors: string[]): string[] => {
     const filteredColors: string[] = colors.filter(
@@ -57,14 +54,21 @@ class Palette extends React.Component<{}, IPaletteState> {
     const mergedColors = this.mergeColorsWithState(colorsArray);
 
     if (convertedColors !== false) {
-      this.setState({
-        colors: this.mergeColorsWithState(mergedColors),
-        colorCombinations: ColorCombos(mergedColors),
-        hasError: false
-      });
+      this.updateColors(mergedColors);
     } else {
       this.setState({ hasError: true });
     }
+  };
+
+  handleColorChange = (newColors: string[]) => {
+    this.updateColors(newColors);
+  };
+
+  updateColors = (colors: string[]) => {
+    this.setState({
+      colors: colors,
+      hasError: false
+    });
   };
 
   render() {
@@ -79,7 +83,7 @@ class Palette extends React.Component<{}, IPaletteState> {
             }
             onColorAdd={this.handleNewColor}
           />
-          <ColorMatrix colorCombos={this.state.colorCombinations} colors={this.state.colors} />
+          <ColorMatrix colors={this.state.colors} onColorChange={this.handleColorChange} />
         </LayoutFull>
         <Footer />
       </Container>

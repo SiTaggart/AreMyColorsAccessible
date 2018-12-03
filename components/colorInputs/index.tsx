@@ -29,24 +29,20 @@ class ColorInputs extends Component<ColorInputsProps, {}> {
   }
 
   handleBackgroundChange(e: React.ChangeEvent<HTMLInputElement>): void {
-    let newBackgroundColor;
-    if (!e.target) {
-      newBackgroundColor = e;
-    } else {
-      newBackgroundColor = e.target.value;
-    }
-    this.props.setBackgroundColor(newBackgroundColor);
+    this.props.setBackgroundColor(e.target.value);
   }
 
+  handleBackgroundChangeFromSlider = (hex: string) => {
+    this.props.setBackgroundColor(hex);
+  };
+
   handleTextColorChange(e: React.ChangeEvent<HTMLInputElement>): void {
-    let newTextColorColor;
-    if (!e.target) {
-      newTextColorColor = e;
-    } else {
-      newTextColorColor = e.target.value;
-    }
-    this.props.setTextColorColor(newTextColorColor);
+    this.props.setTextColorColor(e.target.value);
   }
+
+  handleTextColorChangeFromSlider = (hex: string) => {
+    this.props.setTextColorColor(hex);
+  };
 
   render() {
     const textColor = this.props.textColor;
@@ -74,7 +70,7 @@ class ColorInputs extends Component<ColorInputsProps, {}> {
           />
           <HslSlider
             id="textColor-hsl"
-            onChange={this.handleTextColorChange}
+            onChange={this.handleTextColorChangeFromSlider}
             ref={this.textColorRef}
             value={textColor}
           />
@@ -89,7 +85,7 @@ class ColorInputs extends Component<ColorInputsProps, {}> {
           />
           <HslSlider
             id="background-hsl"
-            onChange={this.handleBackgroundChange}
+            onChange={this.handleBackgroundChangeFromSlider}
             ref={this.backgroundColorRef}
             value={background}
           />

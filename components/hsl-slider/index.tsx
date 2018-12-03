@@ -9,7 +9,7 @@ import FormRange from '../form-range';
 
 interface HslSliderProps {
   id: string;
-  onChange: (...args: any[]) => any;
+  onChange: (hex: string, id: string) => void;
   value: string;
   variant?: 'compact' | null;
 }
@@ -122,7 +122,7 @@ class HslSlider extends Component<HslSliderProps, HslSliderState> {
       l: this.state.lightness
     }).hex();
     if (hex !== this.props.value) {
-      this.props.onChange(hex);
+      this.props.onChange(hex, this.props.id);
     }
   };
 
