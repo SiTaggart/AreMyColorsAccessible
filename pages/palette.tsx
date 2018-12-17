@@ -1,27 +1,22 @@
 import React from 'react';
 import Color from 'color';
+import ColorCombos from '../utils/color-combos';
+import { ColorCombosTypes } from '../types';
+
 import Container from '../components/layouts/container';
 import LayoutFull from '../components/layouts/layout-full';
-
 import Footer from '../components/footer';
 import PaletteInput from '../components/palette-input';
 import ColorMatrix from '../components/color-matrix';
 
 interface IPaletteState {
   colors: string[];
+  colorCombos: Array<ColorCombosTypes> | false;
   hasError: boolean;
 }
 
 class Palette extends React.Component<{}, IPaletteState> {
-  state = { colors: [], hasError: false };
-
-  mergeColorsWithState = (colors: string[]): string[] => {
-    const filteredColors: string[] = colors.filter(
-      color => (this.state.colors as string[]).indexOf(color) < 0
-    );
-    const newColors: string[] = [...this.state.colors, ...filteredColors];
-    return newColors;
-  };
+  state = { colors: [], colorCombos: [], hasError: false };
 
   convertColorStringsToColors = (colorStrings: string[]): Color[] | false => {
     let isValidColor: boolean = true;
@@ -48,25 +43,43 @@ class Palette extends React.Component<{}, IPaletteState> {
     return dedupedColors;
   };
 
+  handleColorChange = (value: string, index: number) => {
+    const newColors: string[] = [...this.state.colors];
+    newColors[index] = value;
+    this.updateColors(newColors, !!this.isValidColor(value));
+  };
+
   handleNewColor = (colors: string) => {
     const colorsArray: string[] = this.convertColorValuesToArray(colors);
     const convertedColors: Color[] | false = this.convertColorStringsToColors(colorsArray);
-    const mergedColors = this.mergeColorsWithState(colorsArray);
+    const mergedColors: string[] = this.mergeColorsWithState(colorsArray);
 
     if (convertedColors !== false) {
-      this.updateColors(mergedColors);
+      this.updateColors(mergedColors, true);
     } else {
       this.setState({ hasError: true });
     }
   };
 
-  handleColorChange = (newColors: string[]) => {
-    this.updateColors(newColors);
+  isValidColor = (hex: string) => {
+    let color: Color | false = false;
+    try {
+      color = Color(hex);
+    } catch (error) {}
+    return color;
   };
 
-  updateColors = (colors: string[]) => {
+  mergeColorsWithState = (colors: string[]): string[] => {
+    const filteredColors: string[] = colors.filter(
+      color => (this.state.colors as string[]).indexOf(color) < 0
+    );
+    return [...this.state.colors, ...filteredColors];
+  };
+
+  updateColors = (colors: string[], isValidColor: boolean) => {
     this.setState({
-      colors: colors,
+      colorCombos: isValidColor ? ColorCombos(colors) : this.state.colorCombos,
+      colors,
       hasError: false
     });
   };
@@ -83,7 +96,11 @@ class Palette extends React.Component<{}, IPaletteState> {
             }
             onColorAdd={this.handleNewColor}
           />
-          <ColorMatrix colors={this.state.colors} onColorChange={this.handleColorChange} />
+          <ColorMatrix
+            colorCombos={this.state.colorCombos}
+            colors={this.state.colors}
+            onColorChange={this.handleColorChange}
+          />
         </LayoutFull>
         <Footer />
       </Container>

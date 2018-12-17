@@ -6,12 +6,12 @@ export interface Levels {
 }
 
 export interface ColorCombinationTypes {
-  accessibility: Levels;
-  color: Array<number>;
-  contrast: number;
-  hex: string;
-  model: string;
-  valpha: number;
+  accessibility?: Levels;
+  color?: Array<number>;
+  contrast?: number;
+  hex?: string;
+  model?: string;
+  valpha?: number;
 }
 
 export interface ColorCombosTypes {
@@ -27,4 +27,5 @@ export interface SiteData {
   background: string;
   textColor: string;
   isLight: boolean;
+  colorCombos: Array<ColorCombosTypes>;
 }

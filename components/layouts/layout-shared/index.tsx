@@ -7,6 +7,7 @@ import qs from 'query-string';
 import Color from 'color';
 import { HomeProps } from '../../home';
 import Footer from '../../footer';
+import ColorCombos from '../../../utils/color-combos';
 
 interface LayoutSharedProps {
   children: (args: HomeProps) => ReactNode;
@@ -31,19 +32,17 @@ class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
       siteData: {
         background: '#1276CE',
         textColor: '#FFFFFF',
-        isLight: false
+        isLight: false,
+        colorCombos: ColorCombos(['#FFFFFF', '#1276CE'])
       }
     };
-    this.setBackgroundColor = this.setBackgroundColor.bind(this);
-    this.setTextColorColor = this.setTextColorColor.bind(this);
-    this.updateHash = this.updateHash.bind(this);
   }
 
   componentDidMount() {
     this.getQueryParams();
   }
 
-  checkBackgroundLightness(hex: string) {
+  checkBackgroundLightness = (hex: string) => {
     let light;
 
     try {
@@ -53,32 +52,99 @@ class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
     }
 
     return light;
-  }
+  };
 
-  getQueryParams() {
+  getQueryParams = () => {
     if (isEmpty(window.location.search)) return;
     const query = qs.parse(window.location.search) as any;
     query.isLight = query.isLight === 'true';
-    this.setState({ siteData: Object.assign({}, query as SiteData) });
-  }
+    this.setState({
+      siteData: Object.assign(query as SiteData, {
+        colorCombos: ColorCombos([query.textColor, query.background])
+      })
+    });
+  };
 
-  setBackgroundColor(hex: string) {
-    let siteData = this.state.siteData;
-    siteData.background = hex;
-    siteData.isLight = this.checkBackgroundLightness(hex);
-    this.setState({ siteData: siteData }, debounce(this.updateHash, 200));
-  }
+  handleBackgroundColorInputChange = (value: string) => {
+    this.setState({
+      siteData: {
+        ...this.state.siteData,
+        background: value
+      }
+    });
+    if (this.isValidColor(value)) {
+      this.setNewColorCombo(this.state.siteData.textColor, value);
+    }
+  };
 
-  setTextColorColor(hex: string) {
-    let siteData = this.state.siteData;
-    siteData.textColor = hex;
-    this.setState({ siteData: siteData }, debounce(this.updateHash, 200));
-  }
+  handleBackgroundColorSliderChange = (hex: string) => {
+    this.setState(
+      {
+        siteData: {
+          ...this.state.siteData,
+          background: hex,
+          colorCombos: ColorCombos([this.state.siteData.colorCombos[0].hex, hex]),
+          isLight: this.checkBackgroundLightness(hex)
+        }
+      },
+      debounce(this.updateHash, 200)
+    );
+  };
 
-  updateHash() {
+  handleTextColorInputChange = (value: string) => {
+    this.setState({
+      siteData: {
+        ...this.state.siteData,
+        textColor: value
+      }
+    });
+    if (this.isValidColor(value)) {
+      this.setNewColorCombo(value, this.state.siteData.background);
+    }
+  };
+
+  handleTextColorSliderChange = (hex: string) => {
+    this.setState(
+      {
+        siteData: {
+          ...this.state.siteData,
+          textColor: hex,
+          colorCombos: ColorCombos([hex, this.state.siteData.colorCombos[1].hex])
+        }
+      },
+      debounce(this.updateHash, 200)
+    );
+  };
+
+  isValidColor = (value: string): Color | false => {
+    let color: Color | false = false;
+    try {
+      color = Color(value);
+    } catch (error) {
+      console.error('ColorInput invalid color');
+    }
+    return color;
+  };
+
+  setNewColorCombo = (textColor: string, backgroundColor: string) => {
+    this.setState(
+      {
+        siteData: {
+          ...this.state.siteData,
+          background: backgroundColor,
+          colorCombos: ColorCombos([textColor, backgroundColor]),
+          isLight: this.checkBackgroundLightness(backgroundColor),
+          textColor: textColor
+        }
+      },
+      debounce(this.updateHash, 200)
+    );
+  };
+
+  updateHash = () => {
     const query = '?' + qs.stringify(this.state.siteData);
     window.history.pushState(this.state, 'Are My Colors Accessible', query);
-  }
+  };
 
   render() {
     const styles = {
@@ -86,23 +152,24 @@ class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
         color: this.state.siteData.isLight ? '#222' : '#fff'
       }
     };
-
     return (
       <div className="appContainer">
         <Head>
           <title>{this.props.title}</title>
           <style>{`
             body {
-              background-color: ${this.state.siteData.background};
-              color: ${this.state.siteData.textColor};
+              background-color: ${this.state.siteData.colorCombos[1].hex};
+              color: ${this.state.siteData.colorCombos[0].hex};
             }
           `}</style>
         </Head>
 
         {this.props.children({
           siteData: this.state.siteData,
-          setBackgroundColor: this.setBackgroundColor,
-          setTextColorColor: this.setTextColorColor
+          handleBackgroundColorInputChange: this.handleBackgroundColorInputChange,
+          handleBackgroundColorSliderChange: this.handleBackgroundColorSliderChange,
+          handleTextColorInputChange: this.handleTextColorInputChange,
+          handleTextColorSliderChange: this.handleTextColorSliderChange
         })}
 
         <Footer styles={styles} />

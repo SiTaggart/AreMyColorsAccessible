@@ -4,49 +4,22 @@ import FormLabel from '../form-label';
 import FormInput from '../form-input';
 import FormControl from '../form-control';
 import Form from '../form';
+import { ColorCombosTypes } from '../../types';
 
 interface ColorInputsProps {
   background: string;
+  colorCombos: Array<ColorCombosTypes>;
   isLight: boolean;
-  setBackgroundColor: (...args: any[]) => any;
-  setTextColorColor: (...args: any[]) => any;
+  handleBackgroundColorInputChange: (value: string) => void;
+  handleBackgroundColorSliderChange: (hex: string) => void;
+  handleTextColorInputChange: (value: string) => void;
+  handleTextColorSliderChange: (hex: string) => void;
   textColor: string;
 }
 
 class ColorInputs extends Component<ColorInputsProps, {}> {
-  private textColorRef = React.createRef<HslSlider>();
-  private backgroundColorRef = React.createRef<HslSlider>();
-
-  constructor(props: ColorInputsProps) {
-    super(props);
-    this.handleBackgroundChange = this.handleBackgroundChange.bind(this);
-    this.handleTextColorChange = this.handleTextColorChange.bind(this);
-  }
-
-  componentDidUpdate() {
-    this.textColorRef.current!.setHSLColorState(this.props.textColor);
-    this.backgroundColorRef.current!.setHSLColorState(this.props.background);
-  }
-
-  handleBackgroundChange(e: React.ChangeEvent<HTMLInputElement>): void {
-    this.props.setBackgroundColor(e.target.value);
-  }
-
-  handleBackgroundChangeFromSlider = (hex: string) => {
-    this.props.setBackgroundColor(hex);
-  };
-
-  handleTextColorChange(e: React.ChangeEvent<HTMLInputElement>): void {
-    this.props.setTextColorColor(e.target.value);
-  }
-
-  handleTextColorChangeFromSlider = (hex: string) => {
-    this.props.setTextColorColor(hex);
-  };
-
   render() {
-    const textColor = this.props.textColor;
-    const background = this.props.background;
+    const { textColor, background, colorCombos } = this.props;
     const formTextColor = this.props.isLight ? '#222' : '#fff';
     const styles = {
       form: {
@@ -64,30 +37,28 @@ class ColorInputs extends Component<ColorInputsProps, {}> {
           <FormLabel htmlFor="textColor">Text Color</FormLabel>
           <FormInput
             id="textColor"
-            onChange={this.handleTextColorChange}
+            onChange={e => this.props.handleTextColorInputChange(e.currentTarget.value)}
             style={styles.input}
             value={textColor}
           />
           <HslSlider
             id="textColor-hsl"
-            onChange={this.handleTextColorChangeFromSlider}
-            ref={this.textColorRef}
-            value={textColor}
+            onChange={this.props.handleTextColorSliderChange}
+            value={colorCombos[0].hex}
           />
         </FormControl>
         <FormControl>
           <FormLabel htmlFor="background">Background</FormLabel>
           <FormInput
             id="background"
-            onChange={this.handleBackgroundChange}
+            onChange={e => this.props.handleBackgroundColorInputChange(e.currentTarget.value)}
             style={styles.input}
             value={background}
           />
           <HslSlider
             id="background-hsl"
-            onChange={this.handleBackgroundChangeFromSlider}
-            ref={this.backgroundColorRef}
-            value={background}
+            onChange={this.props.handleBackgroundColorSliderChange}
+            value={colorCombos[1].hex}
           />
         </FormControl>
       </Form>

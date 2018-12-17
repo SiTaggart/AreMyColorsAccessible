@@ -8,13 +8,13 @@ interface IFormInputProps {
   errorMessage?: string;
   id: string;
   name?: string;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onInput?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   style?: {};
   value?: string;
 }
 
-const FormInput: React.FunctionComponent<IFormInputProps> = (props: IFormInputProps) => {
+const FormInput: React.FunctionComponent<IFormInputProps> = props => {
   return (
     <>
       <input
