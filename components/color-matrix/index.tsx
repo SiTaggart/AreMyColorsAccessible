@@ -5,7 +5,7 @@ import HslSlider from '../hsl-slider';
 import FormInput from '../form-input';
 import './color-matrix.scss';
 
-interface IColorMatrixProps {
+export interface IColorMatrixProps {
   colors: string[];
   colorCombos: Array<ColorCombosTypes>;
   onColorChange: (newColor: string, index: number) => void;
@@ -27,7 +27,7 @@ const ColorMatrix: React.FunctionComponent<IColorMatrixProps> = props => {
                 <FormInput
                   ariaLabel="hex colour code"
                   id={`colorhex-${index}`}
-                  onChange={e => props.onColorChange(e.currentTarget.value, index)}
+                  onChange={e => props.onColorChange(e.target.value, index)}
                   value={props.colors[index]}
                 />
                 <HslSlider

@@ -1,0 +1,814 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorMatrix renders without crashing 1`] = `
+<section
+  className="colorMatrix"
+>
+  <table
+    className="colorMatrix-table"
+  >
+    <thead>
+      <tr
+        className="colorMatrix-tr"
+      >
+        <td
+          style={
+            Object {
+              "width": "6rem",
+            }
+          }
+        />
+        <th
+          className="colorMatrix-th"
+          scope="col"
+        >
+          <input
+            aria-label="hex colour code"
+            autoComplete="off"
+            className="form-input"
+            id="colorhex-0"
+            onChange={[Function]}
+            type="text"
+            value="#fff"
+          />
+          <div
+            className="form-hsl-sliders form-hsl-sliders--compact"
+          >
+            <div
+              className="form-hsl-slider form-hsl-slider--compact"
+            >
+              <label
+                className="form-label"
+                htmlFor="hsl-0-Hue"
+              >
+                H
+              </label>
+              <input
+                className="form-range"
+                id="hsl-0-Hue"
+                max={360}
+                min={0}
+                onChange={[Function]}
+                onInput={[Function]}
+                type="range"
+                value={0}
+              />
+            </div>
+            <div
+              className="form-hsl-slider form-hsl-slider--compact"
+            >
+              <label
+                className="form-label"
+                htmlFor="hsl-0-Saturation"
+              >
+                S
+              </label>
+              <input
+                className="form-range"
+                id="hsl-0-Saturation"
+                max={100}
+                min={0}
+                onChange={[Function]}
+                onInput={[Function]}
+                type="range"
+                value={0}
+              />
+            </div>
+            <div
+              className="form-hsl-slider form-hsl-slider--compact"
+            >
+              <label
+                className="form-label"
+                htmlFor="hsl-0-Lightness"
+              >
+                L
+              </label>
+              <input
+                className="form-range"
+                id="hsl-0-Lightness"
+                max={100}
+                min={0}
+                onChange={[Function]}
+                onInput={[Function]}
+                type="range"
+                value={100}
+              />
+            </div>
+          </div>
+        </th>
+        <th
+          className="colorMatrix-th"
+          scope="col"
+        >
+          <input
+            aria-label="hex colour code"
+            autoComplete="off"
+            className="form-input"
+            id="colorhex-1"
+            onChange={[Function]}
+            type="text"
+            value="#ccc"
+          />
+          <div
+            className="form-hsl-sliders form-hsl-sliders--compact"
+          >
+            <div
+              className="form-hsl-slider form-hsl-slider--compact"
+            >
+              <label
+                className="form-label"
+                htmlFor="hsl-1-Hue"
+              >
+                H
+              </label>
+              <input
+                className="form-range"
+                id="hsl-1-Hue"
+                max={360}
+                min={0}
+                onChange={[Function]}
+                onInput={[Function]}
+                type="range"
+                value={0}
+              />
+            </div>
+            <div
+              className="form-hsl-slider form-hsl-slider--compact"
+            >
+              <label
+                className="form-label"
+                htmlFor="hsl-1-Saturation"
+              >
+                S
+              </label>
+              <input
+                className="form-range"
+                id="hsl-1-Saturation"
+                max={100}
+                min={0}
+                onChange={[Function]}
+                onInput={[Function]}
+                type="range"
+                value={0}
+              />
+            </div>
+            <div
+              className="form-hsl-slider form-hsl-slider--compact"
+            >
+              <label
+                className="form-label"
+                htmlFor="hsl-1-Lightness"
+              >
+                L
+              </label>
+              <input
+                className="form-range"
+                id="hsl-1-Lightness"
+                max={100}
+                min={0}
+                onChange={[Function]}
+                onInput={[Function]}
+                type="range"
+                value={80}
+              />
+            </div>
+          </div>
+        </th>
+        <th
+          className="colorMatrix-th"
+          scope="col"
+        >
+          <input
+            aria-label="hex colour code"
+            autoComplete="off"
+            className="form-input"
+            id="colorhex-2"
+            onChange={[Function]}
+            type="text"
+            value="#777"
+          />
+          <div
+            className="form-hsl-sliders form-hsl-sliders--compact"
+          >
+            <div
+              className="form-hsl-slider form-hsl-slider--compact"
+            >
+              <label
+                className="form-label"
+                htmlFor="hsl-2-Hue"
+              >
+                H
+              </label>
+              <input
+                className="form-range"
+                id="hsl-2-Hue"
+                max={360}
+                min={0}
+                onChange={[Function]}
+                onInput={[Function]}
+                type="range"
+                value={0}
+              />
+            </div>
+            <div
+              className="form-hsl-slider form-hsl-slider--compact"
+            >
+              <label
+                className="form-label"
+                htmlFor="hsl-2-Saturation"
+              >
+                S
+              </label>
+              <input
+                className="form-range"
+                id="hsl-2-Saturation"
+                max={100}
+                min={0}
+                onChange={[Function]}
+                onInput={[Function]}
+                type="range"
+                value={0}
+              />
+            </div>
+            <div
+              className="form-hsl-slider form-hsl-slider--compact"
+            >
+              <label
+                className="form-label"
+                htmlFor="hsl-2-Lightness"
+              >
+                L
+              </label>
+              <input
+                className="form-range"
+                id="hsl-2-Lightness"
+                max={100}
+                min={0}
+                onChange={[Function]}
+                onInput={[Function]}
+                type="range"
+                value={47}
+              />
+            </div>
+          </div>
+        </th>
+        <th
+          className="colorMatrix-th"
+          scope="col"
+        >
+          <input
+            aria-label="hex colour code"
+            autoComplete="off"
+            className="form-input"
+            id="colorhex-3"
+            onChange={[Function]}
+            type="text"
+            value="#000"
+          />
+          <div
+            className="form-hsl-sliders form-hsl-sliders--compact"
+          >
+            <div
+              className="form-hsl-slider form-hsl-slider--compact"
+            >
+              <label
+                className="form-label"
+                htmlFor="hsl-3-Hue"
+              >
+                H
+              </label>
+              <input
+                className="form-range"
+                id="hsl-3-Hue"
+                max={360}
+                min={0}
+                onChange={[Function]}
+                onInput={[Function]}
+                type="range"
+                value={0}
+              />
+            </div>
+            <div
+              className="form-hsl-slider form-hsl-slider--compact"
+            >
+              <label
+                className="form-label"
+                htmlFor="hsl-3-Saturation"
+              >
+                S
+              </label>
+              <input
+                className="form-range"
+                id="hsl-3-Saturation"
+                max={100}
+                min={0}
+                onChange={[Function]}
+                onInput={[Function]}
+                type="range"
+                value={0}
+              />
+            </div>
+            <div
+              className="form-hsl-slider form-hsl-slider--compact"
+            >
+              <label
+                className="form-label"
+                htmlFor="hsl-3-Lightness"
+              >
+                L
+              </label>
+              <input
+                className="form-range"
+                id="hsl-3-Lightness"
+                max={100}
+                min={0}
+                onChange={[Function]}
+                onInput={[Function]}
+                type="range"
+                value={0}
+              />
+            </div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="colorMatrix-tr"
+      >
+        <th
+          className="colorMatrix-th"
+          scope="row"
+        >
+          #FFFFFF
+        </th>
+        <td
+          className="colorMatrix-td"
+        >
+           
+        </td>
+        <td
+          className="colorMatrix-td"
+        >
+          <div
+            className="colorCard colorCard--nope"
+          >
+            <div
+              className="colorCard-swatch"
+              style={
+                Object {
+                  "backgroundColor": "#CCCCCC",
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              Nope
+            </div>
+            <div
+              className="colorCard-ratio"
+            >
+              <div>
+                Small text: 
+                Fail
+              </div>
+              <div>
+                Large text: 
+                Fail
+              </div>
+              <div>
+                Contrast: 
+                1.61
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          className="colorMatrix-td"
+        >
+          <div
+            className="colorCard"
+          >
+            <div
+              className="colorCard-swatch"
+              style={
+                Object {
+                  "backgroundColor": "#777777",
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              Kinda
+            </div>
+            <div
+              className="colorCard-ratio"
+            >
+              <div>
+                Small text: 
+                Fail
+              </div>
+              <div>
+                Large text: 
+                AA
+              </div>
+              <div>
+                Contrast: 
+                4.48
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          className="colorMatrix-td"
+        >
+          <div
+            className="colorCard"
+          >
+            <div
+              className="colorCard-swatch"
+              style={
+                Object {
+                  "backgroundColor": "#000000",
+                  "color": "#FFFFFF",
+                }
+              }
+            >
+              Yup
+            </div>
+            <div
+              className="colorCard-ratio"
+            >
+              <div>
+                Small text: 
+                AAA
+              </div>
+              <div>
+                Large text: 
+                AAA
+              </div>
+              <div>
+                Contrast: 
+                21
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="colorMatrix-tr"
+      >
+        <th
+          className="colorMatrix-th"
+          scope="row"
+        >
+          #CCCCCC
+        </th>
+        <td
+          className="colorMatrix-td"
+        >
+          <div
+            className="colorCard colorCard--nope"
+          >
+            <div
+              className="colorCard-swatch"
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "color": "#CCCCCC",
+                }
+              }
+            >
+              Nope
+            </div>
+            <div
+              className="colorCard-ratio"
+            >
+              <div>
+                Small text: 
+                Fail
+              </div>
+              <div>
+                Large text: 
+                Fail
+              </div>
+              <div>
+                Contrast: 
+                1.61
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          className="colorMatrix-td"
+        >
+           
+        </td>
+        <td
+          className="colorMatrix-td"
+        >
+          <div
+            className="colorCard colorCard--nope"
+          >
+            <div
+              className="colorCard-swatch"
+              style={
+                Object {
+                  "backgroundColor": "#777777",
+                  "color": "#CCCCCC",
+                }
+              }
+            >
+              Nope
+            </div>
+            <div
+              className="colorCard-ratio"
+            >
+              <div>
+                Small text: 
+                Fail
+              </div>
+              <div>
+                Large text: 
+                Fail
+              </div>
+              <div>
+                Contrast: 
+                2.79
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          className="colorMatrix-td"
+        >
+          <div
+            className="colorCard"
+          >
+            <div
+              className="colorCard-swatch"
+              style={
+                Object {
+                  "backgroundColor": "#000000",
+                  "color": "#CCCCCC",
+                }
+              }
+            >
+              Yup
+            </div>
+            <div
+              className="colorCard-ratio"
+            >
+              <div>
+                Small text: 
+                AAA
+              </div>
+              <div>
+                Large text: 
+                AAA
+              </div>
+              <div>
+                Contrast: 
+                13.08
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="colorMatrix-tr"
+      >
+        <th
+          className="colorMatrix-th"
+          scope="row"
+        >
+          #777777
+        </th>
+        <td
+          className="colorMatrix-td"
+        >
+          <div
+            className="colorCard"
+          >
+            <div
+              className="colorCard-swatch"
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "color": "#777777",
+                }
+              }
+            >
+              Kinda
+            </div>
+            <div
+              className="colorCard-ratio"
+            >
+              <div>
+                Small text: 
+                Fail
+              </div>
+              <div>
+                Large text: 
+                AA
+              </div>
+              <div>
+                Contrast: 
+                4.48
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          className="colorMatrix-td"
+        >
+          <div
+            className="colorCard colorCard--nope"
+          >
+            <div
+              className="colorCard-swatch"
+              style={
+                Object {
+                  "backgroundColor": "#CCCCCC",
+                  "color": "#777777",
+                }
+              }
+            >
+              Nope
+            </div>
+            <div
+              className="colorCard-ratio"
+            >
+              <div>
+                Small text: 
+                Fail
+              </div>
+              <div>
+                Large text: 
+                Fail
+              </div>
+              <div>
+                Contrast: 
+                2.79
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          className="colorMatrix-td"
+        >
+           
+        </td>
+        <td
+          className="colorMatrix-td"
+        >
+          <div
+            className="colorCard"
+          >
+            <div
+              className="colorCard-swatch"
+              style={
+                Object {
+                  "backgroundColor": "#000000",
+                  "color": "#777777",
+                }
+              }
+            >
+              Yup
+            </div>
+            <div
+              className="colorCard-ratio"
+            >
+              <div>
+                Small text: 
+                AA
+              </div>
+              <div>
+                Large text: 
+                AAA
+              </div>
+              <div>
+                Contrast: 
+                4.69
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="colorMatrix-tr"
+      >
+        <th
+          className="colorMatrix-th"
+          scope="row"
+        >
+          #000000
+        </th>
+        <td
+          className="colorMatrix-td"
+        >
+          <div
+            className="colorCard"
+          >
+            <div
+              className="colorCard-swatch"
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "color": "#000000",
+                }
+              }
+            >
+              Yup
+            </div>
+            <div
+              className="colorCard-ratio"
+            >
+              <div>
+                Small text: 
+                AAA
+              </div>
+              <div>
+                Large text: 
+                AAA
+              </div>
+              <div>
+                Contrast: 
+                21
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          className="colorMatrix-td"
+        >
+          <div
+            className="colorCard"
+          >
+            <div
+              className="colorCard-swatch"
+              style={
+                Object {
+                  "backgroundColor": "#CCCCCC",
+                  "color": "#000000",
+                }
+              }
+            >
+              Yup
+            </div>
+            <div
+              className="colorCard-ratio"
+            >
+              <div>
+                Small text: 
+                AAA
+              </div>
+              <div>
+                Large text: 
+                AAA
+              </div>
+              <div>
+                Contrast: 
+                13.08
+              </div>
+            </div>
+          </div>
+        </td>
+        <td
+          className="colorMatrix-td"
+        >
+          <div
+            className="colorCard"
+          >
+            <div
+              className="colorCard-swatch"
+              style={
+                Object {
+                  "backgroundColor": "#777777",
+                  "color": "#000000",
+                }
+              }
+            >
+              Yup
+            </div>
+            <div
+              className="colorCard-ratio"
+            >
+              <div>
+                Small text: 
+                AA
+              </div>
+              <div>
+                Large text: 
+                AAA
+              </div>
+              <div>
+                Contrast: 
+                4.69
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+`;

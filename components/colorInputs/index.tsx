@@ -6,7 +6,7 @@ import FormControl from '../form-control';
 import Form from '../form';
 import { ColorCombosTypes } from '../../types';
 
-interface ColorInputsProps {
+export interface ColorInputsProps {
   background: string;
   colorCombos: Array<ColorCombosTypes>;
   isLight: boolean;
@@ -20,7 +20,7 @@ interface ColorInputsProps {
 class ColorInputs extends Component<ColorInputsProps, {}> {
   render() {
     const { textColor, background, colorCombos } = this.props;
-    const formTextColor = this.props.isLight ? '#222' : '#fff';
+    const formTextColor = this.props.isLight ? '#343334' : '#fff';
     const styles = {
       form: {
         color: formTextColor
@@ -37,7 +37,7 @@ class ColorInputs extends Component<ColorInputsProps, {}> {
           <FormLabel htmlFor="textColor">Text Color</FormLabel>
           <FormInput
             id="textColor"
-            onChange={e => this.props.handleTextColorInputChange(e.currentTarget.value)}
+            onChange={e => this.props.handleTextColorInputChange(e.target.value)}
             style={styles.input}
             value={textColor}
           />
@@ -51,7 +51,7 @@ class ColorInputs extends Component<ColorInputsProps, {}> {
           <FormLabel htmlFor="background">Background</FormLabel>
           <FormInput
             id="background"
-            onChange={e => this.props.handleBackgroundColorInputChange(e.currentTarget.value)}
+            onChange={e => this.props.handleBackgroundColorInputChange(e.target.value)}
             style={styles.input}
             value={background}
           />

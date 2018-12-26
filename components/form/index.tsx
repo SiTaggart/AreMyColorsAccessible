@@ -3,7 +3,7 @@ import './form.scss';
 
 interface IFormProps {
   children: ReactNode;
-  style: {};
+  style?: {};
 }
 
 const Form: React.FunctionComponent<IFormProps> = (props: IFormProps) => {

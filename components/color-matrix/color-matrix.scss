@@ -15,6 +15,14 @@
   padding: 0.5rem;
 }
 
+.colorMatrix-th:first-child {
+  padding-left: 0;
+}
+
+.colorMatrix-th:last-child {
+  padding-right: 0;
+}
+
 .colorMatrix-td {
   padding: 0.5rem;
 }

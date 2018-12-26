@@ -149,7 +149,7 @@ class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
   render() {
     const styles = {
       footerLinks: {
-        color: this.state.siteData.isLight ? '#222' : '#fff'
+        color: this.state.siteData.isLight ? '#343334' : '#fff'
       }
     };
     return (

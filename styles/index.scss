@@ -1,5 +1,4 @@
 @import "./utils";
-@import url("//fonts.googleapis.com/css?family=Lato:400, 900");
 @import "~normalize.css/normalize.css";
 
 *,
@@ -19,7 +18,8 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, “Helvetica Neue”, Arial, sans-serif;
   line-height: 1.4;
 }
 
@@ -30,7 +30,7 @@ h4,
 h5,
 h6,
 strong {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .heading-1 {
@@ -62,4 +62,9 @@ a {
     font-size: 1rem;
     font-style: normal;
   }
+}
+
+:focus {
+  outline: currentColor dashed 2px;
+  outline-offset: 3px;
 }

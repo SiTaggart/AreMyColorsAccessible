@@ -4,7 +4,7 @@ import { Levels } from '../../types';
 import colorRating from '../../utils/color-rating';
 import './color-card.scss';
 
-interface IColorCardProps {
+export interface IColorCardProps {
   accessibility: Levels;
   background: string;
   color: string;

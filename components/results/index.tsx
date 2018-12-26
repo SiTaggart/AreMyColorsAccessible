@@ -11,7 +11,7 @@ class Results extends Component<ResultsProps, {}> {
   renderAreYouSerious() {
     let styles = {
       seriouslyContainer: {
-        color: this.props.isLight ? '#222' : '#fff'
+        color: this.props.isLight ? '#343334' : '#fff'
       }
     };
 

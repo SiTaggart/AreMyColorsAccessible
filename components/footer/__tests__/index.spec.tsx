@@ -2,16 +2,21 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
+import renderer from 'react-test-renderer';
 import Footer from '..';
 
-describe('Footer', () => {
+xdescribe('Footer', () => {
+  const mockProps = {
+    styles: {
+      footerLinks: {
+        color: '#fff'
+      }
+    }
+  };
 
   it('renders without crashing', () => {
-    ReactDOM.render(
-      <Footer />,
-      document.createElement('div')
-    );
+    ReactDOM.render(<Footer {...mockProps} />, document.createElement('div'));
+    const footerComp = renderer.create(<Footer {...mockProps} />).toJSON();
+    expect(footerComp).toMatchSnapshot();
   });
-
 });

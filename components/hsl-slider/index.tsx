@@ -44,7 +44,7 @@ class HslSlider extends Component<HslSliderProps, {}> {
   private handleHueChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newHsl: HSLColor = {
       ...this.convertToHSL(this.props.value),
-      hue: parseInt(e.currentTarget.value)
+      hue: parseInt(e.target.value)
     };
     this.updateColor(newHsl);
   };
@@ -52,7 +52,7 @@ class HslSlider extends Component<HslSliderProps, {}> {
   private handleSaturationChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newHsl: HSLColor = {
       ...this.convertToHSL(this.props.value),
-      saturation: parseInt(e.currentTarget.value)
+      saturation: parseInt(e.target.value)
     };
     this.updateColor(newHsl);
   };
@@ -60,7 +60,7 @@ class HslSlider extends Component<HslSliderProps, {}> {
   private handleLightnessChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newHsl: HSLColor = {
       ...this.convertToHSL(this.props.value),
-      lightness: parseInt(e.currentTarget.value)
+      lightness: parseInt(e.target.value)
     };
     this.updateColor(newHsl);
   };

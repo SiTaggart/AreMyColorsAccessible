@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorCard renders without crashing 1`] = `
+<div
+  className="colorCard"
+>
+  <div
+    className="colorCard-swatch"
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "color": "#000",
+      }
+    }
+  >
+    Yup
+  </div>
+  <div
+    className="colorCard-ratio"
+  >
+    <div>
+      Small text: 
+      AAA
+    </div>
+    <div>
+      Large text: 
+      AAA
+    </div>
+    <div>
+      Contrast: 
+      21
+    </div>
+  </div>
+</div>
+`;

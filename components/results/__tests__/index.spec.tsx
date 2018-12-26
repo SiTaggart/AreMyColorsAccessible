@@ -143,9 +143,9 @@ describe('About', () => {
     );
   });
 
-  // it('should set the font color to #222 on light backgrounds', () => {
+  // it('should set the font color to #343334 on light backgrounds', () => {
   //   siteData.isLight = true;
   //   const rendered = shallow(<About siteData={siteData} />);
-  //   expect(rendered.find('.about').prop('style').color).toBe('#222');
+  //   expect(rendered.find('.about').prop('style').color).toBe('#343334');
   // });
 });
