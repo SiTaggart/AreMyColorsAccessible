@@ -1,0 +1,276 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders without crashing 1`] = `
+<main
+  className="container home"
+>
+  <div
+    className="layout layout--small"
+  >
+    <div
+      className="contrastResults"
+    >
+      <h1
+        aria-atomic="true"
+        aria-live="polite"
+        className="contrastResults-heading"
+      >
+        Yup
+      </h1>
+      <div
+        className="contrastResult"
+      >
+        <h2
+          className="contrastResult-rating"
+        >
+          AAA
+        </h2>
+        <p
+          className="contrastResult-desc"
+        >
+          Small Text - 4.5 
+          <br />
+          &lt; 14pt or 18px
+        </p>
+      </div>
+      <div
+        className="contrastResult"
+      >
+        <h2
+          className="contrastResult-rating"
+        >
+          AAA
+        </h2>
+        <p
+          className="contrastResult-desc"
+        >
+          <strong>
+            Bold Text - 3.0 
+            <br />
+            &gt; 14pt or 18px
+          </strong>
+        </p>
+      </div>
+      <div
+        className="contrastResult"
+      >
+        <h2
+          className="contrastResult-rating"
+        >
+          AAA
+        </h2>
+        <p
+          className="contrastResult-desc contrastResult-desc--large"
+        >
+          Large Text - 3.0 
+          <br />
+          &gt; 18pt or 24px
+        </p>
+      </div>
+      <div
+        className="contrastResult"
+      >
+        <h2
+          className="contrastResult-rating"
+        >
+          21
+        </h2>
+        <p
+          className="contrastResult-desc"
+        >
+          Ratio
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="layout layout--large"
+  >
+    <div
+      className="form"
+      style={
+        Object {
+          "color": "#fff",
+        }
+      }
+    >
+      <div
+        className="form-control"
+      >
+        <label
+          className="form-label"
+          htmlFor="textColor"
+        >
+          Text Color
+        </label>
+        <input
+          autoComplete="off"
+          className="form-input"
+          id="textColor"
+          onChange={[Function]}
+          style={
+            Object {
+              "borderColor": "#fff",
+              "color": "inherit",
+            }
+          }
+          type="text"
+          value="#fff"
+        />
+        <div
+          className="form-hsl-sliders"
+        >
+          <div
+            className="form-hsl-slider"
+          >
+            <label
+              className="form-label"
+              htmlFor="textColor-hsl-Hue"
+            >
+              Hue 0°
+            </label>
+            <input
+              className="form-range"
+              id="textColor-hsl-Hue"
+              max={360}
+              min={0}
+              onChange={[Function]}
+              onInput={[Function]}
+              type="range"
+              value={0}
+            />
+          </div>
+          <div
+            className="form-hsl-slider"
+          >
+            <label
+              className="form-label"
+              htmlFor="textColor-hsl-Saturation"
+            >
+              Saturation 0%
+            </label>
+            <input
+              className="form-range"
+              id="textColor-hsl-Saturation"
+              max={100}
+              min={0}
+              onChange={[Function]}
+              onInput={[Function]}
+              type="range"
+              value={0}
+            />
+          </div>
+          <div
+            className="form-hsl-slider"
+          >
+            <label
+              className="form-label"
+              htmlFor="textColor-hsl-Lightness"
+            >
+              Lightness 100%
+            </label>
+            <input
+              className="form-range"
+              id="textColor-hsl-Lightness"
+              max={100}
+              min={0}
+              onChange={[Function]}
+              onInput={[Function]}
+              type="range"
+              value={100}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="form-control"
+      >
+        <label
+          className="form-label"
+          htmlFor="background"
+        >
+          Background
+        </label>
+        <input
+          autoComplete="off"
+          className="form-input"
+          id="background"
+          onChange={[Function]}
+          style={
+            Object {
+              "borderColor": "#fff",
+              "color": "inherit",
+            }
+          }
+          type="text"
+          value="#000"
+        />
+        <div
+          className="form-hsl-sliders"
+        >
+          <div
+            className="form-hsl-slider"
+          >
+            <label
+              className="form-label"
+              htmlFor="background-hsl-Hue"
+            >
+              Hue 0°
+            </label>
+            <input
+              className="form-range"
+              id="background-hsl-Hue"
+              max={360}
+              min={0}
+              onChange={[Function]}
+              onInput={[Function]}
+              type="range"
+              value={0}
+            />
+          </div>
+          <div
+            className="form-hsl-slider"
+          >
+            <label
+              className="form-label"
+              htmlFor="background-hsl-Saturation"
+            >
+              Saturation 0%
+            </label>
+            <input
+              className="form-range"
+              id="background-hsl-Saturation"
+              max={100}
+              min={0}
+              onChange={[Function]}
+              onInput={[Function]}
+              type="range"
+              value={0}
+            />
+          </div>
+          <div
+            className="form-hsl-slider"
+          >
+            <label
+              className="form-label"
+              htmlFor="background-hsl-Lightness"
+            >
+              Lightness 0%
+            </label>
+            <input
+              className="form-range"
+              id="background-hsl-Lightness"
+              max={100}
+              min={0}
+              onChange={[Function]}
+              onInput={[Function]}
+              type="range"
+              value={0}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+`;

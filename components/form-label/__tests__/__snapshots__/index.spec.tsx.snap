@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormLabel renders without crashing 1`] = `
+<label
+  className="form-label"
+  htmlFor="input-id"
+>
+  children
+</label>
+`;

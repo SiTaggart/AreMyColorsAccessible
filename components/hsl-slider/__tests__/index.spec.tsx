@@ -3,12 +3,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
+import renderer from 'react-test-renderer';
 import HslSlider from '..';
 
 describe('hsl-slider', () => {
   let onChangeMock: jest.Mock;
   let wrapper: ShallowWrapper;
-  let instance: HslSlider;
 
   beforeAll(() => {
     onChangeMock = jest.fn();
@@ -17,7 +17,6 @@ describe('hsl-slider', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     wrapper = shallow(<HslSlider id="input-id" onChange={onChangeMock} value="#ccc" />);
-    instance = wrapper.instance() as HslSlider;
   });
 
   it('renders without crashing', () => {
@@ -25,21 +24,31 @@ describe('hsl-slider', () => {
       <HslSlider id="input-id" onChange={onChangeMock} value="#ccc" />,
       document.createElement('div')
     );
+    const hslSliderComp = renderer
+      .create(<HslSlider id="input-id" onChange={onChangeMock} value="#ccc" />)
+      .toJSON();
+    expect(hslSliderComp).toMatchSnapshot();
   });
 
-  it('should set state with hsl of value', () => {
-    expect(instance.state).toEqual({ hue: 0, saturation: 0, lightness: 80 });
+  it('should render a compact vaiant ', () => {
+    const hslSliderComp = renderer
+      .create(<HslSlider id="input-id" onChange={onChangeMock} value="#ccc" variant="compact" />)
+      .toJSON();
+    expect(hslSliderComp).toMatchSnapshot();
   });
 
-  it('should call onchange callback', () => {
-    const wrapper: ReactWrapper = mount(
-      <HslSlider id="input-id" onChange={onChangeMock} value="#ccc" />
-    );
+  it('should call onchange callback when hue changed', () => {
     wrapper.find('#input-id-Hue').simulate('input', { target: { value: '60' } });
-    const instance = wrapper.instance() as HslSlider;
-    expect(instance.state.hue).toEqual(60);
-    // fake it as its debounced
-    instance.updateColor();
-    expect(onChangeMock).toBeCalledWith('#CCCCCC');
+    expect(onChangeMock).toBeCalledWith('#CCCCCC', 'input-id');
+  });
+
+  it('should call onchange callback when saturation changed', () => {
+    wrapper.find('#input-id-Saturation').simulate('input', { target: { value: '60' } });
+    expect(onChangeMock).toBeCalledWith('#EBADAD', 'input-id');
+  });
+
+  it('should call onchange callback when lightness changed', () => {
+    wrapper.find('#input-id-Lightness').simulate('input', { target: { value: '60' } });
+    expect(onChangeMock).toBeCalledWith('#999999', 'input-id');
   });
 });

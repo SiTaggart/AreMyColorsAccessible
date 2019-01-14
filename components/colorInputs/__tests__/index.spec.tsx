@@ -65,12 +65,10 @@ describe('ColorInputs', () => {
   });
 
   it('should call the handleTextColorSliderChange callback on text color slider change', () => {
-    console.log('wrapper log', wrapper);
     wrapper
       .find('#textColor-hsl-Lightness')
       .at(0)
       .simulate('input', { target: { value: 12 } });
-    mount(<ColorInputs {...mockProps} />).update();
     expect(handleTextColorSliderChange).toBeCalledWith('#1F1F1F', 'textColor-hsl');
   });
 

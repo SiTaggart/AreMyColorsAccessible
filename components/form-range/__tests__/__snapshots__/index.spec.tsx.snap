@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormRange renders without crashing 1`] = `
+<input
+  className="form-range"
+  id="range-id"
+  max={100}
+  min={1}
+  type="range"
+/>
+`;

@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hsl-slider renders without crashing 1`] = `
+<div
+  className="form-hsl-sliders"
+>
+  <div
+    className="form-hsl-slider"
+  >
+    <label
+      className="form-label"
+      htmlFor="input-id-Hue"
+    >
+      Hue 0°
+    </label>
+    <input
+      className="form-range"
+      id="input-id-Hue"
+      max={360}
+      min={0}
+      onChange={[Function]}
+      onInput={[Function]}
+      type="range"
+      value={0}
+    />
+  </div>
+  <div
+    className="form-hsl-slider"
+  >
+    <label
+      className="form-label"
+      htmlFor="input-id-Saturation"
+    >
+      Saturation 0%
+    </label>
+    <input
+      className="form-range"
+      id="input-id-Saturation"
+      max={100}
+      min={0}
+      onChange={[Function]}
+      onInput={[Function]}
+      type="range"
+      value={0}
+    />
+  </div>
+  <div
+    className="form-hsl-slider"
+  >
+    <label
+      className="form-label"
+      htmlFor="input-id-Lightness"
+    >
+      Lightness 80%
+    </label>
+    <input
+      className="form-range"
+      id="input-id-Lightness"
+      max={100}
+      min={0}
+      onChange={[Function]}
+      onInput={[Function]}
+      type="range"
+      value={80}
+    />
+  </div>
+</div>
+`;
+
+exports[`hsl-slider should render a compact vaiant  1`] = `
+<div
+  className="form-hsl-sliders form-hsl-sliders--compact"
+>
+  <div
+    className="form-hsl-slider form-hsl-slider--compact"
+  >
+    <label
+      className="form-label"
+      htmlFor="input-id-Hue"
+    >
+      H
+    </label>
+    <input
+      className="form-range"
+      id="input-id-Hue"
+      max={360}
+      min={0}
+      onChange={[Function]}
+      onInput={[Function]}
+      type="range"
+      value={0}
+    />
+  </div>
+  <div
+    className="form-hsl-slider form-hsl-slider--compact"
+  >
+    <label
+      className="form-label"
+      htmlFor="input-id-Saturation"
+    >
+      S
+    </label>
+    <input
+      className="form-range"
+      id="input-id-Saturation"
+      max={100}
+      min={0}
+      onChange={[Function]}
+      onInput={[Function]}
+      type="range"
+      value={0}
+    />
+  </div>
+  <div
+    className="form-hsl-slider form-hsl-slider--compact"
+  >
+    <label
+      className="form-label"
+      htmlFor="input-id-Lightness"
+    >
+      L
+    </label>
+    <input
+      className="form-range"
+      id="input-id-Lightness"
+      max={100}
+      min={0}
+      onChange={[Function]}
+      onInput={[Function]}
+      type="range"
+      value={80}
+    />
+  </div>
+</div>
+`;

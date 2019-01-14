@@ -1,7 +1,7 @@
 import React from 'react';
 import './form-range.scss';
 
-interface IFormRangeProps {
+export interface IFormRangeProps {
   defaultValue?: string;
   id: string;
   max: number;
