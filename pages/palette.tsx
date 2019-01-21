@@ -8,6 +8,7 @@ import Layout from '../components/layouts/layout';
 import Footer from '../components/footer';
 import PaletteInput from '../components/palette-input';
 import ColorMatrix from '../components/color-matrix';
+import Head from 'next/head';
 
 interface IPaletteState {
   colors: string[];
@@ -86,24 +87,29 @@ class Palette extends React.Component<{}, IPaletteState> {
 
   render() {
     return (
-      <Container variant="palette">
-        <Layout variant="full">
-          <PaletteInput
-            errorMessage={
-              this.state.hasError
-                ? 'Please enter valid colors as comma or space separated hex values'
-                : undefined
-            }
-            onColorAdd={this.handleNewColor}
-          />
-          <ColorMatrix
-            colorCombos={this.state.colorCombos}
-            colors={this.state.colors}
-            onColorChange={this.handleColorChange}
-          />
-        </Layout>
-        <Footer />
-      </Container>
+      <>
+        <Head>
+          <title>Palette checker - Are My Colours Accessible</title>
+        </Head>
+        <Container variant="palette">
+          <Layout variant="full">
+            <PaletteInput
+              errorMessage={
+                this.state.hasError
+                  ? 'Please enter valid colors as comma or space separated hex values'
+                  : undefined
+              }
+              onColorAdd={this.handleNewColor}
+            />
+            <ColorMatrix
+              colorCombos={this.state.colorCombos}
+              colors={this.state.colors}
+              onColorChange={this.handleColorChange}
+            />
+          </Layout>
+          <Footer />
+        </Container>
+      </>
     );
   }
 }
