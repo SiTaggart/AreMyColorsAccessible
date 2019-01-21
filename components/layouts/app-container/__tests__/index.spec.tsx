@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, ShallowWrapper } from 'enzyme';
 import AppContainer from '..';
-import { HomeProps } from '../../../home';
+import { HomeProps } from '../../../home'; // eslint-disable-line no-unused-vars
 
 describe('AppContainer', () => {
   let ChildComponent: React.FunctionComponent<HomeProps> = () => {
