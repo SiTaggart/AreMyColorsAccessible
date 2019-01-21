@@ -3,15 +3,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
+import { mount, ReactWrapper } from 'enzyme';
 import FormRange, { IFormRangeProps } from '..';
 
 type IFormRangeWrapperProps = Partial<IFormRangeProps>;
 
 describe('FormRange', () => {
-  const FormRangeWrapper: React.FunctionComponent<IFormRangeWrapperProps> = props => (
-    <FormRange id="range-id" max={100} min={1} {...props} />
-  );
+  const FormRangeWrapper: React.FunctionComponent<IFormRangeWrapperProps> = (
+    props: IFormRangeWrapperProps
+  ) => <FormRange id="range-id" max={100} min={1} {...props} />;
 
   it('renders without crashing', () => {
     ReactDOM.render(<FormRangeWrapper />, document.createElement('div'));

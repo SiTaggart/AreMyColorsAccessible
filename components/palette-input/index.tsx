@@ -24,11 +24,11 @@ const PaletteInput: React.FunctionComponent<IPaletteInputProps> = (props: IPalet
           </FormLabel>
         </h1>
         <FormInput
-          defaultValue="#fff #dedede #5F98E1 #6638F0 #B0F566 #333 #000, #555"
           errorMessage={props.errorMessage}
           hasNoSpacing
           id="palette-form-input"
           name="paletteFormInput"
+          placeholder="e.g. #ccc, rgb(255,255,255) or blue"
         />
       </div>
     </form>

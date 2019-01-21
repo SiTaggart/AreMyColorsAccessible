@@ -7,7 +7,7 @@ import AppContainer from '..';
 import { HomeProps } from '../../../home';
 
 describe('AppContainer', () => {
-  let ChildComponent: React.FunctionComponent<HomeProps> = (props: HomeProps) => {
+  let ChildComponent: React.FunctionComponent<HomeProps> = () => {
     return <div />;
   };
   let wrapper: ShallowWrapper;

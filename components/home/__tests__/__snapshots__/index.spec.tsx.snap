@@ -2,7 +2,7 @@
 
 exports[`Home renders without crashing 1`] = `
 <main
-  className="container home"
+  className="container container--home"
 >
   <div
     className="layout layout--small"

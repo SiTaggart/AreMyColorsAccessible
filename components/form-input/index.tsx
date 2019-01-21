@@ -11,6 +11,7 @@ export interface IFormInputProps {
   name?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string;
   style?: {};
   value?: string;
 }
@@ -31,6 +32,7 @@ const FormInput: React.FunctionComponent<IFormInputProps> = props => {
         name={props.name}
         onChange={props.onChange}
         onInput={props.onInput}
+        placeholder={props.placeholder}
         style={props.style}
         type="text"
         value={props.value}

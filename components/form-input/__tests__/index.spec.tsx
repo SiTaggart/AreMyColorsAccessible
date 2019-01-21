@@ -9,9 +9,9 @@ import FormInput, { IFormInputProps } from '..';
 type IFormInputWrapperProps = Partial<IFormInputProps>;
 
 describe('FormInput', () => {
-  const FormInputWrapper: React.FunctionComponent<IFormInputWrapperProps> = props => (
-    <FormInput id="form-id" {...props} />
-  );
+  const FormInputWrapper: React.FunctionComponent<IFormInputWrapperProps> = (
+    props: IFormInputWrapperProps
+  ) => <FormInput id="form-id" {...props} />;
 
   it('renders without crashing', () => {
     ReactDOM.render(<FormInputWrapper />, document.createElement('div'));

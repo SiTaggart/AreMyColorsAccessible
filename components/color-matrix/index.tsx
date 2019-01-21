@@ -11,7 +11,7 @@ export interface IColorMatrixProps {
   onColorChange: (newColor: string, index: number) => void;
 }
 
-const ColorMatrix: React.FunctionComponent<IColorMatrixProps> = props => {
+const ColorMatrix: React.FunctionComponent<IColorMatrixProps> = (props: IColorMatrixProps) => {
   return (
     <section className="colorMatrix">
       <table className="colorMatrix-table">
