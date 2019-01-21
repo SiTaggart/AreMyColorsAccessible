@@ -23,7 +23,7 @@ exports[`PaletteInput renders without crashing 1`] = `
       className="form-input form-input--noSpacing"
       id="palette-form-input"
       name="paletteFormInput"
-      placeholder="e.g. #ccc, rgb(255,255,255) or blue"
+      placeholder="e.g. #ccc, #fff or blue"
       type="text"
     />
   </div>
