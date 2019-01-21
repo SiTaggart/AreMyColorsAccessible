@@ -4,7 +4,7 @@ import ColorCombos from '../utils/color-combos';
 import { ColorCombosTypes } from '../types';
 
 import Container from '../components/layouts/container';
-import LayoutFull from '../components/layouts/layout-full';
+import Layout from '../components/layouts/layout';
 import Footer from '../components/footer';
 import PaletteInput from '../components/palette-input';
 import ColorMatrix from '../components/color-matrix';
@@ -86,8 +86,8 @@ class Palette extends React.Component<{}, IPaletteState> {
 
   render() {
     return (
-      <Container>
-        <LayoutFull>
+      <Container variant="palette">
+        <Layout variant="full">
           <PaletteInput
             errorMessage={
               this.state.hasError
@@ -101,7 +101,7 @@ class Palette extends React.Component<{}, IPaletteState> {
             colors={this.state.colors}
             onColorChange={this.handleColorChange}
           />
-        </LayoutFull>
+        </Layout>
         <Footer />
       </Container>
     );

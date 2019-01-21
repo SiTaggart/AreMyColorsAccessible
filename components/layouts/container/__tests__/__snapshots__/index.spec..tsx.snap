@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container renders without crashing 1`] = `
+<main
+  className="container"
+>
+  <div>
+    children
+  </div>
+</main>
+`;

@@ -1,6 +1,6 @@
 import React, { Component, ReactNode } from 'react';
 import Head from 'next/head';
-import { SiteData } from '../../../types';
+import { SiteData, ColorCombosTypes } from '../../../types';
 import debounce from 'lodash/debounce';
 import isEmpty from 'lodash/isEmpty';
 import qs from 'query-string';
@@ -9,7 +9,7 @@ import { HomeProps } from '../../home';
 import Footer from '../../footer';
 import ColorCombos from '../../../utils/color-combos';
 
-interface LayoutSharedProps {
+interface AppContainerProps {
   children: (args: HomeProps) => ReactNode;
   location?: {
     query?: object;
@@ -17,25 +17,28 @@ interface LayoutSharedProps {
   title: string;
 }
 
-interface LayoutSharedState {
+interface AppContainerState {
   siteData: SiteData;
 }
 
-class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
+class AppContainer extends Component<AppContainerProps, AppContainerState> {
   static defaultProps = {
     title: 'Are My Colours Accessible'
   };
 
-  constructor(props: LayoutSharedProps) {
+  constructor(props: AppContainerProps) {
     super(props);
-    this.state = {
-      siteData: {
-        background: '#1276CE',
-        textColor: '#FFFFFF',
-        isLight: false,
-        colorCombos: ColorCombos(['#FFFFFF', '#1276CE'])
-      }
-    };
+    const initialCombos: ColorCombosTypes[] | false = ColorCombos(['#FFFFFF', '#1276CE']);
+    if (initialCombos) {
+      this.state = {
+        siteData: {
+          background: '#1276CE',
+          textColor: '#FFFFFF',
+          isLight: false,
+          colorCombos: initialCombos
+        }
+      };
+    }
   }
 
   componentDidMount() {
@@ -78,17 +81,23 @@ class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
   };
 
   handleBackgroundColorSliderChange = (hex: string) => {
-    this.setState(
-      {
-        siteData: {
-          ...this.state.siteData,
-          background: hex,
-          colorCombos: ColorCombos([this.state.siteData.colorCombos[0].hex, hex]),
-          isLight: this.checkBackgroundLightness(hex)
-        }
-      },
-      debounce(this.updateHash, 200)
-    );
+    const newCombos: ColorCombosTypes[] | false = ColorCombos([
+      this.state.siteData.colorCombos[0].hex,
+      hex
+    ]);
+    if (newCombos) {
+      this.setState(
+        {
+          siteData: {
+            ...this.state.siteData,
+            background: hex,
+            colorCombos: newCombos,
+            isLight: this.checkBackgroundLightness(hex)
+          }
+        },
+        debounce(this.updateHash, 200)
+      );
+    }
   };
 
   handleTextColorInputChange = (value: string) => {
@@ -104,16 +113,22 @@ class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
   };
 
   handleTextColorSliderChange = (hex: string) => {
-    this.setState(
-      {
-        siteData: {
-          ...this.state.siteData,
-          textColor: hex,
-          colorCombos: ColorCombos([hex, this.state.siteData.colorCombos[1].hex])
-        }
-      },
-      debounce(this.updateHash, 200)
-    );
+    const newCombos: ColorCombosTypes[] | false = ColorCombos([
+      hex,
+      this.state.siteData.colorCombos[1].hex
+    ]);
+    if (newCombos) {
+      this.setState(
+        {
+          siteData: {
+            ...this.state.siteData,
+            textColor: hex,
+            colorCombos: newCombos
+          }
+        },
+        debounce(this.updateHash, 200)
+      );
+    }
   };
 
   isValidColor = (value: string): Color | false => {
@@ -127,18 +142,21 @@ class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
   };
 
   setNewColorCombo = (textColor: string, backgroundColor: string) => {
-    this.setState(
-      {
-        siteData: {
-          ...this.state.siteData,
-          background: backgroundColor,
-          colorCombos: ColorCombos([textColor, backgroundColor]),
-          isLight: this.checkBackgroundLightness(backgroundColor),
-          textColor: textColor
-        }
-      },
-      debounce(this.updateHash, 200)
-    );
+    const newCombos: ColorCombosTypes[] | false = ColorCombos([textColor, backgroundColor]);
+    if (newCombos) {
+      this.setState(
+        {
+          siteData: {
+            ...this.state.siteData,
+            background: backgroundColor,
+            colorCombos: newCombos,
+            isLight: this.checkBackgroundLightness(backgroundColor),
+            textColor: textColor
+          }
+        },
+        debounce(this.updateHash, 200)
+      );
+    }
   };
 
   updateHash = () => {
@@ -177,4 +195,4 @@ class LayoutShared extends Component<LayoutSharedProps, LayoutSharedState> {
     );
   }
 }
-export default LayoutShared;
+export default AppContainer;

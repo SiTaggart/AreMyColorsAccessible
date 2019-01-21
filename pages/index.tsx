@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from '../components/home';
-import LayoutShared from '../components/layouts/layout-shared';
+import AppContaienr from '../components/layouts/app-container';
 
-const Index = () => <LayoutShared>{props => <Home {...props} />}</LayoutShared>;
+const Index = () => <AppContaienr>{props => <Home {...props} />}</AppContaienr>;
 
 export default Index;

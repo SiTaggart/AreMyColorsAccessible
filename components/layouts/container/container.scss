@@ -1,3 +1,19 @@
+@import "../../../styles/utils";
+
 .container {
   position: relative;
+}
+
+.container--home {
+  @include breakpoint($small-screen) {
+    min-height: 85%;
+  }
+}
+
+.container--about {
+  padding-top: 3rem;
+}
+
+.container--palette {
+  color: #343334;
 }

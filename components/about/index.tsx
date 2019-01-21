@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import Container from '../layouts/container';
-import LayoutSmall from '../layouts/layout-small';
-import './about.scss';
+import Layout from '../layouts/layout';
 
 class About extends Component<{}, {}> {
   render() {
     return (
-      <Container className="about">
-        <LayoutSmall>
+      <Container variant="about">
+        <Layout variant="small">
           <h1 className="heading-1">{'Are my Colours Accessible?'}</h1>
           <p>
             Why? Well, apart from being an excuse to use a domain name, colour contrast and the use
@@ -74,7 +73,7 @@ class About extends Component<{}, {}> {
             Built by <a href="http://www.simontaggart.com">Simon Taggart</a>,{' '}
             <a href="https://github.com/SiTaggart/AreMyColorsAccessible">code on GitHub</a>.
           </p>
-        </LayoutSmall>
+        </Layout>
       </Container>
     );
   }

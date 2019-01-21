@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { SiteData, ColorCombinationTypes } from '../../types';
 import Container from '../layouts/container';
-import LayoutSmall from '../layouts/layout-small';
-import LayoutLarge from '../layouts/layout-large';
+import Layout from '../layouts/layout';
 import Results from '../results';
 import ColorInputs from '../colorInputs';
-import './home-styles.scss';
 
 export interface HomeProps {
   handleBackgroundColorInputChange: (value: string) => void;
@@ -21,15 +19,15 @@ class Home extends Component<HomeProps, {}> {
     const colorInfo: Partial<ColorCombinationTypes> = siteData.colorCombos[0].combinations[0];
 
     return (
-      <Container className="home">
-        <LayoutSmall>
+      <Container variant="home">
+        <Layout variant="small">
           <Results
             accessibility={colorInfo.accessibility!}
             contrast={colorInfo.contrast!}
             isLight={siteData.isLight}
           />
-        </LayoutSmall>
-        <LayoutLarge>
+        </Layout>
+        <Layout variant="large">
           <ColorInputs
             background={siteData.background}
             colorCombos={siteData.colorCombos}
@@ -40,7 +38,7 @@ class Home extends Component<HomeProps, {}> {
             isLight={siteData.isLight}
             textColor={siteData.textColor}
           />
-        </LayoutLarge>
+        </Layout>
       </Container>
     );
   }
