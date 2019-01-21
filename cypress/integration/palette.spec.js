@@ -39,13 +39,49 @@ describe('Palette', function() {
       cy.get('tbody .colorMatrix-tr:nth-child(3) > .colorMatrix-th').should('contain', '#EFEFEF');
     });
 
-    it('should add a multiple colors to the matrix via comma and space separation', () => {});
+    it('should add a multiple colors to the matrix via comma and space separation', () => {
+      cy.get('#palette-form-input').type('{selectall}#efefef,#999 red hotpink, #fff{enter}');
+      cy.get('thead .colorMatrix-th').should('have.length', '5');
+      cy.get('tbody .colorMatrix-tr').should('have.length', '5');
+      cy.get('tbody .colorMatrix-tr:nth-child(3) > .colorMatrix-th').should('contain', '#FF0000');
+    });
 
-    it('should not accept dupes of colors in the input', () => {});
+    it('should not accept dupes of colors in the input', () => {
+      cy.get('#palette-form-input').type('{selectall}#fff #000 #333 #fff, #555{enter}');
+      cy.get('thead .colorMatrix-th').should('have.length', '4');
+      cy.get('tbody .colorMatrix-tr').should('have.length', '4');
+      cy.get('tbody .colorMatrix-tr:nth-child(4) > .colorMatrix-th').should('contain', '#555555');
+    });
 
-    it('should not add dupes of colors already added', () => {});
+    it('should continue to add new colours if colours are already added', () => {
+      cy.get('#palette-form-input').type('{selectall}#efefef #222 #999{enter}');
+      cy.get('thead .colorMatrix-th').should('have.length', '3');
+      cy.get('tbody .colorMatrix-tr').should('have.length', '3');
+      cy.get('tbody .colorMatrix-tr:nth-child(2) > .colorMatrix-th').should('contain', '#222222');
+      cy.get('#palette-form-input').type('{selectall}#fff #555{enter}');
+      cy.get('thead .colorMatrix-th').should('have.length', '5');
+      cy.get('tbody .colorMatrix-tr').should('have.length', '5');
+      cy.get('tbody .colorMatrix-tr:nth-child(5) > .colorMatrix-th').should('contain', '#555555');
+    });
 
-    it('should show an error when you add an invalid color', () => {});
+    it('should not add dupes of colors already added', () => {
+      cy.get('#palette-form-input').type('{selectall}#ccc #ddd #eee{enter}');
+      cy.get('thead .colorMatrix-th').should('have.length', '3');
+      cy.get('tbody .colorMatrix-tr').should('have.length', '3');
+      cy.get('tbody .colorMatrix-tr:nth-child(2) > .colorMatrix-th').should('contain', '#DDDDDD');
+      cy.get('#palette-form-input').type('{selectall}#fff #ddd{enter}');
+      cy.get('thead .colorMatrix-th').should('have.length', '4');
+      cy.get('tbody .colorMatrix-tr').should('have.length', '4');
+      cy.get('tbody .colorMatrix-tr:nth-child(4) > .colorMatrix-th').should('contain', '#FFFFFF');
+    });
+
+    it('should show an error when you add an invalid color', () => {
+      cy.get('#palette-form-input').type('{selectall}dhfhfu{enter}');
+      cy.get('#error-message-label-palette-form-input').should(
+        'contain',
+        'Please enter valid colors as comma or space separated hex values'
+      );
+    });
   });
 
   describe('color matrix', () => {});

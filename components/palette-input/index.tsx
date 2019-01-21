@@ -28,7 +28,7 @@ const PaletteInput: React.FunctionComponent<IPaletteInputProps> = (props: IPalet
           hasNoSpacing
           id="palette-form-input"
           name="paletteFormInput"
-          placeholder="e.g. #ccc, rgb(255,255,255) or blue"
+          placeholder="e.g. #ccc, #fff or blue"
         />
       </div>
     </form>
