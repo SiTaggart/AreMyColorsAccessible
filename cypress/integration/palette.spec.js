@@ -84,5 +84,83 @@ describe('Palette', function() {
     });
   });
 
-  describe('color matrix', () => {});
+  describe('color matrix', () => {
+    beforeEach(() => {
+      cy.visit('/palette');
+    });
+
+    it('should have a colour input for each column header', () => {
+      cy.get('#palette-form-input').type('{selectall}orange blue pink red{enter}');
+      cy.get('thead .colorMatrix-th .form-hsl-sliders--compact').should('have.length', '4');
+    });
+
+    it('should update the color matrix results when the colour input is updated', () => {
+      cy.get('#palette-form-input').type('{selectall}orange blue pink red{enter}');
+      cy.get(
+        'tbody .colorMatrix-tr:nth-child(3) td:nth-child(2) .colorCard .colorCard-swatch'
+      ).should('contain', 'Nope');
+      cy.get('#colorhex-0').type('{selectall}brown');
+      cy.get('#hsl-0-Hue').should('have.value', '0');
+      cy.get('#hsl-0-Saturation').should('have.value', '59');
+      cy.get('#hsl-0-Lightness').should('have.value', '41');
+      cy.get('tbody .colorMatrix-tr:nth-child(1) > .colorMatrix-th').should('contain', '#A52A2A');
+      cy.get(
+        'tbody .colorMatrix-tr:nth-child(3) td:nth-child(2) .colorCard .colorCard-swatch'
+      ).should('contain', 'Yup');
+    });
+
+    it('should update the color matrix results when the hue slider is updated', () => {
+      cy.get('#palette-form-input').type('{selectall}orange blue pink red{enter}');
+      cy.get(
+        'tbody .colorMatrix-tr:nth-child(3) td:nth-child(3) .colorCard .colorCard-swatch'
+      ).should('contain', 'Yup');
+      cy.get('#hsl-1-Hue')
+        .invoke('val', 25)
+        .trigger('input');
+      cy.get('#hsl-1-Hue').should('have.value', '25');
+      cy.get('#hsl-1-Saturation').should('have.value', '100');
+      cy.get('#hsl-1-Lightness').should('have.value', '50');
+      cy.get('tbody .colorMatrix-tr:nth-child(2) > .colorMatrix-th').should('contain', '#FF6A00');
+      cy.get('#colorhex-1').should('have.value', '#FF6A00');
+      cy.get(
+        'tbody .colorMatrix-tr:nth-child(3) td:nth-child(3) .colorCard .colorCard-swatch'
+      ).should('contain', 'Nope');
+    });
+
+    it('should update the color matrix results when the saturation slider is updated', () => {
+      cy.get('#palette-form-input').type('{selectall}orange blue brown red{enter}');
+      cy.get(
+        'tbody .colorMatrix-tr:nth-child(1) td:nth-child(4) .colorCard .colorCard-swatch'
+      ).should('contain', 'Kinda');
+      cy.get('#hsl-2-Saturation')
+        .invoke('val', 95)
+        .trigger('input');
+      cy.get('#hsl-2-Hue').should('have.value', '0');
+      cy.get('#hsl-2-Saturation').should('have.value', '95');
+      cy.get('#hsl-2-Lightness').should('have.value', '41');
+      cy.get('tbody .colorMatrix-tr:nth-child(3) > .colorMatrix-th').should('contain', '#CC0505');
+      cy.get('#colorhex-2').should('have.value', '#CC0505');
+      cy.get(
+        'tbody .colorMatrix-tr:nth-child(1) td:nth-child(4) .colorCard .colorCard-swatch'
+      ).should('contain', 'Nope');
+    });
+
+    it('should update the color matrix results when the lightness slider is updated', () => {
+      cy.get('#palette-form-input').type('{selectall}orange blue pink red{enter}');
+      cy.get(
+        'tbody .colorMatrix-tr:nth-child(3) td:nth-child(5) .colorCard .colorCard-swatch'
+      ).should('contain', 'Nope');
+      cy.get('#hsl-3-Lightness')
+        .invoke('val', 25)
+        .trigger('input');
+      cy.get('#hsl-3-Hue').should('have.value', '0');
+      cy.get('#hsl-3-Saturation').should('have.value', '100');
+      cy.get('#hsl-3-Lightness').should('have.value', '25');
+      cy.get('tbody .colorMatrix-tr:nth-child(4) > .colorMatrix-th').should('contain', '#800000');
+      cy.get('#colorhex-3').should('have.value', '#800000');
+      cy.get(
+        'tbody .colorMatrix-tr:nth-child(3) td:nth-child(5) .colorCard .colorCard-swatch'
+      ).should('contain', 'Yup');
+    });
+  });
 });
