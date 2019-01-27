@@ -1,54 +1,26 @@
 import React, { Component } from 'react';
 import HslSlider from '../hsl-slider';
-import './colorInputs.scss';
+import FormLabel from '../form-label';
+import FormInput from '../form-input';
+import FormControl from '../form-control';
+import Form from '../form';
+import { ColorCombosTypes } from '../../types';
 
-interface ColorInputsProps {
+export interface ColorInputsProps {
   background: string;
+  colorCombos: Array<ColorCombosTypes>;
   isLight: boolean;
-  setBackgroundColor: (...args: any[]) => any;
-  setTextColorColor: (...args: any[]) => any;
+  handleBackgroundColorInputChange: (value: string) => void;
+  handleBackgroundColorSliderChange: (hex: string) => void;
+  handleTextColorInputChange: (value: string) => void;
+  handleTextColorSliderChange: (hex: string) => void;
   textColor: string;
 }
 
 class ColorInputs extends Component<ColorInputsProps, {}> {
-  private textColorRef = React.createRef<HslSlider>();
-  private backgroundColorRef = React.createRef<HslSlider>();
-
-  constructor(props: ColorInputsProps) {
-    super(props);
-    this.handleBackgroundChange = this.handleBackgroundChange.bind(this);
-    this.handleTextColorChange = this.handleTextColorChange.bind(this);
-  }
-
-  componentDidUpdate() {
-    this.textColorRef.current!.setHSLColorState(this.props.textColor);
-    this.backgroundColorRef.current!.setHSLColorState(this.props.background);
-  }
-
-  handleBackgroundChange(e: React.ChangeEvent<HTMLInputElement>): void {
-    let newBackgroundColor;
-    if (!e.target) {
-      newBackgroundColor = e;
-    } else {
-      newBackgroundColor = e.target.value;
-    }
-    this.props.setBackgroundColor(newBackgroundColor);
-  }
-
-  handleTextColorChange(e: React.ChangeEvent<HTMLInputElement>): void {
-    let newTextColorColor;
-    if (!e.target) {
-      newTextColorColor = e;
-    } else {
-      newTextColorColor = e.target.value;
-    }
-    this.props.setTextColorColor(newTextColorColor);
-  }
-
   render() {
-    const textColor = this.props.textColor;
-    const background = this.props.background;
-    const formTextColor = this.props.isLight ? '#222' : '#fff';
+    const { textColor, background, colorCombos } = this.props;
+    const formTextColor = this.props.isLight ? '#343334' : '#fff';
     const styles = {
       form: {
         color: formTextColor
@@ -60,46 +32,36 @@ class ColorInputs extends Component<ColorInputsProps, {}> {
     };
 
     return (
-      <form className="form" style={styles.form}>
-        <div className="form-control">
-          <label className="form-label" htmlFor="textColor">
-            Text Color
-          </label>
-          <input
-            className="form-input"
+      <Form style={styles.form}>
+        <FormControl>
+          <FormLabel htmlFor="textColor">Text Color</FormLabel>
+          <FormInput
             id="textColor"
-            onChange={this.handleTextColorChange}
+            onChange={e => this.props.handleTextColorInputChange(e.target.value)}
             style={styles.input}
-            type="text"
             value={textColor}
           />
           <HslSlider
             id="textColor-hsl"
-            onChange={this.handleTextColorChange}
-            ref={this.textColorRef}
-            value={textColor}
+            onChange={this.props.handleTextColorSliderChange}
+            value={colorCombos[0].hex}
           />
-        </div>
-        <div className="form-control">
-          <label className="form-label" htmlFor="background">
-            Background
-          </label>
-          <input
-            className="form-input"
+        </FormControl>
+        <FormControl>
+          <FormLabel htmlFor="background">Background</FormLabel>
+          <FormInput
             id="background"
-            onChange={this.handleBackgroundChange}
+            onChange={e => this.props.handleBackgroundColorInputChange(e.target.value)}
             style={styles.input}
-            type="text"
             value={background}
           />
           <HslSlider
             id="background-hsl"
-            onChange={this.handleBackgroundChange}
-            ref={this.backgroundColorRef}
-            value={background}
+            onChange={this.props.handleBackgroundColorSliderChange}
+            value={colorCombos[1].hex}
           />
-        </div>
-      </form>
+        </FormControl>
+      </Form>
     );
   }
 }

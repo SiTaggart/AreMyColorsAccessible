@@ -143,9 +143,19 @@ describe('About', () => {
     );
   });
 
-  // it('should set the font color to #222 on light backgrounds', () => {
-  //   siteData.isLight = true;
-  //   const rendered = shallow(<About siteData={siteData} />);
-  //   expect(rendered.find('.about').prop('style').color).toBe('#222');
-  // });
+  it('should set the font color of seriously? to #343334 on light backgrounds', () => {
+    const wrapper = shallow(
+      <Results
+        accessibility={{ aa: false, aaa: false, aaLarge: false, aaaLarge: false }}
+        contrast={1.2}
+        isLight
+      />
+    );
+    expect(
+      wrapper
+        .find('.contrastResult')
+        .at(4)
+        .prop('style')!.color
+    ).toEqual('#343334');
+  });
 });

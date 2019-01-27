@@ -1,5 +1,4 @@
-@import '../../styles/utils';
-@import 'input-range';
+@import "../../styles/utils";
 
 .form-hsl-sliders {
   display: flex;
@@ -10,6 +9,12 @@
   }
 }
 
+.form-hsl-sliders--compact {
+  display: block;
+  flex-wrap: nowrap;
+  margin: 0;
+}
+
 .form-hsl-slider {
   width: 100%;
 
@@ -17,5 +22,22 @@
     flex: 1 0 auto;
     padding: 0 0.5rem;
     width: 33.3333%;
+  }
+}
+
+.form-hsl-slider--compact {
+  display: flex;
+  padding: 0;
+  width: 100%;
+
+  .form-label {
+    flex: 1;
+    font-size: 1rem;
+    margin: 0;
+    text-align: left;
+  }
+
+  .form-range {
+    flex: 6;
   }
 }

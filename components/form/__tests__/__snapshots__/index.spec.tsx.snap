@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form renders without crashing 1`] = `
+<div
+  className="form"
+>
+  children
+</div>
+`;
+
+exports[`Form should render inline styles when past 1`] = `
+<div
+  className="form"
+  style={
+    Object {
+      "backgroundColor": "#fff",
+    }
+  }
+>
+  children
+</div>
+`;

@@ -1,7 +1,7 @@
 import React from 'react';
 import About from '../components/about';
-import LayoutShared from '../components/layouts/layout-shared';
+import AppContainer from '../components/layouts/app-container';
 
-const AboutPage = () => <LayoutShared>{() => <About />}</LayoutShared>;
+const AboutPage = () => <AppContainer>{() => <About />}</AppContainer>;
 
 export default AboutPage;

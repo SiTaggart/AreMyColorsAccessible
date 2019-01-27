@@ -1,0 +1,29 @@
+.form-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: solid 1px;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.form-input--error {
+  color: #c12915;
+  border-color: #c12915;
+
+  &:focus {
+    border-color: #c12915;
+    box-shadow: 0px 0px 10px #c12915;
+  }
+}
+
+.form-input-error {
+  color: #c12915;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.form-input--noSpacing {
+  margin: 0;
+}

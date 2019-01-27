@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput renders without crashing 1`] = `
+<input
+  autoComplete="off"
+  className="form-input"
+  id="form-id"
+  type="text"
+/>
+`;

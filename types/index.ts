@@ -15,11 +15,11 @@ export interface ColorCombinationTypes {
 }
 
 export interface ColorCombosTypes {
-  color?: Array<number>;
-  combinations?: Array<ColorCombinationTypes>;
-  hex?: string;
-  model?: string;
-  valpha?: number;
+  color: Array<number>;
+  combinations: Array<ColorCombinationTypes>;
+  hex: string;
+  model: string;
+  valpha: number;
   [key: number]: ColorCombosTypes;
 }
 
@@ -27,4 +27,5 @@ export interface SiteData {
   background: string;
   textColor: string;
   isLight: boolean;
+  colorCombos: Array<ColorCombosTypes>;
 }

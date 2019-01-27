@@ -4,14 +4,19 @@ import './container.scss';
 
 interface ContainerProps {
   children?: JSX.Element[] | JSX.Element;
-  className?: string;
-  style?: Object;
+  variant?: 'home' | 'about' | 'palette';
 }
 
 class Container extends Component<ContainerProps, {}> {
   render() {
     return (
-      <main className={ClassNames('container', this.props.className)} style={this.props.style}>
+      <main
+        className={ClassNames('container', {
+          'container--about': this.props.variant === 'about',
+          'container--home': this.props.variant === 'home',
+          'container--palette': this.props.variant === 'palette'
+        })}
+      >
         {this.props.children}
       </main>
     );

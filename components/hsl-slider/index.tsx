@@ -1,16 +1,18 @@
 import React, { Component, ReactNode } from 'react';
 import Color from 'color';
-import debounce from 'lodash/debounce';
-import isEqual from 'lodash/isEqual';
+import classNames from 'classnames';
 import './hsl-slider.scss';
+import FormLabel from '../form-label';
+import FormRange from '../form-range';
 
 interface HslSliderProps {
   id: string;
-  onChange: (...args: any[]) => any;
+  onChange: (hex: string, id: string) => void;
   value: string;
+  variant?: 'compact' | null;
 }
 
-interface HslSliderState {
+interface HSLColor {
   hue: number;
   saturation: number;
   lightness: number;
@@ -29,66 +31,67 @@ interface HSLColorTypes extends Color {
   color: Array<number>;
 }
 
-class HslSlider extends Component<HslSliderProps, HslSliderState> {
-  constructor(props: HslSliderProps) {
-    super(props);
-    const hsl: Partial<HSLColorTypes> = Color(this.props.value).hsl();
-    this.state = this.roundHSLValues(hsl);
-    this.updateColor = this.updateColor.bind(this);
-  }
+class HslSlider extends Component<HslSliderProps, {}> {
+  public shouldComponentUpdate = (nextProps: HslSliderProps): boolean => {
+    return this.props.value !== nextProps.value;
+  };
 
-  shouldComponentUpdate(_nextProps: HslSliderProps, nextState: HslSliderState): boolean {
-    return !isEqual(this.state, nextState);
-  }
+  private convertToHSL = (hex: string): HSLColor => {
+    let hsl: Partial<HSLColorTypes> = Color(hex).hsl();
+    return this.roundHSLValues(hsl);
+  };
 
   private handleHueChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    this.setState(
-      {
-        hue: parseInt(e.target.value)
-      },
-      debounce(this.updateColor, 200)
-    );
+    const newHsl: HSLColor = {
+      ...this.convertToHSL(this.props.value),
+      hue: parseInt(e.target.value)
+    };
+    this.updateColor(newHsl);
   };
 
   private handleSaturationChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    this.setState(
-      {
-        saturation: parseInt(e.target.value)
-      },
-      debounce(this.updateColor, 200)
-    );
+    const newHsl: HSLColor = {
+      ...this.convertToHSL(this.props.value),
+      saturation: parseInt(e.target.value)
+    };
+    this.updateColor(newHsl);
   };
 
   private handleLightnessChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    this.setState(
-      {
-        lightness: parseInt(e.target.value)
-      },
-      debounce(this.updateColor, 200)
-    );
+    const newHsl: HSLColor = {
+      ...this.convertToHSL(this.props.value),
+      lightness: parseInt(e.target.value)
+    };
+    this.updateColor(newHsl);
   };
 
   private renderRangeInput = (range: Range): ReactNode => {
     const id = this.props.id + '-' + range.label;
     return (
-      <div className="form-hsl-slider" key={id}>
-        <label className="form-label" htmlFor={id}>
-          {range.label} {range.value + range.symbol}
-        </label>
-        <input
-          className="form-range"
-          defaultValue={range.value.toString()}
+      <div
+        className={classNames('form-hsl-slider', {
+          'form-hsl-slider--compact': this.props.variant === 'compact'
+        })}
+        key={id}
+      >
+        <FormLabel htmlFor={id}>
+          {this.props.variant === 'compact'
+            ? `${range.label.substring(0, 1)}`
+            : `${range.label} ${range.value + range.symbol}`}
+        </FormLabel>
+        <FormRange
           id={id}
           max={range.max}
           min={range.min}
-          onInput={range.handleOnChange}
-          type="range"
+          onChange={e => range.handleOnChange(e)}
+          onInput={e => range.handleOnChange(e)}
+          value={range.value}
         />
       </div>
     );
   };
 
-  private roundHSLValues = (hsl: Partial<HSLColorTypes>): HslSliderState => {
+  private roundHSLValues = (hsl: Partial<HSLColorTypes>): HSLColor => {
     return {
       hue: Math.round(hsl.color![0]),
       saturation: Math.round(hsl.color![1]),
@@ -96,34 +99,24 @@ class HslSlider extends Component<HslSliderProps, HslSliderState> {
     };
   };
 
-  public setHSLColorState = (value: string): void => {
-    let hsl: Partial<HSLColorTypes>;
-    try {
-      hsl = Color(value).hsl();
-      this.setState(this.roundHSLValues(hsl));
-    } catch (error) {
-      // console.error('bad hsl');
-    }
-  };
-
-  public updateColor = (): void => {
+  private updateColor = (color: HSLColor) => {
     const hex = Color({
-      h: this.state.hue,
-      s: this.state.saturation,
-      l: this.state.lightness
+      h: color.hue,
+      s: color.saturation,
+      l: color.lightness
     }).hex();
-    if (hex !== this.props.value) {
-      this.props.onChange(hex);
-    }
+    this.props.onChange(hex, this.props.id);
   };
 
   render() {
+    const hslColorValue: HSLColor = this.convertToHSL(this.props.value);
+
     const hslRanges: Array<Range> = [
       {
         label: 'Hue',
         min: 0,
         max: 360,
-        value: this.state.hue,
+        value: hslColorValue.hue,
         handleOnChange: this.handleHueChange,
         symbol: '°'
       },
@@ -131,7 +124,7 @@ class HslSlider extends Component<HslSliderProps, HslSliderState> {
         label: 'Saturation',
         min: 0,
         max: 100,
-        value: this.state.saturation,
+        value: hslColorValue.saturation,
         handleOnChange: this.handleSaturationChange,
         symbol: '%'
       },
@@ -139,13 +132,21 @@ class HslSlider extends Component<HslSliderProps, HslSliderState> {
         label: 'Lightness',
         min: 0,
         max: 100,
-        value: this.state.lightness,
+        value: hslColorValue.lightness,
         handleOnChange: this.handleLightnessChange,
         symbol: '%'
       }
     ];
 
-    return <div className="form-hsl-sliders">{hslRanges.map(this.renderRangeInput)}</div>;
+    return (
+      <div
+        className={classNames('form-hsl-sliders', {
+          'form-hsl-sliders--compact': this.props.variant === 'compact'
+        })}
+      >
+        {hslRanges.map(this.renderRangeInput)}
+      </div>
+    );
   }
 }
 

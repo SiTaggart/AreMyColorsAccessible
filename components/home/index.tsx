@@ -1,80 +1,44 @@
 import React, { Component } from 'react';
 import { SiteData, ColorCombinationTypes } from '../../types';
-import ColorCombos from '../../utils/color-combos';
 import Container from '../layouts/container';
-import LayoutSmall from '../layouts/layout-small';
-import LayoutLarge from '../layouts/layout-large';
+import Layout from '../layouts/layout';
 import Results from '../results';
 import ColorInputs from '../colorInputs';
-import './home-styles.scss';
 
 export interface HomeProps {
-  setBackgroundColor: (...args: any[]) => any;
-  setTextColorColor: (...args: any[]) => any;
+  handleBackgroundColorInputChange: (value: string) => void;
+  handleBackgroundColorSliderChange: (hex: string) => void;
+  handleTextColorInputChange: (value: string) => void;
+  handleTextColorSliderChange: (hex: string) => void;
   siteData: SiteData;
 }
 
 class Home extends Component<HomeProps, {}> {
-  constructor(props: HomeProps) {
-    super(props);
-    this.setBackgroundColor = this.setBackgroundColor.bind(this);
-    this.setTextColorColor = this.setTextColorColor.bind(this);
-  }
-
-  getColorInfo(background: string, textColor: string) {
-    let colorInfo: Partial<ColorCombinationTypes>;
-
-    const dummyColorInfo: Partial<ColorCombinationTypes> = {
-      contrast: 0,
-      accessibility: {
-        aaa: false,
-        aa: false,
-        aaaLarge: false,
-        aaLarge: false
-      }
-    };
-
-    try {
-      if (ColorCombos([textColor, background]) !== false) {
-        const colors = ColorCombos([textColor, background]) as any;
-        colorInfo = colors[0].combinations![0];
-      } else {
-        colorInfo = dummyColorInfo;
-      }
-    } catch (e) {
-      colorInfo = dummyColorInfo;
-    }
-
-    return colorInfo;
-  }
-
-  setBackgroundColor(hex: string) {
-    this.props.setBackgroundColor(hex);
-  }
-
-  setTextColorColor(hex: string) {
-    this.props.setTextColorColor(hex);
-  }
-
   render() {
-    const textColor = this.props.siteData.textColor;
-    const background = this.props.siteData.background;
-    const colorInfo = this.getColorInfo(background, textColor);
+    const siteData: SiteData = this.props.siteData;
+    const colorInfo: Partial<ColorCombinationTypes> = siteData.colorCombos[0].combinations[0];
 
     return (
-      <Container className="home">
-        <LayoutSmall>
-          <Results {...colorInfo} isLight={this.props.siteData.isLight} />
-        </LayoutSmall>
-        <LayoutLarge>
-          <ColorInputs
-            background={this.props.siteData.background}
-            isLight={this.props.siteData.isLight}
-            setBackgroundColor={this.setBackgroundColor}
-            setTextColorColor={this.setTextColorColor}
-            textColor={this.props.siteData.textColor}
+      <Container variant="home">
+        <Layout variant="small">
+          <Results
+            accessibility={colorInfo.accessibility!}
+            contrast={colorInfo.contrast!}
+            isLight={siteData.isLight}
           />
-        </LayoutLarge>
+        </Layout>
+        <Layout variant="large">
+          <ColorInputs
+            background={siteData.background}
+            colorCombos={siteData.colorCombos}
+            handleBackgroundColorInputChange={this.props.handleBackgroundColorInputChange}
+            handleBackgroundColorSliderChange={this.props.handleBackgroundColorSliderChange}
+            handleTextColorInputChange={this.props.handleTextColorInputChange}
+            handleTextColorSliderChange={this.props.handleTextColorSliderChange}
+            isLight={siteData.isLight}
+            textColor={siteData.textColor}
+          />
+        </Layout>
       </Container>
     );
   }

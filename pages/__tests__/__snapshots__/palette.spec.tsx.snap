@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Palette Page renders without crashing 1`] = `
+<main
+  className="container container--palette"
+>
+  <div
+    className="layout layout--full"
+  >
+    <form
+      className="paletteForm"
+      onSubmit={[Function]}
+    >
+      <div
+        className="paletteForm-element"
+      >
+        <h1
+          className="paletteForm-heading"
+        >
+          <label
+            className="form-label form-label--large"
+            htmlFor="palette-form-input"
+          >
+            Add the colours from your palette
+          </label>
+        </h1>
+        <input
+          autoComplete="off"
+          className="form-input form-input--noSpacing"
+          id="palette-form-input"
+          name="paletteFormInput"
+          placeholder="e.g. #ccc, #fff or blue"
+          type="text"
+        />
+      </div>
+    </form>
+    <section
+      className="colorMatrix"
+    >
+      <table
+        className="colorMatrix-table"
+      >
+        <thead>
+          <tr
+            className="colorMatrix-tr"
+          >
+            <td
+              style={
+                Object {
+                  "width": "6rem",
+                }
+              }
+            />
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </section>
+  </div>
+  <footer
+    className="footer"
+  >
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="/palette"
+            onClick={[Function]}
+          >
+            Palette
+          </a>
+        </li>
+        <li>
+          <a
+            href="/about"
+            onClick={[Function]}
+          >
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</main>
+`;

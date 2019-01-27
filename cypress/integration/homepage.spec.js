@@ -105,5 +105,12 @@ describe('Homepage', function() {
       cy.url().should('eq', 'http://localhost:3000/about');
       cy.get('h1').should('contain', 'Are my Colours Accessible?');
     });
+
+    it('should navigate to the palette page', () => {
+      cy.visit('/');
+      cy.get('.footer ul li:nth-child(2)').click();
+      cy.url().should('eq', 'http://localhost:3000/palette');
+      cy.get('h1').should('contain', 'Add the colours from your palette');
+    });
   });
 });

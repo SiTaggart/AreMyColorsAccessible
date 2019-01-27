@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ColorCombinationTypes } from '../../types';
+import colorRating from '../../utils/color-rating';
 import './results.scss';
 
 interface ResultsProps extends ColorCombinationTypes {
@@ -10,7 +11,7 @@ class Results extends Component<ResultsProps, {}> {
   renderAreYouSerious() {
     let styles = {
       seriouslyContainer: {
-        color: this.props.isLight ? '#222' : '#fff'
+        color: this.props.isLight ? '#343334' : '#fff'
       }
     };
 
@@ -23,30 +24,12 @@ class Results extends Component<ResultsProps, {}> {
 
   render() {
     const ratio = parseFloat(this.props.contrast!.toFixed(2));
+    const colorRatings = colorRating(this.props.accessibility!);
     let areYouSerious = null;
-    let boldTextRating = '';
-    let largeTextRating = '';
-    let overallRating = 'Nope';
-    let smallTextRating = '';
-
-    if (this.props.accessibility!.aaa) {
-      smallTextRating = 'AAA';
-    } else {
-      smallTextRating = this.props.accessibility!.aa ? 'AA' : 'Fail';
-    }
-
-    if (this.props.accessibility!.aaaLarge) {
-      boldTextRating = largeTextRating = 'AAA';
-    } else {
-      boldTextRating = this.props.accessibility!.aaLarge ? 'AA' : 'Fail';
-      largeTextRating = boldTextRating;
-    }
-
-    if (smallTextRating === 'AAA' || smallTextRating === 'AA') {
-      overallRating = 'Yup';
-    } else if (smallTextRating === 'Fail' && largeTextRating === 'AA') {
-      overallRating = 'Kinda';
-    }
+    let boldTextRating = colorRatings.bold;
+    let largeTextRating = colorRatings.large;
+    let overallRating = colorRatings.overall;
+    let smallTextRating = colorRatings.small;
 
     if (ratio < 1.3) {
       areYouSerious = this.renderAreYouSerious();

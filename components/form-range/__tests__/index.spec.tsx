@@ -1,0 +1,46 @@
+/* eslint-env jest */
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import renderer from 'react-test-renderer';
+import { mount, ReactWrapper } from 'enzyme';
+import FormRange, { IFormRangeProps } from '..';
+
+type IFormRangeWrapperProps = Partial<IFormRangeProps>;
+
+describe('FormRange', () => {
+  const FormRangeWrapper: React.FunctionComponent<IFormRangeWrapperProps> = (
+    props: IFormRangeWrapperProps
+  ) => <FormRange id="range-id" max={100} min={1} {...props} />;
+
+  it('renders without crashing', () => {
+    ReactDOM.render(<FormRangeWrapper />, document.createElement('div'));
+    const formRangeCmp = renderer.create(<FormRangeWrapper />).toJSON();
+    expect(formRangeCmp).toMatchSnapshot();
+  });
+
+  it('should set a default value', () => {
+    const wrapper: ReactWrapper = mount(<FormRangeWrapper defaultValue="testing" />);
+    expect(wrapper.find('input').prop('defaultValue')).toEqual('testing');
+  });
+
+  it('should call a passed in onChange method, onChange', () => {
+    const onChangeMock: jest.Mock = jest.fn();
+    const wrapper: ReactWrapper = mount(<FormRangeWrapper onChange={onChangeMock} />);
+    wrapper.simulate('change');
+    expect(onChangeMock).toBeCalled();
+  });
+
+  it('should call a passed in onInput method, onInput', () => {
+    const onInputMock: jest.Mock = jest.fn();
+    const wrapper: ReactWrapper = mount(<FormRangeWrapper onInput={onInputMock} />);
+    wrapper.simulate('input');
+    expect(onInputMock).toBeCalled();
+  });
+
+  it('should set the value of the input when passed a value', () => {
+    const onChangeMock: jest.Mock = jest.fn();
+    const wrapper: ReactWrapper = mount(<FormRangeWrapper onChange={onChangeMock} value={20} />);
+    expect(wrapper.find('input').prop('value')).toEqual(20);
+  });
+});

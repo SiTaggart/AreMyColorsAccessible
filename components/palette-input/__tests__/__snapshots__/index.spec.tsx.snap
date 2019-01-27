@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaletteInput renders without crashing 1`] = `
+<form
+  className="paletteForm"
+  onSubmit={[Function]}
+>
+  <div
+    className="paletteForm-element"
+  >
+    <h1
+      className="paletteForm-heading"
+    >
+      <label
+        className="form-label form-label--large"
+        htmlFor="palette-form-input"
+      >
+        Add the colours from your palette
+      </label>
+    </h1>
+    <input
+      autoComplete="off"
+      className="form-input form-input--noSpacing"
+      id="palette-form-input"
+      name="paletteFormInput"
+      placeholder="e.g. #ccc, #fff or blue"
+      type="text"
+    />
+  </div>
+</form>
+`;
