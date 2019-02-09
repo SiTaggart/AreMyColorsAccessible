@@ -5,7 +5,8 @@
       "src": "next.config.js",
       "use": "@now/next",
       "config": {
-        "useBuildUtils": "@now/build-utils@canary"
+        "useBuildUtils": "@now/build-utils@canary",
+        "newPipeline": true
       }
     }
   ]
