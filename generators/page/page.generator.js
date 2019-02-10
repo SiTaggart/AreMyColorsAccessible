@@ -14,7 +14,7 @@ module.exports = plop => {
         }
       }
     ],
-    actions: function(data) {
+    actions: function() {
       var actions = [
         {
           type: 'add',

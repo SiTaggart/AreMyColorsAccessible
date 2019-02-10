@@ -9,7 +9,9 @@ export default class MyApp extends App {
   }: {
     Component: any;
     ctx: any;
-  }): Promise<void> {
+  }): Promise<{
+    pageProps: {};
+  }> {
     let pageProps = {};
 
     if (Component.getInitialProps) {
