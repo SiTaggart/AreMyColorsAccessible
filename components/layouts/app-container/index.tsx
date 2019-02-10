@@ -6,8 +6,8 @@ import isEmpty from 'lodash/isEmpty';
 import qs from 'query-string';
 import Color from 'color';
 import { HomeProps } from '../../home';
-import Footer from '../../footer';
 import ColorCombos from '../../../utils/color-combos';
+import Footer from '../../footer';
 
 interface AppContainerProps {
   children: (args: HomeProps) => ReactNode;

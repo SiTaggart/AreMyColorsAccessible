@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import HslSlider from '../hsl-slider';
-import FormLabel from '../form-label';
-import FormInput from '../form-input';
-import FormControl from '../form-control';
 import Form from '../form';
+import FormControl from '../form-control';
+import FormInput from '../form-input';
+import FormLabel from '../form-label';
+import HslSlider from '../hsl-slider';
 import { ColorCombosTypes } from '../../types';
 
 export interface ColorInputsProps {

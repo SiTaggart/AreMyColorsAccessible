@@ -5,10 +5,10 @@ import { ColorCombosTypes } from '../types';
 
 import Container from '../components/layouts/container';
 import Layout from '../components/layouts/layout';
-import Footer from '../components/footer';
 import PaletteInput from '../components/palette-input';
 import ColorMatrix from '../components/color-matrix';
 import Head from 'next/head';
+import Footer from '../components/footer';
 
 interface IPaletteState {
   colors: string[];

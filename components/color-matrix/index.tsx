@@ -1,8 +1,8 @@
 import React from 'react';
 import { ColorCombosTypes } from '../../types';
 import ColorCard from '../color-card';
-import HslSlider from '../hsl-slider';
 import FormInput from '../form-input';
+import HslSlider from '../hsl-slider';
 import './color-matrix.scss';
 
 export interface IColorMatrixProps {

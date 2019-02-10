@@ -1,7 +1,7 @@
 import React, { FormEvent } from 'react';
 import './palette-input.scss';
-import FormLabel from '../form-label';
 import FormInput from '../form-input';
+import FormLabel from '../form-label';
 
 interface IPaletteInputProps {
   onColorAdd: (colors: string) => void;
