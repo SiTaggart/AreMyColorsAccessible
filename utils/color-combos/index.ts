@@ -8,11 +8,11 @@ interface Options {
 }
 
 const ColorCombos = (
-  colors: Array<string> | { [name: string]: string },
+  colors: string[] | { [name: string]: string },
   options: Options = {}
-): Array<ColorCombosTypes> | false => {
-  let arr: Array<Color> = [];
-  let results: Array<ColorCombosTypes> = [];
+): ColorCombosTypes[] | false => {
+  let arr: Color[] = [];
+  let results: ColorCombosTypes[] = [];
 
   const MINIMUMS: { aa: number; aaLarge: number; aaa: number; aaaLarge: number } = {
     aa: 4.5,

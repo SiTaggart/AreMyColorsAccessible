@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import './form-range.scss';
 
-export interface IFormRangeProps {
+export interface FormRangeProps {
   defaultValue?: string;
   id: string;
   max: number;
@@ -11,7 +11,9 @@ export interface IFormRangeProps {
   value?: number;
 }
 
-const FormRange: React.FunctionComponent<IFormRangeProps> = (props: IFormRangeProps) => {
+const FormRange: React.FunctionComponent<FormRangeProps> = (
+  props: FormRangeProps
+): ReactElement<HTMLInputElement> => {
   return (
     <input
       className="form-range"

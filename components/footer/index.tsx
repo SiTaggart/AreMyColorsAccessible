@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import Link from 'next/link';
 import './footer.scss';
 
-interface IFooterProps {
+interface FooterProps {
   styles?: { footerLinks?: object };
 }
 
-const Footer: React.FunctionComponent<IFooterProps> = (props: IFooterProps) => {
+const Footer: React.FunctionComponent<FooterProps> = (
+  props: FooterProps
+): ReactElement<HTMLDivElement> => {
   const linkStyles: object | undefined = props.styles ? props.styles.footerLinks : undefined;
   return (
     <footer className="footer">

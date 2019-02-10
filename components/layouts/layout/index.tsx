@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ReactElement } from 'react';
 import cx from 'classnames';
 import './layout.scss';
 
@@ -8,7 +8,7 @@ interface LayoutProps {
 }
 
 class Layout extends Component<LayoutProps, {}> {
-  render() {
+  public render(): ReactElement<HTMLDivElement> {
     return (
       <div
         className={cx('layout', {

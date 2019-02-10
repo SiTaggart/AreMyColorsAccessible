@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, ReactElement } from 'react';
 import Container from '../layouts/container';
 import Layout from '../layouts/layout';
 
 class About extends Component<{}, {}> {
-  render() {
+  public render(): ReactElement<HTMLMainElement> {
     return (
       <Container variant="about">
         <Layout variant="small">

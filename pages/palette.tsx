@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactFragment } from 'react';
 import Color from 'color';
 import ColorCombos from '../utils/color-combos';
 import { ColorCombosTypes } from '../types';
@@ -10,17 +10,17 @@ import ColorMatrix from '../components/color-matrix';
 import Head from 'next/head';
 import Footer from '../components/footer';
 
-interface IPaletteState {
+interface PaletteState {
   colors: string[];
-  colorCombos: Array<ColorCombosTypes> | false;
+  colorCombos: ColorCombosTypes[] | false;
   hasError: boolean;
 }
 
-class Palette extends React.Component<{}, IPaletteState> {
-  state = { colors: [], colorCombos: [], hasError: false };
+class Palette extends React.Component<{}, PaletteState> {
+  public static state = { colors: [], colorCombos: [], hasError: false };
 
-  convertColorStringsToColors = (colorStrings: string[]): Color[] | false => {
-    let isValidColor: boolean = true;
+  private convertColorStringsToColors = (colorStrings: string[]): Color[] | false => {
+    let isValidColor = true;
     const colorTypes: Color[] = [];
 
     colorStrings.forEach((color: string) => {
@@ -38,19 +38,19 @@ class Palette extends React.Component<{}, IPaletteState> {
     }
   };
 
-  convertColorValuesToArray = (colors: string): string[] => {
+  private convertColorValuesToArray = (colors: string): string[] => {
     const colorsArr: string[] = colors.split(/[ ,]+/).filter(Boolean);
     const dedupedColors = colorsArr.filter((color, index, self) => self.indexOf(color) === index);
     return dedupedColors;
   };
 
-  handleColorChange = (value: string, index: number) => {
+  private handleColorChange = (value: string, index: number) => {
     const newColors: string[] = [...this.state.colors];
     newColors[index] = value;
     this.updateColors(newColors, !!this.isValidColor(value));
   };
 
-  handleNewColor = (colors: string) => {
+  private handleNewColor = (colors: string) => {
     const colorsArray: string[] = this.convertColorValuesToArray(colors);
     const convertedColors: Color[] | false = this.convertColorStringsToColors(colorsArray);
     const mergedColors: string[] = this.mergeColorsWithState(colorsArray);
@@ -62,7 +62,7 @@ class Palette extends React.Component<{}, IPaletteState> {
     }
   };
 
-  isValidColor = (hex: string) => {
+  private isValidColor = (hex: string) => {
     let color: Color | false = false;
     try {
       color = Color(hex);
@@ -70,22 +70,22 @@ class Palette extends React.Component<{}, IPaletteState> {
     return color;
   };
 
-  mergeColorsWithState = (colors: string[]): string[] => {
+  private mergeColorsWithState = (colors: string[]): string[] => {
     const filteredColors: string[] = colors.filter(
       color => (this.state.colors as string[]).indexOf(color) < 0
     );
     return [...this.state.colors, ...filteredColors];
   };
 
-  updateColors = (colors: string[], isValidColor: boolean) => {
+  private updateColors = (colors: string[], isValidColor: boolean) => {
     this.setState({
-      colorCombos: isValidColor ? ColorCombos(colors) : this.state.colorCombos,
       colors,
+      colorCombos: isValidColor ? ColorCombos(colors) : this.state.colorCombos,
       hasError: false
     });
   };
 
-  render() {
+  public render(): ReactFragment {
     return (
       <>
         <Head>

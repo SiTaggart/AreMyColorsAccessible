@@ -4,11 +4,13 @@
     "standard",
     "standard-jsx",
     "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
     "prettier",
     "prettier/standard",
-    "prettier/react"
+    "prettier/react",
+    "prettier/@typescript-eslint"
   ],
-  "plugins": ["typescript", "cypress"],
+  "plugins": ["@typescript-eslint", "cypress"],
   "env": {
     "cypress/globals": true
   },
@@ -24,10 +26,13 @@
   "overrides": [
     {
       "files": ["**/*.ts", "**/*.tsx"],
-      "parser": "typescript-eslint-parser",
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
       "rules": {
         "no-undef": "off",
-        "typescript/no-unused-vars": "error"
+        "@typescript-eslint/no-unused-vars": "error"
       }
     }
   ]

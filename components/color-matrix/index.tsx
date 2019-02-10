@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { ColorCombosTypes } from '../../types';
 import ColorCard from '../color-card';
 import FormInput from '../form-input';
 import HslSlider from '../hsl-slider';
 import './color-matrix.scss';
 
-export interface IColorMatrixProps {
+export interface ColorMatrixProps {
   colors: string[];
-  colorCombos: Array<ColorCombosTypes>;
+  colorCombos: ColorCombosTypes[];
   onColorChange: (newColor: string, index: number) => void;
 }
 
-const ColorMatrix: React.FunctionComponent<IColorMatrixProps> = (props: IColorMatrixProps) => {
+const ColorMatrix: React.FunctionComponent<ColorMatrixProps> = (
+  props: ColorMatrixProps
+): ReactElement<HTMLDivElement> => {
   return (
     <section className="colorMatrix">
       <table className="colorMatrix-table">

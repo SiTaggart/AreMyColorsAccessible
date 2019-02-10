@@ -1,14 +1,16 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, ReactElement } from 'react';
 import cx from 'classnames';
 import './form-label.scss';
 
-interface IFormLabelProps {
+interface FormLabelProps {
   children: ReactNode;
   htmlFor: string;
   isLarge?: boolean;
 }
 
-const FormLabel: React.FunctionComponent<IFormLabelProps> = (props: IFormLabelProps) => {
+const FormLabel: React.FunctionComponent<FormLabelProps> = (
+  props: FormLabelProps
+): ReactElement<HTMLLabelElement> => {
   return (
     <label
       className={cx('form-label', { 'form-label--large': props.isLarge })}

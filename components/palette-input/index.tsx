@@ -1,15 +1,17 @@
-import React, { FormEvent } from 'react';
+import React, { FormEvent, ReactElement } from 'react';
 import './palette-input.scss';
 import FormInput from '../form-input';
 import FormLabel from '../form-label';
 
-interface IPaletteInputProps {
+interface PaletteInputProps {
   onColorAdd: (colors: string) => void;
   errorMessage?: string;
 }
 
-const PaletteInput: React.FunctionComponent<IPaletteInputProps> = (props: IPaletteInputProps) => {
-  const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
+const PaletteInput: React.FunctionComponent<PaletteInputProps> = (
+  props: PaletteInputProps
+): ReactElement<HTMLFormElement> => {
+  const handleFormSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     const colorInput: HTMLInputElement = (e.target as HTMLFormElement).paletteFormInput;
     props.onColorAdd(colorInput.value);

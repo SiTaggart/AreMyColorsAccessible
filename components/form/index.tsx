@@ -1,12 +1,14 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, ReactElement } from 'react';
 import './form.scss';
 
-interface IFormProps {
+interface FormProps {
   children: ReactNode;
   style?: {};
 }
 
-const Form: React.FunctionComponent<IFormProps> = (props: IFormProps) => {
+const Form: React.FunctionComponent<FormProps> = (
+  props: FormProps
+): ReactElement<HTMLDivElement> => {
   return (
     <div className="form" style={props.style}>
       {props.children}

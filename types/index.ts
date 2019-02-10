@@ -7,7 +7,7 @@ export interface Levels {
 
 export interface ColorCombinationTypes {
   accessibility?: Levels;
-  color?: Array<number>;
+  color?: number[];
   contrast?: number;
   hex?: string;
   model?: string;
@@ -15,8 +15,8 @@ export interface ColorCombinationTypes {
 }
 
 export interface ColorCombosTypes {
-  color: Array<number>;
-  combinations: Array<ColorCombinationTypes>;
+  color: number[];
+  combinations: ColorCombinationTypes[];
   hex: string;
   model: string;
   valpha: number;
@@ -27,5 +27,5 @@ export interface SiteData {
   background: string;
   textColor: string;
   isLight: boolean;
-  colorCombos: Array<ColorCombosTypes>;
+  colorCombos: ColorCombosTypes[];
 }
