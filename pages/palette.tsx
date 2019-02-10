@@ -17,7 +17,7 @@ interface PaletteState {
 }
 
 class Palette extends React.Component<{}, PaletteState> {
-  public static state = { colors: [], colorCombos: [], hasError: false };
+  public state = { colors: [], colorCombos: [], hasError: false };
 
   private convertColorStringsToColors = (colorStrings: string[]): Color[] | false => {
     let isValidColor = true;
