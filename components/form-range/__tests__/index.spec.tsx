@@ -1,17 +1,17 @@
 /* eslint-env jest */
 
-import React from 'react';
+import React, { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { mount, ReactWrapper } from 'enzyme';
-import FormRange, { IFormRangeProps } from '..';
+import FormRange, { FormRangeProps } from '..';
 
-type IFormRangeWrapperProps = Partial<IFormRangeProps>;
+type IFormRangeWrapperProps = Partial<FormRangeProps>;
 
 describe('FormRange', () => {
   const FormRangeWrapper: React.FunctionComponent<IFormRangeWrapperProps> = (
     props: IFormRangeWrapperProps
-  ) => <FormRange id="range-id" max={100} min={1} {...props} />;
+  ): ReactElement<HTMLInputElement> => <FormRange id="range-id" max={100} min={1} {...props} />;
 
   it('renders without crashing', () => {
     ReactDOM.render(<FormRangeWrapper />, document.createElement('div'));

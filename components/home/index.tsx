@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ReactElement } from 'react';
 import { SiteData, ColorCombinationTypes } from '../../types';
 import Container from '../layouts/container';
 import Layout from '../layouts/layout';
@@ -14,7 +14,7 @@ export interface HomeProps {
 }
 
 class Home extends Component<HomeProps, {}> {
-  render() {
+  public render(): ReactElement<HTMLMainElement> {
     const siteData: SiteData = this.props.siteData;
     const colorInfo: Partial<ColorCombinationTypes> = siteData.colorCombos[0].combinations[0];
 
@@ -22,8 +22,8 @@ class Home extends Component<HomeProps, {}> {
       <Container variant="home">
         <Layout variant="small">
           <Results
-            accessibility={colorInfo.accessibility!}
-            contrast={colorInfo.contrast!}
+            accessibility={colorInfo.accessibility}
+            contrast={colorInfo.contrast}
             isLight={siteData.isLight}
           />
         </Layout>

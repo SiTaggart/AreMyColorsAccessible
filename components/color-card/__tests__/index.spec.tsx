@@ -3,11 +3,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount, ReactWrapper } from 'enzyme';
-import ColorCard, { IColorCardProps } from '..';
+import ColorCard, { ColorCardProps } from '..';
 import renderer from 'react-test-renderer';
 
 describe('ColorCard', () => {
-  const mockProps: IColorCardProps = {
+  const mockProps: ColorCardProps = {
     accessibility: {
       aa: true,
       aaLarge: true,
@@ -35,7 +35,7 @@ describe('ColorCard', () => {
   });
 
   it('should set the colorCard--nope class when overall rating is "Nope"', () => {
-    const failingProps: IColorCardProps = {
+    const failingProps: ColorCardProps = {
       ...mockProps,
       accessibility: {
         aa: false,

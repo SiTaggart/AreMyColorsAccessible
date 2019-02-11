@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import HslSlider from '../hsl-slider';
-import FormLabel from '../form-label';
-import FormInput from '../form-input';
-import FormControl from '../form-control';
+import React, { Component, ReactElement } from 'react';
 import Form from '../form';
+import FormControl from '../form-control';
+import FormInput from '../form-input';
+import FormLabel from '../form-label';
+import HslSlider from '../hsl-slider';
 import { ColorCombosTypes } from '../../types';
 
 export interface ColorInputsProps {
   background: string;
-  colorCombos: Array<ColorCombosTypes>;
+  colorCombos: ColorCombosTypes[];
   isLight: boolean;
   handleBackgroundColorInputChange: (value: string) => void;
   handleBackgroundColorSliderChange: (hex: string) => void;
@@ -18,7 +18,7 @@ export interface ColorInputsProps {
 }
 
 class ColorInputs extends Component<ColorInputsProps, {}> {
-  render() {
+  public render(): ReactElement<HTMLFormElement> {
     const { textColor, background, colorCombos } = this.props;
     const formTextColor = this.props.isLight ? '#343334' : '#fff';
     const styles = {

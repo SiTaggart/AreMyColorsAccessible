@@ -65,9 +65,7 @@ jobs:
             - ~/.npm
             - ~/.cache
       - run:
-          command: npm run build
-      - run:
-          command: npm start
+          command: npm run dev
           background: true
       - run: npm run cypress:run
 

@@ -1,17 +1,17 @@
 /* eslint-env jest */
 
-import React from 'react';
+import React, { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { mount, ReactWrapper } from 'enzyme';
-import FormInput, { IFormInputProps } from '..';
+import FormInput, { FormInputProps } from '..';
 
-type IFormInputWrapperProps = Partial<IFormInputProps>;
+type FormInputWrapperProps = Partial<FormInputProps>;
 
 describe('FormInput', () => {
-  const FormInputWrapper: React.FunctionComponent<IFormInputWrapperProps> = (
-    props: IFormInputWrapperProps
-  ) => <FormInput id="form-id" {...props} />;
+  const FormInputWrapper: React.FunctionComponent<FormInputWrapperProps> = (
+    props: FormInputWrapperProps
+  ): ReactElement<HTMLDivElement> => <FormInput id="form-id" {...props} />;
 
   it('renders without crashing', () => {
     ReactDOM.render(<FormInputWrapper />, document.createElement('div'));

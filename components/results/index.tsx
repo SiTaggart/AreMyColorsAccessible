@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { ColorCombinationTypes } from '../../types';
+import React, { Component, ReactElement } from 'react';
+import { ColorCombinationTypes, Levels } from '../../types';
 import colorRating from '../../utils/color-rating';
 import './results.scss';
 
@@ -8,7 +8,7 @@ interface ResultsProps extends ColorCombinationTypes {
 }
 
 class Results extends Component<ResultsProps, {}> {
-  renderAreYouSerious() {
+  private renderAreYouSerious(): ReactElement<HTMLDivElement> {
     let styles = {
       seriouslyContainer: {
         color: this.props.isLight ? '#343334' : '#fff'
@@ -22,9 +22,18 @@ class Results extends Component<ResultsProps, {}> {
     );
   }
 
-  render() {
-    const ratio = parseFloat(this.props.contrast!.toFixed(2));
-    const colorRatings = colorRating(this.props.accessibility!);
+  public render(): ReactElement<HTMLDivElement> {
+    let contrast = 0;
+    if (this.props.contrast) contrast = this.props.contrast;
+    let accessibility: Levels = {
+      aa: false,
+      aaLarge: false,
+      aaa: false,
+      aaaLarge: false
+    };
+    if (this.props.accessibility) accessibility = this.props.accessibility;
+    const ratio = parseFloat(contrast.toFixed(2));
+    const colorRatings = colorRating(accessibility);
     let areYouSerious = null;
     let boldTextRating = colorRatings.bold;
     let largeTextRating = colorRatings.large;

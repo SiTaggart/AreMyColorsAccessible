@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import ClassNames from 'classnames';
 import { Levels } from '../../types';
 import colorRating from '../../utils/color-rating';
 import './color-card.scss';
 
-export interface IColorCardProps {
+export interface ColorCardProps {
   accessibility: Levels;
   background: string;
   color: string;
   contrast: number;
 }
 
-const ColorCard: React.FunctionComponent<IColorCardProps> = (props: IColorCardProps) => {
+const ColorCard: React.FunctionComponent<ColorCardProps> = (
+  props: ColorCardProps
+): ReactElement<HTMLDivElement> => {
   const rating = colorRating(props.accessibility);
 
   return (

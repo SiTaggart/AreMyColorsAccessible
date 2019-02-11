@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import classNames from 'classnames';
 import './form-input.scss';
 
-export interface IFormInputProps {
+export interface FormInputProps {
   ariaLabel?: string;
   defaultValue?: string;
   errorMessage?: string;
@@ -16,7 +16,9 @@ export interface IFormInputProps {
   value?: string;
 }
 
-const FormInput: React.FunctionComponent<IFormInputProps> = props => {
+const FormInput: React.FunctionComponent<FormInputProps> = (
+  props
+): ReactElement<HTMLInputElement> => {
   return (
     <>
       <input

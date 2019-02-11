@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import App, { Container } from 'next/app';
 import '../styles/index.scss';
 
 export default class MyApp extends App {
-  static async getInitialProps({ Component, ctx }: { Component: any; ctx: any }) {
+  public static async getInitialProps({
+    Component,
+    ctx
+  }: {
+    Component: any;
+    ctx: any;
+  }): Promise<{
+    pageProps: {};
+  }> {
     let pageProps = {};
 
     if (Component.getInitialProps) {
@@ -13,7 +21,7 @@ export default class MyApp extends App {
     return { pageProps };
   }
 
-  render() {
+  public render(): ReactElement<HTMLDivElement> {
     const { Component, pageProps } = this.props;
 
     return (

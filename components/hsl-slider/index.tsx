@@ -1,4 +1,4 @@
-import React, { Component, ReactNode } from 'react';
+import React, { Component, ReactNode, ReactElement } from 'react';
 import Color from 'color';
 import classNames from 'classnames';
 import './hsl-slider.scss';
@@ -28,7 +28,7 @@ interface Range {
 }
 
 interface HSLColorTypes extends Color {
-  color: Array<number>;
+  color: number[];
 }
 
 class HslSlider extends Component<HslSliderProps, {}> {
@@ -92,10 +92,18 @@ class HslSlider extends Component<HslSliderProps, {}> {
   };
 
   private roundHSLValues = (hsl: Partial<HSLColorTypes>): HSLColor => {
+    let hue = 0;
+    let saturation = 0;
+    let lightness = 0;
+    if (hsl.color) {
+      hue = hsl.color[0];
+      saturation = hsl.color[1];
+      lightness = hsl.color[2];
+    }
     return {
-      hue: Math.round(hsl.color![0]),
-      saturation: Math.round(hsl.color![1]),
-      lightness: Math.round(hsl.color![2])
+      hue: Math.round(hue),
+      saturation: Math.round(saturation),
+      lightness: Math.round(lightness)
     };
   };
 
@@ -108,10 +116,10 @@ class HslSlider extends Component<HslSliderProps, {}> {
     this.props.onChange(hex, this.props.id);
   };
 
-  render() {
+  public render(): ReactElement<HTMLDivElement> {
     const hslColorValue: HSLColor = this.convertToHSL(this.props.value);
 
-    const hslRanges: Array<Range> = [
+    const hslRanges: Range[] = [
       {
         label: 'Hue',
         min: 0,

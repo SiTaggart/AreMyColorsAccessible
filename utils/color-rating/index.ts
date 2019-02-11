@@ -1,22 +1,22 @@
-interface IAccessibility {
+interface Accessibility {
   aaa: boolean;
   aa: boolean;
   aaaLarge: boolean;
   aaLarge: boolean;
 }
 
-interface IColorRating {
+interface ColorRating {
   small: string;
   bold: string;
   large: string;
   overall: string;
 }
 
-const colorRating = (accessibility: IAccessibility): IColorRating => {
+const colorRating = (accessibility: Accessibility): ColorRating => {
   let small: string;
   let bold: string;
   let large: string;
-  let overall: string = 'Nope';
+  let overall = 'Nope';
 
   if (accessibility.aaa) {
     small = 'AAA';

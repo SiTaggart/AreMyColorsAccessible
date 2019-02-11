@@ -1,13 +1,13 @@
 /* eslint-env jest */
 
-import React from 'react';
+import React, { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, ShallowWrapper } from 'enzyme';
 import AppContainer from '..';
 import { HomeProps } from '../../../home'; // eslint-disable-line no-unused-vars
 
 describe('AppContainer', () => {
-  let ChildComponent: React.FunctionComponent<HomeProps> = () => {
+  let ChildComponent: React.FunctionComponent<HomeProps> = (): ReactElement<HTMLDivElement> => {
     return <div />;
   };
   let wrapper: ShallowWrapper;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ReactElement } from 'react';
 import ClassNames from 'classnames';
 import './container.scss';
 
@@ -8,7 +8,7 @@ interface ContainerProps {
 }
 
 class Container extends Component<ContainerProps, {}> {
-  render() {
+  public render(): ReactElement<HTMLMainElement> {
     return (
       <main
         className={ClassNames('container', {

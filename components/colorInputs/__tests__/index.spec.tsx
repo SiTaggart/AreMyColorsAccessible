@@ -9,7 +9,7 @@ import ColorCombos from '../../../utils/color-combos';
 import { ColorCombosTypes } from '../../../types';
 
 describe('ColorInputs', () => {
-  let colorCombos: Array<ColorCombosTypes> | false;
+  let colorCombos: ColorCombosTypes[] | false;
   let mockProps: ColorInputsProps;
   let handleBackgroundColorInputChange: jest.Mock;
   let handleBackgroundColorSliderChange: jest.Mock;

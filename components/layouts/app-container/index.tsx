@@ -1,4 +1,4 @@
-import React, { Component, ReactNode } from 'react';
+import React, { Component, ReactNode, ReactElement } from 'react';
 import Head from 'next/head';
 import { SiteData, ColorCombosTypes } from '../../../types';
 import debounce from 'lodash/debounce';
@@ -6,8 +6,8 @@ import isEmpty from 'lodash/isEmpty';
 import qs from 'query-string';
 import Color from 'color';
 import { HomeProps } from '../../home';
-import Footer from '../../footer';
 import ColorCombos from '../../../utils/color-combos';
+import Footer from '../../footer';
 
 interface AppContainerProps {
   children: (args: HomeProps) => ReactNode;
@@ -22,11 +22,11 @@ interface AppContainerState {
 }
 
 class AppContainer extends Component<AppContainerProps, AppContainerState> {
-  static defaultProps = {
+  public static defaultProps = {
     title: 'Are My Colours Accessible'
   };
 
-  constructor(props: AppContainerProps) {
+  private constructor(props: AppContainerProps) {
     super(props);
     const initialCombos: ColorCombosTypes[] | false = ColorCombos(['#FFFFFF', '#1276CE']);
     if (initialCombos) {
@@ -41,11 +41,11 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     }
   }
 
-  componentDidMount() {
+  public componentDidMount(): void {
     this.getQueryParams();
   }
 
-  checkBackgroundLightness = (hex: string) => {
+  private checkBackgroundLightness = (hex: string) => {
     let light;
 
     try {
@@ -57,7 +57,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     return light;
   };
 
-  getQueryParams = () => {
+  private getQueryParams = () => {
     if (isEmpty(window.location.search)) return;
     const query = qs.parse(window.location.search) as any;
     query.isLight = query.isLight === 'true';
@@ -68,7 +68,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     });
   };
 
-  handleBackgroundColorInputChange = (value: string) => {
+  public handleBackgroundColorInputChange = (value: string) => {
     this.setState({
       siteData: {
         ...this.state.siteData,
@@ -80,7 +80,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     }
   };
 
-  handleBackgroundColorSliderChange = (hex: string) => {
+  public handleBackgroundColorSliderChange = (hex: string) => {
     const newCombos: ColorCombosTypes[] | false = ColorCombos([
       this.state.siteData.colorCombos[0].hex,
       hex
@@ -100,7 +100,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     }
   };
 
-  handleTextColorInputChange = (value: string) => {
+  public handleTextColorInputChange = (value: string) => {
     this.setState({
       siteData: {
         ...this.state.siteData,
@@ -112,7 +112,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     }
   };
 
-  handleTextColorSliderChange = (hex: string) => {
+  public handleTextColorSliderChange = (hex: string) => {
     const newCombos: ColorCombosTypes[] | false = ColorCombos([
       hex,
       this.state.siteData.colorCombos[1].hex
@@ -131,7 +131,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     }
   };
 
-  isValidColor = (value: string): Color | false => {
+  private isValidColor = (value: string): Color | false => {
     let color: Color | false = false;
     try {
       color = Color(value);
@@ -141,7 +141,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     return color;
   };
 
-  setNewColorCombo = (textColor: string, backgroundColor: string) => {
+  private setNewColorCombo = (textColor: string, backgroundColor: string) => {
     const newCombos: ColorCombosTypes[] | false = ColorCombos([textColor, backgroundColor]);
     if (newCombos) {
       this.setState(
@@ -159,12 +159,12 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     }
   };
 
-  updateHash = () => {
+  public updateHash = () => {
     const query = '?' + qs.stringify(this.state.siteData);
     window.history.pushState(this.state, 'Are My Colors Accessible', query);
   };
 
-  render() {
+  public render(): ReactElement<HTMLDivElement> {
     const styles = {
       footerLinks: {
         color: this.state.siteData.isLight ? '#343334' : '#fff'

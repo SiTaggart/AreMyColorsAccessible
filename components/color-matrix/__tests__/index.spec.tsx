@@ -4,13 +4,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount, ReactWrapper } from 'enzyme';
 import renderer from 'react-test-renderer';
-import ColorMatrix, { IColorMatrixProps } from '..';
+import ColorMatrix, { ColorMatrixProps } from '..';
 import ColorCombos from '../../../utils/color-combos';
 
 describe('ColorMatrix', () => {
   const onColorChangeMock: jest.Mock = jest.fn();
   const mockColorColorCombos = ColorCombos(['#fff', '#ccc', '#777', '#000']);
-  let mockProps: IColorMatrixProps;
+  let mockProps: ColorMatrixProps;
   let wrapper: ReactWrapper;
 
   if (mockColorColorCombos !== false) {
