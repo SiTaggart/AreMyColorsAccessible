@@ -1,5 +1,11 @@
 {
   "version": 2,
+  "alias": [
+    "aremycoloursaccessible.com",
+    "www.aremycoloursaccessible.com",
+    "aremycolorsaccessible.com",
+    "www.aremycolorsaccessible.com"
+  ],
   "builds": [
     {
       "src": "next.config.js",
