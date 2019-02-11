@@ -71,7 +71,8 @@ class About extends Component<{}, {}> {
           <p>Accessibility doesn&rsquo;t have to be ugly.</p>
           <p>
             Built by <a href="http://www.simontaggart.com">Simon Taggart</a>,{' '}
-            <a href="https://github.com/SiTaggart/AreMyColorsAccessible">code on GitHub</a>.
+            <a href="https://github.com/SiTaggart/AreMyColorsAccessible">code on GitHub</a>,{' '}
+            <a href="https://zeit.co/now">hosted on Now</a>.
           </p>
         </Layout>
       </Container>
