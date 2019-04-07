@@ -52,7 +52,7 @@
     "node-sass": "4.11.0",
     "normalize.css": "8.0.1",
     "prop-types": "15.6.2",
-    "query-string": "6.2.0",
+    "query-string": "6.4.2",
     "react": "16.7.0",
     "react-dom": "16.7.0"
   },
@@ -78,7 +78,7 @@
     "@types/jest": "23.3.14",
     "@types/next": "7.0.9",
     "@types/node": "10.14.4",
-    "@types/query-string": "6.1.1",
+    "@types/query-string": "6.2.0",
     "@types/react": "16.8.12",
     "@types/react-dom": "16.8.3",
     "@types/react-test-renderer": "16.0.3",
