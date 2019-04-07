@@ -83,8 +83,8 @@ class HslSlider extends Component<HslSliderProps, {}> {
           id={id}
           max={range.max}
           min={range.min}
-          onChange={e => range.handleOnChange(e)}
-          onInput={e => range.handleOnChange(e)}
+          onChange={(e): void => range.handleOnChange(e)}
+          onInput={(e): void => range.handleOnChange(e)}
           value={range.value}
         />
       </div>
@@ -107,7 +107,7 @@ class HslSlider extends Component<HslSliderProps, {}> {
     };
   };
 
-  private updateColor = (color: HSLColor) => {
+  private updateColor = (color: HSLColor): void => {
     const hex = Color({
       h: color.hue,
       s: color.saturation,

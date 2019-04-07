@@ -37,7 +37,7 @@ class ColorInputs extends Component<ColorInputsProps, {}> {
           <FormLabel htmlFor="textColor">Text Color</FormLabel>
           <FormInput
             id="textColor"
-            onChange={e => this.props.handleTextColorInputChange(e.target.value)}
+            onChange={(e): void => this.props.handleTextColorInputChange(e.target.value)}
             style={styles.input}
             value={textColor}
           />
@@ -51,7 +51,7 @@ class ColorInputs extends Component<ColorInputsProps, {}> {
           <FormLabel htmlFor="background">Background</FormLabel>
           <FormInput
             id="background"
-            onChange={e => this.props.handleBackgroundColorInputChange(e.target.value)}
+            onChange={(e): void => this.props.handleBackgroundColorInputChange(e.target.value)}
             style={styles.input}
             value={background}
           />

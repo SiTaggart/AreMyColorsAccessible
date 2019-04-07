@@ -7,7 +7,7 @@ import renderer from 'react-test-renderer';
 import ColorMatrix, { ColorMatrixProps } from '..';
 import ColorCombos from '../../../utils/color-combos';
 
-describe('ColorMatrix', () => {
+describe('ColorMatrix', (): void => {
   const onColorChangeMock: jest.Mock = jest.fn();
   const mockColorColorCombos = ColorCombos(['#fff', '#ccc', '#777', '#000']);
   let mockProps: ColorMatrixProps;
@@ -21,13 +21,13 @@ describe('ColorMatrix', () => {
     };
   }
 
-  it('renders without crashing', () => {
+  it('renders without crashing', (): void => {
     ReactDOM.render(<ColorMatrix {...mockProps} />, document.createElement('div'));
     const colorCard = renderer.create(<ColorMatrix {...mockProps} />).toJSON();
     expect(colorCard).toMatchSnapshot();
   });
 
-  it('should call the onColorChange method when a color is changed in an input', () => {
+  it('should call the onColorChange method when a color is changed in an input', (): void => {
     wrapper = mount(<ColorMatrix {...mockProps} />);
     wrapper
       .find('#colorhex-0')
@@ -36,7 +36,7 @@ describe('ColorMatrix', () => {
     expect(onColorChangeMock).toBeCalledWith('#ccc', 0);
   });
 
-  it('should call the onColorChange method when a color is changed in on a slider', () => {
+  it('should call the onColorChange method when a color is changed in on a slider', (): void => {
     wrapper = mount(<ColorMatrix {...mockProps} />);
     wrapper
       .find('#hsl-0-Lightness')

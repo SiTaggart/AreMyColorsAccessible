@@ -23,13 +23,15 @@ class Palette extends React.Component<{}, PaletteState> {
     let isValidColor = true;
     const colorTypes: Color[] = [];
 
-    colorStrings.forEach((color: string) => {
-      try {
-        colorTypes.push(Color(color));
-      } catch (error) {
-        isValidColor = false;
+    colorStrings.forEach(
+      (color: string): void => {
+        try {
+          colorTypes.push(Color(color));
+        } catch (error) {
+          isValidColor = false;
+        }
       }
-    });
+    );
 
     if (isValidColor) {
       return colorTypes;
@@ -40,17 +42,19 @@ class Palette extends React.Component<{}, PaletteState> {
 
   private convertColorValuesToArray = (colors: string): string[] => {
     const colorsArr: string[] = colors.split(/[ ,]+/).filter(Boolean);
-    const dedupedColors = colorsArr.filter((color, index, self) => self.indexOf(color) === index);
+    const dedupedColors = colorsArr.filter(
+      (color, index, self): boolean => self.indexOf(color) === index
+    );
     return dedupedColors;
   };
 
-  private handleColorChange = (value: string, index: number) => {
+  private handleColorChange = (value: string, index: number): void => {
     const newColors: string[] = [...this.state.colors];
     newColors[index] = value;
     this.updateColors(newColors, !!this.isValidColor(value));
   };
 
-  private handleNewColor = (colors: string) => {
+  private handleNewColor = (colors: string): void => {
     const colorsArray: string[] = this.convertColorValuesToArray(colors);
     const convertedColors: Color[] | false = this.convertColorStringsToColors(colorsArray);
     const mergedColors: string[] = this.mergeColorsWithState(colorsArray);
@@ -62,7 +66,7 @@ class Palette extends React.Component<{}, PaletteState> {
     }
   };
 
-  private isValidColor = (hex: string) => {
+  private isValidColor = (hex: string): Color | false => {
     let color: Color | false = false;
     try {
       color = Color(hex);
@@ -72,12 +76,12 @@ class Palette extends React.Component<{}, PaletteState> {
 
   private mergeColorsWithState = (colors: string[]): string[] => {
     const filteredColors: string[] = colors.filter(
-      color => (this.state.colors as string[]).indexOf(color) < 0
+      (color): boolean => (this.state.colors as string[]).indexOf(color) < 0
     );
     return [...this.state.colors, ...filteredColors];
   };
 
-  private updateColors = (colors: string[], isValidColor: boolean) => {
+  private updateColors = (colors: string[], isValidColor: boolean): void => {
     this.setState({
       colors,
       colorCombos: isValidColor ? ColorCombos(colors) : this.state.colorCombos,

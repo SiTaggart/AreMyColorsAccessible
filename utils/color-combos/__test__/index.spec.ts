@@ -2,7 +2,7 @@
 
 import ColorCombos from '..';
 
-describe('ColorCombos', () => {
+describe('ColorCombos', (): void => {
   const mockColorArray = ['white', 'red'];
   const mockColorObject = {
     white: 'white',
@@ -13,7 +13,7 @@ describe('ColorCombos', () => {
   const mockRGBa = ['rgb(255,255,255)', 'rgba(0,25,255, 0.4)'];
   const mockHSL = ['hsl(134,90%, 76%)', 'hsl(4,90%, 40%)'];
 
-  it('should return some color combos from an array of colors ', () => {
+  it('should return some color combos from an array of colors ', (): void => {
     expect(ColorCombos(mockColorArray)).toEqual([
       {
         color: [255, 255, 255],
@@ -55,7 +55,7 @@ describe('ColorCombos', () => {
     ]);
   });
 
-  it('should return some color combos from an object of colors ', () => {
+  it('should return some color combos from an object of colors ', (): void => {
     expect(ColorCombos(mockColorObject)).toEqual([
       {
         color: [255, 255, 255],
@@ -97,7 +97,7 @@ describe('ColorCombos', () => {
     ]);
   });
 
-  it('should return a compact combo when passed compact', () => {
+  it('should return a compact combo when passed compact', (): void => {
     expect(ColorCombos(mockColorArray, { compact: true })).toEqual([
       {
         combinations: [
@@ -122,7 +122,7 @@ describe('ColorCombos', () => {
     ]);
   });
 
-  it('should filter out dupes', () => {
+  it('should filter out dupes', (): void => {
     expect(ColorCombos(['white', 'red', 'white'], { compact: true })).toEqual([
       {
         combinations: [
@@ -147,7 +147,7 @@ describe('ColorCombos', () => {
     ]);
   });
 
-  it('should not filter out dupes when passed uniq false', () => {
+  it('should not filter out dupes when passed uniq false', (): void => {
     expect(ColorCombos(['white', 'red', 'white'], { compact: true, uniq: false })).toEqual([
       {
         combinations: [
@@ -197,7 +197,7 @@ describe('ColorCombos', () => {
     ]);
   });
 
-  it('should only return combonations that meet a contrast threshold', () => {
+  it('should only return combonations that meet a contrast threshold', (): void => {
     expect(ColorCombos(mockThresholdColors, { compact: true, threshold: 3.5 })).toEqual([
       {
         combinations: [
@@ -224,7 +224,7 @@ describe('ColorCombos', () => {
     ]);
   });
 
-  it('should work with rgb values', () => {
+  it('should work with rgb values', (): void => {
     expect(ColorCombos(mockRGB, { compact: true })).toEqual([
       {
         combinations: [
@@ -249,7 +249,7 @@ describe('ColorCombos', () => {
     ]);
   });
 
-  it('should work with rgba values', () => {
+  it('should work with rgba values', (): void => {
     expect(ColorCombos(mockRGBa, { compact: true })).toEqual([
       {
         combinations: [
@@ -274,7 +274,7 @@ describe('ColorCombos', () => {
     ]);
   });
 
-  it('should work with hsl values', () => {
+  it('should work with hsl values', (): void => {
     expect(ColorCombos(mockHSL, { compact: true })).toEqual([
       {
         combinations: [

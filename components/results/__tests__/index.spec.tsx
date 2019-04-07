@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import Results from '..';
 
-describe('About', () => {
-  it('renders without crashing', () => {
+describe('About', (): void => {
+  it('renders without crashing', (): void => {
     ReactDOM.render(
       <Results
         accessibility={{ aa: true, aaa: true, aaLarge: true, aaaLarge: true }}
@@ -17,7 +17,7 @@ describe('About', () => {
     );
   });
 
-  it('should render a triple a result correctly', () => {
+  it('should render a triple a result correctly', (): void => {
     const wrapper = shallow(
       <Results
         accessibility={{ aa: true, aaa: true, aaLarge: true, aaaLarge: true }}
@@ -45,7 +45,7 @@ describe('About', () => {
     );
   });
 
-  it('should render a large text triple a result correctly', () => {
+  it('should render a large text triple a result correctly', (): void => {
     const wrapper = shallow(
       <Results
         accessibility={{ aa: true, aaa: false, aaLarge: true, aaaLarge: true }}
@@ -73,7 +73,7 @@ describe('About', () => {
     );
   });
 
-  it('should render a large text double a result correctly', () => {
+  it('should render a large text double a result correctly', (): void => {
     const wrapper = shallow(
       <Results
         accessibility={{ aa: false, aaa: false, aaLarge: true, aaaLarge: false }}
@@ -101,7 +101,7 @@ describe('About', () => {
     );
   });
 
-  it('should render a nope a result correctly', () => {
+  it('should render a nope a result correctly', (): void => {
     const wrapper = shallow(
       <Results
         accessibility={{ aa: false, aaa: false, aaLarge: false, aaaLarge: false }}
@@ -129,7 +129,7 @@ describe('About', () => {
     );
   });
 
-  it('should render a seriously? a result correctly', () => {
+  it('should render a seriously? a result correctly', (): void => {
     const wrapper = shallow(
       <Results
         accessibility={{ aa: false, aaa: false, aaLarge: false, aaaLarge: false }}
@@ -143,7 +143,7 @@ describe('About', () => {
     );
   });
 
-  it('should set the font color of seriously? to #343334 on light backgrounds', () => {
+  it('should set the font color of seriously? to #343334 on light backgrounds', (): void => {
     const wrapper = shallow(
       <Results
         accessibility={{ aa: false, aaa: false, aaLarge: false, aaaLarge: false }}

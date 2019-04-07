@@ -45,7 +45,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     this.getQueryParams();
   }
 
-  private checkBackgroundLightness = (hex: string) => {
+  private checkBackgroundLightness = (hex: string): boolean => {
     let light;
 
     try {
@@ -57,7 +57,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     return light;
   };
 
-  private getQueryParams = () => {
+  private getQueryParams = (): void => {
     if (isEmpty(window.location.search)) return;
     const query = qs.parse(window.location.search) as any;
     query.isLight = query.isLight === 'true';
@@ -68,7 +68,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     });
   };
 
-  public handleBackgroundColorInputChange = (value: string) => {
+  public handleBackgroundColorInputChange = (value: string): void => {
     this.setState({
       siteData: {
         ...this.state.siteData,
@@ -80,7 +80,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     }
   };
 
-  public handleBackgroundColorSliderChange = (hex: string) => {
+  public handleBackgroundColorSliderChange = (hex: string): void => {
     const newCombos: ColorCombosTypes[] | false = ColorCombos([
       this.state.siteData.colorCombos[0].hex,
       hex
@@ -100,7 +100,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     }
   };
 
-  public handleTextColorInputChange = (value: string) => {
+  public handleTextColorInputChange = (value: string): void => {
     this.setState({
       siteData: {
         ...this.state.siteData,
@@ -112,7 +112,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     }
   };
 
-  public handleTextColorSliderChange = (hex: string) => {
+  public handleTextColorSliderChange = (hex: string): void => {
     const newCombos: ColorCombosTypes[] | false = ColorCombos([
       hex,
       this.state.siteData.colorCombos[1].hex
@@ -141,7 +141,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     return color;
   };
 
-  private setNewColorCombo = (textColor: string, backgroundColor: string) => {
+  private setNewColorCombo = (textColor: string, backgroundColor: string): void => {
     const newCombos: ColorCombosTypes[] | false = ColorCombos([textColor, backgroundColor]);
     if (newCombos) {
       this.setState(
@@ -159,7 +159,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     }
   };
 
-  public updateHash = () => {
+  public updateHash = (): void => {
     const query = '?' + qs.stringify(this.state.siteData);
     window.history.pushState(this.state, 'Are My Colors Accessible', query);
   };
