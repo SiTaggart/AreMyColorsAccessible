@@ -6,7 +6,7 @@ import { mount, ReactWrapper } from 'enzyme';
 import ColorCard, { ColorCardProps } from '..';
 import renderer from 'react-test-renderer';
 
-describe('ColorCard', () => {
+describe('ColorCard', (): void => {
   const mockProps: ColorCardProps = {
     accessibility: {
       aa: true,
@@ -19,13 +19,13 @@ describe('ColorCard', () => {
     contrast: 21
   };
 
-  it('renders without crashing', () => {
+  it('renders without crashing', (): void => {
     ReactDOM.render(<ColorCard {...mockProps} />, document.createElement('div'));
     const colorCard = renderer.create(<ColorCard {...mockProps} />).toJSON();
     expect(colorCard).toMatchSnapshot();
   });
 
-  it('should set the style prop on the color swatch div', () => {
+  it('should set the style prop on the color swatch div', (): void => {
     let wrapper: ReactWrapper = mount(<ColorCard {...mockProps} />);
     expect(wrapper.find('.colorCard-swatch').prop('style')).toHaveProperty(
       'backgroundColor',
@@ -34,7 +34,7 @@ describe('ColorCard', () => {
     expect(wrapper.find('.colorCard-swatch').prop('style')).toHaveProperty('color', '#000');
   });
 
-  it('should set the colorCard--nope class when overall rating is "Nope"', () => {
+  it('should set the colorCard--nope class when overall rating is "Nope"', (): void => {
     const failingProps: ColorCardProps = {
       ...mockProps,
       accessibility: {

@@ -17,7 +17,7 @@ export interface FormInputProps {
 }
 
 const FormInput: React.FunctionComponent<FormInputProps> = (
-  props
+  props: FormInputProps
 ): ReactElement<HTMLInputElement> => {
   return (
     <>

@@ -49,39 +49,43 @@ const ColorCombos = (
       colors = [...new Set(colors)];
     }
 
-    arr = colors.map(color => Color(color));
+    arr = colors.map((color): Color => Color(color));
   }
 
-  results = arr.map(color => {
-    let result: ColorCombosTypes = combinedOptions.compact ? {} : Object.assign({}, color as any);
+  results = arr.map(
+    (color): ColorCombosTypes => {
+      let result: ColorCombosTypes = combinedOptions.compact ? {} : Object.assign({}, color as any);
 
-    result.hex = color.hex();
+      result.hex = color.hex();
 
-    result.combinations = arr
-      .filter(bg => color !== bg)
-      .filter(bg => color.contrast(bg) > combinedOptions.threshold!)
-      .map(bg => {
-        let combination: ColorCombinationTypes = combinedOptions.compact
-          ? {}
-          : Object.assign({}, bg as any);
+      result.combinations = arr
+        .filter((bg): boolean => color !== bg)
+        .filter((bg): boolean => color.contrast(bg) > combinedOptions.threshold!)
+        .map(
+          (bg): ColorCombinationTypes => {
+            let combination: ColorCombinationTypes = combinedOptions.compact
+              ? {}
+              : Object.assign({}, bg as any);
 
-        combination = Object.assign(combination, {
-          hex: bg.hex(),
-          contrast: color.contrast(bg)
-        });
+            combination = Object.assign(combination, {
+              hex: bg.hex(),
+              contrast: color.contrast(bg)
+            });
 
-        combination.accessibility = {
-          aa: combination.contrast! >= MINIMUMS.aa,
-          aaLarge: combination.contrast! >= MINIMUMS.aaLarge,
-          aaa: combination.contrast! >= MINIMUMS.aaa,
-          aaaLarge: combination.contrast! >= MINIMUMS.aaaLarge
-        };
+            combination.accessibility = {
+              aa: combination.contrast! >= MINIMUMS.aa,
+              aaLarge: combination.contrast! >= MINIMUMS.aaLarge,
+              aaa: combination.contrast! >= MINIMUMS.aaa,
+              aaaLarge: combination.contrast! >= MINIMUMS.aaaLarge
+            };
 
-        return combination;
-      });
+            return combination;
+          }
+        );
 
-    return result;
-  });
+      return result;
+    }
+  );
 
   return results;
 };

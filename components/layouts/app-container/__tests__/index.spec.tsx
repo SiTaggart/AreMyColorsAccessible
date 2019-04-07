@@ -6,39 +6,43 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import AppContainer from '..';
 import { HomeProps } from '../../../home'; // eslint-disable-line no-unused-vars
 
-describe('AppContainer', () => {
+describe('AppContainer', (): void => {
   let ChildComponent: React.FunctionComponent<HomeProps> = (): ReactElement<HTMLDivElement> => {
     return <div />;
   };
   let wrapper: ShallowWrapper;
   let instance: AppContainer;
 
-  beforeAll(() => {
-    ChildComponent = function ChildComponent() {
-      return <div />;
-    };
-  });
+  beforeAll(
+    (): void => {
+      ChildComponent = function ChildComponent(): JSX.Element {
+        return <div />;
+      };
+    }
+  );
 
-  beforeEach(() => {
-    wrapper = shallow(
-      <AppContainer title="are my colors accessible">
-        {props => <ChildComponent {...props} />}
-      </AppContainer>
-    );
+  beforeEach(
+    (): void => {
+      wrapper = shallow(
+        <AppContainer title="are my colors accessible">
+          {(props): ReactElement => <ChildComponent {...props} />}
+        </AppContainer>
+      );
 
-    instance = wrapper.instance() as AppContainer;
-  });
+      instance = wrapper.instance() as AppContainer;
+    }
+  );
 
-  it('renders without crashing', () => {
+  it('renders without crashing', (): void => {
     ReactDOM.render(
       <AppContainer title="are my colors accessible">
-        {props => <ChildComponent {...props} />}
+        {(props): ReactElement => <ChildComponent {...props} />}
       </AppContainer>,
       document.createElement('div')
     );
   });
 
-  it('should clone children with props', () => {
+  it('should clone children with props', (): void => {
     expect(wrapper.find('ChildComponent').getElement().props.siteData).toEqual({
       background: '#1276CE',
       colorCombos: [
@@ -92,7 +96,7 @@ describe('AppContainer', () => {
     ).toBe('function');
   });
 
-  it('should set state with queryParams', () => {
+  it('should set state with queryParams', (): void => {
     window.history.pushState(
       {},
       'Test Title',
@@ -100,7 +104,7 @@ describe('AppContainer', () => {
     );
     const newwrapper = shallow(
       <AppContainer title="are my colors accessible">
-        {props => <ChildComponent {...props} />}
+        {(props): ReactElement => <ChildComponent {...props} />}
       </AppContainer>
     );
     expect(newwrapper.instance().state).toEqual({
@@ -146,42 +150,42 @@ describe('AppContainer', () => {
     });
   });
 
-  it('should update state when handleBackgroundColorInputChange is called with a hex', () => {
+  it('should update state when handleBackgroundColorInputChange is called with a hex', (): void => {
     instance.handleBackgroundColorInputChange('#000');
     expect(instance.state.siteData.background).toEqual('#000');
     expect(instance.state.siteData.colorCombos[1].hex).toEqual('#000000');
   });
 
-  it('should not update colorCombos on state when handleBackgroundColorInputChange is called with a non-valid color', () => {
+  it('should not update colorCombos on state when handleBackgroundColorInputChange is called with a non-valid color', (): void => {
     instance.handleBackgroundColorInputChange('tase848ncdnje9k');
     expect(instance.state.siteData.background).toEqual('tase848ncdnje9k');
     expect(instance.state.siteData.colorCombos[1].hex).toEqual('#5E38A8');
   });
 
-  it('should update state with isLight when handleBackgroundColorInputChange is called with a light color', () => {
+  it('should update state with isLight when handleBackgroundColorInputChange is called with a light color', (): void => {
     instance.handleBackgroundColorInputChange('#ccc');
     expect(instance.state.siteData.isLight).toEqual(true);
   });
 
-  it('should update state when handleBackgroundColorSliderChange is called with a hex', () => {
+  it('should update state when handleBackgroundColorSliderChange is called with a hex', (): void => {
     instance.handleBackgroundColorSliderChange('#eee');
     expect(instance.state.siteData.background).toEqual('#eee');
     expect(instance.state.siteData.colorCombos[1].hex).toEqual('#EEEEEE');
   });
 
-  it('should update state when handleTextColorInputChange is called with a hex', () => {
+  it('should update state when handleTextColorInputChange is called with a hex', (): void => {
     instance.handleTextColorInputChange('#fefefe');
     expect(instance.state.siteData.textColor).toEqual('#fefefe');
     expect(instance.state.siteData.colorCombos[0].hex).toEqual('#FEFEFE');
   });
 
-  it('should update state when handleTextColorSliderChange is called with a hex', () => {
+  it('should update state when handleTextColorSliderChange is called with a hex', (): void => {
     instance.handleTextColorSliderChange('#333');
     expect(instance.state.siteData.textColor).toEqual('#333');
     expect(instance.state.siteData.colorCombos[0].hex).toEqual('#333333');
   });
 
-  it('should update the url with the state when updateHash is called', () => {
+  it('should update the url with the state when updateHash is called', (): void => {
     instance.handleBackgroundColorInputChange('#777');
     instance.handleTextColorInputChange('#ddd');
     instance.updateHash();

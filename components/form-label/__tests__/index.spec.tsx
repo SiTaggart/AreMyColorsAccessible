@@ -6,8 +6,8 @@ import renderer from 'react-test-renderer';
 import { mount, ReactWrapper } from 'enzyme';
 import FormLabel from '..';
 
-describe('FormLabel', () => {
-  it('renders without crashing', () => {
+describe('FormLabel', (): void => {
+  it('renders without crashing', (): void => {
     ReactDOM.render(
       <FormLabel htmlFor="input-id">children</FormLabel>,
       document.createElement('div')
@@ -18,7 +18,7 @@ describe('FormLabel', () => {
     expect(formLabelCmp).toMatchSnapshot();
   });
 
-  it('should set create a large label style with isLarge', () => {
+  it('should set create a large label style with isLarge', (): void => {
     const wrapper: ReactWrapper = mount(
       <FormLabel htmlFor="input-id" isLarge>
         children

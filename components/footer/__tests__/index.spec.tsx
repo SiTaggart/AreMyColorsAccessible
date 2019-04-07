@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import Footer from '..';
 
-xdescribe('Footer', () => {
+xdescribe('Footer', (): void => {
   const mockProps = {
     styles: {
       footerLinks: {
@@ -14,7 +14,7 @@ xdescribe('Footer', () => {
     }
   };
 
-  it('renders without crashing', () => {
+  it('renders without crashing', (): void => {
     ReactDOM.render(<Footer {...mockProps} />, document.createElement('div'));
     const footerComp = renderer.create(<Footer {...mockProps} />).toJSON();
     expect(footerComp).toMatchSnapshot();

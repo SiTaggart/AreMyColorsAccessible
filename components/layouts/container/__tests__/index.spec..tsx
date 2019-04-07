@@ -6,8 +6,8 @@ import renderer from 'react-test-renderer';
 import { mount, ReactWrapper } from 'enzyme';
 import Container from '..';
 
-describe('Container', () => {
-  it('renders without crashing', () => {
+describe('Container', (): void => {
+  it('renders without crashing', (): void => {
     ReactDOM.render(
       <Container>
         <div>children</div>
@@ -24,7 +24,7 @@ describe('Container', () => {
     expect(containerCmp).toMatchSnapshot();
   });
 
-  it('should set home class with home variant', () => {
+  it('should set home class with home variant', (): void => {
     const wrapper: ReactWrapper = mount(
       <Container variant="home">
         <div>children</div>
@@ -33,7 +33,7 @@ describe('Container', () => {
     expect(wrapper.find('.container').hasClass('container--home')).toEqual(true);
   });
 
-  it('should set about class with about variant', () => {
+  it('should set about class with about variant', (): void => {
     const wrapper: ReactWrapper = mount(
       <Container variant="about">
         <div>children</div>
@@ -42,7 +42,7 @@ describe('Container', () => {
     expect(wrapper.find('.container').hasClass('container--about')).toEqual(true);
   });
 
-  it('should set palette class with palette variant', () => {
+  it('should set palette class with palette variant', (): void => {
     const wrapper: ReactWrapper = mount(
       <Container variant="palette">
         <div>children</div>

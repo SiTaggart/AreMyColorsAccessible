@@ -6,8 +6,8 @@ import renderer from 'react-test-renderer';
 import { mount, ReactWrapper } from 'enzyme';
 import Layout from '..';
 
-describe('Layout', () => {
-  it('renders without crashing', () => {
+describe('Layout', (): void => {
+  it('renders without crashing', (): void => {
     ReactDOM.render(
       <Layout>
         <div>children</div>
@@ -24,7 +24,7 @@ describe('Layout', () => {
     expect(layoutCmp).toMatchSnapshot();
   });
 
-  it('should set full class with full variant', () => {
+  it('should set full class with full variant', (): void => {
     const wrapper: ReactWrapper = mount(
       <Layout variant="full">
         <div>children</div>
@@ -33,7 +33,7 @@ describe('Layout', () => {
     expect(wrapper.find('.layout').hasClass('layout--full')).toEqual(true);
   });
 
-  it('should set large class with large variant', () => {
+  it('should set large class with large variant', (): void => {
     const wrapper: ReactWrapper = mount(
       <Layout variant="large">
         <div>children</div>
@@ -42,7 +42,7 @@ describe('Layout', () => {
     expect(wrapper.find('.layout').hasClass('layout--large')).toEqual(true);
   });
 
-  it('should set small class with small variant', () => {
+  it('should set small class with small variant', (): void => {
     const wrapper: ReactWrapper = mount(
       <Layout variant="small">
         <div>children</div>
