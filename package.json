@@ -2,7 +2,7 @@
   "name": "aremycolorsaccessible",
   "version": "1.3.0",
   "engines": {
-    "node": "11.x.x"
+    "node": "11.14.x"
   },
   "scripts": {
     "now-build": "next build",
