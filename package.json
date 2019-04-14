@@ -2,20 +2,20 @@
   "name": "aremycolorsaccessible",
   "version": "1.3.0",
   "engines": {
-    "node": "9.11.x"
+    "node": "11.7.x"
   },
   "scripts": {
     "now-build": "next build",
     "build": "next build",
     "dev": "next",
-    "analyze_bundle": "BUNDLE_ANALYZE=both npm run build",
-    "analyze_bundle:browser": "BUNDLE_ANALYZE=browser npm run build",
-    "analyze_bundle:server": "BUNDLE_ANALYZE=server npm run build",
+    "analyze_bundle": "BUNDLE_ANALYZE=both yarn build",
+    "analyze_bundle:browser": "BUNDLE_ANALYZE=browser yarn build",
+    "analyze_bundle:server": "BUNDLE_ANALYZE=server yarn build",
     "precommit": "lint-staged",
     "jest": "NODE_ENV=test jest",
     "lint": "eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0 --format codeframe",
-    "test": "npm run lint && NODE_ENV=test jest",
-    "cypress:open": "npm run dev & cypress open",
+    "test": "yarn lint && NODE_ENV=test jest",
+    "cypress:open": "yarn dev & cypress open",
     "cypress:run": "cypress run",
     "tsc": "tsc",
     "gen": "plop --plopfile generators/plopfile.js",

@@ -14,14 +14,14 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      - run: npm ci
+      - run: yarn
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       # run tests!
-      - run: npm run lint
-      - run: npm run tsc
+      - run: yarn lint
+      - run: yarn tsc
 
   test:
     docker:
@@ -35,13 +35,13 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      - run: npm ci
+      - run: yarn
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       # run tests!
-      - run: npm run jest
+      - run: yarn jest
 
   cypress:
     docker:
@@ -59,16 +59,16 @@ jobs:
             - v1-deps
       - run:
           name: Install Dependencies
-          command: npm ci
+          command: yarn
       - save_cache:
           key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
             - ~/.npm
             - ~/.cache
       - run:
-          command: npm run dev
+          command: yarn dev
           background: true
-      - run: npm run cypress:run
+      - run: yarn cypress:run
 
 workflows:
   version: 2
