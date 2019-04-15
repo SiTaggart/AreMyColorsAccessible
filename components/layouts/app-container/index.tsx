@@ -80,26 +80,6 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     }
   };
 
-  public handleBackgroundColorSliderChange = (hex: string): void => {
-    const newCombos: ColorCombosTypes[] | false = ColorCombos([
-      this.state.siteData.colorCombos[0].hex,
-      hex
-    ]);
-    if (newCombos) {
-      this.setState(
-        {
-          siteData: {
-            ...this.state.siteData,
-            background: hex,
-            colorCombos: newCombos,
-            isLight: this.checkBackgroundLightness(hex)
-          }
-        },
-        debounce(this.updateHash, 200)
-      );
-    }
-  };
-
   public handleTextColorInputChange = (value: string): void => {
     this.setState({
       siteData: {
@@ -109,25 +89,6 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
     });
     if (this.isValidColor(value)) {
       this.setNewColorCombo(value, this.state.siteData.background);
-    }
-  };
-
-  public handleTextColorSliderChange = (hex: string): void => {
-    const newCombos: ColorCombosTypes[] | false = ColorCombos([
-      hex,
-      this.state.siteData.colorCombos[1].hex
-    ]);
-    if (newCombos) {
-      this.setState(
-        {
-          siteData: {
-            ...this.state.siteData,
-            textColor: hex,
-            colorCombos: newCombos
-          }
-        },
-        debounce(this.updateHash, 200)
-      );
     }
   };
 
@@ -142,8 +103,11 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
   };
 
   private setNewColorCombo = (textColor: string, backgroundColor: string): void => {
-    const newCombos: ColorCombosTypes[] | false = ColorCombos([textColor, backgroundColor]);
+    let newCombos: ColorCombosTypes[] | false = ColorCombos([textColor, backgroundColor]);
     if (newCombos) {
+      if (textColor === backgroundColor) {
+        newCombos = this.createDuplicateCombination(newCombos);
+      }
       this.setState(
         {
           siteData: {
@@ -157,6 +121,25 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
         debounce(this.updateHash, 200)
       );
     }
+  };
+
+  private createDuplicateCombination = (combos: ColorCombosTypes[]): ColorCombosTypes[] => {
+    const dupeCombo = {
+      ...combos[0],
+      combinations: [this.createFakeCombination(combos[0].color, combos[0].hex)]
+    };
+    return [dupeCombo, dupeCombo];
+  };
+
+  private createFakeCombination = (color: number[], hex: string): {} => {
+    return {
+      model: 'rgb',
+      color: color,
+      valpha: 1,
+      hex: hex,
+      contrast: 1,
+      accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false }
+    };
   };
 
   public updateHash = (): void => {
@@ -185,9 +168,9 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
         {this.props.children({
           siteData: this.state.siteData,
           handleBackgroundColorInputChange: this.handleBackgroundColorInputChange,
-          handleBackgroundColorSliderChange: this.handleBackgroundColorSliderChange,
+          handleBackgroundColorSliderChange: this.handleBackgroundColorInputChange,
           handleTextColorInputChange: this.handleTextColorInputChange,
-          handleTextColorSliderChange: this.handleTextColorSliderChange
+          handleTextColorSliderChange: this.handleTextColorInputChange
         })}
 
         <Footer styles={styles} />
