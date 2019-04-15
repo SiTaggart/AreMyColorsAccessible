@@ -45,7 +45,7 @@ jobs:
 
   cypress:
     docker:
-      - image: cypress/base:8
+      - image: circleci/node:11
         environment:
           ## this enables colors in the output
           TERM: xterm
