@@ -167,22 +167,10 @@ describe('AppContainer', (): void => {
     expect(instance.state.siteData.isLight).toEqual(true);
   });
 
-  it('should update state when handleBackgroundColorSliderChange is called with a hex', (): void => {
-    instance.handleBackgroundColorSliderChange('#eee');
-    expect(instance.state.siteData.background).toEqual('#eee');
-    expect(instance.state.siteData.colorCombos[1].hex).toEqual('#EEEEEE');
-  });
-
   it('should update state when handleTextColorInputChange is called with a hex', (): void => {
     instance.handleTextColorInputChange('#fefefe');
     expect(instance.state.siteData.textColor).toEqual('#fefefe');
     expect(instance.state.siteData.colorCombos[0].hex).toEqual('#FEFEFE');
-  });
-
-  it('should update state when handleTextColorSliderChange is called with a hex', (): void => {
-    instance.handleTextColorSliderChange('#333');
-    expect(instance.state.siteData.textColor).toEqual('#333');
-    expect(instance.state.siteData.colorCombos[0].hex).toEqual('#333333');
   });
 
   it('should update the url with the state when updateHash is called', (): void => {
