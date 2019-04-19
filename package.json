@@ -11,6 +11,7 @@
     "precommit": "lint-staged",
     "jest": "NODE_ENV=test jest",
     "lint": "eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0 --format codeframe",
+    "bundlesize": "bundlesize",
     "test": "yarn lint && NODE_ENV=test jest",
     "cypress:open": "yarn dev & cypress open",
     "cypress:run": "cypress run",
@@ -85,6 +86,7 @@
     "acorn": "6.1.1",
     "babel-eslint": "10.0.1",
     "babel-jest": "24.7.1",
+    "bundlesize": "^0.17.1",
     "cypress": "3.2.0",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.12.1",
@@ -109,5 +111,23 @@
     "react-test-renderer": "16.8.6",
     "regenerator-runtime": "0.13.2",
     "typescript": "3.4.4"
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "./.next/static/**/pages/*.js",
+      "maxSize": "10 kB"
+    },
+    {
+      "path": "./.next/static/chunks/*.js",
+      "maxSize": "100 kB"
+    },
+    {
+      "path": "./.next/static/runtime/*.js",
+      "maxSize": "10 kB"
+    },
+    {
+      "path": "./.next/static/css/*.css",
+      "maxSize": "3 kB"
+    }
+  ]
 }
