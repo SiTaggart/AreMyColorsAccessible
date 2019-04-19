@@ -42,7 +42,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       # run tests!
       - run: yarn jest
-      - run: yarn bundlesize
+      - run: yarn build && yarn bundlesize
 
   cypress:
     docker:
