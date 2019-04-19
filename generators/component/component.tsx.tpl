@@ -1,7 +1,7 @@
 import React, { Component, ReactNode } from 'react';
 import './{{kebabCase name}}.scss';
 
-interface I{{pascalCase name}}Props {
+interface {{pascalCase name}}Props {
   children: ReactNode;
 }
 

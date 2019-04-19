@@ -3,12 +3,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import Palette from '../palette';
+import PalettePage from '../';
 
 describe('Palette Page', (): void => {
   it('renders without crashing', (): void => {
-    ReactDOM.render(<Palette />, document.createElement('div'));
-    const paletteCmp = renderer.create(<Palette />).toJSON();
+    ReactDOM.render(<PalettePage />, document.createElement('div'));
+    const paletteCmp = renderer.create(<PalettePage />).toJSON();
     expect(paletteCmp).toMatchSnapshot();
   });
 });
