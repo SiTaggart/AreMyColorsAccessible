@@ -1,8 +1,187 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ColorInputs renders without crashing 1`] = `
+.emotion-76 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  -webkit-transition: color 400ms ease-out;
+  transition: color 400ms ease-out;
+}
+
+.emotion-36 {
+  padding: 1rem;
+}
+
+@media (min-width:768px) {
+  .emotion-36 {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 50%;
+  }
+}
+
+.emotion-0 {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.emotion-2 {
+  background: rgba(255,255,255,0.1);
+  border: solid 1px;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.emotion-34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width:1024px) {
+  .emotion-34 {
+    margin: 0 -0.5rem;
+  }
+}
+
+.emotion-12 {
+  width: 100%;
+}
+
+@media (min-width:1024px) {
+  .emotion-12 {
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    padding: 0 0.5rem;
+    width: 33.3333%;
+  }
+}
+
+.emotion-8 {
+  -webkit-appearance: none;
+  background: transparent;
+  border-radius: 2px;
+  color: currentColor;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.emotion-8::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-8::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+
+.emotion-8:focus::-webkit-slider-runnable-track {
+  background: currentColor;
+}
+
+.emotion-8::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-8::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-8::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+  color: transparent;
+}
+
+.emotion-8::-ms-fill-lower {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-8::-ms-fill-upper {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-8::-ms-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-8:focus::-ms-fill-lower {
+  background: currentColor;
+}
+
+.emotion-8:focus::-ms-fill-upper {
+  background: currentColor;
+}
+
 <div
-  className="form"
+  className="emotion-76 emotion-77"
   style={
     Object {
       "color": "#fff",
@@ -10,17 +189,17 @@ exports[`ColorInputs renders without crashing 1`] = `
   }
 >
   <div
-    className="form-control"
+    className="emotion-36 emotion-37"
   >
     <label
-      className="form-label"
+      className="emotion-0 emotion-1"
       htmlFor="textColor"
     >
       Text Color
     </label>
     <input
       autoComplete="off"
-      className="form-input"
+      className="emotion-2 emotion-3"
       id="textColor"
       onChange={[Function]}
       style={
@@ -33,82 +212,107 @@ exports[`ColorInputs renders without crashing 1`] = `
       value="#fff"
     />
     <div
-      className="form-hsl-sliders"
+      className="emotion-34 emotion-35"
+      data-test="form-hsl-sliders"
     >
       <div
-        className="form-hsl-slider"
+        className="emotion-12 emotion-13"
       >
-        <label
-          className="form-label"
-          htmlFor="textColor-hsl-Hue"
+        <div
+          className="emotion-6 emotion-7"
         >
-          Hue 0°
-        </label>
-        <input
-          className="form-range"
-          id="textColor-hsl-Hue"
-          max={360}
-          min={0}
-          onChange={[Function]}
-          onInput={[Function]}
-          type="range"
-          value={0}
-        />
+          <label
+            className="emotion-0 emotion-1"
+            htmlFor="textColor-hsl-Hue"
+          >
+            Hue 0°
+          </label>
+        </div>
+        <div
+          className="emotion-10 emotion-11"
+        >
+          <input
+            className="emotion-8 emotion-9"
+            id="textColor-hsl-Hue"
+            max={360}
+            min={0}
+            onChange={[Function]}
+            onInput={[Function]}
+            type="range"
+            value={0}
+          />
+        </div>
       </div>
       <div
-        className="form-hsl-slider"
+        className="emotion-12 emotion-13"
       >
-        <label
-          className="form-label"
-          htmlFor="textColor-hsl-Saturation"
+        <div
+          className="emotion-6 emotion-7"
         >
-          Saturation 0%
-        </label>
-        <input
-          className="form-range"
-          id="textColor-hsl-Saturation"
-          max={100}
-          min={0}
-          onChange={[Function]}
-          onInput={[Function]}
-          type="range"
-          value={0}
-        />
+          <label
+            className="emotion-0 emotion-1"
+            htmlFor="textColor-hsl-Saturation"
+          >
+            Saturation 0%
+          </label>
+        </div>
+        <div
+          className="emotion-10 emotion-11"
+        >
+          <input
+            className="emotion-8 emotion-9"
+            id="textColor-hsl-Saturation"
+            max={100}
+            min={0}
+            onChange={[Function]}
+            onInput={[Function]}
+            type="range"
+            value={0}
+          />
+        </div>
       </div>
       <div
-        className="form-hsl-slider"
+        className="emotion-12 emotion-13"
       >
-        <label
-          className="form-label"
-          htmlFor="textColor-hsl-Lightness"
+        <div
+          className="emotion-6 emotion-7"
         >
-          Lightness 100%
-        </label>
-        <input
-          className="form-range"
-          id="textColor-hsl-Lightness"
-          max={100}
-          min={0}
-          onChange={[Function]}
-          onInput={[Function]}
-          type="range"
-          value={100}
-        />
+          <label
+            className="emotion-0 emotion-1"
+            htmlFor="textColor-hsl-Lightness"
+          >
+            Lightness 100%
+          </label>
+        </div>
+        <div
+          className="emotion-10 emotion-11"
+        >
+          <input
+            className="emotion-8 emotion-9"
+            id="textColor-hsl-Lightness"
+            max={100}
+            min={0}
+            onChange={[Function]}
+            onInput={[Function]}
+            type="range"
+            value={100}
+          />
+        </div>
       </div>
     </div>
   </div>
   <div
-    className="form-control"
+    className="emotion-36 emotion-37"
   >
     <label
-      className="form-label"
+      className="emotion-0 emotion-1"
       htmlFor="background"
     >
       Background
     </label>
     <input
       autoComplete="off"
-      className="form-input"
+      className="emotion-2 emotion-3"
       id="background"
       onChange={[Function]}
       style={
@@ -121,67 +325,92 @@ exports[`ColorInputs renders without crashing 1`] = `
       value="#000"
     />
     <div
-      className="form-hsl-sliders"
+      className="emotion-34 emotion-35"
+      data-test="form-hsl-sliders"
     >
       <div
-        className="form-hsl-slider"
+        className="emotion-12 emotion-13"
       >
-        <label
-          className="form-label"
-          htmlFor="background-hsl-Hue"
+        <div
+          className="emotion-6 emotion-7"
         >
-          Hue 0°
-        </label>
-        <input
-          className="form-range"
-          id="background-hsl-Hue"
-          max={360}
-          min={0}
-          onChange={[Function]}
-          onInput={[Function]}
-          type="range"
-          value={0}
-        />
+          <label
+            className="emotion-0 emotion-1"
+            htmlFor="background-hsl-Hue"
+          >
+            Hue 0°
+          </label>
+        </div>
+        <div
+          className="emotion-10 emotion-11"
+        >
+          <input
+            className="emotion-8 emotion-9"
+            id="background-hsl-Hue"
+            max={360}
+            min={0}
+            onChange={[Function]}
+            onInput={[Function]}
+            type="range"
+            value={0}
+          />
+        </div>
       </div>
       <div
-        className="form-hsl-slider"
+        className="emotion-12 emotion-13"
       >
-        <label
-          className="form-label"
-          htmlFor="background-hsl-Saturation"
+        <div
+          className="emotion-6 emotion-7"
         >
-          Saturation 0%
-        </label>
-        <input
-          className="form-range"
-          id="background-hsl-Saturation"
-          max={100}
-          min={0}
-          onChange={[Function]}
-          onInput={[Function]}
-          type="range"
-          value={0}
-        />
+          <label
+            className="emotion-0 emotion-1"
+            htmlFor="background-hsl-Saturation"
+          >
+            Saturation 0%
+          </label>
+        </div>
+        <div
+          className="emotion-10 emotion-11"
+        >
+          <input
+            className="emotion-8 emotion-9"
+            id="background-hsl-Saturation"
+            max={100}
+            min={0}
+            onChange={[Function]}
+            onInput={[Function]}
+            type="range"
+            value={0}
+          />
+        </div>
       </div>
       <div
-        className="form-hsl-slider"
+        className="emotion-12 emotion-13"
       >
-        <label
-          className="form-label"
-          htmlFor="background-hsl-Lightness"
+        <div
+          className="emotion-6 emotion-7"
         >
-          Lightness 0%
-        </label>
-        <input
-          className="form-range"
-          id="background-hsl-Lightness"
-          max={100}
-          min={0}
-          onChange={[Function]}
-          onInput={[Function]}
-          type="range"
-          value={0}
-        />
+          <label
+            className="emotion-0 emotion-1"
+            htmlFor="background-hsl-Lightness"
+          >
+            Lightness 0%
+          </label>
+        </div>
+        <div
+          className="emotion-10 emotion-11"
+        >
+          <input
+            className="emotion-8 emotion-9"
+            id="background-hsl-Lightness"
+            max={100}
+            min={0}
+            onChange={[Function]}
+            onInput={[Function]}
+            type="range"
+            value={0}
+          />
+        </div>
       </div>
     </div>
   </div>

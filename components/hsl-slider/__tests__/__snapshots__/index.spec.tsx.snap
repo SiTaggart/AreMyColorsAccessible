@@ -1,135 +1,475 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`hsl-slider compact variant should render a compact variant  1`] = `
+.emotion-4 {
+  -webkit-appearance: none;
+  background: transparent;
+  border-radius: 2px;
+  color: currentColor;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.emotion-4::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-4::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+
+.emotion-4:focus::-webkit-slider-runnable-track {
+  background: currentColor;
+}
+
+.emotion-4::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-4::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-4::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+  color: transparent;
+}
+
+.emotion-4::-ms-fill-lower {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-4::-ms-fill-upper {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-4::-ms-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-4:focus::-ms-fill-lower {
+  background: currentColor;
+}
+
+.emotion-4:focus::-ms-fill-upper {
+  background: currentColor;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  width: 100%;
+}
+
+@media (min-width:1024px) {
+  .emotion-8 {
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+}
+
+.emotion-0 {
+  display: inline-block;
+  font-size: 1rem;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.emotion-6 {
+  -webkit-flex: 6;
+  -ms-flex: 6;
+  flex: 6;
+}
+
 <div
-  className="form-hsl-sliders form-hsl-sliders--compact"
+  className="emotion-30 emotion-31"
+  data-test="form-hsl-sliders"
 >
   <div
-    className="form-hsl-slider form-hsl-slider--compact"
+    className="emotion-8 emotion-9"
   >
-    <label
-      className="form-label"
-      htmlFor="input-id-Hue"
+    <div
+      className="emotion-2 emotion-3"
     >
-      H
-    </label>
-    <input
-      className="form-range"
-      id="input-id-Hue"
-      max={360}
-      min={0}
-      onChange={[Function]}
-      onInput={[Function]}
-      type="range"
-      value={0}
-    />
+      <label
+        className="emotion-0 emotion-1"
+        htmlFor="input-id-Hue"
+      >
+        H
+      </label>
+    </div>
+    <div
+      className="emotion-6 emotion-7"
+    >
+      <input
+        className="emotion-4 emotion-5"
+        id="input-id-Hue"
+        max={360}
+        min={0}
+        onChange={[Function]}
+        onInput={[Function]}
+        type="range"
+        value={0}
+      />
+    </div>
   </div>
   <div
-    className="form-hsl-slider form-hsl-slider--compact"
+    className="emotion-8 emotion-9"
   >
-    <label
-      className="form-label"
-      htmlFor="input-id-Saturation"
+    <div
+      className="emotion-2 emotion-3"
     >
-      S
-    </label>
-    <input
-      className="form-range"
-      id="input-id-Saturation"
-      max={100}
-      min={0}
-      onChange={[Function]}
-      onInput={[Function]}
-      type="range"
-      value={0}
-    />
+      <label
+        className="emotion-0 emotion-1"
+        htmlFor="input-id-Saturation"
+      >
+        S
+      </label>
+    </div>
+    <div
+      className="emotion-6 emotion-7"
+    >
+      <input
+        className="emotion-4 emotion-5"
+        id="input-id-Saturation"
+        max={100}
+        min={0}
+        onChange={[Function]}
+        onInput={[Function]}
+        type="range"
+        value={0}
+      />
+    </div>
   </div>
   <div
-    className="form-hsl-slider form-hsl-slider--compact"
+    className="emotion-8 emotion-9"
   >
-    <label
-      className="form-label"
-      htmlFor="input-id-Lightness"
+    <div
+      className="emotion-2 emotion-3"
     >
-      L
-    </label>
-    <input
-      className="form-range"
-      id="input-id-Lightness"
-      max={100}
-      min={0}
-      onChange={[Function]}
-      onInput={[Function]}
-      type="range"
-      value={80}
-    />
+      <label
+        className="emotion-0 emotion-1"
+        htmlFor="input-id-Lightness"
+      >
+        L
+      </label>
+    </div>
+    <div
+      className="emotion-6 emotion-7"
+    >
+      <input
+        className="emotion-4 emotion-5"
+        id="input-id-Lightness"
+        max={100}
+        min={0}
+        onChange={[Function]}
+        onInput={[Function]}
+        type="range"
+        value={80}
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`hsl-slider renders without crashing 1`] = `
+.emotion-30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width:1024px) {
+  .emotion-30 {
+    margin: 0 -0.5rem;
+  }
+}
+
+.emotion-8 {
+  width: 100%;
+}
+
+@media (min-width:1024px) {
+  .emotion-8 {
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    padding: 0 0.5rem;
+    width: 33.3333%;
+  }
+}
+
+.emotion-0 {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.emotion-4 {
+  -webkit-appearance: none;
+  background: transparent;
+  border-radius: 2px;
+  color: currentColor;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.emotion-4::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-4::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+
+.emotion-4:focus::-webkit-slider-runnable-track {
+  background: currentColor;
+}
+
+.emotion-4::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-4::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-4::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+  color: transparent;
+}
+
+.emotion-4::-ms-fill-lower {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-4::-ms-fill-upper {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-4::-ms-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-4:focus::-ms-fill-lower {
+  background: currentColor;
+}
+
+.emotion-4:focus::-ms-fill-upper {
+  background: currentColor;
+}
+
 <div
-  className="form-hsl-sliders"
+  className="emotion-30 emotion-31"
+  data-test="form-hsl-sliders"
 >
   <div
-    className="form-hsl-slider"
+    className="emotion-8 emotion-9"
   >
-    <label
-      className="form-label"
-      htmlFor="input-id-Hue"
+    <div
+      className="emotion-2 emotion-3"
     >
-      Hue 0°
-    </label>
-    <input
-      className="form-range"
-      id="input-id-Hue"
-      max={360}
-      min={0}
-      onChange={[Function]}
-      onInput={[Function]}
-      type="range"
-      value={0}
-    />
+      <label
+        className="emotion-0 emotion-1"
+        htmlFor="input-id-Hue"
+      >
+        Hue 0°
+      </label>
+    </div>
+    <div
+      className="emotion-6 emotion-7"
+    >
+      <input
+        className="emotion-4 emotion-5"
+        id="input-id-Hue"
+        max={360}
+        min={0}
+        onChange={[Function]}
+        onInput={[Function]}
+        type="range"
+        value={0}
+      />
+    </div>
   </div>
   <div
-    className="form-hsl-slider"
+    className="emotion-8 emotion-9"
   >
-    <label
-      className="form-label"
-      htmlFor="input-id-Saturation"
+    <div
+      className="emotion-2 emotion-3"
     >
-      Saturation 0%
-    </label>
-    <input
-      className="form-range"
-      id="input-id-Saturation"
-      max={100}
-      min={0}
-      onChange={[Function]}
-      onInput={[Function]}
-      type="range"
-      value={0}
-    />
+      <label
+        className="emotion-0 emotion-1"
+        htmlFor="input-id-Saturation"
+      >
+        Saturation 0%
+      </label>
+    </div>
+    <div
+      className="emotion-6 emotion-7"
+    >
+      <input
+        className="emotion-4 emotion-5"
+        id="input-id-Saturation"
+        max={100}
+        min={0}
+        onChange={[Function]}
+        onInput={[Function]}
+        type="range"
+        value={0}
+      />
+    </div>
   </div>
   <div
-    className="form-hsl-slider"
+    className="emotion-8 emotion-9"
   >
-    <label
-      className="form-label"
-      htmlFor="input-id-Lightness"
+    <div
+      className="emotion-2 emotion-3"
     >
-      Lightness 80%
-    </label>
-    <input
-      className="form-range"
-      id="input-id-Lightness"
-      max={100}
-      min={0}
-      onChange={[Function]}
-      onInput={[Function]}
-      type="range"
-      value={80}
-    />
+      <label
+        className="emotion-0 emotion-1"
+        htmlFor="input-id-Lightness"
+      >
+        Lightness 80%
+      </label>
+    </div>
+    <div
+      className="emotion-6 emotion-7"
+    >
+      <input
+        className="emotion-4 emotion-5"
+        id="input-id-Lightness"
+        max={100}
+        min={0}
+        onChange={[Function]}
+        onInput={[Function]}
+        type="range"
+        value={80}
+      />
+    </div>
   </div>
 </div>
 `;

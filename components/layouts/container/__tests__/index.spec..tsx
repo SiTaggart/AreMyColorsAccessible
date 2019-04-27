@@ -3,7 +3,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import { mount, ReactWrapper } from 'enzyme';
 import Container from '..';
 
 describe('Container', (): void => {
@@ -25,29 +24,35 @@ describe('Container', (): void => {
   });
 
   it('should set home class with home variant', (): void => {
-    const wrapper: ReactWrapper = mount(
-      <Container variant="home">
-        <div>children</div>
-      </Container>
-    );
-    expect(wrapper.find('.container').hasClass('container--home')).toEqual(true);
+    const containerCmp = renderer
+      .create(
+        <Container variant="home">
+          <div>children</div>
+        </Container>
+      )
+      .toJSON();
+    expect(containerCmp).toMatchSnapshot();
   });
 
   it('should set about class with about variant', (): void => {
-    const wrapper: ReactWrapper = mount(
-      <Container variant="about">
-        <div>children</div>
-      </Container>
-    );
-    expect(wrapper.find('.container').hasClass('container--about')).toEqual(true);
+    const containerCmp = renderer
+      .create(
+        <Container variant="about">
+          <div>children</div>
+        </Container>
+      )
+      .toJSON();
+    expect(containerCmp).toMatchSnapshot();
   });
 
   it('should set palette class with palette variant', (): void => {
-    const wrapper: ReactWrapper = mount(
-      <Container variant="palette">
-        <div>children</div>
-      </Container>
-    );
-    expect(wrapper.find('.container').hasClass('container--palette')).toEqual(true);
+    const containerCmp = renderer
+      .create(
+        <Container variant="palette">
+          <div>children</div>
+        </Container>
+      )
+      .toJSON();
+    expect(containerCmp).toMatchSnapshot();
   });
 });

@@ -1,7 +1,76 @@
 import React, { Component, ReactElement } from 'react';
+import styled from '@emotion/styled';
 import { ColorCombinationTypes, Levels } from '../../types';
+import { breakpoint } from '../../styles/utils';
 import colorRating from '../../utils/color-rating';
-import './results.scss';
+
+const ContrastResults = styled.div`
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  ${breakpoint('small')} {
+    margin-bottom: 3rem;
+  }
+
+  ${breakpoint('medium')} {
+    margin-bottom: 5rem;
+  }
+`;
+
+const ContrastResultsHeading = styled.h1`
+  font-size: 20vw;
+  margin: 3rem 0;
+  width: 100%;
+
+  ${breakpoint('small')} {
+    font-size: 18vw;
+    margin: 4rem 0;
+  }
+
+  ${breakpoint('medium')} {
+    font-size: 15vw;
+    margin: 5rem 0;
+  }
+
+  ${breakpoint('xlarge')} {
+    font-size: 9vw;
+  }
+`;
+
+const ContrastResult = styled.div`
+  flex: 1 1 auto;
+  margin-bottom: 2rem;
+  width: 50%;
+
+  ${breakpoint('small')} {
+    width: 25%;
+  }
+`;
+
+const ContrastResultRating = styled.h2`
+  font-size: 10vw;
+  margin: 0;
+
+  ${breakpoint('small')} {
+    font-size: 6vw;
+  }
+
+  ${breakpoint('medium')} {
+    font-size: 4vw;
+  }
+
+  ${breakpoint('xlarge')} {
+    font-size: 3vw;
+  }
+`;
+
+const ContrastResultDesc = styled.p<{ isLarge?: boolean }>`
+  font-size: ${(props): string => (props.isLarge ? '18pt' : '14pt')};
+  margin: 0;
+`;
 
 interface ResultsProps extends ColorCombinationTypes {
   isLight: boolean;
@@ -16,9 +85,11 @@ class Results extends Component<ResultsProps, {}> {
     };
 
     return (
-      <div className="contrastResult" style={styles.seriouslyContainer}>
-        <h2 className="contrastResult-rating">{'Seriously?'}</h2>
-      </div>
+      <ContrastResult style={styles.seriouslyContainer}>
+        <ContrastResultRating data-test="contrastResults-seriously">
+          {'Seriously?'}
+        </ContrastResultRating>
+      </ContrastResult>
     );
   }
 
@@ -45,39 +116,49 @@ class Results extends Component<ResultsProps, {}> {
     }
 
     return (
-      <div className="contrastResults">
-        <h1 aria-atomic="true" aria-live="polite" className="contrastResults-heading">
+      <ContrastResults>
+        <ContrastResultsHeading
+          aria-atomic="true"
+          aria-live="polite"
+          data-test="contrastResults-heading"
+        >
           {overallRating}
-        </h1>
-        <div className="contrastResult">
-          <h2 className="contrastResult-rating">{smallTextRating}</h2>
-          <p className="contrastResult-desc">
+        </ContrastResultsHeading>
+        <ContrastResult>
+          <ContrastResultRating data-test="contrastResult-rating-small">
+            {smallTextRating}
+          </ContrastResultRating>
+          <ContrastResultDesc>
             Small Text - 4.5 <br />
             &lt; 14pt or 18px
-          </p>
-        </div>
-        <div className="contrastResult">
-          <h2 className="contrastResult-rating">{boldTextRating}</h2>
-          <p className="contrastResult-desc">
+          </ContrastResultDesc>
+        </ContrastResult>
+        <ContrastResult>
+          <ContrastResultRating data-test="contrastResult-rating-bold">
+            {boldTextRating}
+          </ContrastResultRating>
+          <ContrastResultDesc>
             <strong>
               Bold Text - 3.0 <br />
               &gt; 14pt or 18px
             </strong>
-          </p>
-        </div>
-        <div className="contrastResult">
-          <h2 className="contrastResult-rating">{largeTextRating}</h2>
-          <p className="contrastResult-desc contrastResult-desc--large">
+          </ContrastResultDesc>
+        </ContrastResult>
+        <ContrastResult>
+          <ContrastResultRating data-test="contrastResult-rating-large">
+            {largeTextRating}
+          </ContrastResultRating>
+          <ContrastResultDesc isLarge>
             Large Text - 3.0 <br />
             &gt; 18pt or 24px
-          </p>
-        </div>
-        <div className="contrastResult">
-          <h2 className="contrastResult-rating">{ratio}</h2>
-          <p className="contrastResult-desc">{'Ratio'}</p>
-        </div>
+          </ContrastResultDesc>
+        </ContrastResult>
+        <ContrastResult>
+          <ContrastResultRating>{ratio}</ContrastResultRating>
+          <ContrastResultDesc>{'Ratio'}</ContrastResultDesc>
+        </ContrastResult>
         {areYouSerious}
-      </div>
+      </ContrastResults>
     );
   }
 }

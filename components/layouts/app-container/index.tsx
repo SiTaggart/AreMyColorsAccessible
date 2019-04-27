@@ -1,12 +1,14 @@
 import React, { Component, ReactNode, ReactElement } from 'react';
 import Head from 'next/head';
-import { SiteData, ColorCombosTypes } from '../../../types';
+import styled from '@emotion/styled';
 import debounce from 'lodash/debounce';
 import isEmpty from 'lodash/isEmpty';
 import qs from 'query-string';
 import Color from 'color';
-import { HomeProps } from '../../home';
+import { SiteData, ColorCombosTypes } from '../../../types';
+import { breakpoint } from '../../../styles/utils';
 import ColorCombos from '../../../utils/color-combos';
+import { HomeProps } from '../../home';
 import Footer from '../../footer';
 
 interface AppContainerProps {
@@ -20,6 +22,12 @@ interface AppContainerProps {
 interface AppContainerState {
   siteData: SiteData;
 }
+
+const StyledAppContainer = styled.div`
+  ${breakpoint('small')} {
+    height: 100%;
+  }
+`;
 
 class AppContainer extends Component<AppContainerProps, AppContainerState> {
   public static defaultProps = {
@@ -154,7 +162,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
       }
     };
     return (
-      <div className="appContainer">
+      <StyledAppContainer>
         <Head>
           <title>{this.props.title}</title>
           <style>{`
@@ -174,7 +182,7 @@ class AppContainer extends Component<AppContainerProps, AppContainerState> {
         })}
 
         <Footer styles={styles} />
-      </div>
+      </StyledAppContainer>
     );
   }
 }

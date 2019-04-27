@@ -3,7 +3,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import { mount, ReactWrapper } from 'enzyme';
 import FormLabel from '..';
 
 describe('FormLabel', (): void => {
@@ -18,12 +17,14 @@ describe('FormLabel', (): void => {
     expect(formLabelCmp).toMatchSnapshot();
   });
 
-  it('should set create a large label style with isLarge', (): void => {
-    const wrapper: ReactWrapper = mount(
-      <FormLabel htmlFor="input-id" isLarge>
-        children
-      </FormLabel>
-    );
-    expect(wrapper.find('label').hasClass('form-label--large')).toEqual(true);
+  it('should create a large label style with variant large', (): void => {
+    const formLabelCmp = renderer
+      .create(
+        <FormLabel htmlFor="input-id" variant="large">
+          children
+        </FormLabel>
+      )
+      .toJSON();
+    expect(formLabelCmp).toMatchSnapshot();
   });
 });

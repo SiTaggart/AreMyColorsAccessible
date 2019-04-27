@@ -1,8 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormControl renders without crashing 1`] = `
+.emotion-0 {
+  padding: 1rem;
+}
+
+@media (min-width:768px) {
+  .emotion-0 {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 50%;
+  }
+}
+
 <div
-  className="form-control"
+  className="emotion-0 emotion-1"
 >
   children
 </div>

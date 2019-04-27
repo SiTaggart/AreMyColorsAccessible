@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react';
+import styled from '@emotion/styled';
 import { ColorCombosTypes } from '../../types';
 import ColorCard from '../color-card';
 import FormInput from '../form-input';
 import HslSlider from '../hsl-slider';
-import './color-matrix.scss';
 
 export interface ColorMatrixProps {
   colors: string[];
@@ -11,14 +11,38 @@ export interface ColorMatrixProps {
   onColorChange: (newColor: string, index: number) => void;
 }
 
+const StyledColorMatrix = styled.section`
+  margin-top: 3rem;
+`;
+const StyledColorMatrixTable = styled.table`
+  table-layout: fixed;
+  width: 100%;
+`;
+const StyledColorMatrixTr = styled.tr``;
+const StyledColorMatrixTh = styled.th`
+  font-weight: bold;
+  padding: 0.5rem;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+`;
+const StyledColorMatrixTd = styled.td`
+  padding: 0.5rem;
+`;
+
 const ColorMatrix: React.FunctionComponent<ColorMatrixProps> = (
   props: ColorMatrixProps
 ): ReactElement<HTMLDivElement> => {
   return (
-    <section className="colorMatrix">
-      <table className="colorMatrix-table">
+    <StyledColorMatrix>
+      <StyledColorMatrixTable>
         <thead>
-          <tr className="colorMatrix-tr">
+          <StyledColorMatrixTr data-test="colorMatrix-tr">
             <td
               style={{
                 width: '6rem'
@@ -26,7 +50,7 @@ const ColorMatrix: React.FunctionComponent<ColorMatrixProps> = (
             />
             {props.colorCombos.map(
               (color, index): ReactElement => (
-                <th className="colorMatrix-th" key={index} scope="col">
+                <StyledColorMatrixTh data-test="colorMatrix-th" key={index} scope="col">
                   <FormInput
                     ariaLabel="hex colour code"
                     id={`colorhex-${index}`}
@@ -39,39 +63,39 @@ const ColorMatrix: React.FunctionComponent<ColorMatrixProps> = (
                     value={color.hex}
                     variant="compact"
                   />
-                </th>
+                </StyledColorMatrixTh>
               )
             )}
-          </tr>
+          </StyledColorMatrixTr>
         </thead>
         <tbody>
           {props.colorCombos.map(
             (color, index): ReactElement => (
-              <tr className="colorMatrix-tr" key={index}>
-                <th className="colorMatrix-th" key={index} scope="row">
+              <StyledColorMatrixTr data-test="colorMatrix-tr" key={index}>
+                <StyledColorMatrixTh data-test="colorMatrix-th" key={index} scope="row">
                   {color.hex}
-                </th>
+                </StyledColorMatrixTh>
                 {color.combinations.map(
                   (combo, comboIndex): ReactElement => (
                     <React.Fragment key={comboIndex}>
-                      {index === comboIndex && <td className="colorMatrix-td">&nbsp;</td>}
-                      <td className="colorMatrix-td">
+                      {index === comboIndex && <StyledColorMatrixTd>&nbsp;</StyledColorMatrixTd>}
+                      <StyledColorMatrixTd>
                         <ColorCard
                           accessibility={combo.accessibility!}
                           background={combo.hex!}
                           color={color.hex}
                           contrast={combo.contrast!}
                         />
-                      </td>
+                      </StyledColorMatrixTd>
                     </React.Fragment>
                   )
                 )}
-              </tr>
+              </StyledColorMatrixTr>
             )
           )}
         </tbody>
-      </table>
-    </section>
+      </StyledColorMatrixTable>
+    </StyledColorMatrix>
   );
 };
 

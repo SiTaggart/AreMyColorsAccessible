@@ -1,9 +1,8 @@
 import React, { Component, ReactNode, ReactElement } from 'react';
 import Color from 'color';
-import classNames from 'classnames';
-import './hsl-slider.scss';
 import FormLabel from '../form-label';
 import FormRange from '../form-range';
+import { HSLSliders, HSLSlider, HSLSliderLabelContainer, HSLSliderRangeContainer } from './styled';
 
 interface HslSliderProps {
   id: string;
@@ -68,26 +67,25 @@ class HslSlider extends Component<HslSliderProps, {}> {
   private renderRangeInput = (range: Range): ReactNode => {
     const id = this.props.id + '-' + range.label;
     return (
-      <div
-        className={classNames('form-hsl-slider', {
-          'form-hsl-slider--compact': this.props.variant === 'compact'
-        })}
-        key={id}
-      >
-        <FormLabel htmlFor={id}>
-          {this.props.variant === 'compact'
-            ? `${range.label.substring(0, 1)}`
-            : `${range.label} ${range.value + range.symbol}`}
-        </FormLabel>
-        <FormRange
-          id={id}
-          max={range.max}
-          min={range.min}
-          onChange={(e): void => range.handleOnChange(e)}
-          onInput={(e): void => range.handleOnChange(e)}
-          value={range.value}
-        />
-      </div>
+      <HSLSlider key={id} variant={this.props.variant}>
+        <HSLSliderLabelContainer variant={this.props.variant}>
+          <FormLabel htmlFor={id} variant={this.props.variant}>
+            {this.props.variant === 'compact'
+              ? `${range.label.substring(0, 1)}`
+              : `${range.label} ${range.value + range.symbol}`}
+          </FormLabel>
+        </HSLSliderLabelContainer>
+        <HSLSliderRangeContainer variant={this.props.variant}>
+          <FormRange
+            id={id}
+            max={range.max}
+            min={range.min}
+            onChange={(e): void => range.handleOnChange(e)}
+            onInput={(e): void => range.handleOnChange(e)}
+            value={range.value}
+          />
+        </HSLSliderRangeContainer>
+      </HSLSlider>
     );
   };
 
@@ -147,13 +145,9 @@ class HslSlider extends Component<HslSliderProps, {}> {
     ];
 
     return (
-      <div
-        className={classNames('form-hsl-sliders', {
-          'form-hsl-sliders--compact': this.props.variant === 'compact'
-        })}
-      >
+      <HSLSliders data-test="form-hsl-sliders" variant={this.props.variant}>
         {hslRanges.map(this.renderRangeInput)}
-      </div>
+      </HSLSliders>
     );
   }
 }

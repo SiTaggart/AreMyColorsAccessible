@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
-import classNames from 'classnames';
-import './form-input.scss';
+import styled from '@emotion/styled';
 
 export interface FormInputProps {
   ariaLabel?: string;
@@ -16,21 +15,47 @@ export interface FormInputProps {
   value?: string;
 }
 
+interface StyledInputProps {
+  isErrored?: boolean;
+  hasNoSpacing?: boolean;
+}
+
+const StyledInput = styled.input<StyledInputProps>`
+  background: rgba(255, 255, 255, 0.1);
+  border: solid 1px;
+  border-color: ${(props): string | null => (props.isErrored ? '#c12915' : null)};
+  border-radius: 3px;
+  color: ${(props): string | null => (props.isErrored ? '#c12915' : null)};
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: ${(props): string => (props.hasNoSpacing ? '0' : '2rem')};
+  width: 100%;
+
+  &:focus {
+    border-color: ${(props): string | null => (props.isErrored ? '#c12915' : null)};
+    box-shadow: ${(props): string | null => (props.isErrored ? '0px 0px 10px #c12915' : null)};
+  }
+`;
+
+const StyledInputError = styled.div`
+  color: #c12915;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+`;
+
 const FormInput: React.FunctionComponent<FormInputProps> = (
   props: FormInputProps
 ): ReactElement<HTMLInputElement> => {
   return (
     <>
-      <input
+      <StyledInput
         aria-describedby={props.errorMessage && `error-message-label-${props.id}`}
         aria-label={props.ariaLabel}
         autoComplete="off"
-        className={classNames('form-input', {
-          'form-input--error': props.errorMessage,
-          'form-input--noSpacing': props.hasNoSpacing
-        })}
         defaultValue={props.defaultValue}
+        hasNoSpacing={props.hasNoSpacing}
         id={props.id}
+        isErrored={props.errorMessage ? true : undefined}
         name={props.name}
         onChange={props.onChange}
         onInput={props.onInput}
@@ -40,9 +65,9 @@ const FormInput: React.FunctionComponent<FormInputProps> = (
         value={props.value}
       />
       {props.errorMessage && (
-        <div className="form-input-error" id={`error-message-label-${props.id}`}>
+        <StyledInputError id={`error-message-label-${props.id}`}>
           {props.errorMessage}
-        </div>
+        </StyledInputError>
       )}
     </>
   );

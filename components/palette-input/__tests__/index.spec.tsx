@@ -2,7 +2,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { mount, ReactWrapper } from 'enzyme';
 import renderer from 'react-test-renderer';
 import PaletteInput from '..';
 
@@ -31,9 +30,9 @@ describe('PaletteInput', (): void => {
   });
 
   it('should render an error message when passed', (): void => {
-    const wrapper: ReactWrapper = mount(
-      <PaletteInput errorMessage="I'm an error" onColorAdd={mockOnColorAdd} />
-    );
-    expect(wrapper.find('#error-message-label-palette-form-input').text()).toEqual("I'm an error");
+    const paletteInputCmp = renderer
+      .create(<PaletteInput errorMessage="I'm an error" onColorAdd={mockOnColorAdd} />)
+      .toJSON();
+    expect(paletteInputCmp).toMatchSnapshot();
   });
 });

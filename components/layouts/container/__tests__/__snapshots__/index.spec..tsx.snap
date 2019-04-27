@@ -1,8 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Container renders without crashing 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
 <main
-  className="container"
+  className="emotion-0 emotion-1"
+>
+  <div>
+    children
+  </div>
+</main>
+`;
+
+exports[`Container should set about class with about variant 1`] = `
+.emotion-0 {
+  padding-top: 3rem;
+  position: relative;
+}
+
+<main
+  className="emotion-0 emotion-1"
+>
+  <div>
+    children
+  </div>
+</main>
+`;
+
+exports[`Container should set home class with home variant 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+@media (min-width:768px) {
+  .emotion-0 {
+    min-height: 85%;
+  }
+}
+
+<main
+  className="emotion-0 emotion-1"
+>
+  <div>
+    children
+  </div>
+</main>
+`;
+
+exports[`Container should set palette class with palette variant 1`] = `
+.emotion-0 {
+  color: #343334;
+  position: relative;
+}
+
+<main
+  className="emotion-0 emotion-1"
 >
   <div>
     children

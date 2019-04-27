@@ -1,15 +1,323 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ColorMatrix renders without crashing 1`] = `
+.emotion-266 {
+  margin-top: 3rem;
+}
+
+.emotion-264 {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.emotion-34 {
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.emotion-34:first-child {
+  padding-left: 0;
+}
+
+.emotion-34:last-child {
+  padding-right: 0;
+}
+
+.emotion-0 {
+  background: rgba(255,255,255,0.1);
+  border: solid 1px;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  width: 100%;
+}
+
+@media (min-width:1024px) {
+  .emotion-10 {
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+}
+
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: left;
+}
+
+.emotion-2 {
+  display: inline-block;
+  font-size: 1rem;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.emotion-8 {
+  -webkit-flex: 6;
+  -ms-flex: 6;
+  flex: 6;
+}
+
+.emotion-6 {
+  -webkit-appearance: none;
+  background: transparent;
+  border-radius: 2px;
+  color: currentColor;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.emotion-6::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-6::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+
+.emotion-6:focus::-webkit-slider-runnable-track {
+  background: currentColor;
+}
+
+.emotion-6::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-6::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-6::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+  color: transparent;
+}
+
+.emotion-6::-ms-fill-lower {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-6::-ms-fill-upper {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-6::-ms-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-6:focus::-ms-fill-lower {
+  background: currentColor;
+}
+
+.emotion-6:focus::-ms-fill-upper {
+  background: currentColor;
+}
+
+.emotion-148 {
+  padding: 0.5rem;
+}
+
+.emotion-154 {
+  border: solid 1px #dedede;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-transition: opacity ease-in;
+  transition: opacity ease-in;
+}
+
+.emotion-150 {
+  background-color: #CCCCCC;
+  border-bottom: solid 1px #ccc;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.emotion-152 {
+  font-size: 0.8rem;
+  padding: 0.3rem;
+}
+
+.emotion-158 {
+  background-color: #777777;
+  border-bottom: solid 1px #ccc;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.emotion-166 {
+  background-color: #000000;
+  border-bottom: solid 1px #ccc;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.emotion-178 {
+  background-color: #FFFFFF;
+  border-bottom: solid 1px #ccc;
+  color: #CCCCCC;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.emotion-188 {
+  background-color: #777777;
+  border-bottom: solid 1px #ccc;
+  color: #CCCCCC;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.emotion-196 {
+  background-color: #000000;
+  border-bottom: solid 1px #ccc;
+  color: #CCCCCC;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.emotion-208 {
+  background-color: #FFFFFF;
+  border-bottom: solid 1px #ccc;
+  color: #777777;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.emotion-216 {
+  background-color: #CCCCCC;
+  border-bottom: solid 1px #ccc;
+  color: #777777;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.emotion-226 {
+  background-color: #000000;
+  border-bottom: solid 1px #ccc;
+  color: #777777;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.emotion-238 {
+  background-color: #FFFFFF;
+  border-bottom: solid 1px #ccc;
+  color: #000000;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.emotion-246 {
+  background-color: #CCCCCC;
+  border-bottom: solid 1px #ccc;
+  color: #000000;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.emotion-254 {
+  background-color: #777777;
+  border-bottom: solid 1px #ccc;
+  color: #000000;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
 <section
-  className="colorMatrix"
+  className="emotion-266 emotion-267"
 >
   <table
-    className="colorMatrix-table"
+    className="emotion-264 emotion-265"
   >
     <thead>
       <tr
-        className="colorMatrix-tr"
+        className="emotion-144 emotion-145"
+        data-test="colorMatrix-tr"
       >
         <td
           style={
@@ -19,314 +327,418 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         />
         <th
-          className="colorMatrix-th"
+          className="emotion-34 emotion-35"
+          data-test="colorMatrix-th"
           scope="col"
         >
           <input
             aria-label="hex colour code"
             autoComplete="off"
-            className="form-input"
+            className="emotion-0 emotion-1"
             id="colorhex-0"
             onChange={[Function]}
             type="text"
             value="#fff"
           />
           <div
-            className="form-hsl-sliders form-hsl-sliders--compact"
+            className="emotion-32 emotion-33"
+            data-test="form-hsl-sliders"
           >
             <div
-              className="form-hsl-slider form-hsl-slider--compact"
+              className="emotion-10 emotion-11"
             >
-              <label
-                className="form-label"
-                htmlFor="hsl-0-Hue"
+              <div
+                className="emotion-4 emotion-5"
               >
-                H
-              </label>
-              <input
-                className="form-range"
-                id="hsl-0-Hue"
-                max={360}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
+                <label
+                  className="emotion-2 emotion-3"
+                  htmlFor="hsl-0-Hue"
+                >
+                  H
+                </label>
+              </div>
+              <div
+                className="emotion-8 emotion-9"
+              >
+                <input
+                  className="emotion-6 emotion-7"
+                  id="hsl-0-Hue"
+                  max={360}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={0}
+                />
+              </div>
             </div>
             <div
-              className="form-hsl-slider form-hsl-slider--compact"
+              className="emotion-10 emotion-11"
             >
-              <label
-                className="form-label"
-                htmlFor="hsl-0-Saturation"
+              <div
+                className="emotion-4 emotion-5"
               >
-                S
-              </label>
-              <input
-                className="form-range"
-                id="hsl-0-Saturation"
-                max={100}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
+                <label
+                  className="emotion-2 emotion-3"
+                  htmlFor="hsl-0-Saturation"
+                >
+                  S
+                </label>
+              </div>
+              <div
+                className="emotion-8 emotion-9"
+              >
+                <input
+                  className="emotion-6 emotion-7"
+                  id="hsl-0-Saturation"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={0}
+                />
+              </div>
             </div>
             <div
-              className="form-hsl-slider form-hsl-slider--compact"
+              className="emotion-10 emotion-11"
             >
-              <label
-                className="form-label"
-                htmlFor="hsl-0-Lightness"
+              <div
+                className="emotion-4 emotion-5"
               >
-                L
-              </label>
-              <input
-                className="form-range"
-                id="hsl-0-Lightness"
-                max={100}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={100}
-              />
+                <label
+                  className="emotion-2 emotion-3"
+                  htmlFor="hsl-0-Lightness"
+                >
+                  L
+                </label>
+              </div>
+              <div
+                className="emotion-8 emotion-9"
+              >
+                <input
+                  className="emotion-6 emotion-7"
+                  id="hsl-0-Lightness"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={100}
+                />
+              </div>
             </div>
           </div>
         </th>
         <th
-          className="colorMatrix-th"
+          className="emotion-34 emotion-35"
+          data-test="colorMatrix-th"
           scope="col"
         >
           <input
             aria-label="hex colour code"
             autoComplete="off"
-            className="form-input"
+            className="emotion-0 emotion-1"
             id="colorhex-1"
             onChange={[Function]}
             type="text"
             value="#ccc"
           />
           <div
-            className="form-hsl-sliders form-hsl-sliders--compact"
+            className="emotion-32 emotion-33"
+            data-test="form-hsl-sliders"
           >
             <div
-              className="form-hsl-slider form-hsl-slider--compact"
+              className="emotion-10 emotion-11"
             >
-              <label
-                className="form-label"
-                htmlFor="hsl-1-Hue"
+              <div
+                className="emotion-4 emotion-5"
               >
-                H
-              </label>
-              <input
-                className="form-range"
-                id="hsl-1-Hue"
-                max={360}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
+                <label
+                  className="emotion-2 emotion-3"
+                  htmlFor="hsl-1-Hue"
+                >
+                  H
+                </label>
+              </div>
+              <div
+                className="emotion-8 emotion-9"
+              >
+                <input
+                  className="emotion-6 emotion-7"
+                  id="hsl-1-Hue"
+                  max={360}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={0}
+                />
+              </div>
             </div>
             <div
-              className="form-hsl-slider form-hsl-slider--compact"
+              className="emotion-10 emotion-11"
             >
-              <label
-                className="form-label"
-                htmlFor="hsl-1-Saturation"
+              <div
+                className="emotion-4 emotion-5"
               >
-                S
-              </label>
-              <input
-                className="form-range"
-                id="hsl-1-Saturation"
-                max={100}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
+                <label
+                  className="emotion-2 emotion-3"
+                  htmlFor="hsl-1-Saturation"
+                >
+                  S
+                </label>
+              </div>
+              <div
+                className="emotion-8 emotion-9"
+              >
+                <input
+                  className="emotion-6 emotion-7"
+                  id="hsl-1-Saturation"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={0}
+                />
+              </div>
             </div>
             <div
-              className="form-hsl-slider form-hsl-slider--compact"
+              className="emotion-10 emotion-11"
             >
-              <label
-                className="form-label"
-                htmlFor="hsl-1-Lightness"
+              <div
+                className="emotion-4 emotion-5"
               >
-                L
-              </label>
-              <input
-                className="form-range"
-                id="hsl-1-Lightness"
-                max={100}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={80}
-              />
+                <label
+                  className="emotion-2 emotion-3"
+                  htmlFor="hsl-1-Lightness"
+                >
+                  L
+                </label>
+              </div>
+              <div
+                className="emotion-8 emotion-9"
+              >
+                <input
+                  className="emotion-6 emotion-7"
+                  id="hsl-1-Lightness"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={80}
+                />
+              </div>
             </div>
           </div>
         </th>
         <th
-          className="colorMatrix-th"
+          className="emotion-34 emotion-35"
+          data-test="colorMatrix-th"
           scope="col"
         >
           <input
             aria-label="hex colour code"
             autoComplete="off"
-            className="form-input"
+            className="emotion-0 emotion-1"
             id="colorhex-2"
             onChange={[Function]}
             type="text"
             value="#777"
           />
           <div
-            className="form-hsl-sliders form-hsl-sliders--compact"
+            className="emotion-32 emotion-33"
+            data-test="form-hsl-sliders"
           >
             <div
-              className="form-hsl-slider form-hsl-slider--compact"
+              className="emotion-10 emotion-11"
             >
-              <label
-                className="form-label"
-                htmlFor="hsl-2-Hue"
+              <div
+                className="emotion-4 emotion-5"
               >
-                H
-              </label>
-              <input
-                className="form-range"
-                id="hsl-2-Hue"
-                max={360}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
+                <label
+                  className="emotion-2 emotion-3"
+                  htmlFor="hsl-2-Hue"
+                >
+                  H
+                </label>
+              </div>
+              <div
+                className="emotion-8 emotion-9"
+              >
+                <input
+                  className="emotion-6 emotion-7"
+                  id="hsl-2-Hue"
+                  max={360}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={0}
+                />
+              </div>
             </div>
             <div
-              className="form-hsl-slider form-hsl-slider--compact"
+              className="emotion-10 emotion-11"
             >
-              <label
-                className="form-label"
-                htmlFor="hsl-2-Saturation"
+              <div
+                className="emotion-4 emotion-5"
               >
-                S
-              </label>
-              <input
-                className="form-range"
-                id="hsl-2-Saturation"
-                max={100}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
+                <label
+                  className="emotion-2 emotion-3"
+                  htmlFor="hsl-2-Saturation"
+                >
+                  S
+                </label>
+              </div>
+              <div
+                className="emotion-8 emotion-9"
+              >
+                <input
+                  className="emotion-6 emotion-7"
+                  id="hsl-2-Saturation"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={0}
+                />
+              </div>
             </div>
             <div
-              className="form-hsl-slider form-hsl-slider--compact"
+              className="emotion-10 emotion-11"
             >
-              <label
-                className="form-label"
-                htmlFor="hsl-2-Lightness"
+              <div
+                className="emotion-4 emotion-5"
               >
-                L
-              </label>
-              <input
-                className="form-range"
-                id="hsl-2-Lightness"
-                max={100}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={47}
-              />
+                <label
+                  className="emotion-2 emotion-3"
+                  htmlFor="hsl-2-Lightness"
+                >
+                  L
+                </label>
+              </div>
+              <div
+                className="emotion-8 emotion-9"
+              >
+                <input
+                  className="emotion-6 emotion-7"
+                  id="hsl-2-Lightness"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={47}
+                />
+              </div>
             </div>
           </div>
         </th>
         <th
-          className="colorMatrix-th"
+          className="emotion-34 emotion-35"
+          data-test="colorMatrix-th"
           scope="col"
         >
           <input
             aria-label="hex colour code"
             autoComplete="off"
-            className="form-input"
+            className="emotion-0 emotion-1"
             id="colorhex-3"
             onChange={[Function]}
             type="text"
             value="#000"
           />
           <div
-            className="form-hsl-sliders form-hsl-sliders--compact"
+            className="emotion-32 emotion-33"
+            data-test="form-hsl-sliders"
           >
             <div
-              className="form-hsl-slider form-hsl-slider--compact"
+              className="emotion-10 emotion-11"
             >
-              <label
-                className="form-label"
-                htmlFor="hsl-3-Hue"
+              <div
+                className="emotion-4 emotion-5"
               >
-                H
-              </label>
-              <input
-                className="form-range"
-                id="hsl-3-Hue"
-                max={360}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
+                <label
+                  className="emotion-2 emotion-3"
+                  htmlFor="hsl-3-Hue"
+                >
+                  H
+                </label>
+              </div>
+              <div
+                className="emotion-8 emotion-9"
+              >
+                <input
+                  className="emotion-6 emotion-7"
+                  id="hsl-3-Hue"
+                  max={360}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={0}
+                />
+              </div>
             </div>
             <div
-              className="form-hsl-slider form-hsl-slider--compact"
+              className="emotion-10 emotion-11"
             >
-              <label
-                className="form-label"
-                htmlFor="hsl-3-Saturation"
+              <div
+                className="emotion-4 emotion-5"
               >
-                S
-              </label>
-              <input
-                className="form-range"
-                id="hsl-3-Saturation"
-                max={100}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
+                <label
+                  className="emotion-2 emotion-3"
+                  htmlFor="hsl-3-Saturation"
+                >
+                  S
+                </label>
+              </div>
+              <div
+                className="emotion-8 emotion-9"
+              >
+                <input
+                  className="emotion-6 emotion-7"
+                  id="hsl-3-Saturation"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={0}
+                />
+              </div>
             </div>
             <div
-              className="form-hsl-slider form-hsl-slider--compact"
+              className="emotion-10 emotion-11"
             >
-              <label
-                className="form-label"
-                htmlFor="hsl-3-Lightness"
+              <div
+                className="emotion-4 emotion-5"
               >
-                L
-              </label>
-              <input
-                className="form-range"
-                id="hsl-3-Lightness"
-                max={100}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
+                <label
+                  className="emotion-2 emotion-3"
+                  htmlFor="hsl-3-Lightness"
+                >
+                  L
+                </label>
+              </div>
+              <div
+                className="emotion-8 emotion-9"
+              >
+                <input
+                  className="emotion-6 emotion-7"
+                  id="hsl-3-Lightness"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={0}
+                />
+              </div>
             </div>
           </div>
         </th>
@@ -334,38 +746,37 @@ exports[`ColorMatrix renders without crashing 1`] = `
     </thead>
     <tbody>
       <tr
-        className="colorMatrix-tr"
+        className="emotion-144 emotion-145"
+        data-test="colorMatrix-tr"
       >
         <th
-          className="colorMatrix-th"
+          className="emotion-34 emotion-35"
+          data-test="colorMatrix-th"
           scope="row"
         >
           #FFFFFF
         </th>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
            
         </td>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
           <div
-            className="colorCard colorCard--nope"
+            className="emotion-154 emotion-155"
+            data-test="colorCard"
           >
             <div
-              className="colorCard-swatch"
-              style={
-                Object {
-                  "backgroundColor": "#CCCCCC",
-                  "color": "#FFFFFF",
-                }
-              }
+              className="emotion-150 emotion-151"
+              color="#FFFFFF"
+              data-test="colorCard-swatch"
             >
               Nope
             </div>
             <div
-              className="colorCard-ratio"
+              className="emotion-152 emotion-153"
             >
               <div>
                 Small text: 
@@ -383,24 +794,21 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
           <div
-            className="colorCard"
+            className="emotion-154 emotion-155"
+            data-test="colorCard"
           >
             <div
-              className="colorCard-swatch"
-              style={
-                Object {
-                  "backgroundColor": "#777777",
-                  "color": "#FFFFFF",
-                }
-              }
+              className="emotion-158 emotion-151"
+              color="#FFFFFF"
+              data-test="colorCard-swatch"
             >
               Kinda
             </div>
             <div
-              className="colorCard-ratio"
+              className="emotion-152 emotion-153"
             >
               <div>
                 Small text: 
@@ -418,24 +826,21 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
           <div
-            className="colorCard"
+            className="emotion-154 emotion-155"
+            data-test="colorCard"
           >
             <div
-              className="colorCard-swatch"
-              style={
-                Object {
-                  "backgroundColor": "#000000",
-                  "color": "#FFFFFF",
-                }
-              }
+              className="emotion-166 emotion-151"
+              color="#FFFFFF"
+              data-test="colorCard-swatch"
             >
               Yup
             </div>
             <div
-              className="colorCard-ratio"
+              className="emotion-152 emotion-153"
             >
               <div>
                 Small text: 
@@ -454,33 +859,32 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </td>
       </tr>
       <tr
-        className="colorMatrix-tr"
+        className="emotion-144 emotion-145"
+        data-test="colorMatrix-tr"
       >
         <th
-          className="colorMatrix-th"
+          className="emotion-34 emotion-35"
+          data-test="colorMatrix-th"
           scope="row"
         >
           #CCCCCC
         </th>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
           <div
-            className="colorCard colorCard--nope"
+            className="emotion-154 emotion-155"
+            data-test="colorCard"
           >
             <div
-              className="colorCard-swatch"
-              style={
-                Object {
-                  "backgroundColor": "#FFFFFF",
-                  "color": "#CCCCCC",
-                }
-              }
+              className="emotion-178 emotion-151"
+              color="#CCCCCC"
+              data-test="colorCard-swatch"
             >
               Nope
             </div>
             <div
-              className="colorCard-ratio"
+              className="emotion-152 emotion-153"
             >
               <div>
                 Small text: 
@@ -498,29 +902,26 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
            
         </td>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
           <div
-            className="colorCard colorCard--nope"
+            className="emotion-154 emotion-155"
+            data-test="colorCard"
           >
             <div
-              className="colorCard-swatch"
-              style={
-                Object {
-                  "backgroundColor": "#777777",
-                  "color": "#CCCCCC",
-                }
-              }
+              className="emotion-188 emotion-151"
+              color="#CCCCCC"
+              data-test="colorCard-swatch"
             >
               Nope
             </div>
             <div
-              className="colorCard-ratio"
+              className="emotion-152 emotion-153"
             >
               <div>
                 Small text: 
@@ -538,24 +939,21 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
           <div
-            className="colorCard"
+            className="emotion-154 emotion-155"
+            data-test="colorCard"
           >
             <div
-              className="colorCard-swatch"
-              style={
-                Object {
-                  "backgroundColor": "#000000",
-                  "color": "#CCCCCC",
-                }
-              }
+              className="emotion-196 emotion-151"
+              color="#CCCCCC"
+              data-test="colorCard-swatch"
             >
               Yup
             </div>
             <div
-              className="colorCard-ratio"
+              className="emotion-152 emotion-153"
             >
               <div>
                 Small text: 
@@ -574,33 +972,32 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </td>
       </tr>
       <tr
-        className="colorMatrix-tr"
+        className="emotion-144 emotion-145"
+        data-test="colorMatrix-tr"
       >
         <th
-          className="colorMatrix-th"
+          className="emotion-34 emotion-35"
+          data-test="colorMatrix-th"
           scope="row"
         >
           #777777
         </th>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
           <div
-            className="colorCard"
+            className="emotion-154 emotion-155"
+            data-test="colorCard"
           >
             <div
-              className="colorCard-swatch"
-              style={
-                Object {
-                  "backgroundColor": "#FFFFFF",
-                  "color": "#777777",
-                }
-              }
+              className="emotion-208 emotion-151"
+              color="#777777"
+              data-test="colorCard-swatch"
             >
               Kinda
             </div>
             <div
-              className="colorCard-ratio"
+              className="emotion-152 emotion-153"
             >
               <div>
                 Small text: 
@@ -618,24 +1015,21 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
           <div
-            className="colorCard colorCard--nope"
+            className="emotion-154 emotion-155"
+            data-test="colorCard"
           >
             <div
-              className="colorCard-swatch"
-              style={
-                Object {
-                  "backgroundColor": "#CCCCCC",
-                  "color": "#777777",
-                }
-              }
+              className="emotion-216 emotion-151"
+              color="#777777"
+              data-test="colorCard-swatch"
             >
               Nope
             </div>
             <div
-              className="colorCard-ratio"
+              className="emotion-152 emotion-153"
             >
               <div>
                 Small text: 
@@ -653,29 +1047,26 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
            
         </td>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
           <div
-            className="colorCard"
+            className="emotion-154 emotion-155"
+            data-test="colorCard"
           >
             <div
-              className="colorCard-swatch"
-              style={
-                Object {
-                  "backgroundColor": "#000000",
-                  "color": "#777777",
-                }
-              }
+              className="emotion-226 emotion-151"
+              color="#777777"
+              data-test="colorCard-swatch"
             >
               Yup
             </div>
             <div
-              className="colorCard-ratio"
+              className="emotion-152 emotion-153"
             >
               <div>
                 Small text: 
@@ -694,33 +1085,32 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </td>
       </tr>
       <tr
-        className="colorMatrix-tr"
+        className="emotion-144 emotion-145"
+        data-test="colorMatrix-tr"
       >
         <th
-          className="colorMatrix-th"
+          className="emotion-34 emotion-35"
+          data-test="colorMatrix-th"
           scope="row"
         >
           #000000
         </th>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
           <div
-            className="colorCard"
+            className="emotion-154 emotion-155"
+            data-test="colorCard"
           >
             <div
-              className="colorCard-swatch"
-              style={
-                Object {
-                  "backgroundColor": "#FFFFFF",
-                  "color": "#000000",
-                }
-              }
+              className="emotion-238 emotion-151"
+              color="#000000"
+              data-test="colorCard-swatch"
             >
               Yup
             </div>
             <div
-              className="colorCard-ratio"
+              className="emotion-152 emotion-153"
             >
               <div>
                 Small text: 
@@ -738,24 +1128,21 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
           <div
-            className="colorCard"
+            className="emotion-154 emotion-155"
+            data-test="colorCard"
           >
             <div
-              className="colorCard-swatch"
-              style={
-                Object {
-                  "backgroundColor": "#CCCCCC",
-                  "color": "#000000",
-                }
-              }
+              className="emotion-246 emotion-151"
+              color="#000000"
+              data-test="colorCard-swatch"
             >
               Yup
             </div>
             <div
-              className="colorCard-ratio"
+              className="emotion-152 emotion-153"
             >
               <div>
                 Small text: 
@@ -773,24 +1160,21 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="colorMatrix-td"
+          className="emotion-148 emotion-149"
         >
           <div
-            className="colorCard"
+            className="emotion-154 emotion-155"
+            data-test="colorCard"
           >
             <div
-              className="colorCard-swatch"
-              style={
-                Object {
-                  "backgroundColor": "#777777",
-                  "color": "#000000",
-                }
-              }
+              className="emotion-254 emotion-151"
+              color="#000000"
+              data-test="colorCard-swatch"
             >
               Yup
             </div>
             <div
-              className="colorCard-ratio"
+              className="emotion-152 emotion-153"
             >
               <div>
                 Small text: 

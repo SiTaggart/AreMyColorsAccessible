@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Results should set the font color of seriously? to #343334 on light backgrounds 1`] = `
+.emotion-30 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (min-width:768px) {
+  .emotion-30 {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-30 {
+    margin-bottom: 5rem;
+  }
+}
+
+.emotion-0 {
+  font-size: 20vw;
+  margin: 3rem 0;
+  width: 100%;
+}
+
+@media (min-width:768px) {
+  .emotion-0 {
+    font-size: 18vw;
+    margin: 4rem 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 {
+    font-size: 15vw;
+    margin: 5rem 0;
+  }
+}
+
+@media (min-width:1480px) {
+  .emotion-0 {
+    font-size: 9vw;
+  }
+}
+
+.emotion-6 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-bottom: 2rem;
+  width: 50%;
+}
+
+@media (min-width:768px) {
+  .emotion-6 {
+    width: 25%;
+  }
+}
+
+.emotion-2 {
+  font-size: 10vw;
+  margin: 0;
+}
+
+@media (min-width:768px) {
+  .emotion-2 {
+    font-size: 6vw;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-2 {
+    font-size: 4vw;
+  }
+}
+
+@media (min-width:1480px) {
+  .emotion-2 {
+    font-size: 3vw;
+  }
+}
+
+.emotion-4 {
+  font-size: 14pt;
+  margin: 0;
+}
+
+.emotion-16 {
+  font-size: 18pt;
+  margin: 0;
+}
+
+<div
+  className="emotion-30 emotion-31"
+>
+  <h1
+    aria-atomic="true"
+    aria-live="polite"
+    className="emotion-0 emotion-1"
+    data-test="contrastResults-heading"
+  >
+    Nope
+  </h1>
+  <div
+    className="emotion-6 emotion-7"
+  >
+    <h2
+      className="emotion-2 emotion-3"
+      data-test="contrastResult-rating-small"
+    >
+      Fail
+    </h2>
+    <p
+      className="emotion-4 emotion-5"
+    >
+      Small Text - 4.5 
+      <br />
+      &lt; 14pt or 18px
+    </p>
+  </div>
+  <div
+    className="emotion-6 emotion-7"
+  >
+    <h2
+      className="emotion-2 emotion-3"
+      data-test="contrastResult-rating-bold"
+    >
+      Fail
+    </h2>
+    <p
+      className="emotion-4 emotion-5"
+    >
+      <strong>
+        Bold Text - 3.0 
+        <br />
+        &gt; 14pt or 18px
+      </strong>
+    </p>
+  </div>
+  <div
+    className="emotion-6 emotion-7"
+  >
+    <h2
+      className="emotion-2 emotion-3"
+      data-test="contrastResult-rating-large"
+    >
+      Fail
+    </h2>
+    <p
+      className="emotion-16 emotion-5"
+    >
+      Large Text - 3.0 
+      <br />
+      &gt; 18pt or 24px
+    </p>
+  </div>
+  <div
+    className="emotion-6 emotion-7"
+  >
+    <h2
+      className="emotion-2 emotion-3"
+    >
+      1.2
+    </h2>
+    <p
+      className="emotion-4 emotion-5"
+    >
+      Ratio
+    </p>
+  </div>
+  <div
+    className="emotion-6 emotion-7"
+    style={
+      Object {
+        "color": "#343334",
+      }
+    }
+  >
+    <h2
+      className="emotion-2 emotion-3"
+      data-test="contrastResults-seriously"
+    >
+      Seriously?
+    </h2>
+  </div>
+</div>
+`;
