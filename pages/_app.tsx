@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import App, { Container } from 'next/app';
-import '../styles/index.scss';
+import { Global } from '@emotion/core';
+import globalStyles from '../styles/global';
 
 export default class MyApp extends App {
   public static async getInitialProps({
@@ -25,9 +26,12 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <Container>
-        <Component {...pageProps} />
-      </Container>
+      <>
+        <Global styles={globalStyles} />
+        <Container>
+          <Component {...pageProps} />
+        </Container>
+      </>
     );
   }
 }

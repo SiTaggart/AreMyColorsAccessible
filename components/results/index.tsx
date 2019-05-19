@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { ColorCombinationTypes, Levels } from '../../types';
 import { breakpoint } from '../../styles/utils';
 import colorRating from '../../utils/color-rating';
+import { Heading } from '../typography';
 
 const ContrastResults = styled.div`
   align-items: center;
@@ -20,7 +21,7 @@ const ContrastResults = styled.div`
   }
 `;
 
-const ContrastResultsHeading = styled.h1`
+const ContrastResultsHeading = styled(Heading)`
   font-size: 20vw;
   margin: 3rem 0;
   width: 100%;
@@ -50,7 +51,7 @@ const ContrastResult = styled.div`
   }
 `;
 
-const ContrastResultRating = styled.h2`
+const ContrastResultRating = styled(Heading)`
   font-size: 10vw;
   margin: 0;
 
@@ -86,7 +87,7 @@ class Results extends Component<ResultsProps, {}> {
 
     return (
       <ContrastResult style={styles.seriouslyContainer}>
-        <ContrastResultRating data-test="contrastResults-seriously">
+        <ContrastResultRating as="h2" data-test="contrastResults-seriously">
           {'Seriously?'}
         </ContrastResultRating>
       </ContrastResult>
@@ -120,12 +121,13 @@ class Results extends Component<ResultsProps, {}> {
         <ContrastResultsHeading
           aria-atomic="true"
           aria-live="polite"
+          as="h1"
           data-test="contrastResults-heading"
         >
           {overallRating}
         </ContrastResultsHeading>
         <ContrastResult>
-          <ContrastResultRating data-test="contrastResult-rating-small">
+          <ContrastResultRating as="h2" data-test="contrastResult-rating-small">
             {smallTextRating}
           </ContrastResultRating>
           <ContrastResultDesc>
@@ -134,7 +136,7 @@ class Results extends Component<ResultsProps, {}> {
           </ContrastResultDesc>
         </ContrastResult>
         <ContrastResult>
-          <ContrastResultRating data-test="contrastResult-rating-bold">
+          <ContrastResultRating as="h2" data-test="contrastResult-rating-bold">
             {boldTextRating}
           </ContrastResultRating>
           <ContrastResultDesc>
@@ -145,7 +147,7 @@ class Results extends Component<ResultsProps, {}> {
           </ContrastResultDesc>
         </ContrastResult>
         <ContrastResult>
-          <ContrastResultRating data-test="contrastResult-rating-large">
+          <ContrastResultRating as="h2" data-test="contrastResult-rating-large">
             {largeTextRating}
           </ContrastResultRating>
           <ContrastResultDesc isLarge>
@@ -154,7 +156,7 @@ class Results extends Component<ResultsProps, {}> {
           </ContrastResultDesc>
         </ContrastResult>
         <ContrastResult>
-          <ContrastResultRating>{ratio}</ContrastResultRating>
+          <ContrastResultRating as="h2">{ratio}</ContrastResultRating>
           <ContrastResultDesc>{'Ratio'}</ContrastResultDesc>
         </ContrastResult>
         {areYouSerious}

@@ -2,12 +2,13 @@ import React, { FormEvent, ReactElement } from 'react';
 import styled from '@emotion/styled';
 import FormInput from '../form-input';
 import FormLabel from '../form-label';
+import { Heading } from '../typography';
 
 const StyledPaletteForm = styled.form`
   text-align: center;
 `;
 
-const StyledPaletteFormHeading = styled.h1`
+const StyledPaletteFormHeading = styled(Heading)`
   line-height: 1;
   margin: 3rem 0;
 `;
@@ -29,7 +30,7 @@ const PaletteInput: React.FunctionComponent<PaletteInputProps> = (
   return (
     <StyledPaletteForm onSubmit={handleFormSubmit}>
       <div>
-        <StyledPaletteFormHeading>
+        <StyledPaletteFormHeading as="h1">
           <FormLabel htmlFor="palette-form-input" variant="large">
             Add the colours from your palette
           </FormLabel>
