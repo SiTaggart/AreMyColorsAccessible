@@ -30,6 +30,7 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
 }
 
 .emotion-0 {
+  font-weight: 700;
   font-size: 20vw;
   margin: 3rem 0;
   width: 100%;
@@ -70,6 +71,7 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
 }
 
 .emotion-2 {
+  font-weight: 700;
   font-size: 10vw;
   margin: 0;
 }

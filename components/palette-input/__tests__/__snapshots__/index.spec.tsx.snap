@@ -6,6 +6,7 @@ exports[`PaletteInput renders without crashing 1`] = `
 }
 
 .emotion-2 {
+  font-weight: 700;
   line-height: 1;
   margin: 3rem 0;
 }
@@ -60,6 +61,7 @@ exports[`PaletteInput should render an error message when passed 1`] = `
 }
 
 .emotion-2 {
+  font-weight: 700;
   line-height: 1;
   margin: 3rem 0;
 }

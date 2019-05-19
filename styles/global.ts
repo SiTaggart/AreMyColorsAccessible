@@ -1,5 +1,6 @@
 import { css } from '@emotion/core';
-import normalize from 'normalize.css/normalize.css';
+// @ts-ignore
+import normalize from '~normalize.css/normalize.css';
 
 const globalStyles = css`
   ${normalize}
