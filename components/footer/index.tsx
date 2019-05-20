@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
-import Link from 'next/link';
+import NextLink from 'next/link';
 import styled from '@emotion/styled';
+import { Link } from '../typography';
 
 interface FooterProps {
   styles?: { footerLinks?: object };
@@ -21,7 +22,7 @@ const StyledFooterNavListItem = styled.li`
   display: inline-block;
   padding: 0 1rem;
 `;
-const StyledFooterAnchor = styled.a`
+const StyledFooterAnchor = styled(Link)`
   transition: color 400ms ease-in;
 `;
 
@@ -34,19 +35,19 @@ const Footer: React.FunctionComponent<FooterProps> = (
       <StyledFooterNav>
         <StyledFooterNavList>
           <StyledFooterNavListItem>
-            <Link href="/" passHref>
+            <NextLink href="/" passHref>
               <StyledFooterAnchor style={linkStyles}>Home</StyledFooterAnchor>
-            </Link>
+            </NextLink>
           </StyledFooterNavListItem>
           <StyledFooterNavListItem>
-            <Link href="/palette" passHref>
+            <NextLink href="/palette" passHref>
               <StyledFooterAnchor style={linkStyles}>Palette</StyledFooterAnchor>
-            </Link>
+            </NextLink>
           </StyledFooterNavListItem>
           <StyledFooterNavListItem>
-            <Link href="/about" passHref>
+            <NextLink href="/about" passHref>
               <StyledFooterAnchor style={linkStyles}>About</StyledFooterAnchor>
-            </Link>
+            </NextLink>
           </StyledFooterNavListItem>
         </StyledFooterNavList>
       </StyledFooterNav>
