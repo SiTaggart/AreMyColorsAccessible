@@ -1,14 +1,23 @@
 import React, { ReactNode, ReactElement } from 'react';
-import './form-control.scss';
+import styled from '@emotion/styled';
+import { breakpoint } from '../../styles/utils';
 
 interface FormControlProps {
   children: ReactNode;
 }
 
+const StyleFormControl = styled.div`
+  padding: 1rem;
+  ${breakpoint('small')} {
+    flex: 1 1 auto;
+    width: 50%;
+  }
+`;
+
 const FormControl: React.FunctionComponent<FormControlProps> = (
   props: FormControlProps
 ): ReactElement<HTMLDivElement> => {
-  return <div className="form-control">{props.children}</div>;
+  return <StyleFormControl>{props.children}</StyleFormControl>;
 };
 
 export default FormControl;

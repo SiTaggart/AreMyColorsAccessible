@@ -1,7 +1,17 @@
 import React, { FormEvent, ReactElement } from 'react';
-import './palette-input.scss';
+import styled from '@emotion/styled';
 import FormInput from '../form-input';
 import FormLabel from '../form-label';
+import { Heading } from '../typography';
+
+const StyledPaletteForm = styled.form`
+  text-align: center;
+`;
+
+const StyledPaletteFormHeading = styled(Heading)`
+  line-height: 1;
+  margin: 3rem 0;
+`;
 
 interface PaletteInputProps {
   onColorAdd: (colors: string) => void;
@@ -18,13 +28,13 @@ const PaletteInput: React.FunctionComponent<PaletteInputProps> = (
   };
 
   return (
-    <form className="paletteForm" onSubmit={handleFormSubmit}>
-      <div className="paletteForm-element">
-        <h1 className="paletteForm-heading">
-          <FormLabel htmlFor="palette-form-input" isLarge>
+    <StyledPaletteForm onSubmit={handleFormSubmit}>
+      <div>
+        <StyledPaletteFormHeading as="h1">
+          <FormLabel htmlFor="palette-form-input" variant="large">
             Add the colours from your palette
           </FormLabel>
-        </h1>
+        </StyledPaletteFormHeading>
         <FormInput
           errorMessage={props.errorMessage}
           hasNoSpacing
@@ -33,7 +43,7 @@ const PaletteInput: React.FunctionComponent<PaletteInputProps> = (
           placeholder="e.g. #ccc, #fff or blue"
         />
       </div>
-    </form>
+    </StyledPaletteForm>
   );
 };
 

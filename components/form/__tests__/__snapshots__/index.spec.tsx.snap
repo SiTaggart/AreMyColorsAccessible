@@ -1,16 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Form renders without crashing 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  -webkit-transition: color 400ms ease-out;
+  transition: color 400ms ease-out;
+}
+
 <div
-  className="form"
+  className="emotion-0 emotion-1"
 >
   children
 </div>
 `;
 
 exports[`Form should render inline styles when past 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  -webkit-transition: color 400ms ease-out;
+  transition: color 400ms ease-out;
+}
+
 <div
-  className="form"
+  className="emotion-0 emotion-1"
   style={
     Object {
       "backgroundColor": "#fff",

@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import './form-range.scss';
+import { StyledRange } from './styled-range';
 
 export interface FormRangeProps {
   defaultValue?: string;
@@ -15,17 +15,17 @@ const FormRange: React.FunctionComponent<FormRangeProps> = (
   props: FormRangeProps
 ): ReactElement<HTMLInputElement> => {
   return (
-    <input
-      className="form-range"
-      defaultValue={props.defaultValue}
-      id={props.id}
-      max={props.max}
-      min={props.min}
-      onChange={props.onChange}
-      onInput={props.onInput}
-      type="range"
-      value={props.value}
-    />
+    <>
+      <StyledRange
+        defaultValue={props.defaultValue}
+        id={props.id}
+        max={props.max}
+        min={props.min}
+        onChange={props.onChange}
+        onInput={props.onInput}
+        value={props.value}
+      />
+    </>
   );
 };
 

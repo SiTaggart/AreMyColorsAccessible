@@ -32,13 +32,16 @@ describe('FormInput', (): void => {
   it('should display an error message and associate it to the input', (): void => {
     const wrapper: ReactWrapper = mount(<FormInputWrapper errorMessage="this is an error" />);
     expect(wrapper.find('input').prop('aria-describedby')).toEqual('error-message-label-form-id');
-    expect(wrapper.find('input').hasClass('form-input--error')).toEqual(true);
     expect(wrapper.find('error-message-label-form-id').length).toBeGreaterThan(-1);
+    const formInputCmp = renderer
+      .create(<FormInputWrapper errorMessage="this is an error" />)
+      .toJSON();
+    expect(formInputCmp).toMatchSnapshot();
   });
 
   it('should set the noSpacing class when hasNoSpacing is set', (): void => {
-    const wrapper: ReactWrapper = mount(<FormInputWrapper hasNoSpacing />);
-    expect(wrapper.find('input').hasClass('form-input--noSpacing')).toEqual(true);
+    const formInputCmp = renderer.create(<FormInputWrapper hasNoSpacing />).toJSON();
+    expect(formInputCmp).toMatchSnapshot();
   });
 
   it('should set a name', (): void => {

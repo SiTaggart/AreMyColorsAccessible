@@ -1,8 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormLabel renders without crashing 1`] = `
+.emotion-0 {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
 <label
-  className="form-label"
+  className="emotion-0 emotion-1"
+  htmlFor="input-id"
+>
+  children
+</label>
+`;
+
+exports[`FormLabel should create a large label style with variant large 1`] = `
+.emotion-0 {
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+<label
+  className="emotion-0 emotion-1"
   htmlFor="input-id"
 >
   children

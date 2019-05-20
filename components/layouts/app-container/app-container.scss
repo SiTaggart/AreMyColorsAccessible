@@ -1,7 +1,0 @@
-@import "../../../styles/utils";
-
-.appContainer {
-  @include breakpoint($small-screen) {
-    height: 100%;
-  }
-}

@@ -1,19 +1,24 @@
 import React, { ReactNode, ReactElement } from 'react';
-import './form.scss';
+import styled from '@emotion/styled';
 
 interface FormProps {
   children: ReactNode;
   style?: {};
 }
 
+const StyledForm = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  transition: color 400ms ease-out;
+`;
+
 const Form: React.FunctionComponent<FormProps> = (
   props: FormProps
 ): ReactElement<HTMLDivElement> => {
-  return (
-    <div className="form" style={props.style}>
-      {props.children}
-    </div>
-  );
+  return <StyledForm style={props.style}>{props.children}</StyledForm>;
 };
 
 export default Form;

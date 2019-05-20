@@ -1,22 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ColorCard renders without crashing 1`] = `
+.emotion-4 {
+  border: solid 1px #dedede;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-transition: opacity ease-in;
+  transition: opacity ease-in;
+}
+
+.emotion-0 {
+  background-color: #fff;
+  border-bottom: solid 1px #ccc;
+  color: #000;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.emotion-2 {
+  font-size: 0.8rem;
+  padding: 0.3rem;
+}
+
 <div
-  className="colorCard"
+  className="emotion-4 emotion-5"
+  data-test="colorCard"
 >
   <div
-    className="colorCard-swatch"
-    style={
-      Object {
-        "backgroundColor": "#fff",
-        "color": "#000",
-      }
-    }
+    className="emotion-0 emotion-1"
+    color="#000"
+    data-test="colorCard-swatch"
   >
     Yup
   </div>
   <div
-    className="colorCard-ratio"
+    className="emotion-2 emotion-3"
   >
     <div>
       Small text: 

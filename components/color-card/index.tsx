@@ -1,8 +1,7 @@
 import React, { ReactElement } from 'react';
-import ClassNames from 'classnames';
+import styled from '@emotion/styled';
 import { Levels } from '../../types';
 import colorRating from '../../utils/color-rating';
-import './color-card.scss';
 
 export interface ColorCardProps {
   accessibility: Levels;
@@ -11,29 +10,56 @@ export interface ColorCardProps {
   contrast: number;
 }
 
+interface StyledColorCardProps {
+  isNotImportant?: boolean;
+}
+const StyledColorCard = styled.div<StyledColorCardProps>`
+  border: solid 1px #dedede;
+  border-radius: 5px;
+  overflow: hidden;
+  opacity: ${(props): string | null => (props.isNotImportant ? '0.1' : null)};
+  text-align: center;
+  transition: opacity ease-in;
+`;
+
+interface StyledColorSwatchProps {
+  backgroundColor: string;
+  color: string;
+}
+const StyledColorSwatch = styled.div<StyledColorSwatchProps>`
+  background-color: ${(props): string => props.backgroundColor};
+  border-bottom: solid 1px #ccc;
+  color: ${(props): string => props.color};
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+`;
+
+const StyledColorCardRatio = styled.div`
+  font-size: 0.8rem;
+  padding: 0.3rem;
+`;
+
 const ColorCard: React.FunctionComponent<ColorCardProps> = (
   props: ColorCardProps
 ): ReactElement<HTMLDivElement> => {
   const rating = colorRating(props.accessibility);
 
   return (
-    <div
-      className={ClassNames('colorCard', {
-        'colorCard--nope': rating.overall === 'Nope'
-      })}
-    >
-      <div
-        className="colorCard-swatch"
-        style={{ backgroundColor: props.background, color: props.color }}
+    <StyledColorCard data-test="colorCard">
+      <StyledColorSwatch
+        backgroundColor={props.background}
+        color={props.color}
+        data-test="colorCard-swatch"
       >
         {rating.overall}
-      </div>
-      <div className="colorCard-ratio">
+      </StyledColorSwatch>
+      <StyledColorCardRatio>
         <div>Small text: {rating.small}</div>
         <div>Large text: {rating.large}</div>
         <div>Contrast: {parseFloat(props.contrast.toFixed(2))}</div>
-      </div>
-    </div>
+      </StyledColorCardRatio>
+    </StyledColorCard>
   );
 };
 

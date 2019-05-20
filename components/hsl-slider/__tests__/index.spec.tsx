@@ -42,35 +42,6 @@ describe('hsl-slider', (): void => {
       expect(hslSliderComp).toMatchSnapshot();
     });
 
-    it('should apply the compact modifier classes', (): void => {
-      wrapper = shallow(
-        <HslSlider id="input-id" onChange={onChangeMock} value="#ccc" variant="compact" />
-      );
-
-      expect(wrapper.find('.form-hsl-sliders').hasClass('form-hsl-sliders--compact')).toEqual(true);
-
-      expect(
-        wrapper
-          .find('.form-hsl-slider')
-          .at(0)
-          .hasClass('form-hsl-slider--compact')
-      ).toEqual(true);
-
-      expect(
-        wrapper
-          .find('.form-hsl-slider')
-          .at(1)
-          .hasClass('form-hsl-slider--compact')
-      ).toEqual(true);
-
-      expect(
-        wrapper
-          .find('.form-hsl-slider')
-          .at(2)
-          .hasClass('form-hsl-slider--compact')
-      ).toEqual(true);
-    });
-
     it('should render the slider input label as the first letter', (): void => {
       const wrapper: ReactWrapper = mount(
         <HslSlider id="input-id" onChange={onChangeMock} value="#ccc" variant="compact" />
@@ -78,21 +49,21 @@ describe('hsl-slider', (): void => {
 
       expect(
         wrapper
-          .find('.form-hsl-slider--compact label')
+          .find('[htmlFor="input-id-Hue"]')
           .at(0)
           .text()
       ).toBe('H');
 
       expect(
         wrapper
-          .find('.form-hsl-slider--compact label')
+          .find('[htmlFor="input-id-Saturation"]')
           .at(1)
           .text()
       ).toBe('S');
 
       expect(
         wrapper
-          .find('.form-hsl-slider--compact label')
+          .find('[htmlFor="input-id-Lightness"]')
           .at(2)
           .text()
       ).toBe('L');

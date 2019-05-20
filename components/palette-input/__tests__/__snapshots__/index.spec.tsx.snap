@@ -1,18 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PaletteInput renders without crashing 1`] = `
+.emotion-6 {
+  text-align: center;
+}
+
+.emotion-2 {
+  font-weight: 700;
+  line-height: 1;
+  margin: 3rem 0;
+}
+
+.emotion-0 {
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.emotion-4 {
+  background: rgba(255,255,255,0.1);
+  border: solid 1px;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  width: 100%;
+}
+
 <form
-  className="paletteForm"
+  className="emotion-6 emotion-7"
   onSubmit={[Function]}
 >
-  <div
-    className="paletteForm-element"
-  >
+  <div>
     <h1
-      className="paletteForm-heading"
+      className="emotion-2 emotion-3"
     >
       <label
-        className="form-label form-label--large"
+        className="emotion-0 emotion-1"
         htmlFor="palette-form-input"
       >
         Add the colours from your palette
@@ -20,12 +45,87 @@ exports[`PaletteInput renders without crashing 1`] = `
     </h1>
     <input
       autoComplete="off"
-      className="form-input form-input--noSpacing"
+      className="emotion-4 emotion-5"
       id="palette-form-input"
       name="paletteFormInput"
       placeholder="e.g. #ccc, #fff or blue"
       type="text"
     />
+  </div>
+</form>
+`;
+
+exports[`PaletteInput should render an error message when passed 1`] = `
+.emotion-8 {
+  text-align: center;
+}
+
+.emotion-2 {
+  font-weight: 700;
+  line-height: 1;
+  margin: 3rem 0;
+}
+
+.emotion-0 {
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.emotion-4 {
+  background: rgba(255,255,255,0.1);
+  border: solid 1px;
+  border-color: #c12915;
+  border-radius: 3px;
+  color: #c12915;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.emotion-4:focus {
+  border-color: #c12915;
+  box-shadow: 0px 0px 10px #c12915;
+}
+
+.emotion-6 {
+  color: #c12915;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+<form
+  className="emotion-8 emotion-9"
+  onSubmit={[Function]}
+>
+  <div>
+    <h1
+      className="emotion-2 emotion-3"
+    >
+      <label
+        className="emotion-0 emotion-1"
+        htmlFor="palette-form-input"
+      >
+        Add the colours from your palette
+      </label>
+    </h1>
+    <input
+      aria-describedby="error-message-label-palette-form-input"
+      autoComplete="off"
+      className="emotion-4 emotion-5"
+      id="palette-form-input"
+      name="paletteFormInput"
+      placeholder="e.g. #ccc, #fff or blue"
+      type="text"
+    />
+    <div
+      className="emotion-6 emotion-7"
+      id="error-message-label-palette-form-input"
+    >
+      I'm an error
+    </div>
   </div>
 </form>
 `;

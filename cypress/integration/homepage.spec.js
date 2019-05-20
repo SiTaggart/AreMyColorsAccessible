@@ -9,7 +9,7 @@ describe('Homepage', function() {
 
     it('should have a heading level 1', () => {
       cy.visit('/');
-      cy.get('.contrastResults-heading').should('contain', 'Yup');
+      cy.get('[data-test=contrastResults-heading]').should('contain', 'Yup');
     });
 
     it('should have the default background color', () => {
@@ -33,7 +33,7 @@ describe('Homepage', function() {
     });
 
     it('should fail contrast', () => {
-      cy.get('.contrastResults-heading').should('contain', 'Nope');
+      cy.get('[data-test=contrastResults-heading]').should('contain', 'Nope');
     });
   });
 
@@ -52,7 +52,7 @@ describe('Homepage', function() {
     });
 
     it('should fail contrast', () => {
-      cy.get('.contrastResults-heading').should('contain', 'Nope');
+      cy.get('[data-test=contrastResults-heading]').should('contain', 'Nope');
     });
   });
 
@@ -73,7 +73,7 @@ describe('Homepage', function() {
     });
 
     it('should fail contrast', () => {
-      cy.get('.contrastResults-heading').should('contain', 'Nope');
+      cy.get('[data-test=contrastResults-heading]').should('contain', 'Nope');
     });
   });
 
@@ -94,21 +94,21 @@ describe('Homepage', function() {
     });
 
     it('should fail contrast', () => {
-      cy.get('.contrastResults-heading').should('contain', 'Kinda');
+      cy.get('[data-test=contrastResults-heading]').should('contain', 'Kinda');
     });
   });
 
   describe('footer navigation', () => {
     it('should navigate to the about page', () => {
       cy.visit('/');
-      cy.get('.footer ul li:last-child').click();
+      cy.get('footer ul li:last-child').click();
       cy.url().should('eq', 'http://localhost:3000/about');
       cy.get('h1').should('contain', 'Are my Colours Accessible?');
     });
 
     it('should navigate to the palette page', () => {
       cy.visit('/');
-      cy.get('.footer ul li:nth-child(2)').click();
+      cy.get('footer ul li:nth-child(2)').click();
       cy.url().should('eq', 'http://localhost:3000/palette');
       cy.get('h1').should('contain', 'Add the colours from your palette');
     });
