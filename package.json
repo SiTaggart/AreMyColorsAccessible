@@ -8,8 +8,6 @@
     "analyze_bundle": "BUNDLE_ANALYZE=both yarn build",
     "analyze_bundle:browser": "BUNDLE_ANALYZE=browser yarn build",
     "analyze_bundle:server": "BUNDLE_ANALYZE=server yarn build",
-    "precommit": "yarn precise-commits",
-    "precise-commits": "precise-commits",
     "jest": "NODE_ENV=test jest",
     "lint": "eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0 --format codeframe",
     "bundlesize": "bundlesize",
@@ -128,5 +126,10 @@
       "path": "./.next/static/css/*.css",
       "maxSize": "3 kB"
     }
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "precise-commits"
+    }
+  }
 }
