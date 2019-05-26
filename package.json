@@ -8,7 +8,8 @@
     "analyze_bundle": "BUNDLE_ANALYZE=both yarn build",
     "analyze_bundle:browser": "BUNDLE_ANALYZE=browser yarn build",
     "analyze_bundle:server": "BUNDLE_ANALYZE=server yarn build",
-    "precommit": "lint-staged",
+    "precommit": "yarn precise-commits",
+    "precise-commits": "precise-commits",
     "jest": "NODE_ENV=test jest",
     "lint": "eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0 --format codeframe",
     "bundlesize": "bundlesize",
@@ -20,12 +21,6 @@
     "gen:common": "plop --plopfile generators/plopfile.js common",
     "gen:component": "plop --plopfile generators/plopfile.js component",
     "gen:page": "plop --plopfile generators/plopfile.js page"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --write",
-      "git add"
-    ]
   },
   "author": "Simon Taggart <me@simontaggart.com> (http://simontaggart.com/)",
   "repository": {
@@ -107,9 +102,9 @@
     "identity-obj-proxy": "3.0.0",
     "jest": "24.8.0",
     "jest-emotion": "10.0.11",
-    "lint-staged": "8.1.7",
     "listr": "0.14.3",
     "plop": "2.3.0",
+    "precise-commits": "1.0.2",
     "prettier": "1.17.1",
     "react-addons-test-utils": "15.6.2",
     "react-test-renderer": "16.8.6",
