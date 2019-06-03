@@ -70,7 +70,7 @@
     "@types/enzyme": "3.9.3",
     "@types/express": "4.16.1",
     "@types/jest": "24.0.13",
-    "@types/lodash": "4.14.132",
+    "@types/lodash": "4.14.133",
     "@types/next": "8.0.5",
     "@types/node": "11.13.13",
     "@types/query-string": "6.3.0",
