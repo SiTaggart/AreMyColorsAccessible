@@ -1,15 +1,18 @@
-import React, { ReactNode } from 'react';
+import * as React from 'react';
+import styled from '@emotion/styled';
 
-interface I{{pascalCase name}}Props {
-  children: ReactNode;
+const Styled{{pascalCase name}} = styled.div<{}>``;
+
+interface {{pascalCase name}}Props {
+  children?: React.ReactElement;
 }
 
-const {{pascalCase name}}: React.FunctionComponent<I{{pascalCase name}}Props> = (props: I{{pascalCase name}}Props) => {
+const {{pascalCase name}}: React.FC<{{pascalCase name}}Props> = (props: {{pascalCase name}}Props): React.ReactElement => {
   return (
-    <div>
+    <Styled{{pascalCase name}}>
       {props.children}
-    </div>
+    </Styled{{pascalCase name}}>
   );
 };
 
-export default {{pascalCase name}};
+export { {{pascalCase name}} };
