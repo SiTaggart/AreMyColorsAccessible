@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { css, SerializedStyles } from '@emotion/core';
 
 interface LayoutProps {
-  children?: JSX.Element[] | JSX.Element;
+  children?: ReactElement;
   variant?: 'large' | 'small' | 'full';
 }
 

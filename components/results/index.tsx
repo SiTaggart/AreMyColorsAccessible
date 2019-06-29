@@ -12,7 +12,7 @@ import {
 interface AreYouSeriousProps {
   isLight: boolean;
 }
-const AreYouSerious: React.FunctionComponent<AreYouSeriousProps> = ({
+const AreYouSerious: React.FC<AreYouSeriousProps> = ({
   isLight
 }: AreYouSeriousProps): ReactElement => {
   let styles = {
@@ -30,7 +30,7 @@ const AreYouSerious: React.FunctionComponent<AreYouSeriousProps> = ({
   );
 };
 
-const Results: React.FunctionComponent<{}> = (): ReactElement => {
+const Results: React.FC<{}> = (): ReactElement => {
   const { siteData } = useSiteData();
   const colorInfo = siteData.colorCombos[0].combinations[0];
   const contrast = colorInfo.contrast ? colorInfo.contrast : 0;

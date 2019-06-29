@@ -11,7 +11,7 @@ export interface FormRangeProps {
   value?: number;
 }
 
-const FormRange: React.FunctionComponent<FormRangeProps> = (
+const FormRange: React.FC<FormRangeProps> = (
   props: FormRangeProps
 ): ReactElement<HTMLInputElement> => {
   return (

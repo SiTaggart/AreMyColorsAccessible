@@ -47,9 +47,7 @@ interface Range {
   handleOnChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
   symbol: string;
 }
-const HslSliders: React.FunctionComponent<HslSliderProps> = (
-  props: HslSliderProps
-): ReactElement => {
+const HslSliders: React.FC<HslSliderProps> = (props: HslSliderProps): ReactElement => {
   const hslColorValue: HSLColor = convertToHSL(props.value);
 
   const updateColor = (color: HSLColor): void => {

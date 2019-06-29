@@ -40,7 +40,7 @@ const StyledColorCardRatio = styled.div`
   padding: 0.3rem;
 `;
 
-const ColorCard: React.FunctionComponent<ColorCardProps> = (
+const ColorCard: React.FC<ColorCardProps> = (
   props: ColorCardProps
 ): ReactElement<HTMLDivElement> => {
   const rating = colorRating(props.accessibility);

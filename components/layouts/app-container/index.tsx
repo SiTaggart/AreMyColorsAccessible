@@ -16,7 +16,7 @@ interface AppContainerProps {
   title?: string;
 }
 
-const AppContainer: React.FunctionComponent<AppContainerProps> = ({
+const AppContainer: React.FC<AppContainerProps> = ({
   children,
   title = 'Are My Colours Accessible'
 }: AppContainerProps): ReactElement => {

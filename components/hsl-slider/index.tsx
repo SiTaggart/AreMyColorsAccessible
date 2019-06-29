@@ -15,9 +15,7 @@ interface HslSliderProps {
   variant?: 'compact' | null;
 }
 
-const HslSlider: React.FunctionComponent<HslSliderProps> = (
-  props: HslSliderProps
-): ReactElement => {
+const HslSlider: React.FC<HslSliderProps> = (props: HslSliderProps): ReactElement => {
   return (
     <HSLSlider variant={props.variant}>
       <HSLSliderLabelContainer variant={props.variant}>

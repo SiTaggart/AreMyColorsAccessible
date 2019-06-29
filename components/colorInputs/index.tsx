@@ -1,17 +1,17 @@
-import React, { ReactElement, useContext } from 'react';
+import React, { ReactElement } from 'react';
 import Form from '../form';
 import FormControl from '../form-control';
 import FormInput from '../form-input';
 import FormLabel from '../form-label';
 import HslSliders from '../hsl-sliders';
-import { HomeContext } from '../../context/home';
+import { useSiteData } from '../../context/home';
 
-const ColorInputs: React.FunctionComponent<{}> = (): ReactElement => {
+const ColorInputs: React.FC<{}> = (): ReactElement => {
   const {
     siteData: { background, colorCombos, isLight, textColor },
     handleTextColorInputChange,
     handleBackgroundColorInputChange
-  } = useContext(HomeContext);
+  } = useSiteData();
 
   const formTextColor = isLight ? '#343334' : '#fff';
   const styles = {

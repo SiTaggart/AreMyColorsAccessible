@@ -7,7 +7,7 @@ import { SiteData, ColorCombosTypes } from '../../types';
 import ColorCombos from '../../utils/color-combos';
 
 interface HomeContextInterface {
-  siteData?: SiteData;
+  siteData: SiteData;
   handleBackgroundColorInputChange: (value: string) => void;
   handleTextColorInputChange: (value: string) => void;
 }
@@ -101,11 +101,9 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
     window.history.pushState(state, 'Are My Colors Accessible', query);
   }, 200);
 
-  React.useEffect(
-    (): void => {
-      updateHash();
-    }
-  );
+  React.useEffect((): void => {
+    updateHash();
+  });
 
   const setNewColorCombo = (textColor: string, backgroundColor: string): void => {
     let newCombos: ColorCombosTypes[] | false = ColorCombos([textColor, backgroundColor]);

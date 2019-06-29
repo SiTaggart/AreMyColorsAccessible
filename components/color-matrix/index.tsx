@@ -35,7 +35,7 @@ const StyledColorMatrixTd = styled.td`
   padding: 0.5rem;
 `;
 
-const ColorMatrix: React.FunctionComponent<ColorMatrixProps> = (
+const ColorMatrix: React.FC<ColorMatrixProps> = (
   props: ColorMatrixProps
 ): ReactElement<HTMLDivElement> => {
   return (

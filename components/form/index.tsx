@@ -15,9 +15,7 @@ const StyledForm = styled.div`
   transition: color 400ms ease-out;
 `;
 
-const Form: React.FunctionComponent<FormProps> = (
-  props: FormProps
-): ReactElement<HTMLDivElement> => {
+const Form: React.FC<FormProps> = (props: FormProps): ReactElement<HTMLDivElement> => {
   return <StyledForm style={props.style}>{props.children}</StyledForm>;
 };
 
