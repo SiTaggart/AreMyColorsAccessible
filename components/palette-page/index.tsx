@@ -1,107 +1,28 @@
-import React, { Component, ReactFragment } from 'react';
-import Color from 'color';
-import ColorCombos from '../../utils/color-combos';
-import { ColorCombosTypes } from '../../types';
+import * as React from 'react';
 
 import PaletteInput from '../palette-input';
 import ColorMatrix from '../color-matrix';
+import { usePaletteData } from '../../context/palette';
 
-interface PalettePageState {
-  colors: string[];
-  colorCombos: ColorCombosTypes[] | false;
-  hasError: boolean;
-}
-
-export default class PalettePage extends Component<{}, PalettePageState> {
-  public state = { colors: [], colorCombos: [], hasError: false };
-
-  private convertColorStringsToColors = (colorStrings: string[]): Color[] | false => {
-    let isValidColor = true;
-    const colorTypes: Color[] = [];
-
-    colorStrings.forEach(
-      (color: string): void => {
-        try {
-          colorTypes.push(Color(color));
-        } catch (error) {
-          isValidColor = false;
+const PalettePage: React.FC<{}> = (): React.ReactElement => {
+  const { paletteData, handleColorChange, handleNewColor } = usePaletteData();
+  return (
+    <>
+      <PaletteInput
+        errorMessage={
+          paletteData.hasError
+            ? 'Please enter valid colors as comma or space separated hex values'
+            : undefined
         }
-      }
-    );
+        onColorAdd={handleNewColor}
+      />
+      <ColorMatrix
+        colorCombos={paletteData.colorCombos}
+        colors={paletteData.colors}
+        onColorChange={handleColorChange}
+      />
+    </>
+  );
+};
 
-    if (isValidColor) {
-      return colorTypes;
-    } else {
-      return isValidColor;
-    }
-  };
-
-  private convertColorValuesToArray = (colors: string): string[] => {
-    const colorsArr: string[] = colors.split(/[ ,]+/).filter(Boolean);
-    const dedupedColors = colorsArr.filter(
-      (color, index, self): boolean => self.indexOf(color) === index
-    );
-    return dedupedColors;
-  };
-
-  private handleColorChange = (value: string, index: number): void => {
-    const newColors: string[] = [...this.state.colors];
-    newColors[index] = value;
-    this.updateColors(newColors, !!this.isValidColor(value));
-  };
-
-  private handleNewColor = (colors: string): void => {
-    const colorsArray: string[] = this.convertColorValuesToArray(colors);
-    const convertedColors: Color[] | false = this.convertColorStringsToColors(colorsArray);
-    const mergedColors: string[] = this.mergeColorsWithState(colorsArray);
-
-    if (convertedColors !== false) {
-      this.updateColors(mergedColors, true);
-    } else {
-      this.setState({ hasError: true });
-    }
-  };
-
-  private isValidColor = (hex: string): Color | false => {
-    let color: Color | false = false;
-    try {
-      color = Color(hex);
-    } catch (error) {}
-    return color;
-  };
-
-  private mergeColorsWithState = (colors: string[]): string[] => {
-    const filteredColors: string[] = colors.filter(
-      (color): boolean => (this.state.colors as string[]).indexOf(color) < 0
-    );
-    return [...this.state.colors, ...filteredColors];
-  };
-
-  private updateColors = (colors: string[], isValidColor: boolean): void => {
-    this.setState({
-      colors,
-      colorCombos: isValidColor ? ColorCombos(colors) : this.state.colorCombos,
-      hasError: false
-    });
-  };
-
-  public render(): ReactFragment {
-    return (
-      <>
-        <PaletteInput
-          errorMessage={
-            this.state.hasError
-              ? 'Please enter valid colors as comma or space separated hex values'
-              : undefined
-          }
-          onColorAdd={this.handleNewColor}
-        />
-        <ColorMatrix
-          colorCombos={this.state.colorCombos}
-          colors={this.state.colors}
-          onColorChange={this.handleColorChange}
-        />
-      </>
-    );
-  }
-}
+export default PalettePage;

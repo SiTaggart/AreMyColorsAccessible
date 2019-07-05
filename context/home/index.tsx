@@ -6,7 +6,7 @@ import qs from 'query-string';
 import { SiteData, ColorCombosTypes } from '../../types';
 import ColorCombos from '../../utils/color-combos';
 
-interface HomeContextInterface {
+export interface HomeContextInterface {
   siteData: SiteData;
   handleBackgroundColorInputChange: (value: string) => void;
   handleTextColorInputChange: (value: string) => void;
@@ -22,7 +22,7 @@ const setInitialContext = (initialSiteData: SiteData): SiteData => {
     isLight = initialSiteData.isLight;
   }
 
-  const initialCombos: ColorCombosTypes[] | false = ColorCombos([textColor, background]);
+  const initialCombos = ColorCombos([textColor, background]) as ColorCombosTypes[];
   return {
     background: background,
     textColor: textColor,
