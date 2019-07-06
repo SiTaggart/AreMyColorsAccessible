@@ -3,7 +3,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 
-import HomePage from '../';
+import HomePage from '../pages';
 
 describe('Home Page', (): void => {
   it('should render without crashing', (): void => {
