@@ -15,11 +15,11 @@ exports[`ColorMatrix renders without crashing 1`] = `
   padding: 0.5rem;
 }
 
-.emotion-34:first-child {
+.emotion-34:first-of-type {
   padding-left: 0;
 }
 
-.emotion-34:last-child {
+.emotion-34:last-of-type {
   padding-right: 0;
 }
 

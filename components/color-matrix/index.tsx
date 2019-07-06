@@ -23,11 +23,11 @@ const StyledColorMatrixTh = styled.th`
   font-weight: bold;
   padding: 0.5rem;
 
-  &:first-child {
+  &:first-of-type {
     padding-left: 0;
   }
 
-  &:last-child {
+  &:last-of-type {
     padding-right: 0;
   }
 `;

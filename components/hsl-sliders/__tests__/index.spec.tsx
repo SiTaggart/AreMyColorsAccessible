@@ -7,21 +7,13 @@ import renderer from 'react-test-renderer';
 import HslSliders from '..';
 
 describe('hsl-slider', (): void => {
-  let onChangeMock: jest.Mock;
+  let onChangeMock: jest.Mock = jest.fn();
   let wrapper: ShallowWrapper;
 
-  beforeAll(
-    (): void => {
-      onChangeMock = jest.fn();
-    }
-  );
-
-  beforeEach(
-    (): void => {
-      jest.clearAllMocks();
-      wrapper = shallow(<HslSliders id="input-id" onChange={onChangeMock} value="#ccc" />);
-    }
-  );
+  beforeEach((): void => {
+    jest.clearAllMocks();
+    wrapper = shallow(<HslSliders id="input-id" onChange={onChangeMock} value="#ccc" />);
+  });
 
   it('renders without crashing', (): void => {
     ReactDOM.render(

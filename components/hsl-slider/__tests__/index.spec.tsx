@@ -10,29 +10,25 @@ describe('hsl-slider', (): void => {
   let onChangeMock: jest.Mock;
   let wrapper: ShallowWrapper;
 
-  beforeAll(
-    (): void => {
-      onChangeMock = jest.fn();
-    }
-  );
+  beforeAll((): void => {
+    onChangeMock = jest.fn();
+  });
 
-  beforeEach(
-    (): void => {
-      jest.clearAllMocks();
-      wrapper = shallow(
-        <HslSlider
-          id="input-id"
-          label="test"
-          max={20}
-          min={100}
-          onChange={onChangeMock}
-          onInput={onChangeMock}
-          symbol="%"
-          value={30}
-        />
-      );
-    }
-  );
+  beforeEach((): void => {
+    jest.clearAllMocks();
+    wrapper = shallow(
+      <HslSlider
+        id="input-id"
+        label="Test"
+        max={20}
+        min={100}
+        onChange={onChangeMock}
+        onInput={onChangeMock}
+        symbol="%"
+        value={30}
+      />
+    );
+  });
 
   it('renders without crashing', (): void => {
     ReactDOM.render(
@@ -89,13 +85,14 @@ describe('hsl-slider', (): void => {
       const wrapper: ReactWrapper = mount(
         <HslSlider
           id="input-id"
-          label="test"
+          label="Test"
           max={20}
           min={100}
           onChange={onChangeMock}
           onInput={onChangeMock}
           symbol="%"
           value={30}
+          variant="compact"
         />
       );
 
@@ -110,6 +107,6 @@ describe('hsl-slider', (): void => {
 
   it('should call onchange callback when value changed', (): void => {
     wrapper.find('#input-id').simulate('input', { target: { value: '60' } });
-    expect(onChangeMock).toBeCalledWith('#CCCCCC', 'input-id');
+    expect(onChangeMock).toBeCalledWith({ target: { value: '60' } });
   });
 });
