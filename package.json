@@ -91,7 +91,7 @@
     "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-react": "7.14.2",
-    "eslint-plugin-react-hooks": "^1.6.0",
+    "eslint-plugin-react-hooks": "1.6.1",
     "eslint-plugin-standard": "4.0.0",
     "husky": "3.0.1",
     "identity-obj-proxy": "3.0.0",
@@ -109,7 +109,7 @@
   "bundlesize": [
     {
       "path": "./.next/static/**/pages/*.js",
-      "maxSize": "15 kB"
+      "maxSize": "12 kB"
     },
     {
       "path": "./.next/static/chunks/*.js",
@@ -120,8 +120,8 @@
       "maxSize": "10 kB"
     },
     {
-      "path": "./.next/static/css/*.css",
-      "maxSize": "3 kB"
+      "path": "./.next/serverless/pages/*.js",
+      "maxSize": "180 kB"
     }
   ],
   "husky": {
