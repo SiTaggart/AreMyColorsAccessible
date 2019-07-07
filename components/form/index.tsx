@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 interface FormProps {
   children: ReactNode;
-  dataTest: string;
+  dataTest?: string;
   style?: {};
 }
 
