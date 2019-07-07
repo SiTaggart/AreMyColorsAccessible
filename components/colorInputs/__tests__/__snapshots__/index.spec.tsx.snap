@@ -182,6 +182,7 @@ exports[`ColorInputs renders without crashing 1`] = `
 
 <div
   className="emotion-76 emotion-77"
+  data-test="color-input-form"
   style={
     Object {
       "color": "#fff",

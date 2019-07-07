@@ -25,7 +25,7 @@ const ColorInputs: React.FC<{}> = (): ReactElement => {
   };
 
   return (
-    <Form style={styles.form}>
+    <Form dataTest="color-input-form" style={styles.form}>
       <FormControl>
         <FormLabel htmlFor="textColor">Text Color</FormLabel>
         <FormInput

@@ -12,6 +12,11 @@ export interface HomeContextInterface {
   handleTextColorInputChange: (value: string) => void;
 }
 
+interface SiteDataProviderProps {
+  children?: React.ReactElement;
+  initialSiteData: SiteData;
+}
+
 const setInitialContext = (initialSiteData: SiteData): SiteData => {
   let textColor = '#FFFFFF';
   let background = '#1276CE';
@@ -19,7 +24,7 @@ const setInitialContext = (initialSiteData: SiteData): SiteData => {
   if (!isEmpty(initialSiteData)) {
     textColor = initialSiteData.textColor;
     background = initialSiteData.background;
-    isLight = initialSiteData.isLight;
+    isLight = JSON.parse((initialSiteData.isLight as unknown) as string);
   }
 
   const initialCombos = ColorCombos([textColor, background]) as ColorCombosTypes[];
@@ -80,10 +85,6 @@ const useSiteData = (): HomeContextInterface => {
   return context;
 };
 
-interface SiteDataProviderProps {
-  children?: React.ReactElement;
-  initialSiteData: SiteData;
-}
 const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
   props: SiteDataProviderProps
 ): React.ReactElement => {

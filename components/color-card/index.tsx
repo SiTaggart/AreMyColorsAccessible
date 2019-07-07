@@ -8,6 +8,7 @@ export interface ColorCardProps {
   background: string;
   color: string;
   contrast: number;
+  isNotImportant?: boolean;
 }
 
 interface StyledColorCardProps {
@@ -46,7 +47,7 @@ const ColorCard: React.FC<ColorCardProps> = (
   const rating = colorRating(props.accessibility);
 
   return (
-    <StyledColorCard data-test="colorCard">
+    <StyledColorCard data-test="colorCard" isNotImportant={props.isNotImportant}>
       <StyledColorSwatch
         backgroundColor={props.background}
         color={props.color}

@@ -105,7 +105,12 @@ describe('hsl-slider', (): void => {
     });
   });
 
-  it('should call onchange callback when value changed', (): void => {
+  it('should call onchange callback when value changed with onChnage', (): void => {
+    wrapper.find('#input-id').simulate('change', { target: { value: '60' } });
+    expect(onChangeMock).toBeCalledWith({ target: { value: '60' } });
+  });
+
+  it('should call onchange callback when value changed with onInput', (): void => {
     wrapper.find('#input-id').simulate('input', { target: { value: '60' } });
     expect(onChangeMock).toBeCalledWith({ target: { value: '60' } });
   });

@@ -427,6 +427,7 @@ exports[`Home Page should render based on query string props 1`] = `
     >
       <div
         className="emotion-106 emotion-107"
+        data-test="color-input-form"
         style={
           Object {
             "color": "#fff",
@@ -1152,6 +1153,7 @@ exports[`Home Page should render without crashing 1`] = `
     >
       <div
         className="emotion-106 emotion-107"
+        data-test="color-input-form"
         style={
           Object {
             "color": "#fff",
