@@ -2,7 +2,7 @@
 
 import React, { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
-import { HomeContext, useSiteData, SiteDataProvider } from '../';
+import { SiteDataProvider } from '../';
 
 describe('AppContainer', (): void => {
   let ChildComponent: React.FunctionComponent<{}> = (): ReactElement<HTMLDivElement> => {
