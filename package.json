@@ -39,7 +39,7 @@
     "babel-plugin-emotion": "10.0.14",
     "classnames": "2.2.6",
     "color": "3.1.2",
-    "lodash": "4.17.13",
+    "lodash": "4.17.14",
     "next": "8.1.0",
     "next-compose-plugins": "2.2.0",
     "node-sass": "4.12.0",
