@@ -60,6 +60,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^1.1.0",
     "@types/classnames": "2.2.9",
     "@types/color": "3.0.0",
     "@types/compression": "0.0.36",

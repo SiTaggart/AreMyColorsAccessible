@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders footerLink styles added 1`] = `
+.emotion-16 {
+  padding: 5rem 0 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.emotion-12 {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.emotion-2 {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.emotion-0 {
+  color: currentColor;
+  -webkit-transition: color 400ms ease-in;
+  transition: color 400ms ease-in;
+}
+
+<footer
+  className="emotion-16 emotion-17"
+>
+  <nav
+    className="emotion-14 emotion-15"
+  >
+    <ul
+      className="emotion-12 emotion-13"
+    >
+      <li
+        className="emotion-2 emotion-3"
+      >
+        <a
+          className="emotion-0 emotion-1"
+          href="/"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          Home
+        </a>
+      </li>
+      <li
+        className="emotion-2 emotion-3"
+      >
+        <a
+          className="emotion-0 emotion-1"
+          href="/palette"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          Palette
+        </a>
+      </li>
+      <li
+        className="emotion-2 emotion-3"
+      >
+        <a
+          className="emotion-0 emotion-1"
+          href="/about"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          About
+        </a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+`;
+
+exports[`Footer renders without crashing 1`] = `
+.emotion-16 {
+  padding: 5rem 0 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.emotion-12 {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.emotion-2 {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.emotion-0 {
+  color: currentColor;
+  -webkit-transition: color 400ms ease-in;
+  transition: color 400ms ease-in;
+}
+
+<footer
+  className="emotion-16 emotion-17"
+>
+  <nav
+    className="emotion-14 emotion-15"
+  >
+    <ul
+      className="emotion-12 emotion-13"
+    >
+      <li
+        className="emotion-2 emotion-3"
+      >
+        <a
+          className="emotion-0 emotion-1"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </li>
+      <li
+        className="emotion-2 emotion-3"
+      >
+        <a
+          className="emotion-0 emotion-1"
+          href="/palette"
+          onClick={[Function]}
+        >
+          Palette
+        </a>
+      </li>
+      <li
+        className="emotion-2 emotion-3"
+      >
+        <a
+          className="emotion-0 emotion-1"
+          href="/about"
+          onClick={[Function]}
+        >
+          About
+        </a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+`;
