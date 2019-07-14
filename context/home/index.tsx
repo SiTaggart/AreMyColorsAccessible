@@ -92,6 +92,8 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
     setInitialContext(props.initialSiteData)
   );
 
+  const [isInitial, setIsInitial] = React.useState<boolean>(false);
+
   const [state] = React.useMemo(
     (): [SiteData, React.Dispatch<SiteData>] => [siteData, setSiteData],
     [siteData]
@@ -103,8 +105,12 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
   }, 200);
 
   React.useEffect((): void => {
-    updateHash();
-  });
+    if (isInitial) {
+      updateHash();
+    } else {
+      setIsInitial(true);
+    }
+  }, [state]);
 
   const setNewColorCombo = (textColor: string, backgroundColor: string): void => {
     let newCombos: ColorCombosTypes[] | false = ColorCombos([textColor, backgroundColor]);
