@@ -14,14 +14,14 @@ export interface HomeContextInterface {
 
 interface SiteDataProviderProps {
   children?: React.ReactElement;
-  initialSiteData: SiteData;
+  initialSiteData: SiteData | {};
 }
 
-const setInitialContext = (initialSiteData: SiteData): SiteData => {
+const setInitialContext = (initialSiteData: SiteData | {}): SiteData => {
   let textColor = '#FFFFFF';
   let background = '#1276CE';
   let isLight = false;
-  if (!isEmpty(initialSiteData)) {
+  if (!isEmpty(initialSiteData) && 'textColor' in initialSiteData) {
     textColor = initialSiteData.textColor;
     background = initialSiteData.background;
     isLight = JSON.parse((initialSiteData.isLight as unknown) as string);
