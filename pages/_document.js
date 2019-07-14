@@ -1,7 +1,5 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
-import { Global } from '@emotion/core';
-import globalStyles from '../styles/global';
 
 export default class MyDocument extends Document {
   render() {
@@ -14,7 +12,6 @@ export default class MyDocument extends Document {
             content="Make sure the colours you choose in your designs are accessible to people of all abilities, by choosing colour combinations that pass WCAG 2.0 recommendated colour contrast ratio guidelines."
             name="description"
           />
-          <Global styles={globalStyles} />
           <script
             dangerouslySetInnerHTML={{
               __html: `
