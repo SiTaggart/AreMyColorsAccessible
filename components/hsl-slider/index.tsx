@@ -36,7 +36,7 @@ class HslSlider extends Component<HslSliderProps, {}> {
   };
 
   private convertToHSL = (hex: string): HSLColor => {
-    let hsl: Partial<HSLColorTypes> = Color(hex).hsl();
+    const hsl: Partial<HSLColorTypes> = Color(hex).hsl();
     return this.roundHSLValues(hsl);
   };
 

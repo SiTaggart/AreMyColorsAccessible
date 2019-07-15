@@ -79,7 +79,7 @@ interface ResultsProps extends ColorCombinationTypes {
 
 class Results extends Component<ResultsProps, {}> {
   private renderAreYouSerious(): ReactElement<HTMLDivElement> {
-    let styles = {
+    const styles = {
       seriouslyContainer: {
         color: this.props.isLight ? '#343334' : '#fff'
       }
@@ -107,10 +107,10 @@ class Results extends Component<ResultsProps, {}> {
     const ratio = parseFloat(contrast.toFixed(2));
     const colorRatings = colorRating(accessibility);
     let areYouSerious = null;
-    let boldTextRating = colorRatings.bold;
-    let largeTextRating = colorRatings.large;
-    let overallRating = colorRatings.overall;
-    let smallTextRating = colorRatings.small;
+    const boldTextRating = colorRatings.bold;
+    const largeTextRating = colorRatings.large;
+    const overallRating = colorRatings.overall;
+    const smallTextRating = colorRatings.small;
 
     if (ratio < 1.3) {
       areYouSerious = this.renderAreYouSerious();

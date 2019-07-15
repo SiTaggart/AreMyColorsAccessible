@@ -32,7 +32,7 @@ const ColorCombos = (
   if (!Array.isArray(colors)) {
     if (typeof colors === 'object') {
       for (const key in colors) {
-        if (colors.hasOwnProperty(key)) {
+        if (Object.prototype.hasOwnProperty.call(colors, key)) {
           arr.push(Color(colors[key]));
         }
       }
@@ -54,7 +54,9 @@ const ColorCombos = (
 
   results = arr.map(
     (color): ColorCombosTypes => {
-      let result: ColorCombosTypes = combinedOptions.compact ? {} : Object.assign({}, color as any);
+      const result: ColorCombosTypes = combinedOptions.compact
+        ? {}
+        : Object.assign({}, color as any);
 
       result.hex = color.hex();
 
