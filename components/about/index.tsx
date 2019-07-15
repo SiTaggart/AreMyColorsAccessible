@@ -4,7 +4,7 @@ import Layout from '../layouts/layout';
 import { Heading, P, Blockquote, Link } from '../typography';
 
 class About extends Component<{}, {}> {
-  public render(): ReactElement<HTMLMainElement> {
+  public render(): ReactElement {
     return (
       <Container variant="about">
         <Layout variant="small">
