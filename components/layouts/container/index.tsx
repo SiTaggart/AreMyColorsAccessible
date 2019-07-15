@@ -18,7 +18,7 @@ const StyledContainer = styled.main<ContainerProps>`
 `;
 
 class Container extends Component<ContainerProps, {}> {
-  public render(): ReactElement<HTMLMainElement> {
+  public render(): ReactElement {
     return <StyledContainer {...this.props}>{this.props.children}</StyledContainer>;
   }
 }

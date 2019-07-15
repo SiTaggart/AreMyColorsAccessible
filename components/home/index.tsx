@@ -14,7 +14,7 @@ export interface HomeProps {
 }
 
 class Home extends Component<HomeProps, {}> {
-  public render(): ReactElement<HTMLMainElement> {
+  public render(): ReactElement {
     const siteData: SiteData = this.props.siteData;
     const colorInfo: Partial<ColorCombinationTypes> = siteData.colorCombos[0].combinations[0];
 
