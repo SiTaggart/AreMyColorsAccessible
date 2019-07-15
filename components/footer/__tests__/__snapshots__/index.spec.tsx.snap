@@ -40,6 +40,7 @@ exports[`Footer renders footerLink styles added 1`] = `
           className="emotion-0 emotion-1"
           href="/"
           onClick={[Function]}
+          onMouseEnter={[Function]}
           style={
             Object {
               "color": "#fff",
@@ -56,6 +57,7 @@ exports[`Footer renders footerLink styles added 1`] = `
           className="emotion-0 emotion-1"
           href="/palette"
           onClick={[Function]}
+          onMouseEnter={[Function]}
           style={
             Object {
               "color": "#fff",
@@ -72,6 +74,7 @@ exports[`Footer renders footerLink styles added 1`] = `
           className="emotion-0 emotion-1"
           href="/about"
           onClick={[Function]}
+          onMouseEnter={[Function]}
           style={
             Object {
               "color": "#fff",
@@ -126,6 +129,7 @@ exports[`Footer renders without crashing 1`] = `
           className="emotion-0 emotion-1"
           href="/"
           onClick={[Function]}
+          onMouseEnter={[Function]}
         >
           Home
         </a>
@@ -137,6 +141,7 @@ exports[`Footer renders without crashing 1`] = `
           className="emotion-0 emotion-1"
           href="/palette"
           onClick={[Function]}
+          onMouseEnter={[Function]}
         >
           Palette
         </a>
@@ -148,6 +153,7 @@ exports[`Footer renders without crashing 1`] = `
           className="emotion-0 emotion-1"
           href="/about"
           onClick={[Function]}
+          onMouseEnter={[Function]}
         >
           About
         </a>

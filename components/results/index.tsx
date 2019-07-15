@@ -15,7 +15,7 @@ interface AreYouSeriousProps {
 const AreYouSerious: React.FC<AreYouSeriousProps> = ({
   isLight
 }: AreYouSeriousProps): ReactElement => {
-  let styles = {
+  const styles = {
     seriouslyContainer: {
       color: isLight ? '#343334' : '#fff'
     }

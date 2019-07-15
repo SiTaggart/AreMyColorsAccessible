@@ -679,6 +679,7 @@ exports[`Home Page should render based on query string props 1`] = `
             className="emotion-112 emotion-113"
             href="/"
             onClick={[Function]}
+            onMouseEnter={[Function]}
             style={
               Object {
                 "color": "#fff",
@@ -695,6 +696,7 @@ exports[`Home Page should render based on query string props 1`] = `
             className="emotion-112 emotion-113"
             href="/palette"
             onClick={[Function]}
+            onMouseEnter={[Function]}
             style={
               Object {
                 "color": "#fff",
@@ -711,6 +713,7 @@ exports[`Home Page should render based on query string props 1`] = `
             className="emotion-112 emotion-113"
             href="/about"
             onClick={[Function]}
+            onMouseEnter={[Function]}
             style={
               Object {
                 "color": "#fff",
@@ -1405,6 +1408,7 @@ exports[`Home Page should render without crashing 1`] = `
             className="emotion-112 emotion-113"
             href="/"
             onClick={[Function]}
+            onMouseEnter={[Function]}
             style={
               Object {
                 "color": "#fff",
@@ -1421,6 +1425,7 @@ exports[`Home Page should render without crashing 1`] = `
             className="emotion-112 emotion-113"
             href="/palette"
             onClick={[Function]}
+            onMouseEnter={[Function]}
             style={
               Object {
                 "color": "#fff",
@@ -1437,6 +1442,7 @@ exports[`Home Page should render without crashing 1`] = `
             className="emotion-112 emotion-113"
             href="/about"
             onClick={[Function]}
+            onMouseEnter={[Function]}
             style={
               Object {
                 "color": "#fff",

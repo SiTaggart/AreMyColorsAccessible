@@ -7,7 +7,7 @@ import renderer from 'react-test-renderer';
 import HslSliders from '..';
 
 describe('hsl-slider', (): void => {
-  let onChangeMock: jest.Mock = jest.fn();
+  const onChangeMock: jest.Mock = jest.fn();
   let wrapper: ShallowWrapper;
 
   beforeEach((): void => {

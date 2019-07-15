@@ -28,7 +28,7 @@ interface HSLColor {
   lightness: number;
 }
 const convertToHSL = (hex: string): HSLColor => {
-  let hsl: Partial<HSLColorTypes> = Color(hex).hsl();
+  const hsl: Partial<HSLColorTypes> = Color(hex).hsl();
   return roundHSLValues(hsl);
 };
 
