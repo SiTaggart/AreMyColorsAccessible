@@ -43,7 +43,7 @@ const StyledInputError = styled.div`
   margin: 1rem 0;
 `;
 
-const FormInput: React.FunctionComponent<FormInputProps> = (
+const FormInput: React.FC<FormInputProps> = (
   props: FormInputProps
 ): ReactElement<HTMLInputElement> => {
   return (

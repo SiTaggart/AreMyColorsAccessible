@@ -1,0 +1,1459 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page should render based on query string props 1`] = `
+@media (min-width:768px) {
+  .emotion-130 {
+    height: 100%;
+  }
+}
+
+.emotion-110 {
+  position: relative;
+}
+
+@media (min-width:768px) {
+  .emotion-110 {
+    min-height: 85%;
+  }
+}
+
+.emotion-28 {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1rem;
+}
+
+.emotion-26 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (min-width:768px) {
+  .emotion-26 {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-26 {
+    margin-bottom: 5rem;
+  }
+}
+
+.emotion-0 {
+  font-weight: 700;
+  font-size: 20vw;
+  margin: 3rem 0;
+  width: 100%;
+}
+
+@media (min-width:768px) {
+  .emotion-0 {
+    font-size: 18vw;
+    margin: 4rem 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 {
+    font-size: 15vw;
+    margin: 5rem 0;
+  }
+}
+
+@media (min-width:1480px) {
+  .emotion-0 {
+    font-size: 9vw;
+  }
+}
+
+.emotion-6 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-bottom: 2rem;
+  width: 50%;
+}
+
+@media (min-width:768px) {
+  .emotion-6 {
+    width: 25%;
+  }
+}
+
+.emotion-2 {
+  font-weight: 700;
+  font-size: 10vw;
+  margin: 0;
+}
+
+@media (min-width:768px) {
+  .emotion-2 {
+    font-size: 6vw;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-2 {
+    font-size: 4vw;
+  }
+}
+
+@media (min-width:1480px) {
+  .emotion-2 {
+    font-size: 3vw;
+  }
+}
+
+.emotion-4 {
+  font-size: 14pt;
+  margin: 0;
+}
+
+.emotion-16 {
+  font-size: 18pt;
+  margin: 0;
+}
+
+.emotion-108 {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.emotion-106 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  -webkit-transition: color 400ms ease-out;
+  transition: color 400ms ease-out;
+}
+
+.emotion-66 {
+  padding: 1rem;
+}
+
+@media (min-width:768px) {
+  .emotion-66 {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 50%;
+  }
+}
+
+.emotion-30 {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.emotion-32 {
+  background: rgba(255,255,255,0.1);
+  border: solid 1px;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.emotion-64 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width:1024px) {
+  .emotion-64 {
+    margin: 0 -0.5rem;
+  }
+}
+
+.emotion-42 {
+  width: 100%;
+}
+
+@media (min-width:1024px) {
+  .emotion-42 {
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    padding: 0 0.5rem;
+    width: 33.3333%;
+  }
+}
+
+.emotion-38 {
+  -webkit-appearance: none;
+  background: transparent;
+  border-radius: 2px;
+  color: currentColor;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.emotion-38::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-38::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+
+.emotion-38:focus::-webkit-slider-runnable-track {
+  background: currentColor;
+}
+
+.emotion-38::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-38::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-38::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+  color: transparent;
+}
+
+.emotion-38::-ms-fill-lower {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-38::-ms-fill-upper {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-38::-ms-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-38:focus::-ms-fill-lower {
+  background: currentColor;
+}
+
+.emotion-38:focus::-ms-fill-upper {
+  background: currentColor;
+}
+
+.emotion-128 {
+  padding: 5rem 0 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.emotion-124 {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.emotion-114 {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.emotion-112 {
+  color: currentColor;
+  -webkit-transition: color 400ms ease-in;
+  transition: color 400ms ease-in;
+}
+
+<div
+  className="emotion-130 emotion-131"
+>
+  <main
+    className="emotion-110 emotion-111"
+  >
+    <div
+      className="emotion-28 emotion-29"
+    >
+      <div
+        className="emotion-26 emotion-27"
+      >
+        <h1
+          aria-atomic="true"
+          aria-live="polite"
+          className="emotion-0 emotion-1"
+          data-test="contrastResults-heading"
+        >
+          Yup
+        </h1>
+        <div
+          className="emotion-6 emotion-7"
+        >
+          <h2
+            className="emotion-2 emotion-3"
+            data-test="contrastResult-rating-small"
+          >
+            AA
+          </h2>
+          <p
+            className="emotion-4 emotion-5"
+          >
+            Small Text - 4.5 
+            <br />
+            &lt; 14pt or 18px
+          </p>
+        </div>
+        <div
+          className="emotion-6 emotion-7"
+        >
+          <h2
+            className="emotion-2 emotion-3"
+            data-test="contrastResult-rating-bold"
+          >
+            AAA
+          </h2>
+          <p
+            className="emotion-4 emotion-5"
+          >
+            <strong>
+              Bold Text - 3.0 
+              <br />
+              &gt; 14pt or 18px
+            </strong>
+          </p>
+        </div>
+        <div
+          className="emotion-6 emotion-7"
+        >
+          <h2
+            className="emotion-2 emotion-3"
+            data-test="contrastResult-rating-large"
+          >
+            AAA
+          </h2>
+          <p
+            className="emotion-16 emotion-5"
+          >
+            Large Text - 3.0 
+            <br />
+            &gt; 18pt or 24px
+          </p>
+        </div>
+        <div
+          className="emotion-6 emotion-7"
+        >
+          <h2
+            className="emotion-2 emotion-3"
+          >
+            6.94
+          </h2>
+          <p
+            className="emotion-4 emotion-5"
+          >
+            Ratio
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-108 emotion-29"
+    >
+      <div
+        className="emotion-106 emotion-107"
+        data-test="color-input-form"
+        style={
+          Object {
+            "color": "#fff",
+          }
+        }
+      >
+        <div
+          className="emotion-66 emotion-67"
+        >
+          <label
+            className="emotion-30 emotion-31"
+            htmlFor="textColor"
+          >
+            Text Color
+          </label>
+          <input
+            autoComplete="off"
+            className="emotion-32 emotion-33"
+            id="textColor"
+            onChange={[Function]}
+            style={
+              Object {
+                "borderColor": "#fff",
+                "color": "inherit",
+              }
+            }
+            type="text"
+            value="#eee"
+          />
+          <div
+            className="emotion-64 emotion-65"
+            data-test="form-hsl-sliders"
+          >
+            <div
+              className="emotion-42 emotion-43"
+            >
+              <div
+                className="emotion-36 emotion-37"
+              >
+                <label
+                  className="emotion-30 emotion-31"
+                  htmlFor="textColor-hsl-Hue"
+                >
+                  Hue 0°
+                </label>
+              </div>
+              <div
+                className="emotion-40 emotion-41"
+              >
+                <input
+                  className="emotion-38 emotion-39"
+                  id="textColor-hsl-Hue"
+                  max={360}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={0}
+                />
+              </div>
+            </div>
+            <div
+              className="emotion-42 emotion-43"
+            >
+              <div
+                className="emotion-36 emotion-37"
+              >
+                <label
+                  className="emotion-30 emotion-31"
+                  htmlFor="textColor-hsl-Saturation"
+                >
+                  Saturation 0%
+                </label>
+              </div>
+              <div
+                className="emotion-40 emotion-41"
+              >
+                <input
+                  className="emotion-38 emotion-39"
+                  id="textColor-hsl-Saturation"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={0}
+                />
+              </div>
+            </div>
+            <div
+              className="emotion-42 emotion-43"
+            >
+              <div
+                className="emotion-36 emotion-37"
+              >
+                <label
+                  className="emotion-30 emotion-31"
+                  htmlFor="textColor-hsl-Lightness"
+                >
+                  Lightness 93%
+                </label>
+              </div>
+              <div
+                className="emotion-40 emotion-41"
+              >
+                <input
+                  className="emotion-38 emotion-39"
+                  id="textColor-hsl-Lightness"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={93}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="emotion-66 emotion-67"
+        >
+          <label
+            className="emotion-30 emotion-31"
+            htmlFor="background"
+          >
+            Background
+          </label>
+          <input
+            autoComplete="off"
+            className="emotion-32 emotion-33"
+            id="background"
+            onChange={[Function]}
+            style={
+              Object {
+                "borderColor": "#fff",
+                "color": "inherit",
+              }
+            }
+            type="text"
+            value="#5E38A8"
+          />
+          <div
+            className="emotion-64 emotion-65"
+            data-test="form-hsl-sliders"
+          >
+            <div
+              className="emotion-42 emotion-43"
+            >
+              <div
+                className="emotion-36 emotion-37"
+              >
+                <label
+                  className="emotion-30 emotion-31"
+                  htmlFor="background-hsl-Hue"
+                >
+                  Hue 260°
+                </label>
+              </div>
+              <div
+                className="emotion-40 emotion-41"
+              >
+                <input
+                  className="emotion-38 emotion-39"
+                  id="background-hsl-Hue"
+                  max={360}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={260}
+                />
+              </div>
+            </div>
+            <div
+              className="emotion-42 emotion-43"
+            >
+              <div
+                className="emotion-36 emotion-37"
+              >
+                <label
+                  className="emotion-30 emotion-31"
+                  htmlFor="background-hsl-Saturation"
+                >
+                  Saturation 50%
+                </label>
+              </div>
+              <div
+                className="emotion-40 emotion-41"
+              >
+                <input
+                  className="emotion-38 emotion-39"
+                  id="background-hsl-Saturation"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={50}
+                />
+              </div>
+            </div>
+            <div
+              className="emotion-42 emotion-43"
+            >
+              <div
+                className="emotion-36 emotion-37"
+              >
+                <label
+                  className="emotion-30 emotion-31"
+                  htmlFor="background-hsl-Lightness"
+                >
+                  Lightness 44%
+                </label>
+              </div>
+              <div
+                className="emotion-40 emotion-41"
+              >
+                <input
+                  className="emotion-38 emotion-39"
+                  id="background-hsl-Lightness"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={44}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    className="emotion-128 emotion-129"
+  >
+    <nav
+      className="emotion-126 emotion-127"
+    >
+      <ul
+        className="emotion-124 emotion-125"
+      >
+        <li
+          className="emotion-114 emotion-115"
+        >
+          <a
+            className="emotion-112 emotion-113"
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="emotion-114 emotion-115"
+        >
+          <a
+            className="emotion-112 emotion-113"
+            href="/palette"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            Palette
+          </a>
+        </li>
+        <li
+          className="emotion-114 emotion-115"
+        >
+          <a
+            className="emotion-112 emotion-113"
+            href="/about"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+`;
+
+exports[`Home Page should render without crashing 1`] = `
+@media (min-width:768px) {
+  .emotion-130 {
+    height: 100%;
+  }
+}
+
+.emotion-110 {
+  position: relative;
+}
+
+@media (min-width:768px) {
+  .emotion-110 {
+    min-height: 85%;
+  }
+}
+
+.emotion-28 {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1rem;
+}
+
+.emotion-26 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (min-width:768px) {
+  .emotion-26 {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-26 {
+    margin-bottom: 5rem;
+  }
+}
+
+.emotion-0 {
+  font-weight: 700;
+  font-size: 20vw;
+  margin: 3rem 0;
+  width: 100%;
+}
+
+@media (min-width:768px) {
+  .emotion-0 {
+    font-size: 18vw;
+    margin: 4rem 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 {
+    font-size: 15vw;
+    margin: 5rem 0;
+  }
+}
+
+@media (min-width:1480px) {
+  .emotion-0 {
+    font-size: 9vw;
+  }
+}
+
+.emotion-6 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-bottom: 2rem;
+  width: 50%;
+}
+
+@media (min-width:768px) {
+  .emotion-6 {
+    width: 25%;
+  }
+}
+
+.emotion-2 {
+  font-weight: 700;
+  font-size: 10vw;
+  margin: 0;
+}
+
+@media (min-width:768px) {
+  .emotion-2 {
+    font-size: 6vw;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-2 {
+    font-size: 4vw;
+  }
+}
+
+@media (min-width:1480px) {
+  .emotion-2 {
+    font-size: 3vw;
+  }
+}
+
+.emotion-4 {
+  font-size: 14pt;
+  margin: 0;
+}
+
+.emotion-16 {
+  font-size: 18pt;
+  margin: 0;
+}
+
+.emotion-108 {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.emotion-106 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  -webkit-transition: color 400ms ease-out;
+  transition: color 400ms ease-out;
+}
+
+.emotion-66 {
+  padding: 1rem;
+}
+
+@media (min-width:768px) {
+  .emotion-66 {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 50%;
+  }
+}
+
+.emotion-30 {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.emotion-32 {
+  background: rgba(255,255,255,0.1);
+  border: solid 1px;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.emotion-64 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width:1024px) {
+  .emotion-64 {
+    margin: 0 -0.5rem;
+  }
+}
+
+.emotion-42 {
+  width: 100%;
+}
+
+@media (min-width:1024px) {
+  .emotion-42 {
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    padding: 0 0.5rem;
+    width: 33.3333%;
+  }
+}
+
+.emotion-38 {
+  -webkit-appearance: none;
+  background: transparent;
+  border-radius: 2px;
+  color: currentColor;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.emotion-38::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-38::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+
+.emotion-38:focus::-webkit-slider-runnable-track {
+  background: currentColor;
+}
+
+.emotion-38::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-38::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-38::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+  color: transparent;
+}
+
+.emotion-38::-ms-fill-lower {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-38::-ms-fill-upper {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-38::-ms-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-38:focus::-ms-fill-lower {
+  background: currentColor;
+}
+
+.emotion-38:focus::-ms-fill-upper {
+  background: currentColor;
+}
+
+.emotion-128 {
+  padding: 5rem 0 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.emotion-124 {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.emotion-114 {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.emotion-112 {
+  color: currentColor;
+  -webkit-transition: color 400ms ease-in;
+  transition: color 400ms ease-in;
+}
+
+<div
+  className="emotion-130 emotion-131"
+>
+  <main
+    className="emotion-110 emotion-111"
+  >
+    <div
+      className="emotion-28 emotion-29"
+    >
+      <div
+        className="emotion-26 emotion-27"
+      >
+        <h1
+          aria-atomic="true"
+          aria-live="polite"
+          className="emotion-0 emotion-1"
+          data-test="contrastResults-heading"
+        >
+          Yup
+        </h1>
+        <div
+          className="emotion-6 emotion-7"
+        >
+          <h2
+            className="emotion-2 emotion-3"
+            data-test="contrastResult-rating-small"
+          >
+            AA
+          </h2>
+          <p
+            className="emotion-4 emotion-5"
+          >
+            Small Text - 4.5 
+            <br />
+            &lt; 14pt or 18px
+          </p>
+        </div>
+        <div
+          className="emotion-6 emotion-7"
+        >
+          <h2
+            className="emotion-2 emotion-3"
+            data-test="contrastResult-rating-bold"
+          >
+            AAA
+          </h2>
+          <p
+            className="emotion-4 emotion-5"
+          >
+            <strong>
+              Bold Text - 3.0 
+              <br />
+              &gt; 14pt or 18px
+            </strong>
+          </p>
+        </div>
+        <div
+          className="emotion-6 emotion-7"
+        >
+          <h2
+            className="emotion-2 emotion-3"
+            data-test="contrastResult-rating-large"
+          >
+            AAA
+          </h2>
+          <p
+            className="emotion-16 emotion-5"
+          >
+            Large Text - 3.0 
+            <br />
+            &gt; 18pt or 24px
+          </p>
+        </div>
+        <div
+          className="emotion-6 emotion-7"
+        >
+          <h2
+            className="emotion-2 emotion-3"
+          >
+            4.66
+          </h2>
+          <p
+            className="emotion-4 emotion-5"
+          >
+            Ratio
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-108 emotion-29"
+    >
+      <div
+        className="emotion-106 emotion-107"
+        data-test="color-input-form"
+        style={
+          Object {
+            "color": "#fff",
+          }
+        }
+      >
+        <div
+          className="emotion-66 emotion-67"
+        >
+          <label
+            className="emotion-30 emotion-31"
+            htmlFor="textColor"
+          >
+            Text Color
+          </label>
+          <input
+            autoComplete="off"
+            className="emotion-32 emotion-33"
+            id="textColor"
+            onChange={[Function]}
+            style={
+              Object {
+                "borderColor": "#fff",
+                "color": "inherit",
+              }
+            }
+            type="text"
+            value="#FFFFFF"
+          />
+          <div
+            className="emotion-64 emotion-65"
+            data-test="form-hsl-sliders"
+          >
+            <div
+              className="emotion-42 emotion-43"
+            >
+              <div
+                className="emotion-36 emotion-37"
+              >
+                <label
+                  className="emotion-30 emotion-31"
+                  htmlFor="textColor-hsl-Hue"
+                >
+                  Hue 0°
+                </label>
+              </div>
+              <div
+                className="emotion-40 emotion-41"
+              >
+                <input
+                  className="emotion-38 emotion-39"
+                  id="textColor-hsl-Hue"
+                  max={360}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={0}
+                />
+              </div>
+            </div>
+            <div
+              className="emotion-42 emotion-43"
+            >
+              <div
+                className="emotion-36 emotion-37"
+              >
+                <label
+                  className="emotion-30 emotion-31"
+                  htmlFor="textColor-hsl-Saturation"
+                >
+                  Saturation 0%
+                </label>
+              </div>
+              <div
+                className="emotion-40 emotion-41"
+              >
+                <input
+                  className="emotion-38 emotion-39"
+                  id="textColor-hsl-Saturation"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={0}
+                />
+              </div>
+            </div>
+            <div
+              className="emotion-42 emotion-43"
+            >
+              <div
+                className="emotion-36 emotion-37"
+              >
+                <label
+                  className="emotion-30 emotion-31"
+                  htmlFor="textColor-hsl-Lightness"
+                >
+                  Lightness 100%
+                </label>
+              </div>
+              <div
+                className="emotion-40 emotion-41"
+              >
+                <input
+                  className="emotion-38 emotion-39"
+                  id="textColor-hsl-Lightness"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={100}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="emotion-66 emotion-67"
+        >
+          <label
+            className="emotion-30 emotion-31"
+            htmlFor="background"
+          >
+            Background
+          </label>
+          <input
+            autoComplete="off"
+            className="emotion-32 emotion-33"
+            id="background"
+            onChange={[Function]}
+            style={
+              Object {
+                "borderColor": "#fff",
+                "color": "inherit",
+              }
+            }
+            type="text"
+            value="#1276CE"
+          />
+          <div
+            className="emotion-64 emotion-65"
+            data-test="form-hsl-sliders"
+          >
+            <div
+              className="emotion-42 emotion-43"
+            >
+              <div
+                className="emotion-36 emotion-37"
+              >
+                <label
+                  className="emotion-30 emotion-31"
+                  htmlFor="background-hsl-Hue"
+                >
+                  Hue 208°
+                </label>
+              </div>
+              <div
+                className="emotion-40 emotion-41"
+              >
+                <input
+                  className="emotion-38 emotion-39"
+                  id="background-hsl-Hue"
+                  max={360}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={208}
+                />
+              </div>
+            </div>
+            <div
+              className="emotion-42 emotion-43"
+            >
+              <div
+                className="emotion-36 emotion-37"
+              >
+                <label
+                  className="emotion-30 emotion-31"
+                  htmlFor="background-hsl-Saturation"
+                >
+                  Saturation 84%
+                </label>
+              </div>
+              <div
+                className="emotion-40 emotion-41"
+              >
+                <input
+                  className="emotion-38 emotion-39"
+                  id="background-hsl-Saturation"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={84}
+                />
+              </div>
+            </div>
+            <div
+              className="emotion-42 emotion-43"
+            >
+              <div
+                className="emotion-36 emotion-37"
+              >
+                <label
+                  className="emotion-30 emotion-31"
+                  htmlFor="background-hsl-Lightness"
+                >
+                  Lightness 44%
+                </label>
+              </div>
+              <div
+                className="emotion-40 emotion-41"
+              >
+                <input
+                  className="emotion-38 emotion-39"
+                  id="background-hsl-Lightness"
+                  max={100}
+                  min={0}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  type="range"
+                  value={44}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer
+    className="emotion-128 emotion-129"
+  >
+    <nav
+      className="emotion-126 emotion-127"
+    >
+      <ul
+        className="emotion-124 emotion-125"
+      >
+        <li
+          className="emotion-114 emotion-115"
+        >
+          <a
+            className="emotion-112 emotion-113"
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="emotion-114 emotion-115"
+        >
+          <a
+            className="emotion-112 emotion-113"
+            href="/palette"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            Palette
+          </a>
+        </li>
+        <li
+          className="emotion-114 emotion-115"
+        >
+          <a
+            className="emotion-112 emotion-113"
+            href="/about"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+`;

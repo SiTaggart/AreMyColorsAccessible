@@ -151,113 +151,36 @@ exports[`hsl-slider compact variant should render a compact variant  1`] = `
 }
 
 <div
-  className="emotion-30 emotion-31"
-  data-test="form-hsl-sliders"
+  className="emotion-8 emotion-9"
 >
   <div
-    className="emotion-8 emotion-9"
+    className="emotion-2 emotion-3"
   >
-    <div
-      className="emotion-2 emotion-3"
+    <label
+      className="emotion-0 emotion-1"
+      htmlFor="input-id"
     >
-      <label
-        className="emotion-0 emotion-1"
-        htmlFor="input-id-Hue"
-      >
-        H
-      </label>
-    </div>
-    <div
-      className="emotion-6 emotion-7"
-    >
-      <input
-        className="emotion-4 emotion-5"
-        id="input-id-Hue"
-        max={360}
-        min={0}
-        onChange={[Function]}
-        onInput={[Function]}
-        type="range"
-        value={0}
-      />
-    </div>
+      t
+    </label>
   </div>
   <div
-    className="emotion-8 emotion-9"
+    className="emotion-6 emotion-7"
   >
-    <div
-      className="emotion-2 emotion-3"
-    >
-      <label
-        className="emotion-0 emotion-1"
-        htmlFor="input-id-Saturation"
-      >
-        S
-      </label>
-    </div>
-    <div
-      className="emotion-6 emotion-7"
-    >
-      <input
-        className="emotion-4 emotion-5"
-        id="input-id-Saturation"
-        max={100}
-        min={0}
-        onChange={[Function]}
-        onInput={[Function]}
-        type="range"
-        value={0}
-      />
-    </div>
-  </div>
-  <div
-    className="emotion-8 emotion-9"
-  >
-    <div
-      className="emotion-2 emotion-3"
-    >
-      <label
-        className="emotion-0 emotion-1"
-        htmlFor="input-id-Lightness"
-      >
-        L
-      </label>
-    </div>
-    <div
-      className="emotion-6 emotion-7"
-    >
-      <input
-        className="emotion-4 emotion-5"
-        id="input-id-Lightness"
-        max={100}
-        min={0}
-        onChange={[Function]}
-        onInput={[Function]}
-        type="range"
-        value={80}
-      />
-    </div>
+    <input
+      className="emotion-4 emotion-5"
+      id="input-id"
+      max={20}
+      min={100}
+      onChange={[Function]}
+      onInput={[Function]}
+      type="range"
+      value={30}
+    />
   </div>
 </div>
 `;
 
 exports[`hsl-slider renders without crashing 1`] = `
-.emotion-30 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-@media (min-width:1024px) {
-  .emotion-30 {
-    margin: 0 -0.5rem;
-  }
-}
-
 .emotion-8 {
   width: 100%;
 }
@@ -384,92 +307,31 @@ exports[`hsl-slider renders without crashing 1`] = `
 }
 
 <div
-  className="emotion-30 emotion-31"
-  data-test="form-hsl-sliders"
+  className="emotion-8 emotion-9"
 >
   <div
-    className="emotion-8 emotion-9"
+    className="emotion-2 emotion-3"
   >
-    <div
-      className="emotion-2 emotion-3"
+    <label
+      className="emotion-0 emotion-1"
+      htmlFor="input-id"
     >
-      <label
-        className="emotion-0 emotion-1"
-        htmlFor="input-id-Hue"
-      >
-        Hue 0°
-      </label>
-    </div>
-    <div
-      className="emotion-6 emotion-7"
-    >
-      <input
-        className="emotion-4 emotion-5"
-        id="input-id-Hue"
-        max={360}
-        min={0}
-        onChange={[Function]}
-        onInput={[Function]}
-        type="range"
-        value={0}
-      />
-    </div>
+      test 30%
+    </label>
   </div>
   <div
-    className="emotion-8 emotion-9"
+    className="emotion-6 emotion-7"
   >
-    <div
-      className="emotion-2 emotion-3"
-    >
-      <label
-        className="emotion-0 emotion-1"
-        htmlFor="input-id-Saturation"
-      >
-        Saturation 0%
-      </label>
-    </div>
-    <div
-      className="emotion-6 emotion-7"
-    >
-      <input
-        className="emotion-4 emotion-5"
-        id="input-id-Saturation"
-        max={100}
-        min={0}
-        onChange={[Function]}
-        onInput={[Function]}
-        type="range"
-        value={0}
-      />
-    </div>
-  </div>
-  <div
-    className="emotion-8 emotion-9"
-  >
-    <div
-      className="emotion-2 emotion-3"
-    >
-      <label
-        className="emotion-0 emotion-1"
-        htmlFor="input-id-Lightness"
-      >
-        Lightness 80%
-      </label>
-    </div>
-    <div
-      className="emotion-6 emotion-7"
-    >
-      <input
-        className="emotion-4 emotion-5"
-        id="input-id-Lightness"
-        max={100}
-        min={0}
-        onChange={[Function]}
-        onInput={[Function]}
-        type="range"
-        value={80}
-      />
-    </div>
+    <input
+      className="emotion-4 emotion-5"
+      id="input-id"
+      max={20}
+      min={100}
+      onChange={[Function]}
+      onInput={[Function]}
+      type="range"
+      value={30}
+    />
   </div>
 </div>
 `;

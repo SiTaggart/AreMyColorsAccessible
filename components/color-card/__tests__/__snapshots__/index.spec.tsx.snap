@@ -53,3 +53,58 @@ exports[`ColorCard renders without crashing 1`] = `
   </div>
 </div>
 `;
+
+exports[`ColorCard should render a not important card 1`] = `
+.emotion-0 {
+  background-color: #fff;
+  border-bottom: solid 1px #ccc;
+  color: #000;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.emotion-2 {
+  font-size: 0.8rem;
+  padding: 0.3rem;
+}
+
+.emotion-4 {
+  border: solid 1px #dedede;
+  border-radius: 5px;
+  overflow: hidden;
+  opacity: 0.1;
+  text-align: center;
+  -webkit-transition: opacity ease-in;
+  transition: opacity ease-in;
+}
+
+<div
+  className="emotion-4 emotion-5"
+  data-test="colorCard"
+>
+  <div
+    className="emotion-0 emotion-1"
+    color="#000"
+    data-test="colorCard-swatch"
+  >
+    Yup
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div>
+      Small text: 
+      AAA
+    </div>
+    <div>
+      Large text: 
+      AAA
+    </div>
+    <div>
+      Contrast: 
+      21
+    </div>
+  </div>
+</div>
+`;

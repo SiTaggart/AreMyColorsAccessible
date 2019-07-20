@@ -5,9 +5,11 @@
     "now-build": "next build",
     "build": "next build",
     "dev": "next",
-    "jest": "NODE_ENV=test jest",
-    "lint": "eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0 --format codeframe",
+    "now-dev": "next",
     "bundlesize": "bundlesize",
+    "jest": "NODE_ENV=test jest",
+    "jest:coverage": "yarn jest --coverage",
+    "lint": "eslint './**/*.{js,jsx,ts,tsx}' --max-warnings 0 --format codeframe",
     "test": "yarn lint && NODE_ENV=test jest",
     "cypress:open": "yarn dev & cypress open",
     "cypress:run": "cypress run",
@@ -60,6 +62,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^1.1.0",
     "@types/classnames": "2.2.9",
     "@types/color": "3.0.0",
     "@types/compression": "0.0.36",
@@ -91,6 +94,7 @@
     "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-react": "7.14.2",
+    "eslint-plugin-react-hooks": "1.6.1",
     "eslint-plugin-standard": "4.0.0",
     "husky": "3.0.1",
     "identity-obj-proxy": "3.0.0",
@@ -108,7 +112,7 @@
   "bundlesize": [
     {
       "path": "./.next/static/**/pages/*.js",
-      "maxSize": "15 kB"
+      "maxSize": "12 kB"
     },
     {
       "path": "./.next/static/chunks/*.js",
@@ -119,8 +123,8 @@
       "maxSize": "10 kB"
     },
     {
-      "path": "./.next/static/css/*.css",
-      "maxSize": "3 kB"
+      "path": "./.next/serverless/pages/*.js",
+      "maxSize": "180 kB"
     }
   ],
   "husky": {

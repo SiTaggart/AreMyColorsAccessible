@@ -98,6 +98,22 @@ describe('Homepage', function() {
     });
   });
 
+  describe('respond to querystring parameters', () => {
+    it('should load a page with query string params and render accordingly', () => {
+      cy.visit(
+        '/?background=%23B9DDF8&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=true&textColor=%23B25334'
+      );
+      cy.get('body').should('have.css', 'background-color', 'rgb(185, 221, 248)');
+      cy.get('body').should('have.css', 'color', 'rgb(178, 83, 52)');
+      cy.get('[data-test=contrastResults-heading]').should('contain', 'Kinda');
+      cy.get('[data-test=color-input-form]').should('have.css', 'color', 'rgb(52, 51, 52)');
+      cy.get('#background').should('have.value', '#B9DDF8');
+      cy.get('#background').should('have.css', 'border-color', 'rgb(52, 51, 52)');
+      cy.get('#textColor').should('have.value', '#B25334');
+      cy.get('#textColor').should('have.css', 'border-color', 'rgb(52, 51, 52)');
+    });
+  });
+
   describe('footer navigation', () => {
     it('should navigate to the about page', () => {
       cy.visit('/');

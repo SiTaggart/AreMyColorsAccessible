@@ -14,7 +14,7 @@ const StyleFormControl = styled.div`
   }
 `;
 
-const FormControl: React.FunctionComponent<FormControlProps> = (
+const FormControl: React.FC<FormControlProps> = (
   props: FormControlProps
 ): ReactElement<HTMLDivElement> => {
   return <StyleFormControl>{props.children}</StyleFormControl>;

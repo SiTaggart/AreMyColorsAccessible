@@ -18,7 +18,7 @@ interface PaletteInputProps {
   errorMessage?: string;
 }
 
-const PaletteInput: React.FunctionComponent<PaletteInputProps> = (
+const PaletteInput: React.FC<PaletteInputProps> = (
   props: PaletteInputProps
 ): ReactElement<HTMLFormElement> => {
   const handleFormSubmit = (e: FormEvent<HTMLFormElement>): void => {

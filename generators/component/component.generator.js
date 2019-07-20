@@ -8,9 +8,9 @@ module.exports = plop => {
       {
         type: 'list',
         name: 'type',
-        default: 'Stateless',
+        default: 'Function',
         message: 'Select the type of component?',
-        choices: () => ['Stateless', 'React.PureComponent', 'React.Component']
+        choices: () => ['Function']
       },
       {
         type: 'list',
@@ -50,42 +50,20 @@ module.exports = plop => {
           type: 'add',
           path: folderPath + '/__tests__/index.spec.tsx',
           templateFile: 'component/component.test.tsx.tpl'
-        },
-        {
-          type: 'add',
-          path: folderPath + '/{{kebabCase name}}.scss',
-          templateFile: 'component/component.scss.tpl'
         }
       ];
 
       var component = {};
 
       switch (data.type) {
-        case 'Stateless':
+        case 'Function':
+        default:
           component = {
             type: 'add',
             path: componentPath,
             templateFile: 'component/sfcComponent.tsx.tpl'
           };
           actions = actions.concat(component);
-          break;
-        case 'React.PureComponent':
-          component = {
-            type: 'add',
-            path: componentPath,
-            templateFile: 'component/pureComponent.tsx.tpl'
-          };
-          actions = actions.concat(component);
-          break;
-        case 'React.Component':
-          component = {
-            type: 'add',
-            path: componentPath,
-            templateFile: 'component/component.tsx.tpl'
-          };
-          actions = actions.concat(component);
-          break;
-        default:
           break;
       }
 

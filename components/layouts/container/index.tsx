@@ -1,4 +1,4 @@
-import React, { Component, ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import styled from '@emotion/styled';
 import { breakpoint } from '../../../styles/utils';
 
@@ -17,9 +17,9 @@ const StyledContainer = styled.main<ContainerProps>`
   }
 `;
 
-class Container extends Component<ContainerProps, {}> {
-  public render(): ReactElement {
-    return <StyledContainer {...this.props}>{this.props.children}</StyledContainer>;
-  }
-}
+const Container: React.FC<ContainerProps> = ({
+  variant,
+  children
+}: ContainerProps): ReactElement => <StyledContainer variant={variant}>{children}</StyledContainer>;
+
 export default Container;

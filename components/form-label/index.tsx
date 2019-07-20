@@ -33,7 +33,7 @@ const StyledLabel = styled.label<StyledLabelProps>`
   width: 100%;
 `;
 
-const FormLabel: React.FunctionComponent<FormLabelProps> = (
+const FormLabel: React.FC<FormLabelProps> = (
   props: FormLabelProps
 ): ReactElement<HTMLLabelElement> => {
   return (

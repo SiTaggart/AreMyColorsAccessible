@@ -1,16 +1,18 @@
-import React, { ReactNode } from 'react';
-import './{{kebabCase name}}.scss';
+import * as React from 'react';
+import styled from '@emotion/styled';
+
+const Styled{{pascalCase name}} = styled.div<{}>``;
 
 interface {{pascalCase name}}Props {
-  children: ReactNode;
+  children?: React.ReactElement;
 }
 
-const {{pascalCase name}}: React.FunctionComponent<{{pascalCase name}}Props> = (props: {{pascalCase name}}Props) => {
+const {{pascalCase name}}: React.FC<{{pascalCase name}}Props> = (props: {{pascalCase name}}Props): React.ReactElement => {
   return (
-    <div className="{{camelCase name}}">
+    <Styled{{pascalCase name}}>
       {props.children}
-    </div>
+    </Styled{{pascalCase name}}>
   );
 };
 
-export default {{pascalCase name}};
+export { {{pascalCase name}} };

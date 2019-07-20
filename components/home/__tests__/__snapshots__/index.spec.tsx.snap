@@ -395,6 +395,7 @@ exports[`Home renders without crashing 1`] = `
   >
     <div
       className="emotion-106 emotion-107"
+      data-test="color-input-form"
       style={
         Object {
           "color": "#fff",

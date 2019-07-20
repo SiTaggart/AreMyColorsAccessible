@@ -10,7 +10,7 @@
     "prettier/react",
     "prettier/@typescript-eslint"
   ],
-  "plugins": ["@typescript-eslint", "cypress"],
+  "plugins": ["react-hooks", "@typescript-eslint", "cypress"],
   "env": {
     "cypress/globals": true
   },

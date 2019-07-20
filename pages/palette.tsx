@@ -1,27 +1,43 @@
-import React, { ReactFragment } from 'react';
-
+import React from 'react';
 import Container from '../components/layouts/container';
 import Layout from '../components/layouts/layout';
 import Head from 'next/head';
 import PalettePage from '../components/palette-page';
 import Footer from '../components/footer';
+import { PaletteDataProvider } from '../context/palette';
 
-class Palette extends React.Component<{}, {}> {
-  public render(): ReactFragment {
-    return (
-      <>
-        <Head>
-          <title>Palette checker - Are My Colours Accessible</title>
-        </Head>
+interface PalettePageProps {
+  query: {};
+}
+export const Palette: React.FC<PalettePageProps> = ({
+  query
+}: PalettePageProps): React.ReactElement => {
+  return (
+    <>
+      <Head>
+        <title>Palette checker - Are My Colours Accessible</title>
+      </Head>
+      <PaletteDataProvider queryString={query}>
         <Container variant="palette">
           <Layout variant="full">
             <PalettePage />
           </Layout>
           <Footer />
         </Container>
-      </>
-    );
-  }
-}
+      </PaletteDataProvider>
+    </>
+  );
+};
+
+// @ts-ignore
+Palette.getInitialProps = async ({
+  query
+}: {
+  query: {};
+}): Promise<{
+  query: {};
+}> => {
+  return { query };
+};
 
 export default Palette;

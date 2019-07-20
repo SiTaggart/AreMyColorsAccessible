@@ -23,4 +23,9 @@ describe('ColorCard', (): void => {
     const colorCard = renderer.create(<ColorCard {...mockProps} />).toJSON();
     expect(colorCard).toMatchSnapshot();
   });
+
+  it('should render a not important card', (): void => {
+    const colorCard = renderer.create(<ColorCard {...mockProps} isNotImportant />).toJSON();
+    expect(colorCard).toMatchSnapshot();
+  });
 });

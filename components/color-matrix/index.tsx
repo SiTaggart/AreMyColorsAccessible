@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { ColorCombosTypes } from '../../types';
 import ColorCard from '../color-card';
 import FormInput from '../form-input';
-import HslSlider from '../hsl-slider';
+import HslSliders from '../hsl-sliders';
 
 export interface ColorMatrixProps {
   colors: string[];
@@ -23,11 +23,11 @@ const StyledColorMatrixTh = styled.th`
   font-weight: bold;
   padding: 0.5rem;
 
-  &:first-child {
+  &:first-of-type {
     padding-left: 0;
   }
 
-  &:last-child {
+  &:last-of-type {
     padding-right: 0;
   }
 `;
@@ -35,7 +35,7 @@ const StyledColorMatrixTd = styled.td`
   padding: 0.5rem;
 `;
 
-const ColorMatrix: React.FunctionComponent<ColorMatrixProps> = (
+const ColorMatrix: React.FC<ColorMatrixProps> = (
   props: ColorMatrixProps
 ): ReactElement<HTMLDivElement> => {
   return (
@@ -57,7 +57,7 @@ const ColorMatrix: React.FunctionComponent<ColorMatrixProps> = (
                     onChange={(e): void => props.onColorChange(e.target.value, index)}
                     value={props.colors[index]}
                   />
-                  <HslSlider
+                  <HslSliders
                     id={`hsl-${index}`}
                     onChange={(hex): void => props.onColorChange(hex, index)}
                     value={color.hex}

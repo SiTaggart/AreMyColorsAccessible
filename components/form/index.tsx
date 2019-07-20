@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 
 interface FormProps {
   children: ReactNode;
+  dataTest?: string;
   style?: {};
 }
 
@@ -15,10 +16,12 @@ const StyledForm = styled.div`
   transition: color 400ms ease-out;
 `;
 
-const Form: React.FunctionComponent<FormProps> = (
-  props: FormProps
-): ReactElement<HTMLDivElement> => {
-  return <StyledForm style={props.style}>{props.children}</StyledForm>;
+const Form: React.FC<FormProps> = (props: FormProps): ReactElement<HTMLDivElement> => {
+  return (
+    <StyledForm data-test={props.dataTest} style={props.style}>
+      {props.children}
+    </StyledForm>
+  );
 };
 
 export default Form;
