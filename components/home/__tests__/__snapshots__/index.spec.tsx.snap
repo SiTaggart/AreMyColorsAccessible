@@ -13,7 +13,7 @@ exports[`Home renders without crashing 1`] = `
 
 .emotion-28 {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1150px;
   padding: 0 1rem;
 }
 
@@ -77,45 +77,51 @@ exports[`Home renders without crashing 1`] = `
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin-bottom: 2rem;
-  width: 50%;
+  width: 100%;
 }
 
-@media (min-width:768px) {
+@media (min-width:480px) {
+  .emotion-6 {
+    width: 50%;
+  }
+}
+
+@media (min-width:1024px) {
   .emotion-6 {
     width: 25%;
   }
 }
 
 .emotion-2 {
+  font-size: 14pt;
+  margin: 0;
+}
+
+.emotion-4 {
   font-weight: 700;
   font-size: 10vw;
   margin: 0;
 }
 
 @media (min-width:768px) {
-  .emotion-2 {
+  .emotion-4 {
     font-size: 6vw;
   }
 }
 
 @media (min-width:1024px) {
-  .emotion-2 {
+  .emotion-4 {
     font-size: 4vw;
   }
 }
 
 @media (min-width:1480px) {
-  .emotion-2 {
+  .emotion-4 {
     font-size: 3vw;
   }
 }
 
-.emotion-4 {
-  font-size: 14pt;
-  margin: 0;
-}
-
-.emotion-16 {
+.emotion-14 {
   font-size: 18pt;
   margin: 0;
 }
@@ -142,6 +148,7 @@ exports[`Home renders without crashing 1`] = `
 
 .emotion-66 {
   padding: 1rem;
+  width: 100%;
 }
 
 @media (min-width:768px) {
@@ -324,69 +331,69 @@ exports[`Home renders without crashing 1`] = `
       <div
         className="emotion-6 emotion-7"
       >
-        <h2
+        <p
           className="emotion-2 emotion-3"
+        >
+          Small Text up to 18px
+          <br />
+          AA: 4.5 AAA: 7.0
+        </p>
+        <h2
+          className="emotion-4 emotion-5"
           data-test="contrastResult-rating-small"
         >
           AAA
         </h2>
-        <p
-          className="emotion-4 emotion-5"
-        >
-          Small Text - 4.5 
-          <br />
-          &lt; 14pt or 18px
-        </p>
       </div>
       <div
         className="emotion-6 emotion-7"
       >
-        <h2
+        <p
           className="emotion-2 emotion-3"
+        >
+          <strong>
+            Bold Text 18px and over 
+            <br />
+            AA: 3.0 AAA: 4.5
+          </strong>
+        </p>
+        <h2
+          className="emotion-4 emotion-5"
           data-test="contrastResult-rating-bold"
         >
           AAA
         </h2>
-        <p
-          className="emotion-4 emotion-5"
-        >
-          <strong>
-            Bold Text - 3.0 
-            <br />
-            &gt; 14pt or 18px
-          </strong>
-        </p>
       </div>
       <div
         className="emotion-6 emotion-7"
       >
+        <p
+          className="emotion-14 emotion-3"
+        >
+          Large Text 24px and over 
+          <br />
+          AA: 3.0 AAA: 4.5
+        </p>
         <h2
-          className="emotion-2 emotion-3"
+          className="emotion-4 emotion-5"
           data-test="contrastResult-rating-large"
         >
           AAA
         </h2>
-        <p
-          className="emotion-16 emotion-5"
-        >
-          Large Text - 3.0 
-          <br />
-          &gt; 18pt or 24px
-        </p>
       </div>
       <div
         className="emotion-6 emotion-7"
       >
-        <h2
+        <p
           className="emotion-2 emotion-3"
         >
-          21
-        </h2>
-        <p
+          Contrast Ratio
+        </p>
+        <h2
           className="emotion-4 emotion-5"
         >
-          Ratio
-        </p>
+          21 : 1
+        </h2>
       </div>
     </div>
   </div>

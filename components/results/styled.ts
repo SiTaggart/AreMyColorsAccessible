@@ -41,9 +41,13 @@ export const ContrastResultsHeading = styled(Heading)`
 export const ContrastResult = styled.div`
   flex: 1 1 auto;
   margin-bottom: 2rem;
-  width: 50%;
+  width: 100%;
 
-  ${breakpoint('small')} {
+  ${breakpoint('xsmall')} {
+    width: 50%;
+  }
+
+  ${breakpoint('medium')} {
     width: 25%;
   }
 `;

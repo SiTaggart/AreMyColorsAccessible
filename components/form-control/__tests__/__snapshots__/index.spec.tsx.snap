@@ -3,6 +3,7 @@
 exports[`FormControl renders without crashing 1`] = `
 .emotion-0 {
   padding: 1rem;
+  width: 100%;
 }
 
 @media (min-width:768px) {

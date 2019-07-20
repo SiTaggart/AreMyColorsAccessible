@@ -22,7 +22,7 @@ const variantSize = (props: LayoutProps): SerializedStyles => {
       break;
     case 'small':
       styles = css`
-        max-width: 960px;
+        max-width: 1150px;
         padding: 0 1rem;
       `;
       break;
