@@ -61,37 +61,38 @@ const Results: React.FC<{}> = (): ReactElement => {
         {overallRating}
       </ContrastResultsHeading>
       <ContrastResult>
+        <ContrastResultDesc>
+          Small Text up to 18px
+          <br />
+          AA: 4.5 AAA: 7.0
+        </ContrastResultDesc>
         <ContrastResultRating as="h2" data-test="contrastResult-rating-small">
           {smallTextRating}
         </ContrastResultRating>
-        <ContrastResultDesc>
-          Small Text - 4.5 <br />
-          &lt; 14pt or 18px
-        </ContrastResultDesc>
       </ContrastResult>
       <ContrastResult>
+        <ContrastResultDesc>
+          <strong>
+            Bold Text 18px and over <br />
+            AA: 3.0 AAA: 4.5
+          </strong>
+        </ContrastResultDesc>
         <ContrastResultRating as="h2" data-test="contrastResult-rating-bold">
           {boldTextRating}
         </ContrastResultRating>
-        <ContrastResultDesc>
-          <strong>
-            Bold Text - 3.0 <br />
-            &gt; 14pt or 18px
-          </strong>
-        </ContrastResultDesc>
       </ContrastResult>
       <ContrastResult>
+        <ContrastResultDesc isLarge>
+          Large Text 24px and over <br />
+          AA: 3.0 AAA: 4.5
+        </ContrastResultDesc>
         <ContrastResultRating as="h2" data-test="contrastResult-rating-large">
           {largeTextRating}
         </ContrastResultRating>
-        <ContrastResultDesc isLarge>
-          Large Text - 3.0 <br />
-          &gt; 18pt or 24px
-        </ContrastResultDesc>
       </ContrastResult>
       <ContrastResult>
-        <ContrastResultRating as="h2">{ratio}</ContrastResultRating>
-        <ContrastResultDesc>Ratio</ContrastResultDesc>
+        <ContrastResultDesc>Contrast Ratio</ContrastResultDesc>
+        <ContrastResultRating as="h2">{`${ratio} : 1`}</ContrastResultRating>
       </ContrastResult>
       {areYouSerious && <AreYouSerious isLight={siteData.isLight} />}
     </ContrastResults>

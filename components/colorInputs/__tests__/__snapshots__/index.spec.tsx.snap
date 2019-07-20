@@ -18,6 +18,7 @@ exports[`ColorInputs renders without crashing 1`] = `
 
 .emotion-36 {
   padding: 1rem;
+  width: 100%;
 }
 
 @media (min-width:768px) {

@@ -8,6 +8,7 @@ interface FormControlProps {
 
 const StyleFormControl = styled.div`
   padding: 1rem;
+  width: 100%;
   ${breakpoint('small')} {
     flex: 1 1 auto;
     width: 50%;
