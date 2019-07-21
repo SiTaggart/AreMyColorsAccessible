@@ -46,7 +46,7 @@ jobs:
 
   cypress:
     docker:
-      - image: cypress/base:10.16.0
+      - image: cypress/browsers:node12.6.0-chrome75
         environment:
           ## this enables colors in the output
           TERM: xterm
