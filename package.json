@@ -64,7 +64,7 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react-hooks": "^1.1.0",
+    "@testing-library/react-hooks": "1.1.0",
     "@types/classnames": "2.2.9",
     "@types/color": "3.0.0",
     "@types/compression": "0.0.36",
@@ -109,7 +109,7 @@
     "react-addons-test-utils": "15.6.2",
     "react-test-renderer": "16.8.6",
     "regenerator-runtime": "0.13.3",
-    "start-server-and-test": "^1.9.1",
+    "start-server-and-test": "1.9.1",
     "typescript": "3.5.3"
   },
   "bundlesize": [
