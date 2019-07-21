@@ -1,3 +1,12 @@
+const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+  window.HTMLInputElement.prototype,
+  'value'
+).set;
+const changeRangeInputValue = $range => value => {
+  nativeInputValueSetter.call($range[0], value);
+  $range[0].dispatchEvent(new Event('change', { value, bubbles: true }));
+};
+
 describe('Homepage', function() {
   describe('renders', () => {
     it('should load', function() {
@@ -60,8 +69,9 @@ describe('Homepage', function() {
     before(() => {
       cy.visit('/');
       cy.get('#textColor-hsl-Lightness')
-        .invoke('val', 25)
-        .trigger('input');
+        // .invoke('val', 25)
+        // .trigger('input');
+        .then(input => changeRangeInputValue(input)(25));
     });
 
     it('should update the input value', () => {
@@ -81,8 +91,9 @@ describe('Homepage', function() {
     before(() => {
       cy.visit('/');
       cy.get('#background-hsl-Hue')
-        .invoke('val', 25)
-        .trigger('input');
+        // .invoke('val', 25)
+        // .trigger('input');
+        .then(input => changeRangeInputValue(input)(25));
     });
 
     it('should update the input value', () => {
