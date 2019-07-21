@@ -1,3 +1,12 @@
+const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
+  window.HTMLInputElement.prototype,
+  'value'
+).set;
+const changeRangeInputValue = $range => value => {
+  nativeInputValueSetter.call($range[0], value);
+  $range[0].dispatchEvent(new Event('change', { value, bubbles: true }));
+};
+
 describe('Palette', function() {
   describe('renders', () => {
     it('should load', function() {
@@ -138,8 +147,9 @@ describe('Palette', function() {
         'tbody [data-test="colorMatrix-tr"]:nth-child(3) td:nth-child(3) [data-test="colorCard"] [data-test="colorCard-swatch"]'
       ).should('contain', 'Yup');
       cy.get('#hsl-1-Hue')
-        .invoke('val', 25)
-        .trigger('input');
+        // .invoke('val', 25)
+        // .trigger('input');
+        .then(input => changeRangeInputValue(input)(25));
       cy.get('#hsl-1-Hue').should('have.value', '25');
       cy.get('#hsl-1-Saturation').should('have.value', '100');
       cy.get('#hsl-1-Lightness').should('have.value', '50');
@@ -158,8 +168,9 @@ describe('Palette', function() {
         'tbody [data-test="colorMatrix-tr"]:nth-child(1) td:nth-child(4) [data-test="colorCard"] [data-test="colorCard-swatch"]'
       ).should('contain', 'Kinda');
       cy.get('#hsl-2-Saturation')
-        .invoke('val', 95)
-        .trigger('input');
+        // .invoke('val', 95)
+        // .trigger('input');
+        .then(input => changeRangeInputValue(input)(95));
       cy.get('#hsl-2-Hue').should('have.value', '0');
       cy.get('#hsl-2-Saturation').should('have.value', '95');
       cy.get('#hsl-2-Lightness').should('have.value', '41');
@@ -178,8 +189,9 @@ describe('Palette', function() {
         'tbody [data-test="colorMatrix-tr"]:nth-child(3) td:nth-child(5) [data-test="colorCard"] [data-test="colorCard-swatch"]'
       ).should('contain', 'Nope');
       cy.get('#hsl-3-Lightness')
-        .invoke('val', 25)
-        .trigger('input');
+        // .invoke('val', 25)
+        // .trigger('input');
+        .then(input => changeRangeInputValue(input)(25));
       cy.get('#hsl-3-Hue').should('have.value', '0');
       cy.get('#hsl-3-Saturation').should('have.value', '100');
       cy.get('#hsl-3-Lightness').should('have.value', '25');

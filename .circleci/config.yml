@@ -66,10 +66,7 @@ jobs:
           paths:
             - ~/.npm
             - ~/.cache
-      - run:
-          command: yarn dev
-          background: true
-      - run: yarn cypress:run
+      - run: yarn cypress:ci
 
 workflows:
   version: 2
