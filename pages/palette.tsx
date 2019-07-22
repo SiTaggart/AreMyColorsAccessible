@@ -6,8 +6,11 @@ import PalettePage from '../components/palette-page';
 import Footer from '../components/footer';
 import { PaletteDataProvider } from '../context/palette';
 
+export interface PalettePageQueryString {
+  colors: string[];
+}
 interface PalettePageProps {
-  query: {};
+  query: PalettePageQueryString;
 }
 export const Palette: React.FC<PalettePageProps> = ({
   query

@@ -34,6 +34,7 @@ describe('Palette', function() {
       cy.get(
         'tbody [data-test="colorMatrix-tr"]:nth-child(1) > [data-test="colorMatrix-th"]'
       ).should('contain', '#CCCCCC');
+      cy.url().should('equal', 'http://localhost:3000/palette?colors=%23ccc');
     });
 
     it('should add a multiple colors to the matrix via space separation', () => {
@@ -43,6 +44,10 @@ describe('Palette', function() {
       cy.get(
         'tbody [data-test="colorMatrix-tr"]:nth-child(3) > [data-test="colorMatrix-th"]'
       ).should('contain', '#000000');
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/palette?colors=%23ccc&colors=%23fff&colors=%23000'
+      );
     });
 
     it('should add a multiple colors to the matrix via comma separation', () => {
@@ -52,6 +57,10 @@ describe('Palette', function() {
       cy.get(
         'tbody [data-test="colorMatrix-tr"]:nth-child(3) > [data-test="colorMatrix-th"]'
       ).should('contain', '#EFEFEF');
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/palette?colors=%23eee&colors=%23555&colors=%23efefef&colors=blue'
+      );
     });
 
     it('should add a multiple colors to the matrix via comma and space separation', () => {
@@ -61,6 +70,10 @@ describe('Palette', function() {
       cy.get(
         'tbody [data-test="colorMatrix-tr"]:nth-child(3) > [data-test="colorMatrix-th"]'
       ).should('contain', '#FF0000');
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/palette?colors=%23efefef&colors=%23999&colors=red&colors=hotpink&colors=%23fff'
+      );
     });
 
     it('should not accept dupes of colors in the input', () => {
@@ -70,6 +83,10 @@ describe('Palette', function() {
       cy.get(
         'tbody [data-test="colorMatrix-tr"]:nth-child(4) > [data-test="colorMatrix-th"]'
       ).should('contain', '#555555');
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/palette?colors=%23fff&colors=%23000&colors=%23333&colors=%23555'
+      );
     });
 
     it('should continue to add new colours if colours are already added', () => {
@@ -85,6 +102,10 @@ describe('Palette', function() {
       cy.get(
         'tbody [data-test="colorMatrix-tr"]:nth-child(5) > [data-test="colorMatrix-th"]'
       ).should('contain', '#555555');
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/palette?colors=%23efefef&colors=%23222&colors=%23999&colors=%23fff&colors=%23555'
+      );
     });
 
     it('should not add dupes of colors already added', () => {
@@ -100,6 +121,10 @@ describe('Palette', function() {
       cy.get(
         'tbody [data-test="colorMatrix-tr"]:nth-child(4) > [data-test="colorMatrix-th"]'
       ).should('contain', '#FFFFFF');
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/palette?colors=%23ccc&colors=%23ddd&colors=%23eee&colors=%23fff'
+      );
     });
 
     it('should show an error when you add an invalid color', () => {
@@ -139,6 +164,10 @@ describe('Palette', function() {
       cy.get(
         'tbody [data-test="colorMatrix-tr"]:nth-child(3) td:nth-child(2) [data-test="colorCard"] [data-test="colorCard-swatch"]'
       ).should('contain', 'Yup');
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/palette?colors=brown&colors=blue&colors=pink&colors=red'
+      );
     });
 
     it('should update the color matrix results when the hue slider is updated', () => {
@@ -160,6 +189,10 @@ describe('Palette', function() {
       cy.get(
         'tbody [data-test="colorMatrix-tr"]:nth-child(3) td:nth-child(3) [data-test="colorCard"] [data-test="colorCard-swatch"]'
       ).should('contain', 'Nope');
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/palette?colors=orange&colors=%23FF6A00&colors=pink&colors=red'
+      );
     });
 
     it('should update the color matrix results when the saturation slider is updated', () => {
@@ -181,6 +214,10 @@ describe('Palette', function() {
       cy.get(
         'tbody [data-test="colorMatrix-tr"]:nth-child(1) td:nth-child(4) [data-test="colorCard"] [data-test="colorCard-swatch"]'
       ).should('contain', 'Nope');
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/palette?colors=orange&colors=blue&colors=%23CC0505&colors=red'
+      );
     });
 
     it('should update the color matrix results when the lightness slider is updated', () => {
@@ -202,6 +239,10 @@ describe('Palette', function() {
       cy.get(
         'tbody [data-test="colorMatrix-tr"]:nth-child(3) td:nth-child(5) [data-test="colorCard"] [data-test="colorCard-swatch"]'
       ).should('contain', 'Yup');
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/palette?colors=orange&colors=blue&colors=pink&colors=%23800000'
+      );
     });
   });
 });

@@ -1,7 +1,11 @@
 import * as React from 'react';
 import Color from 'color';
+import qs from 'query-string';
+import isEmpty from 'lodash/isEmpty';
+import debounce from 'lodash/debounce';
 import ColorCombos from '../../utils/color-combos';
 import { ColorCombosTypes } from '../../types';
+import { PalettePageQueryString } from '../../pages/palette';
 
 export interface PaletteContextProps {
   paletteData: PaletteState;
@@ -16,7 +20,7 @@ interface PaletteState {
 }
 interface PaletteDataProviderProps {
   children?: React.ReactElement;
-  queryString?: {};
+  queryString?: PalettePageQueryString;
 }
 
 const convertColorStringsToColors = (colorStrings: string[]): Color[] | false => {
@@ -54,6 +58,31 @@ const isValidColor = (hex: string): Color | false => {
   return color;
 };
 
+const getColorCombos = (colors: string[]): ColorCombosTypes[] | false => {
+  return ColorCombos(colors);
+};
+
+const getInitialState = (querystring: PalettePageQueryString | undefined): PaletteState => {
+  let colors: string[] = [];
+  let colorCombos: ColorCombosTypes[] = [];
+
+  if (querystring !== undefined && !isEmpty(querystring)) {
+    colors = querystring.colors;
+    colorCombos = getColorCombos(colors) as ColorCombosTypes[];
+  }
+
+  return {
+    colors: colors,
+    colorCombos: colorCombos,
+    hasError: false
+  };
+};
+
+const updateHash = debounce((state): void => {
+  const query = '?' + qs.stringify({ colors: state.colors });
+  window.history.pushState(state, 'Palette checker - Are My Colours Accessible', query);
+}, 200);
+
 const PaletteContext = React.createContext<PaletteContextProps | null>(null);
 
 const usePaletteData = (): PaletteContextProps => {
@@ -67,28 +96,30 @@ const usePaletteData = (): PaletteContextProps => {
 const PaletteDataProvider: React.FC<PaletteDataProviderProps> = (
   props: PaletteDataProviderProps
 ): React.ReactElement => {
-  const [paletteData, setPaletteData] = React.useState<PaletteState>({
-    colors: [],
-    colorCombos: [],
-    hasError: false
-  });
+  const [paletteData, setPaletteData] = React.useState<PaletteState>(
+    getInitialState(props.queryString)
+  );
 
-  console.log('queryString:', props.queryString);
+  const [isInitial, setIsInitial] = React.useState<boolean>(false);
 
   const [state] = React.useMemo(
     (): [PaletteState, React.Dispatch<PaletteState>] => [paletteData, setPaletteData],
     [paletteData]
   );
 
+  React.useEffect((): void => {
+    if (isInitial) {
+      updateHash(state);
+    } else {
+      setIsInitial(true);
+    }
+  }, [state]);
+
   const mergeColorsWithState = (colors: string[]): string[] => {
     const filteredColors: string[] = colors.filter(
       (color): boolean => (state.colors as string[]).indexOf(color) < 0
     );
     return [...state.colors, ...filteredColors];
-  };
-
-  const getColorCombos = (colors: string[]): ColorCombosTypes[] | false => {
-    return ColorCombos(colors);
   };
 
   const updateColors = (colors: string[], isValidColor: boolean): void => {
