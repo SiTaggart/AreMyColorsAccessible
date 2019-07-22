@@ -44,6 +44,13 @@ describe('Homepage', function() {
     it('should fail contrast', () => {
       cy.get('[data-test=contrastResults-heading]').should('contain', 'Nope');
     });
+
+    it('should update the url', () => {
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23ccc'
+      );
+    });
   });
 
   describe('background color input', () => {
@@ -62,6 +69,13 @@ describe('Homepage', function() {
 
     it('should fail contrast', () => {
       cy.get('[data-test=contrastResults-heading]').should('contain', 'Nope');
+    });
+
+    it('should update the url', () => {
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/?background=%23ccc&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=true&textColor=%23FFFFFF'
+      );
     });
   });
 
@@ -85,6 +99,13 @@ describe('Homepage', function() {
     it('should fail contrast', () => {
       cy.get('[data-test=contrastResults-heading]').should('contain', 'Nope');
     });
+
+    it('should update the url', () => {
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23404040'
+      );
+    });
   });
 
   describe('background color sliders', () => {
@@ -106,6 +127,13 @@ describe('Homepage', function() {
 
     it('should fail contrast', () => {
       cy.get('[data-test=contrastResults-heading]').should('contain', 'Kinda');
+    });
+
+    it('should update the url', () => {
+      cy.url().should(
+        'equal',
+        'http://localhost:3000/?background=%23CE6012&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23FFFFFF'
+      );
     });
   });
 
