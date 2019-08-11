@@ -1253,7 +1253,7 @@
     retry-axios "^1.0.1"
     winston "^2.0.0"
 
-"@percy/cypress@^2.0.0":
+"@percy/cypress@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@percy/cypress/-/cypress-2.0.0.tgz#d201d8c873c555db309518184815bffc53519f66"
   integrity sha512-AOD+Wt3dEd8o1BjGcXCJyYp/omV0FaajHYfZzF5omLkUpu6SdJPWwzCw60JTQhlnkJG28Kl0UgtXy7VIWwlYUA==
