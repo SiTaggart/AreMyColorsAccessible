@@ -109,7 +109,7 @@
     "react-addons-test-utils": "15.6.2",
     "react-test-renderer": "16.9.0",
     "regenerator-runtime": "0.13.3",
-    "start-server-and-test": "1.9.2",
+    "start-server-and-test": "1.10.0",
     "typescript": "3.5.3"
   },
   "bundlesize": [
