@@ -47,8 +47,8 @@
     "polished": "3.4.1",
     "prop-types": "15.7.2",
     "query-string": "6.8.2",
-    "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "react": "16.9.0",
+    "react-dom": "16.9.0"
   },
   "prettier": {
     "printWidth": 100,
@@ -96,7 +96,7 @@
     "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-react": "7.14.3",
-    "eslint-plugin-react-hooks": "1.6.1",
+    "eslint-plugin-react-hooks": "1.7.0",
     "eslint-plugin-standard": "4.0.0",
     "husky": "3.0.2",
     "identity-obj-proxy": "3.0.0",
@@ -107,7 +107,7 @@
     "precise-commits": "1.0.2",
     "prettier": "1.18.2",
     "react-addons-test-utils": "15.6.2",
-    "react-test-renderer": "16.8.6",
+    "react-test-renderer": "16.9.0",
     "regenerator-runtime": "0.13.3",
     "start-server-and-test": "1.9.2",
     "typescript": "3.5.3"
