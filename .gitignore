@@ -4,3 +4,4 @@ node_modules
 bundles/
 coverage/
 cypress/videos/
+.env

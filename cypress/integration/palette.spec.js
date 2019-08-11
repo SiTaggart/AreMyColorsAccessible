@@ -16,6 +16,10 @@ describe('Palette', function() {
         .and('eq', 'Palette checker - Are My Colours Accessible');
     });
 
+    it('should match the snapshot', () => {
+      cy.percySnapshot('Palette page snapshot');
+    });
+
     it('should have a heading level 1', () => {
       cy.visit('/palette');
       cy.get('h1').should('contain', 'Add the colours from your palette');
@@ -106,6 +110,7 @@ describe('Palette', function() {
         'equal',
         'http://localhost:3000/palette?colors=%23efefef&colors=%23222&colors=%23999&colors=%23fff&colors=%23555'
       );
+      cy.percySnapshot('Palette page with colors snapshot');
     });
 
     it('should not add dupes of colors already added', () => {
