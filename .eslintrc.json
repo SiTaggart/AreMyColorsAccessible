@@ -4,13 +4,11 @@
     "standard",
     "standard-jsx",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
     "prettier",
     "prettier/standard",
-    "prettier/react",
-    "prettier/@typescript-eslint"
+    "prettier/react"
   ],
-  "plugins": ["react-hooks", "@typescript-eslint", "cypress"],
+  "plugins": ["react-hooks", "cypress"],
   "env": {
     "cypress/globals": true
   },
@@ -27,6 +25,8 @@
   "overrides": [
     {
       "files": ["**/*.ts", "**/*.tsx"],
+      "plugins": ["@typescript-eslint"],
+      "extends": ["plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "project": "./tsconfig.json"

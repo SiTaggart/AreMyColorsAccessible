@@ -1,4 +1,5 @@
 import React from 'react';
+import { NextPage, NextPageContext } from 'next';
 import Container from '../components/layouts/container';
 import Layout from '../components/layouts/layout';
 import Head from 'next/head';
@@ -10,9 +11,9 @@ export interface PalettePageQueryString {
   colors: string[];
 }
 interface PalettePageProps {
-  query: PalettePageQueryString;
+  query: {};
 }
-export const Palette: React.FC<PalettePageProps> = ({
+export const Palette: NextPage<PalettePageProps> = ({
   query
 }: PalettePageProps): React.ReactElement => {
   return (
@@ -20,7 +21,7 @@ export const Palette: React.FC<PalettePageProps> = ({
       <Head>
         <title>Palette checker - Are My Colours Accessible</title>
       </Head>
-      <PaletteDataProvider queryString={query}>
+      <PaletteDataProvider queryString={query as PalettePageQueryString}>
         <Container variant="palette">
           <Layout variant="full">
             <PalettePage />
@@ -32,12 +33,9 @@ export const Palette: React.FC<PalettePageProps> = ({
   );
 };
 
-// @ts-ignore
 Palette.getInitialProps = async ({
   query
-}: {
-  query: {};
-}): Promise<{
+}: NextPageContext): Promise<{
   query: {};
 }> => {
   return { query };

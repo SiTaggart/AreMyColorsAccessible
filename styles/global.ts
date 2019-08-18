@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
-// @ts-ignore
-import * as normalize from 'normalize.css/normalize.css';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const normalize = require('normalize.css');
 
 const globalStyles = css`
   ${normalize}
