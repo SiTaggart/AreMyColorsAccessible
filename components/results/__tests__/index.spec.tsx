@@ -10,7 +10,6 @@ import Results from '..';
 describe('Results', (): void => {
   it('renders without crashing', (): void => {
     ReactDOM.render(
-      // @ts-ignore
       <SiteDataProvider initialSiteData={{}}>
         <Results />
       </SiteDataProvider>,

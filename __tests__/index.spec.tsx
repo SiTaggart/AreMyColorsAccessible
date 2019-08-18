@@ -7,18 +7,9 @@ import HomePage from '../pages';
 
 describe('Home Page', (): void => {
   it('should render without crashing', (): void => {
-    ReactDOM.render(
-      // @ts-ignore
-      <HomePage />,
-      document.createElement('div')
-    );
+    ReactDOM.render(<HomePage />, document.createElement('div'));
 
-    const homeCmp = renderer
-      .create(
-        // @ts-ignore
-        <HomePage />
-      )
-      .toJSON();
+    const homeCmp = renderer.create(<HomePage />).toJSON();
     expect(homeCmp).toMatchSnapshot();
   });
 
