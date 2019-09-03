@@ -56,10 +56,11 @@ Array [
   </form>,
   .emotion-4 {
   margin-top: 3rem;
+  overflow-x: auto;
 }
 
 .emotion-2 {
-  table-layout: fixed;
+  border-collapse: collapse;
   width: 100%;
 }
 

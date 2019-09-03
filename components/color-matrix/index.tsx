@@ -13,9 +13,10 @@ export interface ColorMatrixProps {
 
 const StyledColorMatrix = styled.section`
   margin-top: 3rem;
+  overflow-x: auto;
 `;
 const StyledColorMatrixTable = styled.table`
-  table-layout: fixed;
+  border-collapse: collapse;
   width: 100%;
 `;
 const StyledColorMatrixTr = styled.tr``;
@@ -26,12 +27,9 @@ const StyledColorMatrixTh = styled.th`
   &:first-of-type {
     padding-left: 0;
   }
-
-  &:last-of-type {
-    padding-right: 0;
-  }
 `;
 const StyledColorMatrixTd = styled.td`
+  border: solid 1px #fff;
   padding: 0.5rem;
 `;
 
@@ -53,6 +51,9 @@ const ColorMatrix: React.FC<ColorMatrixProps> = (
                 <StyledColorMatrixTh data-test="colorMatrix-th" key={index} scope="col">
                   <FormInput
                     ariaLabel="hex colour code"
+                    css={{
+                      marginBottom: '0.5rem'
+                    }}
                     id={`colorhex-${index}`}
                     onChange={(e): void => props.onColorChange(e.target.value, index)}
                     value={props.colors[index]}
@@ -79,10 +80,13 @@ const ColorMatrix: React.FC<ColorMatrixProps> = (
                   (combo, comboIndex): ReactElement => (
                     <React.Fragment key={comboIndex}>
                       {index === comboIndex && <StyledColorMatrixTd>&nbsp;</StyledColorMatrixTd>}
-                      <StyledColorMatrixTd>
+                      <StyledColorMatrixTd
+                        style={{
+                          backgroundColor: combo.hex
+                        }}
+                      >
                         <ColorCard
                           accessibility={combo.accessibility!}
-                          background={combo.hex!}
                           color={color.hex}
                           contrast={combo.contrast!}
                         />
