@@ -13,7 +13,6 @@ describe('ColorCard', (): void => {
       aaa: true,
       aaaLarge: true
     },
-    background: '#fff',
     color: '#000',
     contrast: 21
   };

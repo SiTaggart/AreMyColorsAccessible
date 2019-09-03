@@ -49,6 +49,7 @@ const FormInput: React.FC<FormInputProps> = (
   return (
     <>
       <StyledInput
+        {...props}
         aria-describedby={props.errorMessage && `error-message-label-${props.id}`}
         aria-label={props.ariaLabel}
         autoComplete="off"

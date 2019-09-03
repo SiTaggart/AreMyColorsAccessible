@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ColorMatrix renders without crashing 1`] = `
-.emotion-266 {
+.emotion-386 {
   margin-top: 3rem;
+  overflow-x: auto;
 }
 
-.emotion-264 {
-  table-layout: fixed;
+.emotion-384 {
+  border-collapse: collapse;
   width: 100%;
 }
 
@@ -19,10 +20,6 @@ exports[`ColorMatrix renders without crashing 1`] = `
   padding-left: 0;
 }
 
-.emotion-34:last-of-type {
-  padding-right: 0;
-}
-
 .emotion-0 {
   background: rgba(255,255,255,0.1);
   border: solid 1px;
@@ -31,6 +28,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
   width: 100%;
+  margin-bottom: 0.5rem;
 }
 
 .emotion-10 {
@@ -183,136 +181,113 @@ exports[`ColorMatrix renders without crashing 1`] = `
 }
 
 .emotion-148 {
+  border: solid 1px #fff;
   padding: 0.5rem;
 }
 
-.emotion-154 {
-  border: solid 1px #dedede;
-  border-radius: 5px;
+.emotion-164 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 8rem;
+  min-width: 12rem;
   overflow: hidden;
   text-align: center;
   -webkit-transition: opacity ease-in;
   transition: opacity ease-in;
 }
 
-.emotion-150 {
-  background-color: #CCCCCC;
-  border-bottom: solid 1px #ccc;
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
+.emotion-152 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-.emotion-152 {
-  font-size: 0.8rem;
-  padding: 0.3rem;
+.emotion-150 {
+  background-color: #F7F8F8;
+  color: #666D70;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 4px;
+}
+
+.emotion-154 {
+  color: #FFFFFF;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .emotion-158 {
-  background-color: #777777;
-  border-bottom: solid 1px #ccc;
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-}
-
-.emotion-166 {
-  background-color: #000000;
-  border-bottom: solid 1px #ccc;
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
+  background-color: #FBDBDB;
+  color: #C52020;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 4px;
 }
 
 .emotion-178 {
-  background-color: #FFFFFF;
-  border-bottom: solid 1px #ccc;
+  background-color: #CFFCDA;
+  color: #004215;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 4px;
+}
+
+.emotion-212 {
   color: #CCCCCC;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   font-weight: bold;
   font-size: 2rem;
-  padding: 0.5rem 1rem;
+  text-align: center;
 }
 
-.emotion-188 {
-  background-color: #777777;
-  border-bottom: solid 1px #ccc;
-  color: #CCCCCC;
-  font-weight: bold;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-}
-
-.emotion-196 {
-  background-color: #000000;
-  border-bottom: solid 1px #ccc;
-  color: #CCCCCC;
-  font-weight: bold;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-}
-
-.emotion-208 {
-  background-color: #FFFFFF;
-  border-bottom: solid 1px #ccc;
+.emotion-272 {
   color: #777777;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   font-weight: bold;
   font-size: 2rem;
-  padding: 0.5rem 1rem;
+  text-align: center;
 }
 
-.emotion-216 {
-  background-color: #CCCCCC;
-  border-bottom: solid 1px #ccc;
-  color: #777777;
-  font-weight: bold;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-}
-
-.emotion-226 {
-  background-color: #000000;
-  border-bottom: solid 1px #ccc;
-  color: #777777;
-  font-weight: bold;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-}
-
-.emotion-238 {
-  background-color: #FFFFFF;
-  border-bottom: solid 1px #ccc;
+.emotion-332 {
   color: #000000;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   font-weight: bold;
   font-size: 2rem;
-  padding: 0.5rem 1rem;
-}
-
-.emotion-246 {
-  background-color: #CCCCCC;
-  border-bottom: solid 1px #ccc;
-  color: #000000;
-  font-weight: bold;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-}
-
-.emotion-254 {
-  background-color: #777777;
-  border-bottom: solid 1px #ccc;
-  color: #000000;
-  font-weight: bold;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
+  text-align: center;
 }
 
 <section
-  className="emotion-266 emotion-267"
+  className="emotion-386 emotion-387"
 >
   <table
-    className="emotion-264 emotion-265"
+    className="emotion-384 emotion-385"
   >
     <thead>
       <tr
@@ -763,97 +738,157 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </td>
         <td
           className="emotion-148 emotion-149"
+          style={
+            Object {
+              "backgroundColor": "#CCCCCC",
+            }
+          }
         >
           <div
-            className="emotion-154 emotion-155"
+            className="emotion-164 emotion-165"
             data-test="colorCard"
           >
             <div
-              className="emotion-150 emotion-151"
-              color="#FFFFFF"
-              data-test="colorCard-swatch"
-            >
-              Nope
-            </div>
-            <div
               className="emotion-152 emotion-153"
             >
-              <div>
-                Small text: 
-                Fail
-              </div>
-              <div>
-                Large text: 
-                Fail
-              </div>
-              <div>
-                Contrast: 
+              <span
+                className="emotion-150 emotion-151"
+                title="Color contrast ratio"
+              >
                 1.61
-              </div>
-            </div>
-          </div>
-        </td>
-        <td
-          className="emotion-148 emotion-149"
-        >
-          <div
-            className="emotion-154 emotion-155"
-            data-test="colorCard"
-          >
-            <div
-              className="emotion-158 emotion-151"
-              color="#FFFFFF"
-              data-test="colorCard-swatch"
-            >
-              Kinda
+                 : 1
+              </span>
             </div>
             <div
               className="emotion-152 emotion-153"
             >
-              <div>
-                Small text: 
+              <div
+                className="emotion-154 emotion-155"
+                color="#FFFFFF"
+                data-test="colorCard-swatch"
+              >
+                Nope
+              </div>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <span
+                className="emotion-158 emotion-151"
+              >
+                Small: 
                 Fail
-              </div>
-              <div>
-                Large text: 
-                AA
-              </div>
-              <div>
-                Contrast: 
-                4.48
-              </div>
+              </span>
+              <span
+                className="emotion-158 emotion-151"
+              >
+                Large: 
+                Fail
+              </span>
             </div>
           </div>
         </td>
         <td
           className="emotion-148 emotion-149"
+          style={
+            Object {
+              "backgroundColor": "#777777",
+            }
+          }
         >
           <div
-            className="emotion-154 emotion-155"
+            className="emotion-164 emotion-165"
             data-test="colorCard"
           >
             <div
-              className="emotion-166 emotion-151"
-              color="#FFFFFF"
-              data-test="colorCard-swatch"
+              className="emotion-152 emotion-153"
             >
-              Yup
+              <span
+                className="emotion-150 emotion-151"
+                title="Color contrast ratio"
+              >
+                4.48
+                 : 1
+              </span>
             </div>
             <div
               className="emotion-152 emotion-153"
             >
-              <div>
-                Small text: 
-                AAA
+              <div
+                className="emotion-154 emotion-155"
+                color="#FFFFFF"
+                data-test="colorCard-swatch"
+              >
+                Kinda
               </div>
-              <div>
-                Large text: 
-                AAA
-              </div>
-              <div>
-                Contrast: 
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <span
+                className="emotion-158 emotion-151"
+              >
+                Small: 
+                Fail
+              </span>
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Large: 
+                AA
+              </span>
+            </div>
+          </div>
+        </td>
+        <td
+          className="emotion-148 emotion-149"
+          style={
+            Object {
+              "backgroundColor": "#000000",
+            }
+          }
+        >
+          <div
+            className="emotion-164 emotion-165"
+            data-test="colorCard"
+          >
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <span
+                className="emotion-150 emotion-151"
+                title="Color contrast ratio"
+              >
                 21
+                 : 1
+              </span>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <div
+                className="emotion-154 emotion-155"
+                color="#FFFFFF"
+                data-test="colorCard-swatch"
+              >
+                Yup
               </div>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Small: 
+                AAA
+              </span>
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Large: 
+                AAA
+              </span>
             </div>
           </div>
         </td>
@@ -871,33 +906,53 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </th>
         <td
           className="emotion-148 emotion-149"
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+            }
+          }
         >
           <div
-            className="emotion-154 emotion-155"
+            className="emotion-164 emotion-165"
             data-test="colorCard"
           >
             <div
-              className="emotion-178 emotion-151"
-              color="#CCCCCC"
-              data-test="colorCard-swatch"
+              className="emotion-152 emotion-153"
             >
-              Nope
+              <span
+                className="emotion-150 emotion-151"
+                title="Color contrast ratio"
+              >
+                1.61
+                 : 1
+              </span>
             </div>
             <div
               className="emotion-152 emotion-153"
             >
-              <div>
-                Small text: 
+              <div
+                className="emotion-212 emotion-155"
+                color="#CCCCCC"
+                data-test="colorCard-swatch"
+              >
+                Nope
+              </div>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <span
+                className="emotion-158 emotion-151"
+              >
+                Small: 
                 Fail
-              </div>
-              <div>
-                Large text: 
+              </span>
+              <span
+                className="emotion-158 emotion-151"
+              >
+                Large: 
                 Fail
-              </div>
-              <div>
-                Contrast: 
-                1.61
-              </div>
+              </span>
             </div>
           </div>
         </td>
@@ -908,65 +963,105 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </td>
         <td
           className="emotion-148 emotion-149"
+          style={
+            Object {
+              "backgroundColor": "#777777",
+            }
+          }
         >
           <div
-            className="emotion-154 emotion-155"
+            className="emotion-164 emotion-165"
             data-test="colorCard"
           >
             <div
-              className="emotion-188 emotion-151"
-              color="#CCCCCC"
-              data-test="colorCard-swatch"
+              className="emotion-152 emotion-153"
             >
-              Nope
+              <span
+                className="emotion-150 emotion-151"
+                title="Color contrast ratio"
+              >
+                2.79
+                 : 1
+              </span>
             </div>
             <div
               className="emotion-152 emotion-153"
             >
-              <div>
-                Small text: 
+              <div
+                className="emotion-212 emotion-155"
+                color="#CCCCCC"
+                data-test="colorCard-swatch"
+              >
+                Nope
+              </div>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <span
+                className="emotion-158 emotion-151"
+              >
+                Small: 
                 Fail
-              </div>
-              <div>
-                Large text: 
+              </span>
+              <span
+                className="emotion-158 emotion-151"
+              >
+                Large: 
                 Fail
-              </div>
-              <div>
-                Contrast: 
-                2.79
-              </div>
+              </span>
             </div>
           </div>
         </td>
         <td
           className="emotion-148 emotion-149"
+          style={
+            Object {
+              "backgroundColor": "#000000",
+            }
+          }
         >
           <div
-            className="emotion-154 emotion-155"
+            className="emotion-164 emotion-165"
             data-test="colorCard"
           >
             <div
-              className="emotion-196 emotion-151"
-              color="#CCCCCC"
-              data-test="colorCard-swatch"
+              className="emotion-152 emotion-153"
             >
-              Yup
+              <span
+                className="emotion-150 emotion-151"
+                title="Color contrast ratio"
+              >
+                13.08
+                 : 1
+              </span>
             </div>
             <div
               className="emotion-152 emotion-153"
             >
-              <div>
-                Small text: 
+              <div
+                className="emotion-212 emotion-155"
+                color="#CCCCCC"
+                data-test="colorCard-swatch"
+              >
+                Yup
+              </div>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Small: 
                 AAA
-              </div>
-              <div>
-                Large text: 
+              </span>
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Large: 
                 AAA
-              </div>
-              <div>
-                Contrast: 
-                13.08
-              </div>
+              </span>
             </div>
           </div>
         </td>
@@ -984,65 +1079,105 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </th>
         <td
           className="emotion-148 emotion-149"
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+            }
+          }
         >
           <div
-            className="emotion-154 emotion-155"
+            className="emotion-164 emotion-165"
             data-test="colorCard"
           >
             <div
-              className="emotion-208 emotion-151"
-              color="#777777"
-              data-test="colorCard-swatch"
+              className="emotion-152 emotion-153"
             >
-              Kinda
+              <span
+                className="emotion-150 emotion-151"
+                title="Color contrast ratio"
+              >
+                4.48
+                 : 1
+              </span>
             </div>
             <div
               className="emotion-152 emotion-153"
             >
-              <div>
-                Small text: 
+              <div
+                className="emotion-272 emotion-155"
+                color="#777777"
+                data-test="colorCard-swatch"
+              >
+                Kinda
+              </div>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <span
+                className="emotion-158 emotion-151"
+              >
+                Small: 
                 Fail
-              </div>
-              <div>
-                Large text: 
+              </span>
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Large: 
                 AA
-              </div>
-              <div>
-                Contrast: 
-                4.48
-              </div>
+              </span>
             </div>
           </div>
         </td>
         <td
           className="emotion-148 emotion-149"
+          style={
+            Object {
+              "backgroundColor": "#CCCCCC",
+            }
+          }
         >
           <div
-            className="emotion-154 emotion-155"
+            className="emotion-164 emotion-165"
             data-test="colorCard"
           >
             <div
-              className="emotion-216 emotion-151"
-              color="#777777"
-              data-test="colorCard-swatch"
+              className="emotion-152 emotion-153"
             >
-              Nope
+              <span
+                className="emotion-150 emotion-151"
+                title="Color contrast ratio"
+              >
+                2.79
+                 : 1
+              </span>
             </div>
             <div
               className="emotion-152 emotion-153"
             >
-              <div>
-                Small text: 
+              <div
+                className="emotion-272 emotion-155"
+                color="#777777"
+                data-test="colorCard-swatch"
+              >
+                Nope
+              </div>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <span
+                className="emotion-158 emotion-151"
+              >
+                Small: 
                 Fail
-              </div>
-              <div>
-                Large text: 
+              </span>
+              <span
+                className="emotion-158 emotion-151"
+              >
+                Large: 
                 Fail
-              </div>
-              <div>
-                Contrast: 
-                2.79
-              </div>
+              </span>
             </div>
           </div>
         </td>
@@ -1053,33 +1188,53 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </td>
         <td
           className="emotion-148 emotion-149"
+          style={
+            Object {
+              "backgroundColor": "#000000",
+            }
+          }
         >
           <div
-            className="emotion-154 emotion-155"
+            className="emotion-164 emotion-165"
             data-test="colorCard"
           >
             <div
-              className="emotion-226 emotion-151"
-              color="#777777"
-              data-test="colorCard-swatch"
+              className="emotion-152 emotion-153"
             >
-              Yup
+              <span
+                className="emotion-150 emotion-151"
+                title="Color contrast ratio"
+              >
+                4.69
+                 : 1
+              </span>
             </div>
             <div
               className="emotion-152 emotion-153"
             >
-              <div>
-                Small text: 
+              <div
+                className="emotion-272 emotion-155"
+                color="#777777"
+                data-test="colorCard-swatch"
+              >
+                Yup
+              </div>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Small: 
                 AA
-              </div>
-              <div>
-                Large text: 
+              </span>
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Large: 
                 AAA
-              </div>
-              <div>
-                Contrast: 
-                4.69
-              </div>
+              </span>
             </div>
           </div>
         </td>
@@ -1097,97 +1252,157 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </th>
         <td
           className="emotion-148 emotion-149"
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+            }
+          }
         >
           <div
-            className="emotion-154 emotion-155"
+            className="emotion-164 emotion-165"
             data-test="colorCard"
           >
             <div
-              className="emotion-238 emotion-151"
-              color="#000000"
-              data-test="colorCard-swatch"
-            >
-              Yup
-            </div>
-            <div
               className="emotion-152 emotion-153"
             >
-              <div>
-                Small text: 
-                AAA
-              </div>
-              <div>
-                Large text: 
-                AAA
-              </div>
-              <div>
-                Contrast: 
+              <span
+                className="emotion-150 emotion-151"
+                title="Color contrast ratio"
+              >
                 21
+                 : 1
+              </span>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <div
+                className="emotion-332 emotion-155"
+                color="#000000"
+                data-test="colorCard-swatch"
+              >
+                Yup
               </div>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Small: 
+                AAA
+              </span>
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Large: 
+                AAA
+              </span>
             </div>
           </div>
         </td>
         <td
           className="emotion-148 emotion-149"
+          style={
+            Object {
+              "backgroundColor": "#CCCCCC",
+            }
+          }
         >
           <div
-            className="emotion-154 emotion-155"
+            className="emotion-164 emotion-165"
             data-test="colorCard"
           >
             <div
-              className="emotion-246 emotion-151"
-              color="#000000"
-              data-test="colorCard-swatch"
-            >
-              Yup
-            </div>
-            <div
               className="emotion-152 emotion-153"
             >
-              <div>
-                Small text: 
-                AAA
-              </div>
-              <div>
-                Large text: 
-                AAA
-              </div>
-              <div>
-                Contrast: 
+              <span
+                className="emotion-150 emotion-151"
+                title="Color contrast ratio"
+              >
                 13.08
+                 : 1
+              </span>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <div
+                className="emotion-332 emotion-155"
+                color="#000000"
+                data-test="colorCard-swatch"
+              >
+                Yup
               </div>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Small: 
+                AAA
+              </span>
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Large: 
+                AAA
+              </span>
             </div>
           </div>
         </td>
         <td
           className="emotion-148 emotion-149"
+          style={
+            Object {
+              "backgroundColor": "#777777",
+            }
+          }
         >
           <div
-            className="emotion-154 emotion-155"
+            className="emotion-164 emotion-165"
             data-test="colorCard"
           >
             <div
-              className="emotion-254 emotion-151"
-              color="#000000"
-              data-test="colorCard-swatch"
+              className="emotion-152 emotion-153"
             >
-              Yup
+              <span
+                className="emotion-150 emotion-151"
+                title="Color contrast ratio"
+              >
+                4.69
+                 : 1
+              </span>
             </div>
             <div
               className="emotion-152 emotion-153"
             >
-              <div>
-                Small text: 
+              <div
+                className="emotion-332 emotion-155"
+                color="#000000"
+                data-test="colorCard-swatch"
+              >
+                Yup
+              </div>
+            </div>
+            <div
+              className="emotion-152 emotion-153"
+            >
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Small: 
                 AA
-              </div>
-              <div>
-                Large text: 
+              </span>
+              <span
+                className="emotion-178 emotion-151"
+              >
+                Large: 
                 AAA
-              </div>
-              <div>
-                Contrast: 
-                4.69
-              </div>
+              </span>
             </div>
           </div>
         </td>

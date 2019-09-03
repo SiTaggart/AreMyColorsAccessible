@@ -1,77 +1,164 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ColorCard renders without crashing 1`] = `
-.emotion-4 {
-  border: solid 1px #dedede;
-  border-radius: 5px;
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 8rem;
+  min-width: 12rem;
   overflow: hidden;
   text-align: center;
   -webkit-transition: opacity ease-in;
   transition: opacity ease-in;
 }
 
-.emotion-0 {
-  background-color: #fff;
-  border-bottom: solid 1px #ccc;
-  color: #000;
-  font-weight: bold;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-.emotion-2 {
-  font-size: 0.8rem;
-  padding: 0.3rem;
+.emotion-0 {
+  background-color: #F7F8F8;
+  color: #666D70;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 4px;
+}
+
+.emotion-4 {
+  color: #000;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.emotion-8 {
+  background-color: #CFFCDA;
+  color: #004215;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 4px;
 }
 
 <div
-  className="emotion-4 emotion-5"
+  className="emotion-14 emotion-15"
   data-test="colorCard"
 >
   <div
-    className="emotion-0 emotion-1"
-    color="#000"
-    data-test="colorCard-swatch"
+    className="emotion-2 emotion-3"
   >
-    Yup
+    <span
+      className="emotion-0 emotion-1"
+      title="Color contrast ratio"
+    >
+      21
+       : 1
+    </span>
   </div>
   <div
     className="emotion-2 emotion-3"
   >
-    <div>
-      Small text: 
+    <div
+      className="emotion-4 emotion-5"
+      color="#000"
+      data-test="colorCard-swatch"
+    >
+      Yup
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <span
+      className="emotion-8 emotion-1"
+    >
+      Small: 
       AAA
-    </div>
-    <div>
-      Large text: 
+    </span>
+    <span
+      className="emotion-8 emotion-1"
+    >
+      Large: 
       AAA
-    </div>
-    <div>
-      Contrast: 
-      21
-    </div>
+    </span>
   </div>
 </div>
 `;
 
 exports[`ColorCard should render a not important card 1`] = `
-.emotion-0 {
-  background-color: #fff;
-  border-bottom: solid 1px #ccc;
-  color: #000;
-  font-weight: bold;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-.emotion-2 {
-  font-size: 0.8rem;
-  padding: 0.3rem;
+.emotion-0 {
+  background-color: #F7F8F8;
+  color: #666D70;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 4px;
 }
 
 .emotion-4 {
-  border: solid 1px #dedede;
-  border-radius: 5px;
+  color: #000;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.emotion-8 {
+  background-color: #CFFCDA;
+  color: #004215;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 4px;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 8rem;
+  min-width: 12rem;
   overflow: hidden;
   opacity: 0.1;
   text-align: center;
@@ -80,31 +167,46 @@ exports[`ColorCard should render a not important card 1`] = `
 }
 
 <div
-  className="emotion-4 emotion-5"
+  className="emotion-14 emotion-15"
   data-test="colorCard"
 >
   <div
-    className="emotion-0 emotion-1"
-    color="#000"
-    data-test="colorCard-swatch"
+    className="emotion-2 emotion-3"
   >
-    Yup
+    <span
+      className="emotion-0 emotion-1"
+      title="Color contrast ratio"
+    >
+      21
+       : 1
+    </span>
   </div>
   <div
     className="emotion-2 emotion-3"
   >
-    <div>
-      Small text: 
+    <div
+      className="emotion-4 emotion-5"
+      color="#000"
+      data-test="colorCard-swatch"
+    >
+      Yup
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <span
+      className="emotion-8 emotion-1"
+    >
+      Small: 
       AAA
-    </div>
-    <div>
-      Large text: 
+    </span>
+    <span
+      className="emotion-8 emotion-1"
+    >
+      Large: 
       AAA
-    </div>
-    <div>
-      Contrast: 
-      21
-    </div>
+    </span>
   </div>
 </div>
 `;

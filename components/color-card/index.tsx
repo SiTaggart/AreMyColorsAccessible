@@ -1,11 +1,10 @@
 import React, { ReactElement } from 'react';
-import styled from '@emotion/styled';
+import styled, { CSSObject } from '@emotion/styled';
 import { Levels } from '../../types';
 import colorRating from '../../utils/color-rating';
 
 export interface ColorCardProps {
   accessibility: Levels;
-  background: string;
   color: string;
   contrast: number;
   isNotImportant?: boolean;
@@ -15,30 +14,52 @@ interface StyledColorCardProps {
   isNotImportant?: boolean;
 }
 const StyledColorCard = styled.div<StyledColorCardProps>`
-  border: solid 1px #dedede;
-  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 8rem;
+  min-width: 12rem;
   overflow: hidden;
   opacity: ${(props): string | null => (props.isNotImportant ? '0.1' : null)};
   text-align: center;
   transition: opacity ease-in;
 `;
 
+export const StyledCardRow = styled.div<{}>`
+  display: flex;
+  justify-content: space-between;
+`;
+
 interface StyledColorSwatchProps {
-  backgroundColor: string;
   color: string;
 }
 const StyledColorSwatch = styled.div<StyledColorSwatchProps>`
-  background-color: ${(props): string => props.backgroundColor};
-  border-bottom: solid 1px #ccc;
   color: ${(props): string => props.color};
+  flex: 1;
   font-weight: bold;
   font-size: 2rem;
-  padding: 0.5rem 1rem;
+  text-align: center;
 `;
 
-const StyledColorCardRatio = styled.div`
-  font-size: 0.8rem;
-  padding: 0.3rem;
+interface StyledColorCardPillProps {
+  status?: 'success' | 'error';
+}
+const getStatusStyles = (props: StyledColorCardPillProps): CSSObject => {
+  switch (props.status) {
+    case 'success':
+      return { backgroundColor: '#CFFCDA', color: '#004215' };
+    case 'error':
+      return { backgroundColor: '#FBDBDB', color: '#C52020' };
+    default:
+      return { backgroundColor: '#F7F8F8', color: '#666D70' };
+  }
+};
+const StyledColorCardPill = styled.span<StyledColorCardPillProps>`
+  ${getStatusStyles};
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 4px;
 `;
 
 const ColorCard: React.FC<ColorCardProps> = (
@@ -48,18 +69,24 @@ const ColorCard: React.FC<ColorCardProps> = (
 
   return (
     <StyledColorCard data-test="colorCard" isNotImportant={props.isNotImportant}>
-      <StyledColorSwatch
-        backgroundColor={props.background}
-        color={props.color}
-        data-test="colorCard-swatch"
-      >
-        {rating.overall}
-      </StyledColorSwatch>
-      <StyledColorCardRatio>
-        <div>Small text: {rating.small}</div>
-        <div>Large text: {rating.large}</div>
-        <div>Contrast: {parseFloat(props.contrast.toFixed(2))}</div>
-      </StyledColorCardRatio>
+      <StyledCardRow>
+        <StyledColorCardPill title="Color contrast ratio">
+          {parseFloat(props.contrast.toFixed(2))} : 1
+        </StyledColorCardPill>
+      </StyledCardRow>
+      <StyledCardRow>
+        <StyledColorSwatch color={props.color} data-test="colorCard-swatch">
+          {rating.overall}
+        </StyledColorSwatch>
+      </StyledCardRow>
+      <StyledCardRow>
+        <StyledColorCardPill status={rating.small === 'Fail' ? 'error' : 'success'}>
+          Small: {rating.small}
+        </StyledColorCardPill>
+        <StyledColorCardPill status={rating.large === 'Fail' ? 'error' : 'success'}>
+          Large: {rating.large}
+        </StyledColorCardPill>
+      </StyledCardRow>
     </StyledColorCard>
   );
 };

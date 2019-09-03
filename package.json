@@ -60,6 +60,7 @@
     ]
   },
   "devDependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.17",
     "@percy/cypress": "2.0.1",
     "@testing-library/react-hooks": "2.0.1",
     "@types/color": "3.0.0",
