@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import styled from '@emotion/styled';
-import { ColorCombosTypes } from '../../types';
+import { ColorCombosTypes } from 'color-combos';
 import ColorCard from '../color-card';
 import FormInput from '../form-input';
 import HslSliders from '../hsl-sliders';
