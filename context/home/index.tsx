@@ -3,8 +3,8 @@ import Color from 'color';
 import isEmpty from 'lodash/isEmpty';
 import debounce from 'lodash/debounce';
 import qs from 'query-string';
-import { SiteData, ColorCombosTypes } from '../../types';
-import ColorCombos from '../../utils/color-combos';
+import ColorCombos, { ColorCombosTypes, ColorCombinationTypes } from 'color-combos';
+import { SiteData } from '../../types';
 
 export interface HomeContextInterface {
   siteData: SiteData;
@@ -56,7 +56,7 @@ const isValidColor = (value: string): Color | false => {
   return color;
 };
 
-const createFakeCombination = (color: number[], hex: string): {} => {
+const createFakeCombination = (color: number[], hex: string): ColorCombinationTypes => {
   return {
     model: 'rgb',
     color: color,
@@ -68,9 +68,10 @@ const createFakeCombination = (color: number[], hex: string): {} => {
 };
 
 const createDuplicateCombination = (combos: ColorCombosTypes[]): ColorCombosTypes[] => {
+  const color = combos[0].color != null ? combos[0].color : [];
   const dupeCombo = {
     ...combos[0],
-    combinations: [createFakeCombination(combos[0].color, combos[0].hex)]
+    combinations: [createFakeCombination(color, combos[0].hex)]
   };
   return [dupeCombo, dupeCombo];
 };

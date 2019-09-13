@@ -3,8 +3,7 @@ import Color from 'color';
 import qs from 'query-string';
 import isEmpty from 'lodash/isEmpty';
 import debounce from 'lodash/debounce';
-import ColorCombos from '../../utils/color-combos';
-import { ColorCombosTypes } from '../../types';
+import ColorCombos, { ColorCombosTypes } from 'color-combos';
 import { PalettePageQueryString } from '../../pages/palette';
 
 export interface PaletteContextProps {
