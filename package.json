@@ -102,7 +102,7 @@
     "prettier": "1.18.2",
     "react-addons-test-utils": "15.6.2",
     "react-test-renderer": "16.9.0",
-    "start-server-and-test": "1.10.0",
+    "start-server-and-test": "1.10.2",
     "typescript": "3.6.3"
   },
   "bundlesize": [
