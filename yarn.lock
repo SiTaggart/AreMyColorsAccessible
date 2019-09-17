@@ -1414,10 +1414,10 @@
     retry-axios "^1.0.1"
     winston "^2.0.0"
 
-"@percy/cypress@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@percy/cypress/-/cypress-2.0.1.tgz#65b2277d26d2ee6195af80a6d18b046fce60accd"
-  integrity sha512-Pa6+AAsC3Wyg5cUragbuvMH9lfyNCFYNKhBizoQQZrmqb8Hri+Ahm1HHwLIyh35AhHQlj9P8GAXC2lxI9wJT9g==
+"@percy/cypress@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@percy/cypress/-/cypress-2.1.0.tgz#36808bcd9f940238ccc225b461b9be3d7b27ca6c"
+  integrity sha512-Gdr0r0pfblGFxNPb6/0TkuXhBToQaSxMd39KC4xZMyyS9wvapvoLJgLbsm7N/xieMjF4/9Vnj1qqq+YfzLGSpQ==
   dependencies:
     "@percy/agent" "~0"
     axios "^0.19.0"
