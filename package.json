@@ -67,7 +67,7 @@
     "@types/color": "3.0.0",
     "@types/enzyme": "3.10.3",
     "@types/jest": "24.0.18",
-    "@types/lodash": "4.14.139",
+    "@types/lodash": "4.14.140",
     "@types/next": "8.0.6",
     "@types/node": "11.13.21",
     "@types/query-string": "6.3.0",
