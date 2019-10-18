@@ -8109,10 +8109,10 @@ node-notifier@^5.4.2:
     shellwords "^0.1.1"
     which "^1.3.1"
 
-node-plop@~0.20.0:
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/node-plop/-/node-plop-0.20.0.tgz#082d6a5502d8638a02974de6ab2028b2ad4ff31e"
-  integrity sha512-08CFYTyxPC6mncNTcgsDkGHS1kFsGEVXNM6TLAll8eVs683GF6XqLMmipXXyv/z/eOEQq4UIqnomyxaIDBqrtw==
+node-plop@~0.22.0:
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/node-plop/-/node-plop-0.22.0.tgz#0c0241a597985b8415a08248da7b6fde1dcbd231"
+  integrity sha512-fm5Re525bbjaXW0umE/g7a5FxFOZ9NdNVDwND04lLS3UxoUfkPD+xXl080oybkVzZ/2eQ8jr3EOZHhpHAFrVZg==
   dependencies:
     "@types/globby" "^9.1.0"
     "@types/handlebars" "^4.1.0"
@@ -8986,16 +8986,16 @@ please-upgrade-node@^3.2.0:
   dependencies:
     semver-compare "^1.0.0"
 
-plop@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/plop/-/plop-2.5.0.tgz#ea76b784c06701b57796016d464f38d9913ce0f6"
-  integrity sha512-eLrCpxAOyedAhhfCTbpzmwW8psdyIZw/K0YDoFPY9cgfJKQZs9sVFOq4RDWI09sqh1I3cnBN/7/jxHgTXw6LLQ==
+plop@2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/plop/-/plop-2.5.1.tgz#eb017b28071f507ffe97477c299d3e09453bea1b"
+  integrity sha512-ruii4rH+KRw9Z+jWsDEWWO9kaKU1NoDQgTzx7fCBTCg5qrKGYFVIpInoN00dV1SsnO3RV66l5vL2pUEQ5Tdrdg==
   dependencies:
     chalk "^1.1.3"
     interpret "^1.2.0"
     liftoff "^2.5.0"
     minimist "^1.2.0"
-    node-plop "~0.20.0"
+    node-plop "~0.22.0"
     ora "^3.4.0"
     v8flags "^2.0.10"
 
