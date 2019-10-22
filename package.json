@@ -44,8 +44,8 @@
     "normalize.css": "8.0.1",
     "polished": "3.4.1",
     "query-string": "6.8.3",
-    "react": "16.10.2",
-    "react-dom": "16.10.2"
+    "react": "16.11.0",
+    "react-dom": "16.11.0"
   },
   "prettier": {
     "printWidth": 100,
@@ -92,7 +92,7 @@
     "eslint-plugin-prettier": "3.1.1",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-react": "7.16.0",
-    "eslint-plugin-react-hooks": "2.1.2",
+    "eslint-plugin-react-hooks": "2.2.0",
     "eslint-plugin-standard": "4.0.1",
     "husky": "3.0.9",
     "jest": "24.9.0",
@@ -101,7 +101,7 @@
     "precise-commits": "1.0.2",
     "prettier": "1.18.2",
     "react-addons-test-utils": "15.6.2",
-    "react-test-renderer": "16.10.2",
+    "react-test-renderer": "16.11.0",
     "start-server-and-test": "1.10.6",
     "typescript": "3.6.4"
   },
