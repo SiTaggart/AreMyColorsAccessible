@@ -40,7 +40,7 @@
     "color-combos": "1.0.0",
     "lodash": "4.17.15",
     "next": "9.1.1",
-    "node-sass": "4.12.0",
+    "node-sass": "4.13.0",
     "normalize.css": "8.0.1",
     "polished": "3.4.1",
     "query-string": "6.8.3",
