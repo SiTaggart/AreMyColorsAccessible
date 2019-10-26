@@ -83,7 +83,7 @@
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.15.1",
     "eslint": "6.6.0",
-    "eslint-config-prettier": "6.4.0",
+    "eslint-config-prettier": "6.5.0",
     "eslint-config-standard": "14.1.0",
     "eslint-config-standard-jsx": "8.1.0",
     "eslint-plugin-cypress": "2.7.0",
