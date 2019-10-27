@@ -7,9 +7,9 @@ interface LayoutProps {
   variant?: 'large' | 'small' | 'full';
 }
 
-const variantSize = (props: LayoutProps): SerializedStyles => {
+const variantSize = ({ variant }: LayoutProps): SerializedStyles => {
   let styles = css``;
-  switch (props.variant) {
+  switch (variant) {
     case 'full':
       styles = css`
         max-width: 95%;

@@ -33,74 +33,74 @@ const StyledColorMatrixTd = styled.td`
   padding: 0.5rem;
 `;
 
-const ColorMatrix: React.FC<ColorMatrixProps> = (
-  props: ColorMatrixProps
-): ReactElement<HTMLDivElement> => {
-  return (
-    <StyledColorMatrix>
-      <StyledColorMatrixTable>
-        <thead>
-          <StyledColorMatrixTr data-test="colorMatrix-tr">
-            <td
-              style={{
-                width: '6rem',
-              }}
-            />
-            {props.colorCombos.map(
-              (color, index): ReactElement => (
-                <StyledColorMatrixTh data-test="colorMatrix-th" key={index} scope="col">
-                  <FormInput
-                    ariaLabel="hex colour code"
-                    css={{
-                      marginBottom: '0.5rem',
-                    }}
-                    id={`colorhex-${index}`}
-                    onChange={(e): void => props.onColorChange(e.target.value, index)}
-                    value={props.colors[index]}
-                  />
-                  <HslSliders
-                    id={`hsl-${index}`}
-                    onChange={(hex): void => props.onColorChange(hex, index)}
-                    value={color.hex}
-                    variant="compact"
-                  />
-                </StyledColorMatrixTh>
-              )
-            )}
-          </StyledColorMatrixTr>
-        </thead>
-        <tbody>
-          {props.colorCombos.map(
+const ColorMatrix: React.FC<ColorMatrixProps> = ({
+  colorCombos,
+  onColorChange,
+  colors,
+}: ColorMatrixProps): ReactElement<HTMLDivElement> => (
+  <StyledColorMatrix>
+    <StyledColorMatrixTable>
+      <thead>
+        <StyledColorMatrixTr data-test="colorMatrix-tr">
+          <td
+            style={{
+              width: '6rem',
+            }}
+          />
+          {colorCombos.map(
             (color, index): ReactElement => (
-              <StyledColorMatrixTr data-test="colorMatrix-tr" key={index}>
-                <StyledColorMatrixTh data-test="colorMatrix-th" key={index} scope="row">
-                  {color.hex}
-                </StyledColorMatrixTh>
-                {color.combinations.map(
-                  (combo, comboIndex): ReactElement => (
-                    <React.Fragment key={comboIndex}>
-                      {index === comboIndex && <StyledColorMatrixTd>&nbsp;</StyledColorMatrixTd>}
-                      <StyledColorMatrixTd
-                        style={{
-                          backgroundColor: combo.hex,
-                        }}
-                      >
-                        <ColorCard
-                          accessibility={combo.accessibility!}
-                          color={color.hex}
-                          contrast={combo.contrast!}
-                        />
-                      </StyledColorMatrixTd>
-                    </React.Fragment>
-                  )
-                )}
-              </StyledColorMatrixTr>
+              <StyledColorMatrixTh key={color.hex} data-test="colorMatrix-th" scope="col">
+                <FormInput
+                  ariaLabel="hex colour code"
+                  css={{
+                    marginBottom: '0.5rem',
+                  }}
+                  id={`colorhex-${index}`}
+                  onChange={(e): void => onColorChange(e.target.value, index)}
+                  value={colors[index]}
+                />
+                <HslSliders
+                  id={`hsl-${index}`}
+                  onChange={(hex): void => onColorChange(hex, index)}
+                  value={color.hex}
+                  variant="compact"
+                />
+              </StyledColorMatrixTh>
             )
           )}
-        </tbody>
-      </StyledColorMatrixTable>
-    </StyledColorMatrix>
-  );
-};
+        </StyledColorMatrixTr>
+      </thead>
+      <tbody>
+        {colorCombos.map(
+          (color, index): ReactElement => (
+            <StyledColorMatrixTr key={color.hex} data-test="colorMatrix-tr">
+              <StyledColorMatrixTh data-test="colorMatrix-th" scope="row">
+                {color.hex}
+              </StyledColorMatrixTh>
+              {color.combinations.map(
+                (combo, i): ReactElement => (
+                  <React.Fragment key={combo.contrast}>
+                    {index === i && <StyledColorMatrixTd>&nbsp;</StyledColorMatrixTd>}
+                    <StyledColorMatrixTd
+                      style={{
+                        backgroundColor: combo.hex,
+                      }}
+                    >
+                      <ColorCard
+                        accessibility={combo.accessibility!}
+                        color={color.hex}
+                        contrast={combo.contrast!}
+                      />
+                    </StyledColorMatrixTd>
+                  </React.Fragment>
+                )
+              )}
+            </StyledColorMatrixTr>
+          )
+        )}
+      </tbody>
+    </StyledColorMatrixTable>
+  </StyledColorMatrix>
+);
 
 export default ColorMatrix;

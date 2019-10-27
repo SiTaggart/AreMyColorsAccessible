@@ -7,12 +7,10 @@ import AppContainer from '..';
 import { SiteDataProvider } from '../../../../context/home';
 
 describe('AppContainer', (): void => {
-  let ChildComponent: React.FunctionComponent<{}> = (): ReactElement<HTMLDivElement> => {
-    return <div />;
-  };
+  let ChildComponent: React.FunctionComponent<{}> = (): ReactElement<HTMLDivElement> => <div />;
 
   beforeAll((): void => {
-    ChildComponent = function ChildComponent(): JSX.Element {
+    ChildComponent = function ChildComponentFn(): JSX.Element {
       return <div />;
     };
   });

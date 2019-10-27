@@ -11,22 +11,26 @@ export interface FormRangeProps {
   value?: number;
 }
 
-const FormRange: React.FC<FormRangeProps> = (
-  props: FormRangeProps
-): ReactElement<HTMLInputElement> => {
-  return (
-    <>
-      <StyledRange
-        defaultValue={props.defaultValue}
-        id={props.id}
-        max={props.max}
-        min={props.min}
-        onChange={props.onChange}
-        onInput={props.onInput}
-        value={props.value}
-      />
-    </>
-  );
-};
+const FormRange: React.FC<FormRangeProps> = ({
+  defaultValue,
+  id,
+  max,
+  min,
+  onChange,
+  onInput,
+  value,
+}: FormRangeProps): ReactElement<HTMLInputElement> => (
+  <>
+    <StyledRange
+      defaultValue={defaultValue}
+      id={id}
+      max={max}
+      min={min}
+      onChange={onChange}
+      onInput={onInput}
+      value={value}
+    />
+  </>
+);
 
 export default FormRange;

@@ -26,9 +26,8 @@ const variantCompact = (props: HSLSLiderCommonProps): SerializedStyles => {
       flex: 1;
       text-align: left;
     `;
-  } else {
-    return css``;
   }
+  return css``;
 };
 export const HSLSliderLabelContainer = styled.div<HSLSLiderCommonProps>`
   ${variantCompact}

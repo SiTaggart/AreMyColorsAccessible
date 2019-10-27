@@ -36,9 +36,8 @@ const convertColorStringsToColors = (colorStrings: string[]): Color[] | false =>
 
   if (isValidColor) {
     return colorTypes;
-  } else {
-    return isValidColor;
   }
+  return isValidColor;
 };
 
 const convertColorValuesToArray = (colors: string): string[] => {
@@ -53,7 +52,9 @@ const isValidColor = (hex: string): Color | false => {
   let color: Color | false = false;
   try {
     color = Color(hex);
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
   return color;
 };
 
@@ -71,14 +72,14 @@ const getInitialState = (querystring: PalettePageQueryString | undefined): Palet
   }
 
   return {
-    colors: colors,
-    colorCombos: colorCombos,
+    colors,
+    colorCombos,
     hasError: false,
   };
 };
 
 const updateHash = debounce((state): void => {
-  const query = '?' + qs.stringify({ colors: state.colors });
+  const query = `? ${qs.stringify({ colors: state.colors })}`;
   window.history.pushState(state, 'Palette checker - Are My Colours Accessible', query);
 }, 200);
 

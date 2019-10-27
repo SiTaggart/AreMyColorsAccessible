@@ -82,7 +82,7 @@ describe('hsl-slider', (): void => {
     });
 
     it('should render the slider input label as the first letter', (): void => {
-      const wrapper: ReactWrapper = mount(
+      const newWrapper: ReactWrapper = mount(
         <HslSlider
           id="input-id"
           label="Test"
@@ -97,7 +97,7 @@ describe('hsl-slider', (): void => {
       );
 
       expect(
-        wrapper
+        newWrapper
           .find('[htmlFor="input-id"]')
           .at(0)
           .text()
@@ -107,11 +107,11 @@ describe('hsl-slider', (): void => {
 
   it('should call onchange callback when value changed with onChnage', (): void => {
     wrapper.find('#input-id').simulate('change', { target: { value: '60' } });
-    expect(onChangeMock).toBeCalledWith({ target: { value: '60' } });
+    expect(onChangeMock).toHaveBeenCalledWith({ target: { value: '60' } });
   });
 
   it('should call onchange callback when value changed with onInput', (): void => {
     wrapper.find('#input-id').simulate('input', { target: { value: '60' } });
-    expect(onChangeMock).toBeCalledWith({ target: { value: '60' } });
+    expect(onChangeMock).toHaveBeenCalledWith({ target: { value: '60' } });
   });
 });

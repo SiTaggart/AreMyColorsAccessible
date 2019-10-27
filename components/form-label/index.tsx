@@ -33,14 +33,14 @@ const StyledLabel = styled.label<StyledLabelProps>`
   width: 100%;
 `;
 
-const FormLabel: React.FC<FormLabelProps> = (
-  props: FormLabelProps
-): ReactElement<HTMLLabelElement> => {
-  return (
-    <StyledLabel htmlFor={props.htmlFor} variant={props.variant}>
-      {props.children}
-    </StyledLabel>
-  );
-};
+const FormLabel: React.FC<FormLabelProps> = ({
+  htmlFor,
+  variant,
+  children,
+}: FormLabelProps): ReactElement<HTMLLabelElement> => (
+  <StyledLabel htmlFor={htmlFor} variant={variant}>
+    {children}
+  </StyledLabel>
+);
 
 export default FormLabel;

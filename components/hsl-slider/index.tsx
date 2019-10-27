@@ -15,28 +15,34 @@ interface HslSliderProps {
   variant?: 'compact' | null;
 }
 
-const HslSlider: React.FC<HslSliderProps> = (props: HslSliderProps): ReactElement => {
-  return (
-    <HSLSlider variant={props.variant}>
-      <HSLSliderLabelContainer variant={props.variant}>
-        <FormLabel htmlFor={props.id} variant={props.variant}>
-          {props.variant === 'compact'
-            ? `${props.label.substring(0, 1)}`
-            : `${props.label} ${props.value + props.symbol}`}
-        </FormLabel>
-      </HSLSliderLabelContainer>
-      <HSLSliderRangeContainer variant={props.variant}>
-        <FormRange
-          id={props.id}
-          max={props.max}
-          min={props.min}
-          onChange={(e): void => props.onChange(e)}
-          onInput={(e): void => props.onInput(e)}
-          value={props.value}
-        />
-      </HSLSliderRangeContainer>
-    </HSLSlider>
-  );
-};
+const HslSlider: React.FC<HslSliderProps> = ({
+  variant,
+  id,
+  label,
+  value,
+  symbol,
+  max,
+  min,
+  onChange,
+  onInput,
+}: HslSliderProps): ReactElement => (
+  <HSLSlider variant={variant}>
+    <HSLSliderLabelContainer variant={variant}>
+      <FormLabel htmlFor={id} variant={variant}>
+        {variant === 'compact' ? `${label.slice(0, 1)}` : `${label} ${value + symbol}`}
+      </FormLabel>
+    </HSLSliderLabelContainer>
+    <HSLSliderRangeContainer variant={variant}>
+      <FormRange
+        id={id}
+        max={max}
+        min={min}
+        onChange={(e): void => onChange(e)}
+        onInput={(e): void => onInput(e)}
+        value={value}
+      />
+    </HSLSliderRangeContainer>
+  </HSLSlider>
+);
 
 export default HslSlider;

@@ -26,8 +26,8 @@ const StyledFooterAnchor = styled(Link)`
   transition: color 400ms ease-in;
 `;
 
-const Footer: React.FC<FooterProps> = (props: FooterProps): ReactElement<HTMLDivElement> => {
-  const linkStyles: object | undefined = props.styles ? props.styles.footerLinks : undefined;
+const Footer: React.FC<FooterProps> = ({ styles }: FooterProps): ReactElement<HTMLDivElement> => {
+  const linkStyles: object | undefined = styles ? styles.footerLinks : undefined;
   return (
     <StyledFooter>
       <StyledFooterNav>

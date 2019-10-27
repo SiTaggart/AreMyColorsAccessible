@@ -330,3 +330,4 @@ describe('useSiteData hook', (): void => {
     });
   });
 });
+/* eslint-enable react/display-name */
