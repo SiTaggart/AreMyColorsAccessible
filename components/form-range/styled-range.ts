@@ -128,5 +128,5 @@ export const StyledRange = styled.input`
 `;
 
 StyledRange.defaultProps = {
-  type: 'range'
+  type: 'range',
 };

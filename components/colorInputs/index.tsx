@@ -10,18 +10,18 @@ const ColorInputs: React.FC<{}> = (): ReactElement => {
   const {
     siteData: { background, colorCombos, isLight, textColor },
     handleTextColorInputChange,
-    handleBackgroundColorInputChange
+    handleBackgroundColorInputChange,
   } = useSiteData();
 
   const formTextColor = isLight ? '#343334' : '#fff';
   const styles = {
     form: {
-      color: formTextColor
+      color: formTextColor,
     },
     input: {
       borderColor: formTextColor,
-      color: 'inherit'
-    }
+      color: 'inherit',
+    },
   };
 
   return (

@@ -17,7 +17,7 @@ describe('ColorMatrix', (): void => {
     mockProps = {
       colors: ['#fff', '#ccc', '#777', '#000'],
       colorCombos: mockColorColorCombos,
-      onColorChange: onColorChangeMock
+      onColorChange: onColorChangeMock,
     };
   }
 

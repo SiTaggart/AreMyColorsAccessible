@@ -10,7 +10,7 @@ interface IndexPageProps {
 }
 
 const Index: NextPage<IndexPageProps> = ({
-  query
+  query,
 }: IndexPageProps): ReactElement<HTMLDivElement> => {
   return (
     <SiteDataProvider initialSiteData={query as SiteData}>
@@ -22,7 +22,7 @@ const Index: NextPage<IndexPageProps> = ({
 };
 
 Index.getInitialProps = async ({
-  query
+  query,
 }: NextPageContext): Promise<{
   query: {};
 }> => {

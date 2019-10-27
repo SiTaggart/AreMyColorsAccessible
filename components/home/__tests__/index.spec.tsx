@@ -14,7 +14,7 @@ describe('Home', (): void => {
           background: '#000',
           textColor: '#fff',
           isLight: false,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <Home />
@@ -28,7 +28,7 @@ describe('Home', (): void => {
             background: '#000',
             textColor: '#fff',
             isLight: false,
-            colorCombos: []
+            colorCombos: [],
           }}
         >
           <Home />

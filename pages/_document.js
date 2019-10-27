@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
                   ga('create', 'UA-78674857-1', 'auto');
                   ga('send', 'pageview');
                 }
-              `
+              `,
             }}
           />
         </Head>

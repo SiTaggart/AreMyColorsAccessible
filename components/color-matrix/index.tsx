@@ -43,7 +43,7 @@ const ColorMatrix: React.FC<ColorMatrixProps> = (
           <StyledColorMatrixTr data-test="colorMatrix-tr">
             <td
               style={{
-                width: '6rem'
+                width: '6rem',
               }}
             />
             {props.colorCombos.map(
@@ -52,7 +52,7 @@ const ColorMatrix: React.FC<ColorMatrixProps> = (
                   <FormInput
                     ariaLabel="hex colour code"
                     css={{
-                      marginBottom: '0.5rem'
+                      marginBottom: '0.5rem',
                     }}
                     id={`colorhex-${index}`}
                     onChange={(e): void => props.onColorChange(e.target.value, index)}
@@ -82,7 +82,7 @@ const ColorMatrix: React.FC<ColorMatrixProps> = (
                       {index === comboIndex && <StyledColorMatrixTd>&nbsp;</StyledColorMatrixTd>}
                       <StyledColorMatrixTd
                         style={{
-                          backgroundColor: combo.hex
+                          backgroundColor: combo.hex,
                         }}
                       >
                         <ColorCard

@@ -9,9 +9,9 @@ describe('Footer', (): void => {
   const mockProps = {
     styles: {
       footerLinks: {
-        color: '#fff'
-      }
-    }
+        color: '#fff',
+      },
+    },
   };
 
   it('renders without crashing', (): void => {

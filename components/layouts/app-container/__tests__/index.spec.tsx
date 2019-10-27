@@ -24,7 +24,7 @@ describe('AppContainer', (): void => {
           background: '#000',
           textColor: '#fff',
           isLight: false,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <AppContainer title="are my colors accessible">
@@ -41,7 +41,7 @@ describe('AppContainer', (): void => {
             background: '#000',
             textColor: '#fff',
             isLight: false,
-            colorCombos: []
+            colorCombos: [],
           }}
         >
           <AppContainer title="are my colors accessible">
@@ -61,7 +61,7 @@ describe('AppContainer', (): void => {
             background: '#fff',
             textColor: '#000',
             isLight: true,
-            colorCombos: []
+            colorCombos: [],
           }}
         >
           <AppContainer title="are my colors accessible">

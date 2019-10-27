@@ -32,7 +32,7 @@ const setInitialContext = (initialSiteData: SiteData | {}): SiteData => {
     background: background,
     textColor: textColor,
     isLight,
-    colorCombos: initialCombos
+    colorCombos: initialCombos,
   };
 };
 
@@ -63,7 +63,7 @@ const createFakeCombination = (color: number[], hex: string): ColorCombinationTy
     valpha: 1,
     hex: hex,
     contrast: 1,
-    accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false }
+    accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
   };
 };
 
@@ -71,7 +71,7 @@ const createDuplicateCombination = (combos: ColorCombosTypes[]): ColorCombosType
   const color = combos[0].color != null ? combos[0].color : [];
   const dupeCombo = {
     ...combos[0],
-    combinations: [createFakeCombination(color, combos[0].hex)]
+    combinations: [createFakeCombination(color, combos[0].hex)],
   };
   return [dupeCombo, dupeCombo];
 };
@@ -124,7 +124,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
         background: backgroundColor,
         colorCombos: newCombos,
         isLight: checkBackgroundLightness(backgroundColor),
-        textColor: textColor
+        textColor: textColor,
       });
     }
   };
@@ -132,7 +132,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
   const handleBackgroundColorInputChange = (value: string): void => {
     setSiteData({
       ...state,
-      background: value
+      background: value,
     });
     if (isValidColor(value)) {
       setNewColorCombo(state.textColor, value);
@@ -142,7 +142,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
   const handleTextColorInputChange = (value: string): void => {
     setSiteData({
       ...state,
-      textColor: value
+      textColor: value,
     });
     if (isValidColor(value)) {
       setNewColorCombo(value, state.background);
@@ -154,7 +154,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
       value={{
         siteData: state,
         handleBackgroundColorInputChange: handleBackgroundColorInputChange,
-        handleTextColorInputChange: handleTextColorInputChange
+        handleTextColorInputChange: handleTextColorInputChange,
       }}
       {...props}
     />

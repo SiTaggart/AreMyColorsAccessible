@@ -14,7 +14,7 @@ interface PalettePageProps {
   query: {};
 }
 export const Palette: NextPage<PalettePageProps> = ({
-  query
+  query,
 }: PalettePageProps): React.ReactElement => {
   return (
     <>
@@ -34,7 +34,7 @@ export const Palette: NextPage<PalettePageProps> = ({
 };
 
 Palette.getInitialProps = async ({
-  query
+  query,
 }: NextPageContext): Promise<{
   query: {};
 }> => {

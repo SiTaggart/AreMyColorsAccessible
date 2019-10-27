@@ -24,7 +24,7 @@ describe('Results', (): void => {
           background: '#000',
           textColor: '#fff',
           isLight: true,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <Results />
@@ -66,7 +66,7 @@ describe('Results', (): void => {
           background: '#666',
           textColor: '#fff',
           isLight: true,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <Results />
@@ -108,7 +108,7 @@ describe('Results', (): void => {
           background: '#000',
           textColor: '#666',
           isLight: true,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <Results />
@@ -150,7 +150,7 @@ describe('Results', (): void => {
           background: '#000',
           textColor: '#555',
           isLight: true,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <Results />
@@ -192,7 +192,7 @@ describe('Results', (): void => {
           background: '#000',
           textColor: '#111',
           isLight: true,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <Results />
@@ -210,7 +210,7 @@ describe('Results', (): void => {
             background: '#000',
             textColor: '#191920',
             isLight: true,
-            colorCombos: []
+            colorCombos: [],
           }}
         >
           <Results />

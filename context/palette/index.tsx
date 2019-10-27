@@ -73,7 +73,7 @@ const getInitialState = (querystring: PalettePageQueryString | undefined): Palet
   return {
     colors: colors,
     colorCombos: colorCombos,
-    hasError: false
+    hasError: false,
   };
 };
 
@@ -136,7 +136,7 @@ const PaletteDataProvider: React.FC<PaletteDataProviderProps> = (
     setPaletteData({
       colors,
       colorCombos: newColorCombos,
-      hasError: false
+      hasError: false,
     });
   };
 
@@ -164,7 +164,7 @@ const PaletteDataProvider: React.FC<PaletteDataProviderProps> = (
         paletteData: state,
         setPaletteData,
         handleColorChange,
-        handleNewColor
+        handleNewColor,
       }}
       {...props}
     >

@@ -33,10 +33,10 @@ describe('ColorInputs', (): void => {
           background: '#000',
           colorCombos: colorCombos,
           isLight: false,
-          textColor: '#fff'
+          textColor: '#fff',
         },
         handleBackgroundColorInputChange: handleBackgroundColorInputChange,
-        handleTextColorInputChange: handleTextColorInputChange
+        handleTextColorInputChange: handleTextColorInputChange,
       };
     }
     wrapper = mount(<ColorInputs />);

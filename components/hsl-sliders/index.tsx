@@ -18,7 +18,7 @@ const roundHSLValues = (hsl: Partial<HSLColorTypes>): HSLColor => {
   return {
     hue: Math.round(hue),
     saturation: Math.round(saturation),
-    lightness: Math.round(lightness)
+    lightness: Math.round(lightness),
   };
 };
 
@@ -54,7 +54,7 @@ const HslSliders: React.FC<HslSliderProps> = (props: HslSliderProps): ReactEleme
     const hex = Color({
       h: color.hue,
       s: color.saturation,
-      l: color.lightness
+      l: color.lightness,
     }).hex();
     props.onChange(hex, props.id);
   };
@@ -62,7 +62,7 @@ const HslSliders: React.FC<HslSliderProps> = (props: HslSliderProps): ReactEleme
   const handleHueChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newHsl: HSLColor = {
       ...convertToHSL(props.value),
-      hue: parseInt(e.target.value)
+      hue: parseInt(e.target.value),
     };
     updateColor(newHsl);
   };
@@ -70,7 +70,7 @@ const HslSliders: React.FC<HslSliderProps> = (props: HslSliderProps): ReactEleme
   const handleSaturationChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newHsl: HSLColor = {
       ...convertToHSL(props.value),
-      saturation: parseInt(e.target.value)
+      saturation: parseInt(e.target.value),
     };
     updateColor(newHsl);
   };
@@ -78,7 +78,7 @@ const HslSliders: React.FC<HslSliderProps> = (props: HslSliderProps): ReactEleme
   const handleLightnessChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newHsl: HSLColor = {
       ...convertToHSL(props.value),
-      lightness: parseInt(e.target.value)
+      lightness: parseInt(e.target.value),
     };
     updateColor(newHsl);
   };
@@ -90,7 +90,7 @@ const HslSliders: React.FC<HslSliderProps> = (props: HslSliderProps): ReactEleme
       max: 360,
       value: hslColorValue.hue,
       handleOnChange: handleHueChange,
-      symbol: '°'
+      symbol: '°',
     },
     {
       label: 'Saturation',
@@ -98,7 +98,7 @@ const HslSliders: React.FC<HslSliderProps> = (props: HslSliderProps): ReactEleme
       max: 100,
       value: hslColorValue.saturation,
       handleOnChange: handleSaturationChange,
-      symbol: '%'
+      symbol: '%',
     },
     {
       label: 'Lightness',
@@ -106,8 +106,8 @@ const HslSliders: React.FC<HslSliderProps> = (props: HslSliderProps): ReactEleme
       max: 100,
       value: hslColorValue.lightness,
       handleOnChange: handleLightnessChange,
-      symbol: '%'
-    }
+      symbol: '%',
+    },
   ];
 
   return (

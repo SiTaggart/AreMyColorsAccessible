@@ -41,7 +41,7 @@ const colorRating = (accessibility: Accessibility): ColorRating => {
     small,
     bold,
     large,
-    overall
+    overall,
   };
 };
 

@@ -11,7 +11,7 @@ describe('useSiteData hook', (): void => {
   );
 
   const { result } = renderHook((): HomeContextInterface => useSiteData(), {
-    wrapper
+    wrapper,
   });
 
   it('should set context by default', (): void => {
@@ -27,12 +27,12 @@ describe('useSiteData hook', (): void => {
               contrast: 4.658034537943552,
               hex: '#1276CE',
               model: 'rgb',
-              valpha: 1
-            }
+              valpha: 1,
+            },
           ],
           hex: '#FFFFFF',
           model: 'rgb',
-          valpha: 1
+          valpha: 1,
         },
         {
           color: [18, 118, 206],
@@ -43,16 +43,16 @@ describe('useSiteData hook', (): void => {
               contrast: 4.658034537943552,
               hex: '#FFFFFF',
               model: 'rgb',
-              valpha: 1
-            }
+              valpha: 1,
+            },
           ],
           hex: '#1276CE',
           model: 'rgb',
-          valpha: 1
-        }
+          valpha: 1,
+        },
       ],
       isLight: false,
-      textColor: '#FFFFFF'
+      textColor: '#FFFFFF',
     });
   });
 
@@ -64,12 +64,12 @@ describe('useSiteData hook', (): void => {
             background: '#111',
             textColor: 'rgb(239,239,239)',
             colorCombos: [],
-            isLight: true
+            isLight: true,
           }}
         >
           {children}
         </SiteDataProvider>
-      )
+      ),
     });
     expect(result.current.siteData).toEqual({
       background: '#111',
@@ -83,12 +83,12 @@ describe('useSiteData hook', (): void => {
               contrast: 16.422098411346187,
               hex: '#111111',
               model: 'rgb',
-              valpha: 1
-            }
+              valpha: 1,
+            },
           ],
           hex: '#EFEFEF',
           model: 'rgb',
-          valpha: 1
+          valpha: 1,
         },
         {
           color: [17, 17, 17],
@@ -99,16 +99,16 @@ describe('useSiteData hook', (): void => {
               contrast: 16.422098411346187,
               hex: '#EFEFEF',
               model: 'rgb',
-              valpha: 1
-            }
+              valpha: 1,
+            },
           ],
           hex: '#111111',
           model: 'rgb',
-          valpha: 1
-        }
+          valpha: 1,
+        },
       ],
       isLight: true,
-      textColor: 'rgb(239,239,239)'
+      textColor: 'rgb(239,239,239)',
     });
   });
 
@@ -129,12 +129,12 @@ describe('useSiteData hook', (): void => {
               contrast: 9.739769120526205,
               hex: '#444444',
               model: 'rgb',
-              valpha: 1
-            }
+              valpha: 1,
+            },
           ],
           hex: '#FFFFFF',
           model: 'rgb',
-          valpha: 1
+          valpha: 1,
         },
         {
           color: [68, 68, 68],
@@ -145,16 +145,16 @@ describe('useSiteData hook', (): void => {
               contrast: 9.739769120526205,
               hex: '#FFFFFF',
               model: 'rgb',
-              valpha: 1
-            }
+              valpha: 1,
+            },
           ],
           hex: '#444444',
           model: 'rgb',
-          valpha: 1
-        }
+          valpha: 1,
+        },
       ],
       isLight: false,
-      textColor: '#FFFFFF'
+      textColor: '#FFFFFF',
     });
   });
 
@@ -174,12 +174,12 @@ describe('useSiteData hook', (): void => {
               contrast: 2.156108603821344,
               hex: '#444444',
               model: 'rgb',
-              valpha: 1
-            }
+              valpha: 1,
+            },
           ],
           hex: '#000000',
           model: 'rgb',
-          valpha: 1
+          valpha: 1,
         },
         {
           color: [68, 68, 68],
@@ -190,16 +190,16 @@ describe('useSiteData hook', (): void => {
               contrast: 2.156108603821344,
               hex: '#000000',
               model: 'rgb',
-              valpha: 1
-            }
+              valpha: 1,
+            },
           ],
           hex: '#444444',
           model: 'rgb',
-          valpha: 1
-        }
+          valpha: 1,
+        },
       ],
       isLight: false,
-      textColor: '#000'
+      textColor: '#000',
     });
   });
 
@@ -220,12 +220,12 @@ describe('useSiteData hook', (): void => {
               contrast: 2.156108603821344,
               hex: '#444444',
               model: 'rgb',
-              valpha: 1
-            }
+              valpha: 1,
+            },
           ],
           hex: '#000000',
           model: 'rgb',
-          valpha: 1
+          valpha: 1,
         },
         {
           color: [68, 68, 68],
@@ -236,16 +236,16 @@ describe('useSiteData hook', (): void => {
               contrast: 2.156108603821344,
               hex: '#000000',
               model: 'rgb',
-              valpha: 1
-            }
+              valpha: 1,
+            },
           ],
           hex: '#444444',
           model: 'rgb',
-          valpha: 1
-        }
+          valpha: 1,
+        },
       ],
       isLight: false,
-      textColor: '#000'
+      textColor: '#000',
     });
   });
 
@@ -266,12 +266,12 @@ describe('useSiteData hook', (): void => {
               contrast: 2.156108603821344,
               hex: '#444444',
               model: 'rgb',
-              valpha: 1
-            }
+              valpha: 1,
+            },
           ],
           hex: '#000000',
           model: 'rgb',
-          valpha: 1
+          valpha: 1,
         },
         {
           color: [68, 68, 68],
@@ -282,22 +282,22 @@ describe('useSiteData hook', (): void => {
               contrast: 2.156108603821344,
               hex: '#000000',
               model: 'rgb',
-              valpha: 1
-            }
+              valpha: 1,
+            },
           ],
           hex: '#444444',
           model: 'rgb',
-          valpha: 1
-        }
+          valpha: 1,
+        },
       ],
       isLight: false,
-      textColor: 'foo'
+      textColor: 'foo',
     });
   });
 
   it('should throw without setting context', (): void => {
     const { result } = renderHook((): HomeContextInterface => useSiteData(), {
-      wrapper: ({ children }: { children?: any }): React.ReactElement => <div>{children}</div>
+      wrapper: ({ children }: { children?: any }): React.ReactElement => <div>{children}</div>,
     });
 
     const mockError = new Error('useSiteData must be used with SiteDataProvider');
@@ -313,20 +313,20 @@ describe('useSiteData hook', (): void => {
             background: '#fff',
             textColor: '#fff',
             colorCombos: [],
-            isLight: true
+            isLight: true,
           }}
         >
           {children}
         </SiteDataProvider>
-      )
+      ),
     });
     expect(result.current.siteData).toEqual({
       background: '#fff',
       colorCombos: [
-        { color: [255, 255, 255], combinations: [], hex: '#FFFFFF', model: 'rgb', valpha: 1 }
+        { color: [255, 255, 255], combinations: [], hex: '#FFFFFF', model: 'rgb', valpha: 1 },
       ],
       isLight: true,
-      textColor: '#fff'
+      textColor: '#fff',
     });
   });
 });

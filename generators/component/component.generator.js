@@ -10,7 +10,7 @@ module.exports = plop => {
         name: 'type',
         default: 'Function',
         message: 'Select the type of component?',
-        choices: () => ['Function']
+        choices: () => ['Function'],
       },
       {
         type: 'list',
@@ -24,7 +24,7 @@ module.exports = plop => {
           const testIndex = choices.indexOf('__tests__');
           if (testIndex > -1) choices.splice(testIndex, 1);
           return choices;
-        }
+        },
       },
       {
         type: 'input',
@@ -35,8 +35,8 @@ module.exports = plop => {
             return true;
           }
           return 'The name is required';
-        }
-      }
+        },
+      },
     ],
     actions: function(data) {
       var folderPath =
@@ -49,8 +49,8 @@ module.exports = plop => {
         {
           type: 'add',
           path: folderPath + '/__tests__/index.spec.tsx',
-          templateFile: 'component/component.test.tsx.tpl'
-        }
+          templateFile: 'component/component.test.tsx.tpl',
+        },
       ];
 
       var component = {};
@@ -61,13 +61,13 @@ module.exports = plop => {
           component = {
             type: 'add',
             path: componentPath,
-            templateFile: 'component/sfcComponent.tsx.tpl'
+            templateFile: 'component/sfcComponent.tsx.tpl',
           };
           actions = actions.concat(component);
           break;
       }
 
       return actions;
-    }
+    },
   });
 };

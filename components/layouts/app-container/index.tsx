@@ -18,14 +18,14 @@ interface AppContainerProps {
 
 const AppContainer: React.FC<AppContainerProps> = ({
   children,
-  title = 'Are My Colours Accessible'
+  title = 'Are My Colours Accessible',
 }: AppContainerProps): ReactElement => {
   const { siteData } = useSiteData();
 
   const styles = {
     footerLinks: {
-      color: siteData.isLight ? '#343334' : '#fff'
-    }
+      color: siteData.isLight ? '#343334' : '#fff',
+    },
   };
 
   return (

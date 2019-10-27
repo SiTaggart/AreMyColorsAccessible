@@ -6,7 +6,7 @@ import globalStyles from '../styles/global';
 export default class MyApp extends App {
   public static async getInitialProps({
     Component,
-    ctx
+    ctx,
   }: {
     Component: any;
     ctx: any;

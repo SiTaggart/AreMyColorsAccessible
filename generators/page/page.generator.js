@@ -11,24 +11,24 @@ module.exports = plop => {
             return true;
           }
           return 'The title is required';
-        }
-      }
+        },
+      },
     ],
     actions: function() {
       var actions = [
         {
           type: 'add',
           path: './../pages/__tests__/{{kebabCase name}}.spec.tsx',
-          templateFile: 'page/page.test.tsx.tpl'
+          templateFile: 'page/page.test.tsx.tpl',
         },
         {
           type: 'add',
           path: './../pages/{{kebabCase name}}.tsx',
-          templateFile: 'page/pageComponent.tsx.tpl'
-        }
+          templateFile: 'page/pageComponent.tsx.tpl',
+        },
       ];
 
       return actions;
-    }
+    },
   });
 };

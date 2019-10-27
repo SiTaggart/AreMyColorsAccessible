@@ -19,7 +19,7 @@ const StyledContainer = styled.main<ContainerProps>`
 
 const Container: React.FC<ContainerProps> = ({
   variant,
-  children
+  children,
 }: ContainerProps): ReactElement => <StyledContainer variant={variant}>{children}</StyledContainer>;
 
 export default Container;

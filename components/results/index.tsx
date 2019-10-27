@@ -6,19 +6,19 @@ import {
   ContrastResultRating,
   ContrastResults,
   ContrastResultsHeading,
-  ContrastResultDesc
+  ContrastResultDesc,
 } from './styled';
 
 interface AreYouSeriousProps {
   isLight: boolean;
 }
 const AreYouSerious: React.FC<AreYouSeriousProps> = ({
-  isLight
+  isLight,
 }: AreYouSeriousProps): ReactElement => {
   const styles = {
     seriouslyContainer: {
-      color: isLight ? '#343334' : '#fff'
-    }
+      color: isLight ? '#343334' : '#fff',
+    },
   };
 
   return (
@@ -40,7 +40,7 @@ const Results: React.FC<{}> = (): ReactElement => {
         aa: false,
         aaLarge: false,
         aaa: false,
-        aaaLarge: false
+        aaaLarge: false,
       };
   const ratio = parseFloat(contrast.toFixed(2));
   const colorRatings = colorRating(accessibility);
