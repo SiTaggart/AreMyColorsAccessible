@@ -42,7 +42,7 @@
     "next": "9.1.2",
     "node-sass": "4.13.0",
     "normalize.css": "8.0.1",
-    "polished": "3.4.1",
+    "polished": "3.4.2",
     "query-string": "6.8.3",
     "react": "16.11.0",
     "react-dom": "16.11.0"
