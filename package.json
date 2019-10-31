@@ -79,7 +79,7 @@
     "babel-eslint": "10.0.3",
     "babel-jest": "24.9.0",
     "bundlesize": "0.18.0",
-    "cypress": "3.5.0",
+    "cypress": "3.6.0",
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.15.1",
     "eslint": "6.6.0",
