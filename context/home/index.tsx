@@ -98,7 +98,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = ({
   );
 
   const updateHash = debounce((): void => {
-    const query = `? ${qs.stringify(state as {})}`;
+    const query = `?${qs.stringify(state as {})}`;
     window.history.pushState(state, 'Are My Colors Accessible', query);
   }, 200);
 
