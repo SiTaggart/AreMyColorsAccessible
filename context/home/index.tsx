@@ -29,10 +29,10 @@ const setInitialContext = (initialSiteData: SiteData | {}): SiteData => {
 
   const initialCombos = ColorCombos([textColor, background]) as ColorCombosTypes[];
   return {
-    background: background,
-    textColor: textColor,
+    background,
+    textColor,
     isLight,
-    colorCombos: initialCombos
+    colorCombos: initialCombos,
   };
 };
 
@@ -40,7 +40,7 @@ const checkBackgroundLightness = (hex: string): boolean => {
   let light;
   try {
     light = Color(hex).isLight();
-  } catch (e) {
+  } catch (error) {
     light = true;
   }
   return light;
@@ -56,22 +56,20 @@ const isValidColor = (value: string): Color | false => {
   return color;
 };
 
-const createFakeCombination = (color: number[], hex: string): ColorCombinationTypes => {
-  return {
-    model: 'rgb',
-    color: color,
-    valpha: 1,
-    hex: hex,
-    contrast: 1,
-    accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false }
-  };
-};
+const createFakeCombination = (color: number[], hex: string): ColorCombinationTypes => ({
+  model: 'rgb',
+  color,
+  valpha: 1,
+  hex,
+  contrast: 1,
+  accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+});
 
 const createDuplicateCombination = (combos: ColorCombosTypes[]): ColorCombosTypes[] => {
   const color = combos[0].color != null ? combos[0].color : [];
   const dupeCombo = {
     ...combos[0],
-    combinations: [createFakeCombination(color, combos[0].hex)]
+    combinations: [createFakeCombination(color, combos[0].hex)],
   };
   return [dupeCombo, dupeCombo];
 };
@@ -86,12 +84,11 @@ const useSiteData = (): HomeContextInterface => {
   return context;
 };
 
-const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
-  props: SiteDataProviderProps
-): React.ReactElement => {
-  const [siteData, setSiteData] = React.useState<SiteData>(
-    setInitialContext(props.initialSiteData)
-  );
+const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = ({
+  initialSiteData,
+  ...props
+}: SiteDataProviderProps): React.ReactElement => {
+  const [siteData, setSiteData] = React.useState<SiteData>(setInitialContext(initialSiteData));
 
   const [isInitial, setIsInitial] = React.useState<boolean>(false);
 
@@ -101,7 +98,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
   );
 
   const updateHash = debounce((): void => {
-    const query = '?' + qs.stringify(state as {});
+    const query = `?${qs.stringify(state as {})}`;
     window.history.pushState(state, 'Are My Colors Accessible', query);
   }, 200);
 
@@ -124,7 +121,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
         background: backgroundColor,
         colorCombos: newCombos,
         isLight: checkBackgroundLightness(backgroundColor),
-        textColor: textColor
+        textColor,
       });
     }
   };
@@ -132,7 +129,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
   const handleBackgroundColorInputChange = (value: string): void => {
     setSiteData({
       ...state,
-      background: value
+      background: value,
     });
     if (isValidColor(value)) {
       setNewColorCombo(state.textColor, value);
@@ -142,7 +139,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
   const handleTextColorInputChange = (value: string): void => {
     setSiteData({
       ...state,
-      textColor: value
+      textColor: value,
     });
     if (isValidColor(value)) {
       setNewColorCombo(value, state.background);
@@ -153,8 +150,8 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
     <HomeContext.Provider
       value={{
         siteData: state,
-        handleBackgroundColorInputChange: handleBackgroundColorInputChange,
-        handleTextColorInputChange: handleTextColorInputChange
+        handleBackgroundColorInputChange,
+        handleTextColorInputChange,
       }}
       {...props}
     />

@@ -13,3 +13,7 @@ export interface SiteData {
   isLight: boolean;
   colorCombos: ColorCombosTypes[];
 }
+
+export interface PalettePageQueryString {
+  colors: string[];
+}

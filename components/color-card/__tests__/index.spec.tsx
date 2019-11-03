@@ -2,8 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ColorCard, { ColorCardProps } from '..';
 import renderer from 'react-test-renderer';
+import { ColorCard, ColorCardProps } from '..';
 
 describe('ColorCard', (): void => {
   const mockProps: ColorCardProps = {
@@ -11,10 +11,10 @@ describe('ColorCard', (): void => {
       aa: true,
       aaLarge: true,
       aaa: true,
-      aaaLarge: true
+      aaaLarge: true,
     },
     color: '#000',
-    contrast: 21
+    contrast: 21,
   };
 
   it('renders without crashing', (): void => {

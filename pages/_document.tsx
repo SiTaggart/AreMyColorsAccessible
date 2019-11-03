@@ -1,10 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 
+// eslint-disable-next-line import/no-default-export
 export default class MyDocument extends Document {
-  render() {
+  render(): JSX.Element {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -24,7 +25,7 @@ export default class MyDocument extends Document {
                   ga('create', 'UA-78674857-1', 'auto');
                   ga('send', 'pageview');
                 }
-              `
+              `,
             }}
           />
         </Head>

@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 import { SiteDataProvider } from '../../../context/home';
-import Results from '..';
+import { Results } from '..';
 
 describe('Results', (): void => {
   it('renders without crashing', (): void => {
@@ -15,6 +15,14 @@ describe('Results', (): void => {
       </SiteDataProvider>,
       document.createElement('div')
     );
+    const resultsCmp = renderer
+      .create(
+        <SiteDataProvider initialSiteData={{}}>
+          <Results />
+        </SiteDataProvider>
+      )
+      .toJSON();
+    expect(resultsCmp).toMatchSnapshot();
   });
 
   it('should render a triple a result correctly', (): void => {
@@ -24,7 +32,7 @@ describe('Results', (): void => {
           background: '#000',
           textColor: '#fff',
           isLight: true,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <Results />
@@ -66,7 +74,7 @@ describe('Results', (): void => {
           background: '#666',
           textColor: '#fff',
           isLight: true,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <Results />
@@ -108,7 +116,7 @@ describe('Results', (): void => {
           background: '#000',
           textColor: '#666',
           isLight: true,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <Results />
@@ -150,7 +158,7 @@ describe('Results', (): void => {
           background: '#000',
           textColor: '#555',
           isLight: true,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <Results />
@@ -192,7 +200,7 @@ describe('Results', (): void => {
           background: '#000',
           textColor: '#111',
           isLight: true,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <Results />
@@ -210,7 +218,7 @@ describe('Results', (): void => {
             background: '#000',
             textColor: '#191920',
             isLight: true,
-            colorCombos: []
+            colorCombos: [],
           }}
         >
           <Results />

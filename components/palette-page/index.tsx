@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import PaletteInput from '../palette-input';
-import ColorMatrix from '../color-matrix';
+import { PaletteInput } from '../palette-input';
+import { ColorMatrix } from '../color-matrix';
 import { usePaletteData } from '../../context/palette';
 
 const PalettePage: React.FC<{}> = (): React.ReactElement => {
@@ -25,4 +25,4 @@ const PalettePage: React.FC<{}> = (): React.ReactElement => {
   );
 };
 
-export default PalettePage;
+export { PalettePage };

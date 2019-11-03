@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
 import renderer from 'react-test-renderer';
-import HslSlider from '..';
+import { HSLSlider } from '..';
 
 describe('hsl-slider', (): void => {
   let onChangeMock: jest.Mock;
@@ -17,7 +17,7 @@ describe('hsl-slider', (): void => {
   beforeEach((): void => {
     jest.clearAllMocks();
     wrapper = shallow(
-      <HslSlider
+      <HSLSlider
         id="input-id"
         label="Test"
         max={20}
@@ -32,7 +32,7 @@ describe('hsl-slider', (): void => {
 
   it('renders without crashing', (): void => {
     ReactDOM.render(
-      <HslSlider
+      <HSLSlider
         id="input-id"
         label="test"
         max={20}
@@ -46,7 +46,7 @@ describe('hsl-slider', (): void => {
     );
     const hslSliderComp = renderer
       .create(
-        <HslSlider
+        <HSLSlider
           id="input-id"
           label="test"
           max={20}
@@ -65,7 +65,7 @@ describe('hsl-slider', (): void => {
     it('should render a compact variant ', (): void => {
       const hslSliderComp = renderer
         .create(
-          <HslSlider
+          <HSLSlider
             id="input-id"
             label="test"
             max={20}
@@ -82,8 +82,8 @@ describe('hsl-slider', (): void => {
     });
 
     it('should render the slider input label as the first letter', (): void => {
-      const wrapper: ReactWrapper = mount(
-        <HslSlider
+      const newWrapper: ReactWrapper = mount(
+        <HSLSlider
           id="input-id"
           label="Test"
           max={20}
@@ -97,7 +97,7 @@ describe('hsl-slider', (): void => {
       );
 
       expect(
-        wrapper
+        newWrapper
           .find('[htmlFor="input-id"]')
           .at(0)
           .text()
@@ -107,11 +107,11 @@ describe('hsl-slider', (): void => {
 
   it('should call onchange callback when value changed with onChnage', (): void => {
     wrapper.find('#input-id').simulate('change', { target: { value: '60' } });
-    expect(onChangeMock).toBeCalledWith({ target: { value: '60' } });
+    expect(onChangeMock).toHaveBeenCalledWith({ target: { value: '60' } });
   });
 
   it('should call onchange callback when value changed with onInput', (): void => {
     wrapper.find('#input-id').simulate('input', { target: { value: '60' } });
-    expect(onChangeMock).toBeCalledWith({ target: { value: '60' } });
+    expect(onChangeMock).toHaveBeenCalledWith({ target: { value: '60' } });
   });
 });

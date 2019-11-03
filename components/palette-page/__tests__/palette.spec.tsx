@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { PaletteDataProvider } from '../../../context/palette';
-import PalettePage from '../';
+import { PalettePage } from '..';
 
 describe('Palette Page', (): void => {
   it('renders without crashing', (): void => {

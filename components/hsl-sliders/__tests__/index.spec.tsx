@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
 import renderer from 'react-test-renderer';
-import HslSliders from '..';
+import { HslSliders } from '..';
 
 describe('hsl-slider', (): void => {
   const onChangeMock: jest.Mock = jest.fn();
@@ -35,26 +35,26 @@ describe('hsl-slider', (): void => {
     });
 
     it('should render the slider input label as the first letter', (): void => {
-      const wrapper: ReactWrapper = mount(
+      const newWrapper: ReactWrapper = mount(
         <HslSliders id="input-id" onChange={onChangeMock} value="#ccc" variant="compact" />
       );
 
       expect(
-        wrapper
+        newWrapper
           .find('[htmlFor="input-id-Hue"]')
           .at(0)
           .text()
       ).toBe('H');
 
       expect(
-        wrapper
+        newWrapper
           .find('[htmlFor="input-id-Saturation"]')
           .at(1)
           .text()
       ).toBe('S');
 
       expect(
-        wrapper
+        newWrapper
           .find('[htmlFor="input-id-Lightness"]')
           .at(2)
           .text()
@@ -64,16 +64,16 @@ describe('hsl-slider', (): void => {
 
   it('should call onchange callback when hue changed', (): void => {
     wrapper.find('#input-id-Hue').simulate('input', { target: { value: '60' } });
-    expect(onChangeMock).toBeCalledWith('#CCCCCC', 'input-id');
+    expect(onChangeMock).toHaveBeenCalledWith('#CCCCCC', 'input-id');
   });
 
   it('should call onchange callback when saturation changed', (): void => {
     wrapper.find('#input-id-Saturation').simulate('input', { target: { value: '60' } });
-    expect(onChangeMock).toBeCalledWith('#EBADAD', 'input-id');
+    expect(onChangeMock).toHaveBeenCalledWith('#EBADAD', 'input-id');
   });
 
   it('should call onchange callback when lightness changed', (): void => {
     wrapper.find('#input-id-Lightness').simulate('input', { target: { value: '60' } });
-    expect(onChangeMock).toBeCalledWith('#999999', 'input-id');
+    expect(onChangeMock).toHaveBeenCalledWith('#999999', 'input-id');
   });
 });

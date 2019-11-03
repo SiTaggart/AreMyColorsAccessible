@@ -4,7 +4,7 @@ import React, { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { mount, ReactWrapper } from 'enzyme';
-import FormRange, { FormRangeProps } from '..';
+import { FormRange, FormRangeProps } from '..';
 
 type IFormRangeWrapperProps = Partial<FormRangeProps>;
 
@@ -28,14 +28,14 @@ describe('FormRange', (): void => {
     const onChangeMock: jest.Mock = jest.fn();
     const wrapper: ReactWrapper = mount(<FormRangeWrapper onChange={onChangeMock} />);
     wrapper.simulate('change');
-    expect(onChangeMock).toBeCalled();
+    expect(onChangeMock).toHaveBeenCalled();
   });
 
   it('should call a passed in onInput method, onInput', (): void => {
     const onInputMock: jest.Mock = jest.fn();
     const wrapper: ReactWrapper = mount(<FormRangeWrapper onInput={onInputMock} />);
     wrapper.simulate('input');
-    expect(onInputMock).toBeCalled();
+    expect(onInputMock).toHaveBeenCalled();
   });
 
   it('should set the value of the input when passed a value', (): void => {

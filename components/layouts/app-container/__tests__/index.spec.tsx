@@ -3,16 +3,14 @@
 import React, { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import AppContainer from '..';
+import { AppContainer } from '..';
 import { SiteDataProvider } from '../../../../context/home';
 
 describe('AppContainer', (): void => {
-  let ChildComponent: React.FunctionComponent<{}> = (): ReactElement<HTMLDivElement> => {
-    return <div />;
-  };
+  let ChildComponent: React.FunctionComponent<{}> = (): ReactElement<HTMLDivElement> => <div />;
 
   beforeAll((): void => {
-    ChildComponent = function ChildComponent(): JSX.Element {
+    ChildComponent = function ChildComponentFn(): JSX.Element {
       return <div />;
     };
   });
@@ -24,7 +22,7 @@ describe('AppContainer', (): void => {
           background: '#000',
           textColor: '#fff',
           isLight: false,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <AppContainer title="are my colors accessible">
@@ -41,7 +39,7 @@ describe('AppContainer', (): void => {
             background: '#000',
             textColor: '#fff',
             isLight: false,
-            colorCombos: []
+            colorCombos: [],
           }}
         >
           <AppContainer title="are my colors accessible">
@@ -61,7 +59,7 @@ describe('AppContainer', (): void => {
             background: '#fff',
             textColor: '#000',
             isLight: true,
-            colorCombos: []
+            colorCombos: [],
           }}
         >
           <AppContainer title="are my colors accessible">

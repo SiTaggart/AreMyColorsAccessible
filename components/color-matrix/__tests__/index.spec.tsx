@@ -4,8 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount, ReactWrapper } from 'enzyme';
 import renderer from 'react-test-renderer';
-import ColorMatrix, { ColorMatrixProps } from '..';
 import ColorCombos from 'color-combos';
+import { ColorMatrix, ColorMatrixProps } from '..';
 
 describe('ColorMatrix', (): void => {
   const onColorChangeMock: jest.Mock = jest.fn();
@@ -17,7 +17,7 @@ describe('ColorMatrix', (): void => {
     mockProps = {
       colors: ['#fff', '#ccc', '#777', '#000'],
       colorCombos: mockColorColorCombos,
-      onColorChange: onColorChangeMock
+      onColorChange: onColorChangeMock,
     };
   }
 
@@ -37,14 +37,14 @@ describe('ColorMatrix', (): void => {
       .find('#colorhex-0')
       .at(0)
       .simulate('change', { target: { value: '#ccc' } });
-    expect(onColorChangeMock).toBeCalledWith('#ccc', 0);
+    expect(onColorChangeMock).toHaveBeenCalledWith('#ccc', 0);
   });
 
-  xit('should call the onColorChange method when a color is changed in on a slider', (): void => {
+  it.skip('should call the onColorChange method when a color is changed in on a slider', (): void => {
     wrapper
       .find('#hsl-0-Lightness')
       .at(0)
       .simulate('change', { target: { value: '12' } });
-    expect(onColorChangeMock).toBeCalledWith('#1F1F1F', 0);
+    expect(onColorChangeMock).toHaveBeenCalledWith('#1F1F1F', 0);
   });
 });

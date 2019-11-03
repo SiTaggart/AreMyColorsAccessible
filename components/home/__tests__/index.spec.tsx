@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import Home from '..';
+import { Home } from '..';
 import { SiteDataProvider } from '../../../context/home';
 
 describe('Home', (): void => {
@@ -14,7 +14,7 @@ describe('Home', (): void => {
           background: '#000',
           textColor: '#fff',
           isLight: false,
-          colorCombos: []
+          colorCombos: [],
         }}
       >
         <Home />
@@ -28,7 +28,7 @@ describe('Home', (): void => {
             background: '#000',
             textColor: '#fff',
             isLight: false,
-            colorCombos: []
+            colorCombos: [],
           }}
         >
           <Home />

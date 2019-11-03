@@ -13,6 +13,7 @@ export interface FormInputProps {
   placeholder?: string;
   style?: {};
   value?: string;
+  className?: string;
 }
 
 interface StyledInputProps {
@@ -43,35 +44,42 @@ const StyledInputError = styled.div`
   margin: 1rem 0;
 `;
 
-const FormInput: React.FC<FormInputProps> = (
-  props: FormInputProps
-): ReactElement<HTMLInputElement> => {
-  return (
-    <>
-      <StyledInput
-        {...props}
-        aria-describedby={props.errorMessage && `error-message-label-${props.id}`}
-        aria-label={props.ariaLabel}
-        autoComplete="off"
-        defaultValue={props.defaultValue}
-        hasNoSpacing={props.hasNoSpacing}
-        id={props.id}
-        isErrored={props.errorMessage ? true : undefined}
-        name={props.name}
-        onChange={props.onChange}
-        onInput={props.onInput}
-        placeholder={props.placeholder}
-        style={props.style}
-        type="text"
-        value={props.value}
-      />
-      {props.errorMessage && (
-        <StyledInputError id={`error-message-label-${props.id}`}>
-          {props.errorMessage}
-        </StyledInputError>
-      )}
-    </>
-  );
-};
+const FormInput: React.FC<FormInputProps> = ({
+  id,
+  ariaLabel,
+  defaultValue,
+  hasNoSpacing,
+  name,
+  onChange,
+  onInput,
+  placeholder,
+  style,
+  value,
+  errorMessage,
+  className,
+}: FormInputProps): ReactElement<HTMLInputElement> => (
+  <>
+    <StyledInput
+      aria-describedby={errorMessage && `error-message-label-${id}`}
+      aria-label={ariaLabel}
+      autoComplete="off"
+      className={className}
+      defaultValue={defaultValue}
+      hasNoSpacing={hasNoSpacing}
+      id={id}
+      isErrored={errorMessage ? true : undefined}
+      name={name}
+      onChange={onChange}
+      onInput={onInput}
+      placeholder={placeholder}
+      style={style}
+      type="text"
+      value={value}
+    />
+    {errorMessage && (
+      <StyledInputError id={`error-message-label-${id}`}>{errorMessage}</StyledInputError>
+    )}
+  </>
+);
 
-export default FormInput;
+export { FormInput };

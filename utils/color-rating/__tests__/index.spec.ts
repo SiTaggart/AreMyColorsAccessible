@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import colorRating from '..';
+import { colorRating } from '..';
 
 describe('utils/colorRating', (): void => {
   it('should return a AAA small rating', (): void => {
@@ -8,13 +8,13 @@ describe('utils/colorRating', (): void => {
       aaa: true,
       aa: true,
       aaaLarge: true,
-      aaLarge: true
+      aaLarge: true,
     };
     expect(colorRating(mockRating)).toStrictEqual({
       bold: 'AAA',
       large: 'AAA',
       overall: 'Yup',
-      small: 'AAA'
+      small: 'AAA',
     });
   });
 
@@ -23,13 +23,13 @@ describe('utils/colorRating', (): void => {
       aaa: false,
       aa: true,
       aaaLarge: true,
-      aaLarge: true
+      aaLarge: true,
     };
     expect(colorRating(mockRating)).toStrictEqual({
       bold: 'AAA',
       large: 'AAA',
       overall: 'Yup',
-      small: 'AA'
+      small: 'AA',
     });
   });
 
@@ -38,13 +38,13 @@ describe('utils/colorRating', (): void => {
       aaa: false,
       aa: false,
       aaaLarge: false,
-      aaLarge: true
+      aaLarge: true,
     };
     expect(colorRating(mockRating)).toStrictEqual({
       bold: 'AA',
       large: 'AA',
       overall: 'Kinda',
-      small: 'Fail'
+      small: 'Fail',
     });
   });
 
@@ -53,13 +53,13 @@ describe('utils/colorRating', (): void => {
       aaa: false,
       aa: false,
       aaaLarge: false,
-      aaLarge: false
+      aaLarge: false,
     };
     expect(colorRating(mockRating)).toStrictEqual({
       bold: 'Fail',
       large: 'Fail',
       overall: 'Nope',
-      small: 'Fail'
+      small: 'Fail',
     });
   });
 });

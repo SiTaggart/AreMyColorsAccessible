@@ -56,7 +56,7 @@ export const StyledRange = styled.input`
   border-radius: ${thumbRadius};
   color: ${thumbColor};
   display: block;
-  margin: ${parseInt(thumbHeight.replace('px', '')) / 2}px 0;
+  margin: ${parseInt(thumbHeight.replace('px', ''), 10) / 2}px 0;
   width: ${trackWidth};
 
   &::-webkit-slider-runnable-track {
@@ -70,10 +70,10 @@ export const StyledRange = styled.input`
   &::-webkit-slider-thumb {
     ${thumb};
     -webkit-appearance: none;
-    margin-top: ${(-parseInt(trackBorderWidth.replace('px', '')) * 2 +
-      parseInt(trackHeight.replace('px', ''))) /
+    margin-top: ${(-parseInt(trackBorderWidth.replace('px', ''), 10) * 2 +
+      parseInt(trackHeight.replace('px', ''), 10)) /
       2 -
-      parseInt(thumbHeight.replace('px', '')) / 2}px;
+      parseInt(thumbHeight.replace('px', ''), 10) / 2}px;
   }
 
   &:focus::-webkit-slider-runnable-track {
@@ -128,5 +128,5 @@ export const StyledRange = styled.input`
 `;
 
 StyledRange.defaultProps = {
-  type: 'range'
+  type: 'range',
 };

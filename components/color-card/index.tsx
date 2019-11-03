@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import styled, { CSSObject } from '@emotion/styled';
 import { Levels } from '../../types';
-import colorRating from '../../utils/color-rating';
+import { colorRating } from '../../utils/color-rating';
 
 export interface ColorCardProps {
   accessibility: Levels;
@@ -62,20 +62,23 @@ const StyledColorCardPill = styled.span<StyledColorCardPillProps>`
   padding: 1px 4px;
 `;
 
-const ColorCard: React.FC<ColorCardProps> = (
-  props: ColorCardProps
-): ReactElement<HTMLDivElement> => {
-  const rating = colorRating(props.accessibility);
+const ColorCard: React.FC<ColorCardProps> = ({
+  accessibility,
+  isNotImportant,
+  contrast,
+  color,
+}: ColorCardProps): ReactElement<HTMLDivElement> => {
+  const rating = colorRating(accessibility);
 
   return (
-    <StyledColorCard data-test="colorCard" isNotImportant={props.isNotImportant}>
+    <StyledColorCard data-test="colorCard" isNotImportant={isNotImportant}>
       <StyledCardRow>
         <StyledColorCardPill title="Color contrast ratio">
-          {parseFloat(props.contrast.toFixed(2))} : 1
+          {parseFloat(contrast.toFixed(2))} : 1
         </StyledColorCardPill>
       </StyledCardRow>
       <StyledCardRow>
-        <StyledColorSwatch color={props.color} data-test="colorCard-swatch">
+        <StyledColorSwatch color={color} data-test="colorCard-swatch">
           {rating.overall}
         </StyledColorSwatch>
       </StyledCardRow>
@@ -91,4 +94,4 @@ const ColorCard: React.FC<ColorCardProps> = (
   );
 };
 
-export default ColorCard;
+export { ColorCard };

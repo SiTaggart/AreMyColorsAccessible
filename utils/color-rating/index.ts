@@ -25,7 +25,8 @@ const colorRating = (accessibility: Accessibility): ColorRating => {
   }
 
   if (accessibility.aaaLarge) {
-    bold = large = 'AAA';
+    bold = 'AAA';
+    large = 'AAA';
   } else {
     bold = accessibility.aaLarge ? 'AA' : 'Fail';
     large = bold;
@@ -41,8 +42,8 @@ const colorRating = (accessibility: Accessibility): ColorRating => {
     small,
     bold,
     large,
-    overall
+    overall,
   };
 };
 
-export default colorRating;
+export { colorRating };

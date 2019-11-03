@@ -21,7 +21,7 @@ describe('Home Page', (): void => {
             background: '#5E38A8',
             isLight: false,
             textColor: '#eee',
-            colorCombos: []
+            colorCombos: [],
           }}
         />
       )

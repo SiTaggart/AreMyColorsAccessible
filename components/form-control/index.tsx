@@ -15,10 +15,10 @@ const StyleFormControl = styled.div`
   }
 `;
 
-const FormControl: React.FC<FormControlProps> = (
-  props: FormControlProps
-): ReactElement<HTMLDivElement> => {
-  return <StyleFormControl>{props.children}</StyleFormControl>;
-};
+const FormControl: React.FC<FormControlProps> = ({
+  children,
+}: FormControlProps): ReactElement<HTMLDivElement> => (
+  <StyleFormControl>{children}</StyleFormControl>
+);
 
-export default FormControl;
+export { FormControl };

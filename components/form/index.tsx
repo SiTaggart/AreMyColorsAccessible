@@ -16,12 +16,14 @@ const StyledForm = styled.div`
   transition: color 400ms ease-out;
 `;
 
-const Form: React.FC<FormProps> = (props: FormProps): ReactElement<HTMLDivElement> => {
-  return (
-    <StyledForm data-test={props.dataTest} style={props.style}>
-      {props.children}
-    </StyledForm>
-  );
-};
+const Form: React.FC<FormProps> = ({
+  children,
+  dataTest,
+  style,
+}: FormProps): ReactElement<HTMLDivElement> => (
+  <StyledForm data-test={dataTest} style={style}>
+    {children}
+  </StyledForm>
+);
 
-export default Form;
+export { Form };

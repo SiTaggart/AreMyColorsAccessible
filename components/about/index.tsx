@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
-import Container from '../layouts/container';
-import Layout from '../layouts/layout';
+import { Container } from '../layouts/container';
+import { Layout } from '../layouts/layout';
 import { Heading, P, Blockquote, Link } from '../typography';
 
 const About: React.FC<{}> = (): ReactElement => (
@@ -78,4 +78,4 @@ const About: React.FC<{}> = (): ReactElement => (
     </Layout>
   </Container>
 );
-export default About;
+export { About };

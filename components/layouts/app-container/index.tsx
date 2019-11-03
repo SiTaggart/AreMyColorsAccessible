@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import Head from 'next/head';
 import styled from '@emotion/styled';
 import { breakpoint } from '../../../styles/utils';
-import Footer from '../../footer';
+import { Footer } from '../../footer';
 import { useSiteData } from '../../../context/home';
 
 const StyledAppContainer = styled.div`
@@ -18,14 +18,14 @@ interface AppContainerProps {
 
 const AppContainer: React.FC<AppContainerProps> = ({
   children,
-  title = 'Are My Colours Accessible'
+  title = 'Are My Colours Accessible',
 }: AppContainerProps): ReactElement => {
   const { siteData } = useSiteData();
 
   const styles = {
     footerLinks: {
-      color: siteData.isLight ? '#343334' : '#fff'
-    }
+      color: siteData.isLight ? '#343334' : '#fff',
+    },
   };
 
   return (
@@ -47,4 +47,4 @@ const AppContainer: React.FC<AppContainerProps> = ({
   );
 };
 
-export default AppContainer;
+export { AppContainer };

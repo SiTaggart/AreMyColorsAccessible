@@ -4,7 +4,7 @@ import React, { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { mount, ReactWrapper } from 'enzyme';
-import FormInput, { FormInputProps } from '..';
+import { FormInput, FormInputProps } from '..';
 
 type FormInputWrapperProps = Partial<FormInputProps>;
 
@@ -53,14 +53,14 @@ describe('FormInput', (): void => {
     const onChangeMock: jest.Mock = jest.fn();
     const wrapper: ReactWrapper = mount(<FormInputWrapper onChange={onChangeMock} />);
     wrapper.simulate('change');
-    expect(onChangeMock).toBeCalled();
+    expect(onChangeMock).toHaveBeenCalled();
   });
 
   it('should call a passed in onInput method, onInput', (): void => {
     const onInputMock: jest.Mock = jest.fn();
     const wrapper: ReactWrapper = mount(<FormInputWrapper onInput={onInputMock} />);
     wrapper.simulate('input');
-    expect(onInputMock).toBeCalled();
+    expect(onInputMock).toHaveBeenCalled();
   });
 
   it('should set a style attribute on the input when passed style', (): void => {
