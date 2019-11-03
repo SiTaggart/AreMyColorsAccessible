@@ -6,7 +6,7 @@ interface HSLSLiderCommonProps {
   variant?: 'compact' | null | undefined;
 }
 
-export const HSLSlider = styled.div<HSLSLiderCommonProps>`
+export const StyledHSLSlider = styled.div<HSLSLiderCommonProps>`
   display: ${(props): string | null => (props.variant === 'compact' ? 'flex' : null)};
   padding: ${(props): string | null => (props.variant === 'compact' ? '0' : null)};
   width: 100%;

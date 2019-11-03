@@ -14,8 +14,8 @@ module.exports = plop => {
         },
       },
     ],
-    actions: function() {
-      var actions = [
+    actions() {
+      const actions = [
         {
           type: 'add',
           path: './../pages/__tests__/{{kebabCase name}}.spec.tsx',

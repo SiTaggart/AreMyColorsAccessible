@@ -1,3 +1,5 @@
+/* eslint-disable jest/expect-expect */
+
 const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
   window.HTMLInputElement.prototype,
   'value'
@@ -7,9 +9,9 @@ const changeRangeInputValue = $range => value => {
   $range[0].dispatchEvent(new Event('change', { value, bubbles: true }));
 };
 
-describe('Homepage', function() {
+describe('Homepage', () => {
   describe('renders', () => {
-    it('should load', function() {
+    it('should load', () => {
       cy.visit('/');
       cy.document()
         .should('have.property', 'title')
@@ -91,10 +93,8 @@ describe('Homepage', function() {
   describe('text color sliders', () => {
     before(() => {
       cy.visit('/');
-      cy.get('#textColor-hsl-Lightness')
-        // .invoke('val', 25)
-        // .trigger('input');
-        .then(input => changeRangeInputValue(input)(25));
+      // eslint-disable-next-line promise/catch-or-return
+      cy.get('#textColor-hsl-Lightness').then(input => changeRangeInputValue(input)(25));
     });
 
     it('should update the input value', () => {
@@ -124,10 +124,8 @@ describe('Homepage', function() {
   describe('background color sliders', () => {
     before(() => {
       cy.visit('/');
-      cy.get('#background-hsl-Hue')
-        // .invoke('val', 25)
-        // .trigger('input');
-        .then(input => changeRangeInputValue(input)(25));
+      // eslint-disable-next-line promise/catch-or-return
+      cy.get('#background-hsl-Hue').then(input => changeRangeInputValue(input)(25));
     });
 
     it('should update the input value', () => {
@@ -193,3 +191,5 @@ describe('Homepage', function() {
     });
   });
 });
+
+/* eslint-enable jest/expect-expect */

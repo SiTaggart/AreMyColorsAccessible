@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react';
 import styled from '@emotion/styled';
 import { ColorCombosTypes } from 'color-combos';
-import ColorCard from '../color-card';
-import FormInput from '../form-input';
-import HslSliders from '../hsl-sliders';
+import { ColorCard } from '../color-card';
+import { FormInput } from '../form-input';
+import { HslSliders } from '../hsl-sliders';
 
 export interface ColorMatrixProps {
   colors: string[];
@@ -103,4 +103,4 @@ const ColorMatrix: React.FC<ColorMatrixProps> = ({
   </StyledColorMatrix>
 );
 
-export default ColorMatrix;
+export { ColorMatrix };

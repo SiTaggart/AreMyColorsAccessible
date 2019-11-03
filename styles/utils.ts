@@ -10,6 +10,5 @@ export const breakpoints: Breakpoints = {
   xxlarge: '1680px',
 };
 
-export const breakpoint = (size: keyof typeof breakpoints): string => {
-  return `@media (min-width: ${breakpoints[size]})`;
-};
+export const breakpoint = (size: keyof typeof breakpoints): string =>
+  `@media (min-width: ${breakpoints[size]})`;

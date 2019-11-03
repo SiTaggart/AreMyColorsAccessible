@@ -33,4 +33,4 @@ const FormRange: React.FC<FormRangeProps> = ({
   </>
 );
 
-export default FormRange;
+export { FormRange };

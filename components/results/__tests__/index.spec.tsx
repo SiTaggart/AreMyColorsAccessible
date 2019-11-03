@@ -15,6 +15,14 @@ describe('Results', (): void => {
       </SiteDataProvider>,
       document.createElement('div')
     );
+    const resultsCmp = renderer
+      .create(
+        <SiteDataProvider initialSiteData={{}}>
+          <Results />
+        </SiteDataProvider>
+      )
+      .toJSON();
+    expect(resultsCmp).toMatchSnapshot();
   });
 
   it('should render a triple a result correctly', (): void => {

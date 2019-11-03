@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import colorRating from '..';
+import { colorRating } from '..';
 
 describe('utils/colorRating', (): void => {
   it('should return a AAA small rating', (): void => {

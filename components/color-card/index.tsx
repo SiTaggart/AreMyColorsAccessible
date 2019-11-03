@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import styled, { CSSObject } from '@emotion/styled';
 import { Levels } from '../../types';
-import colorRating from '../../utils/color-rating';
+import { colorRating } from '../../utils/color-rating';
 
 export interface ColorCardProps {
   accessibility: Levels;
@@ -94,4 +94,4 @@ const ColorCard: React.FC<ColorCardProps> = ({
   );
 };
 
-export default ColorCard;
+export { ColorCard };

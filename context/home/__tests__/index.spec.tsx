@@ -1,9 +1,8 @@
-/* eslint-env jest */
 /* eslint-disable react/display-name */
 
 import * as React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
-import { SiteDataProvider, useSiteData, HomeContextInterface } from '../';
+import { SiteDataProvider, useSiteData, HomeContextInterface } from '..';
 
 describe('useSiteData hook', (): void => {
   const wrapper = ({ children }: { children?: any }): React.ReactElement => (
@@ -57,7 +56,7 @@ describe('useSiteData hook', (): void => {
   });
 
   it('should set context when initial siteData is set', (): void => {
-    const { result } = renderHook((): HomeContextInterface => useSiteData(), {
+    const { result: initialContext } = renderHook((): HomeContextInterface => useSiteData(), {
       wrapper: ({ children }: { children?: any }): React.ReactElement => (
         <SiteDataProvider
           initialSiteData={{
@@ -71,7 +70,7 @@ describe('useSiteData hook', (): void => {
         </SiteDataProvider>
       ),
     });
-    expect(result.current.siteData).toEqual({
+    expect(initialContext.current.siteData).toEqual({
       background: '#111',
       colorCombos: [
         {
@@ -296,17 +295,17 @@ describe('useSiteData hook', (): void => {
   });
 
   it('should throw without setting context', (): void => {
-    const { result } = renderHook((): HomeContextInterface => useSiteData(), {
+    const { result: throwContext } = renderHook((): HomeContextInterface => useSiteData(), {
       wrapper: ({ children }: { children?: any }): React.ReactElement => <div>{children}</div>,
     });
 
     const mockError = new Error('useSiteData must be used with SiteDataProvider');
 
-    expect(result.error).toEqual(mockError);
+    expect(throwContext.error).toEqual(mockError);
   });
 
   it('should handle a text and background colours being the same', (): void => {
-    const { result } = renderHook((): HomeContextInterface => useSiteData(), {
+    const { result: sameForeBackContext } = renderHook((): HomeContextInterface => useSiteData(), {
       wrapper: ({ children }: { children?: any }): React.ReactElement => (
         <SiteDataProvider
           initialSiteData={{
@@ -320,7 +319,7 @@ describe('useSiteData hook', (): void => {
         </SiteDataProvider>
       ),
     });
-    expect(result.current.siteData).toEqual({
+    expect(sameForeBackContext.current.siteData).toEqual({
       background: '#fff',
       colorCombos: [
         { color: [255, 255, 255], combinations: [], hex: '#FFFFFF', model: 'rgb', valpha: 1 },

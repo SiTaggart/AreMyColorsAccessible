@@ -1,5 +1,5 @@
-var fs = require('fs');
-var path = require('path');
+const fs = require('fs');
+const path = require('path');
 
 module.exports = plop => {
   plop.setGenerator('component', {
@@ -17,7 +17,7 @@ module.exports = plop => {
         name: 'parent',
         message: 'Parent folder:',
         default: 'New Component',
-        choices: function() {
+        choices() {
           const choices = ['New Component'].concat(
             fs.readdirSync(path.join(__dirname, './../../components'))
           );
@@ -38,22 +38,22 @@ module.exports = plop => {
         },
       },
     ],
-    actions: function(data) {
-      var folderPath =
+    actions(data) {
+      const folderPath =
         data.parent === 'New Component'
           ? './../components/{{kebabCase name}}'
           : './../components/{{parent}}/{{kebabCase name}}';
-      const componentPath = folderPath + '/index.tsx';
+      const componentPath = `${folderPath}/index.tsx`;
 
-      var actions = [
+      let actions = [
         {
           type: 'add',
-          path: folderPath + '/__tests__/index.spec.tsx',
+          path: `${folderPath}/__tests__/index.spec.tsx`,
           templateFile: 'component/component.test.tsx.tpl',
         },
       ];
 
-      var component = {};
+      let component = {};
 
       switch (data.type) {
         case 'Function':

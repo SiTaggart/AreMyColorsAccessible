@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import colorRating from '../../utils/color-rating';
+import { colorRating } from '../../utils/color-rating';
 import { useSiteData } from '../../context/home';
 import {
   ContrastResult,
@@ -99,4 +99,4 @@ const Results: React.FC<{}> = (): ReactElement => {
   );
 };
 
-export default Results;
+export { Results };

@@ -38,4 +38,4 @@ const globalStyles = css`
   }
 `;
 
-export default globalStyles;
+export { globalStyles };

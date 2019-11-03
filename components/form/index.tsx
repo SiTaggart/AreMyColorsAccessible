@@ -26,4 +26,4 @@ const Form: React.FC<FormProps> = ({
   </StyledForm>
 );
 
-export default Form;
+export { Form };

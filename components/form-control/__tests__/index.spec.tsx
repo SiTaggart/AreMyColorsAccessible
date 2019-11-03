@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import FormControl from '..';
+import { FormControl } from '..';
 
 describe('FormControl', (): void => {
   it('renders without crashing', (): void => {

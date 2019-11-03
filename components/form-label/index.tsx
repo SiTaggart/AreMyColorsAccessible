@@ -43,4 +43,4 @@ const FormLabel: React.FC<FormLabelProps> = ({
   </StyledLabel>
 );
 
-export default FormLabel;
+export { FormLabel };

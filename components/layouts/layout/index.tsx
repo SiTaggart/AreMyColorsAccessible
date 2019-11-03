@@ -36,8 +36,9 @@ const StyledLayout = styled.div<LayoutProps>`
   ${variantSize}
 `;
 
-const Layout: React.FC<LayoutProps> = (props: LayoutProps): ReactElement<HTMLDivElement> => (
-  <StyledLayout {...props}>{props.children}</StyledLayout>
-);
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  ...props
+}: LayoutProps): ReactElement<HTMLDivElement> => <StyledLayout {...props}>{children}</StyledLayout>;
 
-export default Layout;
+export { Layout };

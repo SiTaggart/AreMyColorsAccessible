@@ -675,3 +675,4 @@ describe('useSiteData hook', (): void => {
     expect(result.error).toEqual(mockError);
   });
 });
+/* eslint-enable react/display-name */

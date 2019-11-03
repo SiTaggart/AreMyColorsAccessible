@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import Footer from '..';
+import { Footer } from '..';
 
 describe('Footer', (): void => {
   const mockProps = {

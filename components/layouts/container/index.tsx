@@ -22,4 +22,4 @@ const Container: React.FC<ContainerProps> = ({
   children,
 }: ContainerProps): ReactElement => <StyledContainer variant={variant}>{children}</StyledContainer>;
 
-export default Container;
+export { Container };

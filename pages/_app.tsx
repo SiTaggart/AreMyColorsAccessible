@@ -1,16 +1,14 @@
 import React, { ReactElement } from 'react';
-import App, { Container } from 'next/app';
+import App, { AppContext } from 'next/app';
 import { Global } from '@emotion/core';
-import globalStyles from '../styles/global';
+import { globalStyles } from '../styles/global';
 
+// eslint-disable-next-line import/no-default-export
 export default class MyApp extends App {
   public static async getInitialProps({
     Component,
     ctx,
-  }: {
-    Component: any;
-    ctx: any;
-  }): Promise<{
+  }: AppContext): Promise<{
     pageProps: {};
   }> {
     let pageProps = {};
@@ -28,9 +26,7 @@ export default class MyApp extends App {
     return (
       <>
         <Global styles={globalStyles} />
-        <Container>
-          <Component {...pageProps} />
-        </Container>
+        <Component {...pageProps} />
       </>
     );
   }

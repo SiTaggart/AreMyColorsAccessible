@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import { mount, ReactWrapper } from 'enzyme';
 import renderer from 'react-test-renderer';
 import ColorCombos from 'color-combos';
-import ColorMatrix, { ColorMatrixProps } from '..';
+import { ColorMatrix, ColorMatrixProps } from '..';
 
 describe('ColorMatrix', (): void => {
   const onColorChangeMock: jest.Mock = jest.fn();

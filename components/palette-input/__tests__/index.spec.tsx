@@ -14,21 +14,6 @@ describe('PaletteInput', (): void => {
     expect(paletteInputCmp).toMatchSnapshot();
   });
 
-  it('should call the onColorAdd callback', (): void => {
-    // TODO: Not sure how to do this with enzyme and making real DOM events fire
-    // const wrapper: ReactWrapper = mount(<PaletteInput onColorAdd={mockOnColorAdd} />);
-    // wrapper
-    //   .find('#palette-form-input')
-    //   .at(0)
-    //   .simulate('input', { target: { value: '#ccc' } });
-    // const inputNode = wrapper
-    //   .find('#palette-form-input')
-    //   .at(0)
-    //   .getDOMNode();
-    // inputNode.submit();
-    // expect(mockOnColorAdd).toBeCalledWith('#ccc');
-  });
-
   it('should render an error message when passed', (): void => {
     const paletteInputCmp = renderer
       .create(<PaletteInput errorMessage="I'm an error" onColorAdd={mockOnColorAdd} />)

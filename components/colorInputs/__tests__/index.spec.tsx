@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { mount, ReactWrapper } from 'enzyme';
 import ColorCombos, { ColorCombosTypes } from 'color-combos';
-import ColorInputs from '..';
+import { ColorInputs } from '..';
 import * as HomeContext from '../../../context/home';
 
 describe('ColorInputs', (): void => {

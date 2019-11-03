@@ -56,16 +56,14 @@ const isValidColor = (value: string): Color | false => {
   return color;
 };
 
-const createFakeCombination = (color: number[], hex: string): ColorCombinationTypes => {
-  return {
-    model: 'rgb',
-    color,
-    valpha: 1,
-    hex,
-    contrast: 1,
-    accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
-  };
-};
+const createFakeCombination = (color: number[], hex: string): ColorCombinationTypes => ({
+  model: 'rgb',
+  color,
+  valpha: 1,
+  hex,
+  contrast: 1,
+  accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+});
 
 const createDuplicateCombination = (combos: ColorCombosTypes[]): ColorCombosTypes[] => {
   const color = combos[0].color != null ? combos[0].color : [];
@@ -86,12 +84,11 @@ const useSiteData = (): HomeContextInterface => {
   return context;
 };
 
-const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = (
-  props: SiteDataProviderProps
-): React.ReactElement => {
-  const [siteData, setSiteData] = React.useState<SiteData>(
-    setInitialContext(props.initialSiteData)
-  );
+const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = ({
+  initialSiteData,
+  ...props
+}: SiteDataProviderProps): React.ReactElement => {
+  const [siteData, setSiteData] = React.useState<SiteData>(setInitialContext(initialSiteData));
 
   const [isInitial, setIsInitial] = React.useState<boolean>(false);
 

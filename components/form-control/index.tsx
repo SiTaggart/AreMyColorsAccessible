@@ -21,4 +21,4 @@ const FormControl: React.FC<FormControlProps> = ({
   <StyleFormControl>{children}</StyleFormControl>
 );
 
-export default FormControl;
+export { FormControl };

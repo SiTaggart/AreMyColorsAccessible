@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import FormLabel from '..';
+import { FormLabel } from '..';
 
 describe('FormLabel', (): void => {
   it('renders without crashing', (): void => {

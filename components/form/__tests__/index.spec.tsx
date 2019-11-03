@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import Form from '..';
+import { Form } from '..';
 
 describe('Form', (): void => {
   it('renders without crashing', (): void => {

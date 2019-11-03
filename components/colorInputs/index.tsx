@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react';
-import Form from '../form';
-import FormControl from '../form-control';
-import FormInput from '../form-input';
-import FormLabel from '../form-label';
-import HslSliders from '../hsl-sliders';
+import { Form } from '../form';
+import { FormControl } from '../form-control';
+import { FormInput } from '../form-input';
+import { FormLabel } from '../form-label';
+import { HslSliders } from '../hsl-sliders';
 import { useSiteData } from '../../context/home';
 
 const ColorInputs: React.FC<{}> = (): ReactElement => {
@@ -58,4 +58,4 @@ const ColorInputs: React.FC<{}> = (): ReactElement => {
   );
 };
 
-export default ColorInputs;
+export { ColorInputs };

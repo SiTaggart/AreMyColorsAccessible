@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import ColorCard, { ColorCardProps } from '..';
+import { ColorCard, ColorCardProps } from '..';
 
 describe('ColorCard', (): void => {
   const mockProps: ColorCardProps = {

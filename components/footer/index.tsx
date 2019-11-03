@@ -53,4 +53,4 @@ const Footer: React.FC<FooterProps> = ({ styles }: FooterProps): ReactElement<HT
   );
 };
 
-export default Footer;
+export { Footer };

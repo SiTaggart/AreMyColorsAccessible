@@ -1,7 +1,7 @@
 import React, { FormEvent, ReactElement } from 'react';
 import styled from '@emotion/styled';
-import FormInput from '../form-input';
-import FormLabel from '../form-label';
+import { FormInput } from '../form-input';
+import { FormLabel } from '../form-label';
 import { Heading } from '../typography';
 
 const StyledPaletteForm = styled.form`
@@ -18,9 +18,10 @@ interface PaletteInputProps {
   errorMessage?: string;
 }
 
-const PaletteInput: React.FC<PaletteInputProps> = (
-  props: PaletteInputProps
-): ReactElement<HTMLFormElement> => {
+const PaletteInput: React.FC<PaletteInputProps> = ({
+  errorMessage,
+  ...props
+}: PaletteInputProps): ReactElement<HTMLFormElement> => {
   const handleFormSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     const colorInput: HTMLInputElement = (e.target as HTMLFormElement).paletteFormInput;
@@ -36,7 +37,7 @@ const PaletteInput: React.FC<PaletteInputProps> = (
           </FormLabel>
         </StyledPaletteFormHeading>
         <FormInput
-          errorMessage={props.errorMessage}
+          errorMessage={errorMessage}
           hasNoSpacing
           id="palette-form-input"
           name="paletteFormInput"
@@ -47,4 +48,4 @@ const PaletteInput: React.FC<PaletteInputProps> = (
   );
 };
 
-export default PaletteInput;
+export { PaletteInput };
