@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 import { SiteDataProvider } from '../../../context/home';
-import Results from '..';
+import { Results } from '..';
 
 describe('Results', (): void => {
   it('renders without crashing', (): void => {

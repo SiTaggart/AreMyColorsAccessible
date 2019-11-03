@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
 import renderer from 'react-test-renderer';
-import HslSlider from '..';
+import { HSLSlider } from '..';
 
 describe('hsl-slider', (): void => {
   let onChangeMock: jest.Mock;
@@ -17,7 +17,7 @@ describe('hsl-slider', (): void => {
   beforeEach((): void => {
     jest.clearAllMocks();
     wrapper = shallow(
-      <HslSlider
+      <HSLSlider
         id="input-id"
         label="Test"
         max={20}
@@ -32,7 +32,7 @@ describe('hsl-slider', (): void => {
 
   it('renders without crashing', (): void => {
     ReactDOM.render(
-      <HslSlider
+      <HSLSlider
         id="input-id"
         label="test"
         max={20}
@@ -46,7 +46,7 @@ describe('hsl-slider', (): void => {
     );
     const hslSliderComp = renderer
       .create(
-        <HslSlider
+        <HSLSlider
           id="input-id"
           label="test"
           max={20}
@@ -65,7 +65,7 @@ describe('hsl-slider', (): void => {
     it('should render a compact variant ', (): void => {
       const hslSliderComp = renderer
         .create(
-          <HslSlider
+          <HSLSlider
             id="input-id"
             label="test"
             max={20}
@@ -83,7 +83,7 @@ describe('hsl-slider', (): void => {
 
     it('should render the slider input label as the first letter', (): void => {
       const newWrapper: ReactWrapper = mount(
-        <HslSlider
+        <HSLSlider
           id="input-id"
           label="Test"
           max={20}

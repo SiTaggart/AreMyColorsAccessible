@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import Home from '..';
+import { Home } from '..';
 import { SiteDataProvider } from '../../../context/home';
 
 describe('Home', (): void => {

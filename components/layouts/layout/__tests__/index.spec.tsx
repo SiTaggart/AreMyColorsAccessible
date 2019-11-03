@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import Layout from '..';
+import { Layout } from '..';
 
 describe('Layout', (): void => {
   it('renders without crashing', (): void => {

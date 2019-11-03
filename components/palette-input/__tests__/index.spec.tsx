@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import PaletteInput from '..';
+import { PaletteInput } from '..';
 
 describe('PaletteInput', (): void => {
   const mockOnColorAdd: jest.Mock = jest.fn();

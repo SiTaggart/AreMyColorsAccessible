@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
 import renderer from 'react-test-renderer';
-import HslSliders from '..';
+import { HslSliders } from '..';
 
 describe('hsl-slider', (): void => {
   const onChangeMock: jest.Mock = jest.fn();

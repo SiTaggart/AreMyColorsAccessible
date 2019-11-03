@@ -3,7 +3,7 @@
 import React, { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import AppContainer from '..';
+import { AppContainer } from '..';
 import { SiteDataProvider } from '../../../../context/home';
 
 describe('AppContainer', (): void => {

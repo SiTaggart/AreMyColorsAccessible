@@ -1276,10 +1276,10 @@
     "@percy/agent" "~0"
     axios "^0.19.0"
 
-"@sitaggart/eslint-config-ts@^0.3.4":
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.3.7.tgz#66d35c44c6f2862da6ae19cfc15f99cc807415b2"
-  integrity sha512-jIhsCcGjH1FK5opYM80We5yWLnICeKoIacQLB5bBN+vo1FCl+/ASD7ExM0BdJfklAzdWyU6ba4sb/4/PFK7ERQ==
+"@sitaggart/eslint-config-ts@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.0.tgz#f8cf884f7b567bfed547b0390335a17f98b8c4dc"
+  integrity sha512-Tl8hcnHb8QH+N3/lTcWm4uoH9wgxQX85nIaScMwHDaw7VYZ1oPnxOGG4lsKqRYGkLQGlldyxWvNnzl3/TjCkwg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "2.6.0"
     "@typescript-eslint/parser" "2.6.0"
