@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import styled from '@emotion/styled';
 import { ColorCombosTypes } from 'color-combos';
+import { useUID } from 'react-uid';
 import { ColorCard } from '../color-card';
 import { FormInput } from '../form-input';
 import { HslSliders } from '../hsl-sliders';
@@ -35,8 +36,8 @@ const StyledColorMatrixTd = styled.td`
 
 const ColorMatrix: React.FC<ColorMatrixProps> = ({
   colorCombos,
-  onColorChange,
   colors,
+  onColorChange,
 }: ColorMatrixProps): ReactElement<HTMLDivElement> => (
   <StyledColorMatrix>
     <StyledColorMatrixTable>
@@ -49,7 +50,7 @@ const ColorMatrix: React.FC<ColorMatrixProps> = ({
           />
           {colorCombos.map(
             (color, index): ReactElement => (
-              <StyledColorMatrixTh key={color.hex} data-test="colorMatrix-th" scope="col">
+              <StyledColorMatrixTh key={useUID()} data-test="colorMatrix-th" scope="col">
                 <FormInput
                   ariaLabel="hex colour code"
                   css={{
@@ -73,14 +74,14 @@ const ColorMatrix: React.FC<ColorMatrixProps> = ({
       <tbody>
         {colorCombos.map(
           (color, index): ReactElement => (
-            <StyledColorMatrixTr key={color.hex} data-test="colorMatrix-tr">
+            <StyledColorMatrixTr key={useUID()} data-test="colorMatrix-tr">
               <StyledColorMatrixTh data-test="colorMatrix-th" scope="row">
                 {color.hex}
               </StyledColorMatrixTh>
               {color.combinations.map(
-                (combo, i): ReactElement => (
-                  <React.Fragment key={combo.contrast}>
-                    {index === i && <StyledColorMatrixTd>&nbsp;</StyledColorMatrixTd>}
+                (combo, comboIndex): ReactElement => (
+                  <React.Fragment key={useUID()}>
+                    {index === comboIndex && <StyledColorMatrixTd>&nbsp;</StyledColorMatrixTd>}
                     <StyledColorMatrixTd
                       style={{
                         backgroundColor: combo.hex,
