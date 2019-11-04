@@ -76,7 +76,7 @@
     "husky": "3.0.9",
     "jest": "24.9.0",
     "jest-emotion": "10.0.17",
-    "plop": "2.5.2",
+    "plop": "2.5.3",
     "precise-commits": "1.0.2",
     "prettier": "1.18.2",
     "react-addons-test-utils": "15.6.2",
