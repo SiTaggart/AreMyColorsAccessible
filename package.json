@@ -57,7 +57,7 @@
     "@testing-library/react-hooks": "2.0.3",
     "@types/color": "3.0.0",
     "@types/enzyme": "3.10.3",
-    "@types/jest": "24.0.21",
+    "@types/jest": "24.0.22",
     "@types/lodash": "4.14.144",
     "@types/next": "8.0.6",
     "@types/node": "12.12.6",
