@@ -78,7 +78,7 @@
     "jest-emotion": "10.0.17",
     "plop": "2.5.3",
     "precise-commits": "1.0.2",
-    "prettier": "1.19.0",
+    "prettier": "1.19.1",
     "react-addons-test-utils": "15.6.2",
     "react-test-renderer": "16.11.0",
     "start-server-and-test": "1.10.6",
