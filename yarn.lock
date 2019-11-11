@@ -1415,13 +1415,13 @@
     "@percy/agent" "~0"
     axios "^0.19.0"
 
-"@sitaggart/eslint-config-ts@0.5.4":
-  version "0.5.4"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.4.tgz#61f23edcf3747b8d60a040bdeb633fa1aa4185ee"
-  integrity sha512-nliQ8fF4SMaIE1Olf14Uj/ppVcwJlJ8xFJ3ZrgwTiElLFGTtIVYSWs0hG5UgwwgHq4UTO+QD5GaBDtM/kADe+A==
+"@sitaggart/eslint-config-ts@0.5.5":
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.5.tgz#8c4ec2fc7aedf6ae19e2bb85624877d0e9346857"
+  integrity sha512-ovp33Duc7j0GgNYSLtnTSELmAXjEn3um+gjNCw8lBPj1av6+sD0V8zhYURxdTaXF5FgwYTC2mGQUnbRrZTGpbQ==
   dependencies:
-    "@typescript-eslint/eslint-plugin" "2.6.1"
-    "@typescript-eslint/parser" "2.6.1"
+    "@typescript-eslint/eslint-plugin" "2.7.0"
+    "@typescript-eslint/parser" "2.7.0"
     eslint-config-airbnb-typescript "6.1.0"
     eslint-config-prettier "6.5.0"
     eslint-config-standard "14.1.0"
