@@ -1415,10 +1415,10 @@
     "@percy/agent" "~0"
     axios "^0.19.0"
 
-"@sitaggart/eslint-config-ts@0.5.7":
-  version "0.5.7"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.7.tgz#e5fb7421edb2df343e099c6ecf63bbfdace4e861"
-  integrity sha512-eYaeVbV72DH4w39KXcqghPOjdgziifxjUx9WZyLIiPl7hhj6QuynhGQeO8C7xghj+lzEN6MDV0Qz1wiVLFGq6w==
+"@sitaggart/eslint-config-ts@0.5.8":
+  version "0.5.8"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.8.tgz#e786b87773f3d41b8e9361bbe7f3bb00b619671b"
+  integrity sha512-q2bZ5jQAQUqmipDVf0Xa/EDn2efT/fQdtFi5vvbouAmVUDKKa5tNddFGGza/vsmil2BK5Dq2VQnNh8hqlKVtbQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "2.7.0"
     "@typescript-eslint/parser" "2.7.0"
@@ -1435,7 +1435,7 @@
     eslint-plugin-prettier "3.1.1"
     eslint-plugin-promise "4.2.1"
     eslint-plugin-react "7.16.0"
-    eslint-plugin-react-hooks "2.2.0"
+    eslint-plugin-react-hooks "2.3.0"
     eslint-plugin-standard "4.0.1"
     eslint-plugin-unicorn "12.1.0"
 
@@ -4544,10 +4544,10 @@ eslint-plugin-promise@4.2.1:
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-4.2.1.tgz#845fd8b2260ad8f82564c1222fce44ad71d9418a"
   integrity sha512-VoM09vT7bfA7D+upt+FjeBO5eHIJQBUWki1aPvB+vbNiHS3+oGIJGIeyBtKQTME6UPXXy3vV07OL1tHd3ANuDw==
 
-eslint-plugin-react-hooks@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-2.2.0.tgz#078264e9e388da6929ace09d6abe92c85963aff4"
-  integrity sha512-jSlnBjV2cmyIeL555H/FbvuSbQ1AtpHjLMHuPrQnt1eVA6lX8yufdygh7AArI2m8ct7ChHGx2uOaCuxq2MUn6g==
+eslint-plugin-react-hooks@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-2.3.0.tgz#53e073961f1f5ccf8dd19558036c1fac8c29d99a"
+  integrity sha512-gLKCa52G4ee7uXzdLiorca7JIQZPPXRAQDXV83J4bUEeUuc5pIEyZYAZ45Xnxe5IuupxEqHS+hUhSLIimK1EMw==
 
 eslint-plugin-react@7.16.0:
   version "7.16.0"
