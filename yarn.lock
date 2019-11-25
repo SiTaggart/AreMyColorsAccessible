@@ -1376,14 +1376,14 @@
     "@percy/agent" "~0"
     axios "^0.19.0"
 
-"@sitaggart/eslint-config-ts@0.5.11":
-  version "0.5.11"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.11.tgz#72e1387f8e5a0e3742a8b1c079fa9d9b0f5e6cb5"
-  integrity sha512-ETkDAywKwHR+VMbkJchgumO4wsxMc/zRRa0I15dhDvukeoVuwbJSvtasEupNkT+OttRB6eOnXGvwKN16T5xL0Q==
+"@sitaggart/eslint-config-ts@0.5.13":
+  version "0.5.13"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.13.tgz#ab3e45aa779c21d206c5334f4fd77ba0bbbea96d"
+  integrity sha512-nXBkYKUjtePqGj9JhumDagEkdLgSTO/gizfvavXQLJDiE5AVJKwKURK1iW8Jr+nyKVjRmMgHpnSgoGESdpz4eg==
   dependencies:
-    "@typescript-eslint/eslint-plugin" "2.8.0"
-    "@typescript-eslint/parser" "2.8.0"
-    eslint-config-airbnb-typescript "6.3.0"
+    "@typescript-eslint/eslint-plugin" "2.9.0"
+    "@typescript-eslint/parser" "2.9.0"
+    eslint-config-airbnb-typescript "6.3.1"
     eslint-config-prettier "6.7.0"
     eslint-config-standard "14.1.0"
     eslint-config-standard-jsx "8.1.0"
@@ -4420,10 +4420,10 @@ eslint-config-airbnb-base@^14.0.0:
     object.assign "^4.1.0"
     object.entries "^1.1.0"
 
-eslint-config-airbnb-typescript@6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-typescript/-/eslint-config-airbnb-typescript-6.3.0.tgz#08ccda676df59ac3e6436141b1f8b187010ee564"
-  integrity sha512-og1aGqKrsc+j+ru3bW0iE+qX9McyqI/ajbx7XpKCXHYBSedOywHoDUsaLvQksq78WBqNKuDTjORkBWQsf8OH2g==
+eslint-config-airbnb-typescript@6.3.1:
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-typescript/-/eslint-config-airbnb-typescript-6.3.1.tgz#28bd09099355324353a074a71951dd879cce7df0"
+  integrity sha512-+tkkVysaN63zXz+oiPfkfYSRMIY5QfHI4qFeyb1ZhRGF2jR6JslqDv5GkrW/eciySNTVTigFvf9hkqHT9vklJw==
   dependencies:
     "@typescript-eslint/parser" "^2.3.0"
     eslint-config-airbnb "^18.0.1"
