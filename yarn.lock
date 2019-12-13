@@ -1611,10 +1611,10 @@
     "@percy/agent" "~0"
     axios "^0.19.0"
 
-"@sitaggart/eslint-config-ts@0.5.23":
-  version "0.5.23"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.23.tgz#585a49909fe19602cb4c6c30cf8cfa9c4205f35f"
-  integrity sha512-ulL4vlxgdjeyP3lV7O41h1aMLrHj+1HY2D1t0SDjL+HfBtb6NMSfd6YFqhxP76NLNKTiO/8Q+lK6sKkhQPB6gg==
+"@sitaggart/eslint-config-ts@0.5.24":
+  version "0.5.24"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.24.tgz#f3a06c41a0b5eaa34a52f3d00e661f52243830e2"
+  integrity sha512-4Y/qit5tpySKhF5AmarPhhLOu+JYwpPn0R5Fgcug//Ytjx/J5jcbtmUE0I9OUUbxqjN2MGNER4ULLeXwDB5hrw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "2.11.0"
     "@typescript-eslint/parser" "2.11.0"
@@ -1622,7 +1622,7 @@
     eslint-config-prettier "6.7.0"
     eslint-config-standard "14.1.0"
     eslint-config-standard-jsx "8.1.0"
-    eslint-plugin-cypress "2.7.0"
+    eslint-plugin-cypress "2.8.0"
     eslint-plugin-eslint-comments "3.1.2"
     eslint-plugin-import "2.19.1"
     eslint-plugin-jest "23.1.1"
@@ -4691,10 +4691,10 @@ eslint-module-utils@^2.4.1:
     debug "^2.6.9"
     pkg-dir "^2.0.0"
 
-eslint-plugin-cypress@2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-cypress/-/eslint-plugin-cypress-2.7.0.tgz#117f14ce63698e4c4f3afea3d7e27025c8d504f0"
-  integrity sha512-52Lq5ePCD/8jc536e1RqtLfj33BAy1s7BlYgCjbG39J5kqUitcTlRY5i3NRoeAyPHueDwETsq0eASF44ugLosQ==
+eslint-plugin-cypress@2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-cypress/-/eslint-plugin-cypress-2.8.0.tgz#95a3fe4aa36dbeccd0337fad09496222905f6d8b"
+  integrity sha512-5J3xn0hH5KWh3wG0tEO7KXQc1LRqveBi0oTLG3+275j6W+P9uB9sNC1t+CWZieqz0rPkHoWWopntsE03WqJ84g==
   dependencies:
     globals "^11.12.0"
 
