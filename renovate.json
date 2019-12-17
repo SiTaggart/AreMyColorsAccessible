@@ -1,3 +1,9 @@
 {
-  "extends": ["config:base", ":automergeMinor", ":pinVersions"]
+  "extends": ["config:base", ":automergeMinor", ":pinVersions"],
+  "packageRules": [
+    {
+      "packageNames": ["node"],
+      "enabled": false
+    }
+  ]
 }
