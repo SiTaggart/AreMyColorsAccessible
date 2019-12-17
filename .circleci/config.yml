@@ -5,7 +5,7 @@ version: 2.1
 executors:
   job-executor:
     docker:
-      - image: circleci/node:12
+      - image: circleci/node:12.6.0
     working_directory: ~/repo
 
 jobs:
