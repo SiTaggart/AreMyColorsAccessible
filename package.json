@@ -25,6 +25,7 @@
     "gen:component": "plop --plopfile generators/plopfile.js component",
     "gen:page": "plop --plopfile generators/plopfile.js page"
   },
+  "engines": { "node": "12.x" },
   "author": "Simon Taggart <me@simontaggart.com> (http://simontaggart.com/)",
   "repository": {
     "type": "git",
