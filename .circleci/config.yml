@@ -5,7 +5,7 @@ version: 2.1
 executors:
   job-executor:
     docker:
-      - image: circleci/node:12
+      - image: circleci/node:12.6.0
     working_directory: ~/repo
 
 jobs:
@@ -55,7 +55,7 @@ jobs:
 
   cypress:
     docker:
-      - image: cypress/browsers:node12.13.1-chrome75
+      - image: cypress/browsers:node12.6.0-chrome75
         environment:
           TERM: xterm
     working_directory: ~/repo
