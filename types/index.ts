@@ -1,4 +1,4 @@
-import { ColorCombosTypes } from 'color-combos';
+import { ColorCombo } from 'color-combos';
 
 export interface Levels {
   aa: boolean;
@@ -11,7 +11,7 @@ export interface SiteData {
   background: string;
   textColor: string;
   isLight: boolean;
-  colorCombos: ColorCombosTypes[];
+  colorCombos: ColorCombo[];
 }
 
 export interface PalettePageQueryString {

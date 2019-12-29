@@ -4,12 +4,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { mount, ReactWrapper } from 'enzyme';
-import ColorCombos, { ColorCombosTypes } from 'color-combos';
+import ColorCombos, { ColorCombo } from 'color-combos';
 import { ColorInputs } from '..';
 import * as HomeContext from '../../../context/home';
 
 describe('ColorInputs', (): void => {
-  let colorCombos: ColorCombosTypes[] | false;
+  let colorCombos: ColorCombo[] | false;
   let mockContext: HomeContext.HomeContextInterface;
   let handleBackgroundColorInputChange: jest.Mock;
   let handleTextColorInputChange: jest.Mock;
