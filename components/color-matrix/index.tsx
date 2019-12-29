@@ -1,14 +1,14 @@
 /* eslint-disable react/no-array-index-key */
 import React, { ReactElement } from 'react';
 import styled from '@emotion/styled';
-import { ColorCombosTypes } from 'color-combos';
+import { ColorCombo } from 'color-combos';
 import { ColorCard } from '../color-card';
 import { FormInput } from '../form-input';
 import { HslSliders } from '../hsl-sliders';
 
 export interface ColorMatrixProps {
   colors: string[];
-  colorCombos: ColorCombosTypes[];
+  colorCombos: ColorCombo[];
   onColorChange: (newColor: string, index: number) => void;
 }
 

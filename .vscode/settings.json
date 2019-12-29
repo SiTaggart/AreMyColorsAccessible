@@ -1,5 +1,8 @@
 {
   "prettier.disableLanguages": ["vue"],
   "eslint.autoFixOnSave": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

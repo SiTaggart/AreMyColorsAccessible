@@ -3,7 +3,7 @@ import Color from 'color';
 import isEmpty from 'lodash/isEmpty';
 import debounce from 'lodash/debounce';
 import qs from 'query-string';
-import ColorCombos, { ColorCombosTypes, ColorCombinationTypes } from 'color-combos';
+import ColorCombos, { ColorCombo, Combination } from 'color-combos';
 import { SiteData } from '../../types';
 
 export interface HomeContextInterface {
@@ -27,7 +27,7 @@ const setInitialContext = (initialSiteData: SiteData | {}): SiteData => {
     isLight = JSON.parse((initialSiteData.isLight as unknown) as string);
   }
 
-  const initialCombos = ColorCombos([textColor, background]) as ColorCombosTypes[];
+  const initialCombos = ColorCombos([textColor, background]) as ColorCombo[];
   return {
     background,
     textColor,
@@ -56,7 +56,7 @@ const isValidColor = (value: string): Color | false => {
   return color;
 };
 
-const createFakeCombination = (color: number[], hex: string): ColorCombinationTypes => ({
+const createFakeCombination = (color: number[], hex: string): Combination => ({
   model: 'rgb',
   color,
   valpha: 1,
@@ -65,7 +65,7 @@ const createFakeCombination = (color: number[], hex: string): ColorCombinationTy
   accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
 });
 
-const createDuplicateCombination = (combos: ColorCombosTypes[]): ColorCombosTypes[] => {
+const createDuplicateCombination = (combos: ColorCombo[]): ColorCombo[] => {
   const color = combos[0].color != null ? combos[0].color : [];
   const dupeCombo = {
     ...combos[0],
@@ -111,7 +111,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = ({
   }, [state]);
 
   const setNewColorCombo = (textColor: string, backgroundColor: string): void => {
-    let newCombos: ColorCombosTypes[] | false = ColorCombos([textColor, backgroundColor]);
+    let newCombos: ColorCombo[] | false = ColorCombos([textColor, backgroundColor]);
     if (newCombos) {
       if (textColor === backgroundColor) {
         newCombos = createDuplicateCombination(newCombos);

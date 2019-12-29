@@ -3,7 +3,7 @@ import Color from 'color';
 import qs from 'query-string';
 import isEmpty from 'lodash/isEmpty';
 import debounce from 'lodash/debounce';
-import ColorCombos, { ColorCombosTypes } from 'color-combos';
+import ColorCombos, { ColorCombo } from 'color-combos';
 import { PalettePageQueryString } from '../../types';
 
 export interface PaletteContextProps {
@@ -14,7 +14,7 @@ export interface PaletteContextProps {
 }
 interface PaletteState {
   colors: string[];
-  colorCombos: ColorCombosTypes[];
+  colorCombos: ColorCombo[];
   hasError: boolean;
 }
 interface PaletteDataProviderProps {
@@ -58,15 +58,15 @@ const isValidColor = (hex: string): Color | false => {
   return color;
 };
 
-const getColorCombos = (colors: string[]): ColorCombosTypes[] | false => ColorCombos(colors);
+const getColorCombos = (colors: string[]): ColorCombo[] | false => ColorCombos(colors);
 
 const getInitialState = (querystring: PalettePageQueryString | undefined): PaletteState => {
   let colors: string[] = [];
-  let colorCombos: ColorCombosTypes[] = [];
+  let colorCombos: ColorCombo[] = [];
 
   if (querystring !== undefined && !isEmpty(querystring)) {
     colors = querystring.colors;
-    colorCombos = getColorCombos(colors) as ColorCombosTypes[];
+    colorCombos = getColorCombos(colors) as ColorCombo[];
   }
 
   return {
@@ -120,7 +120,7 @@ const PaletteDataProvider: React.FC<PaletteDataProviderProps> = ({
   };
 
   const updateColors = (colors: string[], valid: boolean): void => {
-    let newColorCombos: ColorCombosTypes[];
+    let newColorCombos: ColorCombo[];
     if (valid) {
       const combos = getColorCombos(colors);
       if (combos !== false) {
