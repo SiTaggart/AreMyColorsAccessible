@@ -1626,10 +1626,10 @@
     "@percy/agent" "~0"
     axios "^0.19.0"
 
-"@sitaggart/eslint-config-ts@0.5.37":
-  version "0.5.37"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.37.tgz#da42669669405127f17e9328258dbd138adf8c8e"
-  integrity sha512-iMozT2SZEsu4StbHMWwH0LLrK9fISFnJFfXTxiHva4D0eyE2uBWkEvKxSRJsbecIANn86GWNVbPY9r67aA1QTQ==
+"@sitaggart/eslint-config-ts@0.5.38":
+  version "0.5.38"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.38.tgz#60a380208c772a6b18866df4d80de3aa24e69fc8"
+  integrity sha512-DNrD6axW6iI7hpd2dXlnH9mfh93kfyokKVe92+cnJaK824jlIroMiXFKep11+3Z3e96/dYgPwHGo8//AZmvREA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "2.15.0"
     "@typescript-eslint/parser" "2.15.0"
@@ -1640,7 +1640,7 @@
     eslint-plugin-cypress "2.8.1"
     eslint-plugin-eslint-comments "3.1.2"
     eslint-plugin-import "2.19.1"
-    eslint-plugin-jest "23.3.0"
+    eslint-plugin-jest "23.4.0"
     eslint-plugin-jsx-a11y "6.2.3"
     eslint-plugin-node "10.0.0"
     eslint-plugin-prettier "3.1.2"
@@ -4787,10 +4787,10 @@ eslint-plugin-import@2.19.1:
     read-pkg-up "^2.0.0"
     resolve "^1.12.0"
 
-eslint-plugin-jest@23.3.0:
-  version "23.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-23.3.0.tgz#b1443d0c46d6a0de9ef3de78176dd6688c7d5326"
-  integrity sha512-GE6CR4ESJeu6Huw7vfZfaXHmX2R2kCFvf2X9OMcOxfP158yLKgLWz7PqLYTwRDACi84IhpmRxO8lK7GGwG05UQ==
+eslint-plugin-jest@23.4.0:
+  version "23.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-23.4.0.tgz#5209a659cf415a5154d64f957e0508ee83de224b"
+  integrity sha512-BKZmxpvya0/slJdUr5MJdWvIUNtDySzbAxigr3xMVmyiSUvQLhnLde+8dDM56sFPDSU1pQG9ZqNglMq0jLYVqw==
   dependencies:
     "@typescript-eslint/experimental-utils" "^2.5.0"
 
