@@ -1626,10 +1626,10 @@
     "@percy/agent" "~0"
     axios "^0.19.0"
 
-"@sitaggart/eslint-config-ts@0.5.38":
-  version "0.5.38"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.38.tgz#60a380208c772a6b18866df4d80de3aa24e69fc8"
-  integrity sha512-DNrD6axW6iI7hpd2dXlnH9mfh93kfyokKVe92+cnJaK824jlIroMiXFKep11+3Z3e96/dYgPwHGo8//AZmvREA==
+"@sitaggart/eslint-config-ts@0.5.39":
+  version "0.5.39"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.39.tgz#980203952d75907ad404add14d71ddbb034b322c"
+  integrity sha512-abmxTZ0gzx5xjhXxLbxMO8VZmXQxd64iCpWARATz1rSWPVhOSD2d3vgv3cYSGXkMDrPe//SjJuq5h73Jlmhexg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "2.15.0"
     "@typescript-eslint/parser" "2.15.0"
@@ -1639,7 +1639,7 @@
     eslint-config-standard-jsx "8.1.0"
     eslint-plugin-cypress "2.8.1"
     eslint-plugin-eslint-comments "3.1.2"
-    eslint-plugin-import "2.19.1"
+    eslint-plugin-import "2.20.0"
     eslint-plugin-jest "23.4.0"
     eslint-plugin-jsx-a11y "6.2.3"
     eslint-plugin-node "10.0.0"
@@ -4770,10 +4770,10 @@ eslint-plugin-eslint-plugin@^2.1.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-eslint-plugin/-/eslint-plugin-eslint-plugin-2.1.0.tgz#a7a00f15a886957d855feacaafee264f039e62d5"
   integrity sha512-kT3A/ZJftt28gbl/Cv04qezb/NQ1dwYIbi8lyf806XMxkus7DvOVCLIfTXMrorp322Pnoez7+zabXH29tADIDg==
 
-eslint-plugin-import@2.19.1:
-  version "2.19.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.19.1.tgz#5654e10b7839d064dd0d46cd1b88ec2133a11448"
-  integrity sha512-x68131aKoCZlCae7rDXKSAQmbT5DQuManyXo2sK6fJJ0aK5CWAkv6A6HJZGgqC8IhjQxYPgo6/IY4Oz8AFsbBw==
+eslint-plugin-import@2.20.0:
+  version "2.20.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.20.0.tgz#d749a7263fb6c29980def8e960d380a6aa6aecaa"
+  integrity sha512-NK42oA0mUc8Ngn4kONOPsPB1XhbUvNHqF+g307dPV28aknPoiNnKLFd9em4nkswwepdF5ouieqv5Th/63U7YJQ==
   dependencies:
     array-includes "^3.0.3"
     array.prototype.flat "^1.2.1"
