@@ -1769,10 +1769,10 @@
   dependencies:
     type-detect "4.0.8"
 
-"@sitaggart/eslint-config-ts@0.5.51":
-  version "0.5.51"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.51.tgz#98253374d7e5b21443fd206117ec3e9c2cad772e"
-  integrity sha512-rwVJ2cIjkGp0OqhDSKGBu/jI7DKGlQkfXuQ512qQ7EuiJyIWdq2CqIrCVb1N3dW/8W9+g2OLEW7aAbqYmFrimA==
+"@sitaggart/eslint-config-ts@0.5.52":
+  version "0.5.52"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.52.tgz#fcd25df55117fac7e558eeba9d9dbd37f34a060b"
+  integrity sha512-vsDlMV4joWz9CLrwnqgwQ53U3sGPuitdm2DalPbJeTIbqszq6Zvs2hwuR8rhIn9JrYITpj1L/HCVgbDjUlSPDw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "2.18.0"
     "@typescript-eslint/parser" "2.18.0"
@@ -1788,7 +1788,7 @@
     eslint-plugin-node "11.0.0"
     eslint-plugin-prettier "3.1.2"
     eslint-plugin-promise "4.2.1"
-    eslint-plugin-react "7.18.2"
+    eslint-plugin-react "7.18.3"
     eslint-plugin-react-hooks "2.3.0"
     eslint-plugin-standard "4.0.1"
     eslint-plugin-unicorn "15.0.1"
@@ -5192,10 +5192,10 @@ eslint-plugin-react-hooks@2.3.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-2.3.0.tgz#53e073961f1f5ccf8dd19558036c1fac8c29d99a"
   integrity sha512-gLKCa52G4ee7uXzdLiorca7JIQZPPXRAQDXV83J4bUEeUuc5pIEyZYAZ45Xnxe5IuupxEqHS+hUhSLIimK1EMw==
 
-eslint-plugin-react@7.18.2:
-  version "7.18.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.18.2.tgz#83d52cd783524cb5f6616e029c892ec08ee59e23"
-  integrity sha512-6m1zFCSB8OKVIVyGipz1TJxVuNfgvbbUa7O9fxqyyT0b15tB2X/rxMNCGQv3LTD4XOKmG/ONr52FZHur0OKFkg==
+eslint-plugin-react@7.18.3:
+  version "7.18.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.18.3.tgz#8be671b7f6be095098e79d27ac32f9580f599bc8"
+  integrity sha512-Bt56LNHAQCoou88s8ViKRjMB2+36XRejCQ1VoLj716KI1MoE99HpTVvIThJ0rvFmG4E4Gsq+UgToEjn+j044Bg==
   dependencies:
     array-includes "^3.1.1"
     doctrine "^2.1.0"
