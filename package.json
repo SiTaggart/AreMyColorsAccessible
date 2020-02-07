@@ -57,7 +57,7 @@
     "@sitaggart/prettier-config": "0.2.0",
     "@testing-library/react-hooks": "2.0.3",
     "@types/color": "3.0.1",
-    "@types/enzyme": "3.10.4",
+    "@types/enzyme": "3.10.5",
     "@types/jest": "25.1.1",
     "@types/lodash": "4.14.149",
     "@types/next": "8.0.7",
