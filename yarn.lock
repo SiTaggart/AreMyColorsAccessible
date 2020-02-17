@@ -1776,13 +1776,13 @@
   dependencies:
     type-detect "4.0.8"
 
-"@sitaggart/eslint-config-ts@0.5.63":
-  version "0.5.63"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.63.tgz#926b6775bc3a194856d3f34421eb0b8d7e7c39d0"
-  integrity sha512-mcMpCno1FCQWmNHuJ4qBwBf10tmD55v6ewdU6ISR8qoUaRdrIdQRwv93wpny+K4+gT+Ty3gi/HgMT5b8ht/YEg==
+"@sitaggart/eslint-config-ts@0.5.64":
+  version "0.5.64"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.64.tgz#361079614aceef8e68add9d37b7df290c06a478a"
+  integrity sha512-evVwjZzn1YJ6z3WuxJAfcckZYagoqaXWCUoRnAaDr707K69dcWbaLTPSsPCczR20rRuNXhnn5Zw4YvHtO0I8Xw==
   dependencies:
-    "@typescript-eslint/eslint-plugin" "2.19.2"
-    "@typescript-eslint/parser" "2.19.2"
+    "@typescript-eslint/eslint-plugin" "2.20.0"
+    "@typescript-eslint/parser" "2.20.0"
     eslint-config-airbnb-typescript "7.0.0"
     eslint-config-prettier "6.10.0"
     eslint-config-standard "14.1.0"
@@ -2163,17 +2163,6 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@2.19.2":
-  version "2.19.2"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.19.2.tgz#e279aaae5d5c1f2547b4cff99204e1250bc7a058"
-  integrity sha512-HX2qOq2GOV04HNrmKnTpSIpHjfl7iwdXe3u/Nvt+/cpmdvzYvY0NHSiTkYN257jHnq4OM/yo+OsFgati+7LqJA==
-  dependencies:
-    "@typescript-eslint/experimental-utils" "2.19.2"
-    eslint-utils "^1.4.3"
-    functional-red-black-tree "^1.0.1"
-    regexpp "^3.0.0"
-    tsutils "^3.17.1"
-
 "@typescript-eslint/eslint-plugin@2.20.0":
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.20.0.tgz#a522d0e1e4898f7c9c6a8e1ed3579b60867693fa"
@@ -2212,16 +2201,6 @@
     "@typescript-eslint/typescript-estree" "2.6.0"
     eslint-scope "^5.0.0"
 
-"@typescript-eslint/parser@2.19.2", "@typescript-eslint/parser@^2.19.0":
-  version "2.19.2"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-2.19.2.tgz#21f42c0694846367e7d6a907feb08ab2f89c0879"
-  integrity sha512-8uwnYGKqX9wWHGPGdLB9sk9+12sjcdqEEYKGgbS8A0IvYX59h01o8os5qXUHMq2na8vpDRaV0suTLM7S8wraTA==
-  dependencies:
-    "@types/eslint-visitor-keys" "^1.0.0"
-    "@typescript-eslint/experimental-utils" "2.19.2"
-    "@typescript-eslint/typescript-estree" "2.19.2"
-    eslint-visitor-keys "^1.1.0"
-
 "@typescript-eslint/parser@2.20.0":
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-2.20.0.tgz#608e5bb06ba98a415b64ace994c79ab20f9772a9"
@@ -2230,6 +2209,16 @@
     "@types/eslint-visitor-keys" "^1.0.0"
     "@typescript-eslint/experimental-utils" "2.20.0"
     "@typescript-eslint/typescript-estree" "2.20.0"
+    eslint-visitor-keys "^1.1.0"
+
+"@typescript-eslint/parser@^2.19.0":
+  version "2.19.2"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-2.19.2.tgz#21f42c0694846367e7d6a907feb08ab2f89c0879"
+  integrity sha512-8uwnYGKqX9wWHGPGdLB9sk9+12sjcdqEEYKGgbS8A0IvYX59h01o8os5qXUHMq2na8vpDRaV0suTLM7S8wraTA==
+  dependencies:
+    "@types/eslint-visitor-keys" "^1.0.0"
+    "@typescript-eslint/experimental-utils" "2.19.2"
+    "@typescript-eslint/typescript-estree" "2.19.2"
     eslint-visitor-keys "^1.1.0"
 
 "@typescript-eslint/typescript-estree@2.19.2":
