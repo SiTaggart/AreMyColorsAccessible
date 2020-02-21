@@ -1776,10 +1776,10 @@
   dependencies:
     type-detect "4.0.8"
 
-"@sitaggart/eslint-config-ts@0.5.67":
-  version "0.5.67"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.67.tgz#6a192842378030a385a29d0613f43e99a925001f"
-  integrity sha512-nepGT6G7/U6gq5Fu1J6bV3/mrpTieCgHwfAvqkHmFBNNe55bDDuEM0qnO9h2JY++epA6VZKRppf8EDVmdTXDEg==
+"@sitaggart/eslint-config-ts@0.5.68":
+  version "0.5.68"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.68.tgz#bad34ef3e9ebe3400300d5e4a6a0f020669c42fe"
+  integrity sha512-HXeEyF8CLPJ0GdQDxSPHqszN9g0uWo1W9zbfJsZxaeYCUMnromRvYEjnCm2wzk3EXq0Zdj3CHAXiYg+6z9plMg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "2.20.0"
     "@typescript-eslint/parser" "2.20.0"
