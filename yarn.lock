@@ -1776,10 +1776,10 @@
   dependencies:
     type-detect "4.0.8"
 
-"@sitaggart/eslint-config-ts@0.5.70":
-  version "0.5.70"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.70.tgz#159c2edf465ca8ed22f1351e4ea06304a6be1f2d"
-  integrity sha512-6v7OK57V0RgSJdQgDY0XOYrQiOg0/yfMtpFkPsHCg2mGlUZApEKcvfx5xApwV7aKGh0dTMqQTL06PJcueQp0ow==
+"@sitaggart/eslint-config-ts@0.5.71":
+  version "0.5.71"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.71.tgz#7ae4f080ff54207b7b81b1520e3a724e30c36e60"
+  integrity sha512-xCpdoD0u38v6vTwQSAAv6+jE0YBnMS7xCly/fnGsFu4GIk4bC2GNT2sgT1h7wBQfz+NPETPVnodB83tcsrAatQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "2.21.0"
     "@typescript-eslint/parser" "2.21.0"
@@ -1796,7 +1796,7 @@
     eslint-plugin-prettier "3.1.2"
     eslint-plugin-promise "4.2.1"
     eslint-plugin-react "7.18.3"
-    eslint-plugin-react-hooks "2.4.0"
+    eslint-plugin-react-hooks "2.5.0"
     eslint-plugin-standard "4.0.1"
     eslint-plugin-unicorn "16.1.1"
 
@@ -5201,10 +5201,10 @@ eslint-plugin-promise@4.2.1:
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-4.2.1.tgz#845fd8b2260ad8f82564c1222fce44ad71d9418a"
   integrity sha512-VoM09vT7bfA7D+upt+FjeBO5eHIJQBUWki1aPvB+vbNiHS3+oGIJGIeyBtKQTME6UPXXy3vV07OL1tHd3ANuDw==
 
-eslint-plugin-react-hooks@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-2.4.0.tgz#db6ee1cc953e3a217035da3d4e9d4356d3c672a4"
-  integrity sha512-bH5DOCP6WpuOqNaux2BlaDCrSgv8s5BitP90bTgtZ1ZsRn2bdIfeMDY5F2RnJVnyKDy6KRQRDbipPLZ1y77QtQ==
+eslint-plugin-react-hooks@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-2.5.0.tgz#c50ab7ca5945ce6d1cf8248d9e185c80b54171b6"
+  integrity sha512-bzvdX47Jx847bgAYf0FPX3u1oxU+mKU8tqrpj4UX9A96SbAmj/HVEefEy6rJUog5u8QIlOPTKZcBpGn5kkKfAQ==
 
 eslint-plugin-react@7.18.3:
   version "7.18.3"
