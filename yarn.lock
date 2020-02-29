@@ -1845,10 +1845,10 @@
   dependencies:
     type-detect "4.0.8"
 
-"@sitaggart/eslint-config-ts@0.5.71":
-  version "0.5.71"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.71.tgz#7ae4f080ff54207b7b81b1520e3a724e30c36e60"
-  integrity sha512-xCpdoD0u38v6vTwQSAAv6+jE0YBnMS7xCly/fnGsFu4GIk4bC2GNT2sgT1h7wBQfz+NPETPVnodB83tcsrAatQ==
+"@sitaggart/eslint-config-ts@0.5.72":
+  version "0.5.72"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.72.tgz#56ddb4850da6b1058613d69d66cad75c5e9177c1"
+  integrity sha512-VVaPjUTLyG3oxUW5USw2mVBAQDQKgTj0BQPyEyw8lDHRUCY/HdYfBG6IsNDc0I/qmZaRgys4EruyjyBZAkHH4g==
   dependencies:
     "@typescript-eslint/eslint-plugin" "2.21.0"
     "@typescript-eslint/parser" "2.21.0"
