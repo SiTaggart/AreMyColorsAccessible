@@ -45,7 +45,7 @@
     "next": "9.2.1",
     "normalize.css": "8.0.1",
     "polished": "3.4.4",
-    "query-string": "6.11.0",
+    "query-string": "6.11.1",
     "react": "16.13.0",
     "react-dom": "16.13.0"
   },
