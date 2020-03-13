@@ -81,7 +81,7 @@
     "prettier": "1.19.1",
     "react-addons-test-utils": "15.6.2",
     "react-test-renderer": "16.13.0",
-    "start-server-and-test": "1.10.8",
+    "start-server-and-test": "1.10.10",
     "typescript": "3.8.3"
   },
   "bundlesize": [
