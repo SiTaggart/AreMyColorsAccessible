@@ -95,11 +95,11 @@
     },
     {
       "path": "./.next/static/runtime/*.js",
-      "maxSize": "10 kB"
+      "maxSize": "20 kB"
     },
     {
       "path": "./.next/serverless/pages/*.js",
-      "maxSize": "180 kB"
+      "maxSize": "400 kB"
     }
   ],
   "husky": {
