@@ -42,7 +42,7 @@
     "color": "3.1.2",
     "color-combos": "1.0.1",
     "lodash": "4.17.15",
-    "next": "9.2.1",
+    "next": "9.3.0",
     "normalize.css": "8.0.1",
     "polished": "3.4.4",
     "query-string": "6.11.1",
@@ -95,11 +95,11 @@
     },
     {
       "path": "./.next/static/runtime/*.js",
-      "maxSize": "10 kB"
+      "maxSize": "20 kB"
     },
     {
       "path": "./.next/serverless/pages/*.js",
-      "maxSize": "180 kB"
+      "maxSize": "400 kB"
     }
   ],
   "husky": {
