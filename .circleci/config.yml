@@ -77,11 +77,11 @@ workflows:
   version: 2
   build:
     jobs:
-      - build
-      - lint:
-          requires:
-            - build
-      - test:
-          requires:
-            - build
-      - cypress
+      # - build
+      # - lint:
+      #     requires:
+      #       - build
+      # - test:
+      #     requires:
+      #       - build
+      # - cypress
