@@ -77,7 +77,7 @@ jobs:
       - name: Percy Test
         uses: percy/exec-action@v0.3.0
         with:
-          command: "cypress:ci"
+          custom-command: "yarn cypress:ci"
           verbose: true
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
