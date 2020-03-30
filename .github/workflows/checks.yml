@@ -3,7 +3,7 @@ name: Checks
 on: push
 
 jobs:
-  checks:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -55,16 +55,8 @@ jobs:
         run: yarn lint
       - name: Run type-check
         run: yarn tsc
-      - name: Run percy
-        run: yarn percy
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
   cypress:
     runs-on: ubuntu-latest
-    container: cypress/browsers:node12.6.0-chrome75
-    strategy:
-      matrix:
-        node-version: [12.16.x]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -79,10 +71,36 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: Run cypress
-        run: yarn cypress:ci
+      - name: Percy Test
+        uses: percy/exec-action@v0.3.0
+        with:
+          command: "cypress:ci"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+  # cypress:
+  #   runs-on: ubuntu-latest
+  #   container: cypress/browsers:node12.6.0-chrome75
+  #   strategy:
+  #     matrix:
+  #       node-version: [12.16.x]
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/setup-node@v1
+  #     - name: Get yarn cache
+  #       id: yarn-cache
+  #       run: echo "::set-output name=dir::$(yarn cache dir)"
+  #     - uses: actions/cache@v1
+  #       with:
+  #         path: ${{ steps.yarn-cache.outputs.dir }}
+  #         key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-yarn-
+  #     - name: Install dependencies
+  #       run: yarn install --frozen-lockfile
+  #     - name: Run cypress
+  #       run: yarn cypress:ci
+  #       env:
+  #         PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
   jest:
     runs-on: ubuntu-latest
     strategy:
