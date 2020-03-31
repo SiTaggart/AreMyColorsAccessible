@@ -73,7 +73,7 @@ export const StyledRange = styled.input`
     margin-top: ${(-Number.parseInt(trackBorderWidth.replace('px', ''), 10) * 2 +
       Number.parseInt(trackHeight.replace('px', ''), 10)) /
       2 -
-      Number.parseInt(thumbHeight.replace('px', ''), 10) / 2}px;
+    Number.parseInt(thumbHeight.replace('px', ''), 10) / 2}px;
   }
 
   &:focus::-webkit-slider-runnable-track {

@@ -1,4 +1,4 @@
-module.exports = plop => {
+module.exports = (plop) => {
   plop.setGenerator('page', {
     description: 'Create new Page',
     prompts: [
@@ -6,7 +6,7 @@ module.exports = plop => {
         type: 'input',
         name: 'name',
         message: 'title of page',
-        validate: value => {
+        validate: (value) => {
           if (/.+/.test(value)) {
             return true;
           }

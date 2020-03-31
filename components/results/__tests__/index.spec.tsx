@@ -38,33 +38,13 @@ describe('Results', (): void => {
         <Results />
       </SiteDataProvider>
     );
-    expect(
-      wrapper
-        .find('[data-test="contrastResults-heading"]')
-        .at(0)
-        .text()
-    ).toBe('Yup');
+    expect(wrapper.find('[data-test="contrastResults-heading"]').at(0).text()).toBe('Yup');
 
-    expect(
-      wrapper
-        .find('[data-test="contrastResult-rating-small"]')
-        .at(0)
-        .text()
-    ).toEqual('AAA');
+    expect(wrapper.find('[data-test="contrastResult-rating-small"]').at(0).text()).toEqual('AAA');
 
-    expect(
-      wrapper
-        .find('[data-test="contrastResult-rating-bold"]')
-        .at(0)
-        .text()
-    ).toEqual('AAA');
+    expect(wrapper.find('[data-test="contrastResult-rating-bold"]').at(0).text()).toEqual('AAA');
 
-    expect(
-      wrapper
-        .find('[data-test="contrastResult-rating-large"]')
-        .at(0)
-        .text()
-    ).toEqual('AAA');
+    expect(wrapper.find('[data-test="contrastResult-rating-large"]').at(0).text()).toEqual('AAA');
   });
 
   it('should render a large text triple a result correctly', (): void => {
@@ -80,33 +60,13 @@ describe('Results', (): void => {
         <Results />
       </SiteDataProvider>
     );
-    expect(
-      wrapper
-        .find('[data-test="contrastResults-heading"]')
-        .at(0)
-        .text()
-    ).toBe('Yup');
+    expect(wrapper.find('[data-test="contrastResults-heading"]').at(0).text()).toBe('Yup');
 
-    expect(
-      wrapper
-        .find('[data-test="contrastResult-rating-small"]')
-        .at(0)
-        .text()
-    ).toEqual('AA');
+    expect(wrapper.find('[data-test="contrastResult-rating-small"]').at(0).text()).toEqual('AA');
 
-    expect(
-      wrapper
-        .find('[data-test="contrastResult-rating-bold"]')
-        .at(0)
-        .text()
-    ).toEqual('AAA');
+    expect(wrapper.find('[data-test="contrastResult-rating-bold"]').at(0).text()).toEqual('AAA');
 
-    expect(
-      wrapper
-        .find('[data-test="contrastResult-rating-large"]')
-        .at(0)
-        .text()
-    ).toEqual('AAA');
+    expect(wrapper.find('[data-test="contrastResult-rating-large"]').at(0).text()).toEqual('AAA');
   });
 
   it('should render a large text double a result correctly', (): void => {
@@ -122,33 +82,13 @@ describe('Results', (): void => {
         <Results />
       </SiteDataProvider>
     );
-    expect(
-      wrapper
-        .find('[data-test="contrastResults-heading"]')
-        .at(0)
-        .text()
-    ).toBe('Kinda');
+    expect(wrapper.find('[data-test="contrastResults-heading"]').at(0).text()).toBe('Kinda');
 
-    expect(
-      wrapper
-        .find('[data-test="contrastResult-rating-small"]')
-        .at(0)
-        .text()
-    ).toEqual('Fail');
+    expect(wrapper.find('[data-test="contrastResult-rating-small"]').at(0).text()).toEqual('Fail');
 
-    expect(
-      wrapper
-        .find('[data-test="contrastResult-rating-bold"]')
-        .at(0)
-        .text()
-    ).toEqual('AA');
+    expect(wrapper.find('[data-test="contrastResult-rating-bold"]').at(0).text()).toEqual('AA');
 
-    expect(
-      wrapper
-        .find('[data-test="contrastResult-rating-large"]')
-        .at(0)
-        .text()
-    ).toEqual('AA');
+    expect(wrapper.find('[data-test="contrastResult-rating-large"]').at(0).text()).toEqual('AA');
   });
 
   it('should render a nope a result correctly', (): void => {
@@ -164,33 +104,13 @@ describe('Results', (): void => {
         <Results />
       </SiteDataProvider>
     );
-    expect(
-      wrapper
-        .find('[data-test="contrastResults-heading"]')
-        .at(0)
-        .text()
-    ).toBe('Nope');
+    expect(wrapper.find('[data-test="contrastResults-heading"]').at(0).text()).toBe('Nope');
 
-    expect(
-      wrapper
-        .find('[data-test="contrastResult-rating-small"]')
-        .at(0)
-        .text()
-    ).toEqual('Fail');
+    expect(wrapper.find('[data-test="contrastResult-rating-small"]').at(0).text()).toEqual('Fail');
 
-    expect(
-      wrapper
-        .find('[data-test="contrastResult-rating-bold"]')
-        .at(0)
-        .text()
-    ).toEqual('Fail');
+    expect(wrapper.find('[data-test="contrastResult-rating-bold"]').at(0).text()).toEqual('Fail');
 
-    expect(
-      wrapper
-        .find('[data-test="contrastResult-rating-large"]')
-        .at(0)
-        .text()
-    ).toEqual('Fail');
+    expect(wrapper.find('[data-test="contrastResult-rating-large"]').at(0).text()).toEqual('Fail');
   });
 
   it('should render a seriously? a result correctly', (): void => {

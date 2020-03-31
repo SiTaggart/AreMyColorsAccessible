@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-module.exports = plop => {
+module.exports = (plop) => {
   plop.setGenerator('component', {
     description: 'Create new component.',
     prompts: [
@@ -30,7 +30,7 @@ module.exports = plop => {
         type: 'input',
         name: 'name',
         message: 'Component name',
-        validate: value => {
+        validate: (value) => {
           if (/.+/.test(value)) {
             return true;
           }
