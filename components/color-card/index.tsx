@@ -74,7 +74,7 @@ const ColorCard: React.FC<ColorCardProps> = ({
     <StyledColorCard data-test="colorCard" isNotImportant={isNotImportant}>
       <StyledCardRow>
         <StyledColorCardPill title="Color contrast ratio">
-          {parseFloat(contrast.toFixed(2))} : 1
+          {Number.parseFloat(contrast.toFixed(2))} : 1
         </StyledColorCardPill>
       </StyledCardRow>
       <StyledCardRow>

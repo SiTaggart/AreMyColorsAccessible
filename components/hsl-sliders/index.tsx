@@ -61,7 +61,7 @@ export const HslSliders: React.FC<HslSliderProps> = memo(
     const handleHueChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
       const newHsl: HSLColor = {
         ...convertToHSL(value),
-        hue: parseInt(e.target.value, 10),
+        hue: Number.parseInt(e.target.value, 10),
       };
       updateColor(newHsl);
     };
@@ -69,7 +69,7 @@ export const HslSliders: React.FC<HslSliderProps> = memo(
     const handleSaturationChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
       const newHsl: HSLColor = {
         ...convertToHSL(value),
-        saturation: parseInt(e.target.value, 10),
+        saturation: Number.parseInt(e.target.value, 10),
       };
       updateColor(newHsl);
     };
@@ -77,7 +77,7 @@ export const HslSliders: React.FC<HslSliderProps> = memo(
     const handleLightnessChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
       const newHsl: HSLColor = {
         ...convertToHSL(value),
-        lightness: parseInt(e.target.value, 10),
+        lightness: Number.parseInt(e.target.value, 10),
       };
       updateColor(newHsl);
     };
