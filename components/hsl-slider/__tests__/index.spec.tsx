@@ -96,12 +96,7 @@ describe('hsl-slider', (): void => {
         />
       );
 
-      expect(
-        newWrapper
-          .find('[htmlFor="input-id"]')
-          .at(0)
-          .text()
-      ).toBe('T');
+      expect(newWrapper.find('[htmlFor="input-id"]').at(0).text()).toBe('T');
     });
   });
 

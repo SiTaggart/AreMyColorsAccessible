@@ -39,26 +39,11 @@ describe('hsl-slider', (): void => {
         <HslSliders id="input-id" onChange={onChangeMock} value="#ccc" variant="compact" />
       );
 
-      expect(
-        newWrapper
-          .find('[htmlFor="input-id-Hue"]')
-          .at(0)
-          .text()
-      ).toBe('H');
+      expect(newWrapper.find('[htmlFor="input-id-Hue"]').at(0).text()).toBe('H');
 
-      expect(
-        newWrapper
-          .find('[htmlFor="input-id-Saturation"]')
-          .at(1)
-          .text()
-      ).toBe('S');
+      expect(newWrapper.find('[htmlFor="input-id-Saturation"]').at(1).text()).toBe('S');
 
-      expect(
-        newWrapper
-          .find('[htmlFor="input-id-Lightness"]')
-          .at(2)
-          .text()
-      ).toBe('L');
+      expect(newWrapper.find('[htmlFor="input-id-Lightness"]').at(2).text()).toBe('L');
     });
   });
 
