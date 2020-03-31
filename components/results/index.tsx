@@ -42,7 +42,7 @@ const Results: React.FC<{}> = (): ReactElement => {
         aaa: false,
         aaaLarge: false,
       };
-  const ratio = parseFloat(contrast.toFixed(2));
+  const ratio = Number.parseFloat(contrast.toFixed(2));
   const colorRatings = colorRating(accessibility);
   const areYouSerious = ratio < 1.3 ? true : null;
   const boldTextRating = colorRatings.bold;
