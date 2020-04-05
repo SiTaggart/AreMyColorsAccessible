@@ -5,15 +5,14 @@ import { renderHook, act } from '@testing-library/react-hooks';
 import { SiteDataProvider, useSiteData, HomeContextInterface } from '..';
 
 describe('useSiteData hook', (): void => {
-  const wrapper = ({ children }: { children?: any }): React.ReactElement => (
-    <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
-  );
-
-  const { result } = renderHook((): HomeContextInterface => useSiteData(), {
-    wrapper,
-  });
-
   it('should set context by default', (): void => {
+    const wrapper = ({ children }: { children?: any }): React.ReactElement => (
+      <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
+    );
+
+    const { result } = renderHook((): HomeContextInterface => useSiteData(), {
+      wrapper,
+    });
     expect(result.current.siteData).toEqual({
       background: '#1276CE',
       colorCombos: [
@@ -112,6 +111,14 @@ describe('useSiteData hook', (): void => {
   });
 
   it('should update siteData when background color is changed', (): void => {
+    const wrapper = ({ children }: { children?: any }): React.ReactElement => (
+      <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
+    );
+
+    const { result } = renderHook((): HomeContextInterface => useSiteData(), {
+      wrapper,
+    });
+
     act((): void => {
       result.current.handleBackgroundColorInputChange('#444');
     });
@@ -158,20 +165,27 @@ describe('useSiteData hook', (): void => {
   });
 
   it('should update siteData when text color is changed', (): void => {
+    const wrapper = ({ children }: { children?: any }): React.ReactElement => (
+      <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
+    );
+
+    const { result } = renderHook((): HomeContextInterface => useSiteData(), {
+      wrapper,
+    });
     act((): void => {
       result.current.handleTextColorInputChange('#000');
     });
     expect(result.current.siteData).toEqual({
-      background: '#444',
+      background: '#1276CE',
       colorCombos: [
         {
           color: [0, 0, 0],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
-              color: [68, 68, 68],
-              contrast: 2.156108603821344,
-              hex: '#444444',
+              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              color: [18, 118, 206],
+              contrast: 4.508339263897164,
+              hex: '#1276CE',
               model: 'rgb',
               valpha: 1,
             },
@@ -181,18 +195,18 @@ describe('useSiteData hook', (): void => {
           valpha: 1,
         },
         {
-          color: [68, 68, 68],
+          color: [18, 118, 206],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
               color: [0, 0, 0],
-              contrast: 2.156108603821344,
+              contrast: 4.508339263897164,
               hex: '#000000',
               model: 'rgb',
               valpha: 1,
             },
           ],
-          hex: '#444444',
+          hex: '#1276CE',
           model: 'rgb',
           valpha: 1,
         },
@@ -203,6 +217,13 @@ describe('useSiteData hook', (): void => {
   });
 
   it('should keep current state when invalid colour is set as background color', (): void => {
+    const wrapper = ({ children }: { children?: any }): React.ReactElement => (
+      <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
+    );
+
+    const { result } = renderHook((): HomeContextInterface => useSiteData(), {
+      wrapper,
+    });
     act((): void => {
       result.current.handleBackgroundColorInputChange('blah');
     });
@@ -211,80 +232,87 @@ describe('useSiteData hook', (): void => {
       background: 'blah',
       colorCombos: [
         {
-          color: [0, 0, 0],
+          color: [255, 255, 255],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
-              color: [68, 68, 68],
-              contrast: 2.156108603821344,
-              hex: '#444444',
+              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              color: [18, 118, 206],
+              contrast: 4.658034537943552,
+              hex: '#1276CE',
               model: 'rgb',
               valpha: 1,
             },
           ],
-          hex: '#000000',
+          hex: '#FFFFFF',
           model: 'rgb',
           valpha: 1,
         },
         {
-          color: [68, 68, 68],
+          color: [18, 118, 206],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
-              color: [0, 0, 0],
-              contrast: 2.156108603821344,
-              hex: '#000000',
+              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              color: [255, 255, 255],
+              contrast: 4.658034537943552,
+              hex: '#FFFFFF',
               model: 'rgb',
               valpha: 1,
             },
           ],
-          hex: '#444444',
+          hex: '#1276CE',
           model: 'rgb',
           valpha: 1,
         },
       ],
       isLight: false,
-      textColor: '#000',
+      textColor: '#FFFFFF',
     });
   });
 
   it('should keep current state when invalid colour is set as textColor color', (): void => {
+    const wrapper = ({ children }: { children?: any }): React.ReactElement => (
+      <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
+    );
+
+    const { result } = renderHook((): HomeContextInterface => useSiteData(), {
+      wrapper,
+    });
     act((): void => {
       result.current.handleTextColorInputChange('foo');
     });
 
     expect(result.current.siteData).toEqual({
-      background: 'blah',
+      background: '#1276CE',
       colorCombos: [
         {
-          color: [0, 0, 0],
+          color: [255, 255, 255],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
-              color: [68, 68, 68],
-              contrast: 2.156108603821344,
-              hex: '#444444',
+              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              color: [18, 118, 206],
+              contrast: 4.658034537943552,
+              hex: '#1276CE',
               model: 'rgb',
               valpha: 1,
             },
           ],
-          hex: '#000000',
+          hex: '#FFFFFF',
           model: 'rgb',
           valpha: 1,
         },
         {
-          color: [68, 68, 68],
+          color: [18, 118, 206],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
-              color: [0, 0, 0],
-              contrast: 2.156108603821344,
-              hex: '#000000',
+              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              color: [255, 255, 255],
+              contrast: 4.658034537943552,
+              hex: '#FFFFFF',
               model: 'rgb',
               valpha: 1,
             },
           ],
-          hex: '#444444',
+          hex: '#1276CE',
           model: 'rgb',
           valpha: 1,
         },
