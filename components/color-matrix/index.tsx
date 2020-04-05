@@ -42,7 +42,7 @@ const ColorMatrix: React.FC<ColorMatrixProps> = ({
   <StyledColorMatrix>
     <StyledColorMatrixTable>
       <thead>
-        <StyledColorMatrixTr data-test="colorMatrix-tr">
+        <StyledColorMatrixTr data-testid="colorMatrix-tr">
           <td
             style={{
               width: '6rem',
@@ -50,17 +50,19 @@ const ColorMatrix: React.FC<ColorMatrixProps> = ({
           />
           {colorCombos.map(
             (color, index): ReactElement => (
-              <StyledColorMatrixTh key={index} data-test="colorMatrix-th" scope="col">
+              <StyledColorMatrixTh key={index} data-testid="colorMatrix-th" scope="col">
                 <FormInput
                   ariaLabel="hex colour code"
                   css={{
                     marginBottom: '0.5rem',
                   }}
+                  data-testid={`colorhex-${index}`}
                   id={`colorhex-${index}`}
                   onChange={(e): void => onColorChange(e.target.value, index)}
                   value={colors[index]}
                 />
                 <HslSliders
+                  data-testid={`hsl-${index}`}
                   id={`hsl-${index}`}
                   onChange={(hex): void => onColorChange(hex, index)}
                   value={color.hex}
@@ -74,8 +76,8 @@ const ColorMatrix: React.FC<ColorMatrixProps> = ({
       <tbody>
         {colorCombos.map(
           (color, index): ReactElement => (
-            <StyledColorMatrixTr key={index} data-test="colorMatrix-tr">
-              <StyledColorMatrixTh data-test="colorMatrix-th" scope="row">
+            <StyledColorMatrixTr key={index} data-testid="colorMatrix-tr">
+              <StyledColorMatrixTh data-testid="colorMatrix-th" scope="row">
                 {color.hex}
               </StyledColorMatrixTh>
               {color.combinations.map(

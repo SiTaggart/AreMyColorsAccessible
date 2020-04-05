@@ -2,18 +2,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import { HslSliders } from '..';
 
 describe('hsl-slider', (): void => {
-  const onChangeMock: jest.Mock = jest.fn();
-  let wrapper: ShallowWrapper;
-
-  beforeEach((): void => {
-    jest.clearAllMocks();
-    wrapper = shallow(<HslSliders id="input-id" onChange={onChangeMock} value="#ccc" />);
-  });
+  const onChangeMock = jest.fn();
 
   it('renders without crashing', (): void => {
     ReactDOM.render(
@@ -35,30 +29,36 @@ describe('hsl-slider', (): void => {
     });
 
     it('should render the slider input label as the first letter', (): void => {
-      const newWrapper: ReactWrapper = mount(
+      const { getByLabelText } = render(
         <HslSliders id="input-id" onChange={onChangeMock} value="#ccc" variant="compact" />
       );
-
-      expect(newWrapper.find('[htmlFor="input-id-Hue"]').at(0).text()).toBe('H');
-
-      expect(newWrapper.find('[htmlFor="input-id-Saturation"]').at(1).text()).toBe('S');
-
-      expect(newWrapper.find('[htmlFor="input-id-Lightness"]').at(2).text()).toBe('L');
+      expect(getByLabelText('H')).not.toBeNull();
+      expect(getByLabelText('S')).not.toBeNull();
+      expect(getByLabelText('L')).not.toBeNull();
     });
   });
 
   it('should call onchange callback when hue changed', (): void => {
-    wrapper.find('#input-id-Hue').simulate('input', { target: { value: '60' } });
-    expect(onChangeMock).toHaveBeenCalledWith('#CCCCCC', 'input-id');
+    const { getByTestId } = render(
+      <HslSliders id="onchange-id" onChange={onChangeMock} value="red" />
+    );
+    fireEvent.change(getByTestId('onchange-id-Hue'), { target: { value: '100' } });
+    expect(onChangeMock).toHaveBeenCalledWith('#55FF00', 'onchange-id');
   });
 
   it('should call onchange callback when saturation changed', (): void => {
-    wrapper.find('#input-id-Saturation').simulate('input', { target: { value: '60' } });
-    expect(onChangeMock).toHaveBeenCalledWith('#EBADAD', 'input-id');
+    const { getByTestId } = render(
+      <HslSliders id="onchange-id" onChange={onChangeMock} value="#EBADAD" />
+    );
+    fireEvent.change(getByTestId('onchange-id-Saturation'), { target: { value: '59' } });
+    expect(onChangeMock).toHaveBeenCalledWith('#EAAEAE', 'onchange-id');
   });
 
   it('should call onchange callback when lightness changed', (): void => {
-    wrapper.find('#input-id-Lightness').simulate('input', { target: { value: '60' } });
-    expect(onChangeMock).toHaveBeenCalledWith('#999999', 'input-id');
+    const { getByTestId } = render(
+      <HslSliders id="onchange-id" onChange={onChangeMock} value="#999999" />
+    );
+    fireEvent.change(getByTestId('onchange-id-Lightness'), { target: { value: '0' } });
+    expect(onChangeMock).toHaveBeenCalledWith('#000000', 'onchange-id');
   });
 });

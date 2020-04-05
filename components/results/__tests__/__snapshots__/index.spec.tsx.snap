@@ -117,7 +117,7 @@ exports[`Results renders without crashing 1`] = `
     aria-atomic="true"
     aria-live="polite"
     className="emotion-0 emotion-1"
-    data-test="contrastResults-heading"
+    data-testid="contrastResults-heading"
   >
     Yup
   </h1>
@@ -133,7 +133,7 @@ exports[`Results renders without crashing 1`] = `
     </p>
     <h2
       className="emotion-4 emotion-5"
-      data-test="contrastResult-rating-small"
+      data-testid="contrastResult-rating-small"
     >
       AA
     </h2>
@@ -152,7 +152,7 @@ exports[`Results renders without crashing 1`] = `
     </p>
     <h2
       className="emotion-4 emotion-5"
-      data-test="contrastResult-rating-bold"
+      data-testid="contrastResult-rating-bold"
     >
       AAA
     </h2>
@@ -169,7 +169,7 @@ exports[`Results renders without crashing 1`] = `
     </p>
     <h2
       className="emotion-4 emotion-5"
-      data-test="contrastResult-rating-large"
+      data-testid="contrastResult-rating-large"
     >
       AAA
     </h2>
@@ -308,7 +308,7 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
     aria-atomic="true"
     aria-live="polite"
     className="emotion-0 emotion-1"
-    data-test="contrastResults-heading"
+    data-testid="contrastResults-heading"
   >
     Nope
   </h1>
@@ -324,7 +324,7 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
     </p>
     <h2
       className="emotion-4 emotion-5"
-      data-test="contrastResult-rating-small"
+      data-testid="contrastResult-rating-small"
     >
       Fail
     </h2>
@@ -343,7 +343,7 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
     </p>
     <h2
       className="emotion-4 emotion-5"
-      data-test="contrastResult-rating-bold"
+      data-testid="contrastResult-rating-bold"
     >
       Fail
     </h2>
@@ -360,7 +360,7 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
     </p>
     <h2
       className="emotion-4 emotion-5"
-      data-test="contrastResult-rating-large"
+      data-testid="contrastResult-rating-large"
     >
       Fail
     </h2>
@@ -389,7 +389,7 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
   >
     <h2
       className="emotion-4 emotion-5"
-      data-test="contrastResults-seriously"
+      data-testid="contrastResults-seriously"
     >
       Seriously?
     </h2>

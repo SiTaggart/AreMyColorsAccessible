@@ -62,7 +62,7 @@ exports[`ColorCard renders without crashing 1`] = `
 
 <div
   className="emotion-14 emotion-15"
-  data-test="colorCard"
+  data-testid="colorCard"
 >
   <div
     className="emotion-2 emotion-3"
@@ -81,7 +81,7 @@ exports[`ColorCard renders without crashing 1`] = `
     <div
       className="emotion-4 emotion-5"
       color="#000"
-      data-test="colorCard-swatch"
+      data-testid="colorCard-swatch"
     >
       Yup
     </div>
@@ -168,7 +168,7 @@ exports[`ColorCard should render a not important card 1`] = `
 
 <div
   className="emotion-14 emotion-15"
-  data-test="colorCard"
+  data-testid="colorCard"
 >
   <div
     className="emotion-2 emotion-3"
@@ -187,7 +187,7 @@ exports[`ColorCard should render a not important card 1`] = `
     <div
       className="emotion-4 emotion-5"
       color="#000"
-      data-test="colorCard-swatch"
+      data-testid="colorCard-swatch"
     >
       Yup
     </div>

@@ -2,33 +2,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow, mount, ShallowWrapper, ReactWrapper } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import { HSLSlider } from '..';
 
 describe('hsl-slider', (): void => {
-  let onChangeMock: jest.Mock;
-  let wrapper: ShallowWrapper;
-
-  beforeAll((): void => {
-    onChangeMock = jest.fn();
-  });
-
-  beforeEach((): void => {
-    jest.clearAllMocks();
-    wrapper = shallow(
-      <HSLSlider
-        id="input-id"
-        label="Test"
-        max={20}
-        min={100}
-        onChange={onChangeMock}
-        onInput={onChangeMock}
-        symbol="%"
-        value={30}
-      />
-    );
-  });
+  const onChangeMock = jest.fn();
 
   it('renders without crashing', (): void => {
     ReactDOM.render(
@@ -82,7 +61,7 @@ describe('hsl-slider', (): void => {
     });
 
     it('should render the slider input label as the first letter', (): void => {
-      const newWrapper: ReactWrapper = mount(
+      const { getByLabelText } = render(
         <HSLSlider
           id="input-id"
           label="Test"
@@ -95,18 +74,42 @@ describe('hsl-slider', (): void => {
           variant="compact"
         />
       );
-
-      expect(newWrapper.find('[htmlFor="input-id"]').at(0).text()).toBe('T');
+      expect(getByLabelText('T')).not.toBeNull();
     });
   });
 
   it('should call onchange callback when value changed with onChnage', (): void => {
-    wrapper.find('#input-id').simulate('change', { target: { value: '60' } });
-    expect(onChangeMock).toHaveBeenCalledWith({ target: { value: '60' } });
+    const { getByTestId } = render(
+      <HSLSlider
+        id="onchange-test"
+        label="Test"
+        max={20}
+        min={100}
+        onChange={onChangeMock}
+        onInput={onChangeMock}
+        symbol="%"
+        value={30}
+      />
+    );
+    fireEvent.change(getByTestId('onchange-test'), { target: { value: '60' } });
+    expect(onChangeMock).toHaveBeenCalled();
   });
 
   it('should call onchange callback when value changed with onInput', (): void => {
-    wrapper.find('#input-id').simulate('input', { target: { value: '60' } });
-    expect(onChangeMock).toHaveBeenCalledWith({ target: { value: '60' } });
+    const onInputMock = jest.fn();
+    const { getByTestId } = render(
+      <HSLSlider
+        id="oninput-test"
+        label="Test"
+        max={20}
+        min={100}
+        onChange={onInputMock}
+        onInput={onInputMock}
+        symbol="%"
+        value={30}
+      />
+    );
+    fireEvent.change(getByTestId('oninput-test'), { target: { value: '60' } });
+    expect(onInputMock).toHaveBeenCalled();
   });
 });

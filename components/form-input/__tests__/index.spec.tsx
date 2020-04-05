@@ -3,7 +3,7 @@
 import React, { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import { mount, ReactWrapper } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 import { FormInput, FormInputProps } from '..';
 
 type FormInputWrapperProps = Partial<FormInputProps>;
@@ -20,19 +20,23 @@ describe('FormInput', (): void => {
   });
 
   it('should set aria-label on the input when past', (): void => {
-    const wrapper: ReactWrapper = mount(<FormInputWrapper ariaLabel="mock aria label" />);
-    expect(wrapper.find('input').prop('aria-label')).toBe('mock aria label');
+    const { getByLabelText } = render(<FormInputWrapper ariaLabel="mock aria label" />);
+    expect(getByLabelText('mock aria label')).not.toBeNull();
   });
 
   it('should set a default value', (): void => {
-    const wrapper: ReactWrapper = mount(<FormInputWrapper defaultValue="testing" />);
-    expect(wrapper.find('input').prop('defaultValue')).toEqual('testing');
+    const { getByDisplayValue } = render(<FormInputWrapper defaultValue="testing" />);
+    expect(getByDisplayValue('testing')).not.toBeNull();
   });
 
   it('should display an error message and associate it to the input', (): void => {
-    const wrapper: ReactWrapper = mount(<FormInputWrapper errorMessage="this is an error" />);
-    expect(wrapper.find('input').prop('aria-describedby')).toEqual('error-message-label-form-id');
-    expect(wrapper.find('error-message-label-form-id').length).toBeGreaterThan(-1);
+    const { getByText, getByLabelText } = render(
+      <FormInputWrapper ariaLabel="error input" errorMessage="this is an error" />
+    );
+    expect(getByLabelText('error input').getAttribute('aria-describedby')).toEqual(
+      'error-message-label-form-id'
+    );
+    expect(getByText('this is an error')).not.toBeNull();
     const formInputCmp = renderer
       .create(<FormInputWrapper errorMessage="this is an error" />)
       .toJSON();
@@ -45,34 +49,36 @@ describe('FormInput', (): void => {
   });
 
   it('should set a name', (): void => {
-    const wrapper: ReactWrapper = mount(<FormInputWrapper name="testing" />);
-    expect(wrapper.find('input').prop('name')).toEqual('testing');
+    const { getByTestId } = render(<FormInputWrapper id="name-test" name="testing" />);
+    expect(getByTestId('name-test').getAttribute('name')).toEqual('testing');
   });
 
   it('should call a passed in onChange method, onChange', (): void => {
     const onChangeMock: jest.Mock = jest.fn();
-    const wrapper: ReactWrapper = mount(<FormInputWrapper onChange={onChangeMock} />);
-    wrapper.simulate('change');
+    const { getByTestId } = render(<FormInputWrapper id="change-test" onChange={onChangeMock} />);
+    fireEvent.change(getByTestId('change-test'), { target: { value: '#ccc' } });
     expect(onChangeMock).toHaveBeenCalled();
   });
 
   it('should call a passed in onInput method, onInput', (): void => {
     const onInputMock: jest.Mock = jest.fn();
-    const wrapper: ReactWrapper = mount(<FormInputWrapper onInput={onInputMock} />);
-    wrapper.simulate('input');
+    const { getByTestId } = render(<FormInputWrapper id="input-test" onInput={onInputMock} />);
+    fireEvent.input(getByTestId('input-test'), { target: { value: '#ccc' } });
     expect(onInputMock).toHaveBeenCalled();
   });
 
   it('should set a style attribute on the input when passed style', (): void => {
-    const wrapper: ReactWrapper = mount(<FormInputWrapper style={{ background: 'red' }} />);
-    expect(wrapper.find('input').prop('style')).toEqual({ background: 'red' });
+    const { getByTestId } = render(
+      <FormInputWrapper id="style-test" style={{ background: 'red' }} />
+    );
+    expect(getByTestId('style-test').getAttribute('style')).toEqual('background: red;');
   });
 
   it('should set the value of the input when passed a value', (): void => {
     const onChangeMock: jest.Mock = jest.fn();
-    const wrapper: ReactWrapper = mount(
-      <FormInputWrapper onChange={onChangeMock} value="testing" />
+    const { getByTestId } = render(
+      <FormInputWrapper id="value-test" onChange={onChangeMock} value="testing" />
     );
-    expect(wrapper.find('input').prop('value')).toEqual('testing');
+    expect(getByTestId('value-test').getAttribute('value')).toEqual('testing');
   });
 });

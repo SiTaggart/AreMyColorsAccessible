@@ -47,6 +47,7 @@ Array [
       <input
         autoComplete="off"
         className="emotion-4 emotion-5"
+        data-testid="palette-form-input"
         id="palette-form-input"
         name="paletteFormInput"
         placeholder="e.g. #ccc, #fff or blue"
@@ -73,7 +74,7 @@ Array [
       <thead>
         <tr
           className="emotion-0 emotion-1"
-          data-test="colorMatrix-tr"
+          data-testid="colorMatrix-tr"
         >
           <td
             style={

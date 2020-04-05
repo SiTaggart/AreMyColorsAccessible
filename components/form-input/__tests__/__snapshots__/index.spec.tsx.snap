@@ -14,6 +14,7 @@ exports[`FormInput renders without crashing 1`] = `
 <input
   autoComplete="off"
   className="emotion-0 emotion-1"
+  data-testid="form-id"
   id="form-id"
   type="text"
 />
@@ -42,6 +43,7 @@ Array [
     aria-describedby="error-message-label-form-id"
     autoComplete="off"
     className="emotion-0 emotion-1"
+    data-testid="form-id"
     id="form-id"
     type="text"
   />,
@@ -74,6 +76,7 @@ exports[`FormInput should set the noSpacing class when hasNoSpacing is set 1`] =
 <input
   autoComplete="off"
   className="emotion-0 emotion-1"
+  data-testid="form-id"
   id="form-id"
   type="text"
 />

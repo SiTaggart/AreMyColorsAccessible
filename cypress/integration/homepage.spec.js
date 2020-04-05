@@ -19,7 +19,7 @@ describe('Homepage', () => {
 
     it('should have a heading level 1', () => {
       cy.visit('/');
-      cy.get('[data-test=contrastResults-heading]').should('contain', 'Yup');
+      cy.get('[data-testid=contrastResults-heading]').should('contain', 'Yup');
     });
 
     it('should have the default background color', () => {
@@ -43,7 +43,7 @@ describe('Homepage', () => {
     });
 
     it('should fail contrast', () => {
-      cy.get('[data-test=contrastResults-heading]').should('contain', 'Nope');
+      cy.get('[data-testid=contrastResults-heading]').should('contain', 'Nope');
     });
 
     it('should update the url', () => {
@@ -73,7 +73,7 @@ describe('Homepage', () => {
     });
 
     it('should fail contrast', () => {
-      cy.get('[data-test=contrastResults-heading]').should('contain', 'Nope');
+      cy.get('[data-testid=contrastResults-heading]').should('contain', 'Nope');
     });
 
     it('should update the url', () => {
@@ -104,7 +104,7 @@ describe('Homepage', () => {
     });
 
     it('should fail contrast', () => {
-      cy.get('[data-test=contrastResults-heading]').should('contain', 'Nope');
+      cy.get('[data-testid=contrastResults-heading]').should('contain', 'Nope');
     });
 
     it('should update the url', () => {
@@ -135,7 +135,7 @@ describe('Homepage', () => {
     });
 
     it('should fail contrast', () => {
-      cy.get('[data-test=contrastResults-heading]').should('contain', 'Kinda');
+      cy.get('[data-testid=contrastResults-heading]').should('contain', 'Kinda');
     });
 
     it('should update the url', () => {
@@ -157,8 +157,8 @@ describe('Homepage', () => {
       );
       cy.get('body').should('have.css', 'background-color', 'rgb(185, 221, 248)');
       cy.get('body').should('have.css', 'color', 'rgb(178, 83, 52)');
-      cy.get('[data-test=contrastResults-heading]').should('contain', 'Kinda');
-      cy.get('[data-test=color-input-form]').should('have.css', 'color', 'rgb(52, 51, 52)');
+      cy.get('[data-testid=contrastResults-heading]').should('contain', 'Kinda');
+      cy.get('[data-testid=color-input-form]').should('have.css', 'color', 'rgb(52, 51, 52)');
       cy.get('#background').should('have.value', '#B9DDF8');
       cy.get('#background').should('have.css', 'border-color', 'rgb(52, 51, 52)');
       cy.get('#textColor').should('have.value', '#B25334');

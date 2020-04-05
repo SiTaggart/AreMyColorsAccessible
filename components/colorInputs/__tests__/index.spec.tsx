@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import { mount, ReactWrapper } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 import ColorCombos, { ColorCombo } from 'color-combos';
 import { ColorInputs } from '..';
 import * as HomeContext from '../../../context/home';
@@ -13,7 +13,6 @@ describe('ColorInputs', (): void => {
   let mockContext: HomeContext.HomeContextInterface;
   let handleBackgroundColorInputChange: jest.Mock;
   let handleTextColorInputChange: jest.Mock;
-  let wrapper: ReactWrapper;
 
   jest
     .spyOn(HomeContext, 'useSiteData')
@@ -39,7 +38,6 @@ describe('ColorInputs', (): void => {
         handleTextColorInputChange,
       };
     }
-    wrapper = mount(<ColorInputs />);
   });
 
   it('renders without crashing', (): void => {
@@ -49,34 +47,26 @@ describe('ColorInputs', (): void => {
   });
 
   it('should call the handleTextColorInputChange callback on text color change', (): void => {
-    wrapper
-      .find('#textColor')
-      .at(0)
-      .simulate('change', { target: { value: '#ccc' } });
+    const { getByTestId } = render(<ColorInputs />);
+    fireEvent.change(getByTestId('textColor'), { target: { value: '#ccc' } });
     expect(handleTextColorInputChange).toHaveBeenCalledWith('#ccc');
   });
 
   it('should call the handleBackgroundColorInputChange callback on background color change', (): void => {
-    wrapper
-      .find('#background')
-      .at(0)
-      .simulate('change', { target: { value: '#ccc' } });
+    const { getByTestId } = render(<ColorInputs />);
+    fireEvent.change(getByTestId('background'), { target: { value: '#ccc' } });
     expect(handleBackgroundColorInputChange).toHaveBeenCalledWith('#ccc');
   });
 
-  it.skip('should call the handleTextColorInputChange callback on text color slider change', (): void => {
-    wrapper
-      .find('#textColor-hsl-Lightness')
-      .at(0)
-      .simulate('input', { target: { value: 12 } });
+  it('should call the handleTextColorInputChange callback on text color slider change', (): void => {
+    const { getByTestId } = render(<ColorInputs />);
+    fireEvent.change(getByTestId('textColor-hsl-Lightness'), { target: { value: 12 } });
     expect(handleTextColorInputChange).toHaveBeenCalledWith('#1F1F1F', 'textColor-hsl');
   });
 
-  it.skip('should call the handleBackgroundColorInputChange callback on background color slider change', (): void => {
-    wrapper
-      .find('#background-hsl-Lightness')
-      .at(0)
-      .simulate('input', { target: { value: '90' } });
+  it('should call the handleBackgroundColorInputChange callback on background color slider change', (): void => {
+    const { getByTestId } = render(<ColorInputs />);
+    fireEvent.change(getByTestId('background-hsl-Lightness'), { target: { value: '90' } });
     expect(handleBackgroundColorInputChange).toHaveBeenCalledWith('#E6E6E6', 'background-hsl');
   });
 });

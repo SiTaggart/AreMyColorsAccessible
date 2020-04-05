@@ -64,6 +64,7 @@ const FormInput: React.FC<FormInputProps> = ({
       aria-label={ariaLabel}
       autoComplete="off"
       className={className}
+      data-testid={id}
       defaultValue={defaultValue}
       hasNoSpacing={hasNoSpacing}
       id={id}

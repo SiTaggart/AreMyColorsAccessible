@@ -168,6 +168,7 @@ exports[`hsl-slider compact variant should render a compact variant  1`] = `
   >
     <input
       className="emotion-4 emotion-5"
+      data-testid="input-id"
       id="input-id"
       max={20}
       min={100}
@@ -324,6 +325,7 @@ exports[`hsl-slider renders without crashing 1`] = `
   >
     <input
       className="emotion-4 emotion-5"
+      data-testid="input-id"
       id="input-id"
       max={20}
       min={100}

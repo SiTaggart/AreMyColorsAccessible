@@ -34,6 +34,7 @@ const HSLSlider: React.FC<HslSliderProps> = ({
     </HSLSliderLabelContainer>
     <HSLSliderRangeContainer variant={variant}>
       <FormRange
+        data-testid={id}
         id={id}
         max={max}
         min={min}
