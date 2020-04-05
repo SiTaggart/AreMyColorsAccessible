@@ -356,7 +356,7 @@ exports[`Home Page should render based on query string props 1`] = `
           aria-atomic="true"
           aria-live="polite"
           className="emotion-0 emotion-1"
-          data-test="contrastResults-heading"
+          data-testid="contrastResults-heading"
         >
           Yup
         </h1>
@@ -372,7 +372,7 @@ exports[`Home Page should render based on query string props 1`] = `
           </p>
           <h2
             className="emotion-4 emotion-5"
-            data-test="contrastResult-rating-small"
+            data-testid="contrastResult-rating-small"
           >
             AA
           </h2>
@@ -391,7 +391,7 @@ exports[`Home Page should render based on query string props 1`] = `
           </p>
           <h2
             className="emotion-4 emotion-5"
-            data-test="contrastResult-rating-bold"
+            data-testid="contrastResult-rating-bold"
           >
             AAA
           </h2>
@@ -408,7 +408,7 @@ exports[`Home Page should render based on query string props 1`] = `
           </p>
           <h2
             className="emotion-4 emotion-5"
-            data-test="contrastResult-rating-large"
+            data-testid="contrastResult-rating-large"
           >
             AAA
           </h2>
@@ -434,7 +434,7 @@ exports[`Home Page should render based on query string props 1`] = `
     >
       <div
         className="emotion-106 emotion-107"
-        data-test="color-input-form"
+        data-testid="color-input-form"
         style={
           Object {
             "color": "#fff",
@@ -453,6 +453,7 @@ exports[`Home Page should render based on query string props 1`] = `
           <input
             autoComplete="off"
             className="emotion-32 emotion-33"
+            data-testid="textColor"
             id="textColor"
             onChange={[Function]}
             style={
@@ -466,7 +467,7 @@ exports[`Home Page should render based on query string props 1`] = `
           />
           <div
             className="emotion-64 emotion-65"
-            data-test="form-hsl-sliders"
+            data-testid="form-hsl-sliders"
           >
             <div
               className="emotion-42 emotion-43"
@@ -486,6 +487,7 @@ exports[`Home Page should render based on query string props 1`] = `
               >
                 <input
                   className="emotion-38 emotion-39"
+                  data-testid="textColor-hsl-Hue"
                   id="textColor-hsl-Hue"
                   max={360}
                   min={0}
@@ -514,6 +516,7 @@ exports[`Home Page should render based on query string props 1`] = `
               >
                 <input
                   className="emotion-38 emotion-39"
+                  data-testid="textColor-hsl-Saturation"
                   id="textColor-hsl-Saturation"
                   max={100}
                   min={0}
@@ -542,6 +545,7 @@ exports[`Home Page should render based on query string props 1`] = `
               >
                 <input
                   className="emotion-38 emotion-39"
+                  data-testid="textColor-hsl-Lightness"
                   id="textColor-hsl-Lightness"
                   max={100}
                   min={0}
@@ -566,6 +570,7 @@ exports[`Home Page should render based on query string props 1`] = `
           <input
             autoComplete="off"
             className="emotion-32 emotion-33"
+            data-testid="background"
             id="background"
             onChange={[Function]}
             style={
@@ -579,7 +584,7 @@ exports[`Home Page should render based on query string props 1`] = `
           />
           <div
             className="emotion-64 emotion-65"
-            data-test="form-hsl-sliders"
+            data-testid="form-hsl-sliders"
           >
             <div
               className="emotion-42 emotion-43"
@@ -599,6 +604,7 @@ exports[`Home Page should render based on query string props 1`] = `
               >
                 <input
                   className="emotion-38 emotion-39"
+                  data-testid="background-hsl-Hue"
                   id="background-hsl-Hue"
                   max={360}
                   min={0}
@@ -627,6 +633,7 @@ exports[`Home Page should render based on query string props 1`] = `
               >
                 <input
                   className="emotion-38 emotion-39"
+                  data-testid="background-hsl-Saturation"
                   id="background-hsl-Saturation"
                   max={100}
                   min={0}
@@ -655,6 +662,7 @@ exports[`Home Page should render based on query string props 1`] = `
               >
                 <input
                   className="emotion-38 emotion-39"
+                  data-testid="background-hsl-Lightness"
                   id="background-hsl-Lightness"
                   max={100}
                   min={0}
@@ -1092,7 +1100,7 @@ exports[`Home Page should render without crashing 1`] = `
           aria-atomic="true"
           aria-live="polite"
           className="emotion-0 emotion-1"
-          data-test="contrastResults-heading"
+          data-testid="contrastResults-heading"
         >
           Yup
         </h1>
@@ -1108,7 +1116,7 @@ exports[`Home Page should render without crashing 1`] = `
           </p>
           <h2
             className="emotion-4 emotion-5"
-            data-test="contrastResult-rating-small"
+            data-testid="contrastResult-rating-small"
           >
             AA
           </h2>
@@ -1127,7 +1135,7 @@ exports[`Home Page should render without crashing 1`] = `
           </p>
           <h2
             className="emotion-4 emotion-5"
-            data-test="contrastResult-rating-bold"
+            data-testid="contrastResult-rating-bold"
           >
             AAA
           </h2>
@@ -1144,7 +1152,7 @@ exports[`Home Page should render without crashing 1`] = `
           </p>
           <h2
             className="emotion-4 emotion-5"
-            data-test="contrastResult-rating-large"
+            data-testid="contrastResult-rating-large"
           >
             AAA
           </h2>
@@ -1170,7 +1178,7 @@ exports[`Home Page should render without crashing 1`] = `
     >
       <div
         className="emotion-106 emotion-107"
-        data-test="color-input-form"
+        data-testid="color-input-form"
         style={
           Object {
             "color": "#fff",
@@ -1189,6 +1197,7 @@ exports[`Home Page should render without crashing 1`] = `
           <input
             autoComplete="off"
             className="emotion-32 emotion-33"
+            data-testid="textColor"
             id="textColor"
             onChange={[Function]}
             style={
@@ -1202,7 +1211,7 @@ exports[`Home Page should render without crashing 1`] = `
           />
           <div
             className="emotion-64 emotion-65"
-            data-test="form-hsl-sliders"
+            data-testid="form-hsl-sliders"
           >
             <div
               className="emotion-42 emotion-43"
@@ -1222,6 +1231,7 @@ exports[`Home Page should render without crashing 1`] = `
               >
                 <input
                   className="emotion-38 emotion-39"
+                  data-testid="textColor-hsl-Hue"
                   id="textColor-hsl-Hue"
                   max={360}
                   min={0}
@@ -1250,6 +1260,7 @@ exports[`Home Page should render without crashing 1`] = `
               >
                 <input
                   className="emotion-38 emotion-39"
+                  data-testid="textColor-hsl-Saturation"
                   id="textColor-hsl-Saturation"
                   max={100}
                   min={0}
@@ -1278,6 +1289,7 @@ exports[`Home Page should render without crashing 1`] = `
               >
                 <input
                   className="emotion-38 emotion-39"
+                  data-testid="textColor-hsl-Lightness"
                   id="textColor-hsl-Lightness"
                   max={100}
                   min={0}
@@ -1302,6 +1314,7 @@ exports[`Home Page should render without crashing 1`] = `
           <input
             autoComplete="off"
             className="emotion-32 emotion-33"
+            data-testid="background"
             id="background"
             onChange={[Function]}
             style={
@@ -1315,7 +1328,7 @@ exports[`Home Page should render without crashing 1`] = `
           />
           <div
             className="emotion-64 emotion-65"
-            data-test="form-hsl-sliders"
+            data-testid="form-hsl-sliders"
           >
             <div
               className="emotion-42 emotion-43"
@@ -1335,6 +1348,7 @@ exports[`Home Page should render without crashing 1`] = `
               >
                 <input
                   className="emotion-38 emotion-39"
+                  data-testid="background-hsl-Hue"
                   id="background-hsl-Hue"
                   max={360}
                   min={0}
@@ -1363,6 +1377,7 @@ exports[`Home Page should render without crashing 1`] = `
               >
                 <input
                   className="emotion-38 emotion-39"
+                  data-testid="background-hsl-Saturation"
                   id="background-hsl-Saturation"
                   max={100}
                   min={0}
@@ -1391,6 +1406,7 @@ exports[`Home Page should render without crashing 1`] = `
               >
                 <input
                   className="emotion-38 emotion-39"
+                  data-testid="background-hsl-Lightness"
                   id="background-hsl-Lightness"
                   max={100}
                   min={0}

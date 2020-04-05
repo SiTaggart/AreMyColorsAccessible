@@ -21,7 +21,7 @@ const Form: React.FC<FormProps> = ({
   dataTest,
   style,
 }: FormProps): ReactElement<HTMLDivElement> => (
-  <StyledForm data-test={dataTest} style={style}>
+  <StyledForm data-testid={dataTest} style={style}>
     {children}
   </StyledForm>
 );

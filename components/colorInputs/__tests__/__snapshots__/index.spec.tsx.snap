@@ -183,7 +183,7 @@ exports[`ColorInputs renders without crashing 1`] = `
 
 <div
   className="emotion-76 emotion-77"
-  data-test="color-input-form"
+  data-testid="color-input-form"
   style={
     Object {
       "color": "#fff",
@@ -202,6 +202,7 @@ exports[`ColorInputs renders without crashing 1`] = `
     <input
       autoComplete="off"
       className="emotion-2 emotion-3"
+      data-testid="textColor"
       id="textColor"
       onChange={[Function]}
       style={
@@ -215,7 +216,7 @@ exports[`ColorInputs renders without crashing 1`] = `
     />
     <div
       className="emotion-34 emotion-35"
-      data-test="form-hsl-sliders"
+      data-testid="form-hsl-sliders"
     >
       <div
         className="emotion-12 emotion-13"
@@ -235,6 +236,7 @@ exports[`ColorInputs renders without crashing 1`] = `
         >
           <input
             className="emotion-8 emotion-9"
+            data-testid="textColor-hsl-Hue"
             id="textColor-hsl-Hue"
             max={360}
             min={0}
@@ -263,6 +265,7 @@ exports[`ColorInputs renders without crashing 1`] = `
         >
           <input
             className="emotion-8 emotion-9"
+            data-testid="textColor-hsl-Saturation"
             id="textColor-hsl-Saturation"
             max={100}
             min={0}
@@ -291,6 +294,7 @@ exports[`ColorInputs renders without crashing 1`] = `
         >
           <input
             className="emotion-8 emotion-9"
+            data-testid="textColor-hsl-Lightness"
             id="textColor-hsl-Lightness"
             max={100}
             min={0}
@@ -315,6 +319,7 @@ exports[`ColorInputs renders without crashing 1`] = `
     <input
       autoComplete="off"
       className="emotion-2 emotion-3"
+      data-testid="background"
       id="background"
       onChange={[Function]}
       style={
@@ -328,7 +333,7 @@ exports[`ColorInputs renders without crashing 1`] = `
     />
     <div
       className="emotion-34 emotion-35"
-      data-test="form-hsl-sliders"
+      data-testid="form-hsl-sliders"
     >
       <div
         className="emotion-12 emotion-13"
@@ -348,6 +353,7 @@ exports[`ColorInputs renders without crashing 1`] = `
         >
           <input
             className="emotion-8 emotion-9"
+            data-testid="background-hsl-Hue"
             id="background-hsl-Hue"
             max={360}
             min={0}
@@ -376,6 +382,7 @@ exports[`ColorInputs renders without crashing 1`] = `
         >
           <input
             className="emotion-8 emotion-9"
+            data-testid="background-hsl-Saturation"
             id="background-hsl-Saturation"
             max={100}
             min={0}
@@ -404,6 +411,7 @@ exports[`ColorInputs renders without crashing 1`] = `
         >
           <input
             className="emotion-8 emotion-9"
+            data-testid="background-hsl-Lightness"
             id="background-hsl-Lightness"
             max={100}
             min={0}

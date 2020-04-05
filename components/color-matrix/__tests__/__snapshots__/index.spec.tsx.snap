@@ -292,7 +292,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
     <thead>
       <tr
         className="emotion-144 emotion-145"
-        data-test="colorMatrix-tr"
+        data-testid="colorMatrix-tr"
       >
         <td
           style={
@@ -303,13 +303,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
         />
         <th
           className="emotion-34 emotion-35"
-          data-test="colorMatrix-th"
+          data-testid="colorMatrix-th"
           scope="col"
         >
           <input
             aria-label="hex colour code"
             autoComplete="off"
             className="emotion-0 emotion-1"
+            data-testid="colorhex-0"
             id="colorhex-0"
             onChange={[Function]}
             type="text"
@@ -317,7 +318,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
           />
           <div
             className="emotion-32 emotion-33"
-            data-test="form-hsl-sliders"
+            data-testid="form-hsl-sliders"
           >
             <div
               className="emotion-10 emotion-11"
@@ -337,6 +338,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               >
                 <input
                   className="emotion-6 emotion-7"
+                  data-testid="hsl-0-Hue"
                   id="hsl-0-Hue"
                   max={360}
                   min={0}
@@ -365,6 +367,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               >
                 <input
                   className="emotion-6 emotion-7"
+                  data-testid="hsl-0-Saturation"
                   id="hsl-0-Saturation"
                   max={100}
                   min={0}
@@ -393,6 +396,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               >
                 <input
                   className="emotion-6 emotion-7"
+                  data-testid="hsl-0-Lightness"
                   id="hsl-0-Lightness"
                   max={100}
                   min={0}
@@ -407,13 +411,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </th>
         <th
           className="emotion-34 emotion-35"
-          data-test="colorMatrix-th"
+          data-testid="colorMatrix-th"
           scope="col"
         >
           <input
             aria-label="hex colour code"
             autoComplete="off"
             className="emotion-0 emotion-1"
+            data-testid="colorhex-1"
             id="colorhex-1"
             onChange={[Function]}
             type="text"
@@ -421,7 +426,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
           />
           <div
             className="emotion-32 emotion-33"
-            data-test="form-hsl-sliders"
+            data-testid="form-hsl-sliders"
           >
             <div
               className="emotion-10 emotion-11"
@@ -441,6 +446,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               >
                 <input
                   className="emotion-6 emotion-7"
+                  data-testid="hsl-1-Hue"
                   id="hsl-1-Hue"
                   max={360}
                   min={0}
@@ -469,6 +475,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               >
                 <input
                   className="emotion-6 emotion-7"
+                  data-testid="hsl-1-Saturation"
                   id="hsl-1-Saturation"
                   max={100}
                   min={0}
@@ -497,6 +504,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               >
                 <input
                   className="emotion-6 emotion-7"
+                  data-testid="hsl-1-Lightness"
                   id="hsl-1-Lightness"
                   max={100}
                   min={0}
@@ -511,13 +519,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </th>
         <th
           className="emotion-34 emotion-35"
-          data-test="colorMatrix-th"
+          data-testid="colorMatrix-th"
           scope="col"
         >
           <input
             aria-label="hex colour code"
             autoComplete="off"
             className="emotion-0 emotion-1"
+            data-testid="colorhex-2"
             id="colorhex-2"
             onChange={[Function]}
             type="text"
@@ -525,7 +534,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
           />
           <div
             className="emotion-32 emotion-33"
-            data-test="form-hsl-sliders"
+            data-testid="form-hsl-sliders"
           >
             <div
               className="emotion-10 emotion-11"
@@ -545,6 +554,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               >
                 <input
                   className="emotion-6 emotion-7"
+                  data-testid="hsl-2-Hue"
                   id="hsl-2-Hue"
                   max={360}
                   min={0}
@@ -573,6 +583,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               >
                 <input
                   className="emotion-6 emotion-7"
+                  data-testid="hsl-2-Saturation"
                   id="hsl-2-Saturation"
                   max={100}
                   min={0}
@@ -601,6 +612,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               >
                 <input
                   className="emotion-6 emotion-7"
+                  data-testid="hsl-2-Lightness"
                   id="hsl-2-Lightness"
                   max={100}
                   min={0}
@@ -615,13 +627,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </th>
         <th
           className="emotion-34 emotion-35"
-          data-test="colorMatrix-th"
+          data-testid="colorMatrix-th"
           scope="col"
         >
           <input
             aria-label="hex colour code"
             autoComplete="off"
             className="emotion-0 emotion-1"
+            data-testid="colorhex-3"
             id="colorhex-3"
             onChange={[Function]}
             type="text"
@@ -629,7 +642,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
           />
           <div
             className="emotion-32 emotion-33"
-            data-test="form-hsl-sliders"
+            data-testid="form-hsl-sliders"
           >
             <div
               className="emotion-10 emotion-11"
@@ -649,6 +662,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               >
                 <input
                   className="emotion-6 emotion-7"
+                  data-testid="hsl-3-Hue"
                   id="hsl-3-Hue"
                   max={360}
                   min={0}
@@ -677,6 +691,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               >
                 <input
                   className="emotion-6 emotion-7"
+                  data-testid="hsl-3-Saturation"
                   id="hsl-3-Saturation"
                   max={100}
                   min={0}
@@ -705,6 +720,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               >
                 <input
                   className="emotion-6 emotion-7"
+                  data-testid="hsl-3-Lightness"
                   id="hsl-3-Lightness"
                   max={100}
                   min={0}
@@ -722,11 +738,11 @@ exports[`ColorMatrix renders without crashing 1`] = `
     <tbody>
       <tr
         className="emotion-144 emotion-145"
-        data-test="colorMatrix-tr"
+        data-testid="colorMatrix-tr"
       >
         <th
           className="emotion-34 emotion-35"
-          data-test="colorMatrix-th"
+          data-testid="colorMatrix-th"
           scope="row"
         >
           #FFFFFF
@@ -746,7 +762,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
         >
           <div
             className="emotion-164 emotion-165"
-            data-test="colorCard"
+            data-testid="colorCard"
           >
             <div
               className="emotion-152 emotion-153"
@@ -765,7 +781,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               <div
                 className="emotion-154 emotion-155"
                 color="#FFFFFF"
-                data-test="colorCard-swatch"
+                data-testid="colorCard-swatch"
               >
                 Nope
               </div>
@@ -798,7 +814,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
         >
           <div
             className="emotion-164 emotion-165"
-            data-test="colorCard"
+            data-testid="colorCard"
           >
             <div
               className="emotion-152 emotion-153"
@@ -817,7 +833,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               <div
                 className="emotion-154 emotion-155"
                 color="#FFFFFF"
-                data-test="colorCard-swatch"
+                data-testid="colorCard-swatch"
               >
                 Kinda
               </div>
@@ -850,7 +866,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
         >
           <div
             className="emotion-164 emotion-165"
-            data-test="colorCard"
+            data-testid="colorCard"
           >
             <div
               className="emotion-152 emotion-153"
@@ -869,7 +885,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               <div
                 className="emotion-154 emotion-155"
                 color="#FFFFFF"
-                data-test="colorCard-swatch"
+                data-testid="colorCard-swatch"
               >
                 Yup
               </div>
@@ -895,11 +911,11 @@ exports[`ColorMatrix renders without crashing 1`] = `
       </tr>
       <tr
         className="emotion-144 emotion-145"
-        data-test="colorMatrix-tr"
+        data-testid="colorMatrix-tr"
       >
         <th
           className="emotion-34 emotion-35"
-          data-test="colorMatrix-th"
+          data-testid="colorMatrix-th"
           scope="row"
         >
           #CCCCCC
@@ -914,7 +930,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
         >
           <div
             className="emotion-164 emotion-165"
-            data-test="colorCard"
+            data-testid="colorCard"
           >
             <div
               className="emotion-152 emotion-153"
@@ -933,7 +949,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               <div
                 className="emotion-212 emotion-155"
                 color="#CCCCCC"
-                data-test="colorCard-swatch"
+                data-testid="colorCard-swatch"
               >
                 Nope
               </div>
@@ -971,7 +987,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
         >
           <div
             className="emotion-164 emotion-165"
-            data-test="colorCard"
+            data-testid="colorCard"
           >
             <div
               className="emotion-152 emotion-153"
@@ -990,7 +1006,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               <div
                 className="emotion-212 emotion-155"
                 color="#CCCCCC"
-                data-test="colorCard-swatch"
+                data-testid="colorCard-swatch"
               >
                 Nope
               </div>
@@ -1023,7 +1039,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
         >
           <div
             className="emotion-164 emotion-165"
-            data-test="colorCard"
+            data-testid="colorCard"
           >
             <div
               className="emotion-152 emotion-153"
@@ -1042,7 +1058,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               <div
                 className="emotion-212 emotion-155"
                 color="#CCCCCC"
-                data-test="colorCard-swatch"
+                data-testid="colorCard-swatch"
               >
                 Yup
               </div>
@@ -1068,11 +1084,11 @@ exports[`ColorMatrix renders without crashing 1`] = `
       </tr>
       <tr
         className="emotion-144 emotion-145"
-        data-test="colorMatrix-tr"
+        data-testid="colorMatrix-tr"
       >
         <th
           className="emotion-34 emotion-35"
-          data-test="colorMatrix-th"
+          data-testid="colorMatrix-th"
           scope="row"
         >
           #777777
@@ -1087,7 +1103,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
         >
           <div
             className="emotion-164 emotion-165"
-            data-test="colorCard"
+            data-testid="colorCard"
           >
             <div
               className="emotion-152 emotion-153"
@@ -1106,7 +1122,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               <div
                 className="emotion-272 emotion-155"
                 color="#777777"
-                data-test="colorCard-swatch"
+                data-testid="colorCard-swatch"
               >
                 Kinda
               </div>
@@ -1139,7 +1155,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
         >
           <div
             className="emotion-164 emotion-165"
-            data-test="colorCard"
+            data-testid="colorCard"
           >
             <div
               className="emotion-152 emotion-153"
@@ -1158,7 +1174,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               <div
                 className="emotion-272 emotion-155"
                 color="#777777"
-                data-test="colorCard-swatch"
+                data-testid="colorCard-swatch"
               >
                 Nope
               </div>
@@ -1196,7 +1212,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
         >
           <div
             className="emotion-164 emotion-165"
-            data-test="colorCard"
+            data-testid="colorCard"
           >
             <div
               className="emotion-152 emotion-153"
@@ -1215,7 +1231,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               <div
                 className="emotion-272 emotion-155"
                 color="#777777"
-                data-test="colorCard-swatch"
+                data-testid="colorCard-swatch"
               >
                 Yup
               </div>
@@ -1241,11 +1257,11 @@ exports[`ColorMatrix renders without crashing 1`] = `
       </tr>
       <tr
         className="emotion-144 emotion-145"
-        data-test="colorMatrix-tr"
+        data-testid="colorMatrix-tr"
       >
         <th
           className="emotion-34 emotion-35"
-          data-test="colorMatrix-th"
+          data-testid="colorMatrix-th"
           scope="row"
         >
           #000000
@@ -1260,7 +1276,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
         >
           <div
             className="emotion-164 emotion-165"
-            data-test="colorCard"
+            data-testid="colorCard"
           >
             <div
               className="emotion-152 emotion-153"
@@ -1279,7 +1295,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               <div
                 className="emotion-332 emotion-155"
                 color="#000000"
-                data-test="colorCard-swatch"
+                data-testid="colorCard-swatch"
               >
                 Yup
               </div>
@@ -1312,7 +1328,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
         >
           <div
             className="emotion-164 emotion-165"
-            data-test="colorCard"
+            data-testid="colorCard"
           >
             <div
               className="emotion-152 emotion-153"
@@ -1331,7 +1347,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               <div
                 className="emotion-332 emotion-155"
                 color="#000000"
-                data-test="colorCard-swatch"
+                data-testid="colorCard-swatch"
               >
                 Yup
               </div>
@@ -1364,7 +1380,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
         >
           <div
             className="emotion-164 emotion-165"
-            data-test="colorCard"
+            data-testid="colorCard"
           >
             <div
               className="emotion-152 emotion-153"
@@ -1383,7 +1399,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
               <div
                 className="emotion-332 emotion-155"
                 color="#000000"
-                data-test="colorCard-swatch"
+                data-testid="colorCard-swatch"
               >
                 Yup
               </div>

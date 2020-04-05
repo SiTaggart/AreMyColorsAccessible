@@ -110,11 +110,12 @@ export const HslSliders: React.FC<HslSliderProps> = memo(
     ];
 
     return (
-      <HSLSliders data-test="form-hsl-sliders" variant={variant}>
+      <HSLSliders data-testid="form-hsl-sliders" variant={variant}>
         {hslRanges.map(
           (range): ReactElement => (
             <HSLSlider
               key={`${id}-${range.label}`}
+              data-testid={`${id}-${range.label}`}
               id={`${id}-${range.label}`}
               label={range.label}
               max={range.max}

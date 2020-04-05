@@ -22,6 +22,7 @@ const FormRange: React.FC<FormRangeProps> = ({
 }: FormRangeProps): ReactElement<HTMLInputElement> => (
   <>
     <StyledRange
+      data-testid={id}
       defaultValue={defaultValue}
       id={id}
       max={max}

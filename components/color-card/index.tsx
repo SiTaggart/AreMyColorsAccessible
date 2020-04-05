@@ -71,14 +71,14 @@ const ColorCard: React.FC<ColorCardProps> = ({
   const rating = colorRating(accessibility);
 
   return (
-    <StyledColorCard data-test="colorCard" isNotImportant={isNotImportant}>
+    <StyledColorCard data-testid="colorCard" isNotImportant={isNotImportant}>
       <StyledCardRow>
         <StyledColorCardPill title="Color contrast ratio">
           {Number.parseFloat(contrast.toFixed(2))} : 1
         </StyledColorCardPill>
       </StyledCardRow>
       <StyledCardRow>
-        <StyledColorSwatch color={color} data-test="colorCard-swatch">
+        <StyledColorSwatch color={color} data-testid="colorCard-swatch">
           {rating.overall}
         </StyledColorSwatch>
       </StyledCardRow>

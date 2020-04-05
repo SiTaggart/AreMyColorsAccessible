@@ -46,6 +46,7 @@ exports[`PaletteInput renders without crashing 1`] = `
     <input
       autoComplete="off"
       className="emotion-4 emotion-5"
+      data-testid="palette-form-input"
       id="palette-form-input"
       name="paletteFormInput"
       placeholder="e.g. #ccc, #fff or blue"
@@ -115,6 +116,7 @@ exports[`PaletteInput should render an error message when passed 1`] = `
       aria-describedby="error-message-label-palette-form-input"
       autoComplete="off"
       className="emotion-4 emotion-5"
+      data-testid="palette-form-input"
       id="palette-form-input"
       name="paletteFormInput"
       placeholder="e.g. #ccc, #fff or blue"

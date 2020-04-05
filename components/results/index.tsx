@@ -23,7 +23,7 @@ const AreYouSerious: React.FC<AreYouSeriousProps> = ({
 
   return (
     <ContrastResult style={styles.seriouslyContainer}>
-      <ContrastResultRating as="h2" data-test="contrastResults-seriously">
+      <ContrastResultRating as="h2" data-testid="contrastResults-seriously">
         Seriously?
       </ContrastResultRating>
     </ContrastResult>
@@ -56,7 +56,7 @@ const Results: React.FC<{}> = (): ReactElement => {
         aria-atomic="true"
         aria-live="polite"
         as="h1"
-        data-test="contrastResults-heading"
+        data-testid="contrastResults-heading"
       >
         {overallRating}
       </ContrastResultsHeading>
@@ -66,7 +66,7 @@ const Results: React.FC<{}> = (): ReactElement => {
           <br />
           AA: 4.5 AAA: 7.0
         </ContrastResultDesc>
-        <ContrastResultRating as="h2" data-test="contrastResult-rating-small">
+        <ContrastResultRating as="h2" data-testid="contrastResult-rating-small">
           {smallTextRating}
         </ContrastResultRating>
       </ContrastResult>
@@ -77,7 +77,7 @@ const Results: React.FC<{}> = (): ReactElement => {
             AA: 3.0 AAA: 4.5
           </strong>
         </ContrastResultDesc>
-        <ContrastResultRating as="h2" data-test="contrastResult-rating-bold">
+        <ContrastResultRating as="h2" data-testid="contrastResult-rating-bold">
           {boldTextRating}
         </ContrastResultRating>
       </ContrastResult>
@@ -86,7 +86,7 @@ const Results: React.FC<{}> = (): ReactElement => {
           Large Text 24px and over <br />
           AA: 3.0 AAA: 4.5
         </ContrastResultDesc>
-        <ContrastResultRating as="h2" data-test="contrastResult-rating-large">
+        <ContrastResultRating as="h2" data-testid="contrastResult-rating-large">
           {largeTextRating}
         </ContrastResultRating>
       </ContrastResult>
