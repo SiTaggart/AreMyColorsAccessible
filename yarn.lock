@@ -2094,13 +2094,13 @@
   dependencies:
     type-detect "4.0.8"
 
-"@sitaggart/eslint-config-ts@0.5.96":
-  version "0.5.96"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.96.tgz#0691886fc9dbd5ec227c925a805588da2f9dfc47"
-  integrity sha512-06VPReBaEyiI5Ng4YTrljtmffCFH4CrAvSCe/CDRo9dZ9qqo3+FnkI8W2VbCaIJHYB7kVVnRR6SEiLdJ9hUZyA==
+"@sitaggart/eslint-config-ts@0.5.97":
+  version "0.5.97"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.97.tgz#ce9f6f634c940f88e60317a3ce277e2c8022abce"
+  integrity sha512-DRWAHDwEUvMAu4wgfK6EljzUgAym3ZzZkx5i9JKEzpjKgvFvqQjGWZr4IF1wZPvFu4OcR6uyFOjMBdPRWG+rDA==
   dependencies:
-    "@typescript-eslint/eslint-plugin" "2.29.0"
-    "@typescript-eslint/parser" "2.29.0"
+    "@typescript-eslint/eslint-plugin" "2.30.0"
+    "@typescript-eslint/parser" "2.30.0"
     eslint-config-airbnb-typescript "7.2.1"
     eslint-config-prettier "6.11.0"
     eslint-config-standard "14.1.1"
@@ -2582,16 +2582,6 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@2.29.0":
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.29.0.tgz#c9efab7624e3dd6d144a0e4577a541d1bd42c2ac"
-  integrity sha512-X/YAY7azKirENm4QRpT7OVmzok02cSkqeIcLmdz6gXUQG4Hk0Fi9oBAynSAyNXeGdMRuZvjBa0c1Lu0dn/u6VA==
-  dependencies:
-    "@typescript-eslint/experimental-utils" "2.29.0"
-    functional-red-black-tree "^1.0.1"
-    regexpp "^3.0.0"
-    tsutils "^3.17.1"
-
 "@typescript-eslint/eslint-plugin@2.30.0":
   version "2.30.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.30.0.tgz#312a37e80542a764d96e8ad88a105316cdcd7b05"
@@ -2611,16 +2601,6 @@
     "@typescript-eslint/typescript-estree" "2.24.0"
     eslint-scope "^5.0.0"
 
-"@typescript-eslint/experimental-utils@2.29.0":
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-2.29.0.tgz#3cb8060de9265ba131625a96bbfec31ba6d4a0fe"
-  integrity sha512-H/6VJr6eWYstyqjWXBP2Nn1hQJyvJoFdDtsHxGiD+lEP7piGnGpb/ZQd+z1ZSB1F7dN+WsxUDh8+S4LwI+f3jw==
-  dependencies:
-    "@types/json-schema" "^7.0.3"
-    "@typescript-eslint/typescript-estree" "2.29.0"
-    eslint-scope "^5.0.0"
-    eslint-utils "^2.0.0"
-
 "@typescript-eslint/experimental-utils@2.30.0":
   version "2.30.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-2.30.0.tgz#9845e868c01f3aed66472c561d4b6bac44809dd0"
@@ -2639,16 +2619,6 @@
     "@types/json-schema" "^7.0.3"
     "@typescript-eslint/typescript-estree" "2.6.0"
     eslint-scope "^5.0.0"
-
-"@typescript-eslint/parser@2.29.0":
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-2.29.0.tgz#6e3c4e21ed6393dc05b9d8b47f0b7e731ef21c9c"
-  integrity sha512-H78M+jcu5Tf6m/5N8iiFblUUv+HJDguMSdFfzwa6vSg9lKR8Mk9BsgeSjO8l2EshKnJKcbv0e8IDDOvSNjl0EA==
-  dependencies:
-    "@types/eslint-visitor-keys" "^1.0.0"
-    "@typescript-eslint/experimental-utils" "2.29.0"
-    "@typescript-eslint/typescript-estree" "2.29.0"
-    eslint-visitor-keys "^1.1.0"
 
 "@typescript-eslint/parser@2.30.0":
   version "2.30.0"
@@ -2674,19 +2644,6 @@
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-2.24.0.tgz#38bbc8bb479790d2f324797ffbcdb346d897c62a"
   integrity sha512-RJ0yMe5owMSix55qX7Mi9V6z2FDuuDpN6eR5fzRJrp+8in9UF41IGNQHbg5aMK4/PjVaEQksLvz0IA8n+Mr/FA==
-  dependencies:
-    debug "^4.1.1"
-    eslint-visitor-keys "^1.1.0"
-    glob "^7.1.6"
-    is-glob "^4.0.1"
-    lodash "^4.17.15"
-    semver "^6.3.0"
-    tsutils "^3.17.1"
-
-"@typescript-eslint/typescript-estree@2.29.0":
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-2.29.0.tgz#1be6612bb02fc37ac9f466521c1459a4744e8d3a"
-  integrity sha512-3YGbtnWy4az16Egy5Fj5CckkVlpIh0MADtAQza+jiMADRSKkjdpzZp/5WuvwK/Qib3Z0HtzrDFeWanS99dNhnA==
   dependencies:
     debug "^4.1.1"
     eslint-visitor-keys "^1.1.0"
