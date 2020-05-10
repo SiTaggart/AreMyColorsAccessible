@@ -12,7 +12,7 @@ interface HslSliderProps {
   onInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
   symbol: string;
   value: number | undefined;
-  variant?: 'compact' | null;
+  variant?: 'compact' | undefined;
 }
 
 const HSLSlider: React.FC<HslSliderProps> = ({

@@ -34,7 +34,7 @@ interface HslSliderProps {
   id: string;
   onChange: (hex: string, id: string) => void;
   value: string;
-  variant?: 'compact' | null;
+  variant?: 'compact' | undefined;
 }
 
 interface Range {

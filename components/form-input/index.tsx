@@ -24,17 +24,18 @@ interface StyledInputProps {
 const StyledInput = styled.input<StyledInputProps>`
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
-  border-color: ${(props): string | null => (props.isErrored ? '#c12915' : null)};
+  border-color: ${(props): string | undefined => (props.isErrored ? '#c12915' : undefined)};
   border-radius: 3px;
-  color: ${(props): string | null => (props.isErrored ? '#c12915' : null)};
+  color: ${(props): string | undefined => (props.isErrored ? '#c12915' : undefined)};
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin-bottom: ${(props): string => (props.hasNoSpacing ? '0' : '2rem')};
   width: 100%;
 
   &:focus {
-    border-color: ${(props): string | null => (props.isErrored ? '#c12915' : null)};
-    box-shadow: ${(props): string | null => (props.isErrored ? '0px 0px 10px #c12915' : null)};
+    border-color: ${(props): string | undefined => (props.isErrored ? '#c12915' : undefined)};
+    box-shadow: ${(props): string | undefined =>
+      props.isErrored ? '0px 0px 10px #c12915' : undefined};
   }
 `;
 
