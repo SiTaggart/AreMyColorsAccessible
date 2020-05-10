@@ -81,7 +81,7 @@ const updateHash = debounce((state): void => {
   window.history.pushState(state, 'Palette checker - Are My Colours Accessible', query);
 }, 200);
 
-const PaletteContext = React.createContext<PaletteContextProps | null>(null);
+const PaletteContext = React.createContext<PaletteContextProps | undefined>(undefined);
 
 const usePaletteData = (): PaletteContextProps => {
   const context = React.useContext(PaletteContext);

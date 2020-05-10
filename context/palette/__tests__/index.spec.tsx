@@ -13,9 +13,9 @@ describe('useSiteData hook', (): void => {
   let renderedHook: RenderHookResult<unknown, PaletteContextProps>;
 
   beforeEach((): void => {
-    renderedHook = renderHook((): PaletteContextProps => usePaletteData(), {
+    renderedHook = renderHook(() => usePaletteData(), {
       wrapper,
-    }) as RenderHookResult<unknown, PaletteContextProps>;
+    });
   });
 
   it('should set context by default', (): void => {

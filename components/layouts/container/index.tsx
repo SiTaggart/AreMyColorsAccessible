@@ -8,12 +8,12 @@ interface ContainerProps {
 }
 
 const StyledContainer = styled.main<ContainerProps>`
-  color: ${(props): string | null => (props.variant === 'palette' ? '#343334' : null)};
-  padding-top: ${(props): string | null => (props.variant === 'about' ? '3rem' : null)};
+  color: ${(props): string | undefined => (props.variant === 'palette' ? '#343334' : undefined)};
+  padding-top: ${(props): string | undefined => (props.variant === 'about' ? '3rem' : undefined)};
   position: relative;
 
   ${breakpoint('small')} {
-    min-height: ${(props): string | null => (props.variant === 'home' ? '85%' : null)};
+    min-height: ${(props): string | undefined => (props.variant === 'home' ? '85%' : undefined)};
   }
 `;
 

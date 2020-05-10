@@ -20,7 +20,7 @@ const StyledColorCard = styled.div<StyledColorCardProps>`
   min-height: 8rem;
   min-width: 12rem;
   overflow: hidden;
-  opacity: ${(props): string | null => (props.isNotImportant ? '0.1' : null)};
+  opacity: ${(props): string | undefined => (props.isNotImportant ? '0.1' : undefined)};
   text-align: center;
   transition: opacity ease-in;
 `;

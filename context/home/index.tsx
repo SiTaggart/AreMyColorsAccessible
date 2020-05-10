@@ -66,7 +66,7 @@ const createFakeCombination = (color: number[], hex: string): Combination => ({
 });
 
 const createDuplicateCombination = (combos: ColorCombo[]): ColorCombo[] => {
-  const color = combos[0].color != null ? combos[0].color : [];
+  const color = combos[0].color !== undefined ? combos[0].color : [];
   const dupeCombo = {
     ...combos[0],
     combinations: [createFakeCombination(color, combos[0].hex)],
@@ -74,7 +74,7 @@ const createDuplicateCombination = (combos: ColorCombo[]): ColorCombo[] => {
   return [dupeCombo, dupeCombo];
 };
 
-const HomeContext = React.createContext<HomeContextInterface | null>(null);
+const HomeContext = React.createContext<HomeContextInterface | undefined>(undefined);
 
 const useSiteData = (): HomeContextInterface => {
   const context = React.useContext(HomeContext);

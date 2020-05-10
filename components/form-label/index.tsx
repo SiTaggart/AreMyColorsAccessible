@@ -4,11 +4,11 @@ import styled from '@emotion/styled';
 interface FormLabelProps {
   children: ReactNode;
   htmlFor: string;
-  variant?: 'large' | 'compact' | null | undefined;
+  variant?: 'large' | 'compact' | undefined;
 }
 
 interface StyledLabelProps {
-  variant?: 'large' | 'compact' | null | undefined;
+  variant?: 'large' | 'compact' | undefined;
 }
 const getFontSize = (props: StyledLabelProps): string => {
   let fontSize = '';

@@ -44,7 +44,7 @@ const Results: React.FC<{}> = (): ReactElement => {
       };
   const ratio = Number.parseFloat(contrast.toFixed(2));
   const colorRatings = colorRating(accessibility);
-  const areYouSerious = ratio < 1.3 ? true : null;
+  const areYouSerious = ratio < 1.3 ? true : undefined;
   const boldTextRating = colorRatings.bold;
   const largeTextRating = colorRatings.large;
   const overallRating = colorRatings.overall;

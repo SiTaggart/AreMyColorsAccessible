@@ -3,18 +3,19 @@ import styled from '@emotion/styled';
 import { breakpoint } from '../../styles/utils';
 
 interface HSLSLiderCommonProps {
-  variant?: 'compact' | null | undefined;
+  variant?: 'compact' | undefined | undefined;
 }
 
 export const StyledHSLSlider = styled.div<HSLSLiderCommonProps>`
-  display: ${(props): string | null => (props.variant === 'compact' ? 'flex' : null)};
-  padding: ${(props): string | null => (props.variant === 'compact' ? '0' : null)};
+  display: ${(props): string | undefined => (props.variant === 'compact' ? 'flex' : undefined)};
+  padding: ${(props): string | undefined => (props.variant === 'compact' ? '0' : undefined)};
   width: 100%;
 
   ${breakpoint('medium')} {
     flex: 1 0 auto;
-    padding: ${(props): string | null => (props.variant !== 'compact' ? '0 0.5rem' : null)};
-    width: ${(props): string | null => (props.variant !== 'compact' ? '33.3333%' : null)};
+    padding: ${(props): string | undefined =>
+      props.variant !== 'compact' ? '0 0.5rem' : undefined};
+    width: ${(props): string | undefined => (props.variant !== 'compact' ? '33.3333%' : undefined)};
   }
 `;
 
@@ -34,5 +35,5 @@ export const HSLSliderLabelContainer = styled.div<HSLSLiderCommonProps>`
 `;
 
 export const HSLSliderRangeContainer = styled.div<HSLSLiderCommonProps>`
-  flex: ${(props): string | null => (props.variant === 'compact' ? '6' : null)};
+  flex: ${(props): string | undefined => (props.variant === 'compact' ? '6' : undefined)};
 `;
