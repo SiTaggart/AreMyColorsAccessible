@@ -62,7 +62,7 @@ const Results: React.FC<{}> = (): ReactElement => {
       </ContrastResultsHeading>
       <ContrastResult>
         <ContrastResultDesc>
-          Small Text up to 18px
+          Small Text
           <br />
           AA: 4.5 AAA: 7.0
         </ContrastResultDesc>
