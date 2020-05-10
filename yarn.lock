@@ -2145,10 +2145,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@sitaggart/eslint-config-ts@0.5.101":
-  version "0.5.101"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.101.tgz#3fae61f29ef45af5b40ef3d7e466d41ed1eaa859"
-  integrity sha512-ZdtHfLygaD/PDsIMb2dYqq+h2yq6I6RaSVa3GRby346PhXUyPTZ2HO4dpqmdJFlfEFiMByNMnLdFlOF6fQtI2A==
+"@sitaggart/eslint-config-ts@0.5.102":
+  version "0.5.102"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.102.tgz#548e06938aaac696ad3ee731a29a6047d03eb429"
+  integrity sha512-Om7wwTf0UWBpWFDWX+6LKrKGD1Lp+aWUq+8/Qy0JP3YLAYI0FHq+DelkhuD8ieuLu2TuacJ0oY5Sfen70vmb8A==
   dependencies:
     "@typescript-eslint/eslint-plugin" "2.31.0"
     "@typescript-eslint/parser" "2.31.0"
@@ -2165,7 +2165,7 @@
     eslint-plugin-prettier "3.1.3"
     eslint-plugin-promise "4.2.1"
     eslint-plugin-react "7.19.0"
-    eslint-plugin-react-hooks "3.0.0"
+    eslint-plugin-react-hooks "4.0.0"
     eslint-plugin-standard "4.0.1"
     eslint-plugin-unicorn "19.0.1"
 
@@ -5582,10 +5582,10 @@ eslint-plugin-promise@4.2.1:
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-4.2.1.tgz#845fd8b2260ad8f82564c1222fce44ad71d9418a"
   integrity sha512-VoM09vT7bfA7D+upt+FjeBO5eHIJQBUWki1aPvB+vbNiHS3+oGIJGIeyBtKQTME6UPXXy3vV07OL1tHd3ANuDw==
 
-eslint-plugin-react-hooks@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-3.0.0.tgz#9e80c71846eb68dd29c3b21d832728aa66e5bd35"
-  integrity sha512-EjxTHxjLKIBWFgDJdhKKzLh5q+vjTFrqNZX36uIxWS4OfyXe5DawqPj3U5qeJ1ngLwatjzQnmR0Lz0J0YH3kxw==
+eslint-plugin-react-hooks@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.0.0.tgz#81196b990043cde339e25c6662aeebe32ac52d01"
+  integrity sha512-YKBY+kilK5wrwIdQnCF395Ya6nDro3EAMoe+2xFkmyklyhF16fH83TrQOo9zbZIDxBsXFgBbywta/0JKRNFDkw==
 
 eslint-plugin-react@7.19.0:
   version "7.19.0"
