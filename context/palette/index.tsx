@@ -18,7 +18,7 @@ interface PaletteState {
   hasError: boolean;
 }
 interface PaletteDataProviderProps {
-  children?: React.ReactNode;
+  children?: React.ReactElement;
   queryString?: PalettePageQueryString;
 }
 

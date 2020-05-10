@@ -6,7 +6,7 @@ import { SiteDataProvider, useSiteData, HomeContextInterface } from '..';
 
 describe('useSiteData hook', (): void => {
   it('should set context by default', (): void => {
-    const wrapper = ({ children }: { children?: React.ReactElement }): React.ReactElement => (
+    const wrapper = ({ children }: { children?: any }): React.ReactElement => (
       <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
     );
 
@@ -56,7 +56,7 @@ describe('useSiteData hook', (): void => {
 
   it('should set context when initial siteData is set', (): void => {
     const { result: initialContext } = renderHook((): HomeContextInterface => useSiteData(), {
-      wrapper: ({ children }: { children?: React.ReactElement }): React.ReactElement => (
+      wrapper: ({ children }: { children?: any }): React.ReactElement => (
         <SiteDataProvider
           initialSiteData={{
             background: '#111',
@@ -111,7 +111,7 @@ describe('useSiteData hook', (): void => {
   });
 
   it('should update siteData when background color is changed', (): void => {
-    const wrapper = ({ children }: { children?: React.ReactElement }): React.ReactElement => (
+    const wrapper = ({ children }: { children?: any }): React.ReactElement => (
       <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
     );
 
@@ -165,7 +165,7 @@ describe('useSiteData hook', (): void => {
   });
 
   it('should update siteData when text color is changed', (): void => {
-    const wrapper = ({ children }: { children?: React.ReactElement }): React.ReactElement => (
+    const wrapper = ({ children }: { children?: any }): React.ReactElement => (
       <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
     );
 
@@ -217,7 +217,7 @@ describe('useSiteData hook', (): void => {
   });
 
   it('should keep current state when invalid colour is set as background color', (): void => {
-    const wrapper = ({ children }: { children?: React.ReactElement }): React.ReactElement => (
+    const wrapper = ({ children }: { children?: any }): React.ReactElement => (
       <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
     );
 
@@ -270,7 +270,7 @@ describe('useSiteData hook', (): void => {
   });
 
   it('should keep current state when invalid colour is set as textColor color', (): void => {
-    const wrapper = ({ children }: { children?: React.ReactElement }): React.ReactElement => (
+    const wrapper = ({ children }: { children?: any }): React.ReactElement => (
       <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
     );
 
@@ -324,9 +324,7 @@ describe('useSiteData hook', (): void => {
 
   it('should throw without setting context', (): void => {
     const { result: throwContext } = renderHook((): HomeContextInterface => useSiteData(), {
-      wrapper: ({ children }: { children?: React.ReactElement }): React.ReactElement => (
-        <div>{children}</div>
-      ),
+      wrapper: ({ children }: { children?: any }): React.ReactElement => <div>{children}</div>,
     });
 
     const mockError = new Error('useSiteData must be used with SiteDataProvider');
@@ -336,7 +334,7 @@ describe('useSiteData hook', (): void => {
 
   it('should handle a text and background colours being the same', (): void => {
     const { result: sameForeBackContext } = renderHook((): HomeContextInterface => useSiteData(), {
-      wrapper: ({ children }: { children?: React.ReactElement }): React.ReactElement => (
+      wrapper: ({ children }: { children?: any }): React.ReactElement => (
         <SiteDataProvider
           initialSiteData={{
             background: '#fff',
