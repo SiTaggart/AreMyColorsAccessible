@@ -366,7 +366,7 @@ exports[`Home Page should render based on query string props 1`] = `
           <p
             className="emotion-2 emotion-3"
           >
-            Small Text up to 18px
+            Small Text
             <br />
             AA: 4.5 AAA: 7.0
           </p>
@@ -1110,7 +1110,7 @@ exports[`Home Page should render without crashing 1`] = `
           <p
             className="emotion-2 emotion-3"
           >
-            Small Text up to 18px
+            Small Text
             <br />
             AA: 4.5 AAA: 7.0
           </p>
