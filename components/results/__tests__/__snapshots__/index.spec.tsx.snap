@@ -127,7 +127,7 @@ exports[`Results renders without crashing 1`] = `
     <p
       className="emotion-2 emotion-3"
     >
-      Small Text up to 18px
+      Small Text
       <br />
       AA: 4.5 AAA: 7.0
     </p>
@@ -318,7 +318,7 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
     <p
       className="emotion-2 emotion-3"
     >
-      Small Text up to 18px
+      Small Text
       <br />
       AA: 4.5 AAA: 7.0
     </p>
