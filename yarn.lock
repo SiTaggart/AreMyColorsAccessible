@@ -2145,10 +2145,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@sitaggart/eslint-config-ts@0.5.107":
-  version "0.5.107"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.107.tgz#33654a58a93031f45d96fe5f2054f87243b5d31b"
-  integrity sha512-L63O1doLZ3dcSmrPEtA5fW5XuyCH88nNUXB98ttGhIko8sl44SWTrBuoexT+y2KlzQQ8/6jY347zK3jQx2X0UQ==
+"@sitaggart/eslint-config-ts@0.5.108":
+  version "0.5.108"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.108.tgz#f136788fcebcc1b5258fbe95e222a797d52b3b98"
+  integrity sha512-0xtZ5YF9kT4cK7Jeo2vrvcqj1FrfBZ/QZPXevJumQ71U7Sqjgswtl/OHREneURiiwCtrMzbnqzrJWZLrebL9LQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "2.33.0"
     "@typescript-eslint/parser" "2.33.0"
@@ -2164,7 +2164,7 @@
     eslint-plugin-node "11.1.0"
     eslint-plugin-prettier "3.1.3"
     eslint-plugin-promise "4.2.1"
-    eslint-plugin-react "7.19.0"
+    eslint-plugin-react "7.20.0"
     eslint-plugin-react-hooks "4.0.1"
     eslint-plugin-standard "4.0.1"
     eslint-plugin-unicorn "19.0.1"
@@ -5587,10 +5587,10 @@ eslint-plugin-react-hooks@4.0.1:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.0.1.tgz#c90fbb8726e35aadff94c9613ebd5c4de375412b"
   integrity sha512-toTyfu0gFyZD9Ru3QEeVwfeK8T0lf31bZaknmbFRSDbiJdrzHKNBOh2NIwlepLLpvnhwMWWNbq3t+x0VoyQ1iw==
 
-eslint-plugin-react@7.19.0:
-  version "7.19.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.19.0.tgz#6d08f9673628aa69c5559d33489e855d83551666"
-  integrity sha512-SPT8j72CGuAP+JFbT0sJHOB80TX/pu44gQ4vXH/cq+hQTiY2PuZ6IHkqXJV6x1b28GDdo1lbInjKUrrdUf0LOQ==
+eslint-plugin-react@7.20.0:
+  version "7.20.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.20.0.tgz#f98712f0a5e57dfd3e5542ef0604b8739cd47be3"
+  integrity sha512-rqe1abd0vxMjmbPngo4NaYxTcR3Y4Hrmc/jg4T+sYz63yqlmJRknpEQfmWY+eDWPuMmix6iUIK+mv0zExjeLgA==
   dependencies:
     array-includes "^3.1.1"
     doctrine "^2.1.0"
@@ -5601,7 +5601,6 @@ eslint-plugin-react@7.19.0:
     object.values "^1.1.1"
     prop-types "^15.7.2"
     resolve "^1.15.1"
-    semver "^6.3.0"
     string.prototype.matchall "^4.0.2"
     xregexp "^4.3.0"
 
