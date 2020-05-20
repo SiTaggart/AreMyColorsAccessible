@@ -81,7 +81,7 @@
     "react-addons-test-utils": "15.6.2",
     "react-test-renderer": "16.13.1",
     "start-server-and-test": "1.11.0",
-    "typescript": "3.9.2"
+    "typescript": "3.9.3"
   },
   "bundlewatch": {
     "files": [
