@@ -4300,10 +4300,10 @@ collection-visit@^1.0.0:
     map-visit "^1.0.0"
     object-visit "^1.0.0"
 
-color-combos@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/color-combos/-/color-combos-1.0.3.tgz#7f0642ee3aee2cec7c5a2f25af0d3710b0595349"
-  integrity sha512-7MbaISd7uHdSNaVXE1L+JCl8Fx8JeCFDuwg0aSpNTjrTRvUpSmOhpgImhURQek2PAasvc4F7Am+rHqQC0TMGxg==
+color-combos@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/color-combos/-/color-combos-1.0.4.tgz#82f8ae2d81d5d59b34bae55fdbca24ad0936f3d3"
+  integrity sha512-zFpzSPvghVT3I2RpSPtQSx6r+BGoUSR28xLJxOJs0ASIXQpLqfxwmhYHVtAz4aFghPlXM9QcZB6BA8q8AUhSlQ==
   dependencies:
     color "3.1.2"
     lodash.uniq "4.5.0"
