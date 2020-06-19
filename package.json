@@ -25,7 +25,7 @@
     "gen": "plop --plopfile generators/plopfile.js",
     "gen:common": "plop --plopfile generators/plopfile.js common",
     "gen:component": "plop --plopfile generators/plopfile.js component",
-    "gen:page": "plop --plopfile generators/plopfile.js page",
+    "gen:page": "plop --plopfile generators/plopfile.js page"
   },
   "author": "Simon Taggart <me@simontaggart.com> (http://simontaggart.com/)",
   "repository": {
