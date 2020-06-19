@@ -10,14 +10,14 @@ import { Results } from '..';
 describe('Results', (): void => {
   it('renders without crashing', (): void => {
     ReactDOM.render(
-      <SiteDataProvider initialSiteData={{}}>
+      <SiteDataProvider>
         <Results />
       </SiteDataProvider>,
       document.createElement('div')
     );
     const resultsCmp = renderer
       .create(
-        <SiteDataProvider initialSiteData={{}}>
+        <SiteDataProvider>
           <Results />
         </SiteDataProvider>
       )

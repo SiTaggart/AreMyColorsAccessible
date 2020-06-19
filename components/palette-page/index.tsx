@@ -4,7 +4,7 @@ import { PaletteInput } from '../palette-input';
 import { ColorMatrix } from '../color-matrix';
 import { usePaletteData } from '../../context/palette';
 
-const PalettePage: React.FC<{}> = (): React.ReactElement => {
+const PalettePage: React.FC = (): React.ReactElement => {
   const { paletteData, handleColorChange, handleNewColor } = usePaletteData();
   return (
     <>

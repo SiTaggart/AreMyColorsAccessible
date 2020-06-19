@@ -4,7 +4,7 @@ import { Layout } from '../layouts/layout';
 import { Results } from '../results';
 import { ColorInputs } from '../colorInputs';
 
-const Home: React.FC<{}> = (): ReactElement => (
+const Home: React.FC = (): ReactElement => (
   <Container variant="home">
     <Layout variant="small">
       <Results />

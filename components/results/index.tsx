@@ -30,7 +30,7 @@ const AreYouSerious: React.FC<AreYouSeriousProps> = ({
   );
 };
 
-const Results: React.FC<{}> = (): ReactElement => {
+const Results: React.FC = (): ReactElement => {
   const { siteData } = useSiteData();
   const colorInfo = siteData.colorCombos[0].combinations[0];
   const contrast = colorInfo.contrast ? colorInfo.contrast : 0;

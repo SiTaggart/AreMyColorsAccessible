@@ -14,14 +14,18 @@ export interface HomeContextInterface {
 
 interface SiteDataProviderProps {
   children?: React.ReactElement;
-  initialSiteData: SiteData | {};
+  initialSiteData?: SiteData;
 }
 
-const setInitialContext = (initialSiteData: SiteData | {}): SiteData => {
+const setInitialContext = (initialSiteData: SiteData | undefined): SiteData => {
   let textColor = '#FFFFFF';
   let background = '#1276CE';
   let isLight = false;
-  if (!isEmpty(initialSiteData) && 'textColor' in initialSiteData) {
+  if (
+    initialSiteData !== undefined &&
+    !isEmpty(initialSiteData) &&
+    'textColor' in initialSiteData
+  ) {
     textColor = initialSiteData.textColor;
     background = initialSiteData.background;
     isLight = JSON.parse((initialSiteData.isLight as unknown) as string);
@@ -40,7 +44,7 @@ const checkBackgroundLightness = (hex: string): boolean => {
   let light;
   try {
     light = Color(hex).isLight();
-  } catch (error) {
+  } catch {
     light = true;
   }
   return light;
@@ -50,7 +54,7 @@ const isValidColor = (value: string): Color | false => {
   let color: Color | false = false;
   try {
     color = Color(value);
-  } catch (error) {
+  } catch {
     console.error('ColorInput invalid color');
   }
   return color;
@@ -74,6 +78,7 @@ const createDuplicateCombination = (combos: ColorCombo[]): ColorCombo[] => {
   return [dupeCombo, dupeCombo];
 };
 
+// eslint-disable-next-line unicorn/no-useless-undefined
 const HomeContext = React.createContext<HomeContextInterface | undefined>(undefined);
 
 const useSiteData = (): HomeContextInterface => {
@@ -98,7 +103,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = ({
   );
 
   const updateHash = debounce((): void => {
-    const query = `?${qs.stringify(state as {})}`;
+    const query = `?${qs.stringify(state as { [key: string]: any })}`;
     window.history.pushState(state, 'Are My Colors Accessible', query);
   }, 200);
 

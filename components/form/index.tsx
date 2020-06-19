@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 interface FormProps {
   children: ReactNode;
   dataTest?: string;
-  style?: {};
+  style?: React.CSSProperties;
 }
 
 const StyledForm = styled.div`

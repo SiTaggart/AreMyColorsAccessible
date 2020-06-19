@@ -3,7 +3,7 @@ import { Container } from '../layouts/container';
 import { Layout } from '../layouts/layout';
 import { Heading, P, Blockquote, Link } from '../typography';
 
-const About: React.FC<{}> = (): ReactElement => (
+const About: React.FC = (): ReactElement => (
   <Container variant="about">
     <Layout variant="small">
       <Heading as="h1" variant="10">

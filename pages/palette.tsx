@@ -9,7 +9,7 @@ import { PaletteDataProvider } from '../context/palette';
 import { PalettePageQueryString } from '../types';
 
 interface PalettePageProps {
-  query: {};
+  query: unknown;
 }
 const Palette: NextPage<PalettePageProps> = ({ query }: PalettePageProps): React.ReactElement => (
   <>
@@ -30,7 +30,7 @@ const Palette: NextPage<PalettePageProps> = ({ query }: PalettePageProps): React
 Palette.getInitialProps = async ({
   query,
 }: NextPageContext): Promise<{
-  query: {};
+  query: unknown;
 }> => ({ query });
 
 // eslint-disable-next-line import/no-default-export

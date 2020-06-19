@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { Link } from '../typography';
 
 interface FooterProps {
-  styles?: { footerLinks?: object };
+  styles?: { footerLinks?: React.CSSProperties };
 }
 
 const StyledFooter = styled.footer`
@@ -27,7 +27,7 @@ const StyledFooterAnchor = styled(Link)`
 `;
 
 const Footer: React.FC<FooterProps> = ({ styles }: FooterProps): ReactElement<HTMLDivElement> => {
-  const linkStyles: object | undefined = styles ? styles.footerLinks : undefined;
+  const linkStyles: React.CSSProperties | undefined = styles ? styles.footerLinks : undefined;
   return (
     <StyledFooter>
       <StyledFooterNav>
