@@ -2,6 +2,7 @@
   "name": "aremycolorsaccessible",
   "version": "1.3.0",
   "scripts": {
+    "clean": "rm -rf .next/",
     "now-build": "next build",
     "build": "next build",
     "dev": "next",
@@ -20,10 +21,11 @@
     "prettier": "prettier --list-different './**/*.{js,jsx,ts,tsx}'",
     "prettier-clean": "prettier --write './**/*.{js,jsx,ts,tsx}'",
     "tsc": "tsc",
+    "ci:checks": "yarn clean && yarn build && yarn lint && yarn tsc && yarn jest && yarn bundlewatch && yarn cypress:ci",
     "gen": "plop --plopfile generators/plopfile.js",
     "gen:common": "plop --plopfile generators/plopfile.js common",
     "gen:component": "plop --plopfile generators/plopfile.js component",
-    "gen:page": "plop --plopfile generators/plopfile.js page"
+    "gen:page": "plop --plopfile generators/plopfile.js page",
   },
   "author": "Simon Taggart <me@simontaggart.com> (http://simontaggart.com/)",
   "repository": {

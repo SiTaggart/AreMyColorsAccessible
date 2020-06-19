@@ -6,7 +6,7 @@ import { FormLabel } from '../form-label';
 import { HslSliders } from '../hsl-sliders';
 import { useSiteData } from '../../context/home';
 
-const ColorInputs: React.FC<{}> = (): ReactElement => {
+const ColorInputs: React.FC = (): ReactElement => {
   const {
     siteData: { background, colorCombos, isLight, textColor },
     handleTextColorInputChange,

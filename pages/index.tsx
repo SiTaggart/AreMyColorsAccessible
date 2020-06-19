@@ -6,7 +6,7 @@ import { SiteDataProvider } from '../context/home';
 import { SiteData } from '../types';
 
 interface IndexPageProps {
-  query?: {};
+  query?: unknown;
 }
 
 const Index: NextPage<IndexPageProps> = ({
@@ -22,7 +22,7 @@ const Index: NextPage<IndexPageProps> = ({
 Index.getInitialProps = async ({
   query,
 }: NextPageContext): Promise<{
-  query: {};
+  query: unknown;
 }> => ({ query });
 
 // eslint-disable-next-line import/no-default-export

@@ -29,7 +29,7 @@ const convertColorStringsToColors = (colorStrings: string[]): Color[] | false =>
   colorStrings.forEach((color: string): void => {
     try {
       colorTypes.push(Color(color));
-    } catch (error) {
+    } catch {
       isValidColor = false;
     }
   });
@@ -81,6 +81,7 @@ const updateHash = debounce((state): void => {
   window.history.pushState(state, 'Palette checker - Are My Colours Accessible', query);
 }, 200);
 
+// eslint-disable-next-line unicorn/no-useless-undefined
 const PaletteContext = React.createContext<PaletteContextProps | undefined>(undefined);
 
 const usePaletteData = (): PaletteContextProps => {

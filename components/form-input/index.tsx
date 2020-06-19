@@ -11,7 +11,7 @@ export interface FormInputProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
-  style?: {};
+  style?: React.CSSProperties;
   value?: string;
   className?: string;
 }

@@ -25,7 +25,7 @@ const StyledColorCard = styled.div<StyledColorCardProps>`
   transition: opacity ease-in;
 `;
 
-export const StyledCardRow = styled.div<{}>`
+export const StyledCardRow = styled.div`
   display: flex;
   justify-content: space-between;
 `;

@@ -7,7 +7,7 @@ import { SiteDataProvider, useSiteData, HomeContextInterface } from '..';
 describe('useSiteData hook', (): void => {
   it('should set context by default', (): void => {
     const wrapper = ({ children }: { children?: any }): React.ReactElement => (
-      <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
+      <SiteDataProvider>{children}</SiteDataProvider>
     );
 
     const { result } = renderHook((): HomeContextInterface => useSiteData(), {
@@ -112,7 +112,7 @@ describe('useSiteData hook', (): void => {
 
   it('should update siteData when background color is changed', (): void => {
     const wrapper = ({ children }: { children?: any }): React.ReactElement => (
-      <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
+      <SiteDataProvider>{children}</SiteDataProvider>
     );
 
     const { result } = renderHook((): HomeContextInterface => useSiteData(), {
@@ -166,7 +166,7 @@ describe('useSiteData hook', (): void => {
 
   it('should update siteData when text color is changed', (): void => {
     const wrapper = ({ children }: { children?: any }): React.ReactElement => (
-      <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
+      <SiteDataProvider>{children}</SiteDataProvider>
     );
 
     const { result } = renderHook((): HomeContextInterface => useSiteData(), {
@@ -218,7 +218,7 @@ describe('useSiteData hook', (): void => {
 
   it('should keep current state when invalid colour is set as background color', (): void => {
     const wrapper = ({ children }: { children?: any }): React.ReactElement => (
-      <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
+      <SiteDataProvider>{children}</SiteDataProvider>
     );
 
     const { result } = renderHook((): HomeContextInterface => useSiteData(), {
@@ -271,7 +271,7 @@ describe('useSiteData hook', (): void => {
 
   it('should keep current state when invalid colour is set as textColor color', (): void => {
     const wrapper = ({ children }: { children?: any }): React.ReactElement => (
-      <SiteDataProvider initialSiteData={{}}>{children}</SiteDataProvider>
+      <SiteDataProvider>{children}</SiteDataProvider>
     );
 
     const { result } = renderHook((): HomeContextInterface => useSiteData(), {
