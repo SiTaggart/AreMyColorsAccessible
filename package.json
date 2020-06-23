@@ -54,7 +54,7 @@
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "10.0.27",
     "@percy/cypress": "2.3.1",
-    "@sitaggart/eslint-config-ts": "0.5.137",
+    "@sitaggart/eslint-config-ts": "0.5.138",
     "@sitaggart/prettier-config": "0.2.0",
     "@testing-library/react": "10.3.0",
     "@testing-library/react-hooks": "3.3.0",
