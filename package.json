@@ -70,7 +70,7 @@
     "babel-jest": "26.2.1",
     "bundlewatch": "0.2.7",
     "cypress": "4.11.0",
-    "eslint": "7.5.0",
+    "eslint": "7.6.0",
     "husky": "4.2.5",
     "jest": "26.2.1",
     "jest-emotion": "10.0.32",
