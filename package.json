@@ -60,7 +60,7 @@
     "@testing-library/react-hooks": "3.3.0",
     "@types/color": "3.0.1",
     "@types/jest": "25.2.3",
-    "@types/lodash": "4.14.159",
+    "@types/lodash": "4.14.160",
     "@types/next": "8.0.7",
     "@types/node": "12.12.54",
     "@types/query-string": "6.3.0",
