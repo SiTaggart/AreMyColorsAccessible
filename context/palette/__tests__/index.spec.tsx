@@ -10,7 +10,7 @@ describe('useSiteData hook', (): void => {
     <PaletteDataProvider>{children}</PaletteDataProvider>
   );
 
-  let renderedHook: RenderHookResult<unknown, PaletteContextProps>;
+  let renderedHook: RenderHookResult<{ children?: any }, PaletteContextProps>;
 
   beforeEach((): void => {
     renderedHook = renderHook(() => usePaletteData(), {

@@ -57,7 +57,7 @@
     "@sitaggart/eslint-config-ts": "0.5.169",
     "@sitaggart/prettier-config": "0.2.0",
     "@testing-library/react": "10.4.9",
-    "@testing-library/react-hooks": "3.3.0",
+    "@testing-library/react-hooks": "3.4.1",
     "@types/color": "3.0.1",
     "@types/jest": "25.2.3",
     "@types/lodash": "4.14.161",
