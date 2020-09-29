@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`hsl-slider compact variant should render a compact variant  1`] = `
+exports[`hsl-slider compact variant should render a compact variant 1`] = `
 .emotion-4 {
   -webkit-appearance: none;
   background: transparent;
