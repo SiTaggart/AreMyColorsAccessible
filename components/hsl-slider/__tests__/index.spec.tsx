@@ -41,7 +41,7 @@ describe('hsl-slider', (): void => {
   });
 
   describe('compact variant', (): void => {
-    it('should render a compact variant ', (): void => {
+    it('should render a compact variant', (): void => {
       const hslSliderComp = renderer
         .create(
           <HSLSlider

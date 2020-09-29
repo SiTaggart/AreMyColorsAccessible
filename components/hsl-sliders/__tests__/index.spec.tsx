@@ -21,7 +21,7 @@ describe('hsl-slider', (): void => {
   });
 
   describe('compact variant', (): void => {
-    it('should render a compact variant ', (): void => {
+    it('should render a compact variant', (): void => {
       const hslSlidersComp = renderer
         .create(<HslSliders id="input-id" onChange={onChangeMock} value="#ccc" variant="compact" />)
         .toJSON();
