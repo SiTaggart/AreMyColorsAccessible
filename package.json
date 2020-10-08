@@ -74,7 +74,7 @@
     "husky": "4.3.0",
     "jest": "26.5.2",
     "jest-emotion": "10.0.32",
-    "now": "20.1.1",
+    "now": "20.1.2",
     "plop": "2.7.4",
     "precise-commits": "1.0.2",
     "prettier": "2.1.2",
