@@ -48,8 +48,8 @@
     "normalize.css": "8.0.1",
     "polished": "3.6.7",
     "query-string": "6.13.5",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
   },
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "10.0.27",
@@ -79,7 +79,7 @@
     "precise-commits": "1.0.2",
     "prettier": "2.1.2",
     "react-addons-test-utils": "15.6.2",
-    "react-test-renderer": "16.13.1",
+    "react-test-renderer": "16.14.0",
     "start-server-and-test": "1.11.5",
     "typescript": "4.0.3"
   },
