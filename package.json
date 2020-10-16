@@ -34,7 +34,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "7.12.0",
+    "@babel/core": "7.12.3",
     "@emotion/core": "10.0.35",
     "@emotion/css": "10.0.27",
     "@emotion/styled": "10.0.27",
