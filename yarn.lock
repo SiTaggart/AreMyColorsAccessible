@@ -2431,14 +2431,14 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@sitaggart/eslint-config-ts@0.5.194":
-  version "0.5.194"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.194.tgz#7dade0f987a050907e55ba41d13e3d924041f7b2"
-  integrity sha512-zA0SHpAUwh22AKbgn52qhVz8WU8nFFw5Qbdd0DswA7ZtKNuXSZi36/5xrrlp2lqijImhdOVkx/0GUfqiDSPORA==
+"@sitaggart/eslint-config-ts@0.5.195":
+  version "0.5.195"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.195.tgz#acaf9b34722ad205a7b31f96c4037c5324630ba2"
+  integrity sha512-UU8pE2EL9lykjp4Rn6kdXSsq4uAWH8FpTLZy0j+DyZUqRi0arnnfRFkVxGEEj98HfKkjekKKdWcbKhzdsgwtEQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "4.4.1"
     "@typescript-eslint/parser" "4.4.1"
-    eslint-config-airbnb-typescript "11.2.1"
+    eslint-config-airbnb-typescript "11.4.0"
     eslint-config-prettier "6.13.0"
     eslint-config-standard "14.1.1"
     eslint-config-standard-jsx "8.1.0"
@@ -5916,10 +5916,10 @@ eslint-config-airbnb-base@14.2.0, eslint-config-airbnb-base@^14.2.0:
     object.assign "^4.1.0"
     object.entries "^1.1.2"
 
-eslint-config-airbnb-typescript@11.2.1:
-  version "11.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-typescript/-/eslint-config-airbnb-typescript-11.2.1.tgz#a1506c1a0b8c3d0a951baa2602934a7c61929ec9"
-  integrity sha512-gkYy4pMWnRTjYYQXHF8cTXrn1ZrKLcjKn/0ErCRTxB9Usa4mZq+PL4tijkMh2wzU2ze3BAYoWkwgY9KkEd5rWg==
+eslint-config-airbnb-typescript@11.4.0:
+  version "11.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-typescript/-/eslint-config-airbnb-typescript-11.4.0.tgz#c323db02210f8e8bb83c0cdf16bec96b120bcc01"
+  integrity sha512-M+dJ3sQPh3wP1mrLADUSLW/2Nnn4xBAO+qiu8UeDWmkt0g5jIlzcP7N4evvnwMGpCN0BadvLACgmuK/Ik6NF8w==
   dependencies:
     "@typescript-eslint/parser" "4.2.0"
     eslint-config-airbnb "18.2.0"
