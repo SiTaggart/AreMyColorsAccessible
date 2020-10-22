@@ -2431,10 +2431,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@sitaggart/eslint-config-ts@0.5.199":
-  version "0.5.199"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.199.tgz#1becac0fe3f2e89a6d60dae21bf5803165be6124"
-  integrity sha512-73EYw8wy7GxJx2BY1NA+BLarZ+52qxByHBGsNrVHhi44rkrYUEEl1WJIX8xMnD3V7wiimSte7JJDmOskFedZYw==
+"@sitaggart/eslint-config-ts@0.5.200":
+  version "0.5.200"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.200.tgz#e3bfc21e8e43b234e193552fb346ccb7b36a004f"
+  integrity sha512-AJUMyzCuIXwILdhr6Zo0mOkLemuJFLOanWLMmuKB08I91wmFfWvZj4reYsh7GLwfeQV0Lsm1StjsPtveyXMeyA==
   dependencies:
     "@typescript-eslint/eslint-plugin" "4.5.0"
     "@typescript-eslint/parser" "4.5.0"
@@ -2452,7 +2452,7 @@
     eslint-plugin-promise "4.2.1"
     eslint-plugin-react "7.21.5"
     eslint-plugin-react-hooks "4.2.0"
-    eslint-plugin-standard "4.0.1"
+    eslint-plugin-standard "4.0.2"
     eslint-plugin-unicorn "22.0.0"
 
 "@sitaggart/prettier-config@0.2.0":
@@ -6079,10 +6079,10 @@ eslint-plugin-react@7.21.5:
     resolve "^1.18.1"
     string.prototype.matchall "^4.0.2"
 
-eslint-plugin-standard@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-4.0.1.tgz#ff0519f7ffaff114f76d1bd7c3996eef0f6e20b4"
-  integrity sha512-v/KBnfyaOMPmZc/dmc6ozOdWqekGp7bBGq4jLAecEfPGmfKiWS4sA8sC0LqiV9w5qmXAtXVn4M3p1jSyhY85SQ==
+eslint-plugin-standard@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-4.0.2.tgz#021211a9f077e63a6847e7bb9ab4247327ac8e0c"
+  integrity sha512-nKptN8l7jksXkwFk++PhJB3cCDTcXOEyhISIN86Ue2feJ1LFyY3PrY3/xT2keXlJSY5bpmbiTG0f885/YKAvTA==
 
 eslint-plugin-unicorn@22.0.0:
   version "22.0.0"
