@@ -2455,10 +2455,10 @@
     eslint-plugin-standard "4.0.2"
     eslint-plugin-unicorn "22.0.0"
 
-"@sitaggart/prettier-config@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@sitaggart/prettier-config/-/prettier-config-0.2.0.tgz#84bb898d8b976774ce814de23d9d4a3b96a75ce3"
-  integrity sha512-nnY01iFU0NlKelL0DoX3dOJuyAVcEy0m45xNF/yUMTOaagm7ifoi/Ac/+EGnhFIaGpalB1wiceOK/v6EmMMSFg==
+"@sitaggart/prettier-config@0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@sitaggart/prettier-config/-/prettier-config-0.2.2.tgz#56bc13735255f8fba10209697c12deef42bb1d07"
+  integrity sha512-PKcI7xcnxa0WC33+5V702jvLVAzfui3hAubwFc41xuDxvR2wsv9Q6vZCp3giXyVj7CPqfMc+YxuxIKKtcbCDxQ==
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
@@ -10951,11 +10951,6 @@ react-is@^16.8.1:
   version "16.11.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.11.0.tgz#b85dfecd48ad1ce469ff558a882ca8e8313928fa"
   integrity sha512-gbBVYR2p8mnriqAwWx9LbuUrShnAuSCNnuPGyc7GJrMVQtPDAh8iLpv7FRuMPFb56KkaVZIYSz1PrjI9q0QPCw==
-
-react-is@^17.0.1:
-  version "17.0.1"
-  resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
-  integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
 react-refresh@0.8.3:
   version "0.8.3"
