@@ -75,7 +75,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Percy Test
-        uses: percy/exec-action@v0.3.0
+        uses: percy/exec-action@v0.3.1
         with:
           custom-command: "yarn cypress:ci"
           verbose: true
