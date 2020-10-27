@@ -55,7 +55,7 @@
     "@emotion/babel-preset-css-prop": "10.0.27",
     "@percy/cypress": "2.3.2",
     "@sitaggart/eslint-config-ts": "0.5.200",
-    "@sitaggart/prettier-config": "0.2.3",
+    "@sitaggart/prettier-config": "0.2.4",
     "@testing-library/react": "11.1.0",
     "@testing-library/react-hooks": "3.4.2",
     "@types/color": "3.0.1",
