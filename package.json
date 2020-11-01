@@ -35,7 +35,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/core": "7.12.3",
-    "@emotion/core": "10.0.35",
+    "@emotion/core": "10.1.0",
     "@emotion/css": "10.0.27",
     "@emotion/styled": "10.0.27",
     "@zeit/next-css": "1.0.1",
@@ -52,7 +52,7 @@
     "react-dom": "17.0.1"
   },
   "devDependencies": {
-    "@emotion/babel-preset-css-prop": "10.0.27",
+    "@emotion/babel-preset-css-prop": "10.1.0",
     "@percy/cypress": "2.3.2",
     "@sitaggart/eslint-config-ts": "0.5.200",
     "@sitaggart/prettier-config": "0.2.7",
