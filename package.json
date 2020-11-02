@@ -35,7 +35,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/core": "7.12.3",
-    "@emotion/core": "10.1.0",
+    "@emotion/core": "10.1.1",
     "@emotion/css": "10.0.27",
     "@emotion/styled": "10.0.27",
     "@zeit/next-css": "1.0.1",
