@@ -124,11 +124,7 @@ const PaletteDataProvider: React.FC<PaletteDataProviderProps> = ({
     let newColorCombos: ColorCombo[];
     if (valid) {
       const combos = getColorCombos(colors);
-      if (combos !== false) {
-        newColorCombos = combos;
-      } else {
-        newColorCombos = state.colorCombos;
-      }
+      newColorCombos = combos !== false ? combos : state.colorCombos;
     } else {
       newColorCombos = state.colorCombos;
     }
