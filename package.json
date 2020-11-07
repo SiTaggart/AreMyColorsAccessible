@@ -95,7 +95,7 @@
       },
       {
         "path": "./.next/serverless/pages/*.js",
-        "maxSize": "550 kB"
+        "maxSize": "580 kB"
       }
     ]
   },
