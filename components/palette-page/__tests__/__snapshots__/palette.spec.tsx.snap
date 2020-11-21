@@ -2,7 +2,7 @@
 
 exports[`Palette Page renders without crashing 1`] = `
 Array [
-  .emotion-6 {
+  .emotion-0 {
   text-align: center;
 }
 
@@ -12,25 +12,32 @@ Array [
   margin: 3rem 0;
 }
 
-.emotion-0 {
+.emotion-4 {
   display: inline-block;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   width: 100%;
 }
 
-.emotion-4 {
-  background: rgba(255,255,255,0.1);
+.emotion-6 {
+  background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
+  border-color: ;
   border-radius: 3px;
+  color: ;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   width: 100%;
 }
 
+.emotion-6:focus {
+  border-color: ;
+  box-shadow: ;
+}
+
 <form
-    className="emotion-6 emotion-7"
+    className="emotion-0 emotion-1"
     onSubmit={[Function]}
   >
     <div>
@@ -38,7 +45,7 @@ Array [
         className="emotion-2 emotion-3"
       >
         <label
-          className="emotion-0 emotion-1"
+          className="emotion-4 emotion-5"
           htmlFor="palette-form-input"
         >
           Add the colours from your palette
@@ -46,7 +53,7 @@ Array [
       </h1>
       <input
         autoComplete="off"
-        className="emotion-4 emotion-5"
+        className="emotion-6 emotion-7"
         data-testid="palette-form-input"
         id="palette-form-input"
         name="paletteFormInput"
@@ -55,7 +62,7 @@ Array [
       />
     </div>
   </form>,
-  .emotion-4 {
+  .emotion-0 {
   margin-top: 3rem;
   overflow-x: auto;
 }
@@ -66,14 +73,14 @@ Array [
 }
 
 <section
-    className="emotion-4 emotion-5"
+    className="emotion-0 emotion-1"
   >
     <table
       className="emotion-2 emotion-3"
     >
       <thead>
         <tr
-          className="emotion-0 emotion-1"
+          className="emotion-4 emotion-5"
           data-testid="colorMatrix-tr"
         >
           <td

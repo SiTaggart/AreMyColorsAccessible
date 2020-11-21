@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode } from 'react';
 import styled from '@emotion/styled';
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 
 interface LayoutProps {
   children?: ReactNode;

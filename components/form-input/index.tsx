@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import styled from '@emotion/styled';
+import styled, { CSSObject } from '@emotion/styled';
 
 export interface FormInputProps {
   ariaLabel?: string;
@@ -14,6 +14,7 @@ export interface FormInputProps {
   style?: React.CSSProperties;
   value?: string;
   className?: string;
+  css?: CSSObject;
 }
 
 interface StyledInputProps {

@@ -1,111 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`hsl-slider compact variant should render a compact variant 1`] = `
-.emotion-4 {
-  -webkit-appearance: none;
-  background: transparent;
-  border-radius: 2px;
-  color: currentColor;
-  display: block;
-  margin: 10px 0;
-  width: 100%;
-}
-
-.emotion-4::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 4px;
-  cursor: pointer;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  box-shadow: 0 0 0 #fff,0 0 0 #fff;
-  background: currentColor;
-  border: 1px solid currentColor;
-  border-radius: 5px;
-}
-
-.emotion-4::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
-  border: 1px solid currentColor;
-  height: 20px;
-  width: 8px;
-  border-radius: 2px;
-  background: currentColor;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -9px;
-}
-
-.emotion-4:focus::-webkit-slider-runnable-track {
-  background: currentColor;
-}
-
-.emotion-4::-moz-range-track {
-  width: 100%;
-  height: 4px;
-  cursor: pointer;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  box-shadow: 0 0 0 #fff,0 0 0 #fff;
-  background: currentColor;
-  border: 1px solid currentColor;
-  border-radius: 5px;
-}
-
-.emotion-4::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
-  border: 1px solid currentColor;
-  height: 20px;
-  width: 8px;
-  border-radius: 2px;
-  background: currentColor;
-  cursor: pointer;
-}
-
-.emotion-4::-ms-track {
-  width: 100%;
-  height: 4px;
-  cursor: pointer;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  background: transparent;
-  border-color: transparent;
-  border-width: 8px 0;
-  color: transparent;
-}
-
-.emotion-4::-ms-fill-lower {
-  box-shadow: 0 0 0 #fff,0 0 0 #fff;
-  background: currentColor;
-  border: 1px solid currentColor;
-  border-radius: 5px * 2;
-}
-
-.emotion-4::-ms-fill-upper {
-  box-shadow: 0 0 0 #fff,0 0 0 #fff;
-  background: currentColor;
-  border: 1px solid currentColor;
-  border-radius: 5px * 2;
-}
-
-.emotion-4::-ms-thumb {
-  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
-  border: 1px solid currentColor;
-  height: 20px;
-  width: 8px;
-  border-radius: 2px;
-  background: currentColor;
-  cursor: pointer;
-}
-
-.emotion-4:focus::-ms-fill-lower {
-  background: currentColor;
-}
-
-.emotion-4:focus::-ms-fill-upper {
-  background: currentColor;
-}
-
-.emotion-8 {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,11 +10,13 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
   width: 100%;
 }
 
-@media (min-width:1024px) {
-  .emotion-8 {
+@media (min-width: 1024px) {
+  .emotion-0 {
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
+    padding: ;
+    width: ;
   }
 }
 
@@ -137,7 +35,7 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
   text-align: left;
 }
 
-.emotion-0 {
+.emotion-4 {
   display: inline-block;
   font-size: 1rem;
   margin-bottom: 0;
@@ -150,14 +48,118 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
   flex: 6;
 }
 
+.emotion-8 {
+  -webkit-appearance: none;
+  background: transparent;
+  border-radius: 2px;
+  color: currentColor;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.emotion-8::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-8::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+
+.emotion-8:focus::-webkit-slider-runnable-track {
+  background: currentColor;
+}
+
+.emotion-8::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-8::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-8::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+  color: transparent;
+}
+
+.emotion-8::-ms-fill-lower {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-8::-ms-fill-upper {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-8::-ms-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-8:focus::-ms-fill-lower {
+  background: currentColor;
+}
+
+.emotion-8:focus::-ms-fill-upper {
+  background: currentColor;
+}
+
 <div
-  className="emotion-8 emotion-9"
+  className="emotion-0 emotion-1"
 >
   <div
     className="emotion-2 emotion-3"
   >
     <label
-      className="emotion-0 emotion-1"
+      className="emotion-4 emotion-5"
       htmlFor="input-id"
     >
       t
@@ -167,7 +169,7 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
     className="emotion-6 emotion-7"
   >
     <input
-      className="emotion-4 emotion-5"
+      className="emotion-8 emotion-9"
       data-testid="input-id"
       id="input-id"
       max={20}
@@ -182,12 +184,14 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
 `;
 
 exports[`hsl-slider renders without crashing 1`] = `
-.emotion-8 {
+.emotion-0 {
+  display: ;
+  padding: ;
   width: 100%;
 }
 
-@media (min-width:1024px) {
-  .emotion-8 {
+@media (min-width: 1024px) {
+  .emotion-0 {
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
@@ -196,14 +200,20 @@ exports[`hsl-slider renders without crashing 1`] = `
   }
 }
 
-.emotion-0 {
+.emotion-4 {
   display: inline-block;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-6 {
+  -webkit-flex: ;
+  -ms-flex: ;
+  flex: ;
+}
+
+.emotion-8 {
   -webkit-appearance: none;
   background: transparent;
   border-radius: 2px;
@@ -213,7 +223,7 @@ exports[`hsl-slider renders without crashing 1`] = `
   width: 100%;
 }
 
-.emotion-4::-webkit-slider-runnable-track {
+.emotion-8::-webkit-slider-runnable-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -225,7 +235,7 @@ exports[`hsl-slider renders without crashing 1`] = `
   border-radius: 5px;
 }
 
-.emotion-4::-webkit-slider-thumb {
+.emotion-8::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -237,11 +247,11 @@ exports[`hsl-slider renders without crashing 1`] = `
   margin-top: -9px;
 }
 
-.emotion-4:focus::-webkit-slider-runnable-track {
+.emotion-8:focus::-webkit-slider-runnable-track {
   background: currentColor;
 }
 
-.emotion-4::-moz-range-track {
+.emotion-8::-moz-range-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -253,7 +263,7 @@ exports[`hsl-slider renders without crashing 1`] = `
   border-radius: 5px;
 }
 
-.emotion-4::-moz-range-thumb {
+.emotion-8::-moz-range-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -263,7 +273,7 @@ exports[`hsl-slider renders without crashing 1`] = `
   cursor: pointer;
 }
 
-.emotion-4::-ms-track {
+.emotion-8::-ms-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -275,21 +285,21 @@ exports[`hsl-slider renders without crashing 1`] = `
   color: transparent;
 }
 
-.emotion-4::-ms-fill-lower {
+.emotion-8::-ms-fill-lower {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-4::-ms-fill-upper {
+.emotion-8::-ms-fill-upper {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-4::-ms-thumb {
+.emotion-8::-ms-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -299,22 +309,22 @@ exports[`hsl-slider renders without crashing 1`] = `
   cursor: pointer;
 }
 
-.emotion-4:focus::-ms-fill-lower {
+.emotion-8:focus::-ms-fill-lower {
   background: currentColor;
 }
 
-.emotion-4:focus::-ms-fill-upper {
+.emotion-8:focus::-ms-fill-upper {
   background: currentColor;
 }
 
 <div
-  className="emotion-8 emotion-9"
+  className="emotion-0 emotion-1"
 >
   <div
     className="emotion-2 emotion-3"
   >
     <label
-      className="emotion-0 emotion-1"
+      className="emotion-4 emotion-5"
       htmlFor="input-id"
     >
       test 30%
@@ -324,7 +334,7 @@ exports[`hsl-slider renders without crashing 1`] = `
     className="emotion-6 emotion-7"
   >
     <input
-      className="emotion-4 emotion-5"
+      className="emotion-8 emotion-9"
       data-testid="input-id"
       id="input-id"
       max={20}

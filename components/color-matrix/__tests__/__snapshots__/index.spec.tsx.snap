@@ -1,29 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ColorMatrix renders without crashing 1`] = `
-.emotion-386 {
+.emotion-0 {
   margin-top: 3rem;
   overflow-x: auto;
 }
 
-.emotion-384 {
+.emotion-2 {
   border-collapse: collapse;
   width: 100%;
 }
 
-.emotion-34 {
+.emotion-6 {
   font-weight: bold;
   padding: 0.5rem;
 }
 
-.emotion-34:first-of-type {
+.emotion-6:first-of-type {
   padding-left: 0;
 }
 
-.emotion-0 {
-  background: rgba(255,255,255,0.1);
+.emotion-8 {
+  background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
+  border-color: ;
   border-radius: 3px;
+  color: ;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
@@ -31,7 +33,26 @@ exports[`ColorMatrix renders without crashing 1`] = `
   margin-bottom: 0.5rem;
 }
 
+.emotion-8:focus {
+  border-color: ;
+  box-shadow: ;
+}
+
 .emotion-10 {
+  display: ;
+  -webkit-box-flex-wrap: ;
+  -webkit-flex-wrap: ;
+  -ms-flex-wrap: ;
+  flex-wrap: ;
+}
+
+@media (min-width: 1024px) {
+  .emotion-10 {
+    margin: ;
+  }
+}
+
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,15 +61,17 @@ exports[`ColorMatrix renders without crashing 1`] = `
   width: 100%;
 }
 
-@media (min-width:1024px) {
-  .emotion-10 {
+@media (min-width: 1024px) {
+  .emotion-12 {
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
+    padding: ;
+    width: ;
   }
 }
 
-.emotion-4 {
+.emotion-14 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -63,20 +86,20 @@ exports[`ColorMatrix renders without crashing 1`] = `
   text-align: left;
 }
 
-.emotion-2 {
+.emotion-16 {
   display: inline-block;
   font-size: 1rem;
   margin-bottom: 0;
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-18 {
   -webkit-flex: 6;
   -ms-flex: 6;
   flex: 6;
 }
 
-.emotion-6 {
+.emotion-20 {
   -webkit-appearance: none;
   background: transparent;
   border-radius: 2px;
@@ -86,7 +109,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
   width: 100%;
 }
 
-.emotion-6::-webkit-slider-runnable-track {
+.emotion-20::-webkit-slider-runnable-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -98,7 +121,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
   border-radius: 5px;
 }
 
-.emotion-6::-webkit-slider-thumb {
+.emotion-20::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -110,11 +133,11 @@ exports[`ColorMatrix renders without crashing 1`] = `
   margin-top: -9px;
 }
 
-.emotion-6:focus::-webkit-slider-runnable-track {
+.emotion-20:focus::-webkit-slider-runnable-track {
   background: currentColor;
 }
 
-.emotion-6::-moz-range-track {
+.emotion-20::-moz-range-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -126,7 +149,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
   border-radius: 5px;
 }
 
-.emotion-6::-moz-range-thumb {
+.emotion-20::-moz-range-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -136,7 +159,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
   cursor: pointer;
 }
 
-.emotion-6::-ms-track {
+.emotion-20::-ms-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -148,21 +171,21 @@ exports[`ColorMatrix renders without crashing 1`] = `
   color: transparent;
 }
 
-.emotion-6::-ms-fill-lower {
+.emotion-20::-ms-fill-lower {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-6::-ms-fill-upper {
+.emotion-20::-ms-fill-upper {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-6::-ms-thumb {
+.emotion-20::-ms-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -172,20 +195,20 @@ exports[`ColorMatrix renders without crashing 1`] = `
   cursor: pointer;
 }
 
-.emotion-6:focus::-ms-fill-lower {
+.emotion-20:focus::-ms-fill-lower {
   background: currentColor;
 }
 
-.emotion-6:focus::-ms-fill-upper {
+.emotion-20:focus::-ms-fill-upper {
   background: currentColor;
 }
 
-.emotion-148 {
+.emotion-154 {
   border: solid 1px #fff;
   padding: 0.5rem;
 }
 
-.emotion-164 {
+.emotion-158 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -195,28 +218,27 @@ exports[`ColorMatrix renders without crashing 1`] = `
   flex-direction: column;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 8rem;
   min-width: 12rem;
   overflow: hidden;
+  opacity: ;
   text-align: center;
   -webkit-transition: opacity ease-in;
   transition: opacity ease-in;
 }
 
-.emotion-152 {
+.emotion-160 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.emotion-150 {
+.emotion-162 {
   background-color: #F7F8F8;
   color: #666D70;
   border-radius: 3px;
@@ -225,7 +247,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
   padding: 1px 4px;
 }
 
-.emotion-154 {
+.emotion-166 {
   color: #FFFFFF;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -235,7 +257,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
   text-align: center;
 }
 
-.emotion-158 {
+.emotion-170 {
   background-color: #FBDBDB;
   color: #C52020;
   border-radius: 3px;
@@ -244,7 +266,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
   padding: 1px 4px;
 }
 
-.emotion-178 {
+.emotion-190 {
   background-color: #CFFCDA;
   color: #004215;
   border-radius: 3px;
@@ -253,7 +275,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
   padding: 1px 4px;
 }
 
-.emotion-212 {
+.emotion-224 {
   color: #CCCCCC;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -263,7 +285,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
   text-align: center;
 }
 
-.emotion-272 {
+.emotion-284 {
   color: #777777;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -273,7 +295,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
   text-align: center;
 }
 
-.emotion-332 {
+.emotion-344 {
   color: #000000;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -284,14 +306,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
 }
 
 <section
-  className="emotion-386 emotion-387"
+  className="emotion-0 emotion-1"
 >
   <table
-    className="emotion-384 emotion-385"
+    className="emotion-2 emotion-3"
   >
     <thead>
       <tr
-        className="emotion-144 emotion-145"
+        className="emotion-4 emotion-5"
         data-testid="colorMatrix-tr"
       >
         <td
@@ -302,14 +324,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         />
         <th
-          className="emotion-34 emotion-35"
+          className="emotion-6 emotion-7"
           data-testid="colorMatrix-th"
           scope="col"
         >
           <input
             aria-label="hex colour code"
             autoComplete="off"
-            className="emotion-0 emotion-1"
+            className="emotion-8 emotion-9"
             data-testid="colorhex-0"
             id="colorhex-0"
             onChange={[Function]}
@@ -317,27 +339,27 @@ exports[`ColorMatrix renders without crashing 1`] = `
             value="#fff"
           />
           <div
-            className="emotion-32 emotion-33"
+            className="emotion-10 emotion-11"
             data-testid="form-hsl-sliders"
           >
             <div
-              className="emotion-10 emotion-11"
+              className="emotion-12 emotion-13"
             >
               <div
-                className="emotion-4 emotion-5"
+                className="emotion-14 emotion-15"
               >
                 <label
-                  className="emotion-2 emotion-3"
+                  className="emotion-16 emotion-17"
                   htmlFor="hsl-0-Hue"
                 >
                   H
                 </label>
               </div>
               <div
-                className="emotion-8 emotion-9"
+                className="emotion-18 emotion-19"
               >
                 <input
-                  className="emotion-6 emotion-7"
+                  className="emotion-20 emotion-21"
                   data-testid="hsl-0-Hue"
                   id="hsl-0-Hue"
                   max={360}
@@ -350,23 +372,23 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-10 emotion-11"
+              className="emotion-12 emotion-13"
             >
               <div
-                className="emotion-4 emotion-5"
+                className="emotion-14 emotion-15"
               >
                 <label
-                  className="emotion-2 emotion-3"
+                  className="emotion-16 emotion-17"
                   htmlFor="hsl-0-Saturation"
                 >
                   S
                 </label>
               </div>
               <div
-                className="emotion-8 emotion-9"
+                className="emotion-18 emotion-19"
               >
                 <input
-                  className="emotion-6 emotion-7"
+                  className="emotion-20 emotion-21"
                   data-testid="hsl-0-Saturation"
                   id="hsl-0-Saturation"
                   max={100}
@@ -379,23 +401,23 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-10 emotion-11"
+              className="emotion-12 emotion-13"
             >
               <div
-                className="emotion-4 emotion-5"
+                className="emotion-14 emotion-15"
               >
                 <label
-                  className="emotion-2 emotion-3"
+                  className="emotion-16 emotion-17"
                   htmlFor="hsl-0-Lightness"
                 >
                   L
                 </label>
               </div>
               <div
-                className="emotion-8 emotion-9"
+                className="emotion-18 emotion-19"
               >
                 <input
-                  className="emotion-6 emotion-7"
+                  className="emotion-20 emotion-21"
                   data-testid="hsl-0-Lightness"
                   id="hsl-0-Lightness"
                   max={100}
@@ -410,14 +432,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </th>
         <th
-          className="emotion-34 emotion-35"
+          className="emotion-6 emotion-7"
           data-testid="colorMatrix-th"
           scope="col"
         >
           <input
             aria-label="hex colour code"
             autoComplete="off"
-            className="emotion-0 emotion-1"
+            className="emotion-8 emotion-9"
             data-testid="colorhex-1"
             id="colorhex-1"
             onChange={[Function]}
@@ -425,27 +447,27 @@ exports[`ColorMatrix renders without crashing 1`] = `
             value="#ccc"
           />
           <div
-            className="emotion-32 emotion-33"
+            className="emotion-10 emotion-11"
             data-testid="form-hsl-sliders"
           >
             <div
-              className="emotion-10 emotion-11"
+              className="emotion-12 emotion-13"
             >
               <div
-                className="emotion-4 emotion-5"
+                className="emotion-14 emotion-15"
               >
                 <label
-                  className="emotion-2 emotion-3"
+                  className="emotion-16 emotion-17"
                   htmlFor="hsl-1-Hue"
                 >
                   H
                 </label>
               </div>
               <div
-                className="emotion-8 emotion-9"
+                className="emotion-18 emotion-19"
               >
                 <input
-                  className="emotion-6 emotion-7"
+                  className="emotion-20 emotion-21"
                   data-testid="hsl-1-Hue"
                   id="hsl-1-Hue"
                   max={360}
@@ -458,23 +480,23 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-10 emotion-11"
+              className="emotion-12 emotion-13"
             >
               <div
-                className="emotion-4 emotion-5"
+                className="emotion-14 emotion-15"
               >
                 <label
-                  className="emotion-2 emotion-3"
+                  className="emotion-16 emotion-17"
                   htmlFor="hsl-1-Saturation"
                 >
                   S
                 </label>
               </div>
               <div
-                className="emotion-8 emotion-9"
+                className="emotion-18 emotion-19"
               >
                 <input
-                  className="emotion-6 emotion-7"
+                  className="emotion-20 emotion-21"
                   data-testid="hsl-1-Saturation"
                   id="hsl-1-Saturation"
                   max={100}
@@ -487,23 +509,23 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-10 emotion-11"
+              className="emotion-12 emotion-13"
             >
               <div
-                className="emotion-4 emotion-5"
+                className="emotion-14 emotion-15"
               >
                 <label
-                  className="emotion-2 emotion-3"
+                  className="emotion-16 emotion-17"
                   htmlFor="hsl-1-Lightness"
                 >
                   L
                 </label>
               </div>
               <div
-                className="emotion-8 emotion-9"
+                className="emotion-18 emotion-19"
               >
                 <input
-                  className="emotion-6 emotion-7"
+                  className="emotion-20 emotion-21"
                   data-testid="hsl-1-Lightness"
                   id="hsl-1-Lightness"
                   max={100}
@@ -518,14 +540,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </th>
         <th
-          className="emotion-34 emotion-35"
+          className="emotion-6 emotion-7"
           data-testid="colorMatrix-th"
           scope="col"
         >
           <input
             aria-label="hex colour code"
             autoComplete="off"
-            className="emotion-0 emotion-1"
+            className="emotion-8 emotion-9"
             data-testid="colorhex-2"
             id="colorhex-2"
             onChange={[Function]}
@@ -533,27 +555,27 @@ exports[`ColorMatrix renders without crashing 1`] = `
             value="#777"
           />
           <div
-            className="emotion-32 emotion-33"
+            className="emotion-10 emotion-11"
             data-testid="form-hsl-sliders"
           >
             <div
-              className="emotion-10 emotion-11"
+              className="emotion-12 emotion-13"
             >
               <div
-                className="emotion-4 emotion-5"
+                className="emotion-14 emotion-15"
               >
                 <label
-                  className="emotion-2 emotion-3"
+                  className="emotion-16 emotion-17"
                   htmlFor="hsl-2-Hue"
                 >
                   H
                 </label>
               </div>
               <div
-                className="emotion-8 emotion-9"
+                className="emotion-18 emotion-19"
               >
                 <input
-                  className="emotion-6 emotion-7"
+                  className="emotion-20 emotion-21"
                   data-testid="hsl-2-Hue"
                   id="hsl-2-Hue"
                   max={360}
@@ -566,23 +588,23 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-10 emotion-11"
+              className="emotion-12 emotion-13"
             >
               <div
-                className="emotion-4 emotion-5"
+                className="emotion-14 emotion-15"
               >
                 <label
-                  className="emotion-2 emotion-3"
+                  className="emotion-16 emotion-17"
                   htmlFor="hsl-2-Saturation"
                 >
                   S
                 </label>
               </div>
               <div
-                className="emotion-8 emotion-9"
+                className="emotion-18 emotion-19"
               >
                 <input
-                  className="emotion-6 emotion-7"
+                  className="emotion-20 emotion-21"
                   data-testid="hsl-2-Saturation"
                   id="hsl-2-Saturation"
                   max={100}
@@ -595,23 +617,23 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-10 emotion-11"
+              className="emotion-12 emotion-13"
             >
               <div
-                className="emotion-4 emotion-5"
+                className="emotion-14 emotion-15"
               >
                 <label
-                  className="emotion-2 emotion-3"
+                  className="emotion-16 emotion-17"
                   htmlFor="hsl-2-Lightness"
                 >
                   L
                 </label>
               </div>
               <div
-                className="emotion-8 emotion-9"
+                className="emotion-18 emotion-19"
               >
                 <input
-                  className="emotion-6 emotion-7"
+                  className="emotion-20 emotion-21"
                   data-testid="hsl-2-Lightness"
                   id="hsl-2-Lightness"
                   max={100}
@@ -626,14 +648,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </th>
         <th
-          className="emotion-34 emotion-35"
+          className="emotion-6 emotion-7"
           data-testid="colorMatrix-th"
           scope="col"
         >
           <input
             aria-label="hex colour code"
             autoComplete="off"
-            className="emotion-0 emotion-1"
+            className="emotion-8 emotion-9"
             data-testid="colorhex-3"
             id="colorhex-3"
             onChange={[Function]}
@@ -641,27 +663,27 @@ exports[`ColorMatrix renders without crashing 1`] = `
             value="#000"
           />
           <div
-            className="emotion-32 emotion-33"
+            className="emotion-10 emotion-11"
             data-testid="form-hsl-sliders"
           >
             <div
-              className="emotion-10 emotion-11"
+              className="emotion-12 emotion-13"
             >
               <div
-                className="emotion-4 emotion-5"
+                className="emotion-14 emotion-15"
               >
                 <label
-                  className="emotion-2 emotion-3"
+                  className="emotion-16 emotion-17"
                   htmlFor="hsl-3-Hue"
                 >
                   H
                 </label>
               </div>
               <div
-                className="emotion-8 emotion-9"
+                className="emotion-18 emotion-19"
               >
                 <input
-                  className="emotion-6 emotion-7"
+                  className="emotion-20 emotion-21"
                   data-testid="hsl-3-Hue"
                   id="hsl-3-Hue"
                   max={360}
@@ -674,23 +696,23 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-10 emotion-11"
+              className="emotion-12 emotion-13"
             >
               <div
-                className="emotion-4 emotion-5"
+                className="emotion-14 emotion-15"
               >
                 <label
-                  className="emotion-2 emotion-3"
+                  className="emotion-16 emotion-17"
                   htmlFor="hsl-3-Saturation"
                 >
                   S
                 </label>
               </div>
               <div
-                className="emotion-8 emotion-9"
+                className="emotion-18 emotion-19"
               >
                 <input
-                  className="emotion-6 emotion-7"
+                  className="emotion-20 emotion-21"
                   data-testid="hsl-3-Saturation"
                   id="hsl-3-Saturation"
                   max={100}
@@ -703,23 +725,23 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-10 emotion-11"
+              className="emotion-12 emotion-13"
             >
               <div
-                className="emotion-4 emotion-5"
+                className="emotion-14 emotion-15"
               >
                 <label
-                  className="emotion-2 emotion-3"
+                  className="emotion-16 emotion-17"
                   htmlFor="hsl-3-Lightness"
                 >
                   L
                 </label>
               </div>
               <div
-                className="emotion-8 emotion-9"
+                className="emotion-18 emotion-19"
               >
                 <input
-                  className="emotion-6 emotion-7"
+                  className="emotion-20 emotion-21"
                   data-testid="hsl-3-Lightness"
                   id="hsl-3-Lightness"
                   max={100}
@@ -737,23 +759,23 @@ exports[`ColorMatrix renders without crashing 1`] = `
     </thead>
     <tbody>
       <tr
-        className="emotion-144 emotion-145"
+        className="emotion-4 emotion-5"
         data-testid="colorMatrix-tr"
       >
         <th
-          className="emotion-34 emotion-35"
+          className="emotion-6 emotion-7"
           data-testid="colorMatrix-th"
           scope="row"
         >
           #FFFFFF
         </th>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
         >
            
         </td>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
           style={
             Object {
               "backgroundColor": "#CCCCCC",
@@ -761,14 +783,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         >
           <div
-            className="emotion-164 emotion-165"
+            className="emotion-158 emotion-159"
             data-testid="colorCard"
           >
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-150 emotion-151"
+                className="emotion-162 emotion-163"
                 title="Color contrast ratio"
               >
                 1.61
@@ -776,10 +798,10 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </span>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <div
-                className="emotion-154 emotion-155"
+                className="emotion-166 emotion-167"
                 color="#FFFFFF"
                 data-testid="colorCard-swatch"
               >
@@ -787,16 +809,16 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-158 emotion-151"
+                className="emotion-170 emotion-163"
               >
                 Small: 
                 Fail
               </span>
               <span
-                className="emotion-158 emotion-151"
+                className="emotion-170 emotion-163"
               >
                 Large: 
                 Fail
@@ -805,7 +827,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
           style={
             Object {
               "backgroundColor": "#777777",
@@ -813,14 +835,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         >
           <div
-            className="emotion-164 emotion-165"
+            className="emotion-158 emotion-159"
             data-testid="colorCard"
           >
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-150 emotion-151"
+                className="emotion-162 emotion-163"
                 title="Color contrast ratio"
               >
                 4.48
@@ -828,10 +850,10 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </span>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <div
-                className="emotion-154 emotion-155"
+                className="emotion-166 emotion-167"
                 color="#FFFFFF"
                 data-testid="colorCard-swatch"
               >
@@ -839,16 +861,16 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-158 emotion-151"
+                className="emotion-170 emotion-163"
               >
                 Small: 
                 Fail
               </span>
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Large: 
                 AA
@@ -857,7 +879,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
           style={
             Object {
               "backgroundColor": "#000000",
@@ -865,14 +887,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         >
           <div
-            className="emotion-164 emotion-165"
+            className="emotion-158 emotion-159"
             data-testid="colorCard"
           >
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-150 emotion-151"
+                className="emotion-162 emotion-163"
                 title="Color contrast ratio"
               >
                 21
@@ -880,10 +902,10 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </span>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <div
-                className="emotion-154 emotion-155"
+                className="emotion-166 emotion-167"
                 color="#FFFFFF"
                 data-testid="colorCard-swatch"
               >
@@ -891,16 +913,16 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Small: 
                 AAA
               </span>
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Large: 
                 AAA
@@ -910,18 +932,18 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </td>
       </tr>
       <tr
-        className="emotion-144 emotion-145"
+        className="emotion-4 emotion-5"
         data-testid="colorMatrix-tr"
       >
         <th
-          className="emotion-34 emotion-35"
+          className="emotion-6 emotion-7"
           data-testid="colorMatrix-th"
           scope="row"
         >
           #CCCCCC
         </th>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -929,14 +951,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         >
           <div
-            className="emotion-164 emotion-165"
+            className="emotion-158 emotion-159"
             data-testid="colorCard"
           >
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-150 emotion-151"
+                className="emotion-162 emotion-163"
                 title="Color contrast ratio"
               >
                 1.61
@@ -944,10 +966,10 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </span>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <div
-                className="emotion-212 emotion-155"
+                className="emotion-224 emotion-167"
                 color="#CCCCCC"
                 data-testid="colorCard-swatch"
               >
@@ -955,16 +977,16 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-158 emotion-151"
+                className="emotion-170 emotion-163"
               >
                 Small: 
                 Fail
               </span>
               <span
-                className="emotion-158 emotion-151"
+                className="emotion-170 emotion-163"
               >
                 Large: 
                 Fail
@@ -973,12 +995,12 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
         >
            
         </td>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
           style={
             Object {
               "backgroundColor": "#777777",
@@ -986,14 +1008,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         >
           <div
-            className="emotion-164 emotion-165"
+            className="emotion-158 emotion-159"
             data-testid="colorCard"
           >
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-150 emotion-151"
+                className="emotion-162 emotion-163"
                 title="Color contrast ratio"
               >
                 2.79
@@ -1001,10 +1023,10 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </span>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <div
-                className="emotion-212 emotion-155"
+                className="emotion-224 emotion-167"
                 color="#CCCCCC"
                 data-testid="colorCard-swatch"
               >
@@ -1012,16 +1034,16 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-158 emotion-151"
+                className="emotion-170 emotion-163"
               >
                 Small: 
                 Fail
               </span>
               <span
-                className="emotion-158 emotion-151"
+                className="emotion-170 emotion-163"
               >
                 Large: 
                 Fail
@@ -1030,7 +1052,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
           style={
             Object {
               "backgroundColor": "#000000",
@@ -1038,14 +1060,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         >
           <div
-            className="emotion-164 emotion-165"
+            className="emotion-158 emotion-159"
             data-testid="colorCard"
           >
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-150 emotion-151"
+                className="emotion-162 emotion-163"
                 title="Color contrast ratio"
               >
                 13.08
@@ -1053,10 +1075,10 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </span>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <div
-                className="emotion-212 emotion-155"
+                className="emotion-224 emotion-167"
                 color="#CCCCCC"
                 data-testid="colorCard-swatch"
               >
@@ -1064,16 +1086,16 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Small: 
                 AAA
               </span>
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Large: 
                 AAA
@@ -1083,18 +1105,18 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </td>
       </tr>
       <tr
-        className="emotion-144 emotion-145"
+        className="emotion-4 emotion-5"
         data-testid="colorMatrix-tr"
       >
         <th
-          className="emotion-34 emotion-35"
+          className="emotion-6 emotion-7"
           data-testid="colorMatrix-th"
           scope="row"
         >
           #777777
         </th>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -1102,14 +1124,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         >
           <div
-            className="emotion-164 emotion-165"
+            className="emotion-158 emotion-159"
             data-testid="colorCard"
           >
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-150 emotion-151"
+                className="emotion-162 emotion-163"
                 title="Color contrast ratio"
               >
                 4.48
@@ -1117,10 +1139,10 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </span>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <div
-                className="emotion-272 emotion-155"
+                className="emotion-284 emotion-167"
                 color="#777777"
                 data-testid="colorCard-swatch"
               >
@@ -1128,16 +1150,16 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-158 emotion-151"
+                className="emotion-170 emotion-163"
               >
                 Small: 
                 Fail
               </span>
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Large: 
                 AA
@@ -1146,7 +1168,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
           style={
             Object {
               "backgroundColor": "#CCCCCC",
@@ -1154,14 +1176,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         >
           <div
-            className="emotion-164 emotion-165"
+            className="emotion-158 emotion-159"
             data-testid="colorCard"
           >
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-150 emotion-151"
+                className="emotion-162 emotion-163"
                 title="Color contrast ratio"
               >
                 2.79
@@ -1169,10 +1191,10 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </span>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <div
-                className="emotion-272 emotion-155"
+                className="emotion-284 emotion-167"
                 color="#777777"
                 data-testid="colorCard-swatch"
               >
@@ -1180,16 +1202,16 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-158 emotion-151"
+                className="emotion-170 emotion-163"
               >
                 Small: 
                 Fail
               </span>
               <span
-                className="emotion-158 emotion-151"
+                className="emotion-170 emotion-163"
               >
                 Large: 
                 Fail
@@ -1198,12 +1220,12 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
         >
            
         </td>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
           style={
             Object {
               "backgroundColor": "#000000",
@@ -1211,14 +1233,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         >
           <div
-            className="emotion-164 emotion-165"
+            className="emotion-158 emotion-159"
             data-testid="colorCard"
           >
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-150 emotion-151"
+                className="emotion-162 emotion-163"
                 title="Color contrast ratio"
               >
                 4.69
@@ -1226,10 +1248,10 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </span>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <div
-                className="emotion-272 emotion-155"
+                className="emotion-284 emotion-167"
                 color="#777777"
                 data-testid="colorCard-swatch"
               >
@@ -1237,16 +1259,16 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Small: 
                 AA
               </span>
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Large: 
                 AAA
@@ -1256,18 +1278,18 @@ exports[`ColorMatrix renders without crashing 1`] = `
         </td>
       </tr>
       <tr
-        className="emotion-144 emotion-145"
+        className="emotion-4 emotion-5"
         data-testid="colorMatrix-tr"
       >
         <th
-          className="emotion-34 emotion-35"
+          className="emotion-6 emotion-7"
           data-testid="colorMatrix-th"
           scope="row"
         >
           #000000
         </th>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
           style={
             Object {
               "backgroundColor": "#FFFFFF",
@@ -1275,14 +1297,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         >
           <div
-            className="emotion-164 emotion-165"
+            className="emotion-158 emotion-159"
             data-testid="colorCard"
           >
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-150 emotion-151"
+                className="emotion-162 emotion-163"
                 title="Color contrast ratio"
               >
                 21
@@ -1290,10 +1312,10 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </span>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <div
-                className="emotion-332 emotion-155"
+                className="emotion-344 emotion-167"
                 color="#000000"
                 data-testid="colorCard-swatch"
               >
@@ -1301,16 +1323,16 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Small: 
                 AAA
               </span>
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Large: 
                 AAA
@@ -1319,7 +1341,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
           style={
             Object {
               "backgroundColor": "#CCCCCC",
@@ -1327,14 +1349,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         >
           <div
-            className="emotion-164 emotion-165"
+            className="emotion-158 emotion-159"
             data-testid="colorCard"
           >
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-150 emotion-151"
+                className="emotion-162 emotion-163"
                 title="Color contrast ratio"
               >
                 13.08
@@ -1342,10 +1364,10 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </span>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <div
-                className="emotion-332 emotion-155"
+                className="emotion-344 emotion-167"
                 color="#000000"
                 data-testid="colorCard-swatch"
               >
@@ -1353,16 +1375,16 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Small: 
                 AAA
               </span>
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Large: 
                 AAA
@@ -1371,7 +1393,7 @@ exports[`ColorMatrix renders without crashing 1`] = `
           </div>
         </td>
         <td
-          className="emotion-148 emotion-149"
+          className="emotion-154 emotion-155"
           style={
             Object {
               "backgroundColor": "#777777",
@@ -1379,14 +1401,14 @@ exports[`ColorMatrix renders without crashing 1`] = `
           }
         >
           <div
-            className="emotion-164 emotion-165"
+            className="emotion-158 emotion-159"
             data-testid="colorCard"
           >
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-150 emotion-151"
+                className="emotion-162 emotion-163"
                 title="Color contrast ratio"
               >
                 4.69
@@ -1394,10 +1416,10 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </span>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <div
-                className="emotion-332 emotion-155"
+                className="emotion-344 emotion-167"
                 color="#000000"
                 data-testid="colorCard-swatch"
               >
@@ -1405,16 +1427,16 @@ exports[`ColorMatrix renders without crashing 1`] = `
               </div>
             </div>
             <div
-              className="emotion-152 emotion-153"
+              className="emotion-160 emotion-161"
             >
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Small: 
                 AA
               </span>
               <span
-                className="emotion-178 emotion-151"
+                className="emotion-190 emotion-163"
               >
                 Large: 
                 AAA

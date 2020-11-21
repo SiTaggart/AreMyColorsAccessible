@@ -2,7 +2,15 @@
 
 exports[`Container renders without crashing 1`] = `
 .emotion-0 {
+  color: ;
+  padding-top: ;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .emotion-0 {
+    min-height: ;
+  }
 }
 
 <main
@@ -16,8 +24,15 @@ exports[`Container renders without crashing 1`] = `
 
 exports[`Container should set about class with about variant 1`] = `
 .emotion-0 {
+  color: ;
   padding-top: 3rem;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .emotion-0 {
+    min-height: ;
+  }
 }
 
 <main
@@ -31,10 +46,12 @@ exports[`Container should set about class with about variant 1`] = `
 
 exports[`Container should set home class with home variant 1`] = `
 .emotion-0 {
+  color: ;
+  padding-top: ;
   position: relative;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .emotion-0 {
     min-height: 85%;
   }
@@ -52,7 +69,14 @@ exports[`Container should set home class with home variant 1`] = `
 exports[`Container should set palette class with palette variant 1`] = `
 .emotion-0 {
   color: #343334;
+  padding-top: ;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .emotion-0 {
+    min-height: ;
+  }
 }
 
 <main
