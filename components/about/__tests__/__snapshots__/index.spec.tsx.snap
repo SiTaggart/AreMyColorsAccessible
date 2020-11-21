@@ -1,25 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`About renders without crashing 1`] = `
-.emotion-40 {
+.emotion-0 {
+  color: ;
   padding-top: 3rem;
   position: relative;
 }
 
-.emotion-38 {
+@media (min-width: 768px) {
+  .emotion-0 {
+    min-height: ;
+  }
+}
+
+.emotion-2 {
   margin: 0 auto;
   max-width: 1150px;
   padding: 0 1rem;
 }
 
-.emotion-0 {
+.emotion-4 {
   font-weight: 700;
   font-size: 2.4rem;
   text-align: center;
 }
 
-@media (min-width:768px) {
-  .emotion-0 {
+@media (min-width: 768px) {
+  .emotion-4 {
     font-size: 3rem;
   }
 }
@@ -28,7 +35,7 @@ exports[`About renders without crashing 1`] = `
   margin: 3rem 1rem;
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .emotion-8 {
     margin: 3rem -3rem;
   }
@@ -44,23 +51,23 @@ exports[`About renders without crashing 1`] = `
   font-style: normal;
 }
 
-.emotion-4 {
+.emotion-12 {
   color: currentColor;
 }
 
 <main
-  className="emotion-40 emotion-41"
+  className="emotion-0 emotion-1"
 >
   <div
-    className="emotion-38 emotion-39"
+    className="emotion-2 emotion-3"
   >
     <h1
-      className="emotion-0 emotion-1"
+      className="emotion-4 emotion-5"
     >
       Are my Colours Accessible?
     </h1>
     <p
-      className="emotion-2 emotion-3"
+      className="emotion-6 emotion-7"
     >
       Why? Well, apart from being an excuse to use a domain name, colour contrast and the use of colour is extremely important for certain groups of people with varying levels of visional impairment.
     </p>
@@ -68,7 +75,7 @@ exports[`About renders without crashing 1`] = `
       className="emotion-8 emotion-9"
     >
       <p
-        className="emotion-2 emotion-3"
+        className="emotion-6 emotion-7"
       >
         Information and user interface components must be presentable to users in ways they can perceive. 
         <br />
@@ -76,7 +83,7 @@ exports[`About renders without crashing 1`] = `
           –
            
           <a
-            className="emotion-4 emotion-5"
+            className="emotion-12 emotion-13"
             href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#perceivable"
           >
             Principle 1: Perceivable
@@ -89,7 +96,7 @@ exports[`About renders without crashing 1`] = `
       className="emotion-8 emotion-9"
     >
       <p
-        className="emotion-2 emotion-3"
+        className="emotion-6 emotion-7"
       >
         Make it easier for users to see and hear content including separating foreground from background.
         <br />
@@ -97,7 +104,7 @@ exports[`About renders without crashing 1`] = `
           –
            
           <a
-            className="emotion-4 emotion-5"
+            className="emotion-12 emotion-13"
             href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast"
           >
             Guideline 1.4 Distinguishable:
@@ -111,7 +118,7 @@ exports[`About renders without crashing 1`] = `
       className="emotion-8 emotion-9"
     >
       <p
-        className="emotion-2 emotion-3"
+        className="emotion-6 emotion-7"
       >
         The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following: (Level AA).
         <br />
@@ -119,7 +126,7 @@ exports[`About renders without crashing 1`] = `
           –
            
           <a
-            className="emotion-4 emotion-5"
+            className="emotion-12 emotion-13"
             href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast"
           >
             1.4.3 Contrast (Minimum):
@@ -130,7 +137,7 @@ exports[`About renders without crashing 1`] = `
       </p>
     </blockquote>
     <p
-      className="emotion-2 emotion-3"
+      className="emotion-6 emotion-7"
     >
       For text-based information to be perceivable by all users regardless of level of sight and to safely meet WCAG 2.0, AA requirements, you should aim for a minimum contrast ratio of 4.5:1 for all text content. There are 2 exceptions to this; large text that is 18pt or 24px and above or 
       <strong>
@@ -139,12 +146,12 @@ exports[`About renders without crashing 1`] = `
        text that is 14pt or 18px and above, where the minimum contrast ratio can be 3.0:1
     </p>
     <p
-      className="emotion-2 emotion-3"
+      className="emotion-6 emotion-7"
     >
       Building upon and heavily influenced by the excellent
        
       <a
-        className="emotion-4 emotion-5"
+        className="emotion-12 emotion-13"
         href="http://jxnblk.com/colorable/"
       >
         Colorable
@@ -152,16 +159,16 @@ exports[`About renders without crashing 1`] = `
       , I wanted more context around the result. When you share the outcome with your colleagues, all the results, rules and what you’re aiming for, is easily understandable for when you have those awkward conversations with designers and marketers.
     </p>
     <p
-      className="emotion-2 emotion-3"
+      className="emotion-6 emotion-7"
     >
       Accessibility doesn’t have to be ugly.
     </p>
     <p
-      className="emotion-2 emotion-3"
+      className="emotion-6 emotion-7"
     >
       Built by 
       <a
-        className="emotion-4 emotion-5"
+        className="emotion-12 emotion-13"
         href="http://www.simontaggart.com"
       >
         Simon Taggart
@@ -169,7 +176,7 @@ exports[`About renders without crashing 1`] = `
       ,
        
       <a
-        className="emotion-4 emotion-5"
+        className="emotion-12 emotion-13"
         href="https://github.com/SiTaggart/AreMyColorsAccessible"
       >
         code on GitHub
@@ -177,7 +184,7 @@ exports[`About renders without crashing 1`] = `
       ,
        
       <a
-        className="emotion-4 emotion-5"
+        className="emotion-12 emotion-13"
         href="https://zeit.co/now"
       >
         hosted on Now

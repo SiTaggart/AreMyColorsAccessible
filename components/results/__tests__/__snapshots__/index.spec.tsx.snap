@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Results renders without crashing 1`] = `
-.emotion-26 {
+.emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -10,6 +10,7 @@ exports[`Results renders without crashing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -17,46 +18,46 @@ exports[`Results renders without crashing 1`] = `
   text-align: center;
 }
 
-@media (min-width:768px) {
-  .emotion-26 {
+@media (min-width: 768px) {
+  .emotion-0 {
     margin-bottom: 3rem;
   }
 }
 
-@media (min-width:1024px) {
-  .emotion-26 {
+@media (min-width: 1024px) {
+  .emotion-0 {
     margin-bottom: 5rem;
   }
 }
 
-.emotion-0 {
+.emotion-2 {
   font-weight: 700;
   font-size: 20vw;
   margin: 3rem 0;
   width: 100%;
 }
 
-@media (min-width:768px) {
-  .emotion-0 {
+@media (min-width: 768px) {
+  .emotion-2 {
     font-size: 18vw;
     margin: 4rem 0;
   }
 }
 
-@media (min-width:1024px) {
-  .emotion-0 {
+@media (min-width: 1024px) {
+  .emotion-2 {
     font-size: 15vw;
     margin: 5rem 0;
   }
 }
 
-@media (min-width:1480px) {
-  .emotion-0 {
+@media (min-width: 1480px) {
+  .emotion-2 {
     font-size: 9vw;
   }
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -64,85 +65,85 @@ exports[`Results renders without crashing 1`] = `
   width: 100%;
 }
 
-@media (min-width:480px) {
-  .emotion-6 {
+@media (min-width: 480px) {
+  .emotion-4 {
     width: 50%;
   }
 }
 
-@media (min-width:1024px) {
-  .emotion-6 {
+@media (min-width: 1024px) {
+  .emotion-4 {
     width: 25%;
   }
 }
 
-.emotion-2 {
+.emotion-6 {
   font-size: 14pt;
   margin: 0;
 }
 
-.emotion-4 {
+.emotion-8 {
   font-weight: 700;
   font-size: 10vw;
   margin: 0;
 }
 
-@media (min-width:768px) {
-  .emotion-4 {
+@media (min-width: 768px) {
+  .emotion-8 {
     font-size: 6vw;
   }
 }
 
-@media (min-width:1024px) {
-  .emotion-4 {
+@media (min-width: 1024px) {
+  .emotion-8 {
     font-size: 4vw;
   }
 }
 
-@media (min-width:1480px) {
-  .emotion-4 {
+@media (min-width: 1480px) {
+  .emotion-8 {
     font-size: 3vw;
   }
 }
 
-.emotion-14 {
+.emotion-18 {
   font-size: 18pt;
   margin: 0;
 }
 
 <div
-  className="emotion-26 emotion-27"
+  className="emotion-0 emotion-1"
 >
   <h1
     aria-atomic="true"
     aria-live="polite"
-    className="emotion-0 emotion-1"
+    className="emotion-2 emotion-3"
     data-testid="contrastResults-heading"
   >
     Yup
   </h1>
   <div
-    className="emotion-6 emotion-7"
+    className="emotion-4 emotion-5"
   >
     <p
-      className="emotion-2 emotion-3"
+      className="emotion-6 emotion-7"
     >
       Small Text
       <br />
       AA: 4.5 AAA: 7.0
     </p>
     <h2
-      className="emotion-4 emotion-5"
+      className="emotion-8 emotion-9"
       data-testid="contrastResult-rating-small"
     >
       AA
     </h2>
   </div>
   <div
-    className="emotion-6 emotion-7"
+    className="emotion-4 emotion-5"
   >
     <p
-      className="emotion-2 emotion-3"
+      className="emotion-6 emotion-7"
     >
       <strong>
         Bold Text 18px and over 
@@ -151,39 +152,39 @@ exports[`Results renders without crashing 1`] = `
       </strong>
     </p>
     <h2
-      className="emotion-4 emotion-5"
+      className="emotion-8 emotion-9"
       data-testid="contrastResult-rating-bold"
     >
       AAA
     </h2>
   </div>
   <div
-    className="emotion-6 emotion-7"
+    className="emotion-4 emotion-5"
   >
     <p
-      className="emotion-14 emotion-3"
+      className="emotion-18 emotion-7"
     >
       Large Text 24px and over 
       <br />
       AA: 3.0 AAA: 4.5
     </p>
     <h2
-      className="emotion-4 emotion-5"
+      className="emotion-8 emotion-9"
       data-testid="contrastResult-rating-large"
     >
       AAA
     </h2>
   </div>
   <div
-    className="emotion-6 emotion-7"
+    className="emotion-4 emotion-5"
   >
     <p
-      className="emotion-2 emotion-3"
+      className="emotion-6 emotion-7"
     >
       Contrast Ratio
     </p>
     <h2
-      className="emotion-4 emotion-5"
+      className="emotion-8 emotion-9"
     >
       4.66 : 1
     </h2>
@@ -192,7 +193,7 @@ exports[`Results renders without crashing 1`] = `
 `;
 
 exports[`Results should set the font color of seriously? to #343334 on light backgrounds 1`] = `
-.emotion-30 {
+.emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -201,6 +202,7 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -208,46 +210,46 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
   text-align: center;
 }
 
-@media (min-width:768px) {
-  .emotion-30 {
+@media (min-width: 768px) {
+  .emotion-0 {
     margin-bottom: 3rem;
   }
 }
 
-@media (min-width:1024px) {
-  .emotion-30 {
+@media (min-width: 1024px) {
+  .emotion-0 {
     margin-bottom: 5rem;
   }
 }
 
-.emotion-0 {
+.emotion-2 {
   font-weight: 700;
   font-size: 20vw;
   margin: 3rem 0;
   width: 100%;
 }
 
-@media (min-width:768px) {
-  .emotion-0 {
+@media (min-width: 768px) {
+  .emotion-2 {
     font-size: 18vw;
     margin: 4rem 0;
   }
 }
 
-@media (min-width:1024px) {
-  .emotion-0 {
+@media (min-width: 1024px) {
+  .emotion-2 {
     font-size: 15vw;
     margin: 5rem 0;
   }
 }
 
-@media (min-width:1480px) {
-  .emotion-0 {
+@media (min-width: 1480px) {
+  .emotion-2 {
     font-size: 9vw;
   }
 }
 
-.emotion-6 {
+.emotion-4 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -255,85 +257,85 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
   width: 100%;
 }
 
-@media (min-width:480px) {
-  .emotion-6 {
+@media (min-width: 480px) {
+  .emotion-4 {
     width: 50%;
   }
 }
 
-@media (min-width:1024px) {
-  .emotion-6 {
+@media (min-width: 1024px) {
+  .emotion-4 {
     width: 25%;
   }
 }
 
-.emotion-2 {
+.emotion-6 {
   font-size: 14pt;
   margin: 0;
 }
 
-.emotion-4 {
+.emotion-8 {
   font-weight: 700;
   font-size: 10vw;
   margin: 0;
 }
 
-@media (min-width:768px) {
-  .emotion-4 {
+@media (min-width: 768px) {
+  .emotion-8 {
     font-size: 6vw;
   }
 }
 
-@media (min-width:1024px) {
-  .emotion-4 {
+@media (min-width: 1024px) {
+  .emotion-8 {
     font-size: 4vw;
   }
 }
 
-@media (min-width:1480px) {
-  .emotion-4 {
+@media (min-width: 1480px) {
+  .emotion-8 {
     font-size: 3vw;
   }
 }
 
-.emotion-14 {
+.emotion-18 {
   font-size: 18pt;
   margin: 0;
 }
 
 <div
-  className="emotion-30 emotion-31"
+  className="emotion-0 emotion-1"
 >
   <h1
     aria-atomic="true"
     aria-live="polite"
-    className="emotion-0 emotion-1"
+    className="emotion-2 emotion-3"
     data-testid="contrastResults-heading"
   >
     Nope
   </h1>
   <div
-    className="emotion-6 emotion-7"
+    className="emotion-4 emotion-5"
   >
     <p
-      className="emotion-2 emotion-3"
+      className="emotion-6 emotion-7"
     >
       Small Text
       <br />
       AA: 4.5 AAA: 7.0
     </p>
     <h2
-      className="emotion-4 emotion-5"
+      className="emotion-8 emotion-9"
       data-testid="contrastResult-rating-small"
     >
       Fail
     </h2>
   </div>
   <div
-    className="emotion-6 emotion-7"
+    className="emotion-4 emotion-5"
   >
     <p
-      className="emotion-2 emotion-3"
+      className="emotion-6 emotion-7"
     >
       <strong>
         Bold Text 18px and over 
@@ -342,45 +344,45 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
       </strong>
     </p>
     <h2
-      className="emotion-4 emotion-5"
+      className="emotion-8 emotion-9"
       data-testid="contrastResult-rating-bold"
     >
       Fail
     </h2>
   </div>
   <div
-    className="emotion-6 emotion-7"
+    className="emotion-4 emotion-5"
   >
     <p
-      className="emotion-14 emotion-3"
+      className="emotion-18 emotion-7"
     >
       Large Text 24px and over 
       <br />
       AA: 3.0 AAA: 4.5
     </p>
     <h2
-      className="emotion-4 emotion-5"
+      className="emotion-8 emotion-9"
       data-testid="contrastResult-rating-large"
     >
       Fail
     </h2>
   </div>
   <div
-    className="emotion-6 emotion-7"
+    className="emotion-4 emotion-5"
   >
     <p
-      className="emotion-2 emotion-3"
+      className="emotion-6 emotion-7"
     >
       Contrast Ratio
     </p>
     <h2
-      className="emotion-4 emotion-5"
+      className="emotion-8 emotion-9"
     >
       1.2 : 1
     </h2>
   </div>
   <div
-    className="emotion-6 emotion-7"
+    className="emotion-4 emotion-5"
     style={
       Object {
         "color": "#343334",
@@ -388,7 +390,7 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
     }
   >
     <h2
-      className="emotion-4 emotion-5"
+      className="emotion-8 emotion-9"
       data-testid="contrastResults-seriously"
     >
       Seriously?

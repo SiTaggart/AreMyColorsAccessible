@@ -1,53 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppContainer changes the footer link colors based on isLight prop 1`] = `
-@media (min-width:768px) {
-  .emotion-18 {
+@media (min-width: 768px) {
+  .emotion-0 {
     height: 100%;
   }
 }
 
-.emotion-16 {
+.emotion-2 {
   padding: 5rem 0 1rem;
   text-align: center;
   width: 100%;
 }
 
-.emotion-12 {
+.emotion-6 {
   list-style: none;
   margin: 0 0 1rem;
   padding: 0;
 }
 
-.emotion-2 {
+.emotion-8 {
   display: inline-block;
   padding: 0 1rem;
 }
 
-.emotion-0 {
+.emotion-10 {
   color: currentColor;
   -webkit-transition: color 400ms ease-in;
   transition: color 400ms ease-in;
 }
 
 <div
-  className="emotion-18 emotion-19"
+  className="emotion-0 emotion-1"
 >
   <div />
   <footer
-    className="emotion-16 emotion-17"
+    className="emotion-2 emotion-3"
   >
     <nav
-      className="emotion-14 emotion-15"
+      className="emotion-4 emotion-5"
     >
       <ul
-        className="emotion-12 emotion-13"
+        className="emotion-6 emotion-7"
       >
         <li
-          className="emotion-2 emotion-3"
+          className="emotion-8 emotion-9"
         >
           <a
-            className="emotion-0 emotion-1"
+            className="emotion-10 emotion-11"
             href="/"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -61,10 +61,10 @@ exports[`AppContainer changes the footer link colors based on isLight prop 1`] =
           </a>
         </li>
         <li
-          className="emotion-2 emotion-3"
+          className="emotion-8 emotion-9"
         >
           <a
-            className="emotion-0 emotion-1"
+            className="emotion-10 emotion-11"
             href="/palette"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -78,10 +78,10 @@ exports[`AppContainer changes the footer link colors based on isLight prop 1`] =
           </a>
         </li>
         <li
-          className="emotion-2 emotion-3"
+          className="emotion-8 emotion-9"
         >
           <a
-            className="emotion-0 emotion-1"
+            className="emotion-10 emotion-11"
             href="/about"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -101,53 +101,53 @@ exports[`AppContainer changes the footer link colors based on isLight prop 1`] =
 `;
 
 exports[`AppContainer renders without crashing 1`] = `
-@media (min-width:768px) {
-  .emotion-18 {
+@media (min-width: 768px) {
+  .emotion-0 {
     height: 100%;
   }
 }
 
-.emotion-16 {
+.emotion-2 {
   padding: 5rem 0 1rem;
   text-align: center;
   width: 100%;
 }
 
-.emotion-12 {
+.emotion-6 {
   list-style: none;
   margin: 0 0 1rem;
   padding: 0;
 }
 
-.emotion-2 {
+.emotion-8 {
   display: inline-block;
   padding: 0 1rem;
 }
 
-.emotion-0 {
+.emotion-10 {
   color: currentColor;
   -webkit-transition: color 400ms ease-in;
   transition: color 400ms ease-in;
 }
 
 <div
-  className="emotion-18 emotion-19"
+  className="emotion-0 emotion-1"
 >
   <div />
   <footer
-    className="emotion-16 emotion-17"
+    className="emotion-2 emotion-3"
   >
     <nav
-      className="emotion-14 emotion-15"
+      className="emotion-4 emotion-5"
     >
       <ul
-        className="emotion-12 emotion-13"
+        className="emotion-6 emotion-7"
       >
         <li
-          className="emotion-2 emotion-3"
+          className="emotion-8 emotion-9"
         >
           <a
-            className="emotion-0 emotion-1"
+            className="emotion-10 emotion-11"
             href="/"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -161,10 +161,10 @@ exports[`AppContainer renders without crashing 1`] = `
           </a>
         </li>
         <li
-          className="emotion-2 emotion-3"
+          className="emotion-8 emotion-9"
         >
           <a
-            className="emotion-0 emotion-1"
+            className="emotion-10 emotion-11"
             href="/palette"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -178,10 +178,10 @@ exports[`AppContainer renders without crashing 1`] = `
           </a>
         </li>
         <li
-          className="emotion-2 emotion-3"
+          className="emotion-8 emotion-9"
         >
           <a
-            className="emotion-0 emotion-1"
+            className="emotion-10 emotion-11"
             href="/about"
             onClick={[Function]}
             onMouseEnter={[Function]}

@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const normalize = require('normalize.css');
 

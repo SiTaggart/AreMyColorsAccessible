@@ -1,23 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home renders without crashing 1`] = `
-.emotion-110 {
+.emotion-0 {
+  color: ;
+  padding-top: ;
   position: relative;
 }
 
-@media (min-width:768px) {
-  .emotion-110 {
+@media (min-width: 768px) {
+  .emotion-0 {
     min-height: 85%;
   }
 }
 
-.emotion-28 {
+.emotion-2 {
   margin: 0 auto;
   max-width: 1150px;
   padding: 0 1rem;
 }
 
-.emotion-26 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -26,6 +28,7 @@ exports[`Home renders without crashing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -33,46 +36,46 @@ exports[`Home renders without crashing 1`] = `
   text-align: center;
 }
 
-@media (min-width:768px) {
-  .emotion-26 {
+@media (min-width: 768px) {
+  .emotion-4 {
     margin-bottom: 3rem;
   }
 }
 
-@media (min-width:1024px) {
-  .emotion-26 {
+@media (min-width: 1024px) {
+  .emotion-4 {
     margin-bottom: 5rem;
   }
 }
 
-.emotion-0 {
+.emotion-6 {
   font-weight: 700;
   font-size: 20vw;
   margin: 3rem 0;
   width: 100%;
 }
 
-@media (min-width:768px) {
-  .emotion-0 {
+@media (min-width: 768px) {
+  .emotion-6 {
     font-size: 18vw;
     margin: 4rem 0;
   }
 }
 
-@media (min-width:1024px) {
-  .emotion-0 {
+@media (min-width: 1024px) {
+  .emotion-6 {
     font-size: 15vw;
     margin: 5rem 0;
   }
 }
 
-@media (min-width:1480px) {
-  .emotion-0 {
+@media (min-width: 1480px) {
+  .emotion-6 {
     font-size: 9vw;
   }
 }
 
-.emotion-6 {
+.emotion-8 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -80,62 +83,63 @@ exports[`Home renders without crashing 1`] = `
   width: 100%;
 }
 
-@media (min-width:480px) {
-  .emotion-6 {
+@media (min-width: 480px) {
+  .emotion-8 {
     width: 50%;
   }
 }
 
-@media (min-width:1024px) {
-  .emotion-6 {
+@media (min-width: 1024px) {
+  .emotion-8 {
     width: 25%;
   }
 }
 
-.emotion-2 {
+.emotion-10 {
   font-size: 14pt;
   margin: 0;
 }
 
-.emotion-4 {
+.emotion-12 {
   font-weight: 700;
   font-size: 10vw;
   margin: 0;
 }
 
-@media (min-width:768px) {
-  .emotion-4 {
+@media (min-width: 768px) {
+  .emotion-12 {
     font-size: 6vw;
   }
 }
 
-@media (min-width:1024px) {
-  .emotion-4 {
+@media (min-width: 1024px) {
+  .emotion-12 {
     font-size: 4vw;
   }
 }
 
-@media (min-width:1480px) {
-  .emotion-4 {
+@media (min-width: 1480px) {
+  .emotion-12 {
     font-size: 3vw;
   }
 }
 
-.emotion-14 {
+.emotion-22 {
   font-size: 18pt;
   margin: 0;
 }
 
-.emotion-108 {
+.emotion-32 {
   margin: 0 auto;
   max-width: 1200px;
 }
 
-.emotion-106 {
+.emotion-34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -146,13 +150,13 @@ exports[`Home renders without crashing 1`] = `
   transition: color 400ms ease-out;
 }
 
-.emotion-66 {
+.emotion-36 {
   padding: 1rem;
   width: 100%;
 }
 
-@media (min-width:768px) {
-  .emotion-66 {
+@media (min-width: 768px) {
+  .emotion-36 {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -160,45 +164,55 @@ exports[`Home renders without crashing 1`] = `
   }
 }
 
-.emotion-30 {
+.emotion-38 {
   display: inline-block;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   width: 100%;
 }
 
-.emotion-32 {
-  background: rgba(255,255,255,0.1);
+.emotion-40 {
+  background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
+  border-color: ;
   border-radius: 3px;
+  color: ;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
   width: 100%;
 }
 
-.emotion-64 {
+.emotion-40:focus {
+  border-color: ;
+  box-shadow: ;
+}
+
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-@media (min-width:1024px) {
-  .emotion-64 {
+@media (min-width: 1024px) {
+  .emotion-42 {
     margin: 0 -0.5rem;
   }
 }
 
-.emotion-42 {
+.emotion-44 {
+  display: ;
+  padding: ;
   width: 100%;
 }
 
-@media (min-width:1024px) {
-  .emotion-42 {
+@media (min-width: 1024px) {
+  .emotion-44 {
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
@@ -207,7 +221,13 @@ exports[`Home renders without crashing 1`] = `
   }
 }
 
-.emotion-38 {
+.emotion-50 {
+  -webkit-flex: ;
+  -ms-flex: ;
+  flex: ;
+}
+
+.emotion-52 {
   -webkit-appearance: none;
   background: transparent;
   border-radius: 2px;
@@ -217,7 +237,7 @@ exports[`Home renders without crashing 1`] = `
   width: 100%;
 }
 
-.emotion-38::-webkit-slider-runnable-track {
+.emotion-52::-webkit-slider-runnable-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -229,7 +249,7 @@ exports[`Home renders without crashing 1`] = `
   border-radius: 5px;
 }
 
-.emotion-38::-webkit-slider-thumb {
+.emotion-52::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -241,11 +261,11 @@ exports[`Home renders without crashing 1`] = `
   margin-top: -9px;
 }
 
-.emotion-38:focus::-webkit-slider-runnable-track {
+.emotion-52:focus::-webkit-slider-runnable-track {
   background: currentColor;
 }
 
-.emotion-38::-moz-range-track {
+.emotion-52::-moz-range-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -257,7 +277,7 @@ exports[`Home renders without crashing 1`] = `
   border-radius: 5px;
 }
 
-.emotion-38::-moz-range-thumb {
+.emotion-52::-moz-range-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -267,7 +287,7 @@ exports[`Home renders without crashing 1`] = `
   cursor: pointer;
 }
 
-.emotion-38::-ms-track {
+.emotion-52::-ms-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -279,21 +299,21 @@ exports[`Home renders without crashing 1`] = `
   color: transparent;
 }
 
-.emotion-38::-ms-fill-lower {
+.emotion-52::-ms-fill-lower {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-38::-ms-fill-upper {
+.emotion-52::-ms-fill-upper {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-38::-ms-thumb {
+.emotion-52::-ms-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -303,53 +323,53 @@ exports[`Home renders without crashing 1`] = `
   cursor: pointer;
 }
 
-.emotion-38:focus::-ms-fill-lower {
+.emotion-52:focus::-ms-fill-lower {
   background: currentColor;
 }
 
-.emotion-38:focus::-ms-fill-upper {
+.emotion-52:focus::-ms-fill-upper {
   background: currentColor;
 }
 
 <main
-  className="emotion-110 emotion-111"
+  className="emotion-0 emotion-1"
 >
   <div
-    className="emotion-28 emotion-29"
+    className="emotion-2 emotion-3"
   >
     <div
-      className="emotion-26 emotion-27"
+      className="emotion-4 emotion-5"
     >
       <h1
         aria-atomic="true"
         aria-live="polite"
-        className="emotion-0 emotion-1"
+        className="emotion-6 emotion-7"
         data-testid="contrastResults-heading"
       >
         Yup
       </h1>
       <div
-        className="emotion-6 emotion-7"
+        className="emotion-8 emotion-9"
       >
         <p
-          className="emotion-2 emotion-3"
+          className="emotion-10 emotion-11"
         >
           Small Text
           <br />
           AA: 4.5 AAA: 7.0
         </p>
         <h2
-          className="emotion-4 emotion-5"
+          className="emotion-12 emotion-13"
           data-testid="contrastResult-rating-small"
         >
           AAA
         </h2>
       </div>
       <div
-        className="emotion-6 emotion-7"
+        className="emotion-8 emotion-9"
       >
         <p
-          className="emotion-2 emotion-3"
+          className="emotion-10 emotion-11"
         >
           <strong>
             Bold Text 18px and over 
@@ -358,39 +378,39 @@ exports[`Home renders without crashing 1`] = `
           </strong>
         </p>
         <h2
-          className="emotion-4 emotion-5"
+          className="emotion-12 emotion-13"
           data-testid="contrastResult-rating-bold"
         >
           AAA
         </h2>
       </div>
       <div
-        className="emotion-6 emotion-7"
+        className="emotion-8 emotion-9"
       >
         <p
-          className="emotion-14 emotion-3"
+          className="emotion-22 emotion-11"
         >
           Large Text 24px and over 
           <br />
           AA: 3.0 AAA: 4.5
         </p>
         <h2
-          className="emotion-4 emotion-5"
+          className="emotion-12 emotion-13"
           data-testid="contrastResult-rating-large"
         >
           AAA
         </h2>
       </div>
       <div
-        className="emotion-6 emotion-7"
+        className="emotion-8 emotion-9"
       >
         <p
-          className="emotion-2 emotion-3"
+          className="emotion-10 emotion-11"
         >
           Contrast Ratio
         </p>
         <h2
-          className="emotion-4 emotion-5"
+          className="emotion-12 emotion-13"
         >
           21 : 1
         </h2>
@@ -398,10 +418,10 @@ exports[`Home renders without crashing 1`] = `
     </div>
   </div>
   <div
-    className="emotion-108 emotion-29"
+    className="emotion-32 emotion-3"
   >
     <div
-      className="emotion-106 emotion-107"
+      className="emotion-34 emotion-35"
       data-testid="color-input-form"
       style={
         Object {
@@ -410,17 +430,17 @@ exports[`Home renders without crashing 1`] = `
       }
     >
       <div
-        className="emotion-66 emotion-67"
+        className="emotion-36 emotion-37"
       >
         <label
-          className="emotion-30 emotion-31"
+          className="emotion-38 emotion-39"
           htmlFor="textColor"
         >
           Text Color
         </label>
         <input
           autoComplete="off"
-          className="emotion-32 emotion-33"
+          className="emotion-40 emotion-41"
           data-testid="textColor"
           id="textColor"
           onChange={[Function]}
@@ -434,27 +454,27 @@ exports[`Home renders without crashing 1`] = `
           value="#fff"
         />
         <div
-          className="emotion-64 emotion-65"
+          className="emotion-42 emotion-43"
           data-testid="form-hsl-sliders"
         >
           <div
-            className="emotion-42 emotion-43"
+            className="emotion-44 emotion-45"
           >
             <div
-              className="emotion-36 emotion-37"
+              className="emotion-46 emotion-47"
             >
               <label
-                className="emotion-30 emotion-31"
+                className="emotion-38 emotion-39"
                 htmlFor="textColor-hsl-Hue"
               >
                 Hue 0°
               </label>
             </div>
             <div
-              className="emotion-40 emotion-41"
+              className="emotion-50 emotion-51"
             >
               <input
-                className="emotion-38 emotion-39"
+                className="emotion-52 emotion-53"
                 data-testid="textColor-hsl-Hue"
                 id="textColor-hsl-Hue"
                 max={360}
@@ -467,23 +487,23 @@ exports[`Home renders without crashing 1`] = `
             </div>
           </div>
           <div
-            className="emotion-42 emotion-43"
+            className="emotion-44 emotion-45"
           >
             <div
-              className="emotion-36 emotion-37"
+              className="emotion-46 emotion-47"
             >
               <label
-                className="emotion-30 emotion-31"
+                className="emotion-38 emotion-39"
                 htmlFor="textColor-hsl-Saturation"
               >
                 Saturation 0%
               </label>
             </div>
             <div
-              className="emotion-40 emotion-41"
+              className="emotion-50 emotion-51"
             >
               <input
-                className="emotion-38 emotion-39"
+                className="emotion-52 emotion-53"
                 data-testid="textColor-hsl-Saturation"
                 id="textColor-hsl-Saturation"
                 max={100}
@@ -496,23 +516,23 @@ exports[`Home renders without crashing 1`] = `
             </div>
           </div>
           <div
-            className="emotion-42 emotion-43"
+            className="emotion-44 emotion-45"
           >
             <div
-              className="emotion-36 emotion-37"
+              className="emotion-46 emotion-47"
             >
               <label
-                className="emotion-30 emotion-31"
+                className="emotion-38 emotion-39"
                 htmlFor="textColor-hsl-Lightness"
               >
                 Lightness 100%
               </label>
             </div>
             <div
-              className="emotion-40 emotion-41"
+              className="emotion-50 emotion-51"
             >
               <input
-                className="emotion-38 emotion-39"
+                className="emotion-52 emotion-53"
                 data-testid="textColor-hsl-Lightness"
                 id="textColor-hsl-Lightness"
                 max={100}
@@ -527,17 +547,17 @@ exports[`Home renders without crashing 1`] = `
         </div>
       </div>
       <div
-        className="emotion-66 emotion-67"
+        className="emotion-36 emotion-37"
       >
         <label
-          className="emotion-30 emotion-31"
+          className="emotion-38 emotion-39"
           htmlFor="background"
         >
           Background
         </label>
         <input
           autoComplete="off"
-          className="emotion-32 emotion-33"
+          className="emotion-40 emotion-41"
           data-testid="background"
           id="background"
           onChange={[Function]}
@@ -551,27 +571,27 @@ exports[`Home renders without crashing 1`] = `
           value="#000"
         />
         <div
-          className="emotion-64 emotion-65"
+          className="emotion-42 emotion-43"
           data-testid="form-hsl-sliders"
         >
           <div
-            className="emotion-42 emotion-43"
+            className="emotion-44 emotion-45"
           >
             <div
-              className="emotion-36 emotion-37"
+              className="emotion-46 emotion-47"
             >
               <label
-                className="emotion-30 emotion-31"
+                className="emotion-38 emotion-39"
                 htmlFor="background-hsl-Hue"
               >
                 Hue 0°
               </label>
             </div>
             <div
-              className="emotion-40 emotion-41"
+              className="emotion-50 emotion-51"
             >
               <input
-                className="emotion-38 emotion-39"
+                className="emotion-52 emotion-53"
                 data-testid="background-hsl-Hue"
                 id="background-hsl-Hue"
                 max={360}
@@ -584,23 +604,23 @@ exports[`Home renders without crashing 1`] = `
             </div>
           </div>
           <div
-            className="emotion-42 emotion-43"
+            className="emotion-44 emotion-45"
           >
             <div
-              className="emotion-36 emotion-37"
+              className="emotion-46 emotion-47"
             >
               <label
-                className="emotion-30 emotion-31"
+                className="emotion-38 emotion-39"
                 htmlFor="background-hsl-Saturation"
               >
                 Saturation 0%
               </label>
             </div>
             <div
-              className="emotion-40 emotion-41"
+              className="emotion-50 emotion-51"
             >
               <input
-                className="emotion-38 emotion-39"
+                className="emotion-52 emotion-53"
                 data-testid="background-hsl-Saturation"
                 id="background-hsl-Saturation"
                 max={100}
@@ -613,23 +633,23 @@ exports[`Home renders without crashing 1`] = `
             </div>
           </div>
           <div
-            className="emotion-42 emotion-43"
+            className="emotion-44 emotion-45"
           >
             <div
-              className="emotion-36 emotion-37"
+              className="emotion-46 emotion-47"
             >
               <label
-                className="emotion-30 emotion-31"
+                className="emotion-38 emotion-39"
                 htmlFor="background-hsl-Lightness"
               >
                 Lightness 0%
               </label>
             </div>
             <div
-              className="emotion-40 emotion-41"
+              className="emotion-50 emotion-51"
             >
               <input
-                className="emotion-38 emotion-39"
+                className="emotion-52 emotion-53"
                 data-testid="background-hsl-Lightness"
                 id="background-hsl-Lightness"
                 max={100}

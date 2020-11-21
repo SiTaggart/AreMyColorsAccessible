@@ -6,7 +6,7 @@ exports[`FormControl renders without crashing 1`] = `
   width: 100%;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .emotion-0 {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;

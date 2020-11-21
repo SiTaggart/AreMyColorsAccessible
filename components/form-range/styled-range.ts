@@ -1,6 +1,6 @@
-import css, { SerializedStyles } from '@emotion/css';
-import { lighten } from 'polished';
+import { css, SerializedStyles } from '@emotion/react';
 import styled from '@emotion/styled';
+import { lighten } from 'polished';
 
 const trackColor = 'currentColor';
 const thumbColor = 'currentColor';
