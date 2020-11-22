@@ -8804,10 +8804,10 @@ normalize.css@8.0.1:
   resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
   integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
 
-now@21.0.0:
-  version "21.0.0"
-  resolved "https://registry.yarnpkg.com/now/-/now-21.0.0.tgz#e61e9b520d420ccca5173ffb49bd996c5c7f517b"
-  integrity sha512-Fx0OUvMItg/UR+/sVnXq1Nqd+AQ0VFXGws0BXdSZvT+Nah6lN0lqYbDrmxEpK+CU+aZrrp+1isHqh/lSY2DdGA==
+now@21.0.1:
+  version "21.0.1"
+  resolved "https://registry.yarnpkg.com/now/-/now-21.0.1.tgz#59d1c61b1c470657b49105c037bf503212d7006a"
+  integrity sha512-5QlbhlL7NkNCYQqUgRpAnXMWyRyMZhsI2hQ7PzWfUrkSazG2RWFmXYRWbU7rAZcpB++Xt5vglqWma9LAGDPGhg==
   dependencies:
     "@vercel/build-utils" "2.6.1-canary.0"
     "@vercel/go" "1.1.6"
