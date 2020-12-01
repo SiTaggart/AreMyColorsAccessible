@@ -54,7 +54,7 @@
     "@emotion/babel-plugin": "11.0.0",
     "@emotion/eslint-plugin": "11.0.0",
     "@emotion/jest": "11.1.0",
-    "@percy/cypress": "2.3.2",
+    "@percy/cypress": "2.3.3",
     "@sitaggart/eslint-config-ts": "0.5.231",
     "@sitaggart/prettier-config": "0.2.26",
     "@testing-library/react": "11.2.2",
