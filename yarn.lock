@@ -3780,10 +3780,10 @@ collection-visit@^1.0.0:
     map-visit "^1.0.0"
     object-visit "^1.0.0"
 
-color-combos@1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/color-combos/-/color-combos-1.0.8.tgz#5db793db50b30cdd76b143728cba2be4ef2348f6"
-  integrity sha512-MMplQ3C3Q4q6JP9fbG1UxGKvOaMypBsArlVLbLCyNXGd3HayJxy7NpxcKvuH2/Dd9uLlJw4WrOEGqcwvJlkzFg==
+color-combos@1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/color-combos/-/color-combos-1.0.9.tgz#6da8c8974f9746af9024446805a0f4f05def0cf1"
+  integrity sha512-iObz9svWx1MHQ12NbHjVJ4QZExu52HyOsgi6LUOj+4XxyCgoh1b3kK/U8agV2HAc6LIP5UqWa0Vy2P6zbZa/FA==
   dependencies:
     color "3.1.3"
     lodash.uniq "4.5.0"
