@@ -1612,10 +1612,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@sitaggart/eslint-config-ts@0.5.238":
-  version "0.5.238"
-  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.238.tgz#73b1be7abb399a5c4e70452c1287724b82e62ea1"
-  integrity sha512-jREM1JiYbPpCTiK2jokREQ9DIEJuy6jMZi024sAVENtKJLOMQsAbakyMvVZt7xMCZwe8XUnSjyZ8fw4oBl5UnA==
+"@sitaggart/eslint-config-ts@0.5.239":
+  version "0.5.239"
+  resolved "https://registry.yarnpkg.com/@sitaggart/eslint-config-ts/-/eslint-config-ts-0.5.239.tgz#d2ffd8ab7c270e7935bb11944bb6e0276ecdb99b"
+  integrity sha512-+x1PT1Gh45UGDa4fR4w8ybdjJ/Fi+WWBvGy69c0QyctCOnvGYZSwMoFY6dVfBN0wEUIM+Bo74+237xkxmy1Hcw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "4.9.1"
     "@typescript-eslint/parser" "4.9.1"
@@ -1629,7 +1629,7 @@
     eslint-plugin-jest "24.1.3"
     eslint-plugin-jsx-a11y "6.4.1"
     eslint-plugin-node "11.1.0"
-    eslint-plugin-prettier "3.2.0"
+    eslint-plugin-prettier "3.3.0"
     eslint-plugin-promise "4.2.1"
     eslint-plugin-react "7.21.5"
     eslint-plugin-react-hooks "4.2.0"
@@ -5184,10 +5184,10 @@ eslint-plugin-node@11.1.0:
     resolve "^1.10.1"
     semver "^6.1.0"
 
-eslint-plugin-prettier@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.2.0.tgz#af391b2226fa0e15c96f36c733f6e9035dbd952c"
-  integrity sha512-kOUSJnFjAUFKwVxuzy6sA5yyMx6+o9ino4gCdShzBNx4eyFRudWRYKCFolKjoM40PEiuU6Cn7wBLfq3WsGg7qg==
+eslint-plugin-prettier@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.3.0.tgz#61e295349a65688ffac0b7808ef0a8244bdd8d40"
+  integrity sha512-tMTwO8iUWlSRZIwS9k7/E4vrTsfvsrcM5p1eftyuqWH25nKsz/o6/54I7jwQ/3zobISyC7wMy9ZsFwgTxOcOpQ==
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
