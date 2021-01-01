@@ -97,7 +97,11 @@
         "path": "./.next/serverless/pages/*.js",
         "maxSize": "580 kB"
       }
-    ]
+    ],
+    "ci": {
+      "trackBranches": ["main"],
+      "repoBranchBase": "main"
+    }
   },
   "husky": {
     "hooks": {
