@@ -61,7 +61,7 @@
     "@testing-library/react-hooks": "3.7.0",
     "@types/color": "3.0.1",
     "@types/jest": "25.2.3",
-    "@types/lodash": "4.14.167",
+    "@types/lodash": "4.14.168",
     "@types/next": "8.0.7",
     "@types/node": "12.19.14",
     "@types/query-string": "6.3.0",
