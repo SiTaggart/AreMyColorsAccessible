@@ -63,7 +63,7 @@
     "@types/jest": "25.2.3",
     "@types/lodash": "4.14.168",
     "@types/next": "8.0.7",
-    "@types/node": "12.19.14",
+    "@types/node": "12.19.15",
     "@types/query-string": "6.3.0",
     "@types/react": "17.0.0",
     "@types/react-dom": "17.0.0",
