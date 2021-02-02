@@ -57,7 +57,7 @@
     "@percy/cypress": "2.3.4",
     "@sitaggart/eslint-config-ts": "0.5.259",
     "@sitaggart/prettier-config": "0.2.54",
-    "@testing-library/react": "11.2.4",
+    "@testing-library/react": "11.2.5",
     "@testing-library/react-hooks": "3.7.0",
     "@types/color": "3.0.1",
     "@types/jest": "25.2.3",
