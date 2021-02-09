@@ -51,9 +51,9 @@
     "react-dom": "17.0.1"
   },
   "devDependencies": {
-    "@emotion/babel-plugin": "11.1.2",
-    "@emotion/eslint-plugin": "11.0.0",
-    "@emotion/jest": "11.1.0",
+    "@emotion/babel-plugin": "11.2.0",
+    "@emotion/eslint-plugin": "11.2.0",
+    "@emotion/jest": "11.2.0",
     "@percy/cypress": "2.3.4",
     "@sitaggart/eslint-config-ts": "0.5.261",
     "@sitaggart/prettier-config": "0.2.56",
