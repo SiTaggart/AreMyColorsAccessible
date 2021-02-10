@@ -1656,10 +1656,10 @@
     eslint-plugin-standard "4.1.0"
     eslint-plugin-unicorn "23.0.0"
 
-"@sitaggart/prettier-config@0.2.57":
-  version "0.2.57"
-  resolved "https://registry.yarnpkg.com/@sitaggart/prettier-config/-/prettier-config-0.2.57.tgz#7feb44e8de2c3eccf560ba06b6229fa328633372"
-  integrity sha512-uJc4K4N6XK6GuFL14rpzsTXW24enPD5y3Yk6GCDsKDrY44KD7fF1+x92bfg9ZdjDCAFab+tdg/hT3IMJ7HWsrg==
+"@sitaggart/prettier-config@0.2.59":
+  version "0.2.59"
+  resolved "https://registry.yarnpkg.com/@sitaggart/prettier-config/-/prettier-config-0.2.59.tgz#58a29310dc36b81250e9396c05ee839696c469f6"
+  integrity sha512-Zd9CWiK+Qac8hU9FQ+H7izaw8UBz/83ABMsTP7PvBCg6xEIYTSo/TjESVzHpTZGsuCFOBYs2+RAQ6Es9PJ4OLg==
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
