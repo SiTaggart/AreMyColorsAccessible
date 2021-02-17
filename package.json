@@ -55,7 +55,7 @@
     "@emotion/eslint-plugin": "11.2.0",
     "@emotion/jest": "11.2.0",
     "@percy/cypress": "2.3.4",
-    "@sitaggart/eslint-config-ts": "0.5.266",
+    "@sitaggart/eslint-config-ts": "0.5.267",
     "@sitaggart/prettier-config": "0.2.61",
     "@testing-library/react": "11.2.5",
     "@testing-library/react-hooks": "3.7.0",
