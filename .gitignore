@@ -5,5 +5,3 @@ bundles/
 coverage/
 cypress/videos/
 .env
-
-.vercel
