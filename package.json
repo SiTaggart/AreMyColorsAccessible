@@ -54,6 +54,8 @@
     "@emotion/babel-plugin": "11.2.0",
     "@emotion/eslint-plugin": "11.2.0",
     "@emotion/jest": "11.2.0",
+    "@netlify/plugin-lighthouse": "^2.0.0",
+    "@netlify/plugin-nextjs": "^2.0.1",
     "@percy/cypress": "2.3.4",
     "@sitaggart/eslint-config-ts": "0.5.270",
     "@sitaggart/prettier-config": "0.2.83",
@@ -74,6 +76,7 @@
     "eslint": "7.21.0",
     "husky": "4.3.8",
     "jest": "26.6.3",
+    "netlify-plugin-cache-nextjs": "^1.5.2",
     "now": "21.0.1",
     "plop": "2.7.4",
     "precise-commits": "1.0.2",
@@ -99,7 +102,9 @@
       }
     ],
     "ci": {
-      "trackBranches": ["main"],
+      "trackBranches": [
+        "main"
+      ],
       "repoBranchBase": "main"
     }
   },
