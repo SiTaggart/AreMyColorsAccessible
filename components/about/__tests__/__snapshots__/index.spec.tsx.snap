@@ -185,9 +185,9 @@ exports[`About renders without crashing 1`] = `
        
       <a
         className="emotion-12 emotion-13"
-        href="https://zeit.co/now"
+        href="https://netlify.com"
       >
-        hosted on Now
+        hosted on Netlify
       </a>
       .
     </p>
