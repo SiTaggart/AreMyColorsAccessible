@@ -2391,7 +2391,7 @@
     path-exists "^4.0.0"
     readdirp "^3.4.0"
 
-"@netlify/plugin-lighthouse@^2.0.0":
+"@netlify/plugin-lighthouse@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@netlify/plugin-lighthouse/-/plugin-lighthouse-2.0.0.tgz#e603983289aad2c2401ef314ef19914c91b1ef88"
   integrity sha512-+WeQBZcHKiNNnipu5buJm6Uz7AZ8DQ+NSKAaF/+EOP2a6Ff/oJpNsYqJ0/sS3Ra52qTGnkJnzuzPf+GKt5kS1g==
@@ -2403,7 +2403,7 @@
     lighthouse "^7.0.0"
     puppeteer "^8.0.0"
 
-"@netlify/plugin-nextjs@^2.0.1":
+"@netlify/plugin-nextjs@2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-2.0.1.tgz#7c1db68f85f56fbe912dda2d655bdc6237a6e166"
   integrity sha512-bGo5QMXsoNmaz40rkxU2VxeEjG9/6WVfqijrzuXnD1ogsHKCrW/jY65s6gZ33pk3T/f8nxWFcjlQDwyKtaqGsw==
@@ -8133,7 +8133,7 @@ human-signals@^1.1.1:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
   integrity sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
 
-husky@5:
+husky@5.1.3:
   version "5.1.3"
   resolved "https://registry.yarnpkg.com/husky/-/husky-5.1.3.tgz#1a0645a4fe3ffc006c4d0d8bd0bcb4c98787cc9d"
   integrity sha512-fbNJ+Gz5wx2LIBtMweJNY1D7Uc8p1XERi5KNRMccwfQA+rXlxWNSdUxswo0gT8XqxywTIw7Ywm/F4v/O35RdMg==
@@ -10493,7 +10493,7 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-netlify-plugin-cache-nextjs@^1.5.2:
+netlify-plugin-cache-nextjs@1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/netlify-plugin-cache-nextjs/-/netlify-plugin-cache-nextjs-1.5.2.tgz#3c206debc76b8cf19536ea8bde855f5d8a52ee5b"
   integrity sha512-pOtc+ZsZmXFSz3db8OfaOr+5HTQNIxPUTDEC4mI2g0ikTv3pXMjYrd0J1GJ0fU6KfJlbZqSXbqi4bbA6QArp0A==
@@ -11525,7 +11525,7 @@ pify@^4.0.1:
   resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
-pinst@^2.1.6:
+pinst@2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/pinst/-/pinst-2.1.6.tgz#8d968b8ec1dac5dddcfc976c735592dbec58b42c"
   integrity sha512-B4dYmf6nEXg1NpDSB+orYWvKa5Kfmz5KzWC29U59dpVM4S/+xp0ak/JMEsw04UQTNNKps7klu0BUalr343Gt9g==
