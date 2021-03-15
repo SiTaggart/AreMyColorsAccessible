@@ -1,11 +1,11 @@
-interface Accessibility {
+export interface Accessibility {
   aaa: boolean;
   aa: boolean;
   aaaLarge: boolean;
   aaLarge: boolean;
 }
 
-interface ColorRating {
+export interface ColorRating {
   small: string;
   bold: string;
   large: string;
