@@ -51,7 +51,7 @@ export const getRating = (colors: ColorPair): GetRatingReturn | false => {
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   await cors(req, res);
 
-  const { colors } = req.body;
+  const { colors } = JSON.parse(req.body);
   const colorsArray = ensureColorsAreAnArrayOfTwo(colors);
 
   if (colorsArray) {
