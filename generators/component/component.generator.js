@@ -18,6 +18,7 @@ module.exports = (plop) => {
         message: 'Parent folder:',
         default: 'New Component',
         choices() {
+          // eslint-disable-next-line unicorn/prefer-spread
           const choices = ['New Component'].concat(
             fs.readdirSync(path.join(__dirname, './../../components'))
           );
@@ -63,6 +64,7 @@ module.exports = (plop) => {
             path: componentPath,
             templateFile: 'component/sfcComponent.tsx.tpl',
           };
+          // eslint-disable-next-line unicorn/prefer-spread
           actions = actions.concat(component);
           break;
       }

@@ -26,6 +26,7 @@ const convertColorStringsToColors = (colorStrings: string[]): Color[] | false =>
   let isValidColor = true;
   const colorTypes: Color[] = [];
 
+  // eslint-disable-next-line unicorn/no-array-for-each
   colorStrings.forEach((color: string): void => {
     try {
       colorTypes.push(Color(color));
