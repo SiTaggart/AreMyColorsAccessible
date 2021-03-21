@@ -82,6 +82,23 @@ exports[`AppContainer changes the footer link colors based on isLight prop 1`] =
         >
           <a
             className="emotion-10 emotion-11"
+            href="/api-page"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={
+              Object {
+                "color": "#343334",
+              }
+            }
+          >
+            API
+          </a>
+        </li>
+        <li
+          className="emotion-8 emotion-9"
+        >
+          <a
+            className="emotion-10 emotion-11"
             href="/about"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -175,6 +192,23 @@ exports[`AppContainer renders without crashing 1`] = `
             }
           >
             Palette
+          </a>
+        </li>
+        <li
+          className="emotion-8 emotion-9"
+        >
+          <a
+            className="emotion-10 emotion-11"
+            href="/api-page"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            API
           </a>
         </li>
         <li
