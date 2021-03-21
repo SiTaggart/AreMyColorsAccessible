@@ -96,7 +96,7 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
             </Heading>
             <Paragraph>Your implementation might look like this:</Paragraph>
 
-            <CodeBlock example={exampleFetch} language="bash" />
+            <CodeBlock example={exampleFetch} language="jsx" />
 
             <Grid gutter="space40" marginBottom="space70">
               <Column>

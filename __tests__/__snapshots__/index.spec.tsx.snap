@@ -746,6 +746,23 @@ exports[`Home Page should render based on query string props 1`] = `
         >
           <a
             className="emotion-122 emotion-123"
+            href="/api-page"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            API
+          </a>
+        </li>
+        <li
+          className="emotion-120 emotion-121"
+        >
+          <a
+            className="emotion-122 emotion-123"
             href="/about"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -1503,6 +1520,23 @@ exports[`Home Page should render without crashing 1`] = `
             }
           >
             Palette
+          </a>
+        </li>
+        <li
+          className="emotion-120 emotion-121"
+        >
+          <a
+            className="emotion-122 emotion-123"
+            href="/api-page"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+            style={
+              Object {
+                "color": "#fff",
+              }
+            }
+          >
+            API
           </a>
         </li>
         <li

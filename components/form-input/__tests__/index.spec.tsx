@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import React, { ReactElement } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react';
@@ -9,9 +9,11 @@ import { FormInput, FormInputProps } from '..';
 type FormInputWrapperProps = Partial<FormInputProps>;
 
 describe('FormInput', (): void => {
-  const FormInputWrapper: React.FunctionComponent<FormInputWrapperProps> = (
-    props: FormInputWrapperProps
-  ): ReactElement<HTMLDivElement> => <FormInput id="form-id" {...props} />;
+  const FormInputWrapper: React.FC<FormInputWrapperProps> = (props: FormInputWrapperProps) => (
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    <FormInput id="form-id" {...props} />
+  );
 
   it('renders without crashing', (): void => {
     ReactDOM.render(<FormInputWrapper />, document.createElement('div'));

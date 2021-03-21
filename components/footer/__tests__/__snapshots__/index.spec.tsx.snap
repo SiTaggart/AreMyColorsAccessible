@@ -72,6 +72,23 @@ exports[`Footer renders footerLink styles added 1`] = `
       >
         <a
           className="emotion-8 emotion-9"
+          href="/api-page"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          style={
+            Object {
+              "color": "#fff",
+            }
+          }
+        >
+          API
+        </a>
+      </li>
+      <li
+        className="emotion-6 emotion-7"
+      >
+        <a
+          className="emotion-8 emotion-9"
           href="/about"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -144,6 +161,18 @@ exports[`Footer renders without crashing 1`] = `
           onMouseEnter={[Function]}
         >
           Palette
+        </a>
+      </li>
+      <li
+        className="emotion-6 emotion-7"
+      >
+        <a
+          className="emotion-8 emotion-9"
+          href="/api-page"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          API
         </a>
       </li>
       <li
