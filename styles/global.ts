@@ -17,8 +17,6 @@ const globalStyles = css`
   }
 
   html {
-    -moz-osx-font-smoothing: greyscale;
-    -webkit-font-smoothing: antialiased;
     font-size: 16px;
   }
 

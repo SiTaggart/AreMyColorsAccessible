@@ -43,6 +43,11 @@ const Footer: React.FC<FooterProps> = ({ styles }: FooterProps): ReactElement<HT
             </NextLink>
           </StyledFooterNavListItem>
           <StyledFooterNavListItem>
+            <NextLink href="/api-page" passHref>
+              <StyledFooterAnchor style={linkStyles}>API</StyledFooterAnchor>
+            </NextLink>
+          </StyledFooterNavListItem>
+          <StyledFooterNavListItem>
             <NextLink href="/about" passHref>
               <StyledFooterAnchor style={linkStyles}>About</StyledFooterAnchor>
             </NextLink>
