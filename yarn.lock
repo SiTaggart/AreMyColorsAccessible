@@ -3056,7 +3056,7 @@
     lodash.groupby "^4.6.0"
     react-virtual "^2.3.2"
 
-"@twilio-paste/core@^8.0.1":
+"@twilio-paste/core@8.0.1":
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/@twilio-paste/core/-/core-8.0.1.tgz#54db5533500ddc1ae349ef414460e598db7b29b6"
   integrity sha512-aia6v7UBBsSD2uDCiyAA5Yi7OvXVTmO1p8B+LiNDaLeB/fBfKXRNsTkd3mDFOfl5zvXl1YkBDEfbmm/nmuSWuQ==
@@ -3168,7 +3168,7 @@
   resolved "https://registry.yarnpkg.com/@twilio-paste/help-text/-/help-text-6.0.0.tgz#42a1b087a6c1095b2051aab4da7cc1b841689a5b"
   integrity sha512-AcHNs4UDn0vzpZlb+wbnI/VMQ+Whnbd2YUoDNeEz3dYMxrv+OoCLDgYWZQrgOIMlXbkzVElg8/maVfiPGVVSVg==
 
-"@twilio-paste/icons@^5.1.0":
+"@twilio-paste/icons@5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@twilio-paste/icons/-/icons-5.1.0.tgz#33106b5ca5776c17e9decaecba56739dca345aab"
   integrity sha512-/yNskgta60uNuSdAbAsBU/F4kiGtAQAfm5aQKH/krcvPySzZCYs0I2HAWRT4rMz2FDHJnrrxRrA5wR/+bGt3Fw==
@@ -3455,7 +3455,7 @@
   dependencies:
     "@types/color-convert" "*"
 
-"@types/cors@^2.8.10":
+"@types/cors@2.8.10":
   version "2.8.10"
   resolved "https://registry.yarnpkg.com/@types/cors/-/cors-2.8.10.tgz#61cc8469849e5bcdd0c7044122265c39cec10cf4"
   integrity sha512-C7srjHiVG3Ey1nR6d511dtDkCEjxuN9W1HWAEjGq8kpcwmNM6JJkpC0xvabM7BXTG2wDq8Eu33iH9aQKa7IvLQ==
@@ -5973,7 +5973,7 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-cors@^2.8.4, cors@^2.8.5:
+cors@2.8.5, cors@^2.8.4:
   version "2.8.5"
   resolved "https://registry.yarnpkg.com/cors/-/cors-2.8.5.tgz#eac11da51592dd86b9f06f6e7ac293b3df875d29"
   integrity sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==
@@ -12596,7 +12596,7 @@ pretty-format@^26.6.2:
     ansi-styles "^4.0.0"
     react-is "^17.0.1"
 
-prism-react-renderer@^1.2.0:
+prism-react-renderer@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/prism-react-renderer/-/prism-react-renderer-1.2.0.tgz#5ad4f90c3e447069426c8a53a0eafde60909cdf4"
   integrity sha512-GHqzxLYImx1iKN1jJURcuRoA/0ygCcNhfGw1IT8nPIMzarmKQ3Nc+JcG0gi8JXQzuh0C5ShE4npMIoqNin40hg==
