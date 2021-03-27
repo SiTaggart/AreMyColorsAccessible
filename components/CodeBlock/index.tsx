@@ -11,7 +11,14 @@ interface FunctionalComponent {
 }
 
 const Pre: React.FC<FunctionalComponent> = ({ children, ...props }: FunctionalComponent) => (
-  <Box as="pre" fontFamily="fontFamilyCode" marginBottom="space70" padding="space40" {...props}>
+  <Box
+    as="pre"
+    fontFamily="fontFamilyCode"
+    marginBottom="space70"
+    overflowX="auto"
+    padding="space40"
+    {...props}
+  >
     {children}
   </Box>
 );

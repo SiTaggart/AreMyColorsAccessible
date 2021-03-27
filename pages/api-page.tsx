@@ -63,12 +63,12 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
   }, [foreground, background]);
 
   return (
-    <Theme.Provider>
+    <Theme.Provider customBreakpoints={['240px', '320px', '468px', '768px', '1024px']}>
       <Container variant="palette">
         <Layout variant="small">
           <Box as="main" paddingTop="space70">
             <Heading as="h1" variant="heading10">
-              AreMyColoursAccessible API
+              Are My Colours Accessible API
             </Heading>
             <Paragraph>
               Use the API to quickly return the colour contrast ratio of two colors and its rating.
@@ -98,7 +98,11 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
 
             <CodeBlock example={exampleFetch} language="jsx" />
 
-            <Grid gutter="space40" marginBottom="space70">
+            <Grid
+              gutter="space40"
+              marginBottom="space70"
+              vertical={[true, true, true, true, false]}
+            >
               <Column>
                 <Stack orientation="vertical" spacing="space70">
                   <>
@@ -148,6 +152,7 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
                   backgroundColor="colorBackground"
                   borderRadius="borderRadius20"
                   fontFamily="fontFamilyCode"
+                  overflowX="auto"
                   padding="space40"
                 >
                   {JSON.stringify(result, undefined, 2)}
