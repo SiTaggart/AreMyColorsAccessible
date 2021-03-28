@@ -1,4 +1,4 @@
-import { getRating } from '../../../pages/api/are-they';
+import { getRating } from '../get-rating';
 
 describe('getRating', () => {
   test('should return rating with valid colors', () => {
