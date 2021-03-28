@@ -94,7 +94,7 @@
     "files": [
       {
         "path": "./.next/static/**/pages/*.js",
-        "maxSize": "65 kB"
+        "maxSize": "70 kB"
       },
       {
         "path": "./.next/static/chunks/*.js",
