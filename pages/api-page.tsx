@@ -9,20 +9,17 @@ import { Stack } from '@twilio-paste/core/stack';
 import { Separator } from '@twilio-paste/core/separator';
 import { Label } from '@twilio-paste/core/label';
 import { Input } from '@twilio-paste/core/input';
-import { Alert } from '@twilio-paste/core/alert';
 import { Container } from '../components/layouts/container';
 import { Footer } from '../components/footer';
 import { Layout } from '../components/layouts/layout';
 import { CodeBlock } from '../components/CodeBlock';
 
 const PostURL = `https://www.aremycolorsaccessible.com/api/are-they`.trim();
-const URL = `https://www.aremycolorsaccessible.com/api/are-they`.trim();
 const PostBody = `
 {
   "colors": ["#fff", "#000"]
 }
 `.trim();
-const Params = `/rgb(255,255,255)/rgb(0,0,0)`.trim();
 const returnBlock = `
 {
   "Small": "AAA" | "AA" | "A" | "Fail",
@@ -35,12 +32,9 @@ const returnBlock = `
 
 const APIPage: React.FC = () => {
   const [foreground, setForeground] = React.useState('#5c0700');
-  const [encodedForeground, setEncodedForeground] = React.useState(encodeURIComponent('#5c0700'));
   const foregroundID = useUID();
   const [background, setBackground] = React.useState('#e4ef65');
-  const [encodedBackground, setEncodedBackground] = React.useState(encodeURIComponent('#e4ef65'));
   const backgroundID = useUID();
-  const [queryResult, setQueryResult] = React.useState({});
   const [postResult, setPostResult] = React.useState({});
 
   const examplePostFetch = `
@@ -55,25 +49,6 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
   });
 `.trim();
 
-  const exampleQueryFetch = `
-fetch(\`https://www.aremycolorsaccessible.com/api/are-they/\${encodeURIComponent(${foreground})}/\${encodeURIComponent(${background})}\`, {
-  mode: 'cors',
-})
-  .then((response) => response.json())
-  .then((json) => {
-    doSomethingWithJSON(json)
-  });
-`.trim();
-
-  console.log(`/api/are-they/${encodedForeground}/${encodedBackground}`);
-
-  const getQueryResult = (): Promise<void> =>
-    fetch(`/api/are-they/${encodedForeground}/${encodedBackground}`, {
-      mode: 'cors',
-    })
-      .then((response) => response.json())
-      .then((json) => setQueryResult(json));
-
   const getPostResult = (fg: string, bg: string): Promise<void> =>
     fetch('https://www.aremycolorsaccessible.com/api/are-they', {
       mode: 'cors',
@@ -84,9 +59,6 @@ fetch(\`https://www.aremycolorsaccessible.com/api/are-they/\${encodeURIComponent
       .then((json) => setPostResult(json));
 
   React.useEffect(() => {
-    setEncodedForeground(encodeURIComponent(foreground));
-    setEncodedBackground(encodeURIComponent(background));
-    getQueryResult();
     getPostResult(foreground, background);
   }, [foreground, background]);
 
@@ -104,31 +76,23 @@ fetch(\`https://www.aremycolorsaccessible.com/api/are-they/\${encodeURIComponent
             <Heading as="h2" variant="heading30">
               URL:
             </Heading>
-            <Paragraph>
-              Visit or fetch the API url with two URI encoded colors separated with forward slashes.
-              It handles hex or rgb color formats:
-            </Paragraph>
-            <CodeBlock example={`${URL}${Params}`} language="typescript" />
+            <Paragraph>Post data as the body of a request to:</Paragraph>
+            <CodeBlock example={PostURL} language="typescript" />
+            <Heading as="h2" variant="heading30">
+              Params:
+            </Heading>
+            <Paragraph>Set the body as a valid JSON string of an array of 2 colors.</Paragraph>
+            <CodeBlock example={PostBody} language="json" />
             <Heading as="h2" variant="heading30">
               Return:
             </Heading>
-            <Paragraph>You'll be returned an JSON object in the following shape:</Paragraph>
+            <Paragraph>You'll be returned an object in the following shape:</Paragraph>
             <CodeBlock example={returnBlock} language="typescript" />
-
-            <Separator orientation="horizontal" verticalSpacing="space140" />
-
             <Heading as="h2" variant="heading30">
               Example:
             </Heading>
             <Paragraph>Your implementation might look like this:</Paragraph>
-
-            <Alert variant="warning">
-              <strong>Don't forget!</strong> Encode those hex colors otherwise the url will be
-              invalid
-            </Alert>
-
-            <CodeBlock example={exampleQueryFetch} language="typescript" />
-
+            <CodeBlock example={examplePostFetch} language="typescript" />
             <Grid
               gutter="space40"
               marginBottom="space70"
@@ -186,43 +150,10 @@ fetch(\`https://www.aremycolorsaccessible.com/api/are-they/\${encodeURIComponent
                   overflowX="auto"
                   padding="space40"
                 >
-                  {JSON.stringify(queryResult, undefined, 2)}
+                  {JSON.stringify(postResult, undefined, 2)}
                 </Box>
               </Column>
             </Grid>
-
-            <Separator orientation="horizontal" verticalSpacing="space140" />
-
-            <Heading as="h2" variant="heading30">
-              Alternative URL
-            </Heading>
-            <Paragraph>Post data as the body of a request to:</Paragraph>
-            <CodeBlock example={PostURL} language="typescript" />
-            <Heading as="h2" variant="heading30">
-              Params:
-            </Heading>
-            <Paragraph>Set the body as a valid JSON string of an array of 2 colors.</Paragraph>
-            <CodeBlock example={PostBody} language="json" />
-            <Heading as="h2" variant="heading30">
-              Return:
-            </Heading>
-            <Paragraph>You'll be returned an object in the following shape:</Paragraph>
-            <CodeBlock example={returnBlock} language="typescript" />
-            <Heading as="h2" variant="heading30">
-              Example:
-            </Heading>
-            <Paragraph>Your implementation might look like this:</Paragraph>
-            <CodeBlock example={examplePostFetch} language="typescript" />
-            <Box
-              as="pre"
-              backgroundColor="colorBackground"
-              borderRadius="borderRadius20"
-              fontFamily="fontFamilyCode"
-              overflowX="auto"
-              padding="space40"
-            >
-              {JSON.stringify(postResult, undefined, 2)}
-            </Box>
             <Separator orientation="horizontal" verticalSpacing="space140" />
             <Heading as="h2" variant="heading30">
               Example CodeSandbox:
