@@ -50,7 +50,7 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
 `.trim();
 
   const getPostResult = (fg: string, bg: string): Promise<void> =>
-    fetch('https://www.aremycolorsaccessible.com/api/are-they', {
+    fetch('/api/are-they', {
       mode: 'cors',
       method: 'POST',
       body: JSON.stringify({ colors: [fg, bg] }),

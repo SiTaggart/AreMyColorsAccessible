@@ -9,9 +9,3 @@
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
-
-[context.production.environment]
-  NETLIFY_CONTEXT = "production"
-
-[context.deploy-preview.environment]
-  NETLIFY_CONTEXT = "deploy-preview"

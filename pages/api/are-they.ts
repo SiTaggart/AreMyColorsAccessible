@@ -16,12 +16,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   logger.info('url', { url: req.url });
 
   logger.info('body', { body: req.body });
-  const { colors } = req.body;
+  const { colors } = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
   logger.info('colors', { colors });
-  const colorsArray =
-    typeof colors === 'string'
-      ? ensureColorsAreAnArrayOfTwo(JSON.parse(colors))
-      : ensureColorsAreAnArrayOfTwo(colors);
+  const colorsArray = ensureColorsAreAnArrayOfTwo(colors);
 
   if (colorsArray) {
     logger.info('color array', { colorsArray });
@@ -34,7 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     logger.info('rating', { rating });
     res.json(rating);
   } else {
-    logger.error('no array', { query: req.query });
+    logger.error('no array', { body: req.body });
     res.status(500).json({ message: 'Error: must send a colors key with array of two colors' });
   }
 }
