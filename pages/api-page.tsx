@@ -14,8 +14,8 @@ import { Footer } from '../components/footer';
 import { Layout } from '../components/layouts/layout';
 import { CodeBlock } from '../components/CodeBlock';
 
-const URL = `https://www.aremycolorsaccessible.com/api/are-they`.trim();
-const Params = `
+const PostURL = `https://www.aremycolorsaccessible.com/api/are-they`.trim();
+const PostBody = `
 {
   "colors": ["#fff", "#000"]
 }
@@ -35,9 +35,9 @@ const APIPage: React.FC = () => {
   const foregroundID = useUID();
   const [background, setBackground] = React.useState('#e4ef65');
   const backgroundID = useUID();
-  const [result, setResult] = React.useState({});
+  const [postResult, setPostResult] = React.useState({});
 
-  const exampleFetch = `
+  const examplePostFetch = `
 fetch('https://www.aremycolorsaccessible.com/api/are-they', {
   mode: 'cors',
   method: 'POST',
@@ -49,17 +49,17 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
   });
 `.trim();
 
-  const getResult = (fg: string, bg: string): Promise<void> =>
-    fetch('/api/are-they', {
+  const getPostResult = (fg: string, bg: string): Promise<void> =>
+    fetch('https://www.aremycolorsaccessible.com/api/are-they', {
       mode: 'cors',
       method: 'POST',
       body: JSON.stringify({ colors: [fg, bg] }),
     })
       .then((response) => response.json())
-      .then((json) => setResult(json));
+      .then((json) => setPostResult(json));
 
   React.useEffect(() => {
-    getResult(foreground, background);
+    getPostResult(foreground, background);
   }, [foreground, background]);
 
   return (
@@ -77,27 +77,22 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
               URL:
             </Heading>
             <Paragraph>Post data as the body of a request to:</Paragraph>
-            <CodeBlock example={URL} language="bash" />
+            <CodeBlock example={PostURL} language="typescript" />
             <Heading as="h2" variant="heading30">
               Params:
             </Heading>
             <Paragraph>Set the body as a valid JSON string of an array of 2 colors.</Paragraph>
-            <CodeBlock example={Params} language="json" />
+            <CodeBlock example={PostBody} language="json" />
             <Heading as="h2" variant="heading30">
               Return:
             </Heading>
             <Paragraph>You'll be returned an object in the following shape:</Paragraph>
-            <CodeBlock example={returnBlock} language="tsx" />
-
-            <Separator orientation="horizontal" verticalSpacing="space140" />
-
+            <CodeBlock example={returnBlock} language="typescript" />
             <Heading as="h2" variant="heading30">
               Example:
             </Heading>
             <Paragraph>Your implementation might look like this:</Paragraph>
-
-            <CodeBlock example={exampleFetch} language="jsx" />
-
+            <CodeBlock example={examplePostFetch} language="typescript" />
             <Grid
               gutter="space40"
               marginBottom="space70"
@@ -155,7 +150,7 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
                   overflowX="auto"
                   padding="space40"
                 >
-                  {JSON.stringify(result, undefined, 2)}
+                  {JSON.stringify(postResult, undefined, 2)}
                 </Box>
               </Column>
             </Grid>
