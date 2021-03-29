@@ -1,4 +1,4 @@
-import { ensureColorsAreAnArrayOfTwo } from '../ensure-colors-are-an-array-of-two';
+import { ensureColorsAreAnArrayOfTwo, getRating } from '../../../pages/api/are-they';
 
 describe('ensureColorsAreAnArrayOfTwo', () => {
   test('should return false with undefined', () => {
@@ -28,5 +28,20 @@ describe('ensureColorsAreAnArrayOfTwo', () => {
 
   test('should convert string array to array', () => {
     expect(ensureColorsAreAnArrayOfTwo('["whizz", "whazz"]')).toEqual(['whizz', 'whazz']);
+  });
+});
+
+describe('getRating', () => {
+  test('should return rating with valid colors', () => {
+    expect(getRating(['#fff', '#000'])).toEqual({
+      bold: 'AAA',
+      contrast: '21: 1',
+      large: 'AAA',
+      overall: 'Yup',
+      small: 'AAA',
+    });
+  });
+  test('should handle invalid colors', () => {
+    expect(getRating(['#bar', 'foo'])).toEqual(false);
   });
 });
