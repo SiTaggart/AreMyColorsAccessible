@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import Cors from 'cors';
-import { initMiddleware } from '../../utils/init-middleware';
-import { ensureColorsAreAnArrayOfTwo, getRating } from '../../utils/color-rating';
-import { logger } from '../../utils/logger';
+import { initMiddleware } from '../../../utils/init-middleware';
+import { ensureColorsAreAnArrayOfTwo, getRating } from '../../../utils/color-rating';
+import { logger } from '../../../utils/logger';
 
 const cors = initMiddleware(
   Cors({

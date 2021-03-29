@@ -16,7 +16,7 @@ import { Layout } from '../components/layouts/layout';
 import { CodeBlock } from '../components/CodeBlock';
 
 const PostURL = `https://www.aremycolorsaccessible.com/api/are-they`.trim();
-const QueryURL = `https://www.aremycolorsaccessible.com/api`.trim();
+const URL = `https://www.aremycolorsaccessible.com/api/are-they`.trim();
 const PostBody = `
 {
   "colors": ["#fff", "#000"]
@@ -41,6 +41,7 @@ const APIPage: React.FC = () => {
   const [encodedBackground, setEncodedBackground] = React.useState(encodeURIComponent('#e4ef65'));
   const backgroundID = useUID();
   const [queryResult, setQueryResult] = React.useState({});
+  const [postResult, setPostResult] = React.useState({});
 
   const examplePostFetch = `
 fetch('https://www.aremycolorsaccessible.com/api/are-they', {
@@ -55,7 +56,7 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
 `.trim();
 
   const exampleQueryFetch = `
-fetch(\`https://www.aremycolorsaccessible.com/api/\${encodeURIComponent(${foreground})}/\${encodeURIComponent(${background})}\`, {
+fetch(\`https://www.aremycolorsaccessible.com/api/are-they/\${encodeURIComponent(${foreground})}/\${encodeURIComponent(${background})}\`, {
   mode: 'cors',
 })
   .then((response) => response.json())
@@ -64,19 +65,29 @@ fetch(\`https://www.aremycolorsaccessible.com/api/\${encodeURIComponent(${foregr
   });
 `.trim();
 
-  console.log(`/api/${encodedForeground}/${encodedBackground}`);
+  console.log(`/api/are-they/${encodedForeground}/${encodedBackground}`);
 
   const getQueryResult = (): Promise<void> =>
-    fetch(`/api/${encodedForeground}/${encodedBackground}`, {
+    fetch(`/api/are-they/${encodedForeground}/${encodedBackground}`, {
       mode: 'cors',
     })
       .then((response) => response.json())
       .then((json) => setQueryResult(json));
 
+  const getPostResult = (fg: string, bg: string): Promise<void> =>
+    fetch('https://www.aremycolorsaccessible.com/api/are-they', {
+      mode: 'cors',
+      method: 'POST',
+      body: JSON.stringify({ colors: [fg, bg] }),
+    })
+      .then((response) => response.json())
+      .then((json) => setPostResult(json));
+
   React.useEffect(() => {
     setEncodedForeground(encodeURIComponent(foreground));
     setEncodedBackground(encodeURIComponent(background));
     getQueryResult();
+    getPostResult(foreground, background);
   }, [foreground, background]);
 
   return (
@@ -97,7 +108,7 @@ fetch(\`https://www.aremycolorsaccessible.com/api/\${encodeURIComponent(${foregr
               Visit or fetch the API url with two URI encoded colors separated with forward slashes.
               It handles hex or rgb color formats:
             </Paragraph>
-            <CodeBlock example={`${QueryURL}${Params}`} language="typescript" />
+            <CodeBlock example={`${URL}${Params}`} language="typescript" />
             <Heading as="h2" variant="heading30">
               Return:
             </Heading>
@@ -202,6 +213,16 @@ fetch(\`https://www.aremycolorsaccessible.com/api/\${encodeURIComponent(${foregr
             </Heading>
             <Paragraph>Your implementation might look like this:</Paragraph>
             <CodeBlock example={examplePostFetch} language="typescript" />
+            <Box
+              as="pre"
+              backgroundColor="colorBackground"
+              borderRadius="borderRadius20"
+              fontFamily="fontFamilyCode"
+              overflowX="auto"
+              padding="space40"
+            >
+              {JSON.stringify(postResult, undefined, 2)}
+            </Box>
             <Separator orientation="horizontal" verticalSpacing="space140" />
             <Heading as="h2" variant="heading30">
               Example CodeSandbox:
