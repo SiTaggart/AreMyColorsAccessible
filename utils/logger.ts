@@ -2,7 +2,7 @@ import { createLogger, format, transports } from 'winston';
 
 const httpTransportOptions = {
   host: 'http-intake.logs.datadoghq.com',
-  path: `/v1/input/${process.env.DATADOG_API_KEY}?ddsource=nodejs&service=${process.env.DATADOG_APP_NAME}`,
+  path: `/v1/input/${process.env.DATADOG_API_KEY}?ddsource=nodejs&service=${process.env.DATADOG_APP_NAME}_${process.env.CONTEXT}`,
   ssl: true,
 };
 
