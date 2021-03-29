@@ -64,6 +64,8 @@ fetch(\`https://www.aremycolorsaccessible.com/api/\${encodeURIComponent(${foregr
   });
 `.trim();
 
+  console.log(`/api/${encodedForeground}/${encodedBackground}`);
+
   const getQueryResult = (): Promise<void> =>
     fetch(`/api/${encodedForeground}/${encodedBackground}`, {
       mode: 'cors',
