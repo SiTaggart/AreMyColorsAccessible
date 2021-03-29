@@ -61,7 +61,7 @@
     "@netlify/plugin-nextjs": "2.0.1",
     "@percy/cypress": "2.3.4",
     "@sitaggart/eslint-config-ts": "0.5.301",
-    "@sitaggart/prettier-config": "0.2.94",
+    "@sitaggart/prettier-config": "0.2.96",
     "@testing-library/react": "11.2.5",
     "@testing-library/react-hooks": "5.1.0",
     "@types/color": "3.0.1",
