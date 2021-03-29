@@ -13,7 +13,7 @@ const cors = initMiddleware(
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   await cors(req, res);
 
-  const { colors } = JSON.parse(req.body);
+  const { colors } = req.query;
   const colorsArray = ensureColorsAreAnArrayOfTwo(colors);
 
   if (colorsArray) {
