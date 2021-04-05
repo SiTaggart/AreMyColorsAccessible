@@ -1,5 +1,6 @@
 import { ColorCombo } from 'color-combos';
 
+export type ColorPair = [string, string];
 export interface Levels {
   aa: boolean;
   aaLarge: boolean;
