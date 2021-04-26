@@ -2414,10 +2414,10 @@
     path-exists "^4.0.0"
     readdirp "^3.4.0"
 
-"@netlify/plugin-lighthouse@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@netlify/plugin-lighthouse/-/plugin-lighthouse-2.0.0.tgz#e603983289aad2c2401ef314ef19914c91b1ef88"
-  integrity sha512-+WeQBZcHKiNNnipu5buJm6Uz7AZ8DQ+NSKAaF/+EOP2a6Ff/oJpNsYqJ0/sS3Ra52qTGnkJnzuzPf+GKt5kS1g==
+"@netlify/plugin-lighthouse@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@netlify/plugin-lighthouse/-/plugin-lighthouse-2.1.0.tgz#0108b989cc4bd19497a78a319d604587cc35bb2b"
+  integrity sha512-/uJZaVfJ1CuwUzTCD8rVWs8Wp/ckgJPFHzObiKHrMev0UWnRtSsXR1yj1m1eQ6ETC3+qVS0SFy0ivE7UM0Nz5g==
   dependencies:
     chalk "^4.1.0"
     chrome-launcher "^0.13.2"
