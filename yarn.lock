@@ -2426,10 +2426,10 @@
     lighthouse "^7.0.0"
     puppeteer "^8.0.0"
 
-"@netlify/plugin-nextjs@3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-3.1.0.tgz#93f81c4bc6201584f42e74dc86b25cfadeb2639f"
-  integrity sha512-UJ3I69fx5j2/ZIw+ODnOGZd4GLv1ogfGBQdIticrmysbx+hHb5UjaFyy2JL8pXYyE37oDjEZJWi/PyTyTbx4lQ==
+"@netlify/plugin-nextjs@3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-3.2.1.tgz#804a8ba706d5382ae330b1d8ccfeb1691a597dee"
+  integrity sha512-IC8jO3y+u8jMVNoqSSp7hhJwz/10qNAYIB3MV4gfXPDIIyPBf61SYlpwUhromPn43fKl/nFH1ypvmbL/MCWxZQ==
   dependencies:
     "@sls-next/lambda-at-edge" "^1.5.2"
     adm-zip "^0.5.4"
