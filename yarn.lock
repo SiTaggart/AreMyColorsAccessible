@@ -2791,10 +2791,10 @@
     eslint-plugin-standard "5.0.0"
     eslint-plugin-unicorn "30.0.0"
 
-"@sitaggart/prettier-config@0.2.104":
-  version "0.2.104"
-  resolved "https://registry.yarnpkg.com/@sitaggart/prettier-config/-/prettier-config-0.2.104.tgz#d35f31e8103191f185c1b9e8efb45e32f375eb09"
-  integrity sha512-PybVMXiLt5QNibenLBJkemfSSIBHNGk/xOor0gG6wcQ8X/l0Z2m2EACABWmwZ2kY+EX36So0VcykLd5dwsoW3A==
+"@sitaggart/prettier-config@0.2.105":
+  version "0.2.105"
+  resolved "https://registry.yarnpkg.com/@sitaggart/prettier-config/-/prettier-config-0.2.105.tgz#bdd35c36f9a7f98f837e406d06f121ea02c1396d"
+  integrity sha512-+ZMQ8+roSbWXmiwXUgILlb5UzP+1vNxkRpWcFasV3vFsBlfCj5SdaS0HEhB2OjofJAIdZlxfoEakggZpXo7uVg==
 
 "@sls-next/lambda-at-edge@^1.5.2":
   version "1.7.0"
