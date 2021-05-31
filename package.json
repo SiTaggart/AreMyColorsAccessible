@@ -71,7 +71,7 @@
     "@types/next": "8.0.7",
     "@types/node": "12.20.13",
     "@types/query-string": "6.3.0",
-    "@types/react": "17.0.3",
+    "@types/react": "17.0.8",
     "@types/react-dom": "17.0.1",
     "@types/react-test-renderer": "17.0.1",
     "babel-jest": "26.6.3",
