@@ -2398,6 +2398,23 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.9.1.tgz#7f554e7368c9ab679a11f4a042ca17149d70cf12"
   integrity sha512-DvJbbn3dUgMxDnJLH+RZQPnXak1h4ZVYQ7CWiFWjQwBFkVajT4rfw2PdpHLTSTwxrYfnoEXkuBiwkDm6tPMQeA==
 
+"@prisma/client@^2.20.1":
+  version "2.20.1"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.20.1.tgz#45e7bade3a1b58972fc35e511578e313ead18770"
+  integrity sha512-/IYPubBi55rNMHfE0wwglA6eTWEZD77oz+x+3Mm9ji2lDKdS1lnYKZ0wZX0E3AB8gTNL/zsGtfzmfjgn3ePyIw==
+  dependencies:
+    "@prisma/engines-version" "2.20.0-26.60ba6551f29b17d7d6ce479e5733c70d9c00860e"
+
+"@prisma/engines-version@2.20.0-26.60ba6551f29b17d7d6ce479e5733c70d9c00860e":
+  version "2.20.0-26.60ba6551f29b17d7d6ce479e5733c70d9c00860e"
+  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-2.20.0-26.60ba6551f29b17d7d6ce479e5733c70d9c00860e.tgz#1189f0a7e682f500015446cfe2b34d2753452190"
+  integrity sha512-fJhbGZXm2SPs/RsI79Ew4SFe+6QmChNdgU2I/SIjmU18bUgK8f1TBEWnVtFdBqEDHYPGxbpaianF7lp04KN7EA==
+
+"@prisma/engines@2.20.0-26.60ba6551f29b17d7d6ce479e5733c70d9c00860e":
+  version "2.20.0-26.60ba6551f29b17d7d6ce479e5733c70d9c00860e"
+  resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-2.20.0-26.60ba6551f29b17d7d6ce479e5733c70d9c00860e.tgz#18f23c4a8a335a93fd338f88c310f5cf120f5591"
+  integrity sha512-zOWETm7DTRvlwf/CekPNSeJe6EC5bn2IFexd74wM9zgBXCZo+1sMDuNGtCqIt4Rzv8CcimEgyzrEFVq0LPV8qg==
+
 "@reach/dialog@0.11.2":
   version "0.11.2"
   resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.11.2.tgz#44d99b4918cb211d4458f7cce3bee01c27c9c8ed"
@@ -11495,6 +11512,13 @@ prism-react-renderer@1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prism-react-renderer/-/prism-react-renderer-1.2.1.tgz#392460acf63540960e5e3caa699d851264e99b89"
   integrity sha512-w23ch4f75V1Tnz8DajsYKvY5lF7H1+WvzvLUcF0paFxkTHSp42RS0H5CttdN2Q8RR3DRGZ9v5xD/h3n8C8kGmg==
+
+prisma@^2.20.1:
+  version "2.20.1"
+  resolved "https://registry.yarnpkg.com/prisma/-/prisma-2.20.1.tgz#28c52135523e0853258cd4ca7e883e9e4b5a9d40"
+  integrity sha512-zyPvJSUfJrmciP2D/4aUrsyIefiH8AIJUeuq1a0X1df1AFw9QQ+ata/7VQdoP+RIQHnCb6Kln9kqfUw/fieljw==
+  dependencies:
+    "@prisma/engines" "2.20.0-26.60ba6551f29b17d7d6ce479e5733c70d9c00860e"
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
