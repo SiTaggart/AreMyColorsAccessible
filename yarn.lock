@@ -2152,7 +2152,7 @@
   dependencies:
     is-promise "^4.0.0"
 
-"@netlify/parse-npm-script@^0.1.1":
+"@netlify/parse-npm-script@^0.1.2":
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@netlify/parse-npm-script/-/parse-npm-script-0.1.2.tgz#67be8f7b5e3b24ce8bed0b335c09d79699aa3422"
   integrity sha512-lJrax5diJ5G/uxS0SceJ+svYvtseWycq0jp6E8lHin13boQ77z/Iw03H5hgyTuSDoyt1phnLr4KWz7z0Y6TZpA==
@@ -2173,13 +2173,13 @@
     lighthouse "^8.0.0"
     puppeteer "^10.0.0"
 
-"@netlify/plugin-nextjs@3.7.1":
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-3.7.1.tgz#82b5e599bddfbb3dc29e6226dccf512934a3d863"
-  integrity sha512-GfzLFpCJhd3B4RQm0F7tTeeT1LPgoGNb51GWCPxkvVRYJumKGZYbJWcUccQIr3BUzxyNxKbIlm3685YBzUZ1UA==
+"@netlify/plugin-nextjs@3.8.0":
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-3.8.0.tgz#f0c08fd997779358432bb7bc12deabc226bd38f9"
+  integrity sha512-dmyjC9Ugph902+bPmjL+5ZLiUc2jogLOpjJbjyFLM/jG63I1y+4bRZnxNTwxi1bfM4EJh4WYGcRsXmrF3XrNCA==
   dependencies:
     "@netlify/functions" "^0.7.2"
-    "@netlify/parse-npm-script" "^0.1.1"
+    "@netlify/parse-npm-script" "^0.1.2"
     "@sls-next/lambda-at-edge" "1.8.0"
     adm-zip "^0.5.4"
     chalk "^4.1.0"
@@ -2199,7 +2199,7 @@
     mime-types "^2.1.30"
     moize "^6.0.0"
     node-fetch "^2.6.1"
-    semver "^7.3.2"
+    semver "^7.3.5"
     sharp "^0.28.1"
     slash "^2.0.0"
 
