@@ -60,7 +60,7 @@
     "@netlify/plugin-lighthouse": "2.1.2",
     "@netlify/plugin-nextjs": "3.8.0",
     "@percy/cypress": "2.3.4",
-    "@sitaggart/eslint-config-ts": "0.5.311",
+    "@sitaggart/eslint-config-ts": "0.6.2",
     "@sitaggart/prettier-config": "0.2.112",
     "@testing-library/react": "11.2.7",
     "@testing-library/react-hooks": "5.1.3",
