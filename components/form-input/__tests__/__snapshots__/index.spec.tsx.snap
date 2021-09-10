@@ -4,18 +4,11 @@ exports[`FormInput renders without crashing 1`] = `
 .emotion-0 {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
-  border-color: ;
   border-radius: 3px;
-  color: ;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
   width: 100%;
-}
-
-.emotion-0:focus {
-  border-color: ;
-  box-shadow: ;
 }
 
 <input
@@ -73,18 +66,11 @@ exports[`FormInput should set the noSpacing class when hasNoSpacing is set 1`] =
 .emotion-0 {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
-  border-color: ;
   border-radius: 3px;
-  color: ;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   width: 100%;
-}
-
-.emotion-0:focus {
-  border-color: ;
-  box-shadow: ;
 }
 
 <input

@@ -15,7 +15,6 @@ exports[`ColorCard renders without crashing 1`] = `
   min-height: 8rem;
   min-width: 12rem;
   overflow: hidden;
-  opacity: ;
   text-align: center;
   -webkit-transition: opacity ease-in;
   transition: opacity ease-in;

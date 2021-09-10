@@ -41,18 +41,11 @@ exports[`ColorInputs renders without crashing 1`] = `
 .emotion-6 {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
-  border-color: ;
   border-radius: 3px;
-  color: ;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
   width: 100%;
-}
-
-.emotion-6:focus {
-  border-color: ;
-  box-shadow: ;
 }
 
 .emotion-8 {
@@ -73,8 +66,6 @@ exports[`ColorInputs renders without crashing 1`] = `
 }
 
 .emotion-10 {
-  display: ;
-  padding: ;
   width: 100%;
 }
 
@@ -86,12 +77,6 @@ exports[`ColorInputs renders without crashing 1`] = `
     padding: 0 0.5rem;
     width: 33.3333%;
   }
-}
-
-.emotion-16 {
-  -webkit-flex: ;
-  -ms-flex: ;
-  flex: ;
 }
 
 .emotion-18 {

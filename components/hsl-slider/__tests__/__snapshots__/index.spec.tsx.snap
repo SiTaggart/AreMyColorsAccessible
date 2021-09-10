@@ -15,8 +15,6 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    padding: ;
-    width: ;
   }
 }
 
@@ -185,8 +183,6 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
 
 exports[`hsl-slider renders without crashing 1`] = `
 .emotion-0 {
-  display: ;
-  padding: ;
   width: 100%;
 }
 
@@ -205,12 +201,6 @@ exports[`hsl-slider renders without crashing 1`] = `
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   width: 100%;
-}
-
-.emotion-6 {
-  -webkit-flex: ;
-  -ms-flex: ;
-  flex: ;
 }
 
 .emotion-8 {
