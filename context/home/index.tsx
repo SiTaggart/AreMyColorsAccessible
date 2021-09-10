@@ -28,7 +28,7 @@ const setInitialContext = (initialSiteData: SiteData | undefined): SiteData => {
   ) {
     textColor = initialSiteData.textColor;
     background = initialSiteData.background;
-    isLight = JSON.parse((initialSiteData.isLight as unknown) as string);
+    isLight = JSON.parse(initialSiteData.isLight as unknown as string);
   }
 
   const initialCombos = ColorCombos([textColor, background]) as ColorCombo[];
