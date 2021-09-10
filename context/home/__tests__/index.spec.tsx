@@ -22,7 +22,7 @@ describe('useSiteData hook', (): void => {
             {
               accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
               color: [18, 118, 206],
-              contrast: 4.658034537943552,
+              contrast: 4.658_034_537_943_552,
               hex: '#1276CE',
               model: 'rgb',
               valpha: 1,
@@ -38,7 +38,7 @@ describe('useSiteData hook', (): void => {
             {
               accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
               color: [255, 255, 255],
-              contrast: 4.658034537943552,
+              contrast: 4.658_034_537_943_552,
               hex: '#FFFFFF',
               model: 'rgb',
               valpha: 1,
@@ -78,7 +78,7 @@ describe('useSiteData hook', (): void => {
             {
               accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
               color: [17, 17, 17],
-              contrast: 16.422098411346187,
+              contrast: 16.422_098_411_346_187,
               hex: '#111111',
               model: 'rgb',
               valpha: 1,
@@ -94,7 +94,7 @@ describe('useSiteData hook', (): void => {
             {
               accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
               color: [239, 239, 239],
-              contrast: 16.422098411346187,
+              contrast: 16.422_098_411_346_187,
               hex: '#EFEFEF',
               model: 'rgb',
               valpha: 1,
@@ -132,7 +132,7 @@ describe('useSiteData hook', (): void => {
             {
               accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
               color: [68, 68, 68],
-              contrast: 9.739769120526205,
+              contrast: 9.739_769_120_526_205,
               hex: '#444444',
               model: 'rgb',
               valpha: 1,
@@ -148,7 +148,7 @@ describe('useSiteData hook', (): void => {
             {
               accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
               color: [255, 255, 255],
-              contrast: 9.739769120526205,
+              contrast: 9.739_769_120_526_205,
               hex: '#FFFFFF',
               model: 'rgb',
               valpha: 1,
@@ -184,7 +184,7 @@ describe('useSiteData hook', (): void => {
             {
               accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
               color: [18, 118, 206],
-              contrast: 4.508339263897164,
+              contrast: 4.508_339_263_897_164,
               hex: '#1276CE',
               model: 'rgb',
               valpha: 1,
@@ -200,7 +200,7 @@ describe('useSiteData hook', (): void => {
             {
               accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
               color: [0, 0, 0],
-              contrast: 4.508339263897164,
+              contrast: 4.508_339_263_897_164,
               hex: '#000000',
               model: 'rgb',
               valpha: 1,
@@ -237,7 +237,7 @@ describe('useSiteData hook', (): void => {
             {
               accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
               color: [18, 118, 206],
-              contrast: 4.658034537943552,
+              contrast: 4.658_034_537_943_552,
               hex: '#1276CE',
               model: 'rgb',
               valpha: 1,
@@ -253,7 +253,7 @@ describe('useSiteData hook', (): void => {
             {
               accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
               color: [255, 255, 255],
-              contrast: 4.658034537943552,
+              contrast: 4.658_034_537_943_552,
               hex: '#FFFFFF',
               model: 'rgb',
               valpha: 1,
@@ -290,7 +290,7 @@ describe('useSiteData hook', (): void => {
             {
               accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
               color: [18, 118, 206],
-              contrast: 4.658034537943552,
+              contrast: 4.658_034_537_943_552,
               hex: '#1276CE',
               model: 'rgb',
               valpha: 1,
@@ -306,7 +306,7 @@ describe('useSiteData hook', (): void => {
             {
               accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
               color: [255, 255, 255],
-              contrast: 4.658034537943552,
+              contrast: 4.658_034_537_943_552,
               hex: '#FFFFFF',
               model: 'rgb',
               valpha: 1,

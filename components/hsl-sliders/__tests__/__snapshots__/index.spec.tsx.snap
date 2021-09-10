@@ -1,20 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`hsl-slider compact variant should render a compact variant 1`] = `
-.emotion-0 {
-  display: ;
-  -webkit-box-flex-wrap: ;
-  -webkit-flex-wrap: ;
-  -ms-flex-wrap: ;
-  flex-wrap: ;
-}
-
-@media (min-width: 1024px) {
-  .emotion-0 {
-    margin: ;
-  }
-}
-
 .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -29,8 +15,6 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    padding: ;
-    width: ;
   }
 }
 
@@ -279,8 +263,6 @@ exports[`hsl-slider renders without crashing 1`] = `
 }
 
 .emotion-2 {
-  display: ;
-  padding: ;
   width: 100%;
 }
 
@@ -299,12 +281,6 @@ exports[`hsl-slider renders without crashing 1`] = `
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   width: 100%;
-}
-
-.emotion-8 {
-  -webkit-flex: ;
-  -ms-flex: ;
-  flex: ;
 }
 
 .emotion-10 {

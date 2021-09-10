@@ -2,15 +2,8 @@
 
 exports[`About renders without crashing 1`] = `
 .emotion-0 {
-  color: ;
   padding-top: 3rem;
   position: relative;
-}
-
-@media (min-width: 768px) {
-  .emotion-0 {
-    min-height: ;
-  }
 }
 
 .emotion-2 {

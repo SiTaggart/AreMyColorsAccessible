@@ -104,8 +104,7 @@ const returnColorRatingResponse = (slashText: string, res: NextApiResponse): voi
     logger.error('slash no array', { text: slashText });
     res.json({
       response_type: 'ephemeral',
-      text:
-        "Sorry, fellow color checker, that didn't work. Please try again with two, space separated hex or rgb colors.",
+      text: "Sorry, fellow color checker, that didn't work. Please try again with two, space separated hex or rgb colors.",
     });
   }
 };

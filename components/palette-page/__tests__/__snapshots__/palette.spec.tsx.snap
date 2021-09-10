@@ -22,18 +22,11 @@ Array [
 .emotion-6 {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
-  border-color: ;
   border-radius: 3px;
-  color: ;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   width: 100%;
-}
-
-.emotion-6:focus {
-  border-color: ;
-  box-shadow: ;
 }
 
 <form

@@ -23,33 +23,12 @@ exports[`ColorMatrix renders without crashing 1`] = `
 .emotion-8 {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
-  border-color: ;
   border-radius: 3px;
-  color: ;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
   width: 100%;
   margin-bottom: 0.5rem;
-}
-
-.emotion-8:focus {
-  border-color: ;
-  box-shadow: ;
-}
-
-.emotion-10 {
-  display: ;
-  -webkit-box-flex-wrap: ;
-  -webkit-flex-wrap: ;
-  -ms-flex-wrap: ;
-  flex-wrap: ;
-}
-
-@media (min-width: 1024px) {
-  .emotion-10 {
-    margin: ;
-  }
 }
 
 .emotion-12 {
@@ -66,8 +45,6 @@ exports[`ColorMatrix renders without crashing 1`] = `
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    padding: ;
-    width: ;
   }
 }
 
@@ -222,7 +199,6 @@ exports[`ColorMatrix renders without crashing 1`] = `
   min-height: 8rem;
   min-width: 12rem;
   overflow: hidden;
-  opacity: ;
   text-align: center;
   -webkit-transition: opacity ease-in;
   transition: opacity ease-in;
