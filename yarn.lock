@@ -4185,7 +4185,7 @@ __metadata:
     color: 4.0.1
     color-combos: 1.0.17
     cors: 2.8.5
-    cypress: 8.3.1
+    cypress: 8.4.1
     eslint: 7.32.0
     eslint-config-next: 11.1.2
     husky: 7.0.2
@@ -6115,9 +6115,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:8.3.1":
-  version: 8.3.1
-  resolution: "cypress@npm:8.3.1"
+"cypress@npm:8.4.1":
+  version: 8.4.1
+  resolution: "cypress@npm:8.4.1"
   dependencies:
     "@cypress/request": ^2.88.6
     "@cypress/xvfb": ^1.2.4
@@ -6162,7 +6162,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: fc2b3500b43a27f8a9c9ed421739147b4722b017d745068c7cdb76d576126576aac9e218769992cfb4ed32b591fb1e2b6c7d16f589597b4971c4ae60ec5149fa
+  checksum: d06e91df458d8052971a6992c0d0e74451bf916ceba0599e9bf0287022b60e831a2ef0b9be64af03894101d06c3fc21b98fed9a3e9f6a0818ee75f0b7358d033
   languageName: node
   linkType: hard
 
