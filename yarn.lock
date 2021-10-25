@@ -1231,9 +1231,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/plugin-nextjs@npm:3.9.0":
-  version: 3.9.0
-  resolution: "@netlify/plugin-nextjs@npm:3.9.0"
+"@netlify/plugin-nextjs@npm:3.9.2":
+  version: 3.9.2
+  resolution: "@netlify/plugin-nextjs@npm:3.9.2"
   dependencies:
     "@babel/core": ^7.15.0
     "@netlify/functions": ^0.7.2
@@ -1262,7 +1262,7 @@ __metadata:
     tiny-glob: ^0.2.9
   bin:
     netlify-plugin-nextjs: src/next-on-netlify.js
-  checksum: 56a15297ff64b1f35db317f555158723336510e244b8a5b8354547077c6d45d65580829d9fb61f43849677051f7158182082493ffdace41948a4dfd8b7458f62
+  checksum: dacb8ca59714c2d1fec1af0510dd67fb4db9173b167a05de4270c499914ba532b77105cd44d09bd39e11bd89e35183e05d5b624c1bce9f0a92890e90d3940cb6
   languageName: node
   linkType: hard
 
@@ -4182,7 +4182,7 @@ __metadata:
     "@emotion/react": 11.4.1
     "@emotion/styled": 11.3.0
     "@netlify/plugin-lighthouse": 2.1.2
-    "@netlify/plugin-nextjs": 3.9.0
+    "@netlify/plugin-nextjs": 3.9.2
     "@next/eslint-plugin-next": 11.1.2
     "@percy/cypress": 2.3.4
     "@sitaggart/eslint-config-ts": 0.6.2
