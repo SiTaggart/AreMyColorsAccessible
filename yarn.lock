@@ -3599,7 +3599,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17.0.9, @types/react-dom@npm:>=16.9.0":
+"@types/react-dom@npm:17.0.10":
+  version: 17.0.10
+  resolution: "@types/react-dom@npm:17.0.10"
+  dependencies:
+    "@types/react": "*"
+  checksum: cc7d8d5b77ee2f3b989c107abd8ec0f2460ba1b1ee6e6d637124e1939594b5619fa4166ef0ea7632a69b68358e0b71aa618de446ccc416dcc0017175549da601
+  languageName: node
+  linkType: hard
+
+"@types/react-dom@npm:>=16.9.0":
   version: 17.0.9
   resolution: "@types/react-dom@npm:17.0.9"
   dependencies:
@@ -4198,7 +4207,7 @@ __metadata:
     "@types/node": 14.17.17
     "@types/query-string": 6.3.0
     "@types/react": 17.0.20
-    "@types/react-dom": 17.0.9
+    "@types/react-dom": 17.0.10
     "@types/react-test-renderer": 17.0.1
     babel-jest: 27.2.5
     bundlewatch: 0.3.2
