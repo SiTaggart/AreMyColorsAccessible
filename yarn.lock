@@ -1805,12 +1805,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sitaggart/prettier-config@npm:0.3.1":
-  version: 0.3.1
-  resolution: "@sitaggart/prettier-config@npm:0.3.1"
+"@sitaggart/prettier-config@npm:0.3.3":
+  version: 0.3.3
+  resolution: "@sitaggart/prettier-config@npm:0.3.3"
   peerDependencies:
     prettier: "*"
-  checksum: 46adf3417b794f3a4192a72c7db5eceb259724b362fd6092690c09e04c2160660780af6e31e08dc854ff6325e9ef60a78736d788e68521632f44a2d18fc70011
+  checksum: 8200e26062cafbbf279c6327d191318261dedd09b6110954ca2459baa348129057ba3449aa4e7bfa51735004b5870bd76b4370b461d1ca4959349c27603d865e
   languageName: node
   linkType: hard
 
@@ -4195,7 +4195,7 @@ __metadata:
     "@next/eslint-plugin-next": 11.1.2
     "@percy/cypress": 2.3.4
     "@sitaggart/eslint-config-ts": 0.6.2
-    "@sitaggart/prettier-config": 0.3.1
+    "@sitaggart/prettier-config": 0.3.3
     "@testing-library/react": 12.1.2
     "@testing-library/react-hooks": 7.0.2
     "@twilio-paste/core": 10.11.0
