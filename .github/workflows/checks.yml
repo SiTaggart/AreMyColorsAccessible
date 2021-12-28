@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x.x]
+        node-version: [16.13.x]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x.x]
+        node-version: [16.13.x]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x.x]
+        node-version: [16.13.x]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -89,7 +89,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x.x]
+        node-version: [16.13.x]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
