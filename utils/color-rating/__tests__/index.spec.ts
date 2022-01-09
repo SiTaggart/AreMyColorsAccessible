@@ -1,4 +1,5 @@
 /* eslint-env jest */
+/// <reference types="jest" />
 
 import { colorRating } from '../color-rating';
 

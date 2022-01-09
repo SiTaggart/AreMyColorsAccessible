@@ -151,16 +151,16 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = ({
     }
   };
 
-  return (
-    <HomeContext.Provider
-      value={{
-        siteData: state,
-        handleBackgroundColorInputChange,
-        handleTextColorInputChange,
-      }}
-      {...props}
-    />
+  const providerValue = React.useMemo(
+    () => ({
+      siteData: state,
+      handleBackgroundColorInputChange,
+      handleTextColorInputChange,
+    }),
+    [state]
   );
+
+  return <HomeContext.Provider value={providerValue} {...props} />;
 };
 
 export { HomeContext, useSiteData, SiteDataProvider };

@@ -20,18 +20,16 @@ const FormRange: React.FC<FormRangeProps> = ({
   onInput,
   value,
 }: FormRangeProps): ReactElement<HTMLInputElement> => (
-  <>
-    <StyledRange
-      data-testid={id}
-      defaultValue={defaultValue}
-      id={id}
-      max={max}
-      min={min}
-      onChange={onChange}
-      onInput={onInput}
-      value={value}
-    />
-  </>
+  <StyledRange
+    data-testid={id}
+    defaultValue={defaultValue}
+    id={id}
+    max={max}
+    min={min}
+    onChange={onChange}
+    onInput={onInput}
+    value={value}
+  />
 );
 
 export { FormRange };

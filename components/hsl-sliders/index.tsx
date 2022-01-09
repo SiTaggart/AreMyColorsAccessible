@@ -45,7 +45,7 @@ interface Range {
   handleOnChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
   symbol: string;
 }
-export const HslSliders: React.FC<HslSliderProps> = memo(
+const HslSliders: React.FC<HslSliderProps> = memo(
   ({ id, onChange, value, variant }: HslSliderProps): ReactElement => {
     const hslColorValue: HSLColor = convertToHSL(value);
 
@@ -132,3 +132,5 @@ export const HslSliders: React.FC<HslSliderProps> = memo(
     );
   }
 );
+HslSliders.displayName = 'HslSliders';
+export { HslSliders };

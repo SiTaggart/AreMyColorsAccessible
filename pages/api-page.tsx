@@ -104,7 +104,7 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
                     <Label htmlFor={foregroundID}>Foreground</Label>
                     <Input
                       id={foregroundID}
-                      insertAfter={<>{foreground}</>}
+                      insertAfter={foreground}
                       onChange={(e) => setForeground(e.currentTarget.value)}
                       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                       // @ts-ignore
@@ -116,7 +116,7 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
                     <Label htmlFor={backgroundID}>Background</Label>
                     <Input
                       id={backgroundID}
-                      insertAfter={<>{background}</>}
+                      insertAfter={background}
                       onChange={(e) => setBackground(e.currentTarget.value)}
                       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                       // @ts-ignore

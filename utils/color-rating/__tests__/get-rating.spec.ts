@@ -1,3 +1,5 @@
+/// <reference types="jest" />
+
 import { getRating } from '../get-rating';
 
 describe('getRating', () => {

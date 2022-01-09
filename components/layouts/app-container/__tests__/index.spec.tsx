@@ -1,4 +1,5 @@
 /* eslint-env jest */
+/// <reference types="jest" />
 
 import React, { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
@@ -10,9 +11,8 @@ describe('AppContainer', (): void => {
   let ChildComponent: React.FunctionComponent = (): ReactElement<HTMLDivElement> => <div />;
 
   beforeAll((): void => {
-    ChildComponent = function ChildComponentFn(): JSX.Element {
-      return <div />;
-    };
+    // eslint-disable-next-line react/display-name
+    ChildComponent = (): JSX.Element => <div />;
   });
 
   it('renders without crashing', (): void => {
