@@ -1,5 +1,6 @@
 /* eslint-env jest */
 /* eslint-disable react/display-name */
+/// <reference types="jest" />
 
 import * as React from 'react';
 import { renderHook, act, RenderHookResult } from '@testing-library/react-hooks';

@@ -4,7 +4,7 @@ module.exports = {
   plugins: ['@emotion/eslint-plugin'],
   settings: {
     react: {
-      version: '16.11.0',
+      version: '17.0.2',
     },
   },
   rules: {
@@ -12,5 +12,12 @@ module.exports = {
     'react/require-default-props': 'off',
     '@emotion/pkg-renaming': 'error',
     'unicorn/prefer-module': 'off',
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
   },
 };

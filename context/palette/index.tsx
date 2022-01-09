@@ -154,18 +154,17 @@ const PaletteDataProvider: React.FC<PaletteDataProviderProps> = ({
     }
   };
 
-  return (
-    <PaletteContext.Provider
-      value={{
-        paletteData: state,
-        setPaletteData,
-        handleColorChange,
-        handleNewColor,
-      }}
-    >
-      {children}
-    </PaletteContext.Provider>
+  const providerValue = React.useMemo(
+    () => ({
+      paletteData: state,
+      setPaletteData,
+      handleColorChange,
+      handleNewColor,
+    }),
+    [state]
   );
+
+  return <PaletteContext.Provider value={providerValue}>{children}</PaletteContext.Provider>;
 };
 
 export { PaletteContext, usePaletteData, PaletteDataProvider };

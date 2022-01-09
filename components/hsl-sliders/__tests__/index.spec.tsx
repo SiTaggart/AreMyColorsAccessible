@@ -1,4 +1,5 @@
 /* eslint-env jest */
+/// <reference types="jest" />
 
 import React from 'react';
 import ReactDOM from 'react-dom';

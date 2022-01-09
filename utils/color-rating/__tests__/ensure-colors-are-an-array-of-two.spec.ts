@@ -1,3 +1,5 @@
+/// <reference types="jest" />
+
 import { ensureColorsAreAnArrayOfTwo } from '../ensure-colors-are-an-array-of-two';
 
 describe('ensureColorsAreAnArrayOfTwo', () => {

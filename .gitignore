@@ -12,3 +12,5 @@ cypress/videos/
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+tsconfig.tsbuildinfo
+.netlify
