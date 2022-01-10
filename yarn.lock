@@ -1894,7 +1894,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@percy/cli@npm:^1.0.0-beta.71":
+"@percy/cli@npm:1.0.0-beta.71":
   version: 1.0.0-beta.71
   resolution: "@percy/cli@npm:1.0.0-beta.71"
   dependencies:
@@ -4626,7 +4626,7 @@ __metadata:
     "@netlify/plugin-lighthouse": 2.1.2
     "@netlify/plugin-nextjs": 4.1.1
     "@next/eslint-plugin-next": 12.0.7
-    "@percy/cli": ^1.0.0-beta.71
+    "@percy/cli": 1.0.0-beta.71
     "@percy/cypress": 3.1.1
     "@sitaggart/eslint-config-ts": 0.6.9
     "@sitaggart/prettier-config": 0.3.8
@@ -4651,7 +4651,7 @@ __metadata:
     cypress: 9.2.0
     eslint: 8.6.0
     eslint-config-next: 12.0.7
-    eslint-formatter-codeframe: ^7.32.1
+    eslint-formatter-codeframe: 7.32.1
     husky: 7.0.4
     jest: 27.4.7
     lodash: 4.17.21
@@ -7489,7 +7489,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-formatter-codeframe@npm:^7.32.1":
+"eslint-formatter-codeframe@npm:7.32.1":
   version: 7.32.1
   resolution: "eslint-formatter-codeframe@npm:7.32.1"
   dependencies:
