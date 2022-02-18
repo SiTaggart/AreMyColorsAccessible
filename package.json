@@ -42,7 +42,7 @@
     "color-combos": "1.0.17",
     "cors": "2.8.5",
     "lodash": "4.17.21",
-    "next": "12.0.10",
+    "next": "12.1.0",
     "normalize.css": "8.0.1",
     "polished": "4.1.4",
     "prism-react-renderer": "1.3.1",
