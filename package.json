@@ -63,7 +63,7 @@
     "@percy/cypress": "3.1.1",
     "@sitaggart/eslint-config-ts": "0.6.10",
     "@sitaggart/prettier-config": "0.3.9",
-    "@testing-library/react": "12.1.5",
+    "@testing-library/react": "13.3.0",
     "@testing-library/react-hooks": "8.0.0",
     "@types/color": "3.0.3",
     "@types/cors": "2.8.12",
