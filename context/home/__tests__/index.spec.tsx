@@ -1,5 +1,6 @@
 /* eslint-disable react/display-name */
 /// <reference types="jest" />
+import { expect } from '@jest/globals';
 
 import * as React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';

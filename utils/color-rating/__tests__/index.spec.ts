@@ -1,5 +1,6 @@
 /* eslint-env jest */
 /// <reference types="jest" />
+import { expect } from '@jest/globals';
 
 import { colorRating } from '../color-rating';
 

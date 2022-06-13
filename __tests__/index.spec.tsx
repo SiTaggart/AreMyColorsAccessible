@@ -1,5 +1,6 @@
 /* eslint-env jest */
 /// <reference types="jest" />
+import { expect } from '@jest/globals';
 import { render } from '@testing-library/react';
 import * as React from 'react';
 
