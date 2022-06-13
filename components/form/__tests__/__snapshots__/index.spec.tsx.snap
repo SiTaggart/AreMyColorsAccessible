@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Form renders without crashing 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,14 +19,16 @@ exports[`Form renders without crashing 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
->
-  children
-</div>
+    class="emotion-0 emotion-1"
+  >
+    children
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Form should render inline styles when past 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -42,13 +45,10 @@ exports[`Form should render inline styles when past 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
-  style={
-    Object {
-      "backgroundColor": "#fff",
-    }
-  }
->
-  children
-</div>
+    class="emotion-0 emotion-1"
+    style="background-color: rgb(255, 255, 255);"
+  >
+    children
+  </div>
+</DocumentFragment>
 `;

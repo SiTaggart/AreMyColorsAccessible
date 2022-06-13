@@ -1,9 +1,8 @@
 /* eslint-env jest */
 /// <reference types="jest" />
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
 import { Footer } from '..';
 
 describe('Footer', (): void => {
@@ -16,13 +15,12 @@ describe('Footer', (): void => {
   };
 
   it('renders without crashing', (): void => {
-    ReactDOM.render(<Footer />, document.createElement('div'));
-    const footerComp = renderer.create(<Footer />).toJSON();
-    expect(footerComp).toMatchSnapshot();
+    const { asFragment } = render(<Footer />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders footerLink styles added', (): void => {
-    const footerComp = renderer.create(<Footer {...mockProps} />).toJSON();
-    expect(footerComp).toMatchSnapshot();
+    const { asFragment } = render(<Footer {...mockProps} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

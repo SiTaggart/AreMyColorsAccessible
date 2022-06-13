@@ -1,9 +1,8 @@
 /* eslint-env jest */
 /// <reference types="jest" />
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
 import { ColorCard, ColorCardProps } from '..';
 
 describe('ColorCard', (): void => {
@@ -19,13 +18,12 @@ describe('ColorCard', (): void => {
   };
 
   it('renders without crashing', (): void => {
-    ReactDOM.render(<ColorCard {...mockProps} />, document.createElement('div'));
-    const colorCard = renderer.create(<ColorCard {...mockProps} />).toJSON();
-    expect(colorCard).toMatchSnapshot();
+    const { asFragment } = render(<ColorCard {...mockProps} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render a not important card', (): void => {
-    const colorCard = renderer.create(<ColorCard {...mockProps} isNotImportant />).toJSON();
-    expect(colorCard).toMatchSnapshot();
+    const { asFragment } = render(<ColorCard {...mockProps} isNotImportant />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormRange renders without crashing 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   -webkit-appearance: none;
   background: transparent;
   border-radius: 2px;
@@ -106,11 +107,13 @@ exports[`FormRange renders without crashing 1`] = `
 }
 
 <input
-  className="emotion-0 emotion-1"
-  data-testid="range-id"
-  id="range-id"
-  max={100}
-  min={1}
-  type="range"
-/>
+    class="emotion-0 emotion-1"
+    data-testid="range-id"
+    id="range-id"
+    max="100"
+    min="1"
+    type="range"
+    value=""
+  />
+</DocumentFragment>
 `;

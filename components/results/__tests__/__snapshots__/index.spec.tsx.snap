@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Results renders without crashing 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -112,88 +113,90 @@ exports[`Results renders without crashing 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
->
-  <h1
-    aria-atomic="true"
-    aria-live="polite"
-    className="emotion-2 emotion-3"
-    data-testid="contrastResults-heading"
+    class="emotion-0 emotion-1"
   >
-    Yup
-  </h1>
-  <div
-    className="emotion-4 emotion-5"
-  >
-    <p
-      className="emotion-6 emotion-7"
+    <h1
+      aria-atomic="true"
+      aria-live="polite"
+      class="emotion-2 emotion-3"
+      data-testid="contrastResults-heading"
     >
-      Small Text
-      <br />
-      AA: 4.5 AAA: 7.0
-    </p>
-    <h2
-      className="emotion-8 emotion-9"
-      data-testid="contrastResult-rating-small"
+      Yup
+    </h1>
+    <div
+      class="emotion-4 emotion-5"
     >
-      AA
-    </h2>
-  </div>
-  <div
-    className="emotion-4 emotion-5"
-  >
-    <p
-      className="emotion-6 emotion-7"
+      <p
+        class="emotion-6 emotion-7"
+      >
+        Small Text
+        <br />
+        AA: 4.5 AAA: 7.0
+      </p>
+      <h2
+        class="emotion-8 emotion-9"
+        data-testid="contrastResult-rating-small"
+      >
+        AA
+      </h2>
+    </div>
+    <div
+      class="emotion-4 emotion-5"
     >
-      <strong>
-        Bold Text 18px and over 
+      <p
+        class="emotion-6 emotion-7"
+      >
+        <strong>
+          Bold Text 18px and over 
+          <br />
+          AA: 3.0 AAA: 4.5
+        </strong>
+      </p>
+      <h2
+        class="emotion-8 emotion-9"
+        data-testid="contrastResult-rating-bold"
+      >
+        AAA
+      </h2>
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <p
+        class="emotion-18 emotion-7"
+      >
+        Large Text 24px and over 
         <br />
         AA: 3.0 AAA: 4.5
-      </strong>
-    </p>
-    <h2
-      className="emotion-8 emotion-9"
-      data-testid="contrastResult-rating-bold"
+      </p>
+      <h2
+        class="emotion-8 emotion-9"
+        data-testid="contrastResult-rating-large"
+      >
+        AAA
+      </h2>
+    </div>
+    <div
+      class="emotion-4 emotion-5"
     >
-      AAA
-    </h2>
+      <p
+        class="emotion-6 emotion-7"
+      >
+        Contrast Ratio
+      </p>
+      <h2
+        class="emotion-8 emotion-9"
+      >
+        4.66 : 1
+      </h2>
+    </div>
   </div>
-  <div
-    className="emotion-4 emotion-5"
-  >
-    <p
-      className="emotion-18 emotion-7"
-    >
-      Large Text 24px and over 
-      <br />
-      AA: 3.0 AAA: 4.5
-    </p>
-    <h2
-      className="emotion-8 emotion-9"
-      data-testid="contrastResult-rating-large"
-    >
-      AAA
-    </h2>
-  </div>
-  <div
-    className="emotion-4 emotion-5"
-  >
-    <p
-      className="emotion-6 emotion-7"
-    >
-      Contrast Ratio
-    </p>
-    <h2
-      className="emotion-8 emotion-9"
-    >
-      4.66 : 1
-    </h2>
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Results should set the font color of seriously? to #343334 on light backgrounds 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -304,97 +307,94 @@ exports[`Results should set the font color of seriously? to #343334 on light bac
 }
 
 <div
-  className="emotion-0 emotion-1"
->
-  <h1
-    aria-atomic="true"
-    aria-live="polite"
-    className="emotion-2 emotion-3"
-    data-testid="contrastResults-heading"
+    class="emotion-0 emotion-1"
   >
-    Nope
-  </h1>
-  <div
-    className="emotion-4 emotion-5"
-  >
-    <p
-      className="emotion-6 emotion-7"
+    <h1
+      aria-atomic="true"
+      aria-live="polite"
+      class="emotion-2 emotion-3"
+      data-testid="contrastResults-heading"
     >
-      Small Text
-      <br />
-      AA: 4.5 AAA: 7.0
-    </p>
-    <h2
-      className="emotion-8 emotion-9"
-      data-testid="contrastResult-rating-small"
+      Nope
+    </h1>
+    <div
+      class="emotion-4 emotion-5"
     >
-      Fail
-    </h2>
-  </div>
-  <div
-    className="emotion-4 emotion-5"
-  >
-    <p
-      className="emotion-6 emotion-7"
+      <p
+        class="emotion-6 emotion-7"
+      >
+        Small Text
+        <br />
+        AA: 4.5 AAA: 7.0
+      </p>
+      <h2
+        class="emotion-8 emotion-9"
+        data-testid="contrastResult-rating-small"
+      >
+        Fail
+      </h2>
+    </div>
+    <div
+      class="emotion-4 emotion-5"
     >
-      <strong>
-        Bold Text 18px and over 
+      <p
+        class="emotion-6 emotion-7"
+      >
+        <strong>
+          Bold Text 18px and over 
+          <br />
+          AA: 3.0 AAA: 4.5
+        </strong>
+      </p>
+      <h2
+        class="emotion-8 emotion-9"
+        data-testid="contrastResult-rating-bold"
+      >
+        Fail
+      </h2>
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <p
+        class="emotion-18 emotion-7"
+      >
+        Large Text 24px and over 
         <br />
         AA: 3.0 AAA: 4.5
-      </strong>
-    </p>
-    <h2
-      className="emotion-8 emotion-9"
-      data-testid="contrastResult-rating-bold"
+      </p>
+      <h2
+        class="emotion-8 emotion-9"
+        data-testid="contrastResult-rating-large"
+      >
+        Fail
+      </h2>
+    </div>
+    <div
+      class="emotion-4 emotion-5"
     >
-      Fail
-    </h2>
+      <p
+        class="emotion-6 emotion-7"
+      >
+        Contrast Ratio
+      </p>
+      <h2
+        class="emotion-8 emotion-9"
+      >
+        1.2 : 1
+      </h2>
+    </div>
+    <div
+      class="emotion-4 emotion-5"
+      style="color: rgb(52, 51, 52);"
+    >
+      <h2
+        class="emotion-8 emotion-9"
+        data-testid="contrastResults-seriously"
+      >
+        Seriously?
+      </h2>
+    </div>
   </div>
-  <div
-    className="emotion-4 emotion-5"
-  >
-    <p
-      className="emotion-18 emotion-7"
-    >
-      Large Text 24px and over 
-      <br />
-      AA: 3.0 AAA: 4.5
-    </p>
-    <h2
-      className="emotion-8 emotion-9"
-      data-testid="contrastResult-rating-large"
-    >
-      Fail
-    </h2>
-  </div>
-  <div
-    className="emotion-4 emotion-5"
-  >
-    <p
-      className="emotion-6 emotion-7"
-    >
-      Contrast Ratio
-    </p>
-    <h2
-      className="emotion-8 emotion-9"
-    >
-      1.2 : 1
-    </h2>
-  </div>
-  <div
-    className="emotion-4 emotion-5"
-    style={
-      Object {
-        "color": "#343334",
-      }
-    }
-  >
-    <h2
-      className="emotion-8 emotion-9"
-      data-testid="contrastResults-seriously"
-    >
-      Seriously?
-    </h2>
-  </div>
-</div>
+</DocumentFragment>
 `;

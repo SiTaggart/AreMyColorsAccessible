@@ -2,8 +2,6 @@
 /// <reference types="jest" />
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react';
 import { FormInput, FormInputProps } from '..';
 
@@ -17,9 +15,8 @@ describe('FormInput', (): void => {
   );
 
   it('renders without crashing', (): void => {
-    ReactDOM.render(<FormInputWrapper />, document.createElement('div'));
-    const formInputCmp = renderer.create(<FormInputWrapper />).toJSON();
-    expect(formInputCmp).toMatchSnapshot();
+    const { asFragment } = render(<FormInputWrapper />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should set aria-label on the input when past', (): void => {
@@ -40,15 +37,13 @@ describe('FormInput', (): void => {
       'error-message-label-form-id'
     );
     expect(getByText('this is an error')).not.toBeNull();
-    const formInputCmp = renderer
-      .create(<FormInputWrapper errorMessage="this is an error" />)
-      .toJSON();
-    expect(formInputCmp).toMatchSnapshot();
+    const { asFragment } = render(<FormInputWrapper errorMessage="this is an error" />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should set the noSpacing class when hasNoSpacing is set', (): void => {
-    const formInputCmp = renderer.create(<FormInputWrapper hasNoSpacing />).toJSON();
-    expect(formInputCmp).toMatchSnapshot();
+    const { asFragment } = render(<FormInputWrapper hasNoSpacing />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should set a name', (): void => {

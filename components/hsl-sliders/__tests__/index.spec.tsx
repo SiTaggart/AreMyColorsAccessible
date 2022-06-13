@@ -2,31 +2,25 @@
 /// <reference types="jest" />
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { render, fireEvent } from '@testing-library/react';
-import renderer from 'react-test-renderer';
 import { HslSliders } from '..';
 
 describe('hsl-slider', (): void => {
   const onChangeMock = jest.fn();
 
   it('renders without crashing', (): void => {
-    ReactDOM.render(
-      <HslSliders id="input-id" onChange={onChangeMock} value="#ccc" />,
-      document.createElement('div')
+    const { asFragment } = render(
+      <HslSliders id="input-id" onChange={onChangeMock} value="#ccc" />
     );
-    const hslSlidersComp = renderer
-      .create(<HslSliders id="input-id" onChange={onChangeMock} value="#ccc" />)
-      .toJSON();
-    expect(hslSlidersComp).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   describe('compact variant', (): void => {
     it('should render a compact variant', (): void => {
-      const hslSlidersComp = renderer
-        .create(<HslSliders id="input-id" onChange={onChangeMock} value="#ccc" variant="compact" />)
-        .toJSON();
-      expect(hslSlidersComp).toMatchSnapshot();
+      const { asFragment } = render(
+        <HslSliders id="input-id" onChange={onChangeMock} value="#ccc" variant="compact" />
+      );
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render the slider input label as the first letter', (): void => {

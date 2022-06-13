@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PaletteInput renders without crashing 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   text-align: center;
 }
 
@@ -29,35 +30,37 @@ exports[`PaletteInput renders without crashing 1`] = `
 }
 
 <form
-  className="emotion-0 emotion-1"
-  onSubmit={[Function]}
->
-  <div>
-    <h1
-      className="emotion-2 emotion-3"
-    >
-      <label
-        className="emotion-4 emotion-5"
-        htmlFor="palette-form-input"
+    class="emotion-0 emotion-1"
+  >
+    <div>
+      <h1
+        class="emotion-2 emotion-3"
       >
-        Add the colours from your palette
-      </label>
-    </h1>
-    <input
-      autoComplete="off"
-      className="emotion-6 emotion-7"
-      data-testid="palette-form-input"
-      id="palette-form-input"
-      name="paletteFormInput"
-      placeholder="e.g. #ccc, #fff or blue"
-      type="text"
-    />
-  </div>
-</form>
+        <label
+          class="emotion-4 emotion-5"
+          for="palette-form-input"
+        >
+          Add the colours from your palette
+        </label>
+      </h1>
+      <input
+        autocomplete="off"
+        class="emotion-6 emotion-7"
+        data-testid="palette-form-input"
+        id="palette-form-input"
+        name="paletteFormInput"
+        placeholder="e.g. #ccc, #fff or blue"
+        type="text"
+        value=""
+      />
+    </div>
+  </form>
+</DocumentFragment>
 `;
 
 exports[`PaletteInput should render an error message when passed 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   text-align: center;
 }
 
@@ -98,36 +101,37 @@ exports[`PaletteInput should render an error message when passed 1`] = `
 }
 
 <form
-  className="emotion-0 emotion-1"
-  onSubmit={[Function]}
->
-  <div>
-    <h1
-      className="emotion-2 emotion-3"
-    >
-      <label
-        className="emotion-4 emotion-5"
-        htmlFor="palette-form-input"
+    class="emotion-0 emotion-1"
+  >
+    <div>
+      <h1
+        class="emotion-2 emotion-3"
       >
-        Add the colours from your palette
-      </label>
-    </h1>
-    <input
-      aria-describedby="error-message-label-palette-form-input"
-      autoComplete="off"
-      className="emotion-6 emotion-7"
-      data-testid="palette-form-input"
-      id="palette-form-input"
-      name="paletteFormInput"
-      placeholder="e.g. #ccc, #fff or blue"
-      type="text"
-    />
-    <div
-      className="emotion-8 emotion-9"
-      id="error-message-label-palette-form-input"
-    >
-      I'm an error
+        <label
+          class="emotion-4 emotion-5"
+          for="palette-form-input"
+        >
+          Add the colours from your palette
+        </label>
+      </h1>
+      <input
+        aria-describedby="error-message-label-palette-form-input"
+        autocomplete="off"
+        class="emotion-6 emotion-7"
+        data-testid="palette-form-input"
+        id="palette-form-input"
+        name="paletteFormInput"
+        placeholder="e.g. #ccc, #fff or blue"
+        type="text"
+        value=""
+      />
+      <div
+        class="emotion-8 emotion-9"
+        id="error-message-label-palette-form-input"
+      >
+        I'm an error
+      </div>
     </div>
-  </div>
-</form>
+  </form>
+</DocumentFragment>
 `;

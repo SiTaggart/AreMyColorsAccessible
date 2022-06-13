@@ -2,9 +2,7 @@
 /// <reference types="jest" />
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { render, fireEvent } from '@testing-library/react';
-import renderer from 'react-test-renderer';
 import ColorCombos from 'color-combos';
 import { ColorMatrix, ColorMatrixProps } from '..';
 
@@ -22,9 +20,8 @@ describe('ColorMatrix', (): void => {
   }
 
   it('renders without crashing', (): void => {
-    ReactDOM.render(<ColorMatrix {...mockProps} />, document.createElement('div'));
-    const colorCard = renderer.create(<ColorMatrix {...mockProps} />).toJSON();
-    expect(colorCard).toMatchSnapshot();
+    const { asFragment } = render(<ColorMatrix {...mockProps} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should call the onColorChange method when a color is changed in an input', (): void => {

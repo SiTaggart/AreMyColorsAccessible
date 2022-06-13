@@ -1,9 +1,8 @@
 /* eslint-env jest */
 /// <reference types="jest" />
 
+import { render } from '@testing-library/react';
 import React, { ReactElement } from 'react';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
 import { AppContainer } from '..';
 import { SiteDataProvider } from '../../../../context/home';
 
@@ -16,7 +15,7 @@ describe('AppContainer', (): void => {
   });
 
   it('renders without crashing', (): void => {
-    ReactDOM.render(
+    const { asFragment } = render(
       <SiteDataProvider
         initialSiteData={{
           background: '#000',
@@ -28,46 +27,26 @@ describe('AppContainer', (): void => {
         <AppContainer title="are my colors accessible">
           <ChildComponent />
         </AppContainer>
-      </SiteDataProvider>,
-      document.createElement('div')
+      </SiteDataProvider>
     );
-
-    const appContainerCmp = renderer
-      .create(
-        <SiteDataProvider
-          initialSiteData={{
-            background: '#000',
-            textColor: '#fff',
-            isLight: false,
-            colorCombos: [],
-          }}
-        >
-          <AppContainer title="are my colors accessible">
-            <ChildComponent />
-          </AppContainer>
-        </SiteDataProvider>
-      )
-      .toJSON();
-    expect(appContainerCmp).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('changes the footer link colors based on isLight prop', (): void => {
-    const appContainerCmp = renderer
-      .create(
-        <SiteDataProvider
-          initialSiteData={{
-            background: '#fff',
-            textColor: '#000',
-            isLight: true,
-            colorCombos: [],
-          }}
-        >
-          <AppContainer title="are my colors accessible">
-            <ChildComponent />
-          </AppContainer>
-        </SiteDataProvider>
-      )
-      .toJSON();
-    expect(appContainerCmp).toMatchSnapshot();
+    const { asFragment } = render(
+      <SiteDataProvider
+        initialSiteData={{
+          background: '#fff',
+          textColor: '#000',
+          isLight: true,
+          colorCombos: [],
+        }}
+      >
+        <AppContainer title="are my colors accessible">
+          <ChildComponent />
+        </AppContainer>
+      </SiteDataProvider>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 });

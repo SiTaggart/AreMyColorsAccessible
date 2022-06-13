@@ -2,26 +2,17 @@
 /// <reference types="jest" />
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { PaletteDataProvider } from '../../../context/palette';
 import { PalettePage } from '..';
 
 describe('Palette Page', (): void => {
   it('renders without crashing', (): void => {
-    ReactDOM.render(
+    const { asFragment } = render(
       <PaletteDataProvider>
         <PalettePage />
-      </PaletteDataProvider>,
-      document.createElement('div')
+      </PaletteDataProvider>
     );
-    const paletteCmp = renderer
-      .create(
-        <PaletteDataProvider>
-          <PalettePage />
-        </PaletteDataProvider>
-      )
-      .toJSON();
-    expect(paletteCmp).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

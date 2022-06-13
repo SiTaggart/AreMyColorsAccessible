@@ -2,8 +2,6 @@
 /// <reference types="jest" />
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react';
 import ColorCombos, { ColorCombo } from 'color-combos';
 import { ColorInputs } from '..';
@@ -42,9 +40,8 @@ describe('ColorInputs', (): void => {
   });
 
   it('renders without crashing', (): void => {
-    ReactDOM.render(<ColorInputs />, document.createElement('div'));
-    const colorCard = renderer.create(<ColorInputs />).toJSON();
-    expect(colorCard).toMatchSnapshot();
+    const { asFragment } = render(<ColorInputs />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should call the handleTextColorInputChange callback on text color change', (): void => {

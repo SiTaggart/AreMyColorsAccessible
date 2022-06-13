@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ColorMatrix renders without crashing 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   margin-top: 3rem;
   overflow-x: auto;
 }
@@ -282,1146 +283,1031 @@ exports[`ColorMatrix renders without crashing 1`] = `
 }
 
 <section
-  className="emotion-0 emotion-1"
->
-  <table
-    className="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
   >
-    <thead>
-      <tr
-        className="emotion-4 emotion-5"
-        data-testid="colorMatrix-tr"
-      >
-        <td
-          style={
-            Object {
-              "width": "6rem",
-            }
-          }
-        />
-        <th
-          className="emotion-6 emotion-7"
-          data-testid="colorMatrix-th"
-          scope="col"
+    <table
+      class="emotion-2 emotion-3"
+    >
+      <thead>
+        <tr
+          class="emotion-4 emotion-5"
+          data-testid="colorMatrix-tr"
         >
-          <input
-            aria-label="hex colour code"
-            autoComplete="off"
-            className="emotion-8 emotion-9"
-            data-testid="colorhex-0"
-            id="colorhex-0"
-            onChange={[Function]}
-            type="text"
-            value="#fff"
+          <td
+            style="width: 6rem;"
           />
-          <div
-            className="emotion-10 emotion-11"
-            data-testid="form-hsl-sliders"
+          <th
+            class="emotion-6 emotion-7"
+            data-testid="colorMatrix-th"
+            scope="col"
           >
+            <input
+              aria-label="hex colour code"
+              autocomplete="off"
+              class="emotion-8 emotion-9"
+              data-testid="colorhex-0"
+              id="colorhex-0"
+              type="text"
+              value="#fff"
+            />
             <div
-              className="emotion-12 emotion-13"
+              class="emotion-10 emotion-11"
+              data-testid="form-hsl-sliders"
             >
               <div
-                className="emotion-14 emotion-15"
+                class="emotion-12 emotion-13"
               >
-                <label
-                  className="emotion-16 emotion-17"
-                  htmlFor="hsl-0-Hue"
+                <div
+                  class="emotion-14 emotion-15"
                 >
-                  H
-                </label>
-              </div>
-              <div
-                className="emotion-18 emotion-19"
-              >
-                <input
-                  className="emotion-20 emotion-21"
-                  data-testid="hsl-0-Hue"
-                  id="hsl-0-Hue"
-                  max={360}
-                  min={0}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  type="range"
-                  value={0}
-                />
-              </div>
-            </div>
-            <div
-              className="emotion-12 emotion-13"
-            >
-              <div
-                className="emotion-14 emotion-15"
-              >
-                <label
-                  className="emotion-16 emotion-17"
-                  htmlFor="hsl-0-Saturation"
+                  <label
+                    class="emotion-16 emotion-17"
+                    for="hsl-0-Hue"
+                  >
+                    H
+                  </label>
+                </div>
+                <div
+                  class="emotion-18 emotion-19"
                 >
-                  S
-                </label>
+                  <input
+                    class="emotion-20 emotion-21"
+                    data-testid="hsl-0-Hue"
+                    id="hsl-0-Hue"
+                    max="360"
+                    min="0"
+                    type="range"
+                    value="0"
+                  />
+                </div>
               </div>
               <div
-                className="emotion-18 emotion-19"
+                class="emotion-12 emotion-13"
               >
-                <input
-                  className="emotion-20 emotion-21"
-                  data-testid="hsl-0-Saturation"
-                  id="hsl-0-Saturation"
-                  max={100}
-                  min={0}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  type="range"
-                  value={0}
-                />
-              </div>
-            </div>
-            <div
-              className="emotion-12 emotion-13"
-            >
-              <div
-                className="emotion-14 emotion-15"
-              >
-                <label
-                  className="emotion-16 emotion-17"
-                  htmlFor="hsl-0-Lightness"
+                <div
+                  class="emotion-14 emotion-15"
                 >
-                  L
-                </label>
-              </div>
-              <div
-                className="emotion-18 emotion-19"
-              >
-                <input
-                  className="emotion-20 emotion-21"
-                  data-testid="hsl-0-Lightness"
-                  id="hsl-0-Lightness"
-                  max={100}
-                  min={0}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  type="range"
-                  value={100}
-                />
-              </div>
-            </div>
-          </div>
-        </th>
-        <th
-          className="emotion-6 emotion-7"
-          data-testid="colorMatrix-th"
-          scope="col"
-        >
-          <input
-            aria-label="hex colour code"
-            autoComplete="off"
-            className="emotion-8 emotion-9"
-            data-testid="colorhex-1"
-            id="colorhex-1"
-            onChange={[Function]}
-            type="text"
-            value="#ccc"
-          />
-          <div
-            className="emotion-10 emotion-11"
-            data-testid="form-hsl-sliders"
-          >
-            <div
-              className="emotion-12 emotion-13"
-            >
-              <div
-                className="emotion-14 emotion-15"
-              >
-                <label
-                  className="emotion-16 emotion-17"
-                  htmlFor="hsl-1-Hue"
+                  <label
+                    class="emotion-16 emotion-17"
+                    for="hsl-0-Saturation"
+                  >
+                    S
+                  </label>
+                </div>
+                <div
+                  class="emotion-18 emotion-19"
                 >
-                  H
-                </label>
+                  <input
+                    class="emotion-20 emotion-21"
+                    data-testid="hsl-0-Saturation"
+                    id="hsl-0-Saturation"
+                    max="100"
+                    min="0"
+                    type="range"
+                    value="0"
+                  />
+                </div>
               </div>
               <div
-                className="emotion-18 emotion-19"
+                class="emotion-12 emotion-13"
               >
-                <input
-                  className="emotion-20 emotion-21"
-                  data-testid="hsl-1-Hue"
-                  id="hsl-1-Hue"
-                  max={360}
-                  min={0}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  type="range"
-                  value={0}
-                />
-              </div>
-            </div>
-            <div
-              className="emotion-12 emotion-13"
-            >
-              <div
-                className="emotion-14 emotion-15"
-              >
-                <label
-                  className="emotion-16 emotion-17"
-                  htmlFor="hsl-1-Saturation"
+                <div
+                  class="emotion-14 emotion-15"
                 >
-                  S
-                </label>
-              </div>
-              <div
-                className="emotion-18 emotion-19"
-              >
-                <input
-                  className="emotion-20 emotion-21"
-                  data-testid="hsl-1-Saturation"
-                  id="hsl-1-Saturation"
-                  max={100}
-                  min={0}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  type="range"
-                  value={0}
-                />
-              </div>
-            </div>
-            <div
-              className="emotion-12 emotion-13"
-            >
-              <div
-                className="emotion-14 emotion-15"
-              >
-                <label
-                  className="emotion-16 emotion-17"
-                  htmlFor="hsl-1-Lightness"
+                  <label
+                    class="emotion-16 emotion-17"
+                    for="hsl-0-Lightness"
+                  >
+                    L
+                  </label>
+                </div>
+                <div
+                  class="emotion-18 emotion-19"
                 >
-                  L
-                </label>
-              </div>
-              <div
-                className="emotion-18 emotion-19"
-              >
-                <input
-                  className="emotion-20 emotion-21"
-                  data-testid="hsl-1-Lightness"
-                  id="hsl-1-Lightness"
-                  max={100}
-                  min={0}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  type="range"
-                  value={80}
-                />
+                  <input
+                    class="emotion-20 emotion-21"
+                    data-testid="hsl-0-Lightness"
+                    id="hsl-0-Lightness"
+                    max="100"
+                    min="0"
+                    type="range"
+                    value="100"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </th>
-        <th
-          className="emotion-6 emotion-7"
-          data-testid="colorMatrix-th"
-          scope="col"
-        >
-          <input
-            aria-label="hex colour code"
-            autoComplete="off"
-            className="emotion-8 emotion-9"
-            data-testid="colorhex-2"
-            id="colorhex-2"
-            onChange={[Function]}
-            type="text"
-            value="#777"
-          />
-          <div
-            className="emotion-10 emotion-11"
-            data-testid="form-hsl-sliders"
+          </th>
+          <th
+            class="emotion-6 emotion-7"
+            data-testid="colorMatrix-th"
+            scope="col"
           >
+            <input
+              aria-label="hex colour code"
+              autocomplete="off"
+              class="emotion-8 emotion-9"
+              data-testid="colorhex-1"
+              id="colorhex-1"
+              type="text"
+              value="#ccc"
+            />
             <div
-              className="emotion-12 emotion-13"
+              class="emotion-10 emotion-11"
+              data-testid="form-hsl-sliders"
             >
               <div
-                className="emotion-14 emotion-15"
+                class="emotion-12 emotion-13"
               >
-                <label
-                  className="emotion-16 emotion-17"
-                  htmlFor="hsl-2-Hue"
+                <div
+                  class="emotion-14 emotion-15"
                 >
-                  H
-                </label>
-              </div>
-              <div
-                className="emotion-18 emotion-19"
-              >
-                <input
-                  className="emotion-20 emotion-21"
-                  data-testid="hsl-2-Hue"
-                  id="hsl-2-Hue"
-                  max={360}
-                  min={0}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  type="range"
-                  value={0}
-                />
-              </div>
-            </div>
-            <div
-              className="emotion-12 emotion-13"
-            >
-              <div
-                className="emotion-14 emotion-15"
-              >
-                <label
-                  className="emotion-16 emotion-17"
-                  htmlFor="hsl-2-Saturation"
+                  <label
+                    class="emotion-16 emotion-17"
+                    for="hsl-1-Hue"
+                  >
+                    H
+                  </label>
+                </div>
+                <div
+                  class="emotion-18 emotion-19"
                 >
-                  S
-                </label>
+                  <input
+                    class="emotion-20 emotion-21"
+                    data-testid="hsl-1-Hue"
+                    id="hsl-1-Hue"
+                    max="360"
+                    min="0"
+                    type="range"
+                    value="0"
+                  />
+                </div>
               </div>
               <div
-                className="emotion-18 emotion-19"
+                class="emotion-12 emotion-13"
               >
-                <input
-                  className="emotion-20 emotion-21"
-                  data-testid="hsl-2-Saturation"
-                  id="hsl-2-Saturation"
-                  max={100}
-                  min={0}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  type="range"
-                  value={0}
-                />
-              </div>
-            </div>
-            <div
-              className="emotion-12 emotion-13"
-            >
-              <div
-                className="emotion-14 emotion-15"
-              >
-                <label
-                  className="emotion-16 emotion-17"
-                  htmlFor="hsl-2-Lightness"
+                <div
+                  class="emotion-14 emotion-15"
                 >
-                  L
-                </label>
-              </div>
-              <div
-                className="emotion-18 emotion-19"
-              >
-                <input
-                  className="emotion-20 emotion-21"
-                  data-testid="hsl-2-Lightness"
-                  id="hsl-2-Lightness"
-                  max={100}
-                  min={0}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  type="range"
-                  value={47}
-                />
-              </div>
-            </div>
-          </div>
-        </th>
-        <th
-          className="emotion-6 emotion-7"
-          data-testid="colorMatrix-th"
-          scope="col"
-        >
-          <input
-            aria-label="hex colour code"
-            autoComplete="off"
-            className="emotion-8 emotion-9"
-            data-testid="colorhex-3"
-            id="colorhex-3"
-            onChange={[Function]}
-            type="text"
-            value="#000"
-          />
-          <div
-            className="emotion-10 emotion-11"
-            data-testid="form-hsl-sliders"
-          >
-            <div
-              className="emotion-12 emotion-13"
-            >
-              <div
-                className="emotion-14 emotion-15"
-              >
-                <label
-                  className="emotion-16 emotion-17"
-                  htmlFor="hsl-3-Hue"
+                  <label
+                    class="emotion-16 emotion-17"
+                    for="hsl-1-Saturation"
+                  >
+                    S
+                  </label>
+                </div>
+                <div
+                  class="emotion-18 emotion-19"
                 >
-                  H
-                </label>
+                  <input
+                    class="emotion-20 emotion-21"
+                    data-testid="hsl-1-Saturation"
+                    id="hsl-1-Saturation"
+                    max="100"
+                    min="0"
+                    type="range"
+                    value="0"
+                  />
+                </div>
               </div>
               <div
-                className="emotion-18 emotion-19"
+                class="emotion-12 emotion-13"
               >
-                <input
-                  className="emotion-20 emotion-21"
-                  data-testid="hsl-3-Hue"
-                  id="hsl-3-Hue"
-                  max={360}
-                  min={0}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  type="range"
-                  value={0}
-                />
-              </div>
-            </div>
-            <div
-              className="emotion-12 emotion-13"
-            >
-              <div
-                className="emotion-14 emotion-15"
-              >
-                <label
-                  className="emotion-16 emotion-17"
-                  htmlFor="hsl-3-Saturation"
+                <div
+                  class="emotion-14 emotion-15"
                 >
-                  S
-                </label>
-              </div>
-              <div
-                className="emotion-18 emotion-19"
-              >
-                <input
-                  className="emotion-20 emotion-21"
-                  data-testid="hsl-3-Saturation"
-                  id="hsl-3-Saturation"
-                  max={100}
-                  min={0}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  type="range"
-                  value={0}
-                />
-              </div>
-            </div>
-            <div
-              className="emotion-12 emotion-13"
-            >
-              <div
-                className="emotion-14 emotion-15"
-              >
-                <label
-                  className="emotion-16 emotion-17"
-                  htmlFor="hsl-3-Lightness"
+                  <label
+                    class="emotion-16 emotion-17"
+                    for="hsl-1-Lightness"
+                  >
+                    L
+                  </label>
+                </div>
+                <div
+                  class="emotion-18 emotion-19"
                 >
-                  L
-                </label>
-              </div>
-              <div
-                className="emotion-18 emotion-19"
-              >
-                <input
-                  className="emotion-20 emotion-21"
-                  data-testid="hsl-3-Lightness"
-                  id="hsl-3-Lightness"
-                  max={100}
-                  min={0}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  type="range"
-                  value={0}
-                />
+                  <input
+                    class="emotion-20 emotion-21"
+                    data-testid="hsl-1-Lightness"
+                    id="hsl-1-Lightness"
+                    max="100"
+                    min="0"
+                    type="range"
+                    value="80"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        className="emotion-4 emotion-5"
-        data-testid="colorMatrix-tr"
-      >
-        <th
-          className="emotion-6 emotion-7"
-          data-testid="colorMatrix-th"
-          scope="row"
+          </th>
+          <th
+            class="emotion-6 emotion-7"
+            data-testid="colorMatrix-th"
+            scope="col"
+          >
+            <input
+              aria-label="hex colour code"
+              autocomplete="off"
+              class="emotion-8 emotion-9"
+              data-testid="colorhex-2"
+              id="colorhex-2"
+              type="text"
+              value="#777"
+            />
+            <div
+              class="emotion-10 emotion-11"
+              data-testid="form-hsl-sliders"
+            >
+              <div
+                class="emotion-12 emotion-13"
+              >
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  <label
+                    class="emotion-16 emotion-17"
+                    for="hsl-2-Hue"
+                  >
+                    H
+                  </label>
+                </div>
+                <div
+                  class="emotion-18 emotion-19"
+                >
+                  <input
+                    class="emotion-20 emotion-21"
+                    data-testid="hsl-2-Hue"
+                    id="hsl-2-Hue"
+                    max="360"
+                    min="0"
+                    type="range"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div
+                class="emotion-12 emotion-13"
+              >
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  <label
+                    class="emotion-16 emotion-17"
+                    for="hsl-2-Saturation"
+                  >
+                    S
+                  </label>
+                </div>
+                <div
+                  class="emotion-18 emotion-19"
+                >
+                  <input
+                    class="emotion-20 emotion-21"
+                    data-testid="hsl-2-Saturation"
+                    id="hsl-2-Saturation"
+                    max="100"
+                    min="0"
+                    type="range"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div
+                class="emotion-12 emotion-13"
+              >
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  <label
+                    class="emotion-16 emotion-17"
+                    for="hsl-2-Lightness"
+                  >
+                    L
+                  </label>
+                </div>
+                <div
+                  class="emotion-18 emotion-19"
+                >
+                  <input
+                    class="emotion-20 emotion-21"
+                    data-testid="hsl-2-Lightness"
+                    id="hsl-2-Lightness"
+                    max="100"
+                    min="0"
+                    type="range"
+                    value="47"
+                  />
+                </div>
+              </div>
+            </div>
+          </th>
+          <th
+            class="emotion-6 emotion-7"
+            data-testid="colorMatrix-th"
+            scope="col"
+          >
+            <input
+              aria-label="hex colour code"
+              autocomplete="off"
+              class="emotion-8 emotion-9"
+              data-testid="colorhex-3"
+              id="colorhex-3"
+              type="text"
+              value="#000"
+            />
+            <div
+              class="emotion-10 emotion-11"
+              data-testid="form-hsl-sliders"
+            >
+              <div
+                class="emotion-12 emotion-13"
+              >
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  <label
+                    class="emotion-16 emotion-17"
+                    for="hsl-3-Hue"
+                  >
+                    H
+                  </label>
+                </div>
+                <div
+                  class="emotion-18 emotion-19"
+                >
+                  <input
+                    class="emotion-20 emotion-21"
+                    data-testid="hsl-3-Hue"
+                    id="hsl-3-Hue"
+                    max="360"
+                    min="0"
+                    type="range"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div
+                class="emotion-12 emotion-13"
+              >
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  <label
+                    class="emotion-16 emotion-17"
+                    for="hsl-3-Saturation"
+                  >
+                    S
+                  </label>
+                </div>
+                <div
+                  class="emotion-18 emotion-19"
+                >
+                  <input
+                    class="emotion-20 emotion-21"
+                    data-testid="hsl-3-Saturation"
+                    id="hsl-3-Saturation"
+                    max="100"
+                    min="0"
+                    type="range"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <div
+                class="emotion-12 emotion-13"
+              >
+                <div
+                  class="emotion-14 emotion-15"
+                >
+                  <label
+                    class="emotion-16 emotion-17"
+                    for="hsl-3-Lightness"
+                  >
+                    L
+                  </label>
+                </div>
+                <div
+                  class="emotion-18 emotion-19"
+                >
+                  <input
+                    class="emotion-20 emotion-21"
+                    data-testid="hsl-3-Lightness"
+                    id="hsl-3-Lightness"
+                    max="100"
+                    min="0"
+                    type="range"
+                    value="0"
+                  />
+                </div>
+              </div>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="emotion-4 emotion-5"
+          data-testid="colorMatrix-tr"
         >
-          #FFFFFF
-        </th>
-        <td
-          className="emotion-154 emotion-155"
-        >
-           
-        </td>
-        <td
-          className="emotion-154 emotion-155"
-          style={
-            Object {
-              "backgroundColor": "#CCCCCC",
-            }
-          }
-        >
-          <div
-            className="emotion-158 emotion-159"
-            data-testid="colorCard"
+          <th
+            class="emotion-6 emotion-7"
+            data-testid="colorMatrix-th"
+            scope="row"
+          >
+            #FFFFFF
+          </th>
+          <td
+            class="emotion-154 emotion-155"
+          >
+             
+          </td>
+          <td
+            class="emotion-154 emotion-155"
+            style="background-color: rgb(204, 204, 204);"
           >
             <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-162 emotion-163"
-                title="Color contrast ratio"
-              >
-                1.61
-                 : 1
-              </span>
-            </div>
-            <div
-              className="emotion-160 emotion-161"
+              class="emotion-158 emotion-159"
+              data-testid="colorCard"
             >
               <div
-                className="emotion-166 emotion-167"
-                color="#FFFFFF"
-                data-testid="colorCard-swatch"
+                class="emotion-160 emotion-161"
               >
-                Nope
+                <span
+                  class="emotion-162 emotion-163"
+                  title="Color contrast ratio"
+                >
+                  1.61 : 1
+                </span>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <div
+                  class="emotion-166 emotion-167"
+                  color="#FFFFFF"
+                  data-testid="colorCard-swatch"
+                >
+                  Nope
+                </div>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <span
+                  class="emotion-170 emotion-163"
+                >
+                  Small: Fail
+                </span>
+                <span
+                  class="emotion-170 emotion-163"
+                >
+                  Large: Fail
+                </span>
               </div>
             </div>
-            <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-170 emotion-163"
-              >
-                Small: 
-                Fail
-              </span>
-              <span
-                className="emotion-170 emotion-163"
-              >
-                Large: 
-                Fail
-              </span>
-            </div>
-          </div>
-        </td>
-        <td
-          className="emotion-154 emotion-155"
-          style={
-            Object {
-              "backgroundColor": "#777777",
-            }
-          }
-        >
-          <div
-            className="emotion-158 emotion-159"
-            data-testid="colorCard"
+          </td>
+          <td
+            class="emotion-154 emotion-155"
+            style="background-color: rgb(119, 119, 119);"
           >
             <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-162 emotion-163"
-                title="Color contrast ratio"
-              >
-                4.48
-                 : 1
-              </span>
-            </div>
-            <div
-              className="emotion-160 emotion-161"
+              class="emotion-158 emotion-159"
+              data-testid="colorCard"
             >
               <div
-                className="emotion-166 emotion-167"
-                color="#FFFFFF"
-                data-testid="colorCard-swatch"
+                class="emotion-160 emotion-161"
               >
-                Kinda
+                <span
+                  class="emotion-162 emotion-163"
+                  title="Color contrast ratio"
+                >
+                  4.48 : 1
+                </span>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <div
+                  class="emotion-166 emotion-167"
+                  color="#FFFFFF"
+                  data-testid="colorCard-swatch"
+                >
+                  Kinda
+                </div>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <span
+                  class="emotion-170 emotion-163"
+                >
+                  Small: Fail
+                </span>
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Large: AA
+                </span>
               </div>
             </div>
-            <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-170 emotion-163"
-              >
-                Small: 
-                Fail
-              </span>
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Large: 
-                AA
-              </span>
-            </div>
-          </div>
-        </td>
-        <td
-          className="emotion-154 emotion-155"
-          style={
-            Object {
-              "backgroundColor": "#000000",
-            }
-          }
-        >
-          <div
-            className="emotion-158 emotion-159"
-            data-testid="colorCard"
+          </td>
+          <td
+            class="emotion-154 emotion-155"
+            style="background-color: rgb(0, 0, 0);"
           >
             <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-162 emotion-163"
-                title="Color contrast ratio"
-              >
-                21
-                 : 1
-              </span>
-            </div>
-            <div
-              className="emotion-160 emotion-161"
+              class="emotion-158 emotion-159"
+              data-testid="colorCard"
             >
               <div
-                className="emotion-166 emotion-167"
-                color="#FFFFFF"
-                data-testid="colorCard-swatch"
+                class="emotion-160 emotion-161"
               >
-                Yup
+                <span
+                  class="emotion-162 emotion-163"
+                  title="Color contrast ratio"
+                >
+                  21 : 1
+                </span>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <div
+                  class="emotion-166 emotion-167"
+                  color="#FFFFFF"
+                  data-testid="colorCard-swatch"
+                >
+                  Yup
+                </div>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Small: AAA
+                </span>
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Large: AAA
+                </span>
               </div>
             </div>
-            <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Small: 
-                AAA
-              </span>
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Large: 
-                AAA
-              </span>
-            </div>
-          </div>
-        </td>
-      </tr>
-      <tr
-        className="emotion-4 emotion-5"
-        data-testid="colorMatrix-tr"
-      >
-        <th
-          className="emotion-6 emotion-7"
-          data-testid="colorMatrix-th"
-          scope="row"
+          </td>
+        </tr>
+        <tr
+          class="emotion-4 emotion-5"
+          data-testid="colorMatrix-tr"
         >
-          #CCCCCC
-        </th>
-        <td
-          className="emotion-154 emotion-155"
-          style={
-            Object {
-              "backgroundColor": "#FFFFFF",
-            }
-          }
-        >
-          <div
-            className="emotion-158 emotion-159"
-            data-testid="colorCard"
+          <th
+            class="emotion-6 emotion-7"
+            data-testid="colorMatrix-th"
+            scope="row"
+          >
+            #CCCCCC
+          </th>
+          <td
+            class="emotion-154 emotion-155"
+            style="background-color: rgb(255, 255, 255);"
           >
             <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-162 emotion-163"
-                title="Color contrast ratio"
-              >
-                1.61
-                 : 1
-              </span>
-            </div>
-            <div
-              className="emotion-160 emotion-161"
+              class="emotion-158 emotion-159"
+              data-testid="colorCard"
             >
               <div
-                className="emotion-224 emotion-167"
-                color="#CCCCCC"
-                data-testid="colorCard-swatch"
+                class="emotion-160 emotion-161"
               >
-                Nope
+                <span
+                  class="emotion-162 emotion-163"
+                  title="Color contrast ratio"
+                >
+                  1.61 : 1
+                </span>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <div
+                  class="emotion-224 emotion-167"
+                  color="#CCCCCC"
+                  data-testid="colorCard-swatch"
+                >
+                  Nope
+                </div>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <span
+                  class="emotion-170 emotion-163"
+                >
+                  Small: Fail
+                </span>
+                <span
+                  class="emotion-170 emotion-163"
+                >
+                  Large: Fail
+                </span>
               </div>
             </div>
-            <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-170 emotion-163"
-              >
-                Small: 
-                Fail
-              </span>
-              <span
-                className="emotion-170 emotion-163"
-              >
-                Large: 
-                Fail
-              </span>
-            </div>
-          </div>
-        </td>
-        <td
-          className="emotion-154 emotion-155"
-        >
-           
-        </td>
-        <td
-          className="emotion-154 emotion-155"
-          style={
-            Object {
-              "backgroundColor": "#777777",
-            }
-          }
-        >
-          <div
-            className="emotion-158 emotion-159"
-            data-testid="colorCard"
+          </td>
+          <td
+            class="emotion-154 emotion-155"
+          >
+             
+          </td>
+          <td
+            class="emotion-154 emotion-155"
+            style="background-color: rgb(119, 119, 119);"
           >
             <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-162 emotion-163"
-                title="Color contrast ratio"
-              >
-                2.79
-                 : 1
-              </span>
-            </div>
-            <div
-              className="emotion-160 emotion-161"
+              class="emotion-158 emotion-159"
+              data-testid="colorCard"
             >
               <div
-                className="emotion-224 emotion-167"
-                color="#CCCCCC"
-                data-testid="colorCard-swatch"
+                class="emotion-160 emotion-161"
               >
-                Nope
+                <span
+                  class="emotion-162 emotion-163"
+                  title="Color contrast ratio"
+                >
+                  2.79 : 1
+                </span>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <div
+                  class="emotion-224 emotion-167"
+                  color="#CCCCCC"
+                  data-testid="colorCard-swatch"
+                >
+                  Nope
+                </div>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <span
+                  class="emotion-170 emotion-163"
+                >
+                  Small: Fail
+                </span>
+                <span
+                  class="emotion-170 emotion-163"
+                >
+                  Large: Fail
+                </span>
               </div>
             </div>
-            <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-170 emotion-163"
-              >
-                Small: 
-                Fail
-              </span>
-              <span
-                className="emotion-170 emotion-163"
-              >
-                Large: 
-                Fail
-              </span>
-            </div>
-          </div>
-        </td>
-        <td
-          className="emotion-154 emotion-155"
-          style={
-            Object {
-              "backgroundColor": "#000000",
-            }
-          }
-        >
-          <div
-            className="emotion-158 emotion-159"
-            data-testid="colorCard"
+          </td>
+          <td
+            class="emotion-154 emotion-155"
+            style="background-color: rgb(0, 0, 0);"
           >
             <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-162 emotion-163"
-                title="Color contrast ratio"
-              >
-                13.08
-                 : 1
-              </span>
-            </div>
-            <div
-              className="emotion-160 emotion-161"
+              class="emotion-158 emotion-159"
+              data-testid="colorCard"
             >
               <div
-                className="emotion-224 emotion-167"
-                color="#CCCCCC"
-                data-testid="colorCard-swatch"
+                class="emotion-160 emotion-161"
               >
-                Yup
+                <span
+                  class="emotion-162 emotion-163"
+                  title="Color contrast ratio"
+                >
+                  13.08 : 1
+                </span>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <div
+                  class="emotion-224 emotion-167"
+                  color="#CCCCCC"
+                  data-testid="colorCard-swatch"
+                >
+                  Yup
+                </div>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Small: AAA
+                </span>
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Large: AAA
+                </span>
               </div>
             </div>
-            <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Small: 
-                AAA
-              </span>
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Large: 
-                AAA
-              </span>
-            </div>
-          </div>
-        </td>
-      </tr>
-      <tr
-        className="emotion-4 emotion-5"
-        data-testid="colorMatrix-tr"
-      >
-        <th
-          className="emotion-6 emotion-7"
-          data-testid="colorMatrix-th"
-          scope="row"
+          </td>
+        </tr>
+        <tr
+          class="emotion-4 emotion-5"
+          data-testid="colorMatrix-tr"
         >
-          #777777
-        </th>
-        <td
-          className="emotion-154 emotion-155"
-          style={
-            Object {
-              "backgroundColor": "#FFFFFF",
-            }
-          }
-        >
-          <div
-            className="emotion-158 emotion-159"
-            data-testid="colorCard"
+          <th
+            class="emotion-6 emotion-7"
+            data-testid="colorMatrix-th"
+            scope="row"
+          >
+            #777777
+          </th>
+          <td
+            class="emotion-154 emotion-155"
+            style="background-color: rgb(255, 255, 255);"
           >
             <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-162 emotion-163"
-                title="Color contrast ratio"
-              >
-                4.48
-                 : 1
-              </span>
-            </div>
-            <div
-              className="emotion-160 emotion-161"
+              class="emotion-158 emotion-159"
+              data-testid="colorCard"
             >
               <div
-                className="emotion-284 emotion-167"
-                color="#777777"
-                data-testid="colorCard-swatch"
+                class="emotion-160 emotion-161"
               >
-                Kinda
+                <span
+                  class="emotion-162 emotion-163"
+                  title="Color contrast ratio"
+                >
+                  4.48 : 1
+                </span>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <div
+                  class="emotion-284 emotion-167"
+                  color="#777777"
+                  data-testid="colorCard-swatch"
+                >
+                  Kinda
+                </div>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <span
+                  class="emotion-170 emotion-163"
+                >
+                  Small: Fail
+                </span>
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Large: AA
+                </span>
               </div>
             </div>
-            <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-170 emotion-163"
-              >
-                Small: 
-                Fail
-              </span>
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Large: 
-                AA
-              </span>
-            </div>
-          </div>
-        </td>
-        <td
-          className="emotion-154 emotion-155"
-          style={
-            Object {
-              "backgroundColor": "#CCCCCC",
-            }
-          }
-        >
-          <div
-            className="emotion-158 emotion-159"
-            data-testid="colorCard"
+          </td>
+          <td
+            class="emotion-154 emotion-155"
+            style="background-color: rgb(204, 204, 204);"
           >
             <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-162 emotion-163"
-                title="Color contrast ratio"
-              >
-                2.79
-                 : 1
-              </span>
-            </div>
-            <div
-              className="emotion-160 emotion-161"
+              class="emotion-158 emotion-159"
+              data-testid="colorCard"
             >
               <div
-                className="emotion-284 emotion-167"
-                color="#777777"
-                data-testid="colorCard-swatch"
+                class="emotion-160 emotion-161"
               >
-                Nope
+                <span
+                  class="emotion-162 emotion-163"
+                  title="Color contrast ratio"
+                >
+                  2.79 : 1
+                </span>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <div
+                  class="emotion-284 emotion-167"
+                  color="#777777"
+                  data-testid="colorCard-swatch"
+                >
+                  Nope
+                </div>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <span
+                  class="emotion-170 emotion-163"
+                >
+                  Small: Fail
+                </span>
+                <span
+                  class="emotion-170 emotion-163"
+                >
+                  Large: Fail
+                </span>
               </div>
             </div>
-            <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-170 emotion-163"
-              >
-                Small: 
-                Fail
-              </span>
-              <span
-                className="emotion-170 emotion-163"
-              >
-                Large: 
-                Fail
-              </span>
-            </div>
-          </div>
-        </td>
-        <td
-          className="emotion-154 emotion-155"
-        >
-           
-        </td>
-        <td
-          className="emotion-154 emotion-155"
-          style={
-            Object {
-              "backgroundColor": "#000000",
-            }
-          }
-        >
-          <div
-            className="emotion-158 emotion-159"
-            data-testid="colorCard"
+          </td>
+          <td
+            class="emotion-154 emotion-155"
+          >
+             
+          </td>
+          <td
+            class="emotion-154 emotion-155"
+            style="background-color: rgb(0, 0, 0);"
           >
             <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-162 emotion-163"
-                title="Color contrast ratio"
-              >
-                4.69
-                 : 1
-              </span>
-            </div>
-            <div
-              className="emotion-160 emotion-161"
+              class="emotion-158 emotion-159"
+              data-testid="colorCard"
             >
               <div
-                className="emotion-284 emotion-167"
-                color="#777777"
-                data-testid="colorCard-swatch"
+                class="emotion-160 emotion-161"
               >
-                Yup
+                <span
+                  class="emotion-162 emotion-163"
+                  title="Color contrast ratio"
+                >
+                  4.69 : 1
+                </span>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <div
+                  class="emotion-284 emotion-167"
+                  color="#777777"
+                  data-testid="colorCard-swatch"
+                >
+                  Yup
+                </div>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Small: AA
+                </span>
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Large: AAA
+                </span>
               </div>
             </div>
-            <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Small: 
-                AA
-              </span>
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Large: 
-                AAA
-              </span>
-            </div>
-          </div>
-        </td>
-      </tr>
-      <tr
-        className="emotion-4 emotion-5"
-        data-testid="colorMatrix-tr"
-      >
-        <th
-          className="emotion-6 emotion-7"
-          data-testid="colorMatrix-th"
-          scope="row"
+          </td>
+        </tr>
+        <tr
+          class="emotion-4 emotion-5"
+          data-testid="colorMatrix-tr"
         >
-          #000000
-        </th>
-        <td
-          className="emotion-154 emotion-155"
-          style={
-            Object {
-              "backgroundColor": "#FFFFFF",
-            }
-          }
-        >
-          <div
-            className="emotion-158 emotion-159"
-            data-testid="colorCard"
+          <th
+            class="emotion-6 emotion-7"
+            data-testid="colorMatrix-th"
+            scope="row"
+          >
+            #000000
+          </th>
+          <td
+            class="emotion-154 emotion-155"
+            style="background-color: rgb(255, 255, 255);"
           >
             <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-162 emotion-163"
-                title="Color contrast ratio"
-              >
-                21
-                 : 1
-              </span>
-            </div>
-            <div
-              className="emotion-160 emotion-161"
+              class="emotion-158 emotion-159"
+              data-testid="colorCard"
             >
               <div
-                className="emotion-344 emotion-167"
-                color="#000000"
-                data-testid="colorCard-swatch"
+                class="emotion-160 emotion-161"
               >
-                Yup
+                <span
+                  class="emotion-162 emotion-163"
+                  title="Color contrast ratio"
+                >
+                  21 : 1
+                </span>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <div
+                  class="emotion-344 emotion-167"
+                  color="#000000"
+                  data-testid="colorCard-swatch"
+                >
+                  Yup
+                </div>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Small: AAA
+                </span>
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Large: AAA
+                </span>
               </div>
             </div>
-            <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Small: 
-                AAA
-              </span>
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Large: 
-                AAA
-              </span>
-            </div>
-          </div>
-        </td>
-        <td
-          className="emotion-154 emotion-155"
-          style={
-            Object {
-              "backgroundColor": "#CCCCCC",
-            }
-          }
-        >
-          <div
-            className="emotion-158 emotion-159"
-            data-testid="colorCard"
+          </td>
+          <td
+            class="emotion-154 emotion-155"
+            style="background-color: rgb(204, 204, 204);"
           >
             <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-162 emotion-163"
-                title="Color contrast ratio"
-              >
-                13.08
-                 : 1
-              </span>
-            </div>
-            <div
-              className="emotion-160 emotion-161"
+              class="emotion-158 emotion-159"
+              data-testid="colorCard"
             >
               <div
-                className="emotion-344 emotion-167"
-                color="#000000"
-                data-testid="colorCard-swatch"
+                class="emotion-160 emotion-161"
               >
-                Yup
+                <span
+                  class="emotion-162 emotion-163"
+                  title="Color contrast ratio"
+                >
+                  13.08 : 1
+                </span>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <div
+                  class="emotion-344 emotion-167"
+                  color="#000000"
+                  data-testid="colorCard-swatch"
+                >
+                  Yup
+                </div>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Small: AAA
+                </span>
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Large: AAA
+                </span>
               </div>
             </div>
-            <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Small: 
-                AAA
-              </span>
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Large: 
-                AAA
-              </span>
-            </div>
-          </div>
-        </td>
-        <td
-          className="emotion-154 emotion-155"
-          style={
-            Object {
-              "backgroundColor": "#777777",
-            }
-          }
-        >
-          <div
-            className="emotion-158 emotion-159"
-            data-testid="colorCard"
+          </td>
+          <td
+            class="emotion-154 emotion-155"
+            style="background-color: rgb(119, 119, 119);"
           >
             <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-162 emotion-163"
-                title="Color contrast ratio"
-              >
-                4.69
-                 : 1
-              </span>
-            </div>
-            <div
-              className="emotion-160 emotion-161"
+              class="emotion-158 emotion-159"
+              data-testid="colorCard"
             >
               <div
-                className="emotion-344 emotion-167"
-                color="#000000"
-                data-testid="colorCard-swatch"
+                class="emotion-160 emotion-161"
               >
-                Yup
+                <span
+                  class="emotion-162 emotion-163"
+                  title="Color contrast ratio"
+                >
+                  4.69 : 1
+                </span>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <div
+                  class="emotion-344 emotion-167"
+                  color="#000000"
+                  data-testid="colorCard-swatch"
+                >
+                  Yup
+                </div>
+              </div>
+              <div
+                class="emotion-160 emotion-161"
+              >
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Small: AA
+                </span>
+                <span
+                  class="emotion-190 emotion-163"
+                >
+                  Large: AAA
+                </span>
               </div>
             </div>
-            <div
-              className="emotion-160 emotion-161"
-            >
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Small: 
-                AA
-              </span>
-              <span
-                className="emotion-190 emotion-163"
-              >
-                Large: 
-                AAA
-              </span>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</DocumentFragment>
 `;

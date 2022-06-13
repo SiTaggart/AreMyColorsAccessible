@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormInput renders without crashing 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
   border-radius: 3px;
@@ -12,16 +13,18 @@ exports[`FormInput renders without crashing 1`] = `
 }
 
 <input
-  autoComplete="off"
-  className="emotion-0 emotion-1"
-  data-testid="form-id"
-  id="form-id"
-  type="text"
-/>
+    autocomplete="off"
+    class="emotion-0 emotion-1"
+    data-testid="form-id"
+    id="form-id"
+    type="text"
+    value=""
+  />
+</DocumentFragment>
 `;
 
 exports[`FormInput should display an error message and associate it to the input 1`] = `
-Array [
+<DocumentFragment>
   .emotion-0 {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
@@ -41,12 +44,13 @@ Array [
 
 <input
     aria-describedby="error-message-label-form-id"
-    autoComplete="off"
-    className="emotion-0 emotion-1"
+    autocomplete="off"
+    class="emotion-0 emotion-1"
     data-testid="form-id"
     id="form-id"
     type="text"
-  />,
+    value=""
+  />
   .emotion-0 {
   color: #c12915;
   font-size: 1.3rem;
@@ -54,16 +58,17 @@ Array [
 }
 
 <div
-    className="emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
     id="error-message-label-form-id"
   >
     this is an error
-  </div>,
-]
+  </div>
+</DocumentFragment>
 `;
 
 exports[`FormInput should set the noSpacing class when hasNoSpacing is set 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
   border-radius: 3px;
@@ -74,10 +79,12 @@ exports[`FormInput should set the noSpacing class when hasNoSpacing is set 1`] =
 }
 
 <input
-  autoComplete="off"
-  className="emotion-0 emotion-1"
-  data-testid="form-id"
-  id="form-id"
-  type="text"
-/>
+    autocomplete="off"
+    class="emotion-0 emotion-1"
+    data-testid="form-id"
+    id="form-id"
+    type="text"
+    value=""
+  />
+</DocumentFragment>
 `;
