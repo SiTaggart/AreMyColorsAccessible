@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "target": "es5",
+    "lib": ["es2017", "DOM"],
+    "types": ["cypress"],
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "noEmit": true
+  },
+  "include": ["./**/*.ts", "./**/*.js"],
+  "exclude": ["node_modules"]
+}

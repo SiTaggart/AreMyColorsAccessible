@@ -56,8 +56,6 @@ jobs:
         run: yarn install --immutable
       - name: Run eslint
         run: yarn lint
-      - name: Run type-check
-        run: yarn tsc
   cypress-percy:
     runs-on: ubuntu-latest
     strategy:

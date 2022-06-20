@@ -1,14 +1,5 @@
 /* eslint-disable jest/expect-expect */
 
-const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
-  window.HTMLInputElement.prototype,
-  'value'
-).set;
-const changeRangeInputValue = ($range) => (value) => {
-  nativeInputValueSetter.call($range[0], value);
-  $range[0].dispatchEvent(new Event('change', { value, bubbles: true }));
-};
-
 describe('Homepage', () => {
   describe('renders', () => {
     it('should load', () => {
@@ -91,8 +82,7 @@ describe('Homepage', () => {
   describe('text color sliders', () => {
     before(() => {
       cy.visit('/');
-      // eslint-disable-next-line promise/catch-or-return
-      cy.get('#textColor-hsl-Lightness').then((input) => changeRangeInputValue(input)(25));
+      cy.get('#textColor-hsl-Lightness').as('range').invoke('val', 25).trigger('input');
     });
 
     it('should update the input value', () => {
@@ -122,8 +112,7 @@ describe('Homepage', () => {
   describe('background color sliders', () => {
     before(() => {
       cy.visit('/');
-      // eslint-disable-next-line promise/catch-or-return
-      cy.get('#background-hsl-Hue').then((input) => changeRangeInputValue(input)(25));
+      cy.get('#background-hsl-Hue').as('range').invoke('val', 25).trigger('input');
     });
 
     it('should update the input value', () => {
