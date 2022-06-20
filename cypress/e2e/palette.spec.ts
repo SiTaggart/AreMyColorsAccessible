@@ -31,7 +31,7 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(1) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#CCCCCC');
-      cy.url().should('equal', 'http://localhost:3000/palette?colors=%23ccc');
+      cy.location('search').should('equal', '?colors=%23ccc');
     });
 
     it('should add a multiple colors to the matrix via space separation', () => {
@@ -41,10 +41,7 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#000000');
-      cy.url().should(
-        'equal',
-        'http://localhost:3000/palette?colors=%23ccc&colors=%23fff&colors=%23000'
-      );
+      cy.location('search').should('equal', '?colors=%23ccc&colors=%23fff&colors=%23000');
     });
 
     it('should add a multiple colors to the matrix via comma separation', () => {
@@ -54,9 +51,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#EFEFEF');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=%23eee&colors=%23555&colors=%23efefef&colors=blue'
+        '?colors=%23eee&colors=%23555&colors=%23efefef&colors=blue'
       );
     });
 
@@ -67,9 +64,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#FF0000');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=%23efefef&colors=%23999&colors=red&colors=hotpink&colors=%23fff'
+        '?colors=%23efefef&colors=%23999&colors=red&colors=hotpink&colors=%23fff'
       );
     });
 
@@ -80,9 +77,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(4) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#555555');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=%23fff&colors=%23000&colors=%23333&colors=%23555'
+        '?colors=%23fff&colors=%23000&colors=%23333&colors=%23555'
       );
     });
 
@@ -99,9 +96,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(5) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#555555');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=%23efefef&colors=%23222&colors=%23999&colors=%23fff&colors=%23555'
+        '?colors=%23efefef&colors=%23222&colors=%23999&colors=%23fff&colors=%23555'
       );
       cy.percySnapshot('Palette page with colors snapshot');
     });
@@ -119,9 +116,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(4) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#FFFFFF');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=%23ccc&colors=%23ddd&colors=%23eee&colors=%23fff'
+        '?colors=%23ccc&colors=%23ddd&colors=%23eee&colors=%23fff'
       );
     });
 
@@ -162,10 +159,7 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) td:nth-child(2) [data-testid="colorCard"] [data-testid="colorCard-swatch"]'
       ).should('contain', 'Yup');
-      cy.url().should(
-        'equal',
-        'http://localhost:3000/palette?colors=brown&colors=blue&colors=pink&colors=red'
-      );
+      cy.location('search').should('equal', '?colors=brown&colors=blue&colors=pink&colors=red');
     });
 
     it('should update the color matrix results when the hue slider is updated', () => {
@@ -184,9 +178,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) td:nth-child(3) [data-testid="colorCard"] [data-testid="colorCard-swatch"]'
       ).should('contain', 'Nope');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=orange&colors=%23FF6A00&colors=pink&colors=red'
+        '?colors=orange&colors=%23FF6A00&colors=pink&colors=red'
       );
     });
 
@@ -206,9 +200,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(1) td:nth-child(4) [data-testid="colorCard"] [data-testid="colorCard-swatch"]'
       ).should('contain', 'Nope');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=orange&colors=blue&colors=%23CC0505&colors=red'
+        '?colors=orange&colors=blue&colors=%23CC0505&colors=red'
       );
     });
 
@@ -228,9 +222,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) td:nth-child(5) [data-testid="colorCard"] [data-testid="colorCard-swatch"]'
       ).should('contain', 'Yup');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=orange&colors=blue&colors=pink&colors=%23800000'
+        '?colors=orange&colors=blue&colors=pink&colors=%23800000'
       );
     });
   });

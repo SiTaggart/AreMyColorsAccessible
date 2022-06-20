@@ -38,9 +38,9 @@ describe('Homepage', () => {
     });
 
     it('should update the url', () => {
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23ccc'
+        '?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23ccc'
       );
     });
 
@@ -68,9 +68,9 @@ describe('Homepage', () => {
     });
 
     it('should update the url', () => {
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/?background=%23ccc&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=true&textColor=%23FFFFFF'
+        '?background=%23ccc&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=true&textColor=%23FFFFFF'
       );
     });
 
@@ -98,9 +98,9 @@ describe('Homepage', () => {
     });
 
     it('should update the url', () => {
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23404040'
+        '?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23404040'
       );
     });
 
@@ -128,9 +128,9 @@ describe('Homepage', () => {
     });
 
     it('should update the url', () => {
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/?background=%23CE6012&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23FFFFFF'
+        '?background=%23CE6012&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23FFFFFF'
       );
     });
 
@@ -162,7 +162,7 @@ describe('Homepage', () => {
     it('should navigate to the about page', () => {
       cy.visit('/');
       cy.get('footer ul li:last-child').click();
-      cy.url().should('eq', 'http://localhost:3000/about');
+      cy.location('pathname').should('eq', '/about');
       cy.get('h1').should('contain', 'Are my Colours Accessible?');
     });
 
@@ -173,7 +173,7 @@ describe('Homepage', () => {
     it('should navigate to the palette page', () => {
       cy.visit('/');
       cy.get('footer ul li:nth-child(2)').click();
-      cy.url().should('eq', 'http://localhost:3000/palette');
+      cy.location('pathname').should('eq', '/palette');
       cy.get('h1').should('contain', 'Add the colours from your palette');
     });
   });
