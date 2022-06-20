@@ -5,5 +5,11 @@
     ":pinVersions",
     "group:allNonMajor",
     "schedule:earlyMondays"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["@types/react"],
+      "allowedVersions": "<18.0.0"
+    }
   ]
 }
