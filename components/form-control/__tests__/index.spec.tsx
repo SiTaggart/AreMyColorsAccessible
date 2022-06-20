@@ -1,15 +1,14 @@
 /* eslint-env jest */
 /// <reference types="jest" />
+import { expect } from '@jest/globals';
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
 import { FormControl } from '..';
 
 describe('FormControl', (): void => {
   it('renders without crashing', (): void => {
-    ReactDOM.render(<FormControl>children</FormControl>, document.createElement('div'));
-    const formControlCmp = renderer.create(<FormControl>children</FormControl>).toJSON();
-    expect(formControlCmp).toMatchSnapshot();
+    const { asFragment } = render(<FormControl>children</FormControl>);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

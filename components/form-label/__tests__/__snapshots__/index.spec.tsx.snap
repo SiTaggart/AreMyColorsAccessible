@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormLabel renders without crashing 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: inline-block;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
@@ -9,15 +10,17 @@ exports[`FormLabel renders without crashing 1`] = `
 }
 
 <label
-  className="emotion-0 emotion-1"
-  htmlFor="input-id"
->
-  children
-</label>
+    class="emotion-0 emotion-1"
+    for="input-id"
+  >
+    children
+  </label>
+</DocumentFragment>
 `;
 
 exports[`FormLabel should create a large label style with variant large 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: inline-block;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
@@ -25,9 +28,10 @@ exports[`FormLabel should create a large label style with variant large 1`] = `
 }
 
 <label
-  className="emotion-0 emotion-1"
-  htmlFor="input-id"
->
-  children
-</label>
+    class="emotion-0 emotion-1"
+    for="input-id"
+  >
+    children
+  </label>
+</DocumentFragment>
 `;

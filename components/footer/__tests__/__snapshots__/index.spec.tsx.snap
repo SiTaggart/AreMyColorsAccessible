@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Footer renders footerLink styles added 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   padding: 5rem 0 1rem;
   text-align: center;
   width: 100%;
@@ -25,89 +26,67 @@ exports[`Footer renders footerLink styles added 1`] = `
 }
 
 <footer
-  className="emotion-0 emotion-1"
->
-  <nav
-    className="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
   >
-    <ul
-      className="emotion-4 emotion-5"
+    <nav
+      class="emotion-2 emotion-3"
     >
-      <li
-        className="emotion-6 emotion-7"
+      <ul
+        class="emotion-4 emotion-5"
       >
-        <a
-          className="emotion-8 emotion-9"
-          href="/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          style={
-            Object {
-              "color": "#fff",
-            }
-          }
+        <li
+          class="emotion-6 emotion-7"
         >
-          Home
-        </a>
-      </li>
-      <li
-        className="emotion-6 emotion-7"
-      >
-        <a
-          className="emotion-8 emotion-9"
-          href="/palette"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          style={
-            Object {
-              "color": "#fff",
-            }
-          }
+          <a
+            class="emotion-8 emotion-9"
+            href="/"
+            style="color: rgb(255, 255, 255);"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
         >
-          Palette
-        </a>
-      </li>
-      <li
-        className="emotion-6 emotion-7"
-      >
-        <a
-          className="emotion-8 emotion-9"
-          href="/api-page"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          style={
-            Object {
-              "color": "#fff",
-            }
-          }
+          <a
+            class="emotion-8 emotion-9"
+            href="/palette"
+            style="color: rgb(255, 255, 255);"
+          >
+            Palette
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
         >
-          API
-        </a>
-      </li>
-      <li
-        className="emotion-6 emotion-7"
-      >
-        <a
-          className="emotion-8 emotion-9"
-          href="/about"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
-          style={
-            Object {
-              "color": "#fff",
-            }
-          }
+          <a
+            class="emotion-8 emotion-9"
+            href="/api-page"
+            style="color: rgb(255, 255, 255);"
+          >
+            API
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
         >
-          About
-        </a>
-      </li>
-    </ul>
-  </nav>
-</footer>
+          <a
+            class="emotion-8 emotion-9"
+            href="/about"
+            style="color: rgb(255, 255, 255);"
+          >
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</DocumentFragment>
 `;
 
 exports[`Footer renders without crashing 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   padding: 5rem 0 1rem;
   text-align: center;
   width: 100%;
@@ -131,63 +110,56 @@ exports[`Footer renders without crashing 1`] = `
 }
 
 <footer
-  className="emotion-0 emotion-1"
->
-  <nav
-    className="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
   >
-    <ul
-      className="emotion-4 emotion-5"
+    <nav
+      class="emotion-2 emotion-3"
     >
-      <li
-        className="emotion-6 emotion-7"
+      <ul
+        class="emotion-4 emotion-5"
       >
-        <a
-          className="emotion-8 emotion-9"
-          href="/"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
+        <li
+          class="emotion-6 emotion-7"
         >
-          Home
-        </a>
-      </li>
-      <li
-        className="emotion-6 emotion-7"
-      >
-        <a
-          className="emotion-8 emotion-9"
-          href="/palette"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
+          <a
+            class="emotion-8 emotion-9"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
         >
-          Palette
-        </a>
-      </li>
-      <li
-        className="emotion-6 emotion-7"
-      >
-        <a
-          className="emotion-8 emotion-9"
-          href="/api-page"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
+          <a
+            class="emotion-8 emotion-9"
+            href="/palette"
+          >
+            Palette
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
         >
-          API
-        </a>
-      </li>
-      <li
-        className="emotion-6 emotion-7"
-      >
-        <a
-          className="emotion-8 emotion-9"
-          href="/about"
-          onClick={[Function]}
-          onMouseEnter={[Function]}
+          <a
+            class="emotion-8 emotion-9"
+            href="/api-page"
+          >
+            API
+          </a>
+        </li>
+        <li
+          class="emotion-6 emotion-7"
         >
-          About
-        </a>
-      </li>
-    </ul>
-  </nav>
-</footer>
+          <a
+            class="emotion-8 emotion-9"
+            href="/about"
+          >
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</DocumentFragment>
 `;

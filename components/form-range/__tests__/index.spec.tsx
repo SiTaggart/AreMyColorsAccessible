@@ -1,9 +1,8 @@
 /* eslint-env jest */
 /// <reference types="jest" />
+import { expect } from '@jest/globals';
 
 import React, { ReactElement } from 'react';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react';
 import { FormRange, FormRangeProps } from '..';
 
@@ -15,9 +14,8 @@ describe('FormRange', (): void => {
   ): ReactElement<HTMLInputElement> => <FormRange id="range-id" max={100} min={1} {...props} />;
 
   it('renders without crashing', (): void => {
-    ReactDOM.render(<FormRangeWrapper />, document.createElement('div'));
-    const formRangeCmp = renderer.create(<FormRangeWrapper />).toJSON();
-    expect(formRangeCmp).toMatchSnapshot();
+    const { asFragment } = render(<FormRangeWrapper />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should set a default value', (): void => {

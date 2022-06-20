@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home renders without crashing 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   position: relative;
 }
 
@@ -315,338 +316,311 @@ exports[`Home renders without crashing 1`] = `
 }
 
 <main
-  className="emotion-0 emotion-1"
->
-  <div
-    className="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
   >
     <div
-      className="emotion-4 emotion-5"
+      class="emotion-2 emotion-3"
     >
-      <h1
-        aria-atomic="true"
-        aria-live="polite"
-        className="emotion-6 emotion-7"
-        data-testid="contrastResults-heading"
-      >
-        Yup
-      </h1>
       <div
-        className="emotion-8 emotion-9"
+        class="emotion-4 emotion-5"
       >
-        <p
-          className="emotion-10 emotion-11"
+        <h1
+          aria-atomic="true"
+          aria-live="polite"
+          class="emotion-6 emotion-7"
+          data-testid="contrastResults-heading"
         >
-          Small Text
-          <br />
-          AA: 4.5 AAA: 7.0
-        </p>
-        <h2
-          className="emotion-12 emotion-13"
-          data-testid="contrastResult-rating-small"
+          Yup
+        </h1>
+        <div
+          class="emotion-8 emotion-9"
         >
-          AAA
-        </h2>
-      </div>
-      <div
-        className="emotion-8 emotion-9"
-      >
-        <p
-          className="emotion-10 emotion-11"
+          <p
+            class="emotion-10 emotion-11"
+          >
+            Small Text
+            <br />
+            AA: 4.5 AAA: 7.0
+          </p>
+          <h2
+            class="emotion-12 emotion-13"
+            data-testid="contrastResult-rating-small"
+          >
+            AAA
+          </h2>
+        </div>
+        <div
+          class="emotion-8 emotion-9"
         >
-          <strong>
-            Bold Text 18px and over 
+          <p
+            class="emotion-10 emotion-11"
+          >
+            <strong>
+              Bold Text 18px and over 
+              <br />
+              AA: 3.0 AAA: 4.5
+            </strong>
+          </p>
+          <h2
+            class="emotion-12 emotion-13"
+            data-testid="contrastResult-rating-bold"
+          >
+            AAA
+          </h2>
+        </div>
+        <div
+          class="emotion-8 emotion-9"
+        >
+          <p
+            class="emotion-22 emotion-11"
+          >
+            Large Text 24px and over 
             <br />
             AA: 3.0 AAA: 4.5
-          </strong>
-        </p>
-        <h2
-          className="emotion-12 emotion-13"
-          data-testid="contrastResult-rating-bold"
+          </p>
+          <h2
+            class="emotion-12 emotion-13"
+            data-testid="contrastResult-rating-large"
+          >
+            AAA
+          </h2>
+        </div>
+        <div
+          class="emotion-8 emotion-9"
         >
-          AAA
-        </h2>
-      </div>
-      <div
-        className="emotion-8 emotion-9"
-      >
-        <p
-          className="emotion-22 emotion-11"
-        >
-          Large Text 24px and over 
-          <br />
-          AA: 3.0 AAA: 4.5
-        </p>
-        <h2
-          className="emotion-12 emotion-13"
-          data-testid="contrastResult-rating-large"
-        >
-          AAA
-        </h2>
-      </div>
-      <div
-        className="emotion-8 emotion-9"
-      >
-        <p
-          className="emotion-10 emotion-11"
-        >
-          Contrast Ratio
-        </p>
-        <h2
-          className="emotion-12 emotion-13"
-        >
-          21 : 1
-        </h2>
+          <p
+            class="emotion-10 emotion-11"
+          >
+            Contrast Ratio
+          </p>
+          <h2
+            class="emotion-12 emotion-13"
+          >
+            21 : 1
+          </h2>
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    className="emotion-32 emotion-3"
-  >
     <div
-      className="emotion-34 emotion-35"
-      data-testid="color-input-form"
-      style={
-        Object {
-          "color": "#fff",
-        }
-      }
+      class="emotion-32 emotion-3"
     >
       <div
-        className="emotion-36 emotion-37"
+        class="emotion-34 emotion-35"
+        data-testid="color-input-form"
+        style="color: rgb(255, 255, 255);"
       >
-        <label
-          className="emotion-38 emotion-39"
-          htmlFor="textColor"
-        >
-          Text Color
-        </label>
-        <input
-          autoComplete="off"
-          className="emotion-40 emotion-41"
-          data-testid="textColor"
-          id="textColor"
-          onChange={[Function]}
-          style={
-            Object {
-              "borderColor": "#fff",
-              "color": "inherit",
-            }
-          }
-          type="text"
-          value="#fff"
-        />
         <div
-          className="emotion-42 emotion-43"
-          data-testid="form-hsl-sliders"
+          class="emotion-36 emotion-37"
         >
+          <label
+            class="emotion-38 emotion-39"
+            for="textColor"
+          >
+            Text Color
+          </label>
+          <input
+            autocomplete="off"
+            class="emotion-40 emotion-41"
+            data-testid="textColor"
+            id="textColor"
+            style="border-color: #fff;"
+            type="text"
+            value="#fff"
+          />
           <div
-            className="emotion-44 emotion-45"
+            class="emotion-42 emotion-43"
+            data-testid="form-hsl-sliders"
           >
             <div
-              className="emotion-46 emotion-47"
+              class="emotion-44 emotion-45"
             >
-              <label
-                className="emotion-38 emotion-39"
-                htmlFor="textColor-hsl-Hue"
+              <div
+                class="emotion-46 emotion-47"
               >
-                Hue 0°
-              </label>
-            </div>
-            <div
-              className="emotion-50 emotion-51"
-            >
-              <input
-                className="emotion-52 emotion-53"
-                data-testid="textColor-hsl-Hue"
-                id="textColor-hsl-Hue"
-                max={360}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
-            </div>
-          </div>
-          <div
-            className="emotion-44 emotion-45"
-          >
-            <div
-              className="emotion-46 emotion-47"
-            >
-              <label
-                className="emotion-38 emotion-39"
-                htmlFor="textColor-hsl-Saturation"
+                <label
+                  class="emotion-38 emotion-39"
+                  for="textColor-hsl-Hue"
+                >
+                  Hue 0°
+                </label>
+              </div>
+              <div
+                class="emotion-50 emotion-51"
               >
-                Saturation 0%
-              </label>
+                <input
+                  class="emotion-52 emotion-53"
+                  data-testid="textColor-hsl-Hue"
+                  id="textColor-hsl-Hue"
+                  max="360"
+                  min="0"
+                  type="range"
+                  value="0"
+                />
+              </div>
             </div>
             <div
-              className="emotion-50 emotion-51"
+              class="emotion-44 emotion-45"
             >
-              <input
-                className="emotion-52 emotion-53"
-                data-testid="textColor-hsl-Saturation"
-                id="textColor-hsl-Saturation"
-                max={100}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
-            </div>
-          </div>
-          <div
-            className="emotion-44 emotion-45"
-          >
-            <div
-              className="emotion-46 emotion-47"
-            >
-              <label
-                className="emotion-38 emotion-39"
-                htmlFor="textColor-hsl-Lightness"
+              <div
+                class="emotion-46 emotion-47"
               >
-                Lightness 100%
-              </label>
+                <label
+                  class="emotion-38 emotion-39"
+                  for="textColor-hsl-Saturation"
+                >
+                  Saturation 0%
+                </label>
+              </div>
+              <div
+                class="emotion-50 emotion-51"
+              >
+                <input
+                  class="emotion-52 emotion-53"
+                  data-testid="textColor-hsl-Saturation"
+                  id="textColor-hsl-Saturation"
+                  max="100"
+                  min="0"
+                  type="range"
+                  value="0"
+                />
+              </div>
             </div>
             <div
-              className="emotion-50 emotion-51"
+              class="emotion-44 emotion-45"
             >
-              <input
-                className="emotion-52 emotion-53"
-                data-testid="textColor-hsl-Lightness"
-                id="textColor-hsl-Lightness"
-                max={100}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={100}
-              />
+              <div
+                class="emotion-46 emotion-47"
+              >
+                <label
+                  class="emotion-38 emotion-39"
+                  for="textColor-hsl-Lightness"
+                >
+                  Lightness 100%
+                </label>
+              </div>
+              <div
+                class="emotion-50 emotion-51"
+              >
+                <input
+                  class="emotion-52 emotion-53"
+                  data-testid="textColor-hsl-Lightness"
+                  id="textColor-hsl-Lightness"
+                  max="100"
+                  min="0"
+                  type="range"
+                  value="100"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="emotion-36 emotion-37"
-      >
-        <label
-          className="emotion-38 emotion-39"
-          htmlFor="background"
-        >
-          Background
-        </label>
-        <input
-          autoComplete="off"
-          className="emotion-40 emotion-41"
-          data-testid="background"
-          id="background"
-          onChange={[Function]}
-          style={
-            Object {
-              "borderColor": "#fff",
-              "color": "inherit",
-            }
-          }
-          type="text"
-          value="#000"
-        />
         <div
-          className="emotion-42 emotion-43"
-          data-testid="form-hsl-sliders"
+          class="emotion-36 emotion-37"
         >
+          <label
+            class="emotion-38 emotion-39"
+            for="background"
+          >
+            Background
+          </label>
+          <input
+            autocomplete="off"
+            class="emotion-40 emotion-41"
+            data-testid="background"
+            id="background"
+            style="border-color: #fff;"
+            type="text"
+            value="#000"
+          />
           <div
-            className="emotion-44 emotion-45"
+            class="emotion-42 emotion-43"
+            data-testid="form-hsl-sliders"
           >
             <div
-              className="emotion-46 emotion-47"
+              class="emotion-44 emotion-45"
             >
-              <label
-                className="emotion-38 emotion-39"
-                htmlFor="background-hsl-Hue"
+              <div
+                class="emotion-46 emotion-47"
               >
-                Hue 0°
-              </label>
-            </div>
-            <div
-              className="emotion-50 emotion-51"
-            >
-              <input
-                className="emotion-52 emotion-53"
-                data-testid="background-hsl-Hue"
-                id="background-hsl-Hue"
-                max={360}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
-            </div>
-          </div>
-          <div
-            className="emotion-44 emotion-45"
-          >
-            <div
-              className="emotion-46 emotion-47"
-            >
-              <label
-                className="emotion-38 emotion-39"
-                htmlFor="background-hsl-Saturation"
+                <label
+                  class="emotion-38 emotion-39"
+                  for="background-hsl-Hue"
+                >
+                  Hue 0°
+                </label>
+              </div>
+              <div
+                class="emotion-50 emotion-51"
               >
-                Saturation 0%
-              </label>
+                <input
+                  class="emotion-52 emotion-53"
+                  data-testid="background-hsl-Hue"
+                  id="background-hsl-Hue"
+                  max="360"
+                  min="0"
+                  type="range"
+                  value="0"
+                />
+              </div>
             </div>
             <div
-              className="emotion-50 emotion-51"
+              class="emotion-44 emotion-45"
             >
-              <input
-                className="emotion-52 emotion-53"
-                data-testid="background-hsl-Saturation"
-                id="background-hsl-Saturation"
-                max={100}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
-            </div>
-          </div>
-          <div
-            className="emotion-44 emotion-45"
-          >
-            <div
-              className="emotion-46 emotion-47"
-            >
-              <label
-                className="emotion-38 emotion-39"
-                htmlFor="background-hsl-Lightness"
+              <div
+                class="emotion-46 emotion-47"
               >
-                Lightness 0%
-              </label>
+                <label
+                  class="emotion-38 emotion-39"
+                  for="background-hsl-Saturation"
+                >
+                  Saturation 0%
+                </label>
+              </div>
+              <div
+                class="emotion-50 emotion-51"
+              >
+                <input
+                  class="emotion-52 emotion-53"
+                  data-testid="background-hsl-Saturation"
+                  id="background-hsl-Saturation"
+                  max="100"
+                  min="0"
+                  type="range"
+                  value="0"
+                />
+              </div>
             </div>
             <div
-              className="emotion-50 emotion-51"
+              class="emotion-44 emotion-45"
             >
-              <input
-                className="emotion-52 emotion-53"
-                data-testid="background-hsl-Lightness"
-                id="background-hsl-Lightness"
-                max={100}
-                min={0}
-                onChange={[Function]}
-                onInput={[Function]}
-                type="range"
-                value={0}
-              />
+              <div
+                class="emotion-46 emotion-47"
+              >
+                <label
+                  class="emotion-38 emotion-39"
+                  for="background-hsl-Lightness"
+                >
+                  Lightness 0%
+                </label>
+              </div>
+              <div
+                class="emotion-50 emotion-51"
+              >
+                <input
+                  class="emotion-52 emotion-53"
+                  data-testid="background-hsl-Lightness"
+                  id="background-hsl-Lightness"
+                  max="100"
+                  min="0"
+                  type="range"
+                  value="0"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</main>
+  </main>
+</DocumentFragment>
 `;

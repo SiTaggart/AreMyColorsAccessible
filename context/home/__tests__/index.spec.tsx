@@ -1,8 +1,9 @@
 /* eslint-disable react/display-name */
 /// <reference types="jest" />
+import { expect } from '@jest/globals';
 
 import * as React from 'react';
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook, act } from '@testing-library/react';
 import { SiteDataProvider, useSiteData, HomeContextInterface } from '..';
 
 describe('useSiteData hook', (): void => {
@@ -321,16 +322,6 @@ describe('useSiteData hook', (): void => {
       isLight: false,
       textColor: 'foo',
     });
-  });
-
-  it('should throw without setting context', (): void => {
-    const { result: throwContext } = renderHook((): HomeContextInterface => useSiteData(), {
-      wrapper: ({ children }: { children?: any }): React.ReactElement => <div>{children}</div>,
-    });
-
-    const mockError = new Error('useSiteData must be used with SiteDataProvider');
-
-    expect(throwContext.error).toEqual(mockError);
   });
 
   it('should handle a text and background colours being the same', (): void => {

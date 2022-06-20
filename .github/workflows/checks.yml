@@ -8,6 +8,8 @@ jobs:
     strategy:
       matrix:
         node-version: [16.13.x]
+    env:
+      CYPRESS_CACHE_FOLDER: ./node_modules/cypress
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -33,11 +35,14 @@ jobs:
           CI_REPO_NAME: AreMyColorsAccessible
           CI_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
           CI_BRANCH: ${{ github.ref }}
+
   lint:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [16.13.x]
+    env:
+      CYPRESS_CACHE_FOLDER: ./node_modules/cypress
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -56,19 +61,21 @@ jobs:
         run: yarn install --immutable
       - name: Run eslint
         run: yarn lint
-      - name: Run type-check
-        run: yarn tsc
+
   cypress-percy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [16.13.x]
+    env:
+      CYPRESS_CACHE_FOLDER: ./node_modules/cypress
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+
       - uses: actions/cache@v3
         id: yarn-cache
         with:
@@ -76,20 +83,40 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
+
+      - name: Node modules cache
+        uses: actions/cache@v2
+        id: node_modules_cache_id
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
       - name: Install dependencies
         run: yarn install --immutable
-      - name: Percy Test
-        uses: percy/exec-action@v0.3.1
+
+      - name: Wait for Netlify
+        uses: hharnisc/wait-for-netlify-action@3.2.0
+        id: waitForDeployment
         with:
-          custom-command: "yarn cypress:ci"
-          verbose: true
+          site_id: ${{ secrets.NETLIFY_SITE_ID }}
+        env:
+          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+
+      - name: Percy Test
+        run: yarn cypress:run
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+          CYPRESS_BASE_URL: ${{ steps.waitForDeployment.outputs.url }}
+
   jest:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [16.13.x]
+    env:
+      CYPRESS_CACHE_FOLDER: ./node_modules/cypress
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3

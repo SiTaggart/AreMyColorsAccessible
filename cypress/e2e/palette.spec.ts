@@ -1,14 +1,5 @@
 /* eslint-disable jest/expect-expect */
 
-const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
-  window.HTMLInputElement.prototype,
-  'value'
-).set;
-const changeRangeInputValue = ($range) => (value) => {
-  nativeInputValueSetter.call($range[0], value);
-  $range[0].dispatchEvent(new Event('change', { value, bubbles: true }));
-};
-
 describe('Palette', () => {
   describe('renders', () => {
     it('should load', () => {
@@ -40,7 +31,7 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(1) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#CCCCCC');
-      cy.url().should('equal', 'http://localhost:3000/palette?colors=%23ccc');
+      cy.location('search').should('equal', '?colors=%23ccc');
     });
 
     it('should add a multiple colors to the matrix via space separation', () => {
@@ -50,10 +41,7 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#000000');
-      cy.url().should(
-        'equal',
-        'http://localhost:3000/palette?colors=%23ccc&colors=%23fff&colors=%23000'
-      );
+      cy.location('search').should('equal', '?colors=%23ccc&colors=%23fff&colors=%23000');
     });
 
     it('should add a multiple colors to the matrix via comma separation', () => {
@@ -63,9 +51,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#EFEFEF');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=%23eee&colors=%23555&colors=%23efefef&colors=blue'
+        '?colors=%23eee&colors=%23555&colors=%23efefef&colors=blue'
       );
     });
 
@@ -76,9 +64,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#FF0000');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=%23efefef&colors=%23999&colors=red&colors=hotpink&colors=%23fff'
+        '?colors=%23efefef&colors=%23999&colors=red&colors=hotpink&colors=%23fff'
       );
     });
 
@@ -89,9 +77,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(4) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#555555');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=%23fff&colors=%23000&colors=%23333&colors=%23555'
+        '?colors=%23fff&colors=%23000&colors=%23333&colors=%23555'
       );
     });
 
@@ -108,9 +96,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(5) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#555555');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=%23efefef&colors=%23222&colors=%23999&colors=%23fff&colors=%23555'
+        '?colors=%23efefef&colors=%23222&colors=%23999&colors=%23fff&colors=%23555'
       );
       cy.percySnapshot('Palette page with colors snapshot');
     });
@@ -128,9 +116,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(4) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#FFFFFF');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=%23ccc&colors=%23ddd&colors=%23eee&colors=%23fff'
+        '?colors=%23ccc&colors=%23ddd&colors=%23eee&colors=%23fff'
       );
     });
 
@@ -171,10 +159,7 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) td:nth-child(2) [data-testid="colorCard"] [data-testid="colorCard-swatch"]'
       ).should('contain', 'Yup');
-      cy.url().should(
-        'equal',
-        'http://localhost:3000/palette?colors=brown&colors=blue&colors=pink&colors=red'
-      );
+      cy.location('search').should('equal', '?colors=brown&colors=blue&colors=pink&colors=red');
     });
 
     it('should update the color matrix results when the hue slider is updated', () => {
@@ -182,9 +167,8 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) td:nth-child(3) [data-testid="colorCard"] [data-testid="colorCard-swatch"]'
       ).should('contain', 'Yup');
-      // eslint-disable-next-line promise/catch-or-return
-      cy.get('#hsl-1-Hue').then((input) => changeRangeInputValue(input)(25));
-      cy.get('#hsl-1-Hue').should('have.value', '25');
+      cy.get('#hsl-1-Hue').as('range').invoke('val', 25).trigger('input');
+      cy.get('@range').should('have.value', '25');
       cy.get('#hsl-1-Saturation').should('have.value', '100');
       cy.get('#hsl-1-Lightness').should('have.value', '50');
       cy.get(
@@ -194,9 +178,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) td:nth-child(3) [data-testid="colorCard"] [data-testid="colorCard-swatch"]'
       ).should('contain', 'Nope');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=orange&colors=%23FF6A00&colors=pink&colors=red'
+        '?colors=orange&colors=%23FF6A00&colors=pink&colors=red'
       );
     });
 
@@ -205,10 +189,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(1) td:nth-child(4) [data-testid="colorCard"] [data-testid="colorCard-swatch"]'
       ).should('contain', 'Kinda');
-      // eslint-disable-next-line promise/catch-or-return
-      cy.get('#hsl-2-Saturation').then((input) => changeRangeInputValue(input)(95));
+      cy.get('#hsl-2-Saturation').as('range').invoke('val', 95).trigger('input');
       cy.get('#hsl-2-Hue').should('have.value', '0');
-      cy.get('#hsl-2-Saturation').should('have.value', '95');
+      cy.get('@range').should('have.value', '95');
       cy.get('#hsl-2-Lightness').should('have.value', '41');
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) > [data-testid="colorMatrix-th"]'
@@ -217,9 +200,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(1) td:nth-child(4) [data-testid="colorCard"] [data-testid="colorCard-swatch"]'
       ).should('contain', 'Nope');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=orange&colors=blue&colors=%23CC0505&colors=red'
+        '?colors=orange&colors=blue&colors=%23CC0505&colors=red'
       );
     });
 
@@ -228,11 +211,10 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) td:nth-child(5) [data-testid="colorCard"] [data-testid="colorCard-swatch"]'
       ).should('contain', 'Nope');
-      // eslint-disable-next-line promise/catch-or-return
-      cy.get('#hsl-3-Lightness').then((input) => changeRangeInputValue(input)(25));
+      cy.get('#hsl-3-Lightness').as('range').invoke('val', 25).trigger('input');
       cy.get('#hsl-3-Hue').should('have.value', '0');
       cy.get('#hsl-3-Saturation').should('have.value', '100');
-      cy.get('#hsl-3-Lightness').should('have.value', '25');
+      cy.get('@range').should('have.value', '25');
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(4) > [data-testid="colorMatrix-th"]'
       ).should('contain', '#800000');
@@ -240,9 +222,9 @@ describe('Palette', () => {
       cy.get(
         'tbody [data-testid="colorMatrix-tr"]:nth-child(3) td:nth-child(5) [data-testid="colorCard"] [data-testid="colorCard-swatch"]'
       ).should('contain', 'Yup');
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/palette?colors=orange&colors=blue&colors=pink&colors=%23800000'
+        '?colors=orange&colors=blue&colors=pink&colors=%23800000'
       );
     });
   });

@@ -1,29 +1,20 @@
 /* eslint-env jest */
 /// <reference types="jest" />
+import { expect } from '@jest/globals';
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
 import { render } from '@testing-library/react';
 import { SiteDataProvider } from '../../../context/home';
 import { Results } from '..';
 
 describe('Results', (): void => {
   it('renders without crashing', (): void => {
-    ReactDOM.render(
+    const { asFragment } = render(
       <SiteDataProvider>
         <Results />
-      </SiteDataProvider>,
-      document.createElement('div')
+      </SiteDataProvider>
     );
-    const resultsCmp = renderer
-      .create(
-        <SiteDataProvider>
-          <Results />
-        </SiteDataProvider>
-      )
-      .toJSON();
-    expect(resultsCmp).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render a triple a result correctly', (): void => {
@@ -120,20 +111,18 @@ describe('Results', (): void => {
   });
 
   it('should set the font color of seriously? to #343334 on light backgrounds', (): void => {
-    const resultsCmp = renderer
-      .create(
-        <SiteDataProvider
-          initialSiteData={{
-            background: '#000',
-            textColor: '#191920',
-            isLight: true,
-            colorCombos: [],
-          }}
-        >
-          <Results />
-        </SiteDataProvider>
-      )
-      .toJSON();
-    expect(resultsCmp).toMatchSnapshot();
+    const { asFragment } = render(
+      <SiteDataProvider
+        initialSiteData={{
+          background: '#000',
+          textColor: '#191920',
+          isLight: true,
+          colorCombos: [],
+        }}
+      >
+        <Results />
+      </SiteDataProvider>
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 });

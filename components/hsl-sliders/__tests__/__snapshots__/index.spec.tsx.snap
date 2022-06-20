@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`hsl-slider compact variant should render a compact variant 1`] = `
-.emotion-2 {
+<DocumentFragment>
+  .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -151,101 +152,97 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
-  data-testid="form-hsl-sliders"
->
-  <div
-    className="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
+    data-testid="form-hsl-sliders"
   >
     <div
-      className="emotion-4 emotion-5"
+      class="emotion-2 emotion-3"
     >
-      <label
-        className="emotion-6 emotion-7"
-        htmlFor="input-id-Hue"
+      <div
+        class="emotion-4 emotion-5"
       >
-        H
-      </label>
+        <label
+          class="emotion-6 emotion-7"
+          for="input-id-Hue"
+        >
+          H
+        </label>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        <input
+          class="emotion-10 emotion-11"
+          data-testid="input-id-Hue"
+          id="input-id-Hue"
+          max="360"
+          min="0"
+          type="range"
+          value="0"
+        />
+      </div>
     </div>
     <div
-      className="emotion-8 emotion-9"
+      class="emotion-2 emotion-3"
     >
-      <input
-        className="emotion-10 emotion-11"
-        data-testid="input-id-Hue"
-        id="input-id-Hue"
-        max={360}
-        min={0}
-        onChange={[Function]}
-        onInput={[Function]}
-        type="range"
-        value={0}
-      />
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <label
+          class="emotion-6 emotion-7"
+          for="input-id-Saturation"
+        >
+          S
+        </label>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        <input
+          class="emotion-10 emotion-11"
+          data-testid="input-id-Saturation"
+          id="input-id-Saturation"
+          max="100"
+          min="0"
+          type="range"
+          value="0"
+        />
+      </div>
+    </div>
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <label
+          class="emotion-6 emotion-7"
+          for="input-id-Lightness"
+        >
+          L
+        </label>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        <input
+          class="emotion-10 emotion-11"
+          data-testid="input-id-Lightness"
+          id="input-id-Lightness"
+          max="100"
+          min="0"
+          type="range"
+          value="80"
+        />
+      </div>
     </div>
   </div>
-  <div
-    className="emotion-2 emotion-3"
-  >
-    <div
-      className="emotion-4 emotion-5"
-    >
-      <label
-        className="emotion-6 emotion-7"
-        htmlFor="input-id-Saturation"
-      >
-        S
-      </label>
-    </div>
-    <div
-      className="emotion-8 emotion-9"
-    >
-      <input
-        className="emotion-10 emotion-11"
-        data-testid="input-id-Saturation"
-        id="input-id-Saturation"
-        max={100}
-        min={0}
-        onChange={[Function]}
-        onInput={[Function]}
-        type="range"
-        value={0}
-      />
-    </div>
-  </div>
-  <div
-    className="emotion-2 emotion-3"
-  >
-    <div
-      className="emotion-4 emotion-5"
-    >
-      <label
-        className="emotion-6 emotion-7"
-        htmlFor="input-id-Lightness"
-      >
-        L
-      </label>
-    </div>
-    <div
-      className="emotion-8 emotion-9"
-    >
-      <input
-        className="emotion-10 emotion-11"
-        data-testid="input-id-Lightness"
-        id="input-id-Lightness"
-        max={100}
-        min={0}
-        onChange={[Function]}
-        onInput={[Function]}
-        type="range"
-        value={80}
-      />
-    </div>
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`hsl-slider renders without crashing 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -388,95 +385,90 @@ exports[`hsl-slider renders without crashing 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
-  data-testid="form-hsl-sliders"
->
-  <div
-    className="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
+    data-testid="form-hsl-sliders"
   >
     <div
-      className="emotion-4 emotion-5"
+      class="emotion-2 emotion-3"
     >
-      <label
-        className="emotion-6 emotion-7"
-        htmlFor="input-id-Hue"
+      <div
+        class="emotion-4 emotion-5"
       >
-        Hue 0°
-      </label>
+        <label
+          class="emotion-6 emotion-7"
+          for="input-id-Hue"
+        >
+          Hue 0°
+        </label>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        <input
+          class="emotion-10 emotion-11"
+          data-testid="input-id-Hue"
+          id="input-id-Hue"
+          max="360"
+          min="0"
+          type="range"
+          value="0"
+        />
+      </div>
     </div>
     <div
-      className="emotion-8 emotion-9"
+      class="emotion-2 emotion-3"
     >
-      <input
-        className="emotion-10 emotion-11"
-        data-testid="input-id-Hue"
-        id="input-id-Hue"
-        max={360}
-        min={0}
-        onChange={[Function]}
-        onInput={[Function]}
-        type="range"
-        value={0}
-      />
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <label
+          class="emotion-6 emotion-7"
+          for="input-id-Saturation"
+        >
+          Saturation 0%
+        </label>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        <input
+          class="emotion-10 emotion-11"
+          data-testid="input-id-Saturation"
+          id="input-id-Saturation"
+          max="100"
+          min="0"
+          type="range"
+          value="0"
+        />
+      </div>
+    </div>
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <label
+          class="emotion-6 emotion-7"
+          for="input-id-Lightness"
+        >
+          Lightness 80%
+        </label>
+      </div>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        <input
+          class="emotion-10 emotion-11"
+          data-testid="input-id-Lightness"
+          id="input-id-Lightness"
+          max="100"
+          min="0"
+          type="range"
+          value="80"
+        />
+      </div>
     </div>
   </div>
-  <div
-    className="emotion-2 emotion-3"
-  >
-    <div
-      className="emotion-4 emotion-5"
-    >
-      <label
-        className="emotion-6 emotion-7"
-        htmlFor="input-id-Saturation"
-      >
-        Saturation 0%
-      </label>
-    </div>
-    <div
-      className="emotion-8 emotion-9"
-    >
-      <input
-        className="emotion-10 emotion-11"
-        data-testid="input-id-Saturation"
-        id="input-id-Saturation"
-        max={100}
-        min={0}
-        onChange={[Function]}
-        onInput={[Function]}
-        type="range"
-        value={0}
-      />
-    </div>
-  </div>
-  <div
-    className="emotion-2 emotion-3"
-  >
-    <div
-      className="emotion-4 emotion-5"
-    >
-      <label
-        className="emotion-6 emotion-7"
-        htmlFor="input-id-Lightness"
-      >
-        Lightness 80%
-      </label>
-    </div>
-    <div
-      className="emotion-8 emotion-9"
-    >
-      <input
-        className="emotion-10 emotion-11"
-        data-testid="input-id-Lightness"
-        id="input-id-Lightness"
-        max={100}
-        min={0}
-        onChange={[Function]}
-        onInput={[Function]}
-        type="range"
-        value={80}
-      />
-    </div>
-  </div>
-</div>
+</DocumentFragment>
 `;

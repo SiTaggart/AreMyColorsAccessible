@@ -1,17 +1,16 @@
 /* eslint-env jest */
 /// <reference types="jest" />
+import { expect } from '@jest/globals';
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { render, fireEvent } from '@testing-library/react';
-import renderer from 'react-test-renderer';
 import { HSLSlider } from '..';
 
 describe('hsl-slider', (): void => {
   const onChangeMock = jest.fn();
 
   it('renders without crashing', (): void => {
-    ReactDOM.render(
+    const { asFragment } = render(
       <HSLSlider
         id="input-id"
         label="test"
@@ -21,11 +20,14 @@ describe('hsl-slider', (): void => {
         onInput={onChangeMock}
         symbol="%"
         value={30}
-      />,
-      document.createElement('div')
+      />
     );
-    const hslSliderComp = renderer
-      .create(
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  describe('compact variant', (): void => {
+    it('should render a compact variant', (): void => {
+      const { asFragment } = render(
         <HSLSlider
           id="input-id"
           label="test"
@@ -35,30 +37,10 @@ describe('hsl-slider', (): void => {
           onInput={onChangeMock}
           symbol="%"
           value={30}
+          variant="compact"
         />
-      )
-      .toJSON();
-    expect(hslSliderComp).toMatchSnapshot();
-  });
-
-  describe('compact variant', (): void => {
-    it('should render a compact variant', (): void => {
-      const hslSliderComp = renderer
-        .create(
-          <HSLSlider
-            id="input-id"
-            label="test"
-            max={20}
-            min={100}
-            onChange={onChangeMock}
-            onInput={onChangeMock}
-            symbol="%"
-            value={30}
-            variant="compact"
-          />
-        )
-        .toJSON();
-      expect(hslSliderComp).toMatchSnapshot();
+      );
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render the slider input label as the first letter', (): void => {

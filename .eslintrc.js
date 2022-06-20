@@ -4,7 +4,7 @@ module.exports = {
   plugins: ['@emotion/eslint-plugin'],
   settings: {
     react: {
-      version: '17.0.2',
+      version: '18.2.0',
     },
   },
   rules: {

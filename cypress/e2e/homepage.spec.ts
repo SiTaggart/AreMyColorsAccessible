@@ -1,14 +1,5 @@
 /* eslint-disable jest/expect-expect */
 
-const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
-  window.HTMLInputElement.prototype,
-  'value'
-).set;
-const changeRangeInputValue = ($range) => (value) => {
-  nativeInputValueSetter.call($range[0], value);
-  $range[0].dispatchEvent(new Event('change', { value, bubbles: true }));
-};
-
 describe('Homepage', () => {
   describe('renders', () => {
     it('should load', () => {
@@ -47,9 +38,9 @@ describe('Homepage', () => {
     });
 
     it('should update the url', () => {
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23ccc'
+        '?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23ccc'
       );
     });
 
@@ -77,9 +68,9 @@ describe('Homepage', () => {
     });
 
     it('should update the url', () => {
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/?background=%23ccc&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=true&textColor=%23FFFFFF'
+        '?background=%23ccc&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=true&textColor=%23FFFFFF'
       );
     });
 
@@ -91,8 +82,7 @@ describe('Homepage', () => {
   describe('text color sliders', () => {
     before(() => {
       cy.visit('/');
-      // eslint-disable-next-line promise/catch-or-return
-      cy.get('#textColor-hsl-Lightness').then((input) => changeRangeInputValue(input)(25));
+      cy.get('#textColor-hsl-Lightness').as('range').invoke('val', 25).trigger('input');
     });
 
     it('should update the input value', () => {
@@ -108,9 +98,9 @@ describe('Homepage', () => {
     });
 
     it('should update the url', () => {
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23404040'
+        '?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23404040'
       );
     });
 
@@ -122,8 +112,7 @@ describe('Homepage', () => {
   describe('background color sliders', () => {
     before(() => {
       cy.visit('/');
-      // eslint-disable-next-line promise/catch-or-return
-      cy.get('#background-hsl-Hue').then((input) => changeRangeInputValue(input)(25));
+      cy.get('#background-hsl-Hue').as('range').invoke('val', 25).trigger('input');
     });
 
     it('should update the input value', () => {
@@ -139,9 +128,9 @@ describe('Homepage', () => {
     });
 
     it('should update the url', () => {
-      cy.url().should(
+      cy.location('search').should(
         'equal',
-        'http://localhost:3000/?background=%23CE6012&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23FFFFFF'
+        '?background=%23CE6012&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23FFFFFF'
       );
     });
 
@@ -173,7 +162,7 @@ describe('Homepage', () => {
     it('should navigate to the about page', () => {
       cy.visit('/');
       cy.get('footer ul li:last-child').click();
-      cy.url().should('eq', 'http://localhost:3000/about');
+      cy.location('pathname').should('eq', '/about');
       cy.get('h1').should('contain', 'Are my Colours Accessible?');
     });
 
@@ -184,7 +173,7 @@ describe('Homepage', () => {
     it('should navigate to the palette page', () => {
       cy.visit('/');
       cy.get('footer ul li:nth-child(2)').click();
-      cy.url().should('eq', 'http://localhost:3000/palette');
+      cy.location('pathname').should('eq', '/palette');
       cy.get('h1').should('contain', 'Add the colours from your palette');
     });
   });

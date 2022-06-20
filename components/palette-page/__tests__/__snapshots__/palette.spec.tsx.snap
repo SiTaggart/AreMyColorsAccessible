@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Palette Page renders without crashing 1`] = `
-Array [
+<DocumentFragment>
   .emotion-0 {
   text-align: center;
 }
@@ -30,31 +30,31 @@ Array [
 }
 
 <form
-    className="emotion-0 emotion-1"
-    onSubmit={[Function]}
+    class="emotion-0 emotion-1"
   >
     <div>
       <h1
-        className="emotion-2 emotion-3"
+        class="emotion-2 emotion-3"
       >
         <label
-          className="emotion-4 emotion-5"
-          htmlFor="palette-form-input"
+          class="emotion-4 emotion-5"
+          for="palette-form-input"
         >
           Add the colours from your palette
         </label>
       </h1>
       <input
-        autoComplete="off"
-        className="emotion-6 emotion-7"
+        autocomplete="off"
+        class="emotion-6 emotion-7"
         data-testid="palette-form-input"
         id="palette-form-input"
         name="paletteFormInput"
         placeholder="e.g. #ccc, #fff or blue"
         type="text"
+        value=""
       />
     </div>
-  </form>,
+  </form>
   .emotion-0 {
   margin-top: 3rem;
   overflow-x: auto;
@@ -66,27 +66,23 @@ Array [
 }
 
 <section
-    className="emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
   >
     <table
-      className="emotion-2 emotion-3"
+      class="emotion-2 emotion-3"
     >
       <thead>
         <tr
-          className="emotion-4 emotion-5"
+          class="emotion-4 emotion-5"
           data-testid="colorMatrix-tr"
         >
           <td
-            style={
-              Object {
-                "width": "6rem",
-              }
-            }
+            style="width: 6rem;"
           />
         </tr>
       </thead>
       <tbody />
     </table>
-  </section>,
-]
+  </section>
+</DocumentFragment>
 `;

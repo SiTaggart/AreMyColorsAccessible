@@ -1,32 +1,29 @@
 /* eslint-env jest */
 /// <reference types="jest" />
+import { expect } from '@jest/globals';
+import { render } from '@testing-library/react';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
 
 import HomePage from '../pages';
 
 describe('Home Page', (): void => {
   it('should render without crashing', (): void => {
-    ReactDOM.render(<HomePage />, document.createElement('div'));
+    const { asFragment } = render(<HomePage />);
 
-    const homeCmp = renderer.create(<HomePage />).toJSON();
-    expect(homeCmp).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render based on query string props', (): void => {
-    const homeCmp = renderer
-      .create(
-        <HomePage
-          query={{
-            background: '#5E38A8',
-            isLight: false,
-            textColor: '#eee',
-            colorCombos: [],
-          }}
-        />
-      )
-      .toJSON();
-    expect(homeCmp).toMatchSnapshot();
+    const { asFragment } = render(
+      <HomePage
+        query={{
+          background: '#5E38A8',
+          isLight: false,
+          textColor: '#eee',
+          colorCombos: [],
+        }}
+      />
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 });

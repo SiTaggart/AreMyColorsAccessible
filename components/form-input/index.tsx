@@ -20,6 +20,7 @@ export interface FormInputProps {
 interface StyledInputProps {
   isErrored?: boolean;
   hasNoSpacing?: boolean;
+  css?: CSSObject;
 }
 
 const StyledInput = styled.input<StyledInputProps>`
@@ -59,6 +60,7 @@ const FormInput: React.FC<FormInputProps> = ({
   value,
   errorMessage,
   className,
+  css,
 }: FormInputProps): ReactElement<HTMLInputElement> => (
   <>
     <StyledInput
@@ -66,6 +68,7 @@ const FormInput: React.FC<FormInputProps> = ({
       aria-label={ariaLabel}
       autoComplete="off"
       className={className}
+      css={css}
       data-testid={id}
       defaultValue={defaultValue}
       hasNoSpacing={hasNoSpacing}

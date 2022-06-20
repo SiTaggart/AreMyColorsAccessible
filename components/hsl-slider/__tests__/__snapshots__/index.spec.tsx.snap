@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`hsl-slider compact variant should render a compact variant 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -151,38 +152,38 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
->
-  <div
-    className="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
   >
-    <label
-      className="emotion-4 emotion-5"
-      htmlFor="input-id"
+    <div
+      class="emotion-2 emotion-3"
     >
-      t
-    </label>
+      <label
+        class="emotion-4 emotion-5"
+        for="input-id"
+      >
+        t
+      </label>
+    </div>
+    <div
+      class="emotion-6 emotion-7"
+    >
+      <input
+        class="emotion-8 emotion-9"
+        data-testid="input-id"
+        id="input-id"
+        max="20"
+        min="100"
+        type="range"
+        value="30"
+      />
+    </div>
   </div>
-  <div
-    className="emotion-6 emotion-7"
-  >
-    <input
-      className="emotion-8 emotion-9"
-      data-testid="input-id"
-      id="input-id"
-      max={20}
-      min={100}
-      onChange={[Function]}
-      onInput={[Function]}
-      type="range"
-      value={30}
-    />
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`hsl-slider renders without crashing 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   width: 100%;
 }
 
@@ -308,32 +309,31 @@ exports[`hsl-slider renders without crashing 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
->
-  <div
-    className="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
   >
-    <label
-      className="emotion-4 emotion-5"
-      htmlFor="input-id"
+    <div
+      class="emotion-2 emotion-3"
     >
-      test 30%
-    </label>
+      <label
+        class="emotion-4 emotion-5"
+        for="input-id"
+      >
+        test 30%
+      </label>
+    </div>
+    <div
+      class="emotion-6 emotion-7"
+    >
+      <input
+        class="emotion-8 emotion-9"
+        data-testid="input-id"
+        id="input-id"
+        max="20"
+        min="100"
+        type="range"
+        value="30"
+      />
+    </div>
   </div>
-  <div
-    className="emotion-6 emotion-7"
-  >
-    <input
-      className="emotion-8 emotion-9"
-      data-testid="input-id"
-      id="input-id"
-      max={20}
-      min={100}
-      onChange={[Function]}
-      onInput={[Function]}
-      type="range"
-      value={30}
-    />
-  </div>
-</div>
+</DocumentFragment>
 `;

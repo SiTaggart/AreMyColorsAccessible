@@ -1,4 +1,5 @@
 /// <reference types="jest" />
+import { expect } from '@jest/globals';
 
 import { ensureColorsAreAnArrayOfTwo } from '../ensure-colors-are-an-array-of-two';
 

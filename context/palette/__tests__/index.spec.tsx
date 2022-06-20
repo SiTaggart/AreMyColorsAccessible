@@ -1,17 +1,18 @@
 /* eslint-env jest */
 /* eslint-disable react/display-name */
 /// <reference types="jest" />
+import { expect } from '@jest/globals';
 
 import * as React from 'react';
-import { renderHook, act, RenderHookResult } from '@testing-library/react-hooks';
+import { renderHook, act, RenderHookResult } from '@testing-library/react';
 import { PaletteDataProvider, usePaletteData, PaletteContextProps } from '..';
 
 describe('useSiteData hook', (): void => {
-  const wrapper = ({ children }: { children?: any }): React.ReactElement => (
+  const wrapper = ({ children }: { children?: React.ReactElement }): React.ReactElement => (
     <PaletteDataProvider>{children}</PaletteDataProvider>
   );
 
-  let renderedHook: RenderHookResult<{ children?: any }, PaletteContextProps>;
+  let renderedHook: RenderHookResult<PaletteContextProps, PaletteContextProps>;
 
   beforeEach((): void => {
     renderedHook = renderHook(() => usePaletteData(), {
@@ -664,16 +665,6 @@ describe('useSiteData hook', (): void => {
     });
     expect(renderedHook.result.current.paletteData.colorCombos).toEqual(coloursCombos);
     expect(renderedHook.result.current.paletteData.hasError).toBeTruthy();
-  });
-
-  it('should throw without setting context', (): void => {
-    const { result } = renderHook((): PaletteContextProps => usePaletteData(), {
-      wrapper: ({ children }: { children?: any }): React.ReactElement => <div>{children}</div>,
-    });
-
-    const mockError = new Error('usePaletteData must be used with PaletteDataProvider');
-
-    expect(result.error).toEqual(mockError);
   });
 });
 /* eslint-enable react/display-name */

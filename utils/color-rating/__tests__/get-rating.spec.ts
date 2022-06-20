@@ -1,4 +1,5 @@
 /// <reference types="jest" />
+import { expect } from '@jest/globals';
 
 import { getRating } from '../get-rating';
 

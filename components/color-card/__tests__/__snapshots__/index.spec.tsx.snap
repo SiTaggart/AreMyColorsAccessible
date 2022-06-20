@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ColorCard renders without crashing 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -59,52 +60,51 @@ exports[`ColorCard renders without crashing 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
-  data-testid="colorCard"
->
-  <div
-    className="emotion-2 emotion-3"
-  >
-    <span
-      className="emotion-4 emotion-5"
-      title="Color contrast ratio"
-    >
-      21
-       : 1
-    </span>
-  </div>
-  <div
-    className="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
+    data-testid="colorCard"
   >
     <div
-      className="emotion-8 emotion-9"
-      color="#000"
-      data-testid="colorCard-swatch"
+      class="emotion-2 emotion-3"
     >
-      Yup
+      <span
+        class="emotion-4 emotion-5"
+        title="Color contrast ratio"
+      >
+        21 : 1
+      </span>
+    </div>
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-8 emotion-9"
+        color="#000"
+        data-testid="colorCard-swatch"
+      >
+        Yup
+      </div>
+    </div>
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <span
+        class="emotion-12 emotion-5"
+      >
+        Small: AAA
+      </span>
+      <span
+        class="emotion-12 emotion-5"
+      >
+        Large: AAA
+      </span>
     </div>
   </div>
-  <div
-    className="emotion-2 emotion-3"
-  >
-    <span
-      className="emotion-12 emotion-5"
-    >
-      Small: 
-      AAA
-    </span>
-    <span
-      className="emotion-12 emotion-5"
-    >
-      Large: 
-      AAA
-    </span>
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`ColorCard should render a not important card 1`] = `
-.emotion-0 {
+<DocumentFragment>
+  .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -163,46 +163,44 @@ exports[`ColorCard should render a not important card 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
-  data-testid="colorCard"
->
-  <div
-    className="emotion-2 emotion-3"
-  >
-    <span
-      className="emotion-4 emotion-5"
-      title="Color contrast ratio"
-    >
-      21
-       : 1
-    </span>
-  </div>
-  <div
-    className="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
+    data-testid="colorCard"
   >
     <div
-      className="emotion-8 emotion-9"
-      color="#000"
-      data-testid="colorCard-swatch"
+      class="emotion-2 emotion-3"
     >
-      Yup
+      <span
+        class="emotion-4 emotion-5"
+        title="Color contrast ratio"
+      >
+        21 : 1
+      </span>
+    </div>
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-8 emotion-9"
+        color="#000"
+        data-testid="colorCard-swatch"
+      >
+        Yup
+      </div>
+    </div>
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <span
+        class="emotion-12 emotion-5"
+      >
+        Small: AAA
+      </span>
+      <span
+        class="emotion-12 emotion-5"
+      >
+        Large: AAA
+      </span>
     </div>
   </div>
-  <div
-    className="emotion-2 emotion-3"
-  >
-    <span
-      className="emotion-12 emotion-5"
-    >
-      Small: 
-      AAA
-    </span>
-    <span
-      className="emotion-12 emotion-5"
-    >
-      Large: 
-      AAA
-    </span>
-  </div>
-</div>
+</DocumentFragment>
 `;
