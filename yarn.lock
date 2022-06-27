@@ -1607,9 +1607,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/ipx@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@netlify/ipx@npm:1.1.0"
+"@netlify/ipx@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@netlify/ipx@npm:1.1.2"
   dependencies:
     "@netlify/functions": ^1.0.0
     etag: ^1.8.1
@@ -1619,9 +1619,9 @@ __metadata:
     mkdirp: ^1.0.4
     murmurhash: ^2.0.0
     node-fetch: ^2.0.0
-    ufo: ^0.7.11
+    ufo: ^0.8.0
     unstorage: ^0.2.8
-  checksum: b5ca6126e6aa5497a72c81dfc80666ac841d38dea3a70816c7606f7385aabb63a992cf8aec2d0ac5a5fdd506e5787524bbf005cea197a823e1716060a1002601
+  checksum: 45b82cb9a49277af4e20a562778d9b0af19b1e97b0809154f8ada9a435339781f5a56bc4afedabe4c62a9157384673c7eabd89c3ab76d943a68af4919100ff12
   languageName: node
   linkType: hard
 
@@ -1640,12 +1640,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/plugin-nextjs@npm:4.9.1":
-  version: 4.9.1
-  resolution: "@netlify/plugin-nextjs@npm:4.9.1"
+"@netlify/plugin-nextjs@npm:4.9.3":
+  version: 4.9.3
+  resolution: "@netlify/plugin-nextjs@npm:4.9.3"
   dependencies:
     "@netlify/functions": ^1.0.0
-    "@netlify/ipx": ^1.1.0
+    "@netlify/ipx": ^1.1.2
     "@vercel/node-bridge": ^2.1.0
     chalk: ^4.1.2
     fs-extra: ^10.0.0
@@ -1662,7 +1662,7 @@ __metadata:
     tiny-glob: ^0.2.9
   peerDependencies:
     next: "*"
-  checksum: b710327d430f9e028a40e73f2bca37ec11d12c7a1e62eff6166f2b138ba69ae4249e9ab0b75e24603bca05aad166a4874cda9bc54fe7945d54f06681292f4eca
+  checksum: 0b988b55dfb54717ed35e742e92e25685e24af8c12d613b37e5b9baeeda64096acc8828dcf93d4601dcb0da76327ca74301f0230f89c20cc1eb261ba366f7f88
   languageName: node
   linkType: hard
 
@@ -3999,13 +3999,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*, @types/jest@npm:28.1.2":
+"@types/jest@npm:*":
   version: 28.1.2
   resolution: "@types/jest@npm:28.1.2"
   dependencies:
     jest-matcher-utils: ^28.0.0
     pretty-format: ^28.0.0
   checksum: 53ec95b0b27c61380225b94f8660e661e8c6c6fc69b7130531fb5d72ebf5c8838a4266b8a6d7b3a77b3bcdabed632de0c21c9592a2529c1efe80a0f0a995a3aa
+  languageName: node
+  linkType: hard
+
+"@types/jest@npm:28.1.3":
+  version: 28.1.3
+  resolution: "@types/jest@npm:28.1.3"
+  dependencies:
+    jest-matcher-utils: ^28.0.0
+    pretty-format: ^28.0.0
+  checksum: 28141f2d5b3bafd063362de9790cb8f219488d9b0ad47524a84bef1142a4f0d9d35be0c56988d9f922205225cc83c986acd4be424bd8653b38dc27ab672455e2
   languageName: node
   linkType: hard
 
@@ -4719,7 +4729,7 @@ __metadata:
     "@emotion/styled": 11.9.3
     "@jest/globals": ^28.1.1
     "@netlify/plugin-lighthouse": 2.1.3
-    "@netlify/plugin-nextjs": 4.9.1
+    "@netlify/plugin-nextjs": 4.9.3
     "@next/eslint-plugin-next": 12.1.6
     "@percy/cli": 1.3.1
     "@percy/cypress": 3.1.2
@@ -4732,7 +4742,7 @@ __metadata:
     "@twilio-paste/icons": 8.0.2
     "@types/color": 3.0.3
     "@types/cors": 2.8.12
-    "@types/jest": 28.1.2
+    "@types/jest": 28.1.3
     "@types/lodash": 4.14.182
     "@types/node": 17.0.45
     "@types/query-string": 6.3.0
@@ -4743,7 +4753,7 @@ __metadata:
     color: 4.2.3
     color-combos: 1.0.17
     cors: 2.8.5
-    cypress: 10.1.0
+    cypress: 10.2.0
     eslint: 8.18.0
     eslint-config-next: 12.1.6
     eslint-formatter-codeframe: 7.32.1
@@ -4766,7 +4776,7 @@ __metadata:
     react-dom: 18.2.0
     start-server-and-test: 1.14.0
     typescript: 4.7.4
-    winston: 3.7.2
+    winston: 3.8.0
   languageName: unknown
   linkType: soft
 
@@ -6389,9 +6399,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:10.1.0":
-  version: 10.1.0
-  resolution: "cypress@npm:10.1.0"
+"cypress@npm:10.2.0":
+  version: 10.2.0
+  resolution: "cypress@npm:10.2.0"
   dependencies:
     "@cypress/request": ^2.88.10
     "@cypress/xvfb": ^1.2.4
@@ -6437,7 +6447,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 5c93db957f70eba2299896754b43cc56274fe4f13df9569622924f5d98a61b464bb619b641baeb60244b5d95ee4483d1903930ce631efa55fdd35e33cf951f28
+  checksum: 1fd687658e036b2fd07031bde5a2f40ab61f664ca802ae650e0e15786d8825b38bb9444dffd8528b90a8e539e18241be6d5eaab7d5ae05d941839e2481e09342
   languageName: node
   linkType: hard
 
@@ -14973,13 +14983,6 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ufo@npm:^0.7.11":
-  version: 0.7.11
-  resolution: "ufo@npm:0.7.11"
-  checksum: e5dfaff619e9b6d2e1e205877738f701722c99a0da8eda5e180f72844cdb668488656de47d6777d85c1ca17717d527a45ae8eb3954a0271d7d08e59acc02dd99
-  languageName: node
-  linkType: hard
-
 "ufo@npm:^0.7.9":
   version: 0.7.9
   resolution: "ufo@npm:0.7.9"
@@ -14987,7 +14990,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ufo@npm:^0.8.4":
+"ufo@npm:^0.8.0, ufo@npm:^0.8.4":
   version: 0.8.4
   resolution: "ufo@npm:0.8.4"
   checksum: a2ebef6f64b9cc4114fc65405837eeb83eb8975edd6d54c7f37abb6905da6fd1f63524e4a02c8b087e7b0b3db6e6f4f798a3d86a96500410ff590b405f807dc9
@@ -15498,9 +15501,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"winston@npm:3.7.2":
-  version: 3.7.2
-  resolution: "winston@npm:3.7.2"
+"winston@npm:3.8.0":
+  version: 3.8.0
+  resolution: "winston@npm:3.8.0"
   dependencies:
     "@dabh/diagnostics": ^2.0.2
     async: ^3.2.3
@@ -15512,7 +15515,7 @@ resolve@^2.0.0-next.3:
     stack-trace: 0.0.x
     triple-beam: ^1.3.0
     winston-transport: ^4.5.0
-  checksum: f1f1a860d2fa228b50880b20aaa6cc121085907791fe0d814ff9c062640f6b65da321726322094e7667eb63088b3bb67e7b4e219d998f29efcc6f583185a1cd3
+  checksum: a091fe4959c04cdab5be823b702c5231a9e5eaec2a892e865dae8cb296e5ab0ac4bba004714b3e48e1efc5679355bbbad2f9fc4db1a23d8ebb22f9025831be2d
   languageName: node
   linkType: hard
 
