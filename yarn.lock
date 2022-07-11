@@ -1870,109 +1870,109 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/env@npm:12.2.0"
-  checksum: 5fb317bdb5eb2d5df12ff55e335368792dba21874c5ece3cabf8cd312cec911a1d54ecf368e69dc08640b0244669b8a98c86cd035c7874b17640602e67c1b9d9
+"@next/env@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/env@npm:12.2.2"
+  checksum: ea79db56b3af5076de9b02941e0226d8d68e179101e99cf3bb1a17fb980d30de781311c176ce3a87fc72b9598e311d18e5244e71c553b03875f2dbe27dffa864
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/eslint-plugin-next@npm:12.2.0"
+"@next/eslint-plugin-next@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/eslint-plugin-next@npm:12.2.2"
   dependencies:
     glob: 7.1.7
-  checksum: 2e33b9af79af680fd873d74e91bed397930a91802c1d7a293db757227ebc431d3d856de69477dc178dec8b531635ea69d79b188293024f1371afe6c348dbe647
+  checksum: 7593bacf627823edc86aced7b9c9c8d724a90c60551d55d51addf115cce5cd54991666f63dda0f7dd988c28a739307a30665b7a0c06d50b2f23654b93f2c7791
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm-eabi@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/swc-android-arm-eabi@npm:12.2.0"
+"@next/swc-android-arm-eabi@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/swc-android-arm-eabi@npm:12.2.2"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm64@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/swc-android-arm64@npm:12.2.0"
+"@next/swc-android-arm64@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/swc-android-arm64@npm:12.2.2"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/swc-darwin-arm64@npm:12.2.0"
+"@next/swc-darwin-arm64@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/swc-darwin-arm64@npm:12.2.2"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/swc-darwin-x64@npm:12.2.0"
+"@next/swc-darwin-x64@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/swc-darwin-x64@npm:12.2.2"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-freebsd-x64@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/swc-freebsd-x64@npm:12.2.0"
+"@next/swc-freebsd-x64@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/swc-freebsd-x64@npm:12.2.2"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm-gnueabihf@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.2.0"
+"@next/swc-linux-arm-gnueabihf@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.2.2"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/swc-linux-arm64-gnu@npm:12.2.0"
+"@next/swc-linux-arm64-gnu@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/swc-linux-arm64-gnu@npm:12.2.2"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/swc-linux-arm64-musl@npm:12.2.0"
+"@next/swc-linux-arm64-musl@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/swc-linux-arm64-musl@npm:12.2.2"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/swc-linux-x64-gnu@npm:12.2.0"
+"@next/swc-linux-x64-gnu@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/swc-linux-x64-gnu@npm:12.2.2"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/swc-linux-x64-musl@npm:12.2.0"
+"@next/swc-linux-x64-musl@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/swc-linux-x64-musl@npm:12.2.2"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/swc-win32-arm64-msvc@npm:12.2.0"
+"@next/swc-win32-arm64-msvc@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/swc-win32-arm64-msvc@npm:12.2.2"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/swc-win32-ia32-msvc@npm:12.2.0"
+"@next/swc-win32-ia32-msvc@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/swc-win32-ia32-msvc@npm:12.2.2"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:12.2.0":
-  version: 12.2.0
-  resolution: "@next/swc-win32-x64-msvc@npm:12.2.0"
+"@next/swc-win32-x64-msvc@npm:12.2.2":
+  version: 12.2.2
+  resolution: "@next/swc-win32-x64-msvc@npm:12.2.2"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -2031,117 +2031,117 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@percy/cli-build@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@percy/cli-build@npm:1.5.1"
+"@percy/cli-build@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@percy/cli-build@npm:1.6.0"
   dependencies:
-    "@percy/cli-command": 1.5.1
-  checksum: 3bea9ca0c2a33292b0c28cbf08c768e4183b233cafedba825dfe252c8f94fd533be3304d83b795032031dd01d4d2db50dfcd57cd0d486cc5d33c3e5808f70862
+    "@percy/cli-command": 1.6.0
+  checksum: d43c9a856de4d391bc9905206bf66099edf26b325386fa2873a63ccfab6ea6c0825ba2206e8dd3a9e49c61eaf819d63c00a256589c968e6ebc93ba711c0a5439
   languageName: node
   linkType: hard
 
-"@percy/cli-command@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@percy/cli-command@npm:1.5.1"
+"@percy/cli-command@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@percy/cli-command@npm:1.6.0"
   dependencies:
-    "@percy/config": 1.5.1
-    "@percy/core": 1.5.1
-    "@percy/logger": 1.5.1
+    "@percy/config": 1.6.0
+    "@percy/core": 1.6.0
+    "@percy/logger": 1.6.0
   bin:
     percy-cli-readme: bin/readme.js
-  checksum: cc00ae54414458868808b2e8f182fd0abbf9f3c04d7b82986d71e7080fde47fddd710b3b8b9116bd66741d519e03f75e0e82a43f26c99a8863f59ad6766282d5
+  checksum: 22ed4bd8781f5cc7bc68309a8c24670ebc27c616c21f95de0b96074979d6d402b934deca26b5510f59d7f78cd72be156b6f93d0bcc033912dc1cab9c622acc3d
   languageName: node
   linkType: hard
 
-"@percy/cli-config@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@percy/cli-config@npm:1.5.1"
+"@percy/cli-config@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@percy/cli-config@npm:1.6.0"
   dependencies:
-    "@percy/cli-command": 1.5.1
-  checksum: 6979a71f8553d73ced7cb8767b687608299a73894f634adb7de3b082e77eb7e859b1728edd89f59bbfa31a00fc3c6bd83f7cacaee26dacd659f97439e562efc5
+    "@percy/cli-command": 1.6.0
+  checksum: 4f72ecc1c80241d48870e697967958d82fb3ac2f90cb9d3ff70217a5909cd1cab36e6b657f8dfd52d59fc9ccbf2b038983136bc5429421bec10a069abc20cc4f
   languageName: node
   linkType: hard
 
-"@percy/cli-exec@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@percy/cli-exec@npm:1.5.1"
+"@percy/cli-exec@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@percy/cli-exec@npm:1.6.0"
   dependencies:
-    "@percy/cli-command": 1.5.1
+    "@percy/cli-command": 1.6.0
     cross-spawn: ^7.0.3
     which: ^2.0.2
-  checksum: ff06cfbf8a7ea3a300e967f0f3980acfd14bab0a330c74cd007f4bc5535ce9ee2e9e9d25cfac37e9808aa7e79a976e0c51bbc6ecb9015598808029fb4c272c96
+  checksum: 5dc571c3b8b81335cee28a61b5a362c2a1d81360992ee5b806ec1f71ad00f3aec0ea41566e95aecc06d36acbc46b19218d60052e86dc595bf2f5639f03f1024e
   languageName: node
   linkType: hard
 
-"@percy/cli-snapshot@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@percy/cli-snapshot@npm:1.5.1"
+"@percy/cli-snapshot@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@percy/cli-snapshot@npm:1.6.0"
   dependencies:
-    "@percy/cli-command": 1.5.1
+    "@percy/cli-command": 1.6.0
     yaml: ^2.0.0
-  checksum: 763918530cef6e10263532d6afd39b21b34ab6f7f82e6dd0eb4ec885cc71ac8caf122ad94a72e34fcaf69c69e0a55f1d6b56c703b4a071e0e7dc3ab1bd1492e0
+  checksum: 5f766fd57d87782b25efdad0f696d9f43ebc0a5c11c1711fefaf5a2027639f73bafc4df5e1749a49f0a46cc754cc52b58ff0d4a7e71c4789c8128876c155fd7a
   languageName: node
   linkType: hard
 
-"@percy/cli-upload@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@percy/cli-upload@npm:1.5.1"
+"@percy/cli-upload@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@percy/cli-upload@npm:1.6.0"
   dependencies:
-    "@percy/cli-command": 1.5.1
+    "@percy/cli-command": 1.6.0
     fast-glob: ^3.2.11
     image-size: ^1.0.0
-  checksum: 43143ccae25bd7855bae9ac3a80df10cf0cdb7056e803b32f88d2c13a46d39bb790572ff69cd37b87c8be38fd755688d58594d69b6db0b6ed28b312cf8e976a8
+  checksum: 8d07f1156d388106d9d578afbaa01bdc6266cffe166395baa5223f9241750b7ff71e916c5b65922b800138aeee7e6932b356b9dd908addaf4cc18bc6688adc28
   languageName: node
   linkType: hard
 
-"@percy/cli@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@percy/cli@npm:1.5.1"
+"@percy/cli@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@percy/cli@npm:1.6.0"
   dependencies:
-    "@percy/cli-build": 1.5.1
-    "@percy/cli-command": 1.5.1
-    "@percy/cli-config": 1.5.1
-    "@percy/cli-exec": 1.5.1
-    "@percy/cli-snapshot": 1.5.1
-    "@percy/cli-upload": 1.5.1
-    "@percy/client": 1.5.1
-    "@percy/logger": 1.5.1
+    "@percy/cli-build": 1.6.0
+    "@percy/cli-command": 1.6.0
+    "@percy/cli-config": 1.6.0
+    "@percy/cli-exec": 1.6.0
+    "@percy/cli-snapshot": 1.6.0
+    "@percy/cli-upload": 1.6.0
+    "@percy/client": 1.6.0
+    "@percy/logger": 1.6.0
   bin:
     percy: bin/run.cjs
-  checksum: fb4d7def496af3b75a485634f918a3acb632dedb138a68bb4980f4fb6ead1454e88ad141f51fbbfc900db1de4fadf8d68c66734bf1e0a4852e353fe6d864293f
+  checksum: 4599ac3b17cb9622acedfa7ce083e430e8f333e16a7bf3b587206ad21a410f5a7d35c63830880faa75b667438cb6e680f4e2895ca057c8a3831bc00a46fde285
   languageName: node
   linkType: hard
 
-"@percy/client@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@percy/client@npm:1.5.1"
+"@percy/client@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@percy/client@npm:1.6.0"
   dependencies:
-    "@percy/env": 1.5.1
-    "@percy/logger": 1.5.1
-  checksum: 9b0fbb806e2c4a21666585be549b9799c00da9c9c316b2ddc52b286e2255971cf10bdc170d6803f7a586940182c1e0b2e38bd23b63f9b4fcab46e2931e5a1f58
+    "@percy/env": 1.6.0
+    "@percy/logger": 1.6.0
+  checksum: e35d86646d54c15aeeb63ce41e1699eb56600ec842808592ef8b1dc4df285701e71d0f503ee9cfaff9f5e2a8bf27c9fe87c55999756fbc62cec03950f675b2db
   languageName: node
   linkType: hard
 
-"@percy/config@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@percy/config@npm:1.5.1"
+"@percy/config@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@percy/config@npm:1.6.0"
   dependencies:
-    "@percy/logger": 1.5.1
+    "@percy/logger": 1.6.0
     ajv: ^8.6.2
     cosmiconfig: ^7.0.0
     yaml: ^2.0.0
-  checksum: 22e8adcd0e3edb43935c6b8fb02b8f84d32c5771dfd0637d88a9c2d190763fbc52eae906164179fda0953d823100fdb6dd3796cd4b3dccbfd49f78e50dc272ba
+  checksum: f9399ba2fac9eb0c71accb0f667c020979461e8e0753725718bcd665855bafb4631c6ba38fe8d7e40185a2a70de04f9eaf36f0e4782bc1dda4a57bf636fa8404
   languageName: node
   linkType: hard
 
-"@percy/core@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@percy/core@npm:1.5.1"
+"@percy/core@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@percy/core@npm:1.6.0"
   dependencies:
-    "@percy/client": 1.5.1
-    "@percy/config": 1.5.1
-    "@percy/dom": 1.5.1
-    "@percy/logger": 1.5.1
+    "@percy/client": 1.6.0
+    "@percy/config": 1.6.0
+    "@percy/dom": 1.6.0
+    "@percy/logger": 1.6.0
     content-disposition: ^0.5.4
     cross-spawn: ^7.0.3
     extract-zip: ^2.0.1
@@ -2151,7 +2151,7 @@ __metadata:
     path-to-regexp: ^6.2.0
     rimraf: ^3.0.2
     ws: ^8.0.0
-  checksum: 3cbc3153ba944a284fbcc018956b488f7cb31a1015071135d151c35597bbb16c12355ab2d86765561c3ca93febf8c55db556ae6ba33872ef01662023ded320bf
+  checksum: a69bf54f1437f81b963b8034097c327cf93ae3157451391a217862a4b4e435fdb968da973043b9320c70dba5ed6eaa51281ab197f8f7f7564293f36f5c253ccf
   languageName: node
   linkType: hard
 
@@ -2166,24 +2166,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@percy/dom@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@percy/dom@npm:1.5.1"
-  checksum: d725ba90066b117a9fe536dfc689d7a7de296637f2e7c3b5de98e740450b97c51213fcca1170cc083407c38d182990084989495e2b7d912e15a78d069d7c630d
+"@percy/dom@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@percy/dom@npm:1.6.0"
+  checksum: 71e3924f71580ae9db6a8e5871a5d6e225c172eb25f35a710f18bb9277a25fdd210a7307c5953a10f7c2628045db8322478ca42359f1e093a2244c8cb95552f1
   languageName: node
   linkType: hard
 
-"@percy/env@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@percy/env@npm:1.5.1"
-  checksum: 9f2b1546d9d7ac63228a33199b1902d992445ad1084b4ffa6428f8f1fb3dd919c857e3b56f9be7cd4ddf77c7414d76baa5e813fe711b95ec2ace494679dd41df
+"@percy/env@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@percy/env@npm:1.6.0"
+  checksum: 7174acc1e743850df2aed74c980be2e8619651ff9432c5231a08f02392c8e35425897561b4fccb07f2f48739a0c067668f19e97cd5229630aab2c57788a7f81c
   languageName: node
   linkType: hard
 
-"@percy/logger@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@percy/logger@npm:1.5.1"
-  checksum: 6d872510db0ad179a284b8835ec98b84022427007ff8bba0e9d586a070e83713f5737704b25b336802713e3c6debbdb6cf2ccf20b4bfd5d4fcf7c0e5248351fd
+"@percy/logger@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@percy/logger@npm:1.6.0"
+  checksum: 96eebc526a0d119a112fb63f83250ea294d1ca8a44c6eb879c3be7a05281cddee2c1facceaef9520dbe4df1480131c56a57e438e0ebf86fb0833015f083db198
   languageName: node
   linkType: hard
 
@@ -2858,9 +2858,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twilio-paste/button@npm:^10.0.1":
-  version: 10.0.1
-  resolution: "@twilio-paste/button@npm:10.0.1"
+"@twilio-paste/button@npm:^10.1.0":
+  version: 10.1.0
+  resolution: "@twilio-paste/button@npm:10.1.0"
   dependencies:
     deepmerge: 4.2.2
   peerDependencies:
@@ -2879,7 +2879,7 @@ __metadata:
     prop-types: ^15.7.2
     react: ^16.8.6 || ^17.0.2
     react-dom: ^16.8.6 || ^17.0.2
-  checksum: 45300cd1c33227769b458910a55224e95d1b3358cba75f2fa7e9e3125859f1d65cebbd400ba79c1001d7cb353fc1d0575dac1891ccb5bf92bda667ba6d2e4911
+  checksum: c971baa7da2918d13dbde04f13ae306e21920961ab14496692edc38a4f36429667eef16414104b10d16d015c0347a9b1fb2ffd22d0b24711ecff7d9cf19afe19
   languageName: node
   linkType: hard
 
@@ -2900,19 +2900,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twilio-paste/chat-log@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@twilio-paste/chat-log@npm:1.0.1"
+"@twilio-paste/chat-log@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@twilio-paste/chat-log@npm:1.1.0"
   peerDependencies:
+    "@twilio-paste/anchor": ^8.0.0
     "@twilio-paste/box": ^6.0.0
+    "@twilio-paste/button": ^10.0.0
     "@twilio-paste/customization": ^4.0.0
     "@twilio-paste/design-tokens": ^7.2.0
+    "@twilio-paste/icons": ^8.0.0
+    "@twilio-paste/media-object": ^6.0.0
+    "@twilio-paste/screen-reader-only": ^9.0.0
     "@twilio-paste/style-props": ^5.0.0
+    "@twilio-paste/text": ^6.0.0
     "@twilio-paste/theme": ^7.0.0
+    "@twilio-paste/truncate": ^10.0.0
     prop-types: ^15.7.2
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: 268fb1a121a77a7dd23314bcaaa2527b28c1ffdec38c90ff2bb151f5e243a5a95dae0c41e7fa438a9415da37a0e4df45a509dd37e3971ea57c152928a2455f54
+  checksum: 3fea66c17519b8d5de6a9c70c09bd54bb3ec05b0a0da55379d121c0d802ede94731d37002b77fb0f111b8b4513885083ec26437797c370c9ccbf58d1192d3200
   languageName: node
   linkType: hard
 
@@ -3012,9 +3019,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twilio-paste/core@npm:14.0.0":
-  version: 14.0.0
-  resolution: "@twilio-paste/core@npm:14.0.0"
+"@twilio-paste/core@npm:14.1.0":
+  version: 14.1.0
+  resolution: "@twilio-paste/core@npm:14.1.0"
   dependencies:
     "@twilio-paste/alert": ^10.0.1
     "@twilio-paste/alert-dialog": ^4.0.1
@@ -3026,9 +3033,9 @@ __metadata:
     "@twilio-paste/base-radio-checkbox": ^9.0.1
     "@twilio-paste/box": ^6.0.1
     "@twilio-paste/breadcrumb": ^7.0.1
-    "@twilio-paste/button": ^10.0.1
+    "@twilio-paste/button": ^10.1.0
     "@twilio-paste/card": ^5.0.1
-    "@twilio-paste/chat-log": ^1.0.1
+    "@twilio-paste/chat-log": ^1.1.0
     "@twilio-paste/checkbox": ^9.0.1
     "@twilio-paste/clipboard-copy-library": ^1.0.4
     "@twilio-paste/color-contrast-utils": ^2.0.5
@@ -3041,7 +3048,7 @@ __metadata:
     "@twilio-paste/design-tokens": ^7.3.0
     "@twilio-paste/disclosure": ^8.0.2
     "@twilio-paste/disclosure-primitive": ^0.3.9
-    "@twilio-paste/display-pill-group": ^4.0.1
+    "@twilio-paste/display-pill-group": ^4.0.2
     "@twilio-paste/dropdown-library": ^1.1.5
     "@twilio-paste/flex": ^4.0.1
     "@twilio-paste/form-pill-group": ^4.0.2
@@ -3079,12 +3086,12 @@ __metadata:
     "@twilio-paste/tabs-primitive": ^0.2.8
     "@twilio-paste/text": ^6.0.1
     "@twilio-paste/textarea": ^6.0.0
-    "@twilio-paste/theme": ^7.0.1
+    "@twilio-paste/theme": ^7.0.2
     "@twilio-paste/time-picker": ^2.0.1
     "@twilio-paste/toast": ^8.0.1
     "@twilio-paste/tooltip": ^7.0.2
     "@twilio-paste/tooltip-primitive": ^0.2.9
-    "@twilio-paste/truncate": ^10.0.1
+    "@twilio-paste/truncate": ^10.0.2
     "@twilio-paste/types": ^3.1.8
     "@twilio-paste/uid-library": ^0.2.5
     "@twilio-paste/utils": ^1.1.5
@@ -3093,7 +3100,7 @@ __metadata:
     prop-types: ^15.7.2
     react: ^16.8.6 || ^17.0.2
     react-dom: ^16.8.6 || ^17.0.2
-  checksum: b9ec75c515943ac44315f32977394db71b0f8644496f9b5b4bec5a0a6acaace9967833536a5423f1b1d37af0cd4623fca9230211c687b8b7663b7e6b4eb94fb2
+  checksum: 13d97fa04667edf2719dc537b0dd8af623149891d303161a1142a40faa6e1873668e9556e69c870ef7f2160eac1de732f8b517eda1ce094d67848f2ab10ba59c
   languageName: node
   linkType: hard
 
@@ -3229,9 +3236,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twilio-paste/display-pill-group@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "@twilio-paste/display-pill-group@npm:4.0.1"
+"@twilio-paste/display-pill-group@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "@twilio-paste/display-pill-group@npm:4.0.2"
   peerDependencies:
     "@twilio-paste/anchor": ^8.0.0
     "@twilio-paste/animation-library": ^0.3.2
@@ -3247,7 +3254,7 @@ __metadata:
     prop-types: ^15.7.2
     react: ^16.8.6 || ^17.0.2
     react-dom: ^16.8.6 || ^17.0.2
-  checksum: 01700c637d935d84c139ee108a399741a3dbbb93f0f1549c253a34c1e17eb9a537cd9459d083b492d68939a4cc791ed727d75230ac7207d3556cd0e1793d5ce6
+  checksum: cf87c22da67561afd7b98620b860b9798087d360c3b9f4845b6130cfc2e00e93812f619157097490ec255a39148ddb244dd25db088ccd5b45a3479ff323b9352
   languageName: node
   linkType: hard
 
@@ -3356,9 +3363,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twilio-paste/icons@npm:8.0.2":
-  version: 8.0.2
-  resolution: "@twilio-paste/icons@npm:8.0.2"
+"@twilio-paste/icons@npm:8.1.0":
+  version: 8.1.0
+  resolution: "@twilio-paste/icons@npm:8.1.0"
   peerDependencies:
     "@twilio-paste/box": ^6.0.0
     "@twilio-paste/design-tokens": ^7.0.0
@@ -3370,7 +3377,7 @@ __metadata:
     prop-types: ^15.7.2
     react: ^16.8.6 || ^17.0.2
     react-dom: ^16.8.6 || ^17.0.2
-  checksum: b2f3bfc2089d4ba6ed65e1db92df717e2a85586c39c043d5c4937f001bb5cee3367e7f8f3655502537080030eb0a1b26c843ea7a33b1210b2f3512f845190d35
+  checksum: d92bdf567fc159dfd7f5c343f2740778b595dc82109cb96ae7119146cfb2bc9c6058053c37d2ead2477b58aa4c57f8446a60b10161cda6baf66d0348f52a265d
   languageName: node
   linkType: hard
 
@@ -3944,9 +3951,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twilio-paste/theme@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "@twilio-paste/theme@npm:7.0.1"
+"@twilio-paste/theme@npm:^7.0.2":
+  version: 7.0.2
+  resolution: "@twilio-paste/theme@npm:7.0.2"
   peerDependencies:
     "@twilio-paste/animation-library": ^0.3.1
     "@twilio-paste/color-contrast-utils": ^2.0.0
@@ -3955,7 +3962,7 @@ __metadata:
     "@twilio-paste/types": ^3.1.1
     react: ^16.8.6 || ^17.0.2
     react-dom: ^16.8.6 || ^17.0.2
-  checksum: 7a1b069673ebb94ee2befd3866d602ba7073f33c158301b16ee1ecd5f0872c21f7288bf38031661289febbb1bf82d4b8a2595030ae447b6ecd7013a8f4c5b97c
+  checksum: 03e22963e97d402dd71fbc9e240c92577d65e92dda987a6951ad671873ae53b6f1475e0b6648ab0921030f880ff587d2e63766b2c5d57af3fbe536129422b7a9
   languageName: node
   linkType: hard
 
@@ -4040,9 +4047,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twilio-paste/truncate@npm:^10.0.1":
-  version: 10.0.1
-  resolution: "@twilio-paste/truncate@npm:10.0.1"
+"@twilio-paste/truncate@npm:^10.0.2":
+  version: 10.0.2
+  resolution: "@twilio-paste/truncate@npm:10.0.2"
   peerDependencies:
     "@twilio-paste/box": ^6.0.0
     "@twilio-paste/design-tokens": ^7.0.0
@@ -4054,7 +4061,7 @@ __metadata:
     prop-types: ^15.7.2
     react: ^16.8.6 || ^17.0.2
     react-dom: ^16.8.6 || ^17.0.2
-  checksum: a1fa2190b998894e14c6626edf31fcf337fcd3d5ddd929feb4ba01b4bf2a431c8cf7e9f5d9b16eabddc6e26bcbbf299829fe75e7482cd84b3c1028c0a0b63061
+  checksum: 90465a4dbfa8783c24113f0279c3fa34f8b1d16e578386296e532039141edea1d808a004f8732859d8b756f998966c6bcc41117012719eda7a06a9b23d6e3d5e
   languageName: node
   linkType: hard
 
@@ -4352,12 +4359,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.0.5, @types/react-dom@npm:^18.0.0":
-  version: 18.0.5
-  resolution: "@types/react-dom@npm:18.0.5"
+"@types/react-dom@npm:18.0.6":
+  version: 18.0.6
+  resolution: "@types/react-dom@npm:18.0.6"
   dependencies:
     "@types/react": "*"
-  checksum: cd48b81950f499b52a3f0c08261f00046f9b7c96699fa249c9664e257e820daf6ecac815cd1028cebc9d105094adc39d047d1efd79214394b8b2d515574c0787
+  checksum: db571047af1a567631758700b9f7d143e566df939cfe5fbf7535347cc0c726a1cdbb5e3f8566d076e54cf708b6c1166689de194a9ba09ee35efc9e1d45911685
   languageName: node
   linkType: hard
 
@@ -4367,6 +4374,15 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: 4d5730dffbef86c887cecad7e3cecda424ce6a64d0b5441c63b5b015d48219868660a2bb1aa15e897e565ad8867fa6b885d4358b04e1c4e589ba4c07c3fda55c
+  languageName: node
+  linkType: hard
+
+"@types/react-dom@npm:^18.0.0":
+  version: 18.0.5
+  resolution: "@types/react-dom@npm:18.0.5"
+  dependencies:
+    "@types/react": "*"
+  checksum: cd48b81950f499b52a3f0c08261f00046f9b7c96699fa249c9664e257e820daf6ecac815cd1028cebc9d105094adc39d047d1efd79214394b8b2d515574c0787
   languageName: node
   linkType: hard
 
@@ -5011,16 +5027,16 @@ __metadata:
     "@jest/globals": 28.1.2
     "@netlify/plugin-lighthouse": 2.1.3
     "@netlify/plugin-nextjs": 4.11.1
-    "@next/eslint-plugin-next": 12.2.0
-    "@percy/cli": 1.5.1
+    "@next/eslint-plugin-next": 12.2.2
+    "@percy/cli": 1.6.0
     "@percy/cypress": 3.1.2
     "@sitaggart/eslint-config-ts": 0.6.14
     "@sitaggart/prettier-config": 0.3.13
     "@testing-library/jest-dom": latest
     "@testing-library/react": latest
     "@testing-library/user-event": latest
-    "@twilio-paste/core": 14.0.0
-    "@twilio-paste/icons": 8.0.2
+    "@twilio-paste/core": 14.1.0
+    "@twilio-paste/icons": 8.1.0
     "@types/color": 3.0.3
     "@types/cors": 2.8.12
     "@types/jest": 28.1.4
@@ -5028,7 +5044,7 @@ __metadata:
     "@types/node": 17.0.45
     "@types/query-string": 6.3.0
     "@types/react": 18.0.14
-    "@types/react-dom": 18.0.5
+    "@types/react-dom": 18.0.6
     babel-jest: 28.1.2
     bundlewatch: 0.3.3
     color: 4.2.3
@@ -5036,14 +5052,14 @@ __metadata:
     cors: 2.8.5
     cypress: 10.3.0
     eslint: 8.19.0
-    eslint-config-next: 12.2.0
+    eslint-config-next: 12.2.2
     eslint-formatter-codeframe: 7.32.1
     husky: 8.0.1
     jest: 28.1.2
     jest-environment-jsdom: 28.1.2
     lodash: 4.17.21
     netlify-plugin-cache-nextjs: 1.6.1
-    next: 12.2.0
+    next: 12.2.2
     normalize.css: 8.0.1
     pinst: 3.0.0
     polished: 4.2.2
@@ -7509,11 +7525,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:12.2.0":
-  version: 12.2.0
-  resolution: "eslint-config-next@npm:12.2.0"
+"eslint-config-next@npm:12.2.2":
+  version: 12.2.2
+  resolution: "eslint-config-next@npm:12.2.2"
   dependencies:
-    "@next/eslint-plugin-next": 12.2.0
+    "@next/eslint-plugin-next": 12.2.2
     "@rushstack/eslint-patch": ^1.1.3
     "@typescript-eslint/parser": ^5.21.0
     eslint-import-resolver-node: ^0.3.6
@@ -7528,7 +7544,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 014d9a9166ed1d6facc8d67d25bb613d1ceaa0d407a83ee3a6b180fe134bf49ffc6e109b2d3c70b1afeda883ebc45bb0aa1ab079fd9e97344e257321ab4209f6
+  checksum: 9a472ca1909522e47fd4a460b8d6d0789deaf68f6c8fd69e96353b9c12b537c0185f3ada28990c8542e019ac236618ea22f991e4b8240c4b49c51d0ca226d829
   languageName: node
   linkType: hard
 
@@ -11938,24 +11954,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:12.2.0":
-  version: 12.2.0
-  resolution: "next@npm:12.2.0"
+"next@npm:12.2.2":
+  version: 12.2.2
+  resolution: "next@npm:12.2.2"
   dependencies:
-    "@next/env": 12.2.0
-    "@next/swc-android-arm-eabi": 12.2.0
-    "@next/swc-android-arm64": 12.2.0
-    "@next/swc-darwin-arm64": 12.2.0
-    "@next/swc-darwin-x64": 12.2.0
-    "@next/swc-freebsd-x64": 12.2.0
-    "@next/swc-linux-arm-gnueabihf": 12.2.0
-    "@next/swc-linux-arm64-gnu": 12.2.0
-    "@next/swc-linux-arm64-musl": 12.2.0
-    "@next/swc-linux-x64-gnu": 12.2.0
-    "@next/swc-linux-x64-musl": 12.2.0
-    "@next/swc-win32-arm64-msvc": 12.2.0
-    "@next/swc-win32-ia32-msvc": 12.2.0
-    "@next/swc-win32-x64-msvc": 12.2.0
+    "@next/env": 12.2.2
+    "@next/swc-android-arm-eabi": 12.2.2
+    "@next/swc-android-arm64": 12.2.2
+    "@next/swc-darwin-arm64": 12.2.2
+    "@next/swc-darwin-x64": 12.2.2
+    "@next/swc-freebsd-x64": 12.2.2
+    "@next/swc-linux-arm-gnueabihf": 12.2.2
+    "@next/swc-linux-arm64-gnu": 12.2.2
+    "@next/swc-linux-arm64-musl": 12.2.2
+    "@next/swc-linux-x64-gnu": 12.2.2
+    "@next/swc-linux-x64-musl": 12.2.2
+    "@next/swc-win32-arm64-msvc": 12.2.2
+    "@next/swc-win32-ia32-msvc": 12.2.2
+    "@next/swc-win32-x64-msvc": 12.2.2
     "@swc/helpers": 0.4.2
     caniuse-lite: ^1.0.30001332
     postcss: 8.4.5
@@ -12003,7 +12019,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 38456c33935122ac1581367e4982034be23269039a8470a66443d710334336f8f3fb587f25d172d138d84cf18c01d3a76627fb610c2e2e57bd1692277c23fa2b
+  checksum: fb8ced6fb551c60c71a0fb8f443f0a15cd12aed0b1a21fbaba132c47863cccf7517dce8074b1572ba1f20c974d6e5329963a9c4fb89afe88fe22eb1505ba0db8
   languageName: node
   linkType: hard
 
