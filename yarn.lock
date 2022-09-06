@@ -3826,21 +3826,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twilio-paste/icons@npm:8.1.0":
-  version: 8.1.0
-  resolution: "@twilio-paste/icons@npm:8.1.0"
+"@twilio-paste/icons@npm:9.0.0":
+  version: 9.0.0
+  resolution: "@twilio-paste/icons@npm:9.0.0"
   peerDependencies:
-    "@twilio-paste/box": ^6.0.0
-    "@twilio-paste/design-tokens": ^7.0.0
-    "@twilio-paste/style-props": ^5.0.0
+    "@twilio-paste/box": ^7.0.0
+    "@twilio-paste/design-tokens": ^8.0.0
+    "@twilio-paste/style-props": ^6.0.0
     "@twilio-paste/styling-library": ^1.0.0
-    "@twilio-paste/theme": ^7.0.0
+    "@twilio-paste/theme": ^8.0.0
     "@twilio-paste/types": ^3.1.1
     "@twilio-paste/uid-library": ^0.2.1
     prop-types: ^15.7.2
     react: ^16.8.6 || ^17.0.2
     react-dom: ^16.8.6 || ^17.0.2
-  checksum: d92bdf567fc159dfd7f5c343f2740778b595dc82109cb96ae7119146cfb2bc9c6058053c37d2ead2477b58aa4c57f8446a60b10161cda6baf66d0348f52a265d
+  checksum: 7ecbafec1759b9403ec85dbfee9882f68df7b8dd268b88d3569a794b6e9a5291a43e32f984ab1dc90563dae1ae94966315b461b0e91944e009315eeb3adabda9
   languageName: node
   linkType: hard
 
@@ -5508,7 +5508,7 @@ __metadata:
     "@testing-library/react": latest
     "@testing-library/user-event": latest
     "@twilio-paste/core": 15.1.0
-    "@twilio-paste/icons": 8.1.0
+    "@twilio-paste/icons": 9.0.0
     "@types/color": 3.0.3
     "@types/cors": 2.8.12
     "@types/jest": 29.0.0

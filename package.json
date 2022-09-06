@@ -37,7 +37,7 @@
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",
     "@twilio-paste/core": "15.1.0",
-    "@twilio-paste/icons": "8.1.0",
+    "@twilio-paste/icons": "9.0.0",
     "color": "4.2.3",
     "color-combos": "1.0.17",
     "cors": "2.8.5",
