@@ -33,15 +33,13 @@ const AreYouSerious: React.FC<AreYouSeriousProps> = ({
 const Results: React.FC = (): ReactElement => {
   const { siteData } = useSiteData();
   const colorInfo = siteData.colorCombos[0].combinations[0];
-  const contrast = colorInfo.contrast ? colorInfo.contrast : 0;
-  const accessibility = colorInfo.accessibility
-    ? colorInfo.accessibility
-    : {
-        aa: false,
-        aaLarge: false,
-        aaa: false,
-        aaaLarge: false,
-      };
+  const contrast = colorInfo.contrast || 0;
+  const accessibility = colorInfo.accessibility || {
+    aa: false,
+    aaLarge: false,
+    aaa: false,
+    aaaLarge: false,
+  };
   const ratio = Number.parseFloat(contrast.toFixed(2));
   const colorRatings = colorRating(accessibility);
   const areYouSerious = ratio < 1.3 ? true : undefined;
