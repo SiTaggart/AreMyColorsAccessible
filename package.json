@@ -58,7 +58,7 @@
     "@emotion/eslint-plugin": "11.10.0",
     "@emotion/jest": "11.10.0",
     "@jest/globals": "29.1.2",
-    "@netlify/plugin-lighthouse": "3.7.0",
+    "@netlify/plugin-lighthouse": "4.0.1",
     "@netlify/plugin-nextjs": "4.24.0",
     "@next/eslint-plugin-next": "12.3.1",
     "@percy/cli": "1.10.4",
