@@ -46,12 +46,15 @@ interface StyledColorCardPillProps {
 }
 const getStatusStyles = (props: StyledColorCardPillProps): CSSObject => {
   switch (props.status) {
-    case 'success':
+    case 'success': {
       return { backgroundColor: '#CFFCDA', color: '#004215' };
-    case 'error':
+    }
+    case 'error': {
       return { backgroundColor: '#FBDBDB', color: '#C52020' };
-    default:
+    }
+    default: {
       return { backgroundColor: '#F7F8F8', color: '#666D70' };
+    }
   }
 };
 const StyledColorCardPill = styled.span<StyledColorCardPillProps>`

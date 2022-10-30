@@ -10,7 +10,7 @@ interface HeadingProps {
 const getHeadingStyleVariant = ({ variant }: HeadingProps): SerializedStyles => {
   let variantStyles = css``;
   switch (variant) {
-    case '10':
+    case '10': {
       variantStyles = css`
         font-size: 2.4rem;
         text-align: center;
@@ -20,9 +20,11 @@ const getHeadingStyleVariant = ({ variant }: HeadingProps): SerializedStyles => 
         }
       `;
       break;
-    default:
+    }
+    default: {
       variantStyles = css``;
       break;
+    }
   }
   return variantStyles;
 };
