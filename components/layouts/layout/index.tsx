@@ -10,24 +10,28 @@ interface LayoutProps {
 const variantSize = ({ variant }: LayoutProps): SerializedStyles => {
   let styles = css``;
   switch (variant) {
-    case 'full':
+    case 'full': {
       styles = css`
         max-width: 95%;
       `;
       break;
-    case 'large':
+    }
+    case 'large': {
       styles = css`
         max-width: 1200px;
       `;
       break;
-    case 'small':
+    }
+    case 'small': {
       styles = css`
         max-width: 1150px;
         padding: 0 1rem;
       `;
       break;
-    default:
+    }
+    default: {
       break;
+    }
   }
   return styles;
 };

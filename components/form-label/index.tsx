@@ -13,15 +13,18 @@ interface StyledLabelProps {
 const getFontSize = (props: StyledLabelProps): string => {
   let fontSize = '';
   switch (props.variant) {
-    case 'large':
+    case 'large': {
       fontSize = '2.5rem';
       break;
-    case 'compact':
+    }
+    case 'compact': {
       fontSize = '1rem';
       break;
-    default:
+    }
+    default: {
       fontSize = '1.2rem';
       break;
+    }
   }
   return fontSize;
 };
