@@ -41,7 +41,7 @@
     "color": "4.2.3",
     "color-combos": "1.0.17",
     "cors": "2.8.5",
-    "cypress": "10.11.0",
+    "cypress": "11.1.0",
     "lodash": "4.17.21",
     "next": "12.3.3",
     "normalize.css": "8.0.1",
