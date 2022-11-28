@@ -2247,9 +2247,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/plugin-nextjs@npm:4.29.1":
-  version: 4.29.1
-  resolution: "@netlify/plugin-nextjs@npm:4.29.1"
+"@netlify/plugin-nextjs@npm:4.29.2":
+  version: 4.29.2
+  resolution: "@netlify/plugin-nextjs@npm:4.29.2"
   dependencies:
     "@netlify/esbuild": 0.14.39
     "@netlify/functions": ^1.3.0
@@ -2273,113 +2273,113 @@ __metadata:
     semver: ^7.3.5
     slash: ^3.0.0
     tiny-glob: ^0.2.9
-  checksum: 5554c48ec7b157237f22aa1bcfaa7aacff02f2301c782093d988d3d06ecd4c025ffcb5b3b6e296ac2e34312394c2235e4fd734cdf8fa8622388ebc7606ec31b2
+  checksum: cc1dc557f23418d305d118d083f88184ad6a8325ef06f5346f2101f8d4a8a02e1ec4a371222da6157ee583fb442052d85d71d134e84a65e904e1c4976801385c
   languageName: node
   linkType: hard
 
-"@next/env@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/env@npm:12.3.3"
-  checksum: 80c50b1d63c8459ce5579c1dd46775c3e06d16b0d33b2ba6054df85f9280eddd0fd45e22ccfe0c3d6f4c286a955f2982da36461d54cdfb4f6f546398518d4dae
+"@next/env@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/env@npm:12.3.4"
+  checksum: daa3fc11efd1344c503eab41311a0e503ba7fd08607eeb3dc571036a6211eb37959cc4ed48b71dcc411cc214e7623ffd02411080aad3e09dc6a1192d5b256e60
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/eslint-plugin-next@npm:12.3.3"
+"@next/eslint-plugin-next@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/eslint-plugin-next@npm:12.3.4"
   dependencies:
     glob: 7.1.7
-  checksum: 832814ae188365046ae7d57ed9f11b1fc5e205ed9996f88b4a4cfcb67f707ce5f3b5b17400fef63f53b6c51546f7e0d8f0c84ebbca05ced0eabe7f173857ade2
+  checksum: e4ae97062f3efe8f70904cf0da296ab501a2924423273352d01b18d8ffff1eb2e9a65c47dd6f9cfa0d696eada272486a3f519b2786918d0a9ab735b93f5ce4b3
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm-eabi@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/swc-android-arm-eabi@npm:12.3.3"
+"@next/swc-android-arm-eabi@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-android-arm-eabi@npm:12.3.4"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm64@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/swc-android-arm64@npm:12.3.3"
+"@next/swc-android-arm64@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-android-arm64@npm:12.3.4"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/swc-darwin-arm64@npm:12.3.3"
+"@next/swc-darwin-arm64@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-darwin-arm64@npm:12.3.4"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/swc-darwin-x64@npm:12.3.3"
+"@next/swc-darwin-x64@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-darwin-x64@npm:12.3.4"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-freebsd-x64@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/swc-freebsd-x64@npm:12.3.3"
+"@next/swc-freebsd-x64@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-freebsd-x64@npm:12.3.4"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm-gnueabihf@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.3.3"
+"@next/swc-linux-arm-gnueabihf@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.3.4"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/swc-linux-arm64-gnu@npm:12.3.3"
+"@next/swc-linux-arm64-gnu@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-linux-arm64-gnu@npm:12.3.4"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/swc-linux-arm64-musl@npm:12.3.3"
+"@next/swc-linux-arm64-musl@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-linux-arm64-musl@npm:12.3.4"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/swc-linux-x64-gnu@npm:12.3.3"
+"@next/swc-linux-x64-gnu@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-linux-x64-gnu@npm:12.3.4"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/swc-linux-x64-musl@npm:12.3.3"
+"@next/swc-linux-x64-musl@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-linux-x64-musl@npm:12.3.4"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/swc-win32-arm64-msvc@npm:12.3.3"
+"@next/swc-win32-arm64-msvc@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-win32-arm64-msvc@npm:12.3.4"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/swc-win32-ia32-msvc@npm:12.3.3"
+"@next/swc-win32-ia32-msvc@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-win32-ia32-msvc@npm:12.3.4"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:12.3.3":
-  version: 12.3.3
-  resolution: "@next/swc-win32-x64-msvc@npm:12.3.3"
+"@next/swc-win32-x64-msvc@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-win32-x64-msvc@npm:12.3.4"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -2438,128 +2438,128 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@percy/cli-app@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/cli-app@npm:1.14.0"
+"@percy/cli-app@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/cli-app@npm:1.16.0"
   dependencies:
-    "@percy/cli-command": 1.14.0
-    "@percy/cli-exec": 1.14.0
-  checksum: 137631311b894b5f3c1b995500f8694889618bb89d7a10a91b003504df7007af78e96c47df8f3005b0fa86d3c43b52046208a5a4ccfabf4225cdd3409fa8acf4
+    "@percy/cli-command": 1.16.0
+    "@percy/cli-exec": 1.16.0
+  checksum: 90566bf5ecc7ab113f068ec3c097d76d943f24933b52f06f4e47716eb897cbf04b0330594c6387cb1699896e2f473c8d3dd54576a26e1cdd2d7c8caf9cb676fb
   languageName: node
   linkType: hard
 
-"@percy/cli-build@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/cli-build@npm:1.14.0"
+"@percy/cli-build@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/cli-build@npm:1.16.0"
   dependencies:
-    "@percy/cli-command": 1.14.0
-  checksum: a6bf4c054fabeba869d0c8e3ab0438578f2db7a70da5384c9d12e2dce9258a3d8fa03f2ac34ef4738696df6d9d2bb26d4a3e678da4cd7cb87a26c775b11feb4a
+    "@percy/cli-command": 1.16.0
+  checksum: 6ef171552ff61a687d91f4f7a2a190168e8ecb167ea5e7f1488510f0d9b570bb692b59bd7184664cd3155a409bc7cff655d2a124b166eef88c0469d12184b9bc
   languageName: node
   linkType: hard
 
-"@percy/cli-command@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/cli-command@npm:1.14.0"
+"@percy/cli-command@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/cli-command@npm:1.16.0"
   dependencies:
-    "@percy/config": 1.14.0
-    "@percy/core": 1.14.0
-    "@percy/logger": 1.14.0
+    "@percy/config": 1.16.0
+    "@percy/core": 1.16.0
+    "@percy/logger": 1.16.0
   bin:
     percy-cli-readme: bin/readme.js
-  checksum: 7e3a338c6807d22d435c30ba53f7ce4d174127894d5732d837fa7d9fe676d65bb9ca5577ad90a3563f13e1c5808f42ccc3a8c243169afe75e739c005f12427ef
+  checksum: 06833a9b31578e1985f284b072d0b98964b940c46d83ffa6a9bec4feec753521422b562e9c5f6fe941185567bb6fb3718a4559aa34eca6eeed931e083ad778bd
   languageName: node
   linkType: hard
 
-"@percy/cli-config@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/cli-config@npm:1.14.0"
+"@percy/cli-config@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/cli-config@npm:1.16.0"
   dependencies:
-    "@percy/cli-command": 1.14.0
-  checksum: 7d83c4c7a73115cdd95223e029e50c1889b2a3d307f2a6dfe6f1ff41c9d966143c742c5a1b01ad89e01f069365672b10ca122eb7b7e4263963d918a3ed7c455d
+    "@percy/cli-command": 1.16.0
+  checksum: 187144b81d21af8724f9cfb33995b6ad9736d4fd50987c9223e616766efd44db31cb18e618e387d085e8281e893e5979c200dd0965b2bcd67b78eed26743213f
   languageName: node
   linkType: hard
 
-"@percy/cli-exec@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/cli-exec@npm:1.14.0"
+"@percy/cli-exec@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/cli-exec@npm:1.16.0"
   dependencies:
-    "@percy/cli-command": 1.14.0
+    "@percy/cli-command": 1.16.0
     cross-spawn: ^7.0.3
     which: ^2.0.2
-  checksum: 96b40176daf8ff2974b2b5c2bc385df8911cff60c7fc8ee1047271587ede7a0eae5572a2482be442ad5f773aa51b2704f4a21f75a397ba7595b47a79648fabef
+  checksum: 78b64f36683db44859a0a82bd49984adeb5fd7aaa5105bed4574cc4f7a3a6fcc88bb05c823e1736bf505cd73c04771c7908dcc938f42cfc23bde9ffec4d54172
   languageName: node
   linkType: hard
 
-"@percy/cli-snapshot@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/cli-snapshot@npm:1.14.0"
+"@percy/cli-snapshot@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/cli-snapshot@npm:1.16.0"
   dependencies:
-    "@percy/cli-command": 1.14.0
+    "@percy/cli-command": 1.16.0
     yaml: ^2.0.0
-  checksum: e043c48687844e65ba037b493ca3a11d0f54363b81953d6ca7b7367f3be732e5843e40420caea40a5e74c1a6e88621fa66883c90d466a328bb98e99ddddab72c
+  checksum: 87461a6036d4e15299bea7cb6c4b64564eace7385eae48e708ed75322ed3fdd2b179a42437e675a025ee0191c943655b718a81d48a3fe5789f71fba0c88f183b
   languageName: node
   linkType: hard
 
-"@percy/cli-upload@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/cli-upload@npm:1.14.0"
+"@percy/cli-upload@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/cli-upload@npm:1.16.0"
   dependencies:
-    "@percy/cli-command": 1.14.0
+    "@percy/cli-command": 1.16.0
     fast-glob: ^3.2.11
     image-size: ^1.0.0
-  checksum: a0b95ee3ad4d41a9c38c6d3d0d7291475929b557084a26155327cf63ee2c413409cb667b06b9a24fadcda8f28b6cf70afcce12db624f4630f0d8665029ac013d
+  checksum: 8bab3fea7583abdc42403034e86e2d52821099749df0452751f24857ededf801ff7a69adf752a807e0d913e51d7503ad05608da7056cf77f2038a4f97bfb4232
   languageName: node
   linkType: hard
 
-"@percy/cli@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/cli@npm:1.14.0"
+"@percy/cli@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/cli@npm:1.16.0"
   dependencies:
-    "@percy/cli-app": 1.14.0
-    "@percy/cli-build": 1.14.0
-    "@percy/cli-command": 1.14.0
-    "@percy/cli-config": 1.14.0
-    "@percy/cli-exec": 1.14.0
-    "@percy/cli-snapshot": 1.14.0
-    "@percy/cli-upload": 1.14.0
-    "@percy/client": 1.14.0
-    "@percy/logger": 1.14.0
+    "@percy/cli-app": 1.16.0
+    "@percy/cli-build": 1.16.0
+    "@percy/cli-command": 1.16.0
+    "@percy/cli-config": 1.16.0
+    "@percy/cli-exec": 1.16.0
+    "@percy/cli-snapshot": 1.16.0
+    "@percy/cli-upload": 1.16.0
+    "@percy/client": 1.16.0
+    "@percy/logger": 1.16.0
   bin:
     percy: bin/run.cjs
-  checksum: 7641f768125cae1de1974f09cc1be77813f01aab5c7900b92269adb559fd4ca652504786cf2244124c389b6111fcac899208d58ab0a601d6f77dd98066867143
+  checksum: fb4131670028399d0a4d76d1f6e35ac4691683a7d77ed8d69206ac6ca1e95272df2a5349c72fa4ff96506f8d0e0b74dd94cc1a5ea5fcd97043dba7d2d305772f
   languageName: node
   linkType: hard
 
-"@percy/client@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/client@npm:1.14.0"
+"@percy/client@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/client@npm:1.16.0"
   dependencies:
-    "@percy/env": 1.14.0
-    "@percy/logger": 1.14.0
-  checksum: d4a7e87e18a89656b4506719dec9615f12f8a8e64922c6db4b4abcb700a862477a2117165057969447adafcf600588893d28226c2e89775e26ab41afee7aab4d
+    "@percy/env": 1.16.0
+    "@percy/logger": 1.16.0
+  checksum: c42ffd61cbd491101bed62d7c0f1dafd4ca40d8c8601cf6dacfcc8cabf626bb828d0ff2eefc9aa77454dd3b0bc79152f2f0895000a5c7d461c69280f68584b58
   languageName: node
   linkType: hard
 
-"@percy/config@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/config@npm:1.14.0"
+"@percy/config@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/config@npm:1.16.0"
   dependencies:
-    "@percy/logger": 1.14.0
+    "@percy/logger": 1.16.0
     ajv: ^8.6.2
     cosmiconfig: ^7.0.0
     yaml: ^2.0.0
-  checksum: 614066dca31532cf0e687f20b2b1d5c873f0d2b9ecadefaae2aae799b5e0aa7f19437efe6f2deff4ee29d3eeb1c2b8136982366cc0f3442818603fb9ee65605f
+  checksum: 652000a556c593a3ed539e21d094cca918342af899ea919b2722d50e5a1a51567637ed0618dc95a1f7f8e465dc5a68d69b9be02efc72f622ee37845d82b25599
   languageName: node
   linkType: hard
 
-"@percy/core@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/core@npm:1.14.0"
+"@percy/core@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/core@npm:1.16.0"
   dependencies:
-    "@percy/client": 1.14.0
-    "@percy/config": 1.14.0
-    "@percy/dom": 1.14.0
-    "@percy/logger": 1.14.0
+    "@percy/client": 1.16.0
+    "@percy/config": 1.16.0
+    "@percy/dom": 1.16.0
+    "@percy/logger": 1.16.0
     content-disposition: ^0.5.4
     cross-spawn: ^7.0.3
     extract-zip: ^2.0.1
@@ -2569,7 +2569,7 @@ __metadata:
     path-to-regexp: ^6.2.0
     rimraf: ^3.0.2
     ws: ^8.0.0
-  checksum: 9b247bf4404e254779ff502b012fdd690f74ff204a0d24e6bb3e88117abe75175e0036800d6c4a7fe32e803166fad3e5f17ee9a5004aab5f3f05fef8d6619dbd
+  checksum: a8202db2a65b0dcb16d879f900cdddb5b5cc0138aec88867f54471f0ed52e5debb8b1f43c620a7dc1fdcfefd9f4b7b8457153f4b0bc2643c6b01a2cc2c4cbe24
   languageName: node
   linkType: hard
 
@@ -2584,24 +2584,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@percy/dom@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/dom@npm:1.14.0"
-  checksum: e7d635b7c628de766c840ece999ae774b7d962a04d1f6dfc4b097a3b330d3c0e46d0b8b290d02ee2a1d41d0fb9cc66fa5a07f2aa054d98678d7d5fe79ed9eec0
+"@percy/dom@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/dom@npm:1.16.0"
+  checksum: 433c2823c82ab4aa2636e3b17658df50765733fa6f645a80ede2dd8e3ee0199cbc62c265b5e77f75919cda2304ef071066f8d1be16b713048298bc66acfb94f0
   languageName: node
   linkType: hard
 
-"@percy/env@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/env@npm:1.14.0"
-  checksum: 5f77d7695a96351db589041338c7d14d06c7c94140109b98dd8610ea093a818ba360c6fc334fbb50f6fd99fe6e450f9a577ec3ea7ebdca618e4be1b5002dde7f
+"@percy/env@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/env@npm:1.16.0"
+  checksum: 88fba7c4be5ce5c5662d20c3d7d4b2c6df66c516a4e0c0c5e0327768d480eeda8490a9503f60dfd8720df0dfa34481633d3c284a12c25cda87cef3e5381a5e3f
   languageName: node
   linkType: hard
 
-"@percy/logger@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@percy/logger@npm:1.14.0"
-  checksum: 16fded4cbd229d61a52e5d0fce9b45f67b474c5aa898924b33a354ce9ad95cbb57243e4de3fb19bc3022de4290f5fc053c59bc357f2ea3c9eb0f5d0868d5d6e1
+"@percy/logger@npm:1.16.0":
+  version: 1.16.0
+  resolution: "@percy/logger@npm:1.16.0"
+  checksum: 172d2271a6ffd04d1990d616067f1440fb0a236b65f1c52072722e1c6e9c308110bcce86f9ccf91266e1857e83a1d40aed2db2f6dfb947efaf5db59004001d99
   languageName: node
   linkType: hard
 
@@ -4987,10 +4987,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:4.14.189":
-  version: 4.14.189
-  resolution: "@types/lodash@npm:4.14.189"
-  checksum: 096d1e0954794fb76bd6a0ea443067f02004b53e3c59ac6e3fed88817a1468fc2e6614abdf44341f5e0fdff5f9a3c94a934cc9ff7126e07efbcd94355a21fe45
+"@types/lodash@npm:4.14.190":
+  version: 4.14.190
+  resolution: "@types/lodash@npm:4.14.190"
+  checksum: 353a55a1222a57224ead8bd3379fabb2e3e3f6685f599c48b1b66f099d8e9e015e6c6352c6e2275954004c3bb510377804c63117233c6f187700b6ab78adfa02
   languageName: node
   linkType: hard
 
@@ -5735,9 +5735,9 @@ __metadata:
     "@emotion/styled": 11.10.5
     "@jest/globals": 29.3.1
     "@netlify/plugin-lighthouse": 4.0.3
-    "@netlify/plugin-nextjs": 4.29.1
-    "@next/eslint-plugin-next": 12.3.3
-    "@percy/cli": 1.14.0
+    "@netlify/plugin-nextjs": 4.29.2
+    "@next/eslint-plugin-next": 12.3.4
+    "@percy/cli": 1.16.0
     "@percy/cypress": 3.1.2
     "@sitaggart/eslint-config-ts": 0.6.25
     "@sitaggart/prettier-config": 0.3.24
@@ -5749,7 +5749,7 @@ __metadata:
     "@types/color": 3.0.3
     "@types/cors": 2.8.12
     "@types/jest": 29.2.3
-    "@types/lodash": 4.14.189
+    "@types/lodash": 4.14.190
     "@types/node": 17.0.45
     "@types/query-string": 6.3.0
     "@types/react": 18.0.14
@@ -5759,21 +5759,21 @@ __metadata:
     color: 4.2.3
     color-combos: 1.0.17
     cors: 2.8.5
-    cypress: 11.1.0
+    cypress: 11.2.0
     eslint: 8.28.0
-    eslint-config-next: 12.3.3
+    eslint-config-next: 12.3.4
     eslint-formatter-codeframe: 7.32.1
     husky: 8.0.2
     jest: 29.3.1
     jest-environment-jsdom: 29.3.1
     lodash: 4.17.21
     netlify-plugin-cache-nextjs: 1.6.1
-    next: 12.3.3
+    next: 12.3.4
     normalize.css: 8.0.1
     pinst: 3.0.0
     polished: 4.2.2
     precise-commits: 1.0.2
-    prettier: 2.7.1
+    prettier: 2.8.0
     prism-react-renderer: 1.3.5
     prop-types: 15.8.1
     query-string: 7.1.1
@@ -7454,9 +7454,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:11.1.0":
-  version: 11.1.0
-  resolution: "cypress@npm:11.1.0"
+"cypress@npm:11.2.0":
+  version: 11.2.0
+  resolution: "cypress@npm:11.2.0"
   dependencies:
     "@cypress/request": ^2.88.10
     "@cypress/xvfb": ^1.2.4
@@ -7502,7 +7502,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: ee0097778cf3cdf3854325cabf19a60a7486d46ae70082034c05b22b203f21ff85a4871c08dadc6641be649a64c739a443dd3f2d6a5ab112fc9ead703e1f1be3
+  checksum: e13649fb4b62a3c9dff7cc571f4e01dba009d8179b05c4f885c5ceb4ed76b78a7323fec491d992da35527708b54e596bfc9edb1d702f788317889f794d8c1e76
   languageName: node
   linkType: hard
 
@@ -8268,11 +8268,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:12.3.3":
-  version: 12.3.3
-  resolution: "eslint-config-next@npm:12.3.3"
+"eslint-config-next@npm:12.3.4":
+  version: 12.3.4
+  resolution: "eslint-config-next@npm:12.3.4"
   dependencies:
-    "@next/eslint-plugin-next": 12.3.3
+    "@next/eslint-plugin-next": 12.3.4
     "@rushstack/eslint-patch": ^1.1.3
     "@typescript-eslint/parser": ^5.21.0
     eslint-import-resolver-node: ^0.3.6
@@ -8287,7 +8287,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: cf0428819dd77696b0a715e41afa69088d76da5d01d273b4bb3c7a4f3ebce343e8b599326d0a6fa1d693ee21c268d2da7653aa71d9421b089010f5c8aee59806
+  checksum: 53cd24d7b764fe382812a5e76571083fe59e892ac88ac5ccddf171e261f5a3ea36cb1c34283f97569c97a4bae51ece5252d5aa71fd130d31ada94310dc4147ee
   languageName: node
   linkType: hard
 
@@ -12805,24 +12805,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:12.3.3":
-  version: 12.3.3
-  resolution: "next@npm:12.3.3"
+"next@npm:12.3.4":
+  version: 12.3.4
+  resolution: "next@npm:12.3.4"
   dependencies:
-    "@next/env": 12.3.3
-    "@next/swc-android-arm-eabi": 12.3.3
-    "@next/swc-android-arm64": 12.3.3
-    "@next/swc-darwin-arm64": 12.3.3
-    "@next/swc-darwin-x64": 12.3.3
-    "@next/swc-freebsd-x64": 12.3.3
-    "@next/swc-linux-arm-gnueabihf": 12.3.3
-    "@next/swc-linux-arm64-gnu": 12.3.3
-    "@next/swc-linux-arm64-musl": 12.3.3
-    "@next/swc-linux-x64-gnu": 12.3.3
-    "@next/swc-linux-x64-musl": 12.3.3
-    "@next/swc-win32-arm64-msvc": 12.3.3
-    "@next/swc-win32-ia32-msvc": 12.3.3
-    "@next/swc-win32-x64-msvc": 12.3.3
+    "@next/env": 12.3.4
+    "@next/swc-android-arm-eabi": 12.3.4
+    "@next/swc-android-arm64": 12.3.4
+    "@next/swc-darwin-arm64": 12.3.4
+    "@next/swc-darwin-x64": 12.3.4
+    "@next/swc-freebsd-x64": 12.3.4
+    "@next/swc-linux-arm-gnueabihf": 12.3.4
+    "@next/swc-linux-arm64-gnu": 12.3.4
+    "@next/swc-linux-arm64-musl": 12.3.4
+    "@next/swc-linux-x64-gnu": 12.3.4
+    "@next/swc-linux-x64-musl": 12.3.4
+    "@next/swc-win32-arm64-msvc": 12.3.4
+    "@next/swc-win32-ia32-msvc": 12.3.4
+    "@next/swc-win32-x64-msvc": 12.3.4
     "@swc/helpers": 0.4.11
     caniuse-lite: ^1.0.30001406
     postcss: 8.4.14
@@ -12870,7 +12870,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 76cc04cc57dc266164d44a1fb0492d5390d49bacb5c75793c011ed489005fd281c2b997e264d85b60d174a70109075a930a35625ef4641f3481f7e3bcced46f6
+  checksum: d96fc4f5bcd5a630d74111519f4820dcbd75dddf16c6d00d2167bd3cb8d74965d46d83c8e5ec301bf999013c7d96f1bfff9424f0221317d68b594c4d01f5825e
   languageName: node
   linkType: hard
 
@@ -13837,12 +13837,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.7.1":
-  version: 2.7.1
-  resolution: "prettier@npm:2.7.1"
+"prettier@npm:2.8.0":
+  version: 2.8.0
+  resolution: "prettier@npm:2.8.0"
   bin:
     prettier: bin-prettier.js
-  checksum: 55a4409182260866ab31284d929b3cb961e5fdb91fe0d2e099dac92eaecec890f36e524b4c19e6ceae839c99c6d7195817579cdffc8e2c80da0cb794463a748b
+  checksum: 72004ce0cc9bb097daf3e3833f62495768724392c1d5b178dd47372337616e9e50ecbb0804f236596223f7b5eb1bbe69cefc8957dca21112c5777e77ef73a564
   languageName: node
   linkType: hard
 
