@@ -36,7 +36,7 @@
     "@emotion/css": "11.10.5",
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
-    "@twilio-paste/core": "17.2.0",
+    "@twilio-paste/core": "17.4.0",
     "@twilio-paste/icons": "9.4.2",
     "color": "4.2.3",
     "color-combos": "1.1.0",
@@ -58,7 +58,7 @@
     "@emotion/eslint-plugin": "11.10.0",
     "@emotion/jest": "11.10.5",
     "@jest/globals": "29.3.1",
-    "@netlify/plugin-lighthouse": "4.0.3",
+    "@netlify/plugin-lighthouse": "4.0.5",
     "@netlify/plugin-nextjs": "4.30.0",
     "@next/eslint-plugin-next": "12.3.4",
     "@percy/cli": "1.17.0",
@@ -70,7 +70,7 @@
     "@testing-library/user-event": "latest",
     "@types/color": "3.0.3",
     "@types/cors": "2.8.13",
-    "@types/jest": "29.2.5",
+    "@types/jest": "29.2.6",
     "@types/lodash": "4.14.191",
     "@types/node": "18.11.18",
     "@types/query-string": "6.3.0",
@@ -93,7 +93,7 @@
     "typescript": "4.9.4"
   },
   "resolutions": {
-    "@types/react": "17.0.52"
+    "@types/react": "17.0.53"
   },
   "bundlewatch": {
     "files": [
