@@ -33,22 +33,22 @@ const Footer: React.FC<FooterProps> = ({ styles }: FooterProps): ReactElement<HT
       <StyledFooterNav>
         <StyledFooterNavList>
           <StyledFooterNavListItem>
-            <NextLink href="/" passHref>
+            <NextLink href="/" legacyBehavior passHref>
               <StyledFooterAnchor style={linkStyles}>Home</StyledFooterAnchor>
             </NextLink>
           </StyledFooterNavListItem>
           <StyledFooterNavListItem>
-            <NextLink href="/palette" passHref>
+            <NextLink href="/palette" legacyBehavior passHref>
               <StyledFooterAnchor style={linkStyles}>Palette</StyledFooterAnchor>
             </NextLink>
           </StyledFooterNavListItem>
           <StyledFooterNavListItem>
-            <NextLink href="/api-page" passHref>
+            <NextLink href="/api-page" legacyBehavior passHref>
               <StyledFooterAnchor style={linkStyles}>API</StyledFooterAnchor>
             </NextLink>
           </StyledFooterNavListItem>
           <StyledFooterNavListItem>
-            <NextLink href="/about" passHref>
+            <NextLink href="/about" legacyBehavior passHref>
               <StyledFooterAnchor style={linkStyles}>About</StyledFooterAnchor>
             </NextLink>
           </StyledFooterNavListItem>
