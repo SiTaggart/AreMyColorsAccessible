@@ -25,19 +25,10 @@ describe('Homepage', () => {
       cy.get('#textColor').type('{selectall}#ccc');
     });
 
-    it('should update the input value', () => {
+    it('should update the input value and set body color', () => {
       cy.get('#textColor').should('have.value', '#ccc');
-    });
-
-    it('should set body text color', () => {
       cy.get('body').should('have.css', 'color', 'rgb(204, 204, 204)');
-    });
-
-    it('should fail contrast', () => {
       cy.get('[data-testid=contrastResults-heading]').should('contain', 'Nope');
-    });
-
-    it('should update the url', () => {
       cy.location('search').should(
         'equal',
         '?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23ccc'
@@ -57,17 +48,8 @@ describe('Homepage', () => {
 
     it('should update the input value', () => {
       cy.get('#background').should('have.value', '#ccc');
-    });
-
-    it('should set body background color', () => {
       cy.get('body').should('have.css', 'background-color', 'rgb(204, 204, 204)');
-    });
-
-    it('should fail contrast', () => {
       cy.get('[data-testid=contrastResults-heading]').should('contain', 'Nope');
-    });
-
-    it('should update the url', () => {
       cy.location('search').should(
         'equal',
         '?background=%23ccc&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=true&textColor=%23FFFFFF'
@@ -87,17 +69,8 @@ describe('Homepage', () => {
 
     it('should update the input value', () => {
       cy.get('#textColor').should('have.value', '#404040');
-    });
-
-    it('should set body text color', () => {
       cy.get('body').should('have.css', 'color', 'rgb(64, 64, 64)');
-    });
-
-    it('should fail contrast', () => {
       cy.get('[data-testid=contrastResults-heading]').should('contain', 'Nope');
-    });
-
-    it('should update the url', () => {
       cy.location('search').should(
         'equal',
         '?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23404040'
@@ -117,17 +90,8 @@ describe('Homepage', () => {
 
     it('should update the input value', () => {
       cy.get('#background').should('have.value', '#CE6012');
-    });
-
-    it('should set body background color', () => {
       cy.get('body').should('have.css', 'background-color', 'rgb(206, 96, 18)');
-    });
-
-    it('should fail contrast', () => {
       cy.get('[data-testid=contrastResults-heading]').should('contain', 'Kinda');
-    });
-
-    it('should update the url', () => {
       cy.location('search').should(
         'equal',
         '?background=%23CE6012&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23FFFFFF'
