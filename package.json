@@ -22,7 +22,7 @@
     "prettier": "prettier --list-different './**/*.{js,jsx,ts,tsx}'",
     "prettier-clean": "prettier --write './**/*.{js,jsx,ts,tsx}'",
     "tsc": "tsc",
-    "ci:checks": "yarn clean && yarn build && yarn lint && yarn jest && yarn bundlewatch && yarn cypress:run-and-serve",
+    "ci:checks": "yarn clean && yarn build && yarn lint && yarn jest && yarn cypress:run-and-serve",
     "prepare": "husky install"
   },
   "author": "Simon Taggart <me@simontaggart.com> (http://simontaggart.com/)",
@@ -77,7 +77,6 @@
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.10",
     "babel-jest": "29.3.1",
-    "bundlewatch": "0.3.3",
     "eslint": "8.32.0",
     "eslint-config-next": "12.3.4",
     "eslint-formatter-codeframe": "7.32.1",
@@ -95,27 +94,10 @@
   "resolutions": {
     "@types/react": "17.0.53"
   },
-  "bundlewatch": {
-    "files": [
-      {
-        "path": "./.next/static/**/pages/*.js",
-        "maxSize": "70 kB"
-      },
-      {
-        "path": "./.next/static/chunks/*.js",
-        "maxSize": "100 kB"
-      },
-      {
-        "path": "./.next/server/pages/*.js",
-        "maxSize": "580 kB"
-      }
-    ],
-    "ci": {
-      "trackBranches": [
-        "main"
-      ],
-      "repoBranchBase": "main"
-    }
-  },
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@3.4.1",
+  "nextBundleAnalysis": {
+    "budget": 358400,
+    "budgetPercentIncreaseRed": 20,
+    "showDetails": true
+  }
 }
