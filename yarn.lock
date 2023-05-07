@@ -6318,7 +6318,7 @@ __metadata:
     react: 18.2.0
     react-addons-test-utils: 15.6.2
     react-dom: 18.2.0
-    start-server-and-test: 1.15.5
+    start-server-and-test: 2.0.0
     typescript: 5.0.4
     winston: 3.8.2
   languageName: unknown
@@ -16013,9 +16013,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"start-server-and-test@npm:1.15.5":
-  version: 1.15.5
-  resolution: "start-server-and-test@npm:1.15.5"
+"start-server-and-test@npm:2.0.0":
+  version: 2.0.0
+  resolution: "start-server-and-test@npm:2.0.0"
   dependencies:
     arg: ^5.0.2
     bluebird: 3.7.2
@@ -16029,7 +16029,7 @@ resolve@^2.0.0-next.3:
     server-test: src/bin/start.js
     start-server-and-test: src/bin/start.js
     start-test: src/bin/start.js
-  checksum: 02c17414ad6a1a064851095c691333b12b38b6af6ce1eb679966f2a32a80013e718c6b415eec05e69ea831ebd4c3633690f2b21544bf426c0295a647aa2ecb76
+  checksum: 8788e59ad78275332c78325a804504ac558f06a112d47cb5bc3d012d2bda46add72c863cae2357836fe245ee4e22e2fec0b6d47dbdf5e0f0f5cfd1a57544d100
   languageName: node
   linkType: hard
 
