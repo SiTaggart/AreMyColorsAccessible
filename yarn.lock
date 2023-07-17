@@ -2530,9 +2530,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/plugin-lighthouse@npm:4.1.1":
-  version: 4.1.1
-  resolution: "@netlify/plugin-lighthouse@npm:4.1.1"
+"@netlify/plugin-lighthouse@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@netlify/plugin-lighthouse@npm:5.0.0"
   dependencies:
     chalk: ^4.1.0
     chrome-launcher: ^0.15.0
@@ -2542,7 +2542,7 @@ __metadata:
     html-minifier: ^4.0.0
     lighthouse: ^9.6.3
     puppeteer: ^18.0.0
-  checksum: 05d34c0e40fdfda404e644cf7a5cda01a30ab5495018ea0e9e974b3107d87d73c0d60ae5608ffe6a14f3b260cc3a92712d552eafbbe7600aed378b84f4857b92
+  checksum: 9def33cf1fcce9b9b36262d470fe258bb09bfd5d0307d26e110f7d104fcc67aad47952e471a72d981b38fa56e4fd7552ea25f0de09ad1cf2fb56e5fb356f6fbb
   languageName: node
   linkType: hard
 
@@ -6810,7 +6810,7 @@ __metadata:
     "@emotion/react": 11.10.6
     "@emotion/styled": 11.10.6
     "@jest/globals": 29.5.0
-    "@netlify/plugin-lighthouse": 4.1.1
+    "@netlify/plugin-lighthouse": 5.0.0
     "@netlify/plugin-nextjs": 4.35.0
     "@next/eslint-plugin-next": 13.3.1
     "@percy/cli": 1.24.0
