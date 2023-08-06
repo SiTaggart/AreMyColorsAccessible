@@ -90,9 +90,6 @@
     "start-server-and-test": "2.0.0",
     "typescript": "5.1.6"
   },
-  "resolutions": {
-    "@types/react": "17.0.58"
-  },
   "packageManager": "yarn@3.6.1",
   "nextBundleAnalysis": {
     "budget": 358400,
