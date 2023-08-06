@@ -92,13 +92,13 @@ const returnColorRatingResponse = (slashText: string, res: NextApiResponse): voi
       logger.error('slash get rating', { error });
     }
     logger.info('slash rating', { rating });
-    if (!rating) {
+    if (rating) {
+      res.json(getSlashCommandResponse(rating, colorsArray));
+    } else {
       res.send({
         response_type: 'ephemeral',
         text: "Sorry, one of those don't seem to be a valid color.",
       });
-    } else {
-      res.json(getSlashCommandResponse(rating, colorsArray));
     }
   } else {
     logger.error('slash no array', { text: slashText });

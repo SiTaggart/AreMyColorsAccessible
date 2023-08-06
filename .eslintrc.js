@@ -10,6 +10,7 @@ module.exports = {
   rules: {
     'react/jsx-props-no-spreading': 'off',
     'react/require-default-props': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
     '@emotion/pkg-renaming': 'error',
     'unicorn/prefer-module': 'off',
     'react/function-component-definition': [

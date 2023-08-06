@@ -70,7 +70,7 @@ const createFakeCombination = (color: number[], hex: string): Combination => ({
 });
 
 const createDuplicateCombination = (combos: ColorCombo[]): ColorCombo[] => {
-  const color = combos[0].color !== undefined ? combos[0].color : [];
+  const color = combos[0].color === undefined ? [] : combos[0].color;
   const dupeCombo = {
     ...combos[0],
     combinations: [createFakeCombination(color, combos[0].hex)],
