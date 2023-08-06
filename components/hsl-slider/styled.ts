@@ -14,8 +14,8 @@ export const StyledHSLSlider = styled.div<HSLSLiderCommonProps>`
   ${breakpoint('medium')} {
     flex: 1 0 auto;
     padding: ${(props): string | undefined =>
-      props.variant !== 'compact' ? '0 0.5rem' : undefined};
-    width: ${(props): string | undefined => (props.variant !== 'compact' ? '33.3333%' : undefined)};
+      props.variant === 'compact' ? undefined : '0 0.5rem'};
+    width: ${(props): string | undefined => (props.variant === 'compact' ? undefined : '33.3333%')};
   }
 `;
 

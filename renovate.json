@@ -8,10 +8,6 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["@types/react"],
-      "allowedVersions": "<18.0.0"
-    },
-    {
       "matchPackageNames": ["query-string"],
       "allowedVersions": "<8.0.0"
     }

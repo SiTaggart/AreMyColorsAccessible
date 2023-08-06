@@ -1,6 +1,5 @@
 import * as React from 'react';
-import Highlight, { defaultProps, Language } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/nightOwl';
+import { Highlight, Language, themes } from 'prism-react-renderer';
 import { Box } from '@twilio-paste/core/box';
 import { useUIDSeed } from '@twilio-paste/core/uid-library';
 
@@ -48,7 +47,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = ({
 }: CodeBlockProps) => {
   const KeySeed = useUIDSeed();
   return (
-    <Highlight {...defaultProps} code={example} language={language} theme={theme}>
+    <Highlight code={example} language={language} theme={themes.nightOwl}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <Pre className={className} style={style}>
           {tokens.map((line, i) => (

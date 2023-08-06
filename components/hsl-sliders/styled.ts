@@ -6,11 +6,11 @@ interface HSLSLiderCommonProps {
 }
 
 export const HSLSliders = styled.div<HSLSLiderCommonProps>`
-  display: ${(props): string | undefined => (props.variant !== 'compact' ? 'flex' : undefined)};
-  flex-wrap: ${(props): string | undefined => (props.variant !== 'compact' ? 'wrap' : undefined)};
+  display: ${(props): string | undefined => (props.variant === 'compact' ? undefined : 'flex')};
+  flex-wrap: ${(props): string | undefined => (props.variant === 'compact' ? undefined : 'wrap')};
 
   ${breakpoint('medium')} {
     margin: ${(props): string | undefined =>
-      props.variant !== 'compact' ? '0 -0.5rem' : undefined};
+      props.variant === 'compact' ? undefined : '0 -0.5rem'};
   }
 `;

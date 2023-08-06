@@ -29,7 +29,8 @@ const shadow = (
   shadowBlur: string,
   shadowColor: string
 ): SerializedStyles => css`
-  box-shadow: ${shadowSize} ${shadowSize} ${shadowBlur} ${shadowColor},
+  box-shadow:
+    ${shadowSize} ${shadowSize} ${shadowBlur} ${shadowColor},
     0 0 ${shadowSize} ${lighten(0.05, shadowColor)};
 `;
 

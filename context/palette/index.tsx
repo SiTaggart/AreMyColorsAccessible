@@ -125,7 +125,7 @@ const PaletteDataProvider: React.FC<PaletteDataProviderProps> = ({
     let newColorCombos: ColorCombo[];
     if (valid) {
       const combos = getColorCombos(colors);
-      newColorCombos = combos !== false ? combos : state.colorCombos;
+      newColorCombos = combos === false ? state.colorCombos : combos;
     } else {
       newColorCombos = state.colorCombos;
     }
@@ -147,10 +147,10 @@ const PaletteDataProvider: React.FC<PaletteDataProviderProps> = ({
     const convertedColors: Color[] | false = convertColorStringsToColors(colorsArray);
     const mergedColors: string[] = mergeColorsWithState(colorsArray);
 
-    if (convertedColors !== false) {
-      updateColors(mergedColors, true);
-    } else {
+    if (convertedColors === false) {
       setPaletteData({ ...state, hasError: true });
+    } else {
+      updateColors(mergedColors, true);
     }
   };
 
