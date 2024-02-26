@@ -992,10 +992,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/js@npm:8.56.0":
-  version: 8.56.0
-  resolution: "@eslint/js@npm:8.56.0"
-  checksum: 10/97a4b5ccf7e24f4d205a1fb0f21cdcd610348ecf685f6798a48dd41ba443f2c1eedd3050ff5a0b8f30b8cf6501ab512aa9b76e531db15e59c9ebaa41f3162e37
+"@eslint/js@npm:8.57.0":
+  version: 8.57.0
+  resolution: "@eslint/js@npm:8.57.0"
+  checksum: 10/3c501ce8a997cf6cbbaf4ed358af5492875e3550c19b9621413b82caa9ae5382c584b0efa79835639e6e0ddaa568caf3499318e5bdab68643ef4199dce5eb0a0
   languageName: node
   linkType: hard
 
@@ -1071,14 +1071,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@humanwhocodes/config-array@npm:^0.11.13":
-  version: 0.11.13
-  resolution: "@humanwhocodes/config-array@npm:0.11.13"
+"@humanwhocodes/config-array@npm:^0.11.14":
+  version: 0.11.14
+  resolution: "@humanwhocodes/config-array@npm:0.11.14"
   dependencies:
-    "@humanwhocodes/object-schema": "npm:^2.0.1"
-    debug: "npm:^4.1.1"
+    "@humanwhocodes/object-schema": "npm:^2.0.2"
+    debug: "npm:^4.3.1"
     minimatch: "npm:^3.0.5"
-  checksum: 10/9f655e1df7efa5a86822cd149ca5cef57240bb8ffd728f0c07cc682cc0a15c6bdce68425fbfd58f9b3e8b16f79b3fd8cb1e96b10c434c9a76f20b2a89f213272
+  checksum: 10/3ffb24ecdfab64014a230e127118d50a1a04d11080cbb748bc21629393d100850496456bbcb4e8c438957fe0934430d731042f1264d6a167b62d32fc2863580a
   languageName: node
   linkType: hard
 
@@ -1089,10 +1089,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@humanwhocodes/object-schema@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@humanwhocodes/object-schema@npm:2.0.1"
-  checksum: 10/dbddfd0465aecf92ed845ec30d06dba3f7bb2496d544b33b53dac7abc40370c0e46b8787b268d24a366730d5eeb5336ac88967232072a183905ee4abf7df4dab
+"@humanwhocodes/object-schema@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@humanwhocodes/object-schema@npm:2.0.2"
+  checksum: 10/ef915e3e2f34652f3d383b28a9a99cfea476fa991482370889ab14aac8ecd2b38d47cc21932526c6d949da0daf4a4a6bf629d30f41b0caca25e146819cbfa70e
   languageName: node
   linkType: hard
 
@@ -5088,9 +5088,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twilio-paste/core@npm:20.9.0":
-  version: 20.9.0
-  resolution: "@twilio-paste/core@npm:20.9.0"
+"@twilio-paste/core@npm:20.10.0":
+  version: 20.10.0
+  resolution: "@twilio-paste/core@npm:20.10.0"
   dependencies:
     "@twilio-paste/account-switcher": "npm:^3.0.1"
     "@twilio-paste/alert": "npm:^14.1.0"
@@ -5121,7 +5121,7 @@ __metadata:
     "@twilio-paste/data-visualization-library": "npm:^5.0.0"
     "@twilio-paste/date-picker": "npm:^6.1.1"
     "@twilio-paste/description-list": "npm:^4.2.0"
-    "@twilio-paste/design-tokens": "npm:^10.4.1"
+    "@twilio-paste/design-tokens": "npm:^10.5.0"
     "@twilio-paste/detail-text": "npm:^3.1.0"
     "@twilio-paste/disclosure": "npm:^12.1.0"
     "@twilio-paste/disclosure-primitive": "npm:^2.1.1"
@@ -5135,7 +5135,7 @@ __metadata:
     "@twilio-paste/form": "npm:^11.1.1"
     "@twilio-paste/form-pill-group": "npm:^8.0.1"
     "@twilio-paste/grid": "npm:^8.1.1"
-    "@twilio-paste/heading": "npm:^11.1.1"
+    "@twilio-paste/heading": "npm:^11.1.2"
     "@twilio-paste/help-text": "npm:^13.1.0"
     "@twilio-paste/in-page-navigation": "npm:^4.3.1"
     "@twilio-paste/inline-code": "npm:^4.1.1"
@@ -5147,7 +5147,7 @@ __metadata:
     "@twilio-paste/list": "npm:^8.1.2"
     "@twilio-paste/listbox-primitive": "npm:^3.0.1"
     "@twilio-paste/media-object": "npm:^10.1.0"
-    "@twilio-paste/menu": "npm:^14.1.2"
+    "@twilio-paste/menu": "npm:^14.1.3"
     "@twilio-paste/menu-primitive": "npm:^2.1.1"
     "@twilio-paste/meter": "npm:^1.0.3"
     "@twilio-paste/minimizable-dialog": "npm:^4.1.1"
@@ -5205,7 +5205,7 @@ __metadata:
     "@types/react-dom": ^16.8.6 || ^17.0.2 || ^18.0.10
     react: ^16.8.6 || ^17.0.2 || ^18.0.0
     react-dom: ^16.8.6 || ^17.0.2 || ^18.0.0
-  checksum: 10/d0b679539b444952dc48eeeadada12c0606605ca07aa0c8809d8937bdea74f043e3ba44f8484a1e21c8110be3c17278df6007aca7599f51a3c55557a22cf939c
+  checksum: 10/f22023baf1f705823308f92778250540365cc8512f685298cb41572bf41535aad3de804cf534bac6c61bf7e434dae9c8e8e87893c7f4d7c5c3da75d0d409a544
   languageName: node
   linkType: hard
 
@@ -5337,10 +5337,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twilio-paste/design-tokens@npm:^10.4.1":
-  version: 10.4.1
-  resolution: "@twilio-paste/design-tokens@npm:10.4.1"
-  checksum: 10/894bf623aa559201f2a75a626545eddd76fcdb7e52df51edd7bf27fd7ae4f70fae3b1738ba5e7c0827ba67252e4413c657197e9c2aac850da9fdc0421a23d889
+"@twilio-paste/design-tokens@npm:^10.5.0":
+  version: 10.5.0
+  resolution: "@twilio-paste/design-tokens@npm:10.5.0"
+  checksum: 10/76378221c0deac853266098441e812340fc4d760c23edf7cad37c0b90237e3152cd26014411932ff3da5b22fb80c8819a16b222a91fb70d66c373b38de06cb6e
   languageName: node
   linkType: hard
 
@@ -5654,9 +5654,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twilio-paste/heading@npm:^11.1.1":
-  version: 11.1.1
-  resolution: "@twilio-paste/heading@npm:11.1.1"
+"@twilio-paste/heading@npm:^11.1.2":
+  version: 11.1.2
+  resolution: "@twilio-paste/heading@npm:11.1.2"
   peerDependencies:
     "@twilio-paste/animation-library": ^2.0.0
     "@twilio-paste/color-contrast-utils": ^5.0.0
@@ -5671,7 +5671,7 @@ __metadata:
     "@types/react-dom": ^16.8.6 || ^17.0.2 || ^18.0.10
     react: ^16.8.6 || ^17.0.2 || ^18.0.0
     react-dom: ^16.8.6 || ^17.0.2 || ^18.0.0
-  checksum: 10/9295a8d8347ae1fcf75ed151c520ebec1e267b1ceb55e8e9bb5873d2c70ed72d7ed265ec0d427eee194c6c3964dd6b66d4436e7e384b2245aa1b5554cd26c970
+  checksum: 10/45ebe59250822156339b97f213e12b6362692853c088b9f05f0efc740ade767ba4db87d100da623f9db3c7cf6b99f3ac0dec3b152c711f3a06e0db1344b5557a
   languageName: node
   linkType: hard
 
@@ -5698,9 +5698,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twilio-paste/icons@npm:12.2.3":
-  version: 12.2.3
-  resolution: "@twilio-paste/icons@npm:12.2.3"
+"@twilio-paste/icons@npm:12.3.0":
+  version: 12.3.0
+  resolution: "@twilio-paste/icons@npm:12.3.0"
   peerDependencies:
     "@twilio-paste/animation-library": ^2.0.0
     "@twilio-paste/box": ^10.0.0
@@ -5716,7 +5716,7 @@ __metadata:
     "@types/react-dom": ^16.8.6 || ^17.0.2 || ^18.0.10
     react: ^16.8.6 || ^17.0.2 || ^18.0.0
     react-dom: ^16.8.6 || ^17.0.2 || ^18.0.0
-  checksum: 10/869c951c834b91caff43a259ddd090a750315acc28bfad5b78bec153f61e7f775d8962d0aa382a2c555eead38ce36acbb2159b21ad0978b307be2093b5b58319
+  checksum: 10/f3252f25405f85d165ad499a872ff0c9bf89173381f7e94c544478f5552ff74241fa9b980f276ad43bc2ae92659f7679f03d1de8e5742af209146f67cf22b9d6
   languageName: node
   linkType: hard
 
@@ -5948,9 +5948,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@twilio-paste/menu@npm:^14.1.2":
-  version: 14.1.2
-  resolution: "@twilio-paste/menu@npm:14.1.2"
+"@twilio-paste/menu@npm:^14.1.3":
+  version: 14.1.3
+  resolution: "@twilio-paste/menu@npm:14.1.3"
   peerDependencies:
     "@twilio-paste/anchor": ^12.0.0
     "@twilio-paste/animation-library": ^2.0.0
@@ -5978,7 +5978,7 @@ __metadata:
     "@types/react-dom": ^16.8.6 || ^17.0.2 || ^18.0.10
     react: ^16.8.6 || ^17.0.2 || ^18.0.0
     react-dom: ^16.8.6 || ^17.0.2 || ^18.0.0
-  checksum: 10/7fe41ad3ff90246945f87e4a57d565ce6ef0391e63a793a2995d9cc93a5e6bc72938d79a28bbc03ae2864c8ca13dc9c5c84efb6cd4d4deb7531f2d590a29294a
+  checksum: 10/ce414439ed42a9ad6ffb9139f1ca4c4251d2a0310c94b812b9fca64f00f7fc124b19a8be9b63ff4b0c09fbe5c659e531ed402ef3e11399c16169922741770982
   languageName: node
   linkType: hard
 
@@ -7390,12 +7390,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.11.19":
-  version: 20.11.19
-  resolution: "@types/node@npm:20.11.19"
+"@types/node@npm:20.11.20":
+  version: 20.11.20
+  resolution: "@types/node@npm:20.11.20"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/c7f4705d6c84aa21679ad180c33c13ca9567f650e66e14bcee77c7c43d14619c7cd3b4d7b2458947143030b7b1930180efa6d12d999b45366abff9fed7a17472
+  checksum: 10/ff449bdc94810dadb54e0f77dd587c6505ef79ffa5a208c16eb29b223365b188f4c935a3abaf0906a01d05257c3da1f72465594a841d35bcf7b6deac7a6938fb
   languageName: node
   linkType: hard
 
@@ -7474,14 +7474,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.56":
-  version: 18.2.56
-  resolution: "@types/react@npm:18.2.56"
+"@types/react@npm:18.2.58":
+  version: 18.2.58
+  resolution: "@types/react@npm:18.2.58"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10/de0df184f2b80e8724d79eead47f23e43e91a68c0712a5d989db3f1242f2c24179cf8e26520b5a141396b55f4928ce9a6c3a3a121a98eca8e82973920209f06c
+  checksum: 10/ec5e1a7d8acc55551efec7a3d63441d24c7e94b66bf8039944541a8408048668e51b7b4b0b6e8303cdea271b7c6da242cdc7bb8ca501eedf822956edbdbfc67e
   languageName: node
   linkType: hard
 
@@ -8073,21 +8073,21 @@ __metadata:
     "@testing-library/jest-dom": "npm:6.4.2"
     "@testing-library/react": "npm:14.2.1"
     "@testing-library/user-event": "npm:14.5.2"
-    "@twilio-paste/core": "npm:20.9.0"
-    "@twilio-paste/icons": "npm:12.2.3"
+    "@twilio-paste/core": "npm:20.10.0"
+    "@twilio-paste/icons": "npm:12.3.0"
     "@types/color": "npm:3.0.6"
     "@types/cors": "npm:2.8.17"
     "@types/jest": "npm:29.5.12"
     "@types/lodash": "npm:4.14.202"
-    "@types/node": "npm:20.11.19"
-    "@types/react": "npm:18.2.56"
+    "@types/node": "npm:20.11.20"
+    "@types/react": "npm:18.2.58"
     "@types/react-dom": "npm:18.2.19"
     babel-jest: "npm:29.7.0"
     color: "npm:4.2.3"
     color-combos: "npm:1.1.0"
     cors: "npm:2.8.5"
-    cypress: "npm:13.6.4"
-    eslint: "npm:8.56.0"
+    cypress: "npm:13.6.6"
+    eslint: "npm:8.57.0"
     eslint-config-next: "npm:14.1.0"
     eslint-formatter-codeframe: "npm:7.32.1"
     husky: "npm:8.0.3"
@@ -8763,7 +8763,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"buffer@npm:^5.2.1, buffer@npm:^5.5.0, buffer@npm:^5.6.0":
+"buffer@npm:^5.2.1, buffer@npm:^5.5.0, buffer@npm:^5.7.1":
   version: 5.7.1
   resolution: "buffer@npm:5.7.1"
   dependencies:
@@ -9739,9 +9739,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:13.6.4":
-  version: 13.6.4
-  resolution: "cypress@npm:13.6.4"
+"cypress@npm:13.6.6":
+  version: 13.6.6
+  resolution: "cypress@npm:13.6.6"
   dependencies:
     "@cypress/request": "npm:^3.0.0"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -9750,7 +9750,7 @@ __metadata:
     arch: "npm:^2.2.0"
     blob-util: "npm:^2.0.2"
     bluebird: "npm:^3.7.2"
-    buffer: "npm:^5.6.0"
+    buffer: "npm:^5.7.1"
     cachedir: "npm:^2.3.0"
     chalk: "npm:^4.1.0"
     check-more-types: "npm:^2.24.0"
@@ -9768,7 +9768,7 @@ __metadata:
     figures: "npm:^3.2.0"
     fs-extra: "npm:^9.1.0"
     getos: "npm:^3.2.1"
-    is-ci: "npm:^3.0.0"
+    is-ci: "npm:^3.0.1"
     is-installed-globally: "npm:~0.4.0"
     lazy-ass: "npm:^1.6.0"
     listr2: "npm:^3.8.3"
@@ -9787,7 +9787,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10/acdc246cf41bf77b95ab78a26ae7cb000c64abfd768ad7cef54830e1fa8d7e89cee64a56d00a9a389ac36ff6ec8bd704d6fa1d5d92123123c8d96ebae6328b8b
+  checksum: 10/c86cc38fa25f04575d496fbf26edf8c738f2c98b0faeced9788ec691293424336f6be180f597256d38124df9ce75daddd42a015127af76d8f8df9eb071e3d90e
   languageName: node
   linkType: hard
 
@@ -11099,15 +11099,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.56.0":
-  version: 8.56.0
-  resolution: "eslint@npm:8.56.0"
+"eslint@npm:8.57.0":
+  version: 8.57.0
+  resolution: "eslint@npm:8.57.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.2.0"
     "@eslint-community/regexpp": "npm:^4.6.1"
     "@eslint/eslintrc": "npm:^2.1.4"
-    "@eslint/js": "npm:8.56.0"
-    "@humanwhocodes/config-array": "npm:^0.11.13"
+    "@eslint/js": "npm:8.57.0"
+    "@humanwhocodes/config-array": "npm:^0.11.14"
     "@humanwhocodes/module-importer": "npm:^1.0.1"
     "@nodelib/fs.walk": "npm:^1.2.8"
     "@ungap/structured-clone": "npm:^1.2.0"
@@ -11143,7 +11143,7 @@ __metadata:
     text-table: "npm:^0.2.0"
   bin:
     eslint: bin/eslint.js
-  checksum: 10/ef6193c6e4cef20774b985a5cc2fd4bf6d3c4decd423117cbc4a0196617861745db291217ad3c537bc3a160650cca965bc818f55e1f3e446af1fcb293f9940a5
+  checksum: 10/00496e218b23747a7a9817bf58b522276d0dc1f2e546dceb4eea49f9871574088f72f1f069a6b560ef537efa3a75261b8ef70e51ef19033da1cc4c86a755ef15
   languageName: node
   linkType: hard
 
@@ -12949,7 +12949,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-ci@npm:^3.0.0":
+"is-ci@npm:^3.0.1":
   version: 3.0.1
   resolution: "is-ci@npm:3.0.1"
   dependencies:
