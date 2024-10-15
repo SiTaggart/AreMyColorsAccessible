@@ -43,7 +43,7 @@
     "cors": "2.8.5",
     "cypress": "13.7.1",
     "lodash": "4.17.21",
-    "next": "13.4.19",
+    "next": "14.2.7",
     "normalize.css": "8.0.1",
     "polished": "4.3.1",
     "prism-react-renderer": "2.3.1",
