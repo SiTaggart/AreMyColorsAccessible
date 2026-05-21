@@ -88,19 +88,10 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Wait for Netlify
-        uses: hharnisc/wait-for-netlify-action@4.0.1
-        id: waitForDeployment
-        with:
-          site_id: ${{ secrets.NETLIFY_SITE_ID }}
-        env:
-          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-
       - name: Percy Test
-        run: yarn cypress:run
+        run: yarn cypress:run-and-serve
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-          CYPRESS_BASE_URL: ${{ steps.waitForDeployment.outputs.url }}
 
   jest:
     runs-on: ubuntu-latest

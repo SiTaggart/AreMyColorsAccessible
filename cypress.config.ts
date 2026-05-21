@@ -6,6 +6,7 @@ export default defineConfig({
   fixturesFolder: false,
   e2e: {
     baseUrl: 'http://localhost:3000',
+    testIsolation: false,
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
   },
 });
