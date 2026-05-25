@@ -1,0 +1,206 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ColorCard > renders without crashing 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 8rem;
+  min-width: 12rem;
+  overflow: hidden;
+  text-align: center;
+  -webkit-transition: opacity ease-in;
+  transition: opacity ease-in;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  background-color: #F7F8F8;
+  color: #666D70;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 4px;
+}
+
+.emotion-4 {
+  color: #000;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.emotion-6 {
+  background-color: #CFFCDA;
+  color: #004215;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 4px;
+}
+
+<div
+    class="emotion-0"
+    data-testid="colorCard"
+  >
+    <div
+      class="emotion-1"
+    >
+      <span
+        class="emotion-2"
+        title="Color contrast ratio"
+      >
+        21 : 1
+      </span>
+    </div>
+    <div
+      class="emotion-1"
+    >
+      <div
+        class="emotion-4"
+        color="#000"
+        data-testid="colorCard-swatch"
+      >
+        Yup
+      </div>
+    </div>
+    <div
+      class="emotion-1"
+    >
+      <span
+        class="emotion-6"
+      >
+        Small: AAA
+      </span>
+      <span
+        class="emotion-6"
+      >
+        Large: AAA
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ColorCard > should render a not important card 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 8rem;
+  min-width: 12rem;
+  overflow: hidden;
+  opacity: 0.1;
+  text-align: center;
+  -webkit-transition: opacity ease-in;
+  transition: opacity ease-in;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  background-color: #F7F8F8;
+  color: #666D70;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 4px;
+}
+
+.emotion-4 {
+  color: #000;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.emotion-6 {
+  background-color: #CFFCDA;
+  color: #004215;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 4px;
+}
+
+<div
+    class="emotion-0"
+    data-testid="colorCard"
+  >
+    <div
+      class="emotion-1"
+    >
+      <span
+        class="emotion-2"
+        title="Color contrast ratio"
+      >
+        21 : 1
+      </span>
+    </div>
+    <div
+      class="emotion-1"
+    >
+      <div
+        class="emotion-4"
+        color="#000"
+        data-testid="colorCard-swatch"
+      >
+        Yup
+      </div>
+    </div>
+    <div
+      class="emotion-1"
+    >
+      <span
+        class="emotion-6"
+      >
+        Small: AAA
+      </span>
+      <span
+        class="emotion-6"
+      >
+        Large: AAA
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

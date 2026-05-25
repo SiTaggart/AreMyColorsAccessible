@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FormControl > renders without crashing 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  padding: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .emotion-0 {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 50%;
+  }
+}
+
+<div
+    class="emotion-0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;

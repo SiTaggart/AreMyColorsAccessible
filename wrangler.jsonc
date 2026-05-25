@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aremycolorsaccessible",
+  "compatibility_date": "2026-05-25",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "src/worker.ts",
+  "observability": {
+    "enabled": true,
+  },
+}

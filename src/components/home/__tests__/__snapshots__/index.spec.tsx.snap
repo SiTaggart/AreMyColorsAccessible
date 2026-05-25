@@ -1,0 +1,626 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home > renders without crashing 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .emotion-0 {
+    min-height: 85%;
+  }
+}
+
+.emotion-1 {
+  margin: 0 auto;
+  max-width: 1150px;
+  padding: 0 1rem;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .emotion-2 {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .emotion-2 {
+    margin-bottom: 5rem;
+  }
+}
+
+.emotion-3 {
+  font-weight: 700;
+  font-size: 20vw;
+  margin: 3rem 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .emotion-3 {
+    font-size: 18vw;
+    margin: 4rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .emotion-3 {
+    font-size: 15vw;
+    margin: 5rem 0;
+  }
+}
+
+@media (min-width: 1480px) {
+  .emotion-3 {
+    font-size: 9vw;
+  }
+}
+
+.emotion-4 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .emotion-4 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .emotion-4 {
+    width: 25%;
+  }
+}
+
+.emotion-5 {
+  font-size: 14pt;
+  margin: 0;
+}
+
+.emotion-6 {
+  font-weight: 700;
+  font-size: 10vw;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .emotion-6 {
+    font-size: 6vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .emotion-6 {
+    font-size: 4vw;
+  }
+}
+
+@media (min-width: 1480px) {
+  .emotion-6 {
+    font-size: 3vw;
+  }
+}
+
+.emotion-11 {
+  font-size: 18pt;
+  margin: 0;
+}
+
+.emotion-16 {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  -webkit-transition: color 400ms ease-out;
+  transition: color 400ms ease-out;
+}
+
+.emotion-18 {
+  padding: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .emotion-18 {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 50%;
+  }
+}
+
+.emotion-19 {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.emotion-20 {
+  background: rgba(255, 255, 255, 0.1);
+  border: solid 1px;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1024px) {
+  .emotion-21 {
+    margin: 0 -0.5rem;
+  }
+}
+
+.emotion-22 {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .emotion-22 {
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    padding: 0 0.5rem;
+    width: 33.3333%;
+  }
+}
+
+.emotion-26 {
+  -webkit-appearance: none;
+  background: transparent;
+  border-radius: 2px;
+  color: currentColor;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.emotion-26::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-26::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -9px;
+}
+
+.emotion-26:focus::-webkit-slider-runnable-track {
+  background: currentColor;
+}
+
+.emotion-26::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.emotion-26::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-26::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: transparent;
+  border-color: transparent;
+  border-width: 8px 0;
+  color: transparent;
+}
+
+.emotion-26::-ms-fill-lower {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-26::-ms-fill-upper {
+  box-shadow: 0 0 0 #fff,0 0 0 #fff;
+  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 5px * 2;
+}
+
+.emotion-26::-ms-thumb {
+  box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
+  border: 1px solid currentColor;
+  height: 20px;
+  width: 8px;
+  border-radius: 2px;
+  background: currentColor;
+  cursor: pointer;
+}
+
+.emotion-26:focus::-ms-fill-lower {
+  background: currentColor;
+}
+
+.emotion-26:focus::-ms-fill-upper {
+  background: currentColor;
+}
+
+<main
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
+      <div
+        class="emotion-2"
+      >
+        <h1
+          aria-atomic="true"
+          aria-live="polite"
+          class="emotion-3"
+          data-testid="contrastResults-heading"
+        >
+          Yup
+        </h1>
+        <div
+          class="emotion-4"
+        >
+          <p
+            class="emotion-5"
+          >
+            Small Text
+            <br />
+            AA: 4.5 AAA: 7.0
+          </p>
+          <h2
+            class="emotion-6"
+            data-testid="contrastResult-rating-small"
+          >
+            AAA
+          </h2>
+        </div>
+        <div
+          class="emotion-4"
+        >
+          <p
+            class="emotion-5"
+          >
+            <strong>
+              Bold Text 18px and over 
+              <br />
+              AA: 3.0 AAA: 4.5
+            </strong>
+          </p>
+          <h2
+            class="emotion-6"
+            data-testid="contrastResult-rating-bold"
+          >
+            AAA
+          </h2>
+        </div>
+        <div
+          class="emotion-4"
+        >
+          <p
+            class="emotion-11"
+          >
+            Large Text 24px and over 
+            <br />
+            AA: 3.0 AAA: 4.5
+          </p>
+          <h2
+            class="emotion-6"
+            data-testid="contrastResult-rating-large"
+          >
+            AAA
+          </h2>
+        </div>
+        <div
+          class="emotion-4"
+        >
+          <p
+            class="emotion-5"
+          >
+            Contrast Ratio
+          </p>
+          <h2
+            class="emotion-6"
+          >
+            21 : 1
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-16"
+    >
+      <div
+        class="emotion-17"
+        data-testid="color-input-form"
+        style="color: rgb(255, 255, 255);"
+      >
+        <div
+          class="emotion-18"
+        >
+          <label
+            class="emotion-19"
+            for="textColor"
+          >
+            Text Color
+          </label>
+          <input
+            autocomplete="off"
+            class="emotion-20"
+            data-testid="textColor"
+            id="textColor"
+            style="border-color: rgb(255, 255, 255); color: inherit;"
+            type="text"
+            value="#fff"
+          />
+          <div
+            class="emotion-21"
+            data-testid="form-hsl-sliders"
+          >
+            <div
+              class="emotion-22"
+            >
+              <div
+                class="emotion-23"
+              >
+                <label
+                  class="emotion-19"
+                  for="textColor-hsl-Hue"
+                >
+                  Hue 0°
+                </label>
+              </div>
+              <div
+                class="emotion-25"
+              >
+                <input
+                  class="emotion-26"
+                  data-testid="textColor-hsl-Hue"
+                  id="textColor-hsl-Hue"
+                  max="360"
+                  min="0"
+                  type="range"
+                  value="0"
+                />
+              </div>
+            </div>
+            <div
+              class="emotion-22"
+            >
+              <div
+                class="emotion-23"
+              >
+                <label
+                  class="emotion-19"
+                  for="textColor-hsl-Saturation"
+                >
+                  Saturation 0%
+                </label>
+              </div>
+              <div
+                class="emotion-25"
+              >
+                <input
+                  class="emotion-26"
+                  data-testid="textColor-hsl-Saturation"
+                  id="textColor-hsl-Saturation"
+                  max="100"
+                  min="0"
+                  type="range"
+                  value="0"
+                />
+              </div>
+            </div>
+            <div
+              class="emotion-22"
+            >
+              <div
+                class="emotion-23"
+              >
+                <label
+                  class="emotion-19"
+                  for="textColor-hsl-Lightness"
+                >
+                  Lightness 100%
+                </label>
+              </div>
+              <div
+                class="emotion-25"
+              >
+                <input
+                  class="emotion-26"
+                  data-testid="textColor-hsl-Lightness"
+                  id="textColor-hsl-Lightness"
+                  max="100"
+                  min="0"
+                  type="range"
+                  value="100"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="emotion-18"
+        >
+          <label
+            class="emotion-19"
+            for="background"
+          >
+            Background
+          </label>
+          <input
+            autocomplete="off"
+            class="emotion-20"
+            data-testid="background"
+            id="background"
+            style="border-color: rgb(255, 255, 255); color: inherit;"
+            type="text"
+            value="#000"
+          />
+          <div
+            class="emotion-21"
+            data-testid="form-hsl-sliders"
+          >
+            <div
+              class="emotion-22"
+            >
+              <div
+                class="emotion-23"
+              >
+                <label
+                  class="emotion-19"
+                  for="background-hsl-Hue"
+                >
+                  Hue 0°
+                </label>
+              </div>
+              <div
+                class="emotion-25"
+              >
+                <input
+                  class="emotion-26"
+                  data-testid="background-hsl-Hue"
+                  id="background-hsl-Hue"
+                  max="360"
+                  min="0"
+                  type="range"
+                  value="0"
+                />
+              </div>
+            </div>
+            <div
+              class="emotion-22"
+            >
+              <div
+                class="emotion-23"
+              >
+                <label
+                  class="emotion-19"
+                  for="background-hsl-Saturation"
+                >
+                  Saturation 0%
+                </label>
+              </div>
+              <div
+                class="emotion-25"
+              >
+                <input
+                  class="emotion-26"
+                  data-testid="background-hsl-Saturation"
+                  id="background-hsl-Saturation"
+                  max="100"
+                  min="0"
+                  type="range"
+                  value="0"
+                />
+              </div>
+            </div>
+            <div
+              class="emotion-22"
+            >
+              <div
+                class="emotion-23"
+              >
+                <label
+                  class="emotion-19"
+                  for="background-hsl-Lightness"
+                >
+                  Lightness 0%
+                </label>
+              </div>
+              <div
+                class="emotion-25"
+              >
+                <input
+                  class="emotion-26"
+                  data-testid="background-hsl-Lightness"
+                  id="background-hsl-Lightness"
+                  max="100"
+                  min="0"
+                  type="range"
+                  value="0"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
