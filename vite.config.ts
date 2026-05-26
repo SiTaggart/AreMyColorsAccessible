@@ -4,9 +4,6 @@ import viteReact from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  optimizeDeps: {
-    exclude: ["@tanstack/react-start/server-entry"],
-  },
   plugins: [
     cloudflare({ viteEnvironment: { name: "ssr" } }),
     tanstackStart(),
