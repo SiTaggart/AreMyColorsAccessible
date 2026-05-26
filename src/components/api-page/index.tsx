@@ -12,6 +12,7 @@ import { Container } from "../layouts/container";
 import { Footer } from "../footer";
 import { Layout } from "../layouts/layout";
 import { CodeBlock } from "../CodeBlock";
+import type { GetRatingReturn } from "../../utils/color-rating";
 
 const PostURL = `https://www.aremycolorsaccessible.com/api/are-they`.trim();
 const PostBody = `
@@ -34,7 +35,7 @@ const APIPage: React.FC = () => {
   const foregroundID = useUID();
   const [background, setBackground] = React.useState("#e4ef65");
   const backgroundID = useUID();
-  const [postResult, setPostResult] = React.useState({});
+  const [postResult, setPostResult] = React.useState<GetRatingReturn | false | null>(null);
 
   const examplePostFetch = `
 fetch('https://www.aremycolorsaccessible.com/api/are-they', {
@@ -54,7 +55,7 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
       method: "POST",
       mode: "cors",
     })
-      .then((response) => response.json())
+      .then((response) => response.json<GetRatingReturn | false>())
       .then((json) => setPostResult(json));
 
   React.useEffect(() => {

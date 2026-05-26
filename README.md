@@ -31,19 +31,20 @@ The dev server runs on http://localhost:3000.
 
 ## Scripts
 
-| Script                   | Description                          |
-| ------------------------ | ------------------------------------ |
-| `bun run dev`            | Start the Vite dev server            |
-| `bun run build`          | Build for production and type-check  |
-| `bun run typecheck`      | Run `tsgo --noEmit`                  |
-| `bun run lint`           | Lint with Oxlint                     |
-| `bun run format`         | Format with Oxfmt                    |
-| `bun run format:check`   | Check formatting without writing     |
-| `bun run test`           | Run unit tests with Vitest           |
-| `bun run e2e`            | Run browser tests with Playwright    |
-| `bun run smoke`          | Build and smoke-test routes and APIs |
-| `bun run deploy:dry-run` | Build and validate Worker output     |
-| `bun run deploy`         | Build and deploy to Cloudflare       |
+| Script                   | Description                                  |
+| ------------------------ | -------------------------------------------- |
+| `bun run dev`            | Start the Vite dev server                    |
+| `bun run build`          | Build, generate Worker types, and type-check |
+| `bun run typecheck`      | Run `tsgo --noEmit`                          |
+| `bun run lint`           | Lint with Oxlint                             |
+| `bun run format`         | Format with Oxfmt                            |
+| `bun run format:check`   | Check formatting without writing             |
+| `bun run test`           | Run unit tests with Vitest                   |
+| `bun run e2e`            | Run browser tests with Playwright            |
+| `bun run smoke`          | Build and smoke-test routes and APIs         |
+| `bun run cf-typegen`     | Generate Cloudflare Worker types             |
+| `bun run deploy:dry-run` | Build and validate Worker output             |
+| `bun run deploy`         | Build and deploy to Cloudflare               |
 
 ## API
 
