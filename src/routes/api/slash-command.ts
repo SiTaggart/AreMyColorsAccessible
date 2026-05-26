@@ -5,7 +5,7 @@ import {
   getRating,
   type GetRatingReturn,
 } from "../../utils/color-rating";
-import { jsonResponse, preflightResponse } from "../../utils/http";
+import { jsonResponse, parseJsonBody, preflightResponse } from "../../utils/http";
 import { logger } from "../../utils/logger";
 import type { ColorPair } from "../../types";
 
@@ -124,7 +124,23 @@ const getColorRatingResponse = (slashText: string): Record<string, unknown> => {
   return getSlashCommandResponse(rating, colorsArray);
 };
 
-const readSlashText = async (request: Request): Promise<string> => {
+const readJsonSlashText = async (request: Request): Promise<string> => {
+  const result = await parseJsonBody(request);
+
+  if (!result.ok || typeof result.body !== "object" || result.body === null) {
+    return "";
+  }
+
+  const { text } = result.body as { text?: unknown };
+  return typeof text === "string" ? text : "";
+};
+
+export const readSlashText = async (request: Request): Promise<string> => {
+  const contentType = request.headers.get("content-type") ?? "";
+  if (contentType.toLowerCase().includes("application/json")) {
+    return readJsonSlashText(request);
+  }
+
   const text = await request.text();
   const params = new URLSearchParams(text);
   return params.get("text") ?? "";

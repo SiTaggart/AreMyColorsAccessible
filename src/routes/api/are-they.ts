@@ -7,9 +7,27 @@ interface AreTheyBody {
   colors?: string | Array<string>;
 }
 
-const readBody = async (request: Request): Promise<AreTheyBody> => {
-  const body = await parseJsonBody(request);
-  return typeof body === "object" && body !== null ? (body as AreTheyBody) : {};
+type ReadBodyResult =
+  | {
+      body: AreTheyBody;
+      ok: true;
+    }
+  | {
+      ok: false;
+    };
+
+const readBody = async (request: Request): Promise<ReadBodyResult> => {
+  const result = await parseJsonBody(request);
+
+  if (!result.ok) {
+    return { ok: false };
+  }
+
+  return {
+    body:
+      typeof result.body === "object" && result.body !== null ? (result.body as AreTheyBody) : {},
+    ok: true,
+  };
 };
 
 export const Route = createFileRoute("/api/are-they")({
@@ -17,7 +35,16 @@ export const Route = createFileRoute("/api/are-they")({
     handlers: {
       OPTIONS: async () => preflightResponse(),
       POST: async ({ request }) => {
-        const body = await readBody(request);
+        const result = await readBody(request);
+        if (!result.ok) {
+          logger.error("invalid json body");
+          return jsonResponse(
+            { message: "Error: request body must be valid JSON" },
+            { status: 400 },
+          );
+        }
+
+        const { body } = result;
         logger.info("body", { body });
         const colorsArray = body.colors ? ensureColorsAreAnArrayOfTwo(body.colors) : false;
 

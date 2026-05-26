@@ -20,10 +20,25 @@ export const preflightResponse = (): Response =>
     status: 204,
   });
 
-export const parseJsonBody = async (request: Request): Promise<unknown> => {
+export type JsonBodyParseResult =
+  | {
+      body: unknown;
+      ok: true;
+    }
+  | {
+      error: "invalid-json";
+      ok: false;
+    };
+
+export const parseJsonBody = async (request: Request): Promise<JsonBodyParseResult> => {
   const text = await request.text();
   if (!text) {
-    return {};
+    return { body: {}, ok: true };
   }
-  return JSON.parse(text) as unknown;
+
+  try {
+    return { body: JSON.parse(text) as unknown, ok: true };
+  } catch {
+    return { error: "invalid-json", ok: false };
+  }
 };
