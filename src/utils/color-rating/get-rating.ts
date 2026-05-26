@@ -1,4 +1,5 @@
 import ColorCombos from 'color-combos';
+
 import { ColorPair } from '../../types';
 import { colorRating, ColorRating } from './color-rating';
 

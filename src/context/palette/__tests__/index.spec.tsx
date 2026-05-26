@@ -1,7 +1,8 @@
 /* eslint-disable react/display-name */
 
-import * as React from 'react';
 import { renderHook, act, RenderHookResult } from '@testing-library/react';
+import * as React from 'react';
+
 import { PaletteDataProvider, usePaletteData, PaletteContextProps } from '..';
 
 type PaletteData = PaletteContextProps['paletteData'];
@@ -73,7 +74,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 0, 0],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 0, 255],
               contrast: 2.148_936_170_212_766,
               hex: '#0000FF',
@@ -81,7 +82,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 128, 0],
               contrast: 1.284_839_971_661_46,
               hex: '#008000',
@@ -97,7 +98,7 @@ describe('useSiteData hook', (): void => {
           color: [0, 0, 255],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
               contrast: 2.148_936_170_212_766,
               hex: '#FF0000',
@@ -105,7 +106,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 128, 0],
               contrast: 1.672_532_157_786_094_3,
               hex: '#008000',
@@ -121,7 +122,7 @@ describe('useSiteData hook', (): void => {
           color: [0, 128, 0],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
               contrast: 1.284_839_971_661_46,
               hex: '#FF0000',
@@ -129,7 +130,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 0, 255],
               contrast: 1.672_532_157_786_094_3,
               hex: '#0000FF',
@@ -157,7 +158,7 @@ describe('useSiteData hook', (): void => {
           color: [128, 0, 128],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [255, 192, 203],
               contrast: 6.124_225_406_859_997,
               hex: '#FFC0CB',
@@ -165,7 +166,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [255, 165, 0],
               contrast: 4.769_614_668_743_367,
               hex: '#FFA500',
@@ -181,7 +182,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 192, 203],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [128, 0, 128],
               contrast: 6.124_225_406_859_997,
               hex: '#800080',
@@ -189,7 +190,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 165, 0],
               contrast: 1.284_008_422_523_894_1,
               hex: '#FFA500',
@@ -205,7 +206,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 165, 0],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [128, 0, 128],
               contrast: 4.769_614_668_743_367,
               hex: '#800080',
@@ -213,7 +214,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 192, 203],
               contrast: 1.284_008_422_523_894_1,
               hex: '#FFC0CB',
@@ -241,7 +242,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 255, 255],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
+              accessibility: { aa: true, aaa: true, aaaLarge: true, aaLarge: true },
               color: [0, 0, 0],
               contrast: 21,
               hex: '#000000',
@@ -257,7 +258,7 @@ describe('useSiteData hook', (): void => {
           color: [0, 0, 0],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
+              accessibility: { aa: true, aaa: true, aaaLarge: true, aaLarge: true },
               color: [255, 255, 255],
               contrast: 21,
               hex: '#FFFFFF',
@@ -285,7 +286,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 255, 255],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: true, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: true },
               color: [255, 0, 0],
               contrast: 3.998_476_770_753_998_5,
               hex: '#FF0000',
@@ -301,7 +302,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 0, 0],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: true, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: true },
               color: [255, 255, 255],
               contrast: 3.998_476_770_753_998_5,
               hex: '#FFFFFF',
@@ -329,7 +330,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 255, 255],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 255, 255],
               contrast: 1,
               hex: '#FFFFFF',
@@ -337,7 +338,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
+              accessibility: { aa: true, aaa: true, aaaLarge: true, aaLarge: true },
               color: [0, 0, 0],
               contrast: 21,
               hex: '#000000',
@@ -353,7 +354,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 255, 255],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 255, 255],
               contrast: 1,
               hex: '#FFFFFF',
@@ -361,7 +362,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
+              accessibility: { aa: true, aaa: true, aaaLarge: true, aaLarge: true },
               color: [0, 0, 0],
               contrast: 21,
               hex: '#000000',
@@ -377,7 +378,7 @@ describe('useSiteData hook', (): void => {
           color: [0, 0, 0],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
+              accessibility: { aa: true, aaa: true, aaaLarge: true, aaLarge: true },
               color: [255, 255, 255],
               contrast: 21,
               hex: '#FFFFFF',
@@ -385,7 +386,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
+              accessibility: { aa: true, aaa: true, aaaLarge: true, aaLarge: true },
               color: [255, 255, 255],
               contrast: 21,
               hex: '#FFFFFF',
@@ -427,7 +428,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 0, 0],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 0, 255],
               contrast: 2.148_936_170_212_766,
               hex: '#0000FF',
@@ -435,7 +436,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [128, 0, 128],
               contrast: 2.355_641_379_714_500_6,
               hex: '#800080',
@@ -451,7 +452,7 @@ describe('useSiteData hook', (): void => {
           color: [0, 0, 255],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
               contrast: 2.148_936_170_212_766,
               hex: '#FF0000',
@@ -459,7 +460,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [128, 0, 128],
               contrast: 1.096_189_552_936_450_7,
               hex: '#800080',
@@ -475,7 +476,7 @@ describe('useSiteData hook', (): void => {
           color: [128, 0, 128],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
               contrast: 2.355_641_379_714_500_6,
               hex: '#FF0000',
@@ -483,7 +484,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 0, 255],
               contrast: 1.096_189_552_936_450_7,
               hex: '#0000FF',
@@ -514,7 +515,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 165, 0],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
               contrast: 2.024_762_644_185_438_7,
               hex: '#FF0000',
@@ -522,7 +523,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [128, 0, 128],
               contrast: 4.769_614_668_743_367,
               hex: '#800080',
@@ -538,7 +539,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 0, 0],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 165, 0],
               contrast: 2.024_762_644_185_438_7,
               hex: '#FFA500',
@@ -546,7 +547,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [128, 0, 128],
               contrast: 2.355_641_379_714_500_6,
               hex: '#800080',
@@ -562,7 +563,7 @@ describe('useSiteData hook', (): void => {
           color: [128, 0, 128],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [255, 165, 0],
               contrast: 4.769_614_668_743_367,
               hex: '#FFA500',
@@ -570,7 +571,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
               contrast: 2.355_641_379_714_500_6,
               hex: '#FF0000',
@@ -601,7 +602,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 165, 0],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: true, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: true },
               color: [0, 0, 255],
               contrast: 4.351_085_682_185_73,
               hex: '#0000FF',
@@ -609,7 +610,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
               contrast: 2.024_762_644_185_438_7,
               hex: '#FF0000',
@@ -625,7 +626,7 @@ describe('useSiteData hook', (): void => {
           color: [0, 0, 255],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: true, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: true },
               color: [255, 165, 0],
               contrast: 4.351_085_682_185_73,
               hex: '#FFA500',
@@ -633,7 +634,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
               contrast: 2.148_936_170_212_766,
               hex: '#FF0000',
@@ -649,7 +650,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 0, 0],
           combinations: [
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 165, 0],
               contrast: 2.024_762_644_185_438_7,
               hex: '#FFA500',
@@ -657,7 +658,7 @@ describe('useSiteData hook', (): void => {
               valpha: 1,
             },
             {
-              accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+              accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 0, 255],
               contrast: 2.148_936_170_212_766,
               hex: '#0000FF',

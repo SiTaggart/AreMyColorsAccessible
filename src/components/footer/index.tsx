@@ -1,7 +1,7 @@
-import React, { ReactElement } from 'react';
-import { Link } from '@tanstack/react-router';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import { Link } from '@tanstack/react-router';
+import React, { ReactElement } from 'react';
 
 interface FooterProps {
   styles?: { footerLinks?: React.CSSProperties };

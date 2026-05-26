@@ -1,5 +1,6 @@
 import { render, fireEvent } from '@testing-library/react';
 import ColorCombos from 'color-combos';
+
 import { ColorMatrix, ColorMatrixProps } from '..';
 
 describe('ColorMatrix', (): void => {
@@ -9,8 +10,8 @@ describe('ColorMatrix', (): void => {
 
   if (mockColorColorCombos !== false) {
     mockProps = {
-      colors: ['#fff', '#ccc', '#777', '#000'],
       colorCombos: mockColorColorCombos,
+      colors: ['#fff', '#ccc', '#777', '#000'],
       onColorChange: onColorChangeMock,
     };
   }

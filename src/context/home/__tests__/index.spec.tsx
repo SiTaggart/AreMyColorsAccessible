@@ -1,7 +1,8 @@
 /* eslint-disable react/display-name */
 
-import * as React from 'react';
 import { renderHook, act } from '@testing-library/react';
+import * as React from 'react';
+
 import { SiteDataProvider, useSiteData, HomeContextInterface } from '..';
 
 describe('useSiteData hook', (): void => {
@@ -20,7 +21,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 255, 255],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [18, 118, 206],
               contrast: 4.658_034_537_943_552,
               hex: '#1276CE',
@@ -36,7 +37,7 @@ describe('useSiteData hook', (): void => {
           color: [18, 118, 206],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [255, 255, 255],
               contrast: 4.658_034_537_943_552,
               hex: '#FFFFFF',
@@ -60,9 +61,9 @@ describe('useSiteData hook', (): void => {
         <SiteDataProvider
           initialSiteData={{
             background: '#111',
-            textColor: 'rgb(239,239,239)',
             colorCombos: [],
             isLight: true,
+            textColor: 'rgb(239,239,239)',
           }}
         >
           {children}
@@ -76,7 +77,7 @@ describe('useSiteData hook', (): void => {
           color: [239, 239, 239],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
+              accessibility: { aa: true, aaa: true, aaaLarge: true, aaLarge: true },
               color: [17, 17, 17],
               contrast: 16.422_098_411_346_187,
               hex: '#111111',
@@ -92,7 +93,7 @@ describe('useSiteData hook', (): void => {
           color: [17, 17, 17],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
+              accessibility: { aa: true, aaa: true, aaaLarge: true, aaLarge: true },
               color: [239, 239, 239],
               contrast: 16.422_098_411_346_187,
               hex: '#EFEFEF',
@@ -130,7 +131,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 255, 255],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
+              accessibility: { aa: true, aaa: true, aaaLarge: true, aaLarge: true },
               color: [68, 68, 68],
               contrast: 9.739_769_120_526_205,
               hex: '#444444',
@@ -146,7 +147,7 @@ describe('useSiteData hook', (): void => {
           color: [68, 68, 68],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: true, aaaLarge: true },
+              accessibility: { aa: true, aaa: true, aaaLarge: true, aaLarge: true },
               color: [255, 255, 255],
               contrast: 9.739_769_120_526_205,
               hex: '#FFFFFF',
@@ -182,7 +183,7 @@ describe('useSiteData hook', (): void => {
           color: [0, 0, 0],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [18, 118, 206],
               contrast: 4.508_339_263_897_164,
               hex: '#1276CE',
@@ -198,7 +199,7 @@ describe('useSiteData hook', (): void => {
           color: [18, 118, 206],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [0, 0, 0],
               contrast: 4.508_339_263_897_164,
               hex: '#000000',
@@ -235,7 +236,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 255, 255],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [18, 118, 206],
               contrast: 4.658_034_537_943_552,
               hex: '#1276CE',
@@ -251,7 +252,7 @@ describe('useSiteData hook', (): void => {
           color: [18, 118, 206],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [255, 255, 255],
               contrast: 4.658_034_537_943_552,
               hex: '#FFFFFF',
@@ -288,7 +289,7 @@ describe('useSiteData hook', (): void => {
           color: [255, 255, 255],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [18, 118, 206],
               contrast: 4.658_034_537_943_552,
               hex: '#1276CE',
@@ -304,7 +305,7 @@ describe('useSiteData hook', (): void => {
           color: [18, 118, 206],
           combinations: [
             {
-              accessibility: { aa: true, aaLarge: true, aaa: false, aaaLarge: true },
+              accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [255, 255, 255],
               contrast: 4.658_034_537_943_552,
               hex: '#FFFFFF',
@@ -328,9 +329,9 @@ describe('useSiteData hook', (): void => {
         <SiteDataProvider
           initialSiteData={{
             background: '#fff',
-            textColor: '#fff',
             colorCombos: [],
             isLight: true,
+            textColor: '#fff',
           }}
         >
           {children}

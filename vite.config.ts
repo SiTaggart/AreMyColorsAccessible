@@ -1,17 +1,16 @@
-import { defineConfig } from 'vite';
 import { cloudflare } from '@cloudflare/vite-plugin';
 import { tanstackStart } from '@tanstack/react-start/plugin/vite';
 import viteReact from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-  server: {
-    cors: {
-      allowedHeaders: ['Content-Type'],
-      methods: ['GET', 'POST', 'OPTIONS'],
-      origin: '*',
-    },
-    port: 3000,
-  },
+  plugins: [
+    cloudflare({ viteEnvironment: { name: 'ssr' } }),
+    tanstackStart(),
+    viteReact({
+      jsxImportSource: '@emotion/react',
+    }),
+  ],
   preview: {
     cors: {
       allowedHeaders: ['Content-Type'],
@@ -22,11 +21,12 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
-  plugins: [
-    cloudflare({ viteEnvironment: { name: 'ssr' } }),
-    tanstackStart(),
-    viteReact({
-      jsxImportSource: '@emotion/react',
-    }),
-  ],
+  server: {
+    cors: {
+      allowedHeaders: ['Content-Type'],
+      methods: ['GET', 'POST', 'OPTIONS'],
+      origin: '*',
+    },
+    port: 3000,
+  },
 });

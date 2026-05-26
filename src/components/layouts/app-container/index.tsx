@@ -1,9 +1,10 @@
-import React, { ReactElement } from 'react';
 import { Global } from '@emotion/react';
 import styled from '@emotion/styled';
+import React, { ReactElement } from 'react';
+
+import { useSiteData } from '../../../context/home';
 import { breakpoint } from '../../../styles/utils';
 import { Footer } from '../../footer';
-import { useSiteData } from '../../../context/home';
 
 const StyledAppContainer = styled.div`
   ${breakpoint('small')} {

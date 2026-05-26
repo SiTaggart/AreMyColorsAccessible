@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+
 import { FormLabel } from '..';
 
 describe('FormLabel', (): void => {
@@ -11,7 +12,7 @@ describe('FormLabel', (): void => {
     const { asFragment } = render(
       <FormLabel htmlFor="input-id" variant="large">
         children
-      </FormLabel>
+      </FormLabel>,
     );
     expect(asFragment()).toMatchSnapshot();
   });

@@ -1,13 +1,14 @@
 import { render } from '@testing-library/react';
-import { SiteDataProvider } from '../../../context/home';
+
 import { Results } from '..';
+import { SiteDataProvider } from '../../../context/home';
 
 describe('Results', (): void => {
   it('renders without crashing', (): void => {
     const { asFragment } = render(
       <SiteDataProvider>
         <Results />
-      </SiteDataProvider>
+      </SiteDataProvider>,
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -17,13 +18,13 @@ describe('Results', (): void => {
       <SiteDataProvider
         initialSiteData={{
           background: '#000',
-          textColor: '#fff',
-          isLight: true,
           colorCombos: [],
+          isLight: true,
+          textColor: '#fff',
         }}
       >
         <Results />
-      </SiteDataProvider>
+      </SiteDataProvider>,
     );
     expect(getByTestId('contrastResults-heading').textContent).toBe('Yup');
     expect(getByTestId('contrastResult-rating-small').textContent).toEqual('AAA');
@@ -36,13 +37,13 @@ describe('Results', (): void => {
       <SiteDataProvider
         initialSiteData={{
           background: '#666',
-          textColor: '#fff',
-          isLight: true,
           colorCombos: [],
+          isLight: true,
+          textColor: '#fff',
         }}
       >
         <Results />
-      </SiteDataProvider>
+      </SiteDataProvider>,
     );
     expect(getByTestId('contrastResults-heading').textContent).toBe('Yup');
     expect(getByTestId('contrastResult-rating-small').textContent).toEqual('AA');
@@ -55,13 +56,13 @@ describe('Results', (): void => {
       <SiteDataProvider
         initialSiteData={{
           background: '#000',
-          textColor: '#666',
-          isLight: true,
           colorCombos: [],
+          isLight: true,
+          textColor: '#666',
         }}
       >
         <Results />
-      </SiteDataProvider>
+      </SiteDataProvider>,
     );
     expect(getByTestId('contrastResults-heading').textContent).toBe('Kinda');
     expect(getByTestId('contrastResult-rating-small').textContent).toEqual('Fail');
@@ -74,13 +75,13 @@ describe('Results', (): void => {
       <SiteDataProvider
         initialSiteData={{
           background: '#000',
-          textColor: '#555',
-          isLight: true,
           colorCombos: [],
+          isLight: true,
+          textColor: '#555',
         }}
       >
         <Results />
-      </SiteDataProvider>
+      </SiteDataProvider>,
     );
     expect(getByTestId('contrastResults-heading').textContent).toBe('Nope');
     expect(getByTestId('contrastResult-rating-small').textContent).toEqual('Fail');
@@ -93,13 +94,13 @@ describe('Results', (): void => {
       <SiteDataProvider
         initialSiteData={{
           background: '#000',
-          textColor: '#111',
-          isLight: true,
           colorCombos: [],
+          isLight: true,
+          textColor: '#111',
         }}
       >
         <Results />
-      </SiteDataProvider>
+      </SiteDataProvider>,
     );
 
     expect(getByTestId('contrastResults-seriously')).not.toBeNull();
@@ -110,13 +111,13 @@ describe('Results', (): void => {
       <SiteDataProvider
         initialSiteData={{
           background: '#000',
-          textColor: '#191920',
-          isLight: true,
           colorCombos: [],
+          isLight: true,
+          textColor: '#191920',
         }}
       >
         <Results />
-      </SiteDataProvider>
+      </SiteDataProvider>,
     );
     expect(asFragment()).toMatchSnapshot();
   });

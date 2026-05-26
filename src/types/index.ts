@@ -3,18 +3,18 @@ import { ColorCombo } from 'color-combos';
 export type ColorPair = [string, string];
 export interface Levels {
   aa: boolean;
-  aaLarge: boolean;
   aaa: boolean;
   aaaLarge: boolean;
+  aaLarge: boolean;
 }
 
 export interface SiteData {
   background: string;
-  textColor: string;
+  colorCombos: Array<ColorCombo>;
   isLight: boolean;
-  colorCombos: ColorCombo[];
+  textColor: string;
 }
 
 export interface PalettePageQueryString {
-  colors: string[];
+  colors: Array<string>;
 }

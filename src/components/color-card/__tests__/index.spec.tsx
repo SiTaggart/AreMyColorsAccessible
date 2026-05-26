@@ -1,13 +1,14 @@
 import { render } from '@testing-library/react';
+
 import { ColorCard, ColorCardProps } from '..';
 
 describe('ColorCard', (): void => {
   const mockProps: ColorCardProps = {
     accessibility: {
       aa: true,
-      aaLarge: true,
       aaa: true,
       aaaLarge: true,
+      aaLarge: true,
     },
     color: '#000',
     contrast: 21,

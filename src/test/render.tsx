@@ -1,10 +1,10 @@
-import { render, type RenderResult } from '@testing-library/react';
 import {
   RouterProvider,
   createMemoryHistory,
   createRootRoute,
   createRouter,
 } from '@tanstack/react-router';
+import { render, type RenderResult } from '@testing-library/react';
 import type { ReactElement, ReactNode } from 'react';
 
 // Components that use TanStack Router's <Link> need a router in context. This
@@ -14,8 +14,8 @@ import type { ReactElement, ReactNode } from 'react';
 export async function renderWithRouter(ui: ReactNode): Promise<RenderResult> {
   const rootRoute = createRootRoute({ component: () => ui as ReactElement });
   const router = createRouter({
-    routeTree: rootRoute,
     history: createMemoryHistory({ initialEntries: ['/'] }),
+    routeTree: rootRoute,
   });
 
   await router.load();

@@ -1,24 +1,24 @@
 interface SeoArgs {
-  title: string;
   description?: string;
+  title: string;
 }
 
-type MetaTag = { title: string } | { name: string; content: string };
+type MetaTag = { title: string } | { content: string; name: string };
 
-export const seo = ({ title, description }: SeoArgs): MetaTag[] => {
-  const tags: MetaTag[] = [
+export const seo = ({ description, title }: SeoArgs): Array<MetaTag> => {
+  const tags: Array<MetaTag> = [
     { title },
-    { name: 'og:type', content: 'website' },
-    { name: 'og:title', content: title },
-    { name: 'twitter:card', content: 'summary' },
-    { name: 'twitter:title', content: title },
+    { content: 'website', name: 'og:type' },
+    { content: title, name: 'og:title' },
+    { content: 'summary', name: 'twitter:card' },
+    { content: title, name: 'twitter:title' },
   ];
 
   if (description) {
     tags.push(
-      { name: 'description', content: description },
-      { name: 'og:description', content: description },
-      { name: 'twitter:description', content: description }
+      { content: description, name: 'description' },
+      { content: description, name: 'og:description' },
+      { content: description, name: 'twitter:description' },
     );
   }
 

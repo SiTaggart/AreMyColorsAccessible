@@ -1,5 +1,6 @@
-import React, { ReactElement } from 'react';
 import styled, { CSSObject } from '@emotion/styled';
+import React, { ReactElement } from 'react';
+
 import { Levels } from '../../types';
 import { colorRating } from '../../utils/color-rating';
 
@@ -67,9 +68,9 @@ const StyledColorCardPill = styled.span<StyledColorCardPillProps>`
 
 const ColorCard: React.FC<ColorCardProps> = ({
   accessibility,
-  isNotImportant,
-  contrast,
   color,
+  contrast,
+  isNotImportant,
 }: ColorCardProps): ReactElement<HTMLDivElement> => {
   const rating = colorRating(accessibility);
 

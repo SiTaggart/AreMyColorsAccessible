@@ -1,18 +1,13 @@
 {
   "$schema": "./node_modules/oxfmt/configuration_schema.json",
-  "singleQuote": true,
-  "semi": true,
-  "printWidth": 100,
-  "tabWidth": 2,
-  "trailingComma": "es5",
-  "arrowParens": "always",
   "ignorePatterns": [
-    "dist",
-    ".wrangler",
-    "coverage",
-    "playwright-report",
-    ".github/workflows/nextjs_bundle_analysis.yml",
+    ".wrangler/",
+    "coverage/",
+    "dist/",
+    "playwright-report/",
     "src/routeTree.gen.ts",
     "worker-configuration.d.ts"
-  ]
+  ],
+  "singleQuote": true,
+  "sortImports": true
 }

@@ -1,14 +1,15 @@
-/* eslint-disable react/no-array-index-key */
-import React, { ReactElement } from 'react';
 import styled from '@emotion/styled';
 import { ColorCombo } from 'color-combos';
+/* eslint-disable react/no-array-index-key */
+import React, { ReactElement } from 'react';
+
 import { ColorCard } from '../color-card';
 import { FormInput } from '../form-input';
 import { HslSliders } from '../hsl-sliders';
 
 export interface ColorMatrixProps {
-  colors: string[];
-  colorCombos: ColorCombo[];
+  colorCombos: Array<ColorCombo>;
+  colors: Array<string>;
   onColorChange: (newColor: string, index: number) => void;
 }
 
@@ -50,7 +51,7 @@ const ColorMatrix: React.FC<ColorMatrixProps> = ({
           />
           {colorCombos.map(
             (color, index): ReactElement => (
-              <StyledColorMatrixTh key={index} data-testid="colorMatrix-th" scope="col">
+              <StyledColorMatrixTh data-testid="colorMatrix-th" key={index} scope="col">
                 <FormInput
                   ariaLabel="hex colour code"
                   css={{
@@ -69,14 +70,14 @@ const ColorMatrix: React.FC<ColorMatrixProps> = ({
                   variant="compact"
                 />
               </StyledColorMatrixTh>
-            )
+            ),
           )}
         </StyledColorMatrixTr>
       </thead>
       <tbody>
         {colorCombos.map(
           (color, index): ReactElement => (
-            <StyledColorMatrixTr key={index} data-testid="colorMatrix-tr">
+            <StyledColorMatrixTr data-testid="colorMatrix-tr" key={index}>
               <StyledColorMatrixTh data-testid="colorMatrix-th" scope="row">
                 {color.hex}
               </StyledColorMatrixTh>
@@ -96,10 +97,10 @@ const ColorMatrix: React.FC<ColorMatrixProps> = ({
                       />
                     </StyledColorMatrixTd>
                   </React.Fragment>
-                )
+                ),
               )}
             </StyledColorMatrixTr>
-          )
+          ),
         )}
       </tbody>
     </StyledColorMatrixTable>

@@ -1,4 +1,5 @@
 import { render, fireEvent } from '@testing-library/react';
+
 import { HSLSlider } from '..';
 
 describe('hsl-slider', (): void => {
@@ -15,7 +16,7 @@ describe('hsl-slider', (): void => {
         onInput={onChangeMock}
         symbol="%"
         value={30}
-      />
+      />,
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -33,7 +34,7 @@ describe('hsl-slider', (): void => {
           symbol="%"
           value={30}
           variant="compact"
-        />
+        />,
       );
       expect(asFragment()).toMatchSnapshot();
     });
@@ -50,7 +51,7 @@ describe('hsl-slider', (): void => {
           symbol="%"
           value={30}
           variant="compact"
-        />
+        />,
       );
       expect(getByLabelText('T')).not.toBeNull();
     });
@@ -67,7 +68,7 @@ describe('hsl-slider', (): void => {
         onInput={onChangeMock}
         symbol="%"
         value={30}
-      />
+      />,
     );
     fireEvent.change(getByTestId('onchange-test'), { target: { value: '60' } });
     expect(onChangeMock).toHaveBeenCalled();
@@ -85,7 +86,7 @@ describe('hsl-slider', (): void => {
         onInput={onInputMock}
         symbol="%"
         value={30}
-      />
+      />,
     );
     fireEvent.change(getByTestId('oninput-test'), { target: { value: '60' } });
     expect(onInputMock).toHaveBeenCalled();

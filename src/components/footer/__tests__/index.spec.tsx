@@ -1,5 +1,6 @@
-import { Footer } from '..';
 import { renderWithRouter } from '~/test/render';
+
+import { Footer } from '..';
 
 describe('Footer', (): void => {
   const mockProps = {

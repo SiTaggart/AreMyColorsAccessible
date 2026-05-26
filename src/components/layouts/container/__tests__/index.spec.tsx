@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+
 import { Container } from '..';
 
 describe('Container', (): void => {
@@ -6,7 +7,7 @@ describe('Container', (): void => {
     const { asFragment } = render(
       <Container>
         <div>children</div>
-      </Container>
+      </Container>,
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -15,7 +16,7 @@ describe('Container', (): void => {
     const { asFragment } = render(
       <Container variant="home">
         <div>children</div>
-      </Container>
+      </Container>,
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -24,7 +25,7 @@ describe('Container', (): void => {
     const { asFragment } = render(
       <Container variant="about">
         <div>children</div>
-      </Container>
+      </Container>,
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -33,7 +34,7 @@ describe('Container', (): void => {
     const { asFragment } = render(
       <Container variant="palette">
         <div>children</div>
-      </Container>
+      </Container>,
     );
     expect(asFragment()).toMatchSnapshot();
   });

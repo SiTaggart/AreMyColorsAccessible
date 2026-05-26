@@ -1,7 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router';
+
 import { ensureColorsAreAnArrayOfTwo, getRating } from '~/utils/color-rating';
-import { logger } from '~/utils/logger';
 import { jsonResponse, preflightResponse } from '~/utils/http';
+import { logger } from '~/utils/logger';
 
 const handle = async ({ request }: { request: Request }): Promise<Response> => {
   logger.info('url', { url: request.url });
@@ -9,9 +10,9 @@ const handle = async ({ request }: { request: Request }): Promise<Response> => {
   const raw = await request.text();
   logger.info('body', { body: raw });
 
-  let colors: string | string[] | undefined;
+  let colors: string | Array<string> | undefined;
   try {
-    colors = raw ? (JSON.parse(raw) as { colors?: string | string[] }).colors : undefined;
+    colors = raw ? (JSON.parse(raw) as { colors?: string | Array<string> }).colors : undefined;
   } catch {
     colors = undefined;
   }
@@ -33,8 +34,8 @@ const handle = async ({ request }: { request: Request }): Promise<Response> => {
 export const Route = createFileRoute('/api/are-they')({
   server: {
     handlers: {
-      OPTIONS: preflightResponse,
       GET: handle,
+      OPTIONS: preflightResponse,
       POST: handle,
     },
   },

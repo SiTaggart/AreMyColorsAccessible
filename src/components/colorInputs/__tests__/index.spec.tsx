@@ -1,16 +1,17 @@
 import { render, fireEvent } from '@testing-library/react';
 import ColorCombos, { ColorCombo } from 'color-combos';
+
 import { ColorInputs } from '..';
 import * as HomeContext from '../../../context/home';
 
 describe('ColorInputs', (): void => {
-  let colorCombos: ColorCombo[] | false;
+  let colorCombos: Array<ColorCombo> | false;
   let mockContext: HomeContext.HomeContextInterface;
   const handleBackgroundColorInputChange = vi.fn<(value: string) => void>();
   const handleTextColorInputChange = vi.fn<(value: string) => void>();
 
   vi.spyOn(HomeContext, 'useSiteData').mockImplementation(
-    (): HomeContext.HomeContextInterface => mockContext
+    (): HomeContext.HomeContextInterface => mockContext,
   );
 
   beforeEach((): void => {
@@ -18,14 +19,14 @@ describe('ColorInputs', (): void => {
     colorCombos = ColorCombos(['#fff', '#000']);
     if (colorCombos !== false) {
       mockContext = {
+        handleBackgroundColorInputChange,
+        handleTextColorInputChange,
         siteData: {
           background: '#000',
           colorCombos,
           isLight: false,
           textColor: '#fff',
         },
-        handleBackgroundColorInputChange,
-        handleTextColorInputChange,
       };
     }
   });

@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+
 import { Layout } from '..';
 
 describe('Layout', (): void => {
@@ -6,7 +7,7 @@ describe('Layout', (): void => {
     const { asFragment } = render(
       <Layout>
         <div>children</div>
-      </Layout>
+      </Layout>,
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -15,7 +16,7 @@ describe('Layout', (): void => {
     const { asFragment } = render(
       <Layout variant="full">
         <div>children</div>
-      </Layout>
+      </Layout>,
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -24,7 +25,7 @@ describe('Layout', (): void => {
     const { asFragment } = render(
       <Layout variant="large">
         <div>children</div>
-      </Layout>
+      </Layout>,
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -33,7 +34,7 @@ describe('Layout', (): void => {
     const { asFragment } = render(
       <Layout variant="small">
         <div>children</div>
-      </Layout>
+      </Layout>,
     );
     expect(asFragment()).toMatchSnapshot();
   });

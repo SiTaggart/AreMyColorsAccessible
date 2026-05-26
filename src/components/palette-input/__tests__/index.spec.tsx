@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+
 import { PaletteInput } from '..';
 
 describe('PaletteInput', (): void => {
@@ -11,7 +12,7 @@ describe('PaletteInput', (): void => {
 
   it('should render an error message when passed', (): void => {
     const { asFragment } = render(
-      <PaletteInput errorMessage="I'm an error" onColorAdd={mockOnColorAdd} />
+      <PaletteInput errorMessage="I'm an error" onColorAdd={mockOnColorAdd} />,
     );
     expect(asFragment()).toMatchSnapshot();
   });

@@ -1,72 +1,73 @@
 import { createFileRoute } from '@tanstack/react-router';
 import qs from 'query-string';
+
+import { ColorPair } from '~/types';
 import { ensureColorsAreAnArrayOfTwo, getRating } from '~/utils/color-rating';
 import type { GetRatingReturn } from '~/utils/color-rating';
-import { logger } from '~/utils/logger';
 import { jsonResponse, preflightResponse } from '~/utils/http';
-import { ColorPair } from '~/types';
+import { logger } from '~/utils/logger';
 
 const getURL = (colors: ColorPair): string =>
   qs.stringify({
     background: colors[1],
-    textColor: colors[0],
     isLight: true,
+    textColor: colors[0],
   });
 
 const getSlashCommandResponse = (
   rating: GetRatingReturn,
-  colors: ColorPair
+  colors: ColorPair,
 ): Record<string, unknown> => ({
   blocks: [
     {
-      type: 'header',
       text: {
-        type: 'plain_text',
-        text: rating.overall,
         emoji: true,
+        text: rating.overall,
+        type: 'plain_text',
       },
+      type: 'header',
     },
     {
-      type: 'section',
       text: {
-        type: 'mrkdwn',
         text: `*${colors[0]}* on *${colors[1]}* has a contrast ratio of *${rating.contrast}*. You will get the following WCAG ratings:`,
+        type: 'mrkdwn',
       },
+      type: 'section',
     },
     {
-      type: 'section',
       text: {
-        type: 'mrkdwn',
         text: `Any old text: *${rating.small}*`,
+        type: 'mrkdwn',
       },
+      type: 'section',
     },
     {
-      type: 'section',
       text: {
-        type: 'mrkdwn',
         text: `Bold text above 18px: *${rating.bold}*`,
+        type: 'mrkdwn',
       },
+      type: 'section',
     },
     {
-      type: 'section',
       text: {
-        type: 'mrkdwn',
         text: `Large text over 24px: *${rating.large}*`,
+        type: 'mrkdwn',
       },
+      type: 'section',
     },
     {
       type: 'divider',
     },
     {
-      type: 'context',
       elements: [
         {
-          type: 'mrkdwn',
           text: `:guide_dog: Tweak it <https://www.aremycolorsaccessible.com/?${getURL(
-            colors
+            colors,
           )}|here>.`,
+          type: 'mrkdwn',
         },
       ],
+      type: 'context',
     },
   ],
 });
@@ -100,25 +101,25 @@ const returnHelpResponse = (): Response =>
   jsonResponse({
     blocks: [
       {
-        type: 'section',
         text: {
-          type: 'mrkdwn',
           text: `Keep it simple, give me two colors with a space between and I'll tell you if they're an accessible combination. You can try something like:`,
+          type: 'mrkdwn',
         },
+        type: 'section',
       },
       {
-        type: 'section',
         text: {
-          type: 'mrkdwn',
           text: `/color-check #fff #000`,
+          type: 'mrkdwn',
         },
+        type: 'section',
       },
       {
-        type: 'section',
         text: {
-          type: 'mrkdwn',
           text: `/color-check rgb(255,255,255) rgb(0,0,0)`,
+          type: 'mrkdwn',
         },
+        type: 'section',
       },
     ],
   });

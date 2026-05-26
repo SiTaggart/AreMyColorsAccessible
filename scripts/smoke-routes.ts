@@ -5,26 +5,26 @@ const port = 4173;
 const baseUrl = `http://${host}:${port}`;
 
 interface HtmlRoute {
-  path: string;
+  expectedStatus?: number;
   expectedText: string;
   expectedTitle?: string;
-  expectedStatus?: number;
+  path: string;
 }
 
-const htmlRoutes: HtmlRoute[] = [
+const htmlRoutes: Array<HtmlRoute> = [
   {
-    path: '/',
     expectedText: 'Are My Colours Accessible',
     expectedTitle: 'Are My Colours Accessible',
+    path: '/',
   },
   {
-    path: '/palette',
     expectedText: 'Add the colours from your palette',
     expectedTitle: 'Palette checker - Are My Colours Accessible',
+    path: '/palette',
   },
-  { path: '/api-page', expectedText: 'Are My Colours Accessible API' },
-  { path: '/about', expectedText: 'Are my Colours Accessible?' },
-  { path: '/not-a-real-route', expectedText: 'Page not found', expectedStatus: 404 },
+  { expectedText: 'Are My Colours Accessible API', path: '/api-page' },
+  { expectedText: 'Are my Colours Accessible?', path: '/about' },
+  { expectedStatus: 404, expectedText: 'Page not found', path: '/not-a-real-route' },
 ];
 
 const startPreview = (): ChildProcess => {
@@ -63,10 +63,10 @@ const waitForServer = async (): Promise<void> => {
 };
 
 const assertHtmlRoute = async ({
-  path,
+  expectedStatus = 200,
   expectedText,
   expectedTitle,
-  expectedStatus = 200,
+  path,
 }: HtmlRoute): Promise<void> => {
   const response = await fetch(`${baseUrl}${path}`);
   const html = await response.text();
@@ -91,10 +91,10 @@ const assertAreTheyApi = async (): Promise<void> => {
   }
 
   const response = await fetch(`${baseUrl}/api/are-they`, {
-    method: 'POST',
     body: JSON.stringify({ colors: ['#fff', '#000'] }),
+    method: 'POST',
   });
-  const json = (await response.json()) as { overall?: unknown; contrast?: unknown };
+  const json = (await response.json()) as { contrast?: unknown; overall?: unknown };
 
   if (response.status !== 200 || json.overall !== 'Yup' || json.contrast !== '21: 1') {
     throw new Error(`/api/are-they returned unexpected payload: ${JSON.stringify(json)}`);
@@ -103,8 +103,8 @@ const assertAreTheyApi = async (): Promise<void> => {
 
 const assertSlashCommandApi = async (): Promise<void> => {
   const response = await fetch(`${baseUrl}/api/slash-command`, {
-    method: 'POST',
     body: new URLSearchParams({ text: 'help' }),
+    method: 'POST',
   });
   const json = (await response.json()) as { blocks?: unknown };
 

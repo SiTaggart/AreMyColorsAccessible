@@ -36,7 +36,7 @@ test.describe('Homepage', () => {
     await expect
       .poll(() => search(page))
       .toBe(
-        '?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23ccc'
+        '?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23ccc',
       );
   });
 
@@ -50,7 +50,7 @@ test.describe('Homepage', () => {
     await expect
       .poll(() => search(page))
       .toBe(
-        '?background=%23ccc&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=true&textColor=%23FFFFFF'
+        '?background=%23ccc&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=true&textColor=%23FFFFFF',
       );
   });
 
@@ -75,7 +75,7 @@ test.describe('Homepage', () => {
   test('renders from query string parameters', async ({ page }) => {
     await open(
       page,
-      '/?background=%23B9DDF8&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=true&textColor=%23B25334'
+      '/?background=%23B9DDF8&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=true&textColor=%23B25334',
     );
 
     await expect(page.locator('body')).toHaveCSS('background-color', 'rgb(185, 221, 248)');

@@ -1,26 +1,26 @@
-import React, { ReactElement } from 'react';
 import styled, { CSSObject } from '@emotion/styled';
+import React, { ReactElement } from 'react';
 
 export interface FormInputProps {
   ariaLabel?: string;
+  className?: string;
+  css?: CSSObject;
   defaultValue?: string;
   errorMessage?: string;
-  id: string;
   hasNoSpacing?: boolean;
+  id: string;
   name?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   style?: React.CSSProperties;
   value?: string;
-  className?: string;
-  css?: CSSObject;
 }
 
 interface StyledInputProps {
-  isErrored?: boolean;
-  hasNoSpacing?: boolean;
   css?: CSSObject;
+  hasNoSpacing?: boolean;
+  isErrored?: boolean;
 }
 
 const StyledInput = styled.input<StyledInputProps>`
@@ -48,19 +48,19 @@ const StyledInputError = styled.div`
 `;
 
 const FormInput: React.FC<FormInputProps> = ({
-  id,
   ariaLabel,
+  className,
+  css,
   defaultValue,
+  errorMessage,
   hasNoSpacing,
+  id,
   name,
   onChange,
   onInput,
   placeholder,
   style,
   value,
-  errorMessage,
-  className,
-  css,
 }: FormInputProps): ReactElement<HTMLInputElement> => (
   <>
     <StyledInput

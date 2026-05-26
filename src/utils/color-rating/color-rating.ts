@@ -1,15 +1,15 @@
 export interface Accessibility {
-  aaa: boolean;
   aa: boolean;
+  aaa: boolean;
   aaaLarge: boolean;
   aaLarge: boolean;
 }
 
 export interface ColorRating {
-  small: string;
   bold: string;
   large: string;
   overall: string;
+  small: string;
 }
 
 const colorRating = (accessibility: Accessibility): ColorRating => {
@@ -39,10 +39,10 @@ const colorRating = (accessibility: Accessibility): ColorRating => {
   }
 
   return {
-    small,
     bold,
     large,
     overall,
+    small,
   };
 };
 

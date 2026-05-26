@@ -1,6 +1,6 @@
 import { ColorPair } from '../../types';
 
-export const ensureColorsAreAnArrayOfTwo = (colors: string | string[]): ColorPair | false => {
+export const ensureColorsAreAnArrayOfTwo = (colors: string | Array<string>): ColorPair | false => {
   let arrayOfColors = colors;
   if (typeof colors === 'string') {
     try {

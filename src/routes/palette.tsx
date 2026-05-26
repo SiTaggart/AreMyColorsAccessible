@@ -1,15 +1,20 @@
 import { createFileRoute } from '@tanstack/react-router';
+
+import { Footer } from '~/components/footer';
 import { Container } from '~/components/layouts/container';
 import { Layout } from '~/components/layouts/layout';
 import { PalettePage } from '~/components/palette-page';
-import { Footer } from '~/components/footer';
 import { PaletteDataProvider } from '~/context/palette';
 
 interface PaletteSearch {
-  colors?: string[];
+  colors?: Array<string>;
 }
 
 export const Route = createFileRoute('/palette')({
+  component: PaletteRoute,
+  head: () => ({
+    meta: [{ title: 'Palette checker - Are My Colours Accessible' }],
+  }),
   validateSearch: (search: Record<string, unknown>): PaletteSearch => {
     const { colors } = search;
     if (colors === undefined) {
@@ -17,10 +22,6 @@ export const Route = createFileRoute('/palette')({
     }
     return { colors: Array.isArray(colors) ? colors.map(String) : [String(colors)] };
   },
-  head: () => ({
-    meta: [{ title: 'Palette checker - Are My Colours Accessible' }],
-  }),
-  component: PaletteRoute,
 });
 
 function PaletteRoute(): React.ReactElement {

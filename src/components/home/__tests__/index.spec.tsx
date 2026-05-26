@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+
 import { Home } from '..';
 import { SiteDataProvider } from '../../../context/home';
 
@@ -8,13 +9,13 @@ describe('Home', (): void => {
       <SiteDataProvider
         initialSiteData={{
           background: '#000',
-          textColor: '#fff',
-          isLight: false,
           colorCombos: [],
+          isLight: false,
+          textColor: '#fff',
         }}
       >
         <Home />
-      </SiteDataProvider>
+      </SiteDataProvider>,
     );
     expect(asFragment()).toMatchSnapshot();
   });

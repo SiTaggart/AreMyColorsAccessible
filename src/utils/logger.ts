@@ -19,20 +19,20 @@ const shipToDatadog = (level: LogLevel, message: string, meta: LogMeta): void =>
   const context = readEnv('NETLIFY_CONTEXT') ?? readEnv('CF_ENV') ?? 'production';
 
   void fetch(DATADOG_INTAKE, {
-    method: 'POST',
+    body: JSON.stringify([
+      {
+        ddsource: 'cloudflare-workers',
+        level,
+        message,
+        service: `${appName}_${context}`,
+        ...meta,
+      },
+    ]),
     headers: {
       'Content-Type': 'application/json',
       'DD-API-KEY': apiKey,
     },
-    body: JSON.stringify([
-      {
-        ddsource: 'cloudflare-workers',
-        service: `${appName}_${context}`,
-        level,
-        message,
-        ...meta,
-      },
-    ]),
+    method: 'POST',
   }).catch(() => {
     /* logging must never break the request */
   });
@@ -49,6 +49,6 @@ const log = (level: LogLevel, message: string, meta: LogMeta = {}): void => {
 };
 
 export const logger = {
-  info: (message: string, meta?: LogMeta): void => log('info', message, meta),
   error: (message: string, meta?: LogMeta): void => log('error', message, meta),
+  info: (message: string, meta?: LogMeta): void => log('info', message, meta),
 };

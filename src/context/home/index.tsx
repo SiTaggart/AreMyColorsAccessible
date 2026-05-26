@@ -1,15 +1,16 @@
-import * as React from 'react';
 import Color from 'color';
-import isEmpty from 'lodash/isEmpty';
-import debounce from 'lodash/debounce';
-import qs from 'query-string';
 import ColorCombos, { ColorCombo, Combination } from 'color-combos';
+import debounce from 'lodash/debounce';
+import isEmpty from 'lodash/isEmpty';
+import qs from 'query-string';
+import React from 'react';
+
 import { SiteData } from '../../types';
 
 export interface HomeContextInterface {
-  siteData: SiteData;
   handleBackgroundColorInputChange: (value: string) => void;
   handleTextColorInputChange: (value: string) => void;
+  siteData: SiteData;
 }
 
 interface SiteDataProviderProps {
@@ -31,12 +32,12 @@ const setInitialContext = (initialSiteData: SiteData | undefined): SiteData => {
     isLight = JSON.parse(initialSiteData.isLight as unknown as string);
   }
 
-  const initialCombos = ColorCombos([textColor, background]) as ColorCombo[];
+  const initialCombos = ColorCombos([textColor, background]) as Array<ColorCombo>;
   return {
     background,
-    textColor,
-    isLight,
     colorCombos: initialCombos,
+    isLight,
+    textColor,
   };
 };
 
@@ -55,21 +56,21 @@ const isValidColor = (value: string): Color | false => {
   try {
     color = Color(value);
   } catch {
-    console.error('ColorInput invalid color');
+    // not a valid colour
   }
   return color;
 };
 
-const createFakeCombination = (color: number[], hex: string): Combination => ({
-  model: 'rgb',
+const createFakeCombination = (color: Array<number>, hex: string): Combination => ({
+  accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
   color,
-  valpha: 1,
-  hex,
   contrast: 1,
-  accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
+  hex,
+  model: 'rgb',
+  valpha: 1,
 });
 
-const createDuplicateCombination = (combos: ColorCombo[]): ColorCombo[] => {
+const createDuplicateCombination = (combos: Array<ColorCombo>): Array<ColorCombo> => {
   const color = combos[0].color === undefined ? [] : combos[0].color;
   const dupeCombo = {
     ...combos[0],
@@ -99,7 +100,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = ({
 
   const [state] = React.useMemo(
     (): [SiteData, React.Dispatch<SiteData>] => [siteData, setSiteData],
-    [siteData]
+    [siteData],
   );
 
   const updateHash = debounce((): void => {
@@ -121,7 +122,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = ({
   }, [state]);
 
   const setNewColorCombo = (textColor: string, backgroundColor: string): void => {
-    let newCombos: ColorCombo[] | false = ColorCombos([textColor, backgroundColor]);
+    let newCombos: Array<ColorCombo> | false = ColorCombos([textColor, backgroundColor]);
     if (newCombos) {
       if (textColor === backgroundColor) {
         newCombos = createDuplicateCombination(newCombos);
@@ -158,11 +159,11 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = ({
 
   const providerValue = React.useMemo(
     () => ({
-      siteData: state,
       handleBackgroundColorInputChange,
       handleTextColorInputChange,
+      siteData: state,
     }),
-    [state]
+    [state],
   );
 
   return <HomeContext.Provider value={providerValue} {...props} />;

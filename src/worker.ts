@@ -1,4 +1,5 @@
 import start from '@tanstack/react-start/server-entry';
+
 import { corsHeaders, preflightResponse } from './utils/http';
 
 const isApiRequest = (request: Request): boolean =>
@@ -12,9 +13,9 @@ const withCors = (response: Response): Response => {
   }
 
   return new Response(response.body, {
+    headers,
     status: response.status,
     statusText: response.statusText,
-    headers,
   });
 };
 

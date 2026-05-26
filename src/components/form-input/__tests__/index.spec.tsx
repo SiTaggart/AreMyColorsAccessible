@@ -1,5 +1,6 @@
-import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
+import React from 'react';
+
 import { FormInput, FormInputProps } from '..';
 
 type FormInputWrapperProps = Partial<FormInputProps>;
@@ -25,11 +26,11 @@ describe('FormInput', (): void => {
   });
 
   it('should display an error message and associate it to the input', (): void => {
-    const { getByText, getByLabelText } = render(
-      <FormInputWrapper ariaLabel="error input" errorMessage="this is an error" />
+    const { getByLabelText, getByText } = render(
+      <FormInputWrapper ariaLabel="error input" errorMessage="this is an error" />,
     );
     expect(getByLabelText('error input').getAttribute('aria-describedby')).toEqual(
-      'error-message-label-form-id'
+      'error-message-label-form-id',
     );
     expect(getByText('this is an error')).not.toBeNull();
     const { asFragment } = render(<FormInputWrapper errorMessage="this is an error" />);
@@ -62,7 +63,7 @@ describe('FormInput', (): void => {
 
   it('should set a style attribute on the input when passed style', (): void => {
     const { getByTestId } = render(
-      <FormInputWrapper id="style-test" style={{ background: 'red' }} />
+      <FormInputWrapper id="style-test" style={{ background: 'red' }} />,
     );
     expect(getByTestId('style-test').getAttribute('style')).toEqual('background: red;');
   });
@@ -70,7 +71,7 @@ describe('FormInput', (): void => {
   it('should set the value of the input when passed a value', (): void => {
     const onChangeMock = vi.fn();
     const { getByTestId } = render(
-      <FormInputWrapper id="value-test" onChange={onChangeMock} value="testing" />
+      <FormInputWrapper id="value-test" onChange={onChangeMock} value="testing" />,
     );
     expect(getByTestId('value-test').getAttribute('value')).toEqual('testing');
   });

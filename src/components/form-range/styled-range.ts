@@ -27,7 +27,7 @@ const trackRadius = '5px';
 const shadow = (
   shadowSize: string,
   shadowBlur: string,
-  shadowColor: string
+  shadowColor: string,
 ): SerializedStyles => css`
   box-shadow:
     ${shadowSize} ${shadowSize} ${shadowBlur} ${shadowColor},

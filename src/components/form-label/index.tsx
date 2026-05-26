@@ -1,5 +1,5 @@
-import React, { ReactNode, ReactElement } from 'react';
 import styled from '@emotion/styled';
+import React, { ReactNode, ReactElement } from 'react';
 
 interface FormLabelProps {
   children: ReactNode;
@@ -37,9 +37,9 @@ const StyledLabel = styled.label<StyledLabelProps>`
 `;
 
 const FormLabel: React.FC<FormLabelProps> = ({
+  children,
   htmlFor,
   variant,
-  children,
 }: FormLabelProps): ReactElement<HTMLLabelElement> => (
   <StyledLabel htmlFor={htmlFor} variant={variant}>
     {children}

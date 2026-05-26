@@ -3,8 +3,8 @@ import { colorRating } from '../color-rating';
 describe('utils/colorRating', (): void => {
   it('should return a AAA small rating', (): void => {
     const mockRating = {
-      aaa: true,
       aa: true,
+      aaa: true,
       aaaLarge: true,
       aaLarge: true,
     };
@@ -18,8 +18,8 @@ describe('utils/colorRating', (): void => {
 
   it('should return a AA small rating', (): void => {
     const mockRating = {
-      aaa: false,
       aa: true,
+      aaa: false,
       aaaLarge: true,
       aaLarge: true,
     };
@@ -33,8 +33,8 @@ describe('utils/colorRating', (): void => {
 
   it('should return a AA large rating', (): void => {
     const mockRating = {
-      aaa: false,
       aa: false,
+      aaa: false,
       aaaLarge: false,
       aaLarge: true,
     };
@@ -48,8 +48,8 @@ describe('utils/colorRating', (): void => {
 
   it('should return a fail rating', (): void => {
     const mockRating = {
-      aaa: false,
       aa: false,
+      aaa: false,
       aaaLarge: false,
       aaLarge: false,
     };

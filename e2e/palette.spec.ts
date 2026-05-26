@@ -33,8 +33,8 @@ test.describe('Palette', () => {
     await expect(page.locator('tbody [data-testid="colorMatrix-tr"]')).toHaveCount(1);
     await expect(
       page.locator(
-        'tbody [data-testid="colorMatrix-tr"]:nth-child(1) > [data-testid="colorMatrix-th"]'
-      )
+        'tbody [data-testid="colorMatrix-tr"]:nth-child(1) > [data-testid="colorMatrix-th"]',
+      ),
     ).toContainText('#CCCCCC');
     await expect.poll(() => search(page)).toBe('?colors=%23ccc');
   });
@@ -55,8 +55,8 @@ test.describe('Palette', () => {
     await expect(page.locator('thead [data-testid="colorMatrix-th"]')).toHaveCount(4);
     await expect(
       page.locator(
-        'tbody [data-testid="colorMatrix-tr"]:nth-child(3) > [data-testid="colorMatrix-th"]'
-      )
+        'tbody [data-testid="colorMatrix-tr"]:nth-child(3) > [data-testid="colorMatrix-th"]',
+      ),
     ).toContainText('#EFEFEF');
     await expect
       .poll(() => search(page))
@@ -78,7 +78,7 @@ test.describe('Palette', () => {
     await enterColors(page, 'dhfhfu');
 
     await expect(page.locator('#error-message-label-palette-form-input')).toContainText(
-      'Please enter valid colors as comma or space separated hex values'
+      'Please enter valid colors as comma or space separated hex values',
     );
   });
 
@@ -92,8 +92,8 @@ test.describe('Palette', () => {
     await expect(page.locator('#hsl-0-Lightness')).toHaveValue('41');
     await expect(
       page.locator(
-        'tbody [data-testid="colorMatrix-tr"]:nth-child(1) > [data-testid="colorMatrix-th"]'
-      )
+        'tbody [data-testid="colorMatrix-tr"]:nth-child(1) > [data-testid="colorMatrix-th"]',
+      ),
     ).toContainText('#A52A2A');
     await expect.poll(() => search(page)).toBe('?colors=brown&colors=blue&colors=pink&colors=red');
   });
@@ -106,8 +106,8 @@ test.describe('Palette', () => {
     await expect(page.locator('#colorhex-1')).toHaveValue('#FF6A00');
     await expect(
       page.locator(
-        'tbody [data-testid="colorMatrix-tr"]:nth-child(2) > [data-testid="colorMatrix-th"]'
-      )
+        'tbody [data-testid="colorMatrix-tr"]:nth-child(2) > [data-testid="colorMatrix-th"]',
+      ),
     ).toContainText('#FF6A00');
     await expect
       .poll(() => search(page))

@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
-import { colorRating } from '../../utils/color-rating';
+
 import { useSiteData } from '../../context/home';
+import { colorRating } from '../../utils/color-rating';
 import {
   ContrastResult,
   ContrastResultRating,
@@ -36,9 +37,9 @@ const Results: React.FC = (): ReactElement => {
   const contrast = colorInfo.contrast || 0;
   const accessibility = colorInfo.accessibility || {
     aa: false,
-    aaLarge: false,
     aaa: false,
     aaaLarge: false,
+    aaLarge: false,
   };
   const ratio = Number.parseFloat(contrast.toFixed(2));
   const colorRatings = colorRating(accessibility);

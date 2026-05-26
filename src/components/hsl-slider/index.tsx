@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+
 import { FormLabel } from '../form-label';
 import { FormRange } from '../form-range';
 import { StyledHSLSlider, HSLSliderLabelContainer, HSLSliderRangeContainer } from './styled';
@@ -16,15 +17,15 @@ interface HslSliderProps {
 }
 
 const HSLSlider: React.FC<HslSliderProps> = ({
-  variant,
   id,
   label,
-  value,
-  symbol,
   max,
   min,
   onChange,
   onInput,
+  symbol,
+  value,
+  variant,
 }: HslSliderProps): ReactElement => (
   <StyledHSLSlider variant={variant}>
     <HSLSliderLabelContainer variant={variant}>

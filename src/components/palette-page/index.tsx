@@ -1,11 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 
-import { PaletteInput } from '../palette-input';
-import { ColorMatrix } from '../color-matrix';
 import { usePaletteData } from '../../context/palette';
+import { ColorMatrix } from '../color-matrix';
+import { PaletteInput } from '../palette-input';
 
 const PalettePage: React.FC = (): React.ReactElement => {
-  const { paletteData, handleColorChange, handleNewColor } = usePaletteData();
+  const { handleColorChange, handleNewColor, paletteData } = usePaletteData();
   return (
     <>
       <PaletteInput

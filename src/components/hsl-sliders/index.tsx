@@ -1,10 +1,11 @@
-import React, { ReactElement, memo } from 'react';
 import Color from 'color';
-import { HSLSliders } from './styled';
+import React, { ReactElement, memo } from 'react';
+
 import { HSLSlider } from '../hsl-slider';
+import { HSLSliders } from './styled';
 
 interface HSLColorTypes extends Color {
-  color: number[];
+  color: Array<number>;
 }
 const roundHSLValues = ({ color }: Partial<HSLColorTypes>): HSLColor => {
   let hue = 0;
@@ -15,15 +16,15 @@ const roundHSLValues = ({ color }: Partial<HSLColorTypes>): HSLColor => {
   }
   return {
     hue: Math.round(hue),
-    saturation: Math.round(saturation),
     lightness: Math.round(lightness),
+    saturation: Math.round(saturation),
   };
 };
 
 interface HSLColor {
   hue: number;
-  saturation: number;
   lightness: number;
+  saturation: number;
 }
 const convertToHSL = (hex: string): HSLColor => {
   const hsl: Partial<HSLColorTypes> = Color(hex).hsl();
@@ -38,12 +39,12 @@ interface HslSliderProps {
 }
 
 interface Range {
-  label: string;
-  min: number;
-  max: number;
-  value: number;
   handleOnChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
+  label: string;
+  max: number;
+  min: number;
   symbol: string;
+  value: number;
 }
 const HslSliders: React.FC<HslSliderProps> = memo(
   ({ id, onChange, value, variant }: HslSliderProps): ReactElement => {
@@ -52,8 +53,8 @@ const HslSliders: React.FC<HslSliderProps> = memo(
     const updateColor = (color: HSLColor): void => {
       const hex = Color({
         h: color.hue,
-        s: color.saturation,
         l: color.lightness,
+        s: color.saturation,
       }).hex();
       onChange(hex, id);
     };
@@ -82,30 +83,30 @@ const HslSliders: React.FC<HslSliderProps> = memo(
       updateColor(newHsl);
     };
 
-    const hslRanges: Range[] = [
+    const hslRanges: Array<Range> = [
       {
-        label: 'Hue',
-        min: 0,
-        max: 360,
-        value: hslColorValue.hue,
         handleOnChange: handleHueChange,
+        label: 'Hue',
+        max: 360,
+        min: 0,
         symbol: '°',
+        value: hslColorValue.hue,
       },
       {
-        label: 'Saturation',
-        min: 0,
-        max: 100,
-        value: hslColorValue.saturation,
         handleOnChange: handleSaturationChange,
+        label: 'Saturation',
+        max: 100,
+        min: 0,
         symbol: '%',
+        value: hslColorValue.saturation,
       },
       {
-        label: 'Lightness',
-        min: 0,
-        max: 100,
-        value: hslColorValue.lightness,
         handleOnChange: handleLightnessChange,
+        label: 'Lightness',
+        max: 100,
+        min: 0,
         symbol: '%',
+        value: hslColorValue.lightness,
       },
     ];
 
@@ -114,9 +115,9 @@ const HslSliders: React.FC<HslSliderProps> = memo(
         {hslRanges.map(
           (range): ReactElement => (
             <HSLSlider
-              key={`${id}-${range.label}`}
               data-testid={`${id}-${range.label}`}
               id={`${id}-${range.label}`}
+              key={`${id}-${range.label}`}
               label={range.label}
               max={range.max}
               min={range.min}
@@ -126,11 +127,11 @@ const HslSliders: React.FC<HslSliderProps> = memo(
               value={range.value}
               variant={variant}
             />
-          )
+          ),
         )}
       </HSLSliders>
     );
-  }
+  },
 );
 HslSliders.displayName = 'HslSliders';
 export { HslSliders };

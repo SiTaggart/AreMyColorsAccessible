@@ -1,9 +1,10 @@
-import React, { ReactElement } from 'react';
 import styled from '@emotion/styled';
+import React, { ReactElement } from 'react';
+
 import { breakpoint } from '../../../styles/utils';
 
 interface ContainerProps {
-  children?: JSX.Element[] | JSX.Element;
+  children?: Array<JSX.Element> | JSX.Element;
   variant?: 'home' | 'about' | 'palette';
 }
 
@@ -18,8 +19,8 @@ const StyledContainer = styled.main<ContainerProps>`
 `;
 
 const Container: React.FC<ContainerProps> = ({
-  variant,
   children,
+  variant,
 }: ContainerProps): ReactElement => <StyledContainer variant={variant}>{children}</StyledContainer>;
 
 export { Container };

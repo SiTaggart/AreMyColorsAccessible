@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
+
 import { Home } from '~/components/home';
 import { AppContainer } from '~/components/layouts/app-container';
 import { SiteDataProvider } from '~/context/home';
@@ -6,11 +7,12 @@ import type { SiteData } from '~/types';
 
 interface HomeSearch {
   background?: string;
-  textColor?: string;
   isLight?: string;
+  textColor?: string;
 }
 
 export const Route = createFileRoute('/')({
+  component: IndexPage,
   validateSearch: (search: Record<string, unknown>): HomeSearch => {
     // Only include keys that are actually present in the URL. SiteDataProvider
     // treats any present `textColor` key as "hydrate from query" and parses
@@ -27,7 +29,6 @@ export const Route = createFileRoute('/')({
     }
     return result;
   },
-  component: IndexPage,
 });
 
 function IndexPage(): React.ReactElement {

@@ -1,7 +1,9 @@
 import React, { ReactElement } from 'react';
+
+import { renderWithRouter } from '~/test/render';
+
 import { AppContainer } from '..';
 import { SiteDataProvider } from '../../../../context/home';
-import { renderWithRouter } from '~/test/render';
 
 describe('AppContainer', (): void => {
   let ChildComponent: React.FunctionComponent = (): ReactElement<HTMLDivElement> => <div />;
@@ -16,15 +18,15 @@ describe('AppContainer', (): void => {
       <SiteDataProvider
         initialSiteData={{
           background: '#000',
-          textColor: '#fff',
-          isLight: false,
           colorCombos: [],
+          isLight: false,
+          textColor: '#fff',
         }}
       >
         <AppContainer>
           <ChildComponent />
         </AppContainer>
-      </SiteDataProvider>
+      </SiteDataProvider>,
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -34,15 +36,15 @@ describe('AppContainer', (): void => {
       <SiteDataProvider
         initialSiteData={{
           background: '#fff',
-          textColor: '#000',
-          isLight: true,
           colorCombos: [],
+          isLight: true,
+          textColor: '#000',
         }}
       >
         <AppContainer>
           <ChildComponent />
         </AppContainer>
-      </SiteDataProvider>
+      </SiteDataProvider>,
     );
     expect(asFragment()).toMatchSnapshot();
   });

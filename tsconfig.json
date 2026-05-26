@@ -20,7 +20,6 @@
     "noUnusedParameters": true,
     "forceConsistentCasingInFileNames": true,
     "verbatimModuleSyntax": false,
-    "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
     }

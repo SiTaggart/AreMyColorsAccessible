@@ -1,19 +1,20 @@
-import React from 'react';
 import { createFileRoute } from '@tanstack/react-router';
+import { Box } from '@twilio-paste/core/box';
+import { Grid, Column } from '@twilio-paste/core/grid';
+import { Heading } from '@twilio-paste/core/heading';
+import { Input } from '@twilio-paste/core/input';
+import { Label } from '@twilio-paste/core/label';
+import { Paragraph } from '@twilio-paste/core/paragraph';
+import { Separator } from '@twilio-paste/core/separator';
+import { Stack } from '@twilio-paste/core/stack';
 import { Theme } from '@twilio-paste/core/theme';
 import { useUID } from '@twilio-paste/core/uid-library';
-import { Box } from '@twilio-paste/core/box';
-import { Heading } from '@twilio-paste/core/heading';
-import { Paragraph } from '@twilio-paste/core/paragraph';
-import { Grid, Column } from '@twilio-paste/core/grid';
-import { Stack } from '@twilio-paste/core/stack';
-import { Separator } from '@twilio-paste/core/separator';
-import { Label } from '@twilio-paste/core/label';
-import { Input } from '@twilio-paste/core/input';
-import { Container } from '~/components/layouts/container';
-import { Footer } from '~/components/footer';
-import { Layout } from '~/components/layouts/layout';
+import React from 'react';
+
 import { CodeBlock } from '~/components/CodeBlock';
+import { Footer } from '~/components/footer';
+import { Container } from '~/components/layouts/container';
+import { Layout } from '~/components/layouts/layout';
 
 export const Route = createFileRoute('/api-page')({
   component: ApiPage,
@@ -56,9 +57,9 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
 
   const getPostResult = (fg: string, bg: string): Promise<void> =>
     fetch('/api/are-they', {
-      mode: 'cors',
-      method: 'POST',
       body: JSON.stringify({ colors: [fg, bg] }),
+      method: 'POST',
+      mode: 'cors',
     })
       .then((response) => response.json())
       .then((json) => setPostResult(json));
@@ -91,7 +92,7 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
             <Heading as="h2" variant="heading30">
               Return:
             </Heading>
-            <Paragraph>You'll be returned an object in the following shape:</Paragraph>
+            <Paragraph>You&apos;ll be returned an object in the following shape:</Paragraph>
             <CodeBlock example={returnBlock} language="typescript" />
             <Heading as="h2" variant="heading30">
               Example:
@@ -168,11 +169,11 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
               sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
               src="https://codesandbox.io/embed/are-my-colours-accessible-api-tpdz2?fontsize=14&hidenavigation=1&theme=dark"
               style={{
-                width: '100%',
-                height: '500px',
                 border: 0,
                 borderRadius: '4px',
+                height: '500px',
                 overflow: 'hidden',
+                width: '100%',
               }}
               title="Are My Colours Accessible API"
             />

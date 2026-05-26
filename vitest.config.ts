@@ -1,6 +1,7 @@
 import { fileURLToPath } from 'node:url';
-import { defineConfig } from 'vitest/config';
+
 import viteReact from '@vitejs/plugin-react';
+import { defineConfig } from 'vitest/config';
 
 // Standalone config for unit tests: only the Emotion-aware React transform plus
 // the `~` alias. The app's vite.config.ts (Cloudflare + TanStack Start plugins)
@@ -17,9 +18,9 @@ export default defineConfig({
     },
   },
   test: {
-    globals: true,
     environment: 'jsdom',
-    setupFiles: ['./src/test/setup.ts'],
+    globals: true,
     include: ['src/**/*.spec.{ts,tsx}'],
+    setupFiles: ['./src/test/setup.ts'],
   },
 });
