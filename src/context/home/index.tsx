@@ -14,31 +14,8 @@ export interface HomeContextInterface {
 
 interface SiteDataProviderProps {
   children?: React.ReactNode;
-  initialSiteData?: SiteData;
+  initialSiteData?: Partial<SiteData>;
 }
-
-const setInitialContext = (initialSiteData: SiteData | undefined): SiteData => {
-  let textColor = "#FFFFFF";
-  let background = "#1276CE";
-  let isLight = false;
-  if (
-    initialSiteData !== undefined &&
-    !isEmpty(initialSiteData) &&
-    "textColor" in initialSiteData
-  ) {
-    textColor = initialSiteData.textColor;
-    background = initialSiteData.background;
-    isLight = JSON.parse(initialSiteData.isLight as unknown as string);
-  }
-
-  const initialCombos = ColorCombos([textColor, background]) as Array<ColorCombo>;
-  return {
-    background,
-    colorCombos: initialCombos,
-    isLight,
-    textColor,
-  };
-};
 
 const checkBackgroundLightness = (hex: string): boolean => {
   let light;
@@ -58,6 +35,35 @@ const isValidColor = (value: string): Color | false => {
     return false;
   }
   return color;
+};
+
+const setInitialContext = (initialSiteData: Partial<SiteData> | undefined): SiteData => {
+  let textColor = "#FFFFFF";
+  let background = "#1276CE";
+  let isLight = false;
+  if (
+    initialSiteData !== undefined &&
+    !isEmpty(initialSiteData) &&
+    typeof initialSiteData.textColor === "string" &&
+    typeof initialSiteData.background === "string" &&
+    isValidColor(initialSiteData.textColor) &&
+    isValidColor(initialSiteData.background)
+  ) {
+    textColor = initialSiteData.textColor;
+    background = initialSiteData.background;
+    isLight =
+      typeof initialSiteData.isLight === "boolean"
+        ? initialSiteData.isLight
+        : checkBackgroundLightness(background);
+  }
+
+  const initialCombos = ColorCombos([textColor, background]) as Array<ColorCombo>;
+  return {
+    background,
+    colorCombos: initialCombos,
+    isLight,
+    textColor,
+  };
 };
 
 const createFakeCombination = (color: Array<number>, hex: string): Combination => ({

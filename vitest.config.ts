@@ -7,9 +7,6 @@ export default defineConfig({
       jsxImportSource: "@emotion/react",
     }),
   ],
-  resolve: {
-    tsconfigPaths: true,
-  },
   test: {
     environment: "jsdom",
     exclude: ["node_modules/**", "src/e2e/**", "dist/**", ".wrangler/**"],

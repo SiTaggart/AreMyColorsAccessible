@@ -17,7 +17,7 @@ A colour contrast checker built with [TanStack Start](https://tanstack.com/start
 
 ## Prerequisites
 
-- Node.js >= 22.12, matching `.nvmrc`
+- Node.js >= 22.18.0, matching `.nvmrc`
 - Bun >= 1.3
 
 ## Getting Started

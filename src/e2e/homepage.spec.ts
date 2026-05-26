@@ -83,6 +83,23 @@ test.describe("Homepage", () => {
     await expect(page.locator("#textColor")).toHaveValue("#B25334");
   });
 
+  test("renders shared color state on the about page", async ({ page }) => {
+    await open(page, "/about?background=%23000&isLight=false&textColor=%23fff");
+
+    await expect(page).toHaveURL(/\/about\?/);
+    await expect(page.locator("body")).toHaveCSS("background-color", "rgb(0, 0, 0)");
+    await expect(page.locator("body")).toHaveCSS("color", "rgb(255, 255, 255)");
+    await expect(page.locator("h1")).toContainText("Are my Colours Accessible?");
+  });
+
+  test("renders malformed shared color booleans without crashing", async ({ page }) => {
+    await open(page, "/?background=%23000&isLight=nope&textColor=%23fff");
+
+    await expect(page.locator("body")).toHaveCSS("background-color", "rgb(0, 0, 0)");
+    await expect(page.locator("body")).toHaveCSS("color", "rgb(255, 255, 255)");
+    await expect(page.getByTestId("contrastResults-heading")).toContainText("Yup");
+  });
+
   test("navigates through footer links", async ({ page }) => {
     await open(page);
     await page.locator("footer").getByRole("link", { name: "About" }).click();

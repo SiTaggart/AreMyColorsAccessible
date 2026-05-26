@@ -18,9 +18,6 @@ export default defineConfig({
       allowedHeaders: ["Content-Type"],
     },
   },
-  resolve: {
-    tsconfigPaths: true,
-  },
   server: {
     port: 3000,
     cors: {

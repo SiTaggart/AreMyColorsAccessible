@@ -4,21 +4,21 @@ import { Layout } from "../components/layouts/layout";
 import { PalettePage } from "../components/palette-page";
 import { Footer } from "../components/footer";
 import { PaletteDataProvider } from "../context/palette";
-import type { PalettePageQueryString } from "../types";
+import { parsePaletteSearch } from "../utils/route-search";
 
 export const Route = createFileRoute("/palette")({
   component: Palette,
   head: () => ({
     meta: [{ title: "Palette checker - Are My Colours Accessible" }],
   }),
-  validateSearch: (search: Record<string, unknown>) => search as Partial<PalettePageQueryString>,
+  validateSearch: parsePaletteSearch,
 });
 
 function Palette(): React.ReactElement {
   const search = Route.useSearch();
 
   return (
-    <PaletteDataProvider queryString={search as PalettePageQueryString}>
+    <PaletteDataProvider queryString={search}>
       <Container variant="palette">
         <Layout variant="full">
           <PalettePage />

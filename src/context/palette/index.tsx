@@ -19,7 +19,7 @@ interface PaletteState {
 }
 interface PaletteDataProviderProps {
   children?: React.ReactNode;
-  queryString?: PalettePageQueryString;
+  queryString?: Partial<PalettePageQueryString>;
 }
 
 const convertColorStringsToColors = (colorStrings: Array<string>): Array<Color> | false => {
@@ -61,13 +61,18 @@ const isValidColor = (hex: string): Color | false => {
 
 const getColorCombos = (colors: Array<string>): Array<ColorCombo> | false => ColorCombos(colors);
 
-const getInitialState = (querystring: PalettePageQueryString | undefined): PaletteState => {
+const getInitialState = (
+  querystring: Partial<PalettePageQueryString> | undefined,
+): PaletteState => {
   let colors: Array<string> = [];
   let colorCombos: Array<ColorCombo> = [];
 
-  if (querystring !== undefined && !isEmpty(querystring)) {
-    colors = querystring.colors;
-    colorCombos = getColorCombos(colors) as Array<ColorCombo>;
+  if (querystring !== undefined && !isEmpty(querystring) && Array.isArray(querystring.colors)) {
+    const initialColorCombos = getColorCombos(querystring.colors);
+    if (initialColorCombos) {
+      colors = querystring.colors;
+      colorCombos = initialColorCombos;
+    }
   }
 
   return {
