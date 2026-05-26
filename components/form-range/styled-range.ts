@@ -1,33 +1,33 @@
-import { css, SerializedStyles } from '@emotion/react';
-import styled from '@emotion/styled';
-import { lighten } from 'polished';
+import { css, SerializedStyles } from "@emotion/react";
+import styled from "@emotion/styled";
+import { lighten } from "polished";
 
-const trackColor = 'currentColor';
-const thumbColor = 'currentColor';
+const trackColor = "currentColor";
+const thumbColor = "currentColor";
 
-const thumbRadius = '2px';
-const thumbHeight = '20px';
-const thumbWidth = '8px';
-const thumbShadowSize = '1px';
-const thumbShadowBlur = '1px';
-const thumbShadowColor = '#999';
-const thumbBorderWidth = '1px';
-const thumbBorderColor = 'currentColor';
+const thumbRadius = "2px";
+const thumbHeight = "20px";
+const thumbWidth = "8px";
+const thumbShadowSize = "1px";
+const thumbShadowBlur = "1px";
+const thumbShadowColor = "#999";
+const thumbBorderWidth = "1px";
+const thumbBorderColor = "currentColor";
 
-const trackWidth = '100%';
-const trackHeight = '4px';
-const trackShadowSize = '0';
-const trackShadowBlur = '0';
-const trackShadowColor = '#fff';
-const trackBorderWidth = '1px';
-const trackBorderColor = 'currentColor';
+const trackWidth = "100%";
+const trackHeight = "4px";
+const trackShadowSize = "0";
+const trackShadowBlur = "0";
+const trackShadowColor = "#fff";
+const trackBorderWidth = "1px";
+const trackBorderColor = "currentColor";
 
-const trackRadius = '5px';
+const trackRadius = "5px";
 
 const shadow = (
   shadowSize: string,
   shadowBlur: string,
-  shadowColor: string
+  shadowColor: string,
 ): SerializedStyles => css`
   box-shadow:
     ${shadowSize} ${shadowSize} ${shadowBlur} ${shadowColor},
@@ -57,7 +57,7 @@ export const StyledRange = styled.input`
   border-radius: ${thumbRadius};
   color: ${thumbColor};
   display: block;
-  margin: ${Number.parseInt(thumbHeight.replace('px', ''), 10) / 2}px 0;
+  margin: ${Number.parseInt(thumbHeight.replace("px", ""), 10) / 2}px 0;
   width: ${trackWidth};
 
   &::-webkit-slider-runnable-track {
@@ -71,10 +71,10 @@ export const StyledRange = styled.input`
   &::-webkit-slider-thumb {
     ${thumb};
     -webkit-appearance: none;
-    margin-top: ${(-Number.parseInt(trackBorderWidth.replace('px', ''), 10) * 2 +
-      Number.parseInt(trackHeight.replace('px', ''), 10)) /
+    margin-top: ${(-Number.parseInt(trackBorderWidth.replace("px", ""), 10) * 2 +
+      Number.parseInt(trackHeight.replace("px", ""), 10)) /
       2 -
-    Number.parseInt(thumbHeight.replace('px', ''), 10) / 2}px;
+    Number.parseInt(thumbHeight.replace("px", ""), 10) / 2}px;
   }
 
   &:focus::-webkit-slider-runnable-track {
@@ -127,7 +127,3 @@ export const StyledRange = styled.input`
     background: ${trackColor};
   }
 `;
-
-StyledRange.defaultProps = {
-  type: 'range',
-};

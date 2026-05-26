@@ -1,26 +1,26 @@
-import React, { ReactElement } from 'react';
-import { Form } from '../form';
-import { FormControl } from '../form-control';
-import { FormInput } from '../form-input';
-import { FormLabel } from '../form-label';
-import { HslSliders } from '../hsl-sliders';
-import { useSiteData } from '../../context/home';
+import React, { ReactElement } from "react";
+import { Form } from "../form";
+import { FormControl } from "../form-control";
+import { FormInput } from "../form-input";
+import { FormLabel } from "../form-label";
+import { HslSliders } from "../hsl-sliders";
+import { useSiteData } from "../../context/home";
 
 const ColorInputs: React.FC = (): ReactElement => {
   const {
-    siteData: { background, colorCombos, isLight, textColor },
-    handleTextColorInputChange,
     handleBackgroundColorInputChange,
+    handleTextColorInputChange,
+    siteData: { background, colorCombos, isLight, textColor },
   } = useSiteData();
 
-  const formTextColor = isLight ? '#343334' : '#fff';
+  const formTextColor = isLight ? "#343334" : "#fff";
   const styles = {
     form: {
       color: formTextColor,
     },
     input: {
       borderColor: formTextColor,
-      color: 'inherit',
+      color: "inherit",
     },
   };
 

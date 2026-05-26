@@ -1,8 +1,8 @@
-import React, { FormEvent, ReactElement } from 'react';
-import styled from '@emotion/styled';
-import { FormInput } from '../form-input';
-import { FormLabel } from '../form-label';
-import { Heading } from '../typography';
+import React, { FormEvent, ReactElement } from "react";
+import styled from "@emotion/styled";
+import { FormInput } from "../form-input";
+import { FormLabel } from "../form-label";
+import { Heading } from "../typography";
 
 const StyledPaletteForm = styled.form`
   text-align: center;
@@ -14,8 +14,8 @@ const StyledPaletteFormHeading = styled(Heading)`
 `;
 
 interface PaletteInputProps {
-  onColorAdd: (colors: string) => void;
   errorMessage?: string;
+  onColorAdd: (colors: string) => void;
 }
 
 const PaletteInput: React.FC<PaletteInputProps> = ({

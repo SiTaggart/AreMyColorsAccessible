@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`AppContainer changes the footer link colors based on isLight prop 1`] = `
+exports[`AppContainer > changes the footer link colors based on isLight prop 1`] = `
 <DocumentFragment>
   @media (min-width: 768px) {
   .emotion-0 {
@@ -8,47 +8,47 @@ exports[`AppContainer changes the footer link colors based on isLight prop 1`] =
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   padding: 5rem 0 1rem;
   text-align: center;
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-3 {
   list-style: none;
   margin: 0 0 1rem;
   padding: 0;
 }
 
-.emotion-8 {
+.emotion-4 {
   display: inline-block;
   padding: 0 1rem;
 }
 
-.emotion-10 {
+.emotion-5 {
   color: currentColor;
   -webkit-transition: color 400ms ease-in;
   transition: color 400ms ease-in;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div />
     <footer
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <nav
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <ul
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           <li
-            class="emotion-8 emotion-9"
+            class="emotion-4"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-5"
               href="/"
               style="color: rgb(52, 51, 52);"
             >
@@ -56,10 +56,10 @@ exports[`AppContainer changes the footer link colors based on isLight prop 1`] =
             </a>
           </li>
           <li
-            class="emotion-8 emotion-9"
+            class="emotion-4"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-5"
               href="/palette"
               style="color: rgb(52, 51, 52);"
             >
@@ -67,10 +67,10 @@ exports[`AppContainer changes the footer link colors based on isLight prop 1`] =
             </a>
           </li>
           <li
-            class="emotion-8 emotion-9"
+            class="emotion-4"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-5"
               href="/api-page"
               style="color: rgb(52, 51, 52);"
             >
@@ -78,10 +78,10 @@ exports[`AppContainer changes the footer link colors based on isLight prop 1`] =
             </a>
           </li>
           <li
-            class="emotion-8 emotion-9"
+            class="emotion-4"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-5"
               href="/about"
               style="color: rgb(52, 51, 52);"
             >
@@ -95,7 +95,7 @@ exports[`AppContainer changes the footer link colors based on isLight prop 1`] =
 </DocumentFragment>
 `;
 
-exports[`AppContainer renders without crashing 1`] = `
+exports[`AppContainer > renders without crashing 1`] = `
 <DocumentFragment>
   @media (min-width: 768px) {
   .emotion-0 {
@@ -103,47 +103,47 @@ exports[`AppContainer renders without crashing 1`] = `
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   padding: 5rem 0 1rem;
   text-align: center;
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-3 {
   list-style: none;
   margin: 0 0 1rem;
   padding: 0;
 }
 
-.emotion-8 {
+.emotion-4 {
   display: inline-block;
   padding: 0 1rem;
 }
 
-.emotion-10 {
+.emotion-5 {
   color: currentColor;
   -webkit-transition: color 400ms ease-in;
   transition: color 400ms ease-in;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div />
     <footer
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <nav
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <ul
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           <li
-            class="emotion-8 emotion-9"
+            class="emotion-4"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-5"
               href="/"
               style="color: rgb(255, 255, 255);"
             >
@@ -151,10 +151,10 @@ exports[`AppContainer renders without crashing 1`] = `
             </a>
           </li>
           <li
-            class="emotion-8 emotion-9"
+            class="emotion-4"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-5"
               href="/palette"
               style="color: rgb(255, 255, 255);"
             >
@@ -162,10 +162,10 @@ exports[`AppContainer renders without crashing 1`] = `
             </a>
           </li>
           <li
-            class="emotion-8 emotion-9"
+            class="emotion-4"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-5"
               href="/api-page"
               style="color: rgb(255, 255, 255);"
             >
@@ -173,10 +173,10 @@ exports[`AppContainer renders without crashing 1`] = `
             </a>
           </li>
           <li
-            class="emotion-8 emotion-9"
+            class="emotion-4"
           >
             <a
-              class="emotion-10 emotion-11"
+              class="emotion-5"
               href="/about"
               style="color: rgb(255, 255, 255);"
             >

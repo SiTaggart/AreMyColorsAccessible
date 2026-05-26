@@ -1,25 +1,20 @@
-/* eslint-env jest */
-/// <reference types="jest" />
-import { expect } from '@jest/globals';
+import { render } from "@testing-library/react";
+import { Home } from "..";
+import { SiteDataProvider } from "../../../context/home";
 
-import { render } from '@testing-library/react';
-import React from 'react';
-import { Home } from '..';
-import { SiteDataProvider } from '../../../context/home';
-
-describe('Home', (): void => {
-  it('renders without crashing', (): void => {
+describe("Home", (): void => {
+  it("renders without crashing", (): void => {
     const { asFragment } = render(
       <SiteDataProvider
         initialSiteData={{
-          background: '#000',
-          textColor: '#fff',
-          isLight: false,
+          background: "#000",
           colorCombos: [],
+          isLight: false,
+          textColor: "#fff",
         }}
       >
         <Home />
-      </SiteDataProvider>
+      </SiteDataProvider>,
     );
     expect(asFragment()).toMatchSnapshot();
   });

@@ -1,13 +1,13 @@
-import React, { ReactElement } from 'react';
-import { colorRating } from '../../utils/color-rating';
-import { useSiteData } from '../../context/home';
+import React, { ReactElement } from "react";
+import { useSiteData } from "../../context/home";
+import { colorRating } from "../../utils/color-rating";
 import {
   ContrastResult,
+  ContrastResultDesc,
   ContrastResultRating,
   ContrastResults,
   ContrastResultsHeading,
-  ContrastResultDesc,
-} from './styled';
+} from "./styled";
 
 interface AreYouSeriousProps {
   isLight: boolean;
@@ -17,7 +17,7 @@ const AreYouSerious: React.FC<AreYouSeriousProps> = ({
 }: AreYouSeriousProps): ReactElement => {
   const styles = {
     seriouslyContainer: {
-      color: isLight ? '#343334' : '#fff',
+      color: isLight ? "#343334" : "#fff",
     },
   };
 
@@ -36,9 +36,9 @@ const Results: React.FC = (): ReactElement => {
   const contrast = colorInfo.contrast || 0;
   const accessibility = colorInfo.accessibility || {
     aa: false,
-    aaLarge: false,
     aaa: false,
     aaaLarge: false,
+    aaLarge: false,
   };
   const ratio = Number.parseFloat(contrast.toFixed(2));
   const colorRatings = colorRating(accessibility);

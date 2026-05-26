@@ -1,12 +1,12 @@
-import React, { ReactElement } from 'react';
-import Head from 'next/head';
-import styled from '@emotion/styled';
-import { breakpoint } from '../../../styles/utils';
-import { Footer } from '../../footer';
-import { useSiteData } from '../../../context/home';
+import React, { ReactElement } from "react";
+import { Global, css } from "@emotion/react";
+import styled from "@emotion/styled";
+import { breakpoint } from "../../../styles/utils";
+import { Footer } from "../../footer";
+import { useSiteData } from "../../../context/home";
 
 const StyledAppContainer = styled.div`
-  ${breakpoint('small')} {
+  ${breakpoint("small")} {
     height: 100%;
   }
 `;
@@ -18,27 +18,30 @@ interface AppContainerProps {
 
 const AppContainer: React.FC<AppContainerProps> = ({
   children,
-  title = 'Are My Colours Accessible',
+  title = "Are My Colours Accessible",
 }: AppContainerProps): ReactElement => {
   const { siteData } = useSiteData();
 
+  React.useEffect(() => {
+    document.title = title;
+  }, [title]);
+
   const styles = {
     footerLinks: {
-      color: siteData.isLight ? '#343334' : '#fff',
+      color: siteData.isLight ? "#343334" : "#fff",
     },
   };
 
   return (
     <StyledAppContainer>
-      <Head>
-        <title>{title}</title>
-        <style>{`
+      <Global
+        styles={css`
           body {
             background-color: ${siteData.colorCombos[1].hex};
             color: ${siteData.colorCombos[0].hex};
           }
-        `}</style>
-      </Head>
+        `}
+      />
 
       {children}
 

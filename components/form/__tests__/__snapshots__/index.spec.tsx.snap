@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Form renders without crashing 1`] = `
+exports[`Form > renders without crashing 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-box;
@@ -19,14 +19,14 @@ exports[`Form renders without crashing 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     children
   </div>
 </DocumentFragment>
 `;
 
-exports[`Form should render inline styles when past 1`] = `
+exports[`Form > should render inline styles when past 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-box;
@@ -45,7 +45,7 @@ exports[`Form should render inline styles when past 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     style="background-color: rgb(255, 255, 255);"
   >
     children

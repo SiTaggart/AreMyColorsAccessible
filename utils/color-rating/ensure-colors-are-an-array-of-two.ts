@@ -1,8 +1,8 @@
-import { ColorPair } from '../../types';
+import { ColorPair } from "../../types";
 
-export const ensureColorsAreAnArrayOfTwo = (colors: string | string[]): ColorPair | false => {
+export const ensureColorsAreAnArrayOfTwo = (colors: string | Array<string>): ColorPair | false => {
   let arrayOfColors = colors;
-  if (typeof colors === 'string') {
+  if (typeof colors === "string") {
     try {
       arrayOfColors = JSON.parse(colors);
     } catch {
@@ -10,9 +10,8 @@ export const ensureColorsAreAnArrayOfTwo = (colors: string | string[]): ColorPai
     }
   }
   if (Array.isArray(arrayOfColors) && arrayOfColors.length === 2) {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore this is definitely and array of 2
-    return arrayOfColors;
+    const [firstColor, secondColor] = arrayOfColors;
+    return [firstColor, secondColor];
   }
   return false;
 };

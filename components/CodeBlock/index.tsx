@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Highlight, Language, themes } from 'prism-react-renderer';
-import { Box } from '@twilio-paste/core/box';
-import { useUIDSeed } from '@twilio-paste/core/uid-library';
+import * as React from "react";
+import { Highlight, Language, themes } from "prism-react-renderer";
+import { Box } from "@twilio-paste/core/box";
+import { useUIDSeed } from "@twilio-paste/core/uid-library";
 
 interface FunctionalComponent {
   children: React.ReactNode;
@@ -43,18 +43,18 @@ interface CodeBlockProps {
 }
 export const CodeBlock: React.FC<CodeBlockProps> = ({
   example,
-  language = 'jsx',
+  language = "jsx",
 }: CodeBlockProps) => {
   const KeySeed = useUIDSeed();
   return (
     <Highlight code={example} language={language} theme={themes.nightOwl}>
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+      {({ className, getLineProps, getTokenProps, style, tokens }) => (
         <Pre className={className} style={style}>
           {tokens.map((line, i) => (
-            <Line key={KeySeed('line')} {...getLineProps({ line, key: i })}>
+            <Line key={KeySeed("line")} {...getLineProps({ key: i, line })}>
               <LineContent>
                 {line.map((token, key) => (
-                  <span key={KeySeed('content')} {...getTokenProps({ token, key })} />
+                  <span key={KeySeed("content")} {...getTokenProps({ key, token })} />
                 ))}
               </LineContent>
             </Line>

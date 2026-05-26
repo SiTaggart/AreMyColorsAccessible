@@ -1,17 +1,17 @@
-import * as React from 'react';
+import * as React from "react";
 
-import { PaletteInput } from '../palette-input';
-import { ColorMatrix } from '../color-matrix';
-import { usePaletteData } from '../../context/palette';
+import { PaletteInput } from "../palette-input";
+import { ColorMatrix } from "../color-matrix";
+import { usePaletteData } from "../../context/palette";
 
 const PalettePage: React.FC = (): React.ReactElement => {
-  const { paletteData, handleColorChange, handleNewColor } = usePaletteData();
+  const { handleColorChange, handleNewColor, paletteData } = usePaletteData();
   return (
     <>
       <PaletteInput
         errorMessage={
           paletteData.hasError
-            ? 'Please enter valid colors as comma or space separated hex values'
+            ? "Please enter valid colors as comma or space separated hex values"
             : undefined
         }
         onColorAdd={handleNewColor}

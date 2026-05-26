@@ -1,48 +1,48 @@
 export interface Accessibility {
-  aaa: boolean;
   aa: boolean;
+  aaa: boolean;
   aaaLarge: boolean;
   aaLarge: boolean;
 }
 
 export interface ColorRating {
-  small: string;
   bold: string;
   large: string;
   overall: string;
+  small: string;
 }
 
 const colorRating = (accessibility: Accessibility): ColorRating => {
   let small: string;
   let bold: string;
   let large: string;
-  let overall = 'Nope';
+  let overall = "Nope";
 
   if (accessibility.aaa) {
-    small = 'AAA';
+    small = "AAA";
   } else {
-    small = accessibility.aa ? 'AA' : 'Fail';
+    small = accessibility.aa ? "AA" : "Fail";
   }
 
   if (accessibility.aaaLarge) {
-    bold = 'AAA';
-    large = 'AAA';
+    bold = "AAA";
+    large = "AAA";
   } else {
-    bold = accessibility.aaLarge ? 'AA' : 'Fail';
+    bold = accessibility.aaLarge ? "AA" : "Fail";
     large = bold;
   }
 
-  if (small === 'AAA' || small === 'AA') {
-    overall = 'Yup';
-  } else if (small === 'Fail' && large === 'AA') {
-    overall = 'Kinda';
+  if (small === "AAA" || small === "AA") {
+    overall = "Yup";
+  } else if (small === "Fail" && large === "AA") {
+    overall = "Kinda";
   }
 
   return {
-    small,
     bold,
     large,
     overall,
+    small,
   };
 };
 

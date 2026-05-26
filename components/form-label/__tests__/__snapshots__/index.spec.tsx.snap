@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`FormLabel renders without crashing 1`] = `
+exports[`FormLabel > renders without crashing 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: inline-block;
@@ -10,7 +10,7 @@ exports[`FormLabel renders without crashing 1`] = `
 }
 
 <label
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     for="input-id"
   >
     children
@@ -18,7 +18,7 @@ exports[`FormLabel renders without crashing 1`] = `
 </DocumentFragment>
 `;
 
-exports[`FormLabel should create a large label style with variant large 1`] = `
+exports[`FormLabel > should create a large label style with variant large 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: inline-block;
@@ -28,7 +28,7 @@ exports[`FormLabel should create a large label style with variant large 1`] = `
 }
 
 <label
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     for="input-id"
   >
     children

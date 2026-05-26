@@ -1,43 +1,43 @@
-import React, { ReactElement } from 'react';
-import styled, { CSSObject } from '@emotion/styled';
+import React, { ReactElement } from "react";
+import styled, { CSSObject } from "@emotion/styled";
 
 export interface FormInputProps {
   ariaLabel?: string;
+  className?: string;
+  css?: CSSObject;
   defaultValue?: string;
   errorMessage?: string;
-  id: string;
   hasNoSpacing?: boolean;
+  id: string;
   name?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onInput?: React.InputEventHandler<HTMLInputElement>;
   placeholder?: string;
   style?: React.CSSProperties;
   value?: string;
-  className?: string;
-  css?: CSSObject;
 }
 
 interface StyledInputProps {
-  isErrored?: boolean;
-  hasNoSpacing?: boolean;
   css?: CSSObject;
+  hasNoSpacing?: boolean;
+  isErrored?: boolean;
 }
 
 const StyledInput = styled.input<StyledInputProps>`
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
-  border-color: ${(props): string | undefined => (props.isErrored ? '#c12915' : undefined)};
+  border-color: ${(props): string | undefined => (props.isErrored ? "#c12915" : undefined)};
   border-radius: 3px;
-  color: ${(props): string | undefined => (props.isErrored ? '#c12915' : undefined)};
+  color: ${(props): string | undefined => (props.isErrored ? "#c12915" : undefined)};
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
-  margin-bottom: ${(props): string => (props.hasNoSpacing ? '0' : '2rem')};
+  margin-bottom: ${(props): string => (props.hasNoSpacing ? "0" : "2rem")};
   width: 100%;
 
   &:focus {
-    border-color: ${(props): string | undefined => (props.isErrored ? '#c12915' : undefined)};
+    border-color: ${(props): string | undefined => (props.isErrored ? "#c12915" : undefined)};
     box-shadow: ${(props): string | undefined =>
-      props.isErrored ? '0px 0px 10px #c12915' : undefined};
+      props.isErrored ? "0px 0px 10px #c12915" : undefined};
   }
 `;
 
@@ -48,19 +48,19 @@ const StyledInputError = styled.div`
 `;
 
 const FormInput: React.FC<FormInputProps> = ({
-  id,
   ariaLabel,
+  className,
+  css,
   defaultValue,
+  errorMessage,
   hasNoSpacing,
+  id,
   name,
   onChange,
   onInput,
   placeholder,
   style,
   value,
-  errorMessage,
-  className,
-  css,
 }: FormInputProps): ReactElement<HTMLInputElement> => (
   <>
     <StyledInput

@@ -1,7 +1,7 @@
-import React, { ReactElement } from 'react';
-import { Container } from '../layouts/container';
-import { Layout } from '../layouts/layout';
-import { Heading, P, Blockquote, Link } from '../typography';
+import React, { ReactElement } from "react";
+import { Container } from "../layouts/container";
+import { Layout } from "../layouts/layout";
+import { Heading, P, Blockquote, Link } from "../typography";
 
 const About: React.FC = (): ReactElement => (
   <Container variant="about">
@@ -19,7 +19,7 @@ const About: React.FC = (): ReactElement => (
           Information and user interface components must be presentable to users in ways they can
           perceive. <br />
           <cite>
-            &ndash;{' '}
+            &ndash;{" "}
             <Link href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#perceivable">
               Principle 1: Perceivable
             </Link>
@@ -33,10 +33,10 @@ const About: React.FC = (): ReactElement => (
           background.
           <br />
           <cite>
-            &ndash;{' '}
+            &ndash;{" "}
             <Link href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast">
               Guideline 1.4 Distinguishable:
-            </Link>{' '}
+            </Link>{" "}
             WCAG 2.0 Guidelines
           </cite>
         </P>
@@ -47,10 +47,10 @@ const About: React.FC = (): ReactElement => (
           except for the following: (Level AA).
           <br />
           <cite>
-            &ndash;{' '}
+            &ndash;{" "}
             <Link href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast">
               1.4.3 Contrast (Minimum):
-            </Link>{' '}
+            </Link>{" "}
             WCAG 2.0 Guidelines
           </cite>
         </P>
@@ -63,7 +63,7 @@ const About: React.FC = (): ReactElement => (
         contrast ratio can be 3.0:1
       </P>
       <P>
-        Building upon and heavily influenced by the excellent{' '}
+        Building upon and heavily influenced by the excellent{" "}
         <Link href="http://jxnblk.com/colorable/">Colorable</Link>, I wanted more context around the
         result. When you share the outcome with your colleagues, all the results, rules and what
         you&rsquo;re aiming for, is easily understandable for when you have those awkward
@@ -71,8 +71,8 @@ const About: React.FC = (): ReactElement => (
       </P>
       <P>Accessibility doesn&rsquo;t have to be ugly.</P>
       <P>
-        Built by <Link href="http://www.simontaggart.com">Simon Taggart</Link>,{' '}
-        <Link href="https://github.com/SiTaggart/AreMyColorsAccessible">code on GitHub</Link>,{' '}
+        Built by <Link href="http://www.simontaggart.com">Simon Taggart</Link>,{" "}
+        <Link href="https://github.com/SiTaggart/AreMyColorsAccessible">code on GitHub</Link>,{" "}
         <Link href="https://netlify.com">hosted on Netlify</Link>.
       </P>
     </Layout>

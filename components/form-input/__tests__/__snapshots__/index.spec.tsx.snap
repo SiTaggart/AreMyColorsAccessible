@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`FormInput renders without crashing 1`] = `
+exports[`FormInput > renders without crashing 1`] = `
 <DocumentFragment>
   .emotion-0 {
   background: rgba(255, 255, 255, 0.1);
@@ -14,16 +14,15 @@ exports[`FormInput renders without crashing 1`] = `
 
 <input
     autocomplete="off"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="form-id"
     id="form-id"
     type="text"
-    value=""
   />
 </DocumentFragment>
 `;
 
-exports[`FormInput should display an error message and associate it to the input 1`] = `
+exports[`FormInput > should display an error message and associate it to the input 1`] = `
 <DocumentFragment>
   .emotion-0 {
   background: rgba(255, 255, 255, 0.1);
@@ -45,11 +44,10 @@ exports[`FormInput should display an error message and associate it to the input
 <input
     aria-describedby="error-message-label-form-id"
     autocomplete="off"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="form-id"
     id="form-id"
     type="text"
-    value=""
   />
   .emotion-0 {
   color: #c12915;
@@ -58,7 +56,7 @@ exports[`FormInput should display an error message and associate it to the input
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     id="error-message-label-form-id"
   >
     this is an error
@@ -66,7 +64,7 @@ exports[`FormInput should display an error message and associate it to the input
 </DocumentFragment>
 `;
 
-exports[`FormInput should set the noSpacing class when hasNoSpacing is set 1`] = `
+exports[`FormInput > should set the noSpacing class when hasNoSpacing is set 1`] = `
 <DocumentFragment>
   .emotion-0 {
   background: rgba(255, 255, 255, 0.1);
@@ -80,11 +78,10 @@ exports[`FormInput should set the noSpacing class when hasNoSpacing is set 1`] =
 
 <input
     autocomplete="off"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="form-id"
     id="form-id"
     type="text"
-    value=""
   />
 </DocumentFragment>
 `;

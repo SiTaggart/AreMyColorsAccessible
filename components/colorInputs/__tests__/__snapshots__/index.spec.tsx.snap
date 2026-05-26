@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ColorInputs renders without crashing 1`] = `
+exports[`ColorInputs > renders without crashing 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-box;
@@ -18,13 +18,13 @@ exports[`ColorInputs renders without crashing 1`] = `
   transition: color 400ms ease-out;
 }
 
-.emotion-2 {
+.emotion-1 {
   padding: 1rem;
   width: 100%;
 }
 
 @media (min-width: 768px) {
-  .emotion-2 {
+  .emotion-1 {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -32,14 +32,14 @@ exports[`ColorInputs renders without crashing 1`] = `
   }
 }
 
-.emotion-4 {
+.emotion-2 {
   display: inline-block;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-3 {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
   border-radius: 3px;
@@ -49,7 +49,7 @@ exports[`ColorInputs renders without crashing 1`] = `
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -61,17 +61,17 @@ exports[`ColorInputs renders without crashing 1`] = `
 }
 
 @media (min-width: 1024px) {
-  .emotion-8 {
+  .emotion-4 {
     margin: 0 -0.5rem;
   }
 }
 
-.emotion-10 {
+.emotion-5 {
   width: 100%;
 }
 
 @media (min-width: 1024px) {
-  .emotion-10 {
+  .emotion-5 {
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
@@ -80,7 +80,7 @@ exports[`ColorInputs renders without crashing 1`] = `
   }
 }
 
-.emotion-18 {
+.emotion-9 {
   -webkit-appearance: none;
   background: transparent;
   border-radius: 2px;
@@ -90,7 +90,7 @@ exports[`ColorInputs renders without crashing 1`] = `
   width: 100%;
 }
 
-.emotion-18::-webkit-slider-runnable-track {
+.emotion-9::-webkit-slider-runnable-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -102,7 +102,7 @@ exports[`ColorInputs renders without crashing 1`] = `
   border-radius: 5px;
 }
 
-.emotion-18::-webkit-slider-thumb {
+.emotion-9::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -114,11 +114,11 @@ exports[`ColorInputs renders without crashing 1`] = `
   margin-top: -9px;
 }
 
-.emotion-18:focus::-webkit-slider-runnable-track {
+.emotion-9:focus::-webkit-slider-runnable-track {
   background: currentColor;
 }
 
-.emotion-18::-moz-range-track {
+.emotion-9::-moz-range-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -130,7 +130,7 @@ exports[`ColorInputs renders without crashing 1`] = `
   border-radius: 5px;
 }
 
-.emotion-18::-moz-range-thumb {
+.emotion-9::-moz-range-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -140,7 +140,7 @@ exports[`ColorInputs renders without crashing 1`] = `
   cursor: pointer;
 }
 
-.emotion-18::-ms-track {
+.emotion-9::-ms-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -152,21 +152,21 @@ exports[`ColorInputs renders without crashing 1`] = `
   color: transparent;
 }
 
-.emotion-18::-ms-fill-lower {
+.emotion-9::-ms-fill-lower {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-18::-ms-fill-upper {
+.emotion-9::-ms-fill-upper {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-18::-ms-thumb {
+.emotion-9::-ms-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -176,59 +176,59 @@ exports[`ColorInputs renders without crashing 1`] = `
   cursor: pointer;
 }
 
-.emotion-18:focus::-ms-fill-lower {
+.emotion-9:focus::-ms-fill-lower {
   background: currentColor;
 }
 
-.emotion-18:focus::-ms-fill-upper {
+.emotion-9:focus::-ms-fill-upper {
   background: currentColor;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="color-input-form"
     style="color: rgb(255, 255, 255);"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <label
-        class="emotion-4 emotion-5"
+        class="emotion-2"
         for="textColor"
       >
         Text Color
       </label>
       <input
         autocomplete="off"
-        class="emotion-6 emotion-7"
+        class="emotion-3"
         data-testid="textColor"
         id="textColor"
-        style="border-color: #fff;"
+        style="border-color: rgb(255, 255, 255); color: inherit;"
         type="text"
         value="#fff"
       />
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4"
         data-testid="form-hsl-sliders"
       >
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-5"
         >
           <div
-            class="emotion-12 emotion-13"
+            class="emotion-6"
           >
             <label
-              class="emotion-4 emotion-5"
+              class="emotion-2"
               for="textColor-hsl-Hue"
             >
               Hue 0°
             </label>
           </div>
           <div
-            class="emotion-16 emotion-17"
+            class="emotion-8"
           >
             <input
-              class="emotion-18 emotion-19"
+              class="emotion-9"
               data-testid="textColor-hsl-Hue"
               id="textColor-hsl-Hue"
               max="360"
@@ -239,23 +239,23 @@ exports[`ColorInputs renders without crashing 1`] = `
           </div>
         </div>
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-5"
         >
           <div
-            class="emotion-12 emotion-13"
+            class="emotion-6"
           >
             <label
-              class="emotion-4 emotion-5"
+              class="emotion-2"
               for="textColor-hsl-Saturation"
             >
               Saturation 0%
             </label>
           </div>
           <div
-            class="emotion-16 emotion-17"
+            class="emotion-8"
           >
             <input
-              class="emotion-18 emotion-19"
+              class="emotion-9"
               data-testid="textColor-hsl-Saturation"
               id="textColor-hsl-Saturation"
               max="100"
@@ -266,23 +266,23 @@ exports[`ColorInputs renders without crashing 1`] = `
           </div>
         </div>
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-5"
         >
           <div
-            class="emotion-12 emotion-13"
+            class="emotion-6"
           >
             <label
-              class="emotion-4 emotion-5"
+              class="emotion-2"
               for="textColor-hsl-Lightness"
             >
               Lightness 100%
             </label>
           </div>
           <div
-            class="emotion-16 emotion-17"
+            class="emotion-8"
           >
             <input
-              class="emotion-18 emotion-19"
+              class="emotion-9"
               data-testid="textColor-hsl-Lightness"
               id="textColor-hsl-Lightness"
               max="100"
@@ -295,45 +295,45 @@ exports[`ColorInputs renders without crashing 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <label
-        class="emotion-4 emotion-5"
+        class="emotion-2"
         for="background"
       >
         Background
       </label>
       <input
         autocomplete="off"
-        class="emotion-6 emotion-7"
+        class="emotion-3"
         data-testid="background"
         id="background"
-        style="border-color: #fff;"
+        style="border-color: rgb(255, 255, 255); color: inherit;"
         type="text"
         value="#000"
       />
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4"
         data-testid="form-hsl-sliders"
       >
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-5"
         >
           <div
-            class="emotion-12 emotion-13"
+            class="emotion-6"
           >
             <label
-              class="emotion-4 emotion-5"
+              class="emotion-2"
               for="background-hsl-Hue"
             >
               Hue 0°
             </label>
           </div>
           <div
-            class="emotion-16 emotion-17"
+            class="emotion-8"
           >
             <input
-              class="emotion-18 emotion-19"
+              class="emotion-9"
               data-testid="background-hsl-Hue"
               id="background-hsl-Hue"
               max="360"
@@ -344,23 +344,23 @@ exports[`ColorInputs renders without crashing 1`] = `
           </div>
         </div>
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-5"
         >
           <div
-            class="emotion-12 emotion-13"
+            class="emotion-6"
           >
             <label
-              class="emotion-4 emotion-5"
+              class="emotion-2"
               for="background-hsl-Saturation"
             >
               Saturation 0%
             </label>
           </div>
           <div
-            class="emotion-16 emotion-17"
+            class="emotion-8"
           >
             <input
-              class="emotion-18 emotion-19"
+              class="emotion-9"
               data-testid="background-hsl-Saturation"
               id="background-hsl-Saturation"
               max="100"
@@ -371,23 +371,23 @@ exports[`ColorInputs renders without crashing 1`] = `
           </div>
         </div>
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-5"
         >
           <div
-            class="emotion-12 emotion-13"
+            class="emotion-6"
           >
             <label
-              class="emotion-4 emotion-5"
+              class="emotion-2"
               for="background-hsl-Lightness"
             >
               Lightness 0%
             </label>
           </div>
           <div
-            class="emotion-16 emotion-17"
+            class="emotion-8"
           >
             <input
-              class="emotion-18 emotion-19"
+              class="emotion-9"
               data-testid="background-hsl-Lightness"
               id="background-hsl-Lightness"
               max="100"

@@ -1,21 +1,21 @@
-import { css, SerializedStyles } from '@emotion/react';
-import styled from '@emotion/styled';
-import { breakpoint } from '../../styles/utils';
+import { css, SerializedStyles } from "@emotion/react";
+import styled from "@emotion/styled";
+import { breakpoint } from "../../styles/utils";
 
 interface HeadingProps {
-  as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'label' | 'div' | 'span';
+  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "label" | "div" | "span";
   children?: React.ReactElement | string | number;
-  variant?: '10';
+  variant?: "10";
 }
 const getHeadingStyleVariant = ({ variant }: HeadingProps): SerializedStyles => {
   let variantStyles = css``;
   switch (variant) {
-    case '10': {
+    case "10": {
       variantStyles = css`
         font-size: 2.4rem;
         text-align: center;
 
-        ${breakpoint('small')} {
+        ${breakpoint("small")} {
           font-size: 3rem;
         }
       `;
@@ -42,7 +42,7 @@ const Link = styled.a`
 const Blockquote = styled.blockquote`
   margin: 3rem 1rem;
 
-  ${breakpoint('medium')} {
+  ${breakpoint("medium")} {
     margin: 3rem -3rem;
   }
 

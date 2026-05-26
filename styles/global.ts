@@ -1,10 +1,6 @@
-import { css } from '@emotion/react';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const normalize = require('normalize.css');
+import { css } from "@emotion/react";
 
 const globalStyles = css`
-  ${normalize}
-
   *,
   *::before,
   *:after {
@@ -25,12 +21,12 @@ const globalStyles = css`
       system-ui,
       -apple-system,
       BlinkMacSystemFont,
-      'Segoe UI',
+      "Segoe UI",
       Roboto,
       Oxygen-Sans,
       Ubuntu,
       Cantarell,
-      'Helvetica Neue',
+      "Helvetica Neue",
       Arial,
       sans-serif;
     line-height: 1.4;

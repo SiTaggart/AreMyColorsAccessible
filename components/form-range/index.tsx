@@ -1,5 +1,5 @@
-import React, { ReactElement } from 'react';
-import { StyledRange } from './styled-range';
+import React, { ReactElement } from "react";
+import { StyledRange } from "./styled-range";
 
 export interface FormRangeProps {
   defaultValue?: string;
@@ -7,7 +7,7 @@ export interface FormRangeProps {
   max: number;
   min: number;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onInput?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onInput?: React.InputEventHandler<HTMLInputElement>;
   value?: number;
 }
 
@@ -28,6 +28,7 @@ const FormRange: React.FC<FormRangeProps> = ({
     min={min}
     onChange={onChange}
     onInput={onInput}
+    type="range"
     value={value}
   />
 );

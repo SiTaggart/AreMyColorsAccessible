@@ -1,8 +1,8 @@
-import React, { ReactElement } from 'react';
-import { Container } from '../layouts/container';
-import { Layout } from '../layouts/layout';
-import { Results } from '../results';
-import { ColorInputs } from '../colorInputs';
+import React, { ReactElement } from "react";
+import { Container } from "../layouts/container";
+import { Layout } from "../layouts/layout";
+import { Results } from "../results";
+import { ColorInputs } from "../colorInputs";
 
 const Home: React.FC = (): ReactElement => (
   <Container variant="home">

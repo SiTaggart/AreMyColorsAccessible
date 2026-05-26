@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Footer renders footerLink styles added 1`] = `
+exports[`Footer > renders footerLink styles added 1`] = `
 <DocumentFragment>
   .emotion-0 {
   padding: 5rem 0 1rem;
@@ -8,37 +8,37 @@ exports[`Footer renders footerLink styles added 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-2 {
   list-style: none;
   margin: 0 0 1rem;
   padding: 0;
 }
 
-.emotion-6 {
+.emotion-3 {
   display: inline-block;
   padding: 0 1rem;
 }
 
-.emotion-8 {
+.emotion-4 {
   color: currentColor;
   -webkit-transition: color 400ms ease-in;
   transition: color 400ms ease-in;
 }
 
 <footer
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <nav
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <ul
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <li
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-4"
             href="/"
             style="color: rgb(255, 255, 255);"
           >
@@ -46,10 +46,10 @@ exports[`Footer renders footerLink styles added 1`] = `
           </a>
         </li>
         <li
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-4"
             href="/palette"
             style="color: rgb(255, 255, 255);"
           >
@@ -57,10 +57,10 @@ exports[`Footer renders footerLink styles added 1`] = `
           </a>
         </li>
         <li
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-4"
             href="/api-page"
             style="color: rgb(255, 255, 255);"
           >
@@ -68,10 +68,10 @@ exports[`Footer renders footerLink styles added 1`] = `
           </a>
         </li>
         <li
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-4"
             href="/about"
             style="color: rgb(255, 255, 255);"
           >
@@ -84,7 +84,7 @@ exports[`Footer renders footerLink styles added 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Footer renders without crashing 1`] = `
+exports[`Footer > renders without crashing 1`] = `
 <DocumentFragment>
   .emotion-0 {
   padding: 5rem 0 1rem;
@@ -92,67 +92,67 @@ exports[`Footer renders without crashing 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-2 {
   list-style: none;
   margin: 0 0 1rem;
   padding: 0;
 }
 
-.emotion-6 {
+.emotion-3 {
   display: inline-block;
   padding: 0 1rem;
 }
 
-.emotion-8 {
+.emotion-4 {
   color: currentColor;
   -webkit-transition: color 400ms ease-in;
   transition: color 400ms ease-in;
 }
 
 <footer
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <nav
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <ul
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <li
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-4"
             href="/"
           >
             Home
           </a>
         </li>
         <li
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-4"
             href="/palette"
           >
             Palette
           </a>
         </li>
         <li
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-4"
             href="/api-page"
           >
             API
           </a>
         </li>
         <li
-          class="emotion-6 emotion-7"
+          class="emotion-3"
         >
           <a
-            class="emotion-8 emotion-9"
+            class="emotion-4"
             href="/about"
           >
             About

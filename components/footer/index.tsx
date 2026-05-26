@@ -1,7 +1,6 @@
-import React, { ReactElement } from 'react';
-import NextLink from 'next/link';
-import styled from '@emotion/styled';
-import { Link } from '../typography';
+import React, { ReactElement } from "react";
+import styled from "@emotion/styled";
+import { Link } from "../typography";
 
 interface FooterProps {
   styles?: { footerLinks?: React.CSSProperties };
@@ -33,24 +32,24 @@ const Footer: React.FC<FooterProps> = ({ styles }: FooterProps): ReactElement<HT
       <StyledFooterNav>
         <StyledFooterNavList>
           <StyledFooterNavListItem>
-            <NextLink href="/" legacyBehavior passHref>
-              <StyledFooterAnchor style={linkStyles}>Home</StyledFooterAnchor>
-            </NextLink>
+            <StyledFooterAnchor href="/" style={linkStyles}>
+              Home
+            </StyledFooterAnchor>
           </StyledFooterNavListItem>
           <StyledFooterNavListItem>
-            <NextLink href="/palette" legacyBehavior passHref>
-              <StyledFooterAnchor style={linkStyles}>Palette</StyledFooterAnchor>
-            </NextLink>
+            <StyledFooterAnchor href="/palette" style={linkStyles}>
+              Palette
+            </StyledFooterAnchor>
           </StyledFooterNavListItem>
           <StyledFooterNavListItem>
-            <NextLink href="/api-page" legacyBehavior passHref>
-              <StyledFooterAnchor style={linkStyles}>API</StyledFooterAnchor>
-            </NextLink>
+            <StyledFooterAnchor href="/api-page" style={linkStyles}>
+              API
+            </StyledFooterAnchor>
           </StyledFooterNavListItem>
           <StyledFooterNavListItem>
-            <NextLink href="/about" legacyBehavior passHref>
-              <StyledFooterAnchor style={linkStyles}>About</StyledFooterAnchor>
-            </NextLink>
+            <StyledFooterAnchor href="/about" style={linkStyles}>
+              About
+            </StyledFooterAnchor>
           </StyledFooterNavListItem>
         </StyledFooterNavList>
       </StyledFooterNav>

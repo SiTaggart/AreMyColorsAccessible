@@ -1,6 +1,6 @@
-import ColorCombos from 'color-combos';
-import { ColorPair } from '../../types';
-import { colorRating, ColorRating } from './color-rating';
+import ColorCombos from "color-combos";
+import { ColorPair } from "../../types";
+import { colorRating, ColorRating } from "./color-rating";
 
 export interface GetRatingReturn extends ColorRating {
   contrast: string;

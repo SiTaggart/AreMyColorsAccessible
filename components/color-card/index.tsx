@@ -1,7 +1,7 @@
-import React, { ReactElement } from 'react';
-import styled, { CSSObject } from '@emotion/styled';
-import { Levels } from '../../types';
-import { colorRating } from '../../utils/color-rating';
+import React, { ReactElement } from "react";
+import styled, { CSSObject } from "@emotion/styled";
+import { Levels } from "../../types";
+import { colorRating } from "../../utils/color-rating";
 
 export interface ColorCardProps {
   accessibility: Levels;
@@ -20,7 +20,7 @@ const StyledColorCard = styled.div<StyledColorCardProps>`
   min-height: 8rem;
   min-width: 12rem;
   overflow: hidden;
-  opacity: ${(props): string | undefined => (props.isNotImportant ? '0.1' : undefined)};
+  opacity: ${(props): string | undefined => (props.isNotImportant ? "0.1" : undefined)};
   text-align: center;
   transition: opacity ease-in;
 `;
@@ -42,18 +42,18 @@ const StyledColorSwatch = styled.div<StyledColorSwatchProps>`
 `;
 
 interface StyledColorCardPillProps {
-  status?: 'success' | 'error';
+  status?: "success" | "error";
 }
 const getStatusStyles = (props: StyledColorCardPillProps): CSSObject => {
   switch (props.status) {
-    case 'success': {
-      return { backgroundColor: '#CFFCDA', color: '#004215' };
+    case "success": {
+      return { backgroundColor: "#CFFCDA", color: "#004215" };
     }
-    case 'error': {
-      return { backgroundColor: '#FBDBDB', color: '#C52020' };
+    case "error": {
+      return { backgroundColor: "#FBDBDB", color: "#C52020" };
     }
     default: {
-      return { backgroundColor: '#F7F8F8', color: '#666D70' };
+      return { backgroundColor: "#F7F8F8", color: "#666D70" };
     }
   }
 };
@@ -67,9 +67,9 @@ const StyledColorCardPill = styled.span<StyledColorCardPillProps>`
 
 const ColorCard: React.FC<ColorCardProps> = ({
   accessibility,
-  isNotImportant,
-  contrast,
   color,
+  contrast,
+  isNotImportant,
 }: ColorCardProps): ReactElement<HTMLDivElement> => {
   const rating = colorRating(accessibility);
 
@@ -86,10 +86,10 @@ const ColorCard: React.FC<ColorCardProps> = ({
         </StyledColorSwatch>
       </StyledCardRow>
       <StyledCardRow>
-        <StyledColorCardPill status={rating.small === 'Fail' ? 'error' : 'success'}>
+        <StyledColorCardPill status={rating.small === "Fail" ? "error" : "success"}>
           Small: {rating.small}
         </StyledColorCardPill>
-        <StyledColorCardPill status={rating.large === 'Fail' ? 'error' : 'success'}>
+        <StyledColorCardPill status={rating.large === "Fail" ? "error" : "success"}>
           Large: {rating.large}
         </StyledColorCardPill>
       </StyledCardRow>

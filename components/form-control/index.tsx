@@ -1,6 +1,6 @@
-import React, { ReactNode, ReactElement } from 'react';
-import styled from '@emotion/styled';
-import { breakpoint } from '../../styles/utils';
+import React, { ReactNode, ReactElement } from "react";
+import styled from "@emotion/styled";
+import { breakpoint } from "../../styles/utils";
 
 interface FormControlProps {
   children: ReactNode;
@@ -9,7 +9,7 @@ interface FormControlProps {
 const StyleFormControl = styled.div`
   padding: 1rem;
   width: 100%;
-  ${breakpoint('small')} {
+  ${breakpoint("small")} {
     flex: 1 1 auto;
     width: 50%;
   }

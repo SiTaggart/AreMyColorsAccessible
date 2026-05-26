@@ -1,25 +1,25 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PaletteInput renders without crashing 1`] = `
+exports[`PaletteInput > renders without crashing 1`] = `
 <DocumentFragment>
   .emotion-0 {
   text-align: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   font-weight: 700;
   line-height: 1;
   margin: 3rem 0;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: inline-block;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-3 {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
   border-radius: 3px;
@@ -30,14 +30,14 @@ exports[`PaletteInput renders without crashing 1`] = `
 }
 
 <form
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div>
       <h1
-        class="emotion-2 emotion-3"
+        class="emotion-1"
       >
         <label
-          class="emotion-4 emotion-5"
+          class="emotion-2"
           for="palette-form-input"
         >
           Add the colours from your palette
@@ -45,39 +45,38 @@ exports[`PaletteInput renders without crashing 1`] = `
       </h1>
       <input
         autocomplete="off"
-        class="emotion-6 emotion-7"
+        class="emotion-3"
         data-testid="palette-form-input"
         id="palette-form-input"
         name="paletteFormInput"
         placeholder="e.g. #ccc, #fff or blue"
         type="text"
-        value=""
       />
     </div>
   </form>
 </DocumentFragment>
 `;
 
-exports[`PaletteInput should render an error message when passed 1`] = `
+exports[`PaletteInput > should render an error message when passed 1`] = `
 <DocumentFragment>
   .emotion-0 {
   text-align: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   font-weight: 700;
   line-height: 1;
   margin: 3rem 0;
 }
 
-.emotion-4 {
+.emotion-2 {
   display: inline-block;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-3 {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
   border-color: #c12915;
@@ -89,26 +88,26 @@ exports[`PaletteInput should render an error message when passed 1`] = `
   width: 100%;
 }
 
-.emotion-6:focus {
+.emotion-3:focus {
   border-color: #c12915;
   box-shadow: 0px 0px 10px #c12915;
 }
 
-.emotion-8 {
+.emotion-4 {
   color: #c12915;
   font-size: 1.3rem;
   margin: 1rem 0;
 }
 
 <form
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div>
       <h1
-        class="emotion-2 emotion-3"
+        class="emotion-1"
       >
         <label
-          class="emotion-4 emotion-5"
+          class="emotion-2"
           for="palette-form-input"
         >
           Add the colours from your palette
@@ -117,16 +116,15 @@ exports[`PaletteInput should render an error message when passed 1`] = `
       <input
         aria-describedby="error-message-label-palette-form-input"
         autocomplete="off"
-        class="emotion-6 emotion-7"
+        class="emotion-3"
         data-testid="palette-form-input"
         id="palette-form-input"
         name="paletteFormInput"
         placeholder="e.g. #ccc, #fff or blue"
         type="text"
-        value=""
       />
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4"
         id="error-message-label-palette-form-input"
       >
         I'm an error

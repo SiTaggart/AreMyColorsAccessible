@@ -1,14 +1,11 @@
-import { createLogger, format, transports } from 'winston';
+type LogFields = Record<string, unknown>;
 
-const httpTransportOptions = {
-  host: 'http-intake.logs.datadoghq.com',
-  path: `/v1/input/${process.env.DATADOG_API_KEY}?ddsource=nodejs&service=${process.env.DATADOG_APP_NAME}_${process.env.NETLIFY_CONTEXT}`,
-  ssl: true,
+const log = (level: "info" | "error", message: string, fields?: LogFields): void => {
+  const payload = fields ? { message, ...fields } : { message };
+  console[level](JSON.stringify(payload));
 };
 
-export const logger = createLogger({
-  level: 'info',
-  exitOnError: false,
-  format: format.json(),
-  transports: [new transports.Console(), new transports.Http(httpTransportOptions)],
-});
+export const logger = {
+  error: (message: string, fields?: LogFields): void => log("error", message, fields),
+  info: (message: string, fields?: LogFields): void => log("info", message, fields),
+};

@@ -1,13 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Layout renders without crashing 1`] = `
+exports[`Layout > renders without crashing 1`] = `
 <DocumentFragment>
   .emotion-0 {
   margin: 0 auto;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div>
       children
@@ -16,7 +16,7 @@ exports[`Layout renders without crashing 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Layout should set full class with full variant 1`] = `
+exports[`Layout > should set full class with full variant 1`] = `
 <DocumentFragment>
   .emotion-0 {
   margin: 0 auto;
@@ -24,7 +24,7 @@ exports[`Layout should set full class with full variant 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div>
       children
@@ -33,7 +33,7 @@ exports[`Layout should set full class with full variant 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Layout should set large class with large variant 1`] = `
+exports[`Layout > should set large class with large variant 1`] = `
 <DocumentFragment>
   .emotion-0 {
   margin: 0 auto;
@@ -41,7 +41,7 @@ exports[`Layout should set large class with large variant 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div>
       children
@@ -50,7 +50,7 @@ exports[`Layout should set large class with large variant 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Layout should set small class with small variant 1`] = `
+exports[`Layout > should set small class with small variant 1`] = `
 <DocumentFragment>
   .emotion-0 {
   margin: 0 auto;
@@ -59,7 +59,7 @@ exports[`Layout should set small class with small variant 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div>
       children

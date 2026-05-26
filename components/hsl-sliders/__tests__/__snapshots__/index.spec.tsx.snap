@@ -1,8 +1,8 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`hsl-slider compact variant should render a compact variant 1`] = `
+exports[`hsl-slider > compact variant > should render a compact variant 1`] = `
 <DocumentFragment>
-  .emotion-2 {
+  .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12,14 +12,14 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
 }
 
 @media (min-width: 1024px) {
-  .emotion-2 {
+  .emotion-1 {
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
   }
 }
 
-.emotion-4 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -34,20 +34,20 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
   text-align: left;
 }
 
-.emotion-6 {
+.emotion-3 {
   display: inline-block;
   font-size: 1rem;
   margin-bottom: 0;
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-4 {
   -webkit-flex: 6;
   -ms-flex: 6;
   flex: 6;
 }
 
-.emotion-10 {
+.emotion-5 {
   -webkit-appearance: none;
   background: transparent;
   border-radius: 2px;
@@ -57,7 +57,7 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
   width: 100%;
 }
 
-.emotion-10::-webkit-slider-runnable-track {
+.emotion-5::-webkit-slider-runnable-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -69,7 +69,7 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
   border-radius: 5px;
 }
 
-.emotion-10::-webkit-slider-thumb {
+.emotion-5::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -81,11 +81,11 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
   margin-top: -9px;
 }
 
-.emotion-10:focus::-webkit-slider-runnable-track {
+.emotion-5:focus::-webkit-slider-runnable-track {
   background: currentColor;
 }
 
-.emotion-10::-moz-range-track {
+.emotion-5::-moz-range-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -97,7 +97,7 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
   border-radius: 5px;
 }
 
-.emotion-10::-moz-range-thumb {
+.emotion-5::-moz-range-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -107,7 +107,7 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
   cursor: pointer;
 }
 
-.emotion-10::-ms-track {
+.emotion-5::-ms-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -119,21 +119,21 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
   color: transparent;
 }
 
-.emotion-10::-ms-fill-lower {
+.emotion-5::-ms-fill-lower {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-10::-ms-fill-upper {
+.emotion-5::-ms-fill-upper {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-10::-ms-thumb {
+.emotion-5::-ms-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -143,36 +143,36 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
   cursor: pointer;
 }
 
-.emotion-10:focus::-ms-fill-lower {
+.emotion-5:focus::-ms-fill-lower {
   background: currentColor;
 }
 
-.emotion-10:focus::-ms-fill-upper {
+.emotion-5:focus::-ms-fill-upper {
   background: currentColor;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="form-hsl-sliders"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <label
-          class="emotion-6 emotion-7"
+          class="emotion-3"
           for="input-id-Hue"
         >
           H
         </label>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4"
       >
         <input
-          class="emotion-10 emotion-11"
+          class="emotion-5"
           data-testid="input-id-Hue"
           id="input-id-Hue"
           max="360"
@@ -183,23 +183,23 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <label
-          class="emotion-6 emotion-7"
+          class="emotion-3"
           for="input-id-Saturation"
         >
           S
         </label>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4"
       >
         <input
-          class="emotion-10 emotion-11"
+          class="emotion-5"
           data-testid="input-id-Saturation"
           id="input-id-Saturation"
           max="100"
@@ -210,23 +210,23 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <label
-          class="emotion-6 emotion-7"
+          class="emotion-3"
           for="input-id-Lightness"
         >
           L
         </label>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4"
       >
         <input
-          class="emotion-10 emotion-11"
+          class="emotion-5"
           data-testid="input-id-Lightness"
           id="input-id-Lightness"
           max="100"
@@ -240,7 +240,7 @@ exports[`hsl-slider compact variant should render a compact variant 1`] = `
 </DocumentFragment>
 `;
 
-exports[`hsl-slider renders without crashing 1`] = `
+exports[`hsl-slider > renders without crashing 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-box;
@@ -259,12 +259,12 @@ exports[`hsl-slider renders without crashing 1`] = `
   }
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 100%;
 }
 
 @media (min-width: 1024px) {
-  .emotion-2 {
+  .emotion-1 {
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
@@ -273,14 +273,14 @@ exports[`hsl-slider renders without crashing 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-3 {
   display: inline-block;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   width: 100%;
 }
 
-.emotion-10 {
+.emotion-5 {
   -webkit-appearance: none;
   background: transparent;
   border-radius: 2px;
@@ -290,7 +290,7 @@ exports[`hsl-slider renders without crashing 1`] = `
   width: 100%;
 }
 
-.emotion-10::-webkit-slider-runnable-track {
+.emotion-5::-webkit-slider-runnable-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -302,7 +302,7 @@ exports[`hsl-slider renders without crashing 1`] = `
   border-radius: 5px;
 }
 
-.emotion-10::-webkit-slider-thumb {
+.emotion-5::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -314,11 +314,11 @@ exports[`hsl-slider renders without crashing 1`] = `
   margin-top: -9px;
 }
 
-.emotion-10:focus::-webkit-slider-runnable-track {
+.emotion-5:focus::-webkit-slider-runnable-track {
   background: currentColor;
 }
 
-.emotion-10::-moz-range-track {
+.emotion-5::-moz-range-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -330,7 +330,7 @@ exports[`hsl-slider renders without crashing 1`] = `
   border-radius: 5px;
 }
 
-.emotion-10::-moz-range-thumb {
+.emotion-5::-moz-range-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -340,7 +340,7 @@ exports[`hsl-slider renders without crashing 1`] = `
   cursor: pointer;
 }
 
-.emotion-10::-ms-track {
+.emotion-5::-ms-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -352,21 +352,21 @@ exports[`hsl-slider renders without crashing 1`] = `
   color: transparent;
 }
 
-.emotion-10::-ms-fill-lower {
+.emotion-5::-ms-fill-lower {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-10::-ms-fill-upper {
+.emotion-5::-ms-fill-upper {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-10::-ms-thumb {
+.emotion-5::-ms-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -376,36 +376,36 @@ exports[`hsl-slider renders without crashing 1`] = `
   cursor: pointer;
 }
 
-.emotion-10:focus::-ms-fill-lower {
+.emotion-5:focus::-ms-fill-lower {
   background: currentColor;
 }
 
-.emotion-10:focus::-ms-fill-upper {
+.emotion-5:focus::-ms-fill-upper {
   background: currentColor;
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="form-hsl-sliders"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <label
-          class="emotion-6 emotion-7"
+          class="emotion-3"
           for="input-id-Hue"
         >
           Hue 0°
         </label>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4"
       >
         <input
-          class="emotion-10 emotion-11"
+          class="emotion-5"
           data-testid="input-id-Hue"
           id="input-id-Hue"
           max="360"
@@ -416,23 +416,23 @@ exports[`hsl-slider renders without crashing 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <label
-          class="emotion-6 emotion-7"
+          class="emotion-3"
           for="input-id-Saturation"
         >
           Saturation 0%
         </label>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4"
       >
         <input
-          class="emotion-10 emotion-11"
+          class="emotion-5"
           data-testid="input-id-Saturation"
           id="input-id-Saturation"
           max="100"
@@ -443,23 +443,23 @@ exports[`hsl-slider renders without crashing 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2"
       >
         <label
-          class="emotion-6 emotion-7"
+          class="emotion-3"
           for="input-id-Lightness"
         >
           Lightness 80%
         </label>
       </div>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4"
       >
         <input
-          class="emotion-10 emotion-11"
+          class="emotion-5"
           data-testid="input-id-Lightness"
           id="input-id-Lightness"
           max="100"

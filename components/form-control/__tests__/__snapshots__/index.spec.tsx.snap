@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`FormControl renders without crashing 1`] = `
+exports[`FormControl > renders without crashing 1`] = `
 <DocumentFragment>
   .emotion-0 {
   padding: 1rem;
@@ -17,7 +17,7 @@ exports[`FormControl renders without crashing 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     children
   </div>

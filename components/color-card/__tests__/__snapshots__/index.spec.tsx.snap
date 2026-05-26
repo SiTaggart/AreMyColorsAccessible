@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`ColorCard renders without crashing 1`] = `
+exports[`ColorCard > renders without crashing 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-box;
@@ -21,7 +21,7 @@ exports[`ColorCard renders without crashing 1`] = `
   transition: opacity ease-in;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -31,7 +31,7 @@ exports[`ColorCard renders without crashing 1`] = `
   justify-content: space-between;
 }
 
-.emotion-4 {
+.emotion-2 {
   background-color: #F7F8F8;
   color: #666D70;
   border-radius: 3px;
@@ -40,7 +40,7 @@ exports[`ColorCard renders without crashing 1`] = `
   padding: 1px 4px;
 }
 
-.emotion-8 {
+.emotion-4 {
   color: #000;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -50,7 +50,7 @@ exports[`ColorCard renders without crashing 1`] = `
   text-align: center;
 }
 
-.emotion-12 {
+.emotion-6 {
   background-color: #CFFCDA;
   color: #004215;
   border-radius: 3px;
@@ -60,24 +60,24 @@ exports[`ColorCard renders without crashing 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="colorCard"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <span
-        class="emotion-4 emotion-5"
+        class="emotion-2"
         title="Color contrast ratio"
       >
         21 : 1
       </span>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4"
         color="#000"
         data-testid="colorCard-swatch"
       >
@@ -85,15 +85,15 @@ exports[`ColorCard renders without crashing 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <span
-        class="emotion-12 emotion-5"
+        class="emotion-6"
       >
         Small: AAA
       </span>
       <span
-        class="emotion-12 emotion-5"
+        class="emotion-6"
       >
         Large: AAA
       </span>
@@ -102,7 +102,7 @@ exports[`ColorCard renders without crashing 1`] = `
 </DocumentFragment>
 `;
 
-exports[`ColorCard should render a not important card 1`] = `
+exports[`ColorCard > should render a not important card 1`] = `
 <DocumentFragment>
   .emotion-0 {
   display: -webkit-box;
@@ -124,7 +124,7 @@ exports[`ColorCard should render a not important card 1`] = `
   transition: opacity ease-in;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -134,7 +134,7 @@ exports[`ColorCard should render a not important card 1`] = `
   justify-content: space-between;
 }
 
-.emotion-4 {
+.emotion-2 {
   background-color: #F7F8F8;
   color: #666D70;
   border-radius: 3px;
@@ -143,7 +143,7 @@ exports[`ColorCard should render a not important card 1`] = `
   padding: 1px 4px;
 }
 
-.emotion-8 {
+.emotion-4 {
   color: #000;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -153,7 +153,7 @@ exports[`ColorCard should render a not important card 1`] = `
   text-align: center;
 }
 
-.emotion-12 {
+.emotion-6 {
   background-color: #CFFCDA;
   color: #004215;
   border-radius: 3px;
@@ -163,24 +163,24 @@ exports[`ColorCard should render a not important card 1`] = `
 }
 
 <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="colorCard"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <span
-        class="emotion-4 emotion-5"
+        class="emotion-2"
         title="Color contrast ratio"
       >
         21 : 1
       </span>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-4"
         color="#000"
         data-testid="colorCard-swatch"
       >
@@ -188,15 +188,15 @@ exports[`ColorCard should render a not important card 1`] = `
       </div>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <span
-        class="emotion-12 emotion-5"
+        class="emotion-6"
       >
         Small: AAA
       </span>
       <span
-        class="emotion-12 emotion-5"
+        class="emotion-6"
       >
         Large: AAA
       </span>

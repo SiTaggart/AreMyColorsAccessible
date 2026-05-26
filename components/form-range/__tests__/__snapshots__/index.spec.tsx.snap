@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`FormRange renders without crashing 1`] = `
+exports[`FormRange > renders without crashing 1`] = `
 <DocumentFragment>
   .emotion-0 {
   -webkit-appearance: none;
@@ -107,13 +107,12 @@ exports[`FormRange renders without crashing 1`] = `
 }
 
 <input
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="range-id"
     id="range-id"
     max="100"
     min="1"
     type="range"
-    value=""
   />
 </DocumentFragment>
 `;
