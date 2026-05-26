@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Home } from "../../components/home";
-import { AppContainer } from "../../components/layouts/app-container";
-import { SiteDataProvider } from "../../context/home";
-import type { SiteData } from "../../types";
+import { Home } from "../components/home";
+import { AppContainer } from "../components/layouts/app-container";
+import { SiteDataProvider } from "../context/home";
+import type { SiteData } from "../types";
 
 export const Route = createFileRoute("/")({
   component: IndexPage,

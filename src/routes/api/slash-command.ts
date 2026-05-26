@@ -4,10 +4,10 @@ import {
   ensureColorsAreAnArrayOfTwo,
   getRating,
   type GetRatingReturn,
-} from "../../../utils/color-rating";
-import { jsonResponse, preflightResponse } from "../../../utils/http";
-import { logger } from "../../../utils/logger";
-import type { ColorPair } from "../../../types";
+} from "../../utils/color-rating";
+import { jsonResponse, preflightResponse } from "../../utils/http";
+import { logger } from "../../utils/logger";
+import type { ColorPair } from "../../types";
 
 const getURL = (colors: ColorPair): string =>
   qs.stringify({

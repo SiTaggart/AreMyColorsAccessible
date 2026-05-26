@@ -6,7 +6,7 @@ export default defineConfig({
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
   reporter: process.env.CI ? "github" : "list",
   retries: process.env.CI ? 2 : 0,
-  testDir: "./e2e",
+  testDir: "./src/e2e",
   use: {
     baseURL: "http://localhost:3000",
     trace: "on-first-retry",

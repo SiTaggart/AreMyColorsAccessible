@@ -2,8 +2,8 @@ import "normalize.css";
 import { HeadContent, Outlet, Scripts, createRootRoute } from "@tanstack/react-router";
 import { Global } from "@emotion/react";
 import type { ReactNode } from "react";
-import { globalStyles } from "../../styles/global";
-import { seo } from "../../seo";
+import { globalStyles } from "../styles/global";
+import { seo } from "../seo";
 
 const description =
   "Make sure the colours you choose in your designs are accessible to people of all abilities, by choosing colour combinations that pass WCAG 2.0 recommendated colour contrast ratio guidelines.";

@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { About } from "../../components/about";
-import { AppContainer } from "../../components/layouts/app-container";
-import { SiteDataProvider } from "../../context/home";
+import { About } from "../components/about";
+import { AppContainer } from "../components/layouts/app-container";
+import { SiteDataProvider } from "../context/home";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,

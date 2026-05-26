@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ensureColorsAreAnArrayOfTwo, getRating } from "../../../utils/color-rating";
-import { jsonResponse, parseJsonBody, preflightResponse } from "../../../utils/http";
-import { logger } from "../../../utils/logger";
+import { ensureColorsAreAnArrayOfTwo, getRating } from "../../utils/color-rating";
+import { jsonResponse, parseJsonBody, preflightResponse } from "../../utils/http";
+import { logger } from "../../utils/logger";
 
 interface AreTheyBody {
   colors?: string | Array<string>;

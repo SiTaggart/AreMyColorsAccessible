@@ -12,9 +12,9 @@ export default defineConfig({
   },
   test: {
     environment: "jsdom",
-    exclude: ["node_modules/**", "e2e/**", "dist/**", ".wrangler/**"],
+    exclude: ["node_modules/**", "src/e2e/**", "dist/**", ".wrangler/**"],
     globals: true,
     include: ["**/*.spec.{ts,tsx}", "**/*.test.{ts,tsx}"],
-    setupFiles: ["./test/setup.ts"],
+    setupFiles: ["./src/test/setup.ts"],
   },
 });

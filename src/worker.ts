@@ -1,5 +1,5 @@
 import start from "@tanstack/react-start/server-entry";
-import { corsHeaders, preflightResponse } from "../utils/http";
+import { corsHeaders, preflightResponse } from "./utils/http";
 
 const isApiRequest = (request: Request): boolean =>
   new URL(request.url).pathname.startsWith("/api/");

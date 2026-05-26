@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Container } from "../../components/layouts/container";
-import { Layout } from "../../components/layouts/layout";
-import { PalettePage } from "../../components/palette-page";
-import { Footer } from "../../components/footer";
-import { PaletteDataProvider } from "../../context/palette";
-import type { PalettePageQueryString } from "../../types";
+import { Container } from "../components/layouts/container";
+import { Layout } from "../components/layouts/layout";
+import { PalettePage } from "../components/palette-page";
+import { Footer } from "../components/footer";
+import { PaletteDataProvider } from "../context/palette";
+import type { PalettePageQueryString } from "../types";
 
 export const Route = createFileRoute("/palette")({
   component: Palette,
