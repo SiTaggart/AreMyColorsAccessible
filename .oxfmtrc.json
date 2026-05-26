@@ -1,0 +1,10 @@
+{
+  "ignorePatterns": [
+    "dist/**",
+    ".wrangler/**",
+    "worker-configuration.d.ts",
+    "bun.lock",
+    "src/routeTree.gen.ts",
+    ".github/workflows/nextjs_bundle_analysis.yml"
+  ]
+}

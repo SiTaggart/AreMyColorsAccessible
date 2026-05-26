@@ -1,0 +1,49 @@
+import React, { ReactElement } from "react";
+import { FormLabel } from "../form-label";
+import { FormRange } from "../form-range";
+import { StyledHSLSlider, HSLSliderLabelContainer, HSLSliderRangeContainer } from "./styled";
+
+interface HslSliderProps {
+  id: string;
+  label: string;
+  max: number;
+  min: number;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onInput: React.InputEventHandler<HTMLInputElement>;
+  symbol: string;
+  value: number | undefined;
+  variant?: "compact" | undefined;
+}
+
+const HSLSlider: React.FC<HslSliderProps> = ({
+  id,
+  label,
+  max,
+  min,
+  onChange,
+  onInput,
+  symbol,
+  value,
+  variant,
+}: HslSliderProps): ReactElement => (
+  <StyledHSLSlider variant={variant}>
+    <HSLSliderLabelContainer variant={variant}>
+      <FormLabel htmlFor={id} variant={variant}>
+        {variant === "compact" ? `${label.slice(0, 1)}` : `${label} ${value + symbol}`}
+      </FormLabel>
+    </HSLSliderLabelContainer>
+    <HSLSliderRangeContainer variant={variant}>
+      <FormRange
+        data-testid={id}
+        id={id}
+        max={max}
+        min={min}
+        onChange={(e): void => onChange(e)}
+        onInput={(e): void => onInput(e)}
+        value={value}
+      />
+    </HSLSliderRangeContainer>
+  </StyledHSLSlider>
+);
+
+export { HSLSlider };

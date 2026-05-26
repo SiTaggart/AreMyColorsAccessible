@@ -1,0 +1,169 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Footer > renders footerLink styles added 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  padding: 5rem 0 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.emotion-2 {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.emotion-3 {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.emotion-4 {
+  color: currentColor;
+  -webkit-transition: color 400ms ease-in;
+  transition: color 400ms ease-in;
+}
+
+<footer
+    class="emotion-0"
+  >
+    <nav
+      class="emotion-1"
+    >
+      <ul
+        class="emotion-2"
+      >
+        <li
+          class="emotion-3"
+        >
+          <a
+            aria-current="page"
+            class="emotion-4 active"
+            data-status="active"
+            href="/"
+            style="color: rgb(255, 255, 255);"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="emotion-3"
+        >
+          <a
+            class="emotion-4"
+            href="/palette"
+            style="color: rgb(255, 255, 255);"
+          >
+            Palette
+          </a>
+        </li>
+        <li
+          class="emotion-3"
+        >
+          <a
+            class="emotion-4"
+            href="/api-page"
+            style="color: rgb(255, 255, 255);"
+          >
+            API
+          </a>
+        </li>
+        <li
+          class="emotion-3"
+        >
+          <a
+            class="emotion-4"
+            href="/about"
+            style="color: rgb(255, 255, 255);"
+          >
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</DocumentFragment>
+`;
+
+exports[`Footer > renders without crashing 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  padding: 5rem 0 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.emotion-2 {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.emotion-3 {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.emotion-4 {
+  color: currentColor;
+  -webkit-transition: color 400ms ease-in;
+  transition: color 400ms ease-in;
+}
+
+<footer
+    class="emotion-0"
+  >
+    <nav
+      class="emotion-1"
+    >
+      <ul
+        class="emotion-2"
+      >
+        <li
+          class="emotion-3"
+        >
+          <a
+            aria-current="page"
+            class="emotion-4 active"
+            data-status="active"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="emotion-3"
+        >
+          <a
+            class="emotion-4"
+            href="/palette"
+          >
+            Palette
+          </a>
+        </li>
+        <li
+          class="emotion-3"
+        >
+          <a
+            class="emotion-4"
+            href="/api-page"
+          >
+            API
+          </a>
+        </li>
+        <li
+          class="emotion-3"
+        >
+          <a
+            class="emotion-4"
+            href="/about"
+          >
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</DocumentFragment>
+`;

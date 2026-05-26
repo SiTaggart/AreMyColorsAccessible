@@ -1,0 +1,195 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AppContainer > changes the footer link colors based on isLight prop 1`] = `
+<DocumentFragment>
+  @media (min-width: 768px) {
+  .emotion-0 {
+    height: 100%;
+  }
+}
+
+.emotion-1 {
+  padding: 5rem 0 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.emotion-3 {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.emotion-4 {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.emotion-5 {
+  color: currentColor;
+  -webkit-transition: color 400ms ease-in;
+  transition: color 400ms ease-in;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div />
+    <footer
+      class="emotion-1"
+    >
+      <nav
+        class="emotion-2"
+      >
+        <ul
+          class="emotion-3"
+        >
+          <li
+            class="emotion-4"
+          >
+            <a
+              aria-current="page"
+              class="emotion-5 active"
+              data-status="active"
+              href="/"
+              style="color: rgb(52, 51, 52);"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="emotion-4"
+          >
+            <a
+              class="emotion-5"
+              href="/palette"
+              style="color: rgb(52, 51, 52);"
+            >
+              Palette
+            </a>
+          </li>
+          <li
+            class="emotion-4"
+          >
+            <a
+              class="emotion-5"
+              href="/api-page"
+              style="color: rgb(52, 51, 52);"
+            >
+              API
+            </a>
+          </li>
+          <li
+            class="emotion-4"
+          >
+            <a
+              class="emotion-5"
+              href="/about"
+              style="color: rgb(52, 51, 52);"
+            >
+              About
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AppContainer > renders without crashing 1`] = `
+<DocumentFragment>
+  @media (min-width: 768px) {
+  .emotion-0 {
+    height: 100%;
+  }
+}
+
+.emotion-1 {
+  padding: 5rem 0 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.emotion-3 {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.emotion-4 {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.emotion-5 {
+  color: currentColor;
+  -webkit-transition: color 400ms ease-in;
+  transition: color 400ms ease-in;
+}
+
+<div
+    class="emotion-0"
+  >
+    <div />
+    <footer
+      class="emotion-1"
+    >
+      <nav
+        class="emotion-2"
+      >
+        <ul
+          class="emotion-3"
+        >
+          <li
+            class="emotion-4"
+          >
+            <a
+              aria-current="page"
+              class="emotion-5 active"
+              data-status="active"
+              href="/"
+              style="color: rgb(255, 255, 255);"
+            >
+              Home
+            </a>
+          </li>
+          <li
+            class="emotion-4"
+          >
+            <a
+              class="emotion-5"
+              href="/palette"
+              style="color: rgb(255, 255, 255);"
+            >
+              Palette
+            </a>
+          </li>
+          <li
+            class="emotion-4"
+          >
+            <a
+              class="emotion-5"
+              href="/api-page"
+              style="color: rgb(255, 255, 255);"
+            >
+              API
+            </a>
+          </li>
+          <li
+            class="emotion-4"
+          >
+            <a
+              class="emotion-5"
+              href="/about"
+              style="color: rgb(255, 255, 255);"
+            >
+              About
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </div>
+</DocumentFragment>
+`;

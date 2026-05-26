@@ -1,0 +1,87 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Palette Page > renders without crashing 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  text-align: center;
+}
+
+.emotion-1 {
+  font-weight: 700;
+  line-height: 1;
+  margin: 3rem 0;
+}
+
+.emotion-2 {
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.emotion-3 {
+  background: rgba(255, 255, 255, 0.1);
+  border: solid 1px;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+<form
+    class="emotion-0"
+  >
+    <div>
+      <h1
+        class="emotion-1"
+      >
+        <label
+          class="emotion-2"
+          for="palette-form-input"
+        >
+          Add the colours from your palette
+        </label>
+      </h1>
+      <input
+        autocomplete="off"
+        class="emotion-3"
+        data-testid="palette-form-input"
+        id="palette-form-input"
+        name="paletteFormInput"
+        placeholder="e.g. #ccc, #fff or blue"
+        type="text"
+      />
+    </div>
+  </form>
+  .emotion-0 {
+  margin-top: 3rem;
+  overflow-x: auto;
+}
+
+.emotion-1 {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+<section
+    class="emotion-0"
+  >
+    <table
+      class="emotion-1"
+    >
+      <thead>
+        <tr
+          class="emotion-2"
+          data-testid="colorMatrix-tr"
+        >
+          <td
+            style="width: 6rem;"
+          />
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </section>
+</DocumentFragment>
+`;
