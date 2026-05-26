@@ -55,7 +55,7 @@ fetch('https://www.aremycolorsaccessible.com/api/are-they', {
       method: "POST",
       mode: "cors",
     })
-      .then((response) => response.json<GetRatingReturn | false>())
+      .then(async (response) => (await response.json()) as GetRatingReturn | false)
       .then((json) => setPostResult(json));
 
   React.useEffect(() => {
