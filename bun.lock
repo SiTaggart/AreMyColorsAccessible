@@ -13,7 +13,7 @@
         "@twilio-paste/icons": "12.4.0",
         "color": "4.2.3",
         "color-combos": "1.1.0",
-        "lodash": "4.17.21",
+        "lodash": "4.18.1",
         "normalize.css": "8.0.1",
         "polished": "4.3.1",
         "prism-react-renderer": "2.3.1",
@@ -1363,7 +1363,7 @@
 
     "locate-path": ["locate-path@6.0.0", "", { "dependencies": { "p-locate": "^5.0.0" } }, "sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw=="],
 
-    "lodash": ["lodash@4.17.21", "", {}, "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="],
+    "lodash": ["lodash@4.18.1", "", {}, "sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q=="],
 
     "lodash.uniq": ["lodash.uniq@4.5.0", "", {}, "sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ=="],
 
@@ -1821,13 +1821,27 @@
 
     "@twilio-paste/color-contrast-utils/color-combos": ["color-combos@1.0.12", "", { "dependencies": { "color": "3.1.3", "lodash.uniq": "4.5.0" } }, "sha512-XdjOp4KYIBhOY3TqW+eMmOoNxiRufwre41YkUdEkk/9WGlY76RvPWK04FL7ig208ACvj4MCHIB8GrURyljdp4g=="],
 
+    "@twilio-paste/color-contrast-utils/lodash": ["lodash@4.17.21", "", {}, "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="],
+
+    "@twilio-paste/combobox/lodash": ["lodash@4.17.21", "", {}, "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="],
+
+    "@twilio-paste/data-grid/lodash": ["lodash@4.17.21", "", {}, "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="],
+
+    "@twilio-paste/file-uploader/lodash": ["lodash@4.17.21", "", {}, "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="],
+
+    "@twilio-paste/react-textarea-autosize-library/lodash": ["lodash@4.17.21", "", {}, "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="],
+
     "@twilio-paste/style-props/csstype": ["csstype@3.0.11", "", {}, "sha512-sa6P2wJ+CAbgyy4KFssIb/JNMLxFvKF1pCYCSXS8ZMuqZnMsrxqI2E5sPyoTpxoPU/gVZMzr2zjOfg8GIZOMsw=="],
+
+    "@twilio-paste/style-props/lodash": ["lodash@4.17.21", "", {}, "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="],
 
     "@twilio-paste/styling-library/@emotion/cache": ["@emotion/cache@11.10.5", "", { "dependencies": { "@emotion/memoize": "^0.8.0", "@emotion/sheet": "^1.2.1", "@emotion/utils": "^1.2.0", "@emotion/weak-memoize": "^0.3.0", "stylis": "4.1.3" } }, "sha512-dGYHWyzTdmK+f2+EnIGBpkz1lKc4Zbj2KHd4cX3Wi8/OWr5pKslNjc3yABKH4adRGCvSX4VDC0i04mrrq0aiRA=="],
 
     "@twilio-paste/styling-library/@emotion/react": ["@emotion/react@11.10.5", "", { "dependencies": { "@babel/runtime": "^7.18.3", "@emotion/babel-plugin": "^11.10.5", "@emotion/cache": "^11.10.5", "@emotion/serialize": "^1.1.1", "@emotion/use-insertion-effect-with-fallbacks": "^1.0.0", "@emotion/utils": "^1.2.0", "@emotion/weak-memoize": "^0.3.0", "hoist-non-react-statics": "^3.3.1" }, "peerDependencies": { "@babel/core": "^7.0.0", "react": ">=16.8.0" }, "optionalPeers": ["@babel/core"] }, "sha512-TZs6235tCJ/7iF6/rvTaOH4oxQg2gMAcdHemjwLKIjKz4rRuYe1HJ2TQJKnAcRAfOUDdU8XoDadCe1rl72iv8A=="],
 
     "@twilio-paste/styling-library/@emotion/styled": ["@emotion/styled@11.10.5", "", { "dependencies": { "@babel/runtime": "^7.18.3", "@emotion/babel-plugin": "^11.10.5", "@emotion/is-prop-valid": "^1.2.0", "@emotion/serialize": "^1.1.1", "@emotion/use-insertion-effect-with-fallbacks": "^1.0.0", "@emotion/utils": "^1.2.0" }, "peerDependencies": { "@babel/core": "^7.0.0", "@emotion/react": "^11.0.0-rc.0", "react": ">=16.8.0" }, "optionalPeers": ["@babel/core"] }, "sha512-8EP6dD7dMkdku2foLoruPCNkRevzdcBaY6q0l0OsbyJK+x8D9HWjX27ARiSIKNF634hY9Zdoedh8bJCiva8yZw=="],
+
+    "@twilio-paste/utils/lodash": ["lodash@4.17.21", "", {}, "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="],
 
     "@types/react-is/@types/react": ["@types/react@18.3.29", "", { "dependencies": { "@types/prop-types": "*", "csstype": "^3.2.2" } }, "sha512-ch0qJdr2JY0r04NXSprbK6TXOgnaJ1Tz23fm5W+z0/CBah6BSBc3n96h7K9GOtwh0HrilNWHIBzE1Ko4Dcw/Wg=="],
 
