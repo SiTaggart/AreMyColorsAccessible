@@ -23,7 +23,7 @@ export default {
     const [request] = args;
 
     if (isApiRequest(request) && request.method === "OPTIONS") {
-      return preflightResponse();
+      return preflightResponse(request);
     }
 
     const response = await start.fetch(...args);

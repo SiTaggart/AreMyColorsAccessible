@@ -149,7 +149,7 @@ export const readSlashText = async (request: Request): Promise<string> => {
 export const Route = createFileRoute("/api/slash-command")({
   server: {
     handlers: {
-      OPTIONS: async () => preflightResponse(),
+      OPTIONS: async ({ request }) => preflightResponse(request),
       POST: async ({ request }) => {
         const slashText = await readSlashText(request);
         logger.info("slash body", { text: slashText });

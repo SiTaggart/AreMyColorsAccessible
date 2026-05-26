@@ -4,6 +4,10 @@ export const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
 };
 
+const requestedCorsHeaders = (request: Request): string =>
+  request.headers.get("Access-Control-Request-Headers") ??
+  corsHeaders["Access-Control-Allow-Headers"];
+
 export const jsonResponse = (body: unknown, init: ResponseInit = {}): Response =>
   new Response(JSON.stringify(body), {
     ...init,
@@ -14,9 +18,12 @@ export const jsonResponse = (body: unknown, init: ResponseInit = {}): Response =
     },
   });
 
-export const preflightResponse = (): Response =>
+export const preflightResponse = (request: Request): Response =>
   new Response(null, {
-    headers: corsHeaders,
+    headers: {
+      ...corsHeaders,
+      "Access-Control-Allow-Headers": requestedCorsHeaders(request),
+    },
     status: 204,
   });
 

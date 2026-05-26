@@ -33,7 +33,7 @@ const readBody = async (request: Request): Promise<ReadBodyResult> => {
 export const Route = createFileRoute("/api/are-they")({
   server: {
     handlers: {
-      OPTIONS: async () => preflightResponse(),
+      OPTIONS: async ({ request }) => preflightResponse(request),
       POST: async ({ request }) => {
         const result = await readBody(request);
         if (!result.ok) {
