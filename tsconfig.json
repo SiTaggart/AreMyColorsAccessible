@@ -15,7 +15,7 @@
     "skipLibCheck": true,
     "allowJs": true,
     "noEmit": true,
-    "types": ["node", "vitest/globals"],
+    "types": ["vite/client", "node", "vitest/globals"],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "forceConsistentCasingInFileNames": true,
