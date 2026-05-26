@@ -38,7 +38,9 @@ exports[`Footer > renders footerLink styles added 1`] = `
           class="emotion-3"
         >
           <a
-            class="emotion-4"
+            aria-current="page"
+            class="emotion-4 active"
+            data-status="active"
             href="/"
             style="color: rgb(255, 255, 255);"
           >
@@ -122,7 +124,9 @@ exports[`Footer > renders without crashing 1`] = `
           class="emotion-3"
         >
           <a
-            class="emotion-4"
+            aria-current="page"
+            class="emotion-4 active"
+            data-status="active"
             href="/"
           >
             Home

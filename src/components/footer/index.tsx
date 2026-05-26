@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import styled from "@emotion/styled";
-import { Link } from "../typography";
+import { Link } from "@tanstack/react-router";
 
 interface FooterProps {
   styles?: { footerLinks?: React.CSSProperties };
@@ -21,7 +21,8 @@ const StyledFooterNavListItem = styled.li`
   display: inline-block;
   padding: 0 1rem;
 `;
-const StyledFooterAnchor = styled(Link)`
+const StyledFooterLink = styled(Link)`
+  color: currentColor;
   transition: color 400ms ease-in;
 `;
 
@@ -32,24 +33,24 @@ const Footer: React.FC<FooterProps> = ({ styles }: FooterProps): ReactElement<HT
       <StyledFooterNav>
         <StyledFooterNavList>
           <StyledFooterNavListItem>
-            <StyledFooterAnchor href="/" style={linkStyles}>
+            <StyledFooterLink style={linkStyles} to="/">
               Home
-            </StyledFooterAnchor>
+            </StyledFooterLink>
           </StyledFooterNavListItem>
           <StyledFooterNavListItem>
-            <StyledFooterAnchor href="/palette" style={linkStyles}>
+            <StyledFooterLink style={linkStyles} to="/palette">
               Palette
-            </StyledFooterAnchor>
+            </StyledFooterLink>
           </StyledFooterNavListItem>
           <StyledFooterNavListItem>
-            <StyledFooterAnchor href="/api-page" style={linkStyles}>
+            <StyledFooterLink style={linkStyles} to="/api-page">
               API
-            </StyledFooterAnchor>
+            </StyledFooterLink>
           </StyledFooterNavListItem>
           <StyledFooterNavListItem>
-            <StyledFooterAnchor href="/about" style={linkStyles}>
+            <StyledFooterLink style={linkStyles} to="/about">
               About
-            </StyledFooterAnchor>
+            </StyledFooterLink>
           </StyledFooterNavListItem>
         </StyledFooterNavList>
       </StyledFooterNav>

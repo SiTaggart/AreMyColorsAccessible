@@ -48,7 +48,9 @@ exports[`AppContainer > changes the footer link colors based on isLight prop 1`]
             class="emotion-4"
           >
             <a
-              class="emotion-5"
+              aria-current="page"
+              class="emotion-5 active"
+              data-status="active"
               href="/"
               style="color: rgb(52, 51, 52);"
             >
@@ -143,7 +145,9 @@ exports[`AppContainer > renders without crashing 1`] = `
             class="emotion-4"
           >
             <a
-              class="emotion-5"
+              aria-current="page"
+              class="emotion-5 active"
+              data-status="active"
               href="/"
               style="color: rgb(255, 255, 255);"
             >

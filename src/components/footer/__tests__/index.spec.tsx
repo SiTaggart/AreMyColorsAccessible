@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { renderWithRouter } from "../../../test/render-with-router";
 import { Footer } from "..";
 
 describe("Footer", (): void => {
@@ -11,12 +11,12 @@ describe("Footer", (): void => {
   };
 
   it("renders without crashing", (): void => {
-    const { asFragment } = render(<Footer />);
+    const { asFragment } = renderWithRouter(<Footer />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders footerLink styles added", (): void => {
-    const { asFragment } = render(<Footer {...mockProps} />);
+    const { asFragment } = renderWithRouter(<Footer {...mockProps} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

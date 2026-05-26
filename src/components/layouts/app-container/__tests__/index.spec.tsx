@@ -1,5 +1,5 @@
-import { render } from "@testing-library/react";
 import React, { ReactElement } from "react";
+import { renderWithRouter } from "../../../../test/render-with-router";
 import { AppContainer } from "..";
 import { SiteDataProvider } from "../../../../context/home";
 
@@ -12,7 +12,7 @@ describe("AppContainer", (): void => {
   });
 
   it("renders without crashing", (): void => {
-    const { asFragment } = render(
+    const { asFragment } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
           background: "#000",
@@ -30,7 +30,7 @@ describe("AppContainer", (): void => {
   });
 
   it("changes the footer link colors based on isLight prop", (): void => {
-    const { asFragment } = render(
+    const { asFragment } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
           background: "#fff",
