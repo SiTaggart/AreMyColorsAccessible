@@ -28,7 +28,8 @@
     "smoke:routes": "bun run scripts/smoke-routes.ts",
     "deploy": "bun run build && wrangler deploy",
     "deploy:dry-run": "bun run build && wrangler deploy --dry-run",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "postinstall": "wrangler types"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -73,7 +74,7 @@
     "wrangler": "^4.94.0"
   },
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22.18.0"
   },
   "packageManager": "bun@1.3.5"
 }
