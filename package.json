@@ -12,8 +12,8 @@
   "sideEffects": false,
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build && bun run cf-typegen && bun run typecheck",
-    "typecheck": "tsgo --noEmit",
+    "build": "bun run typecheck && vite build",
+    "typecheck": "bun run cf-typegen && tsgo --noEmit",
     "lint": "oxlint scripts src vite.config.ts vitest.config.ts playwright.config.ts oxlint.config.ts",
     "lint:fix": "oxlint scripts src vite.config.ts vitest.config.ts playwright.config.ts oxlint.config.ts --fix",
     "format": "oxfmt .",
