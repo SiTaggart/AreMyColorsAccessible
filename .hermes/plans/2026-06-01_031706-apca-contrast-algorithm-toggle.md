@@ -34,17 +34,24 @@
    - APCA metric label: `APCA Lc`.
 3. **APCA copy:** do **not** use AA/AAA language in APCA mode.
    - APCA is a different model, not WCAG 2 conformance with new labels.
-4. **URL state:** add `algorithm=apca` only when APCA is selected.
+   - Keep the app's existing three-level personality/conformance framing: `Yep`, `Kinda`, and `Nope`, with `Seriously?` retained for extreme failures.
+4. **APCA headline thresholds:** base the APCA headline on absolute Lc (`Math.abs(lc)`) while preserving signed Lc in the metric display.
+   - `Yep`: `|Lc| >= 60` — target for normal/body text readability, roughly analogous to the current WCAG `4.5` clear-pass level.
+   - `Kinda`: `45 <= |Lc| < 60` — acceptable only with larger/bolder or less demanding text use, roughly analogous to the current WCAG large-text compromise around `3.5`.
+   - `Nope`: `15 <= |Lc| < 45` — not good enough for the app's headline conformance.
+   - `Seriously?`: `|Lc| < 15`, including same-colour/near-zero contrast cases.
+5. **URL state:** add `algorithm=apca` only when APCA is selected.
    - Omit or default `algorithm` to WCAG for cleaner backward-compatible URLs.
-5. **API scope for first implementation:** keep `/api/are-they` and slash command WCAG-only.
+6. **API scope for first implementation:** keep `/api/are-they` and slash command WCAG-only.
    - Add APCA API support later as a separate PR if wanted. Mixing UI and API response-shape changes in one PR is unnecessary blast radius.
-6. **Same foreground/background colors:** remove or replace the fake duplicate combination path so APCA data is available for equal-color checks.
+7. **Same foreground/background colors:** remove or replace the fake duplicate combination path so APCA data is available for equal-color checks.
    - Current `createFakeCombination` only includes WCAG fields and would leave APCA undefined.
 
-## Open questions for review
+## Review decisions and open questions
 
-- Should APCA mode use `Yup/Kinda/Nope` for the headline, or more neutral `Pass/Partial/Fail` language?
-  - Recommendation: keep AMCA personality in the headline, but make row labels explicit and non-WCAG.
+- APCA headline should retain the app's `Yep` / `Kinda` / `Nope` personality rather than switching to neutral `Pass` / `Partial` / `Fail` language.
+  - Use `|Lc| >= 60` for `Yep`, `45 <= |Lc| < 60` for `Kinda`, `15 <= |Lc| < 45` for `Nope`, and `|Lc| < 15` for `Seriously?`.
+  - Keep supporting row labels explicit and non-WCAG so users do not confuse APCA guidance with AA/AAA conformance.
 - Which APCA rows should appear in compact palette cards?
   - Recommendation: show `Body`, `Content`, and `Large`; keep full APCA rows on the two-color home result.
 - Should APCA API support be in this PR?
@@ -221,11 +228,13 @@ Expected: toggle component tests pass.
    - Preserve `Seriously?` behavior when rounded ratio is `< 1.3`.
 4. For APCA:
    - Format `lc` as signed `Lc`, rounded to one decimal or integer consistently.
-   - Use `Math.abs(lc)` for threshold pass/fail if needed, but preserve sign in display.
-   - Use APCA readability rows from `combination.apca.readability`.
+   - Preserve the sign in display, but use `Math.abs(lc)` for headline thresholds.
+   - Keep app personality in the headline: `Yep` for `|Lc| >= 60`, `Kinda` for `45 <= |Lc| < 60`, `Nope` for `15 <= |Lc| < 45`, and `Seriously?` for `|Lc| < 15`.
+   - Treat the thresholds as AMCA display guidance, not WCAG AA/AAA conformance.
+   - Use APCA readability rows from `combination.apca.readability` for supporting details.
    - Do not render AA/AAA copy.
    - Handle missing `apca` safely with a clear `Unavailable` state instead of crashing.
-5. Unit-test WCAG preservation, APCA formatting, APCA missing fallback, and threshold row output.
+5. Unit-test WCAG preservation, APCA formatting, APCA missing fallback, APCA headline threshold boundaries, `Seriously?` near-zero behavior, and threshold row output.
 
 **Verification:**
 
@@ -387,6 +396,7 @@ Use a fresh worktree and subagents. Do not reuse the planning branch.
 - Existing WCAG results and labels are preserved in WCAG mode.
 - Users can switch to APCA from the home page and palette page.
 - APCA mode displays APCA Lc and APCA-specific readability labels, not AA/AAA labels.
+- APCA mode keeps the app's `Yep` / `Kinda` / `Nope` headline language, with `Seriously?` for `|Lc| < 15`.
 - Selected algorithm is shareable via URL query string.
 - Invalid query-string algorithm values are ignored/fall back to WCAG.
 - Equal foreground/background colors do not crash and produce safe APCA output.
