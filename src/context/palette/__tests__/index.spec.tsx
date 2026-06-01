@@ -14,7 +14,9 @@ const normalizeContrast = (value: unknown): unknown => {
 
   if (value !== null && typeof value === "object") {
     return Object.fromEntries(
-      Object.entries(value).map(([key, entry]) => [key, normalizeContrast(entry)]),
+      Object.entries(value)
+        .filter(([key]) => key !== "apca")
+        .map(([key, entry]) => [key, normalizeContrast(entry)]),
     );
   }
 

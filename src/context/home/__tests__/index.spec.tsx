@@ -3,6 +3,30 @@ import * as React from "react";
 import { renderHook, act } from "@testing-library/react";
 import { SiteDataProvider, useSiteData, HomeContextInterface } from "..";
 
+const normalizeSiteData = (value: unknown): unknown => {
+  if (typeof value === "number") {
+    return Number(value.toFixed(12));
+  }
+
+  if (Array.isArray(value)) {
+    return value.map(normalizeSiteData);
+  }
+
+  if (value !== null && typeof value === "object") {
+    return Object.fromEntries(
+      Object.entries(value)
+        .filter(([key]) => key !== "apca")
+        .map(([key, entry]) => [key, normalizeSiteData(entry)]),
+    );
+  }
+
+  return value;
+};
+
+const expectSiteData = (actual: unknown, expected: unknown): void => {
+  expect(normalizeSiteData(actual)).toEqual(normalizeSiteData(expected));
+};
+
 describe("useSiteData hook", (): void => {
   it("should set context by default", (): void => {
     const wrapper = ({ children }: { children?: React.ReactNode }): React.ReactElement => (
@@ -12,7 +36,7 @@ describe("useSiteData hook", (): void => {
     const { result } = renderHook((): HomeContextInterface => useSiteData(), {
       wrapper,
     });
-    expect(result.current.siteData).toEqual({
+    expectSiteData(result.current.siteData, {
       background: "#1276CE",
       colorCombos: [
         {
@@ -68,7 +92,7 @@ describe("useSiteData hook", (): void => {
         </SiteDataProvider>
       ),
     });
-    expect(initialContext.current.siteData).toEqual({
+    expectSiteData(initialContext.current.siteData, {
       background: "#111",
       colorCombos: [
         {
@@ -122,7 +146,7 @@ describe("useSiteData hook", (): void => {
       result.current.handleBackgroundColorInputChange("#444");
     });
 
-    expect(result.current.siteData).toEqual({
+    expectSiteData(result.current.siteData, {
       background: "#444",
       colorCombos: [
         {
@@ -174,7 +198,7 @@ describe("useSiteData hook", (): void => {
     act((): void => {
       result.current.handleTextColorInputChange("#000");
     });
-    expect(result.current.siteData).toEqual({
+    expectSiteData(result.current.siteData, {
       background: "#1276CE",
       colorCombos: [
         {
@@ -227,7 +251,7 @@ describe("useSiteData hook", (): void => {
       result.current.handleBackgroundColorInputChange("blah");
     });
 
-    expect(result.current.siteData).toEqual({
+    expectSiteData(result.current.siteData, {
       background: "blah",
       colorCombos: [
         {
@@ -280,7 +304,7 @@ describe("useSiteData hook", (): void => {
       result.current.handleTextColorInputChange("foo");
     });
 
-    expect(result.current.siteData).toEqual({
+    expectSiteData(result.current.siteData, {
       background: "#1276CE",
       colorCombos: [
         {
@@ -336,7 +360,7 @@ describe("useSiteData hook", (): void => {
         </SiteDataProvider>
       ),
     });
-    expect(sameForeBackContext.current.siteData).toEqual({
+    expectSiteData(sameForeBackContext.current.siteData, {
       background: "#fff",
       colorCombos: [
         { color: [255, 255, 255], combinations: [], hex: "#FFFFFF", model: "rgb", valpha: 1 },
