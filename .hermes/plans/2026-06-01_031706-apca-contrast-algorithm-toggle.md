@@ -59,11 +59,13 @@
 **Objective:** Introduce a typed algorithm value and route parsing without changing existing behavior.
 
 **Files:**
+
 - Modify: `src/types/index.ts`
 - Modify: `src/utils/route-search.ts`
 - Test: `src/utils/__tests__/route-search.spec.ts`
 
 **Steps:**
+
 1. Add:
    ```ts
    export type ContrastAlgorithm = "wcag2" | "apca";
@@ -81,6 +83,7 @@
 6. Add tests for valid `algorithm=apca`, valid `algorithm=wcag2`, invalid algorithm ignored, and omitted algorithm default behavior.
 
 **Verification:**
+
 ```bash
 bunx vitest run src/utils/__tests__/route-search.spec.ts
 ```
@@ -92,10 +95,12 @@ Expected: route-search tests pass.
 **Objective:** Store and update the selected algorithm on the two-color home page.
 
 **Files:**
+
 - Modify: `src/context/home/index.tsx`
 - Test: `src/context/home/__tests__/index.spec.tsx`
 
 **Steps:**
+
 1. Extend `HomeContextInterface` with:
    ```ts
    handleAlgorithmChange: (algorithm: ContrastAlgorithm) => void;
@@ -108,6 +113,7 @@ Expected: route-search tests pass.
 7. Update home context tests for default WCAG, parsed APCA, invalid algorithm fallback, algorithm update preserving colors, and equal-color APCA safety.
 
 **Verification:**
+
 ```bash
 bunx vitest run src/context/home/__tests__/index.spec.tsx
 ```
@@ -119,11 +125,13 @@ Expected: home context tests pass.
 **Objective:** Store and update the selected algorithm on the palette page.
 
 **Files:**
+
 - Modify: `src/context/palette/index.tsx`
 - Modify: `src/components/palette-page/index.tsx`
 - Test: `src/context/palette/__tests__/index.spec.tsx`
 
 **Steps:**
+
 1. Extend `PaletteState` with `algorithm: ContrastAlgorithm`.
 2. Extend `PaletteContextProps` with:
    ```ts
@@ -137,6 +145,7 @@ Expected: home context tests pass.
 8. Add tests for default WCAG, parsed APCA, algorithm update preserving colors/combinations, and URL state.
 
 **Verification:**
+
 ```bash
 bunx vitest run src/context/palette/__tests__/index.spec.tsx
 ```
@@ -148,12 +157,14 @@ Expected: palette context tests pass.
 **Objective:** Provide one accessible UI control for choosing WCAG 2.x or APCA.
 
 **Files:**
+
 - Create: `src/components/contrast-algorithm-toggle/index.tsx`
 - Create or modify: `src/components/contrast-algorithm-toggle/styled.ts`
 - Test: `src/components/contrast-algorithm-toggle/__tests__/index.spec.tsx`
 - Modify: export barrel only if this repo uses one for components; otherwise import directly.
 
 **Steps:**
+
 1. Implement a controlled component:
    ```ts
    interface ContrastAlgorithmToggleProps {
@@ -168,6 +179,7 @@ Expected: palette context tests pass.
 4. Add tests that selecting each option calls `onChange` with the expected typed value.
 
 **Verification:**
+
 ```bash
 bunx vitest run src/components/contrast-algorithm-toggle/__tests__/index.spec.tsx
 ```
@@ -179,11 +191,13 @@ Expected: toggle component tests pass.
 **Objective:** Keep rendering components dumb and ensure APCA terminology is consistent.
 
 **Files:**
+
 - Create: `src/utils/contrast-results/index.ts`
 - Create: `src/utils/contrast-results/__tests__/index.spec.ts`
 - Possibly modify: `src/utils/color-rating/index.ts`
 
 **Steps:**
+
 1. Define a render-friendly result shape, for example:
    ```ts
    interface ContrastDisplayResult {
@@ -214,6 +228,7 @@ Expected: toggle component tests pass.
 5. Unit-test WCAG preservation, APCA formatting, APCA missing fallback, and threshold row output.
 
 **Verification:**
+
 ```bash
 bunx vitest run src/utils/contrast-results/__tests__/index.spec.ts
 ```
@@ -225,12 +240,14 @@ Expected: result formatting tests pass.
 **Objective:** Show the toggle and render the two-color result in either WCAG or APCA mode.
 
 **Files:**
+
 - Modify: `src/components/colorInputs/index.tsx` or `src/components/home/index.tsx` depending on best layout fit
 - Modify: `src/components/results/index.tsx`
 - Test: `src/components/results/__tests__/index.spec.tsx`
 - Possibly update snapshots used by home/results tests
 
 **Steps:**
+
 1. Wire `ContrastAlgorithmToggle` to `useSiteData()`.
 2. In `Results`, call `getContrastDisplayResult(colorInfo, siteData.algorithm)`.
 3. Render rows from the utility result rather than hard-coded WCAG rows.
@@ -241,6 +258,7 @@ Expected: result formatting tests pass.
    - WCAG mode still shows current labels and ratings.
 
 **Verification:**
+
 ```bash
 bunx vitest run src/components/results/__tests__/index.spec.tsx src/context/home/__tests__/index.spec.tsx
 ```
@@ -252,12 +270,14 @@ Expected: home rendering tests pass.
 **Objective:** Render palette matrix cards using the selected algorithm.
 
 **Files:**
+
 - Modify: `src/components/color-matrix/index.tsx`
 - Modify: `src/components/color-card/index.tsx`
 - Test: `src/components/color-matrix/__tests__/index.spec.tsx`
 - Test: `src/components/color-card/__tests__/index.spec.tsx`
 
 **Steps:**
+
 1. Add `algorithm: ContrastAlgorithm` to `ColorMatrixProps`.
 2. Pass `algorithm` from palette context through `PalettePage` into `ColorMatrix`.
 3. Change `ColorCard` props to accept the full `combination` plus `algorithm`, or add optional `apca` while keeping WCAG props. Prefer full combination if it simplifies utility reuse.
@@ -267,6 +287,7 @@ Expected: home rendering tests pass.
 5. Add tests for WCAG unchanged and APCA card rendering.
 
 **Verification:**
+
 ```bash
 bunx vitest run src/components/color-card/__tests__/index.spec.tsx src/components/color-matrix/__tests__/index.spec.tsx
 ```
@@ -278,10 +299,12 @@ Expected: palette card/matrix tests pass.
 **Objective:** Prove the user can switch algorithms and deep-link to APCA.
 
 **Files:**
+
 - Modify: `src/e2e/homepage.spec.ts`
 - Modify: `src/e2e/palette.spec.ts`
 
 **Steps:**
+
 1. Add home-page e2e coverage:
    - default page shows WCAG contrast ratio.
    - selecting APCA changes visible result to APCA Lc.
@@ -294,6 +317,7 @@ Expected: palette card/matrix tests pass.
    - loading `/palette?colors=...&algorithm=apca` starts in APCA mode.
 
 **Verification:**
+
 ```bash
 bun run e2e
 ```
@@ -305,10 +329,12 @@ Expected: Playwright suite passes.
 **Objective:** Ensure the implementation is CI-clean and reviewable.
 
 **Files:**
+
 - Update only files touched by the implementation.
 - Do not commit generated artifacts: `dist`, `.wrangler`, `worker-configuration.d.ts`, `node_modules`.
 
 **Steps:**
+
 1. Run focused tests as each task lands.
 2. Run full local gate:
    ```bash
