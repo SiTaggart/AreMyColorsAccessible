@@ -33,8 +33,8 @@
   "dependencies": {
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",
-    "@tanstack/react-router": "1.170.10",
-    "@tanstack/react-start": "1.168.18",
+    "@tanstack/react-router": "1.170.15",
+    "@tanstack/react-start": "1.168.25",
     "@twilio-paste/core": "20.23.0",
     "@twilio-paste/icons": "12.9.0",
     "color": "4.2.3",
@@ -44,11 +44,11 @@
     "polished": "4.3.1",
     "prism-react-renderer": "2.4.1",
     "query-string": "7.1.3",
-    "react": "19.2.6",
-    "react-dom": "19.2.6"
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "1.39.0",
+    "@cloudflare/vite-plugin": "1.40.0",
     "@emotion/jest": "11.14.2",
     "@nkzw/eslint-plugin": "2.0.0",
     "@nkzw/oxlint-config": "1.2.1",
@@ -58,26 +58,26 @@
     "@testing-library/react": "16.3.2",
     "@types/color": "3.0.7",
     "@types/lodash": "4.17.24",
-    "@types/node": "22.19.19",
+    "@types/node": "22.19.20",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
-    "@typescript/native-preview": "7.0.0-dev.20260527.2",
+    "@typescript/native-preview": "7.0.0-dev.20260607.1",
     "@vitejs/plugin-react": "6.0.2",
-    "@vitest/coverage-v8": "4.1.7",
+    "@vitest/coverage-v8": "4.1.8",
     "eslint-plugin-no-only-tests": "3.4.0",
     "eslint-plugin-perfectionist": "5.9.0",
     "eslint-plugin-react-hooks": "7.1.1",
     "eslint-plugin-unused-imports": "4.4.1",
     "jsdom": "29.1.1",
-    "oxfmt": "0.52.0",
-    "oxlint": "1.67.0",
+    "oxfmt": "0.53.0",
+    "oxlint": "1.68.0",
     "typescript": "5.9.3",
-    "vite": "8.0.14",
-    "vitest": "4.1.7",
-    "wrangler": "4.95.0"
+    "vite": "8.0.16",
+    "vitest": "4.1.8",
+    "wrangler": "4.98.0"
   },
   "engines": {
-    "node": "v26.2.0"
+    "node": "26.3.0"
   },
   "packageManager": "bun@1.3.5"
 }
