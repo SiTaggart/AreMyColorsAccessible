@@ -2,6 +2,12 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { ContrastAlgorithmToggle } from "..";
 
 describe("ContrastAlgorithmToggle", (): void => {
+  it("labels the control Algorithm", (): void => {
+    render(<ContrastAlgorithmToggle algorithm="wcag2" onChange={vi.fn()} />);
+
+    expect(screen.getByRole("group", { name: "Algorithm" })).toBeTruthy();
+  });
+
   it("selects WCAG 2.x", (): void => {
     const onChange = vi.fn();
     render(<ContrastAlgorithmToggle algorithm="apca" onChange={onChange} />);

@@ -19,12 +19,83 @@ exports[`ColorInputs > renders without crashing 1`] = `
 }
 
 .emotion-1 {
+  border: 0;
+  color: inherit;
+  margin: 0;
+  min-width: 0;
+  padding: 1rem;
+  text-align: start;
+  width: 100%;
+}
+
+.emotion-2 {
+  display: block;
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  width: 100%;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.emotion-4 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  position: relative;
+  -webkit-transition: font-weight 150ms ease-out,text-decoration-color 150ms ease-out;
+  transition: font-weight 150ms ease-out,text-decoration-color 150ms ease-out;
+}
+
+.emotion-4:has(input:checked) {
+  font-weight: 700;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+
+.emotion-4:has(input:focus-visible) {
+  outline: currentColor dashed 2px;
+  outline-offset: 3px;
+}
+
+.emotion-5 {
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.emotion-8 {
   padding: 1rem;
   width: 100%;
 }
 
 @media (min-width: 768px) {
-  .emotion-1 {
+  .emotion-8 {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -32,14 +103,14 @@ exports[`ColorInputs > renders without crashing 1`] = `
   }
 }
 
-.emotion-2 {
+.emotion-9 {
   display: inline-block;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   width: 100%;
 }
 
-.emotion-3 {
+.emotion-10 {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px;
   border-radius: 3px;
@@ -49,7 +120,7 @@ exports[`ColorInputs > renders without crashing 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -61,17 +132,17 @@ exports[`ColorInputs > renders without crashing 1`] = `
 }
 
 @media (min-width: 1024px) {
-  .emotion-4 {
+  .emotion-11 {
     margin: 0 -0.5rem;
   }
 }
 
-.emotion-5 {
+.emotion-12 {
   width: 100%;
 }
 
 @media (min-width: 1024px) {
-  .emotion-5 {
+  .emotion-12 {
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
@@ -80,7 +151,7 @@ exports[`ColorInputs > renders without crashing 1`] = `
   }
 }
 
-.emotion-9 {
+.emotion-16 {
   -webkit-appearance: none;
   background: transparent;
   border-radius: 2px;
@@ -90,7 +161,7 @@ exports[`ColorInputs > renders without crashing 1`] = `
   width: 100%;
 }
 
-.emotion-9::-webkit-slider-runnable-track {
+.emotion-16::-webkit-slider-runnable-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -102,7 +173,7 @@ exports[`ColorInputs > renders without crashing 1`] = `
   border-radius: 5px;
 }
 
-.emotion-9::-webkit-slider-thumb {
+.emotion-16::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -114,11 +185,11 @@ exports[`ColorInputs > renders without crashing 1`] = `
   margin-top: -9px;
 }
 
-.emotion-9:focus::-webkit-slider-runnable-track {
+.emotion-16:focus::-webkit-slider-runnable-track {
   background: currentColor;
 }
 
-.emotion-9::-moz-range-track {
+.emotion-16::-moz-range-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -130,7 +201,7 @@ exports[`ColorInputs > renders without crashing 1`] = `
   border-radius: 5px;
 }
 
-.emotion-9::-moz-range-thumb {
+.emotion-16::-moz-range-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -140,7 +211,7 @@ exports[`ColorInputs > renders without crashing 1`] = `
   cursor: pointer;
 }
 
-.emotion-9::-ms-track {
+.emotion-16::-ms-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -152,21 +223,21 @@ exports[`ColorInputs > renders without crashing 1`] = `
   color: transparent;
 }
 
-.emotion-9::-ms-fill-lower {
+.emotion-16::-ms-fill-lower {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-9::-ms-fill-upper {
+.emotion-16::-ms-fill-upper {
   box-shadow: 0 0 0 #fff,0 0 0 #fff;
   background: currentColor;
   border: 1px solid currentColor;
   border-radius: 5px * 2;
 }
 
-.emotion-9::-ms-thumb {
+.emotion-16::-ms-thumb {
   box-shadow: 1px 1px 1px #999,0 0 1px #a6a6a6;
   border: 1px solid currentColor;
   height: 20px;
@@ -176,11 +247,11 @@ exports[`ColorInputs > renders without crashing 1`] = `
   cursor: pointer;
 }
 
-.emotion-9:focus::-ms-fill-lower {
+.emotion-16:focus::-ms-fill-lower {
   background: currentColor;
 }
 
-.emotion-9:focus::-ms-fill-upper {
+.emotion-16:focus::-ms-fill-upper {
   background: currentColor;
 }
 
@@ -189,18 +260,54 @@ exports[`ColorInputs > renders without crashing 1`] = `
     data-testid="color-input-form"
     style="color: rgb(255, 255, 255);"
   >
-    <div
+    <fieldset
       class="emotion-1"
     >
-      <label
+      <legend
         class="emotion-2"
+      >
+        Algorithm
+      </legend>
+      <div
+        class="emotion-3"
+      >
+        <label
+          class="emotion-4"
+        >
+          <input
+            checked=""
+            class="emotion-5"
+            name="contrast-algorithm"
+            type="radio"
+            value="wcag2"
+          />
+          WCAG 2.x
+        </label>
+        <label
+          class="emotion-4"
+        >
+          <input
+            class="emotion-5"
+            name="contrast-algorithm"
+            type="radio"
+            value="apca"
+          />
+          APCA
+        </label>
+      </div>
+    </fieldset>
+    <div
+      class="emotion-8"
+    >
+      <label
+        class="emotion-9"
         for="textColor"
       >
         Text Color
       </label>
       <input
         autocomplete="off"
-        class="emotion-3"
+        class="emotion-10"
         data-testid="textColor"
         id="textColor"
         style="border-color: rgb(255, 255, 255); color: inherit;"
@@ -208,27 +315,27 @@ exports[`ColorInputs > renders without crashing 1`] = `
         value="#fff"
       />
       <div
-        class="emotion-4"
+        class="emotion-11"
         data-testid="form-hsl-sliders"
       >
         <div
-          class="emotion-5"
+          class="emotion-12"
         >
           <div
-            class="emotion-6"
+            class="emotion-13"
           >
             <label
-              class="emotion-2"
+              class="emotion-9"
               for="textColor-hsl-Hue"
             >
               Hue 0°
             </label>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-15"
           >
             <input
-              class="emotion-9"
+              class="emotion-16"
               data-testid="textColor-hsl-Hue"
               id="textColor-hsl-Hue"
               max="360"
@@ -239,23 +346,23 @@ exports[`ColorInputs > renders without crashing 1`] = `
           </div>
         </div>
         <div
-          class="emotion-5"
+          class="emotion-12"
         >
           <div
-            class="emotion-6"
+            class="emotion-13"
           >
             <label
-              class="emotion-2"
+              class="emotion-9"
               for="textColor-hsl-Saturation"
             >
               Saturation 0%
             </label>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-15"
           >
             <input
-              class="emotion-9"
+              class="emotion-16"
               data-testid="textColor-hsl-Saturation"
               id="textColor-hsl-Saturation"
               max="100"
@@ -266,23 +373,23 @@ exports[`ColorInputs > renders without crashing 1`] = `
           </div>
         </div>
         <div
-          class="emotion-5"
+          class="emotion-12"
         >
           <div
-            class="emotion-6"
+            class="emotion-13"
           >
             <label
-              class="emotion-2"
+              class="emotion-9"
               for="textColor-hsl-Lightness"
             >
               Lightness 100%
             </label>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-15"
           >
             <input
-              class="emotion-9"
+              class="emotion-16"
               data-testid="textColor-hsl-Lightness"
               id="textColor-hsl-Lightness"
               max="100"
@@ -295,17 +402,17 @@ exports[`ColorInputs > renders without crashing 1`] = `
       </div>
     </div>
     <div
-      class="emotion-1"
+      class="emotion-8"
     >
       <label
-        class="emotion-2"
+        class="emotion-9"
         for="background"
       >
         Background
       </label>
       <input
         autocomplete="off"
-        class="emotion-3"
+        class="emotion-10"
         data-testid="background"
         id="background"
         style="border-color: rgb(255, 255, 255); color: inherit;"
@@ -313,27 +420,27 @@ exports[`ColorInputs > renders without crashing 1`] = `
         value="#000"
       />
       <div
-        class="emotion-4"
+        class="emotion-11"
         data-testid="form-hsl-sliders"
       >
         <div
-          class="emotion-5"
+          class="emotion-12"
         >
           <div
-            class="emotion-6"
+            class="emotion-13"
           >
             <label
-              class="emotion-2"
+              class="emotion-9"
               for="background-hsl-Hue"
             >
               Hue 0°
             </label>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-15"
           >
             <input
-              class="emotion-9"
+              class="emotion-16"
               data-testid="background-hsl-Hue"
               id="background-hsl-Hue"
               max="360"
@@ -344,23 +451,23 @@ exports[`ColorInputs > renders without crashing 1`] = `
           </div>
         </div>
         <div
-          class="emotion-5"
+          class="emotion-12"
         >
           <div
-            class="emotion-6"
+            class="emotion-13"
           >
             <label
-              class="emotion-2"
+              class="emotion-9"
               for="background-hsl-Saturation"
             >
               Saturation 0%
             </label>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-15"
           >
             <input
-              class="emotion-9"
+              class="emotion-16"
               data-testid="background-hsl-Saturation"
               id="background-hsl-Saturation"
               max="100"
@@ -371,23 +478,23 @@ exports[`ColorInputs > renders without crashing 1`] = `
           </div>
         </div>
         <div
-          class="emotion-5"
+          class="emotion-12"
         >
           <div
-            class="emotion-6"
+            class="emotion-13"
           >
             <label
-              class="emotion-2"
+              class="emotion-9"
               for="background-hsl-Lightness"
             >
               Lightness 0%
             </label>
           </div>
           <div
-            class="emotion-8"
+            class="emotion-15"
           >
             <input
-              class="emotion-9"
+              class="emotion-16"
               data-testid="background-hsl-Lightness"
               id="background-hsl-Lightness"
               max="100"
@@ -399,28 +506,6 @@ exports[`ColorInputs > renders without crashing 1`] = `
         </div>
       </div>
     </div>
-    <fieldset>
-      <legend>
-        Contrast algorithm
-      </legend>
-      <label>
-        <input
-          checked=""
-          name="contrast-algorithm"
-          type="radio"
-          value="wcag2"
-        />
-        WCAG 2.x
-      </label>
-      <label>
-        <input
-          name="contrast-algorithm"
-          type="radio"
-          value="apca"
-        />
-        APCA
-      </label>
-    </fieldset>
   </div>
 </DocumentFragment>
 `;

@@ -54,28 +54,124 @@ exports[`Palette Page > renders without crashing 1`] = `
       />
     </div>
   </form>
-  <fieldset>
-    <legend>
-      Contrast algorithm
-    </legend>
-    <label>
-      <input
-        checked=""
-        name="contrast-algorithm"
-        type="radio"
-        value="wcag2"
-      />
-      WCAG 2.x
-    </label>
-    <label>
-      <input
-        name="contrast-algorithm"
-        type="radio"
-        value="apca"
-      />
-      APCA
-    </label>
-  </fieldset>
+  .emotion-0 {
+  margin: 1.5rem auto 0.5rem;
+  max-width: 1200px;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.emotion-1 {
+  border: 0;
+  color: inherit;
+  margin: 0;
+  min-width: 0;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.emotion-2 {
+  display: block;
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  width: 100%;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  position: relative;
+  -webkit-transition: font-weight 150ms ease-out,text-decoration-color 150ms ease-out;
+  transition: font-weight 150ms ease-out,text-decoration-color 150ms ease-out;
+}
+
+.emotion-4:has(input:checked) {
+  font-weight: 700;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+
+.emotion-4:has(input:focus-visible) {
+  outline: currentColor dashed 2px;
+  outline-offset: 3px;
+}
+
+.emotion-5 {
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+<div
+    class="emotion-0"
+  >
+    <fieldset
+      class="emotion-1"
+    >
+      <legend
+        class="emotion-2"
+      >
+        Algorithm
+      </legend>
+      <div
+        class="emotion-3"
+      >
+        <label
+          class="emotion-4"
+        >
+          <input
+            checked=""
+            class="emotion-5"
+            name="contrast-algorithm"
+            type="radio"
+            value="wcag2"
+          />
+          WCAG 2.x
+        </label>
+        <label
+          class="emotion-4"
+        >
+          <input
+            class="emotion-5"
+            name="contrast-algorithm"
+            type="radio"
+            value="apca"
+          />
+          APCA
+        </label>
+      </div>
+    </fieldset>
+  </div>
   .emotion-0 {
   margin-top: 3rem;
   overflow-x: auto;
