@@ -189,20 +189,23 @@ exports[`ColorInputs > renders without crashing 1`] = `
   color: inherit;
   margin: 0;
   min-width: 0;
-  padding: 1rem;
+  padding: 0 1rem 1rem;
   text-align: center;
   width: 100%;
 }
 
 .emotion-40 {
   display: block;
+  float: left;
   font-size: 1.2rem;
-  margin: 0 0 10px;
+  line-height: 1;
+  margin: 0 0 5px;
   padding: 0;
   width: 100%;
 }
 
 .emotion-41 {
+  clear: both;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -225,7 +228,8 @@ exports[`ColorInputs > renders without crashing 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   font-size: 1.2rem;
-  line-height: 1.4;
+  line-height: 1;
+  padding-bottom: 0.35em;
   position: relative;
   -webkit-transition: font-weight 150ms ease-out,text-decoration-color 150ms ease-out;
   transition: font-weight 150ms ease-out,text-decoration-color 150ms ease-out;
@@ -236,7 +240,7 @@ exports[`ColorInputs > renders without crashing 1`] = `
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 0.3em;
+  text-underline-offset: 0.2em;
 }
 
 .emotion-42:has(input:focus-visible) {
