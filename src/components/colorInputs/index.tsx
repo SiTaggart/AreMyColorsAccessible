@@ -28,7 +28,6 @@ const ColorInputs: React.FC = (): ReactElement => {
 
   return (
     <Form dataTest="color-input-form" style={styles.form}>
-      <ContrastAlgorithmToggle algorithm={algorithm} onChange={handleAlgorithmChange} />
       <FormControl>
         <FormLabel htmlFor="textColor">Text Color</FormLabel>
         <FormInput
@@ -57,6 +56,11 @@ const ColorInputs: React.FC = (): ReactElement => {
           value={colorCombos[1].hex}
         />
       </FormControl>
+      <ContrastAlgorithmToggle
+        algorithm={algorithm}
+        align="center"
+        onChange={handleAlgorithmChange}
+      />
     </Form>
   );
 };

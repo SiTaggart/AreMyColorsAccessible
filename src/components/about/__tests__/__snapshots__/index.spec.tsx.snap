@@ -49,6 +49,10 @@ exports[`About > renders without crashing 1`] = `
   color: currentColor;
 }
 
+.emotion-15 {
+  font-weight: 700;
+}
+
 <main
     class="emotion-0"
   >
@@ -133,6 +137,71 @@ exports[`About > renders without crashing 1`] = `
           bold
         </strong>
          text that is 14pt or 18px and above, where the minimum contrast ratio can be 3.0:1
+      </p>
+      <p
+        class="emotion-3"
+      >
+        For AAA, push further: 7.0:1 for normal text, and 4.5:1 for that same large or bold text. This site reports AA and AAA against those thresholds as Small, Bold, and Large results.
+      </p>
+      <h2
+        class="emotion-15"
+      >
+        WCAG 2.x vs APCA
+      </h2>
+      <p
+        class="emotion-3"
+      >
+        Home and palette both let you switch the scoring algorithm. WCAG 2.x is the default and matches the contrast ratio rules above. APCA is a newer model that estimates how strongly text separates from its background for human vision, reported as a signed Lc (lightness contrast) value instead of a ratio like 4.5:1.
+      </p>
+      <p
+        class="emotion-3"
+      >
+        APCA does not use AA or AAA labels. Results here stay in the same Yup / Kinda / Nope voice, mapped from APCA readability bands rather than WCAG levels:
+      </p>
+      <p
+        class="emotion-3"
+      >
+        <strong>
+          Yup
+        </strong>
+         when Content text passes (|Lc| ≥ 60). 
+        <strong>
+          Kinda
+        </strong>
+         when Content fails but Large text passes (|Lc| ≥ 45). 
+        <strong>
+          Nope
+        </strong>
+         otherwise. 
+        <strong>
+          Seriously?
+        </strong>
+         still only appears for extreme fails (|Lc| under 15), as an overlay, never as the headline.
+      </p>
+      <p
+        class="emotion-3"
+      >
+        The readability rows use these absolute Lc thresholds from the APCA profile we ship:
+      </p>
+      <p
+        class="emotion-3"
+      >
+        Fluent text |Lc| ≥ 90
+        <br />
+        Body text |Lc| ≥ 75
+        <br />
+        Content text |Lc| ≥ 60
+        <br />
+        Large text |Lc| ≥ 45
+        <br />
+        Minimum text |Lc| ≥ 30
+        <br />
+        Non-text |Lc| ≥ 15
+      </p>
+      <p
+        class="emotion-3"
+      >
+        Body can fail under a Yup headline when Lc sits between 60 and 75. That is expected: the headline follows Content/Large, while each row reports its own band. APCA Lc is also directional, so swapping text and background can change the signed value and which bands pass.
       </p>
       <p
         class="emotion-3"

@@ -63,6 +63,47 @@ const About: React.FC = (): ReactElement => (
         contrast ratio can be 3.0:1
       </P>
       <P>
+        For AAA, push further: 7.0:1 for normal text, and 4.5:1 for that same large or bold text.
+        This site reports AA and AAA against those thresholds as Small, Bold, and Large results.
+      </P>
+      <Heading as="h2">WCAG 2.x vs APCA</Heading>
+      <P>
+        Home and palette both let you switch the scoring algorithm. WCAG 2.x is the default and
+        matches the contrast ratio rules above. APCA is a newer model that estimates how strongly
+        text separates from its background for human vision, reported as a signed Lc (lightness
+        contrast) value instead of a ratio like 4.5:1.
+      </P>
+      <P>
+        APCA does not use AA or AAA labels. Results here stay in the same Yup / Kinda / Nope voice,
+        mapped from APCA readability bands rather than WCAG levels:
+      </P>
+      <P>
+        <strong>Yup</strong> when Content text passes (|Lc| ≥ 60). <strong>Kinda</strong> when
+        Content fails but Large text passes (|Lc| ≥ 45). <strong>Nope</strong> otherwise.{" "}
+        <strong>Seriously?</strong> still only appears for extreme fails (|Lc| under 15), as an
+        overlay, never as the headline.
+      </P>
+      <P>The readability rows use these absolute Lc thresholds from the APCA profile we ship:</P>
+      <P>
+        Fluent text |Lc| ≥ 90
+        <br />
+        Body text |Lc| ≥ 75
+        <br />
+        Content text |Lc| ≥ 60
+        <br />
+        Large text |Lc| ≥ 45
+        <br />
+        Minimum text |Lc| ≥ 30
+        <br />
+        Non-text |Lc| ≥ 15
+      </P>
+      <P>
+        Body can fail under a Yup headline when Lc sits between 60 and 75. That is expected: the
+        headline follows Content/Large, while each row reports its own band. APCA Lc is also
+        directional, so swapping text and background can change the signed value and which bands
+        pass.
+      </P>
+      <P>
         Building upon and heavily influenced by the excellent{" "}
         <Link href="http://jxnblk.com/colorable/">Colorable</Link>, I wanted more context around the
         result. When you share the outcome with your colleagues, all the results, rules and what
