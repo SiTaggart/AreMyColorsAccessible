@@ -54,6 +54,28 @@ exports[`Palette Page > renders without crashing 1`] = `
       />
     </div>
   </form>
+  <fieldset>
+    <legend>
+      Contrast algorithm
+    </legend>
+    <label>
+      <input
+        checked=""
+        name="contrast-algorithm"
+        type="radio"
+        value="wcag2"
+      />
+      WCAG 2.x
+    </label>
+    <label>
+      <input
+        name="contrast-algorithm"
+        type="radio"
+        value="apca"
+      />
+      APCA
+    </label>
+  </fieldset>
   .emotion-0 {
   margin-top: 3rem;
   overflow-x: auto;
