@@ -10,10 +10,10 @@ describe("About", (): void => {
   it("explains APCA scoring and thresholds", (): void => {
     render(<About />);
 
-    expect(screen.getByRole("heading", { name: "WCAG 2.x vs APCA" })).toBeTruthy();
-    expect(screen.getByText(/signed Lc \(lightness contrast\) value/i)).toBeTruthy();
-    expect(screen.getByText(/Content text passes \(\|Lc\| ≥ 60\)/i)).toBeTruthy();
-    expect(screen.getByText(/Fluent text \|Lc\| ≥ 90/i)).toBeTruthy();
+    expect(screen.getByRole("heading", { name: "Two ways to score" })).toBeTruthy();
+    expect(screen.getByText(/signed Lc value for lightness contrast/i)).toBeTruthy();
+    expect(screen.getByText(/Content passes at \|Lc\| 60 or more/i)).toBeTruthy();
+    expect(screen.getByText(/Fluent \|Lc\| ≥ 90/i)).toBeTruthy();
     expect(screen.getByText(/Non-text \|Lc\| ≥ 15/i)).toBeTruthy();
   });
 });
