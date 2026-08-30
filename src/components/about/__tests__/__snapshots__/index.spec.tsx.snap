@@ -49,7 +49,7 @@ exports[`About > renders without crashing 1`] = `
   color: currentColor;
 }
 
-.emotion-15 {
+.emotion-14 {
   font-weight: 700;
 }
 
@@ -132,81 +132,47 @@ exports[`About > renders without crashing 1`] = `
       <p
         class="emotion-3"
       >
-        For text-based information to be perceivable by all users regardless of level of sight and to safely meet WCAG 2.0, AA requirements, you should aim for a minimum contrast ratio of 4.5:1 for all text content. There are 2 exceptions to this; large text that is 18pt or 24px and above or 
+        Aim for 4.5:1 to meet WCAG AA. Large text (18pt / 24px+) or 
         <strong>
           bold
         </strong>
-         text that is 14pt or 18px and above, where the minimum contrast ratio can be 3.0:1
-      </p>
-      <p
-        class="emotion-3"
-      >
-        AAA is stricter. Normal text needs 7.0:1. Large or bold text needs 4.5:1. The Small, Bold and Large results show how your colours do at both AA and AAA.
+         text (14pt / 18px+) can pass at 3:1. AAA wants 7:1 for normal text and 4.5:1 for large or bold. Small, Bold and Large show how you do at both.
       </p>
       <h2
-        class="emotion-15"
+        class="emotion-14"
       >
-        Two ways to score
+        Two algorithms
       </h2>
       <p
         class="emotion-3"
       >
-        WCAG 2.x is the default, but you can switch to APCA on the home page or the palette. APCA reports a signed Lc value for lightness contrast, not a ratio. It also skips AA and AAA labels.
+        This site uses WCAG 2 and APCA. Flip between them on the home page or the palette. WCAG gives a contrast ratio with AA/AAA. APCA gives an Lc score instead.
       </p>
       <p
         class="emotion-3"
       >
-        The headline says 
+        For APCA, 
         <strong>
           Yup
         </strong>
-         when Content passes at |Lc| 60 or more. If Content misses but Large still passes at 45, it says 
+         means Content passes (Lc 60+). 
         <strong>
           Kinda
         </strong>
-        . Below that, 
+         means only Large does (45+). 
         <strong>
           Nope
         </strong>
-        . When |Lc| drops under 15, 
+         is below that. 
         <strong>
           Seriously?
         </strong>
-         shows up as a bit of extra heckling. It is not another headline.
+         is just a dig when contrast is awful.
       </p>
       <p
         class="emotion-3"
       >
-        The APCA rows each have their own cut-off:
-      </p>
-      <p
-        class="emotion-3"
-      >
-        Fluent |Lc| ≥ 90
-        <br />
-        Body |Lc| ≥ 75
-        <br />
-        Content |Lc| ≥ 60
-        <br />
-        Large |Lc| ≥ 45
-        <br />
-        Minimum |Lc| ≥ 30
-        <br />
-        Non-text |Lc| ≥ 15
-      </p>
-      <p
-        class="emotion-3"
-      >
-        One odd bit: 
-        <strong>
-          Yup
-        </strong>
-         follows the Content mark, so Body can still fail when |Lc| is at least 60 but below 75. That is expected, even if it looks wrong at first glance.
-      </p>
-      <p
-        class="emotion-3"
-      >
-        Lc is directional too. Swap the text and background and the signed value, and which rows pass, can change.
+        APCA row targets: Fluent 90, Body 75, Content 60, Large 45, Minimum 30, Non-Text 15.
       </p>
       <p
         class="emotion-3"
