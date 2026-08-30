@@ -3,14 +3,14 @@ import { ColorCard, ColorCardProps } from "..";
 
 describe("ColorCard", (): void => {
   const mockProps: ColorCardProps = {
-    accessibility: {
-      aa: true,
-      aaa: true,
-      aaaLarge: true,
-      aaLarge: true,
-    },
     color: "#000",
-    contrast: 21,
+    heading: "Yup",
+    metricLabel: "Contrast Ratio",
+    metricValue: "21 : 1",
+    rows: [
+      { label: "Small", meets: true, value: "AAA" },
+      { label: "Large", meets: true, value: "AAA" },
+    ],
   };
 
   it("renders without crashing", (): void => {

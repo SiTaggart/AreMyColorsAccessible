@@ -20,6 +20,7 @@ const PalettePage: React.FC = (): React.ReactElement => {
       />
       <ContrastAlgorithmToggle algorithm={paletteData.algorithm} onChange={handleAlgorithmChange} />
       <ColorMatrix
+        algorithm={paletteData.algorithm}
         colorCombos={paletteData.colorCombos}
         colors={paletteData.colors}
         onColorChange={handleColorChange}
