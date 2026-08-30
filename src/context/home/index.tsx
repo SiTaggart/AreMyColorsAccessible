@@ -163,7 +163,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = ({
       }));
       void navigate({
         replace: true,
-        search: (currentSearch) => ({
+        search: (currentSearch: Partial<HomePageQueryString>) => ({
           ...currentSearch,
           algorithm: algorithm === "apca" ? algorithm : undefined,
         }),
