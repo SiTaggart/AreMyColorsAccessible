@@ -1,7 +1,5 @@
 # APCA Contrast Algorithm Toggle Implementation Plan
 
-> **For Hermes:** Use `subagent-driven-development` to implement this plan task-by-task after Simon approves it. Work in an isolated git worktree. Do not implement from this planning PR.
-
 **Goal:** Add a per-page, URL-shareable contrast algorithm selector so users can switch between the current WCAG 2.x contrast ratio checks and APCA contrast checks on the home and palette pages. Algorithm state is not site-wide: in-app navigation may reset it unless the user carries `algorithm` in the URL (same pattern as colors today).
 
 **Architecture:** Keep WCAG 2.x as the default and preserve existing behavior unless the user explicitly selects APCA. Store the selected algorithm in each page context and in that page's URL search. Write algorithm search updates through TanStack Router `navigate({ search, replace: true })` rather than deepening the existing `pushState` path. Split pure rating (`colorRating` / `apcaRating`) from thin display formatting so `Results`, `ColorMatrix`/`ColorCard`, and a future API path do not each invent their own APCA interpretation.
@@ -27,7 +25,6 @@
 - Home still has two `ColorCombos` call sites; only the interactive equal-color path uses `createFakeCombination` (WCAG-only, no `apca`). Init/deep-link equal colors with default `uniq: true` yield empty `combinations` and can crash `Results`.
 - Home URL writes currently stringify `colorCombos` into junk `[object Object]` query params. Palette already separates `PalettePageQueryString` from runtime state.
 - `/about` reuses home `parseSiteSearch` + `SiteDataProvider` for theming only; copy is WCAG 2.0. Out of scope for this PR (follow-up).
-- No project-local `AGENTS.md`, `CLAUDE.md`, or `.codex` instructions were found in this repo worktree.
 
 ## Product decisions (locked)
 
@@ -325,17 +322,7 @@ Expected: Playwright suite passes.
    ```
 2. Do not commit `dist`, `.wrangler`, `worker-configuration.d.ts`, `node_modules`.
 3. Conventional commit, e.g. `feat: add APCA contrast algorithm toggle`.
-4. Implement on a fresh branch/worktree — do not reuse this planning branch.
-
----
-
-## Suggested implementation orchestration after approval
-
-Use a fresh worktree and subagents. Do not reuse the planning branch.
-
-1. Create a branch from latest `main`.
-2. Implement task-by-task; review agent output yourself.
-3. Run the full validation gate locally and watch GitHub CI after push.
+4. Implement on a fresh feature branch from latest `main` — do not reuse this planning branch.
 
 ## Acceptance criteria
 
