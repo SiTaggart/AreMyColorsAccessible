@@ -1,10 +1,10 @@
-import { render } from "@testing-library/react";
 import { SiteDataProvider } from "../../../context/home";
+import { renderWithRouter } from "../../../test/render-with-router";
 import { Results } from "..";
 
 describe("Results", (): void => {
   it("renders without crashing", (): void => {
-    const { asFragment } = render(
+    const { asFragment } = renderWithRouter(
       <SiteDataProvider>
         <Results />
       </SiteDataProvider>,
@@ -13,7 +13,7 @@ describe("Results", (): void => {
   });
 
   it("should render a triple a result correctly", (): void => {
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
           background: "#000",
@@ -32,7 +32,7 @@ describe("Results", (): void => {
   });
 
   it("should render a large text triple a result correctly", (): void => {
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
           background: "#666",
@@ -51,7 +51,7 @@ describe("Results", (): void => {
   });
 
   it("should render a large text double a result correctly", (): void => {
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
           background: "#000",
@@ -70,7 +70,7 @@ describe("Results", (): void => {
   });
 
   it("should render a nope a result correctly", (): void => {
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
           background: "#000",
@@ -89,7 +89,7 @@ describe("Results", (): void => {
   });
 
   it("should render a seriously? a result correctly", (): void => {
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
           background: "#000",
@@ -106,7 +106,7 @@ describe("Results", (): void => {
   });
 
   it("should set the font color of seriously? to #343334 on light backgrounds", (): void => {
-    const { asFragment } = render(
+    const { asFragment } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
           background: "#000",

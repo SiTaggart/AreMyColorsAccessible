@@ -1,7 +1,26 @@
 /* eslint-disable react/display-name */
 import * as React from "react";
-import { renderHook, act } from "@testing-library/react";
+import { act, renderHook, waitFor } from "@testing-library/react";
+import { createMemoryHistory, RouterContextProvider } from "@tanstack/react-router";
+import type { HomePageQueryString } from "../../../types";
+import { getRouter } from "../../../router";
+import { parseSiteSearch } from "../../../utils/route-search";
 import { SiteDataProvider, useSiteData, HomeContextInterface } from "..";
+
+const renderSiteDataHook = (initialSiteData?: Partial<HomePageQueryString>, initialEntry = "/") => {
+  const history = createMemoryHistory({ initialEntries: [initialEntry] });
+  const router = getRouter();
+  const wrapper = ({ children }: { children?: React.ReactNode }): React.ReactElement => (
+    <RouterContextProvider history={history} router={router}>
+      <SiteDataProvider initialSiteData={initialSiteData}>{children}</SiteDataProvider>
+    </RouterContextProvider>
+  );
+
+  return {
+    history,
+    ...renderHook((): HomeContextInterface => useSiteData(), { wrapper }),
+  };
+};
 
 const normalizeSiteData = (value: unknown): unknown => {
   if (typeof value === "number") {
@@ -15,7 +34,7 @@ const normalizeSiteData = (value: unknown): unknown => {
   if (value !== null && typeof value === "object") {
     return Object.fromEntries(
       Object.entries(value)
-        .filter(([key]) => key !== "apca")
+        .filter(([key]) => key !== "algorithm" && key !== "apca")
         .map(([key, entry]) => [key, normalizeSiteData(entry)]),
     );
   }
@@ -29,13 +48,8 @@ const expectSiteData = (actual: unknown, expected: unknown): void => {
 
 describe("useSiteData hook", (): void => {
   it("should set context by default", (): void => {
-    const wrapper = ({ children }: { children?: React.ReactNode }): React.ReactElement => (
-      <SiteDataProvider>{children}</SiteDataProvider>
-    );
-
-    const { result } = renderHook((): HomeContextInterface => useSiteData(), {
-      wrapper,
-    });
+    const { result } = renderSiteDataHook();
+    expect(result.current.siteData.algorithm).toBe("wcag2");
     expectSiteData(result.current.siteData, {
       background: "#1276CE",
       colorCombos: [
@@ -78,19 +92,10 @@ describe("useSiteData hook", (): void => {
   });
 
   it("should set context when initial siteData is set", (): void => {
-    const { result: initialContext } = renderHook((): HomeContextInterface => useSiteData(), {
-      wrapper: ({ children }: { children?: React.ReactNode }): React.ReactElement => (
-        <SiteDataProvider
-          initialSiteData={{
-            background: "#111",
-            colorCombos: [],
-            isLight: true,
-            textColor: "rgb(239,239,239)",
-          }}
-        >
-          {children}
-        </SiteDataProvider>
-      ),
+    const { result: initialContext } = renderSiteDataHook({
+      background: "#111",
+      isLight: true,
+      textColor: "rgb(239,239,239)",
     });
     expectSiteData(initialContext.current.siteData, {
       background: "#111",
@@ -134,13 +139,7 @@ describe("useSiteData hook", (): void => {
   });
 
   it("should update siteData when background color is changed", (): void => {
-    const wrapper = ({ children }: { children?: React.ReactNode }): React.ReactElement => (
-      <SiteDataProvider>{children}</SiteDataProvider>
-    );
-
-    const { result } = renderHook((): HomeContextInterface => useSiteData(), {
-      wrapper,
-    });
+    const { result } = renderSiteDataHook();
 
     act((): void => {
       result.current.handleBackgroundColorInputChange("#444");
@@ -188,13 +187,7 @@ describe("useSiteData hook", (): void => {
   });
 
   it("should update siteData when text color is changed", (): void => {
-    const wrapper = ({ children }: { children?: React.ReactNode }): React.ReactElement => (
-      <SiteDataProvider>{children}</SiteDataProvider>
-    );
-
-    const { result } = renderHook((): HomeContextInterface => useSiteData(), {
-      wrapper,
-    });
+    const { result } = renderSiteDataHook();
     act((): void => {
       result.current.handleTextColorInputChange("#000");
     });
@@ -240,13 +233,7 @@ describe("useSiteData hook", (): void => {
   });
 
   it("should keep current state when invalid colour is set as background color", (): void => {
-    const wrapper = ({ children }: { children?: React.ReactNode }): React.ReactElement => (
-      <SiteDataProvider>{children}</SiteDataProvider>
-    );
-
-    const { result } = renderHook((): HomeContextInterface => useSiteData(), {
-      wrapper,
-    });
+    const { result } = renderSiteDataHook();
     act((): void => {
       result.current.handleBackgroundColorInputChange("blah");
     });
@@ -293,13 +280,7 @@ describe("useSiteData hook", (): void => {
   });
 
   it("should keep current state when invalid colour is set as textColor color", (): void => {
-    const wrapper = ({ children }: { children?: React.ReactNode }): React.ReactElement => (
-      <SiteDataProvider>{children}</SiteDataProvider>
-    );
-
-    const { result } = renderHook((): HomeContextInterface => useSiteData(), {
-      wrapper,
-    });
+    const { result } = renderSiteDataHook();
     act((): void => {
       result.current.handleTextColorInputChange("foo");
     });
@@ -345,29 +326,77 @@ describe("useSiteData hook", (): void => {
     });
   });
 
-  it("should handle a text and background colours being the same", (): void => {
-    const { result: sameForeBackContext } = renderHook((): HomeContextInterface => useSiteData(), {
-      wrapper: ({ children }: { children?: React.ReactNode }): React.ReactElement => (
-        <SiteDataProvider
-          initialSiteData={{
-            background: "#fff",
-            colorCombos: [],
-            isLight: true,
-            textColor: "#fff",
-          }}
-        >
-          {children}
-        </SiteDataProvider>
-      ),
+  it("honors a parsed algorithm without color params", (): void => {
+    const { result } = renderSiteDataHook({ algorithm: "apca" });
+    expect(result.current.siteData.algorithm).toBe("apca");
+    expect(result.current.siteData.background).toBe("#1276CE");
+    expect(result.current.siteData.textColor).toBe("#FFFFFF");
+  });
+
+  it("falls back to WCAG for an invalid parsed algorithm", (): void => {
+    const { result } = renderSiteDataHook(parseSiteSearch({ algorithm: "future" }));
+    expect(result.current.siteData.algorithm).toBe("wcag2");
+  });
+
+  it("updates the algorithm and URL without changing colors", async (): Promise<void> => {
+    const initialSiteData = {
+      background: "#000",
+      isLight: false,
+      textColor: "#fff",
+    };
+    const { history, result } = renderSiteDataHook(
+      initialSiteData,
+      "/?background=%23000&isLight=false&textColor=%23fff",
+    );
+    const colorCombos = result.current.siteData.colorCombos;
+
+    act((): void => {
+      result.current.handleAlgorithmChange("apca");
     });
-    expectSiteData(sameForeBackContext.current.siteData, {
+
+    expect(result.current.siteData).toMatchObject({
+      algorithm: "apca",
+      background: "#000",
+      textColor: "#fff",
+    });
+    expect(result.current.siteData.colorCombos).toBe(colorCombos);
+    await waitFor((): void => {
+      const search = new URLSearchParams(history.location.search);
+      expect(search.get("algorithm")).toBe("apca");
+      expect(search.get("background")).toBe("#000");
+      expect(search.get("textColor")).toBe("#fff");
+      expect(search.has("colorCombos")).toBe(false);
+    });
+
+    act((): void => {
+      result.current.handleAlgorithmChange("wcag2");
+    });
+
+    await waitFor((): void => {
+      expect(new URLSearchParams(history.location.search).has("algorithm")).toBe(false);
+    });
+  });
+
+  it("keeps real APCA data when initial colors are equal", (): void => {
+    const { result } = renderSiteDataHook({
+      algorithm: "apca",
       background: "#fff",
-      colorCombos: [
-        { color: [255, 255, 255], combinations: [], hex: "#FFFFFF", model: "rgb", valpha: 1 },
-      ],
       isLight: true,
       textColor: "#fff",
     });
+    expect(result.current.siteData.colorCombos).toHaveLength(2);
+    expect(result.current.siteData.colorCombos[0]?.combinations[0]?.apca?.lc).toBe(0);
+  });
+
+  it("keeps real APCA data when updated colors are equal", (): void => {
+    const { result } = renderSiteDataHook();
+
+    act((): void => {
+      result.current.handleTextColorInputChange("#1276CE");
+    });
+
+    expect(result.current.siteData.colorCombos).toHaveLength(2);
+    expect(result.current.siteData.colorCombos[0]?.combinations[0]?.apca?.lc).toBe(0);
   });
 });
 /* eslint-enable react/display-name */
