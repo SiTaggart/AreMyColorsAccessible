@@ -96,7 +96,7 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = ({
   ...props
 }: SiteDataProviderProps): React.ReactElement => {
   const [siteData, setSiteData] = React.useState<SiteData>(setInitialContext(initialSiteData));
-  const navigate = useNavigate();
+  const navigate = useNavigate({ from: "/" });
 
   const updateSearch = React.useCallback(
     (nextState: SiteData): void => {

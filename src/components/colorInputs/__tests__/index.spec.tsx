@@ -6,6 +6,7 @@ import * as HomeContext from "../../../context/home";
 describe("ColorInputs", (): void => {
   let colorCombos: Array<ColorCombo> | false;
   let mockContext: HomeContext.HomeContextInterface;
+  let handleAlgorithmChange: HomeContext.HomeContextInterface["handleAlgorithmChange"];
   let handleBackgroundColorInputChange: (value: string) => void;
   let handleTextColorInputChange: (value: string) => void;
 
@@ -14,6 +15,7 @@ describe("ColorInputs", (): void => {
   );
 
   beforeAll((): void => {
+    handleAlgorithmChange = vi.fn();
     handleBackgroundColorInputChange = vi.fn<(value: string) => void>();
     handleTextColorInputChange = vi.fn<(value: string) => void>();
   });
@@ -23,9 +25,11 @@ describe("ColorInputs", (): void => {
     colorCombos = ColorCombos(["#fff", "#000"]);
     if (colorCombos !== false) {
       mockContext = {
+        handleAlgorithmChange,
         handleBackgroundColorInputChange,
         handleTextColorInputChange,
         siteData: {
+          algorithm: "wcag2",
           background: "#000",
           colorCombos,
           isLight: false,
