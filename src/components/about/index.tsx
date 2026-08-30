@@ -81,7 +81,7 @@ const About: React.FC = (): ReactElement => (
       <P>
         Built by <Link href="http://www.simontaggart.com">Simon Taggart</Link>,{" "}
         <Link href="https://github.com/SiTaggart/AreMyColorsAccessible">code on GitHub</Link>,{" "}
-        <Link href="https://netlify.com">hosted on Netlify</Link>.
+        <Link href="https://www.cloudflare.com">hosted on Cloudflare</Link>.
       </P>
     </Layout>
   </Container>

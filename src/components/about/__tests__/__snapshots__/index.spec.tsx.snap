@@ -207,9 +207,9 @@ exports[`About > renders without crashing 1`] = `
         , 
         <a
           class="emotion-6"
-          href="https://netlify.com"
+          href="https://www.cloudflare.com"
         >
-          hosted on Netlify
+          hosted on Cloudflare
         </a>
         .
       </p>
