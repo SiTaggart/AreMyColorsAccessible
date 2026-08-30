@@ -17,8 +17,8 @@ export const StyledLegend = styled.legend`
   float: left;
   font-size: 1.2rem;
   line-height: 1;
-  /* 5px + line-height:1 ≈ 10px clear blue under most letters (g descender sits closer) */
-  margin: 0 0 5px;
+  /* With line-height:1 + floated legend, this margin is the real gap (~10px incl. g) */
+  margin: 0 0 10px;
   padding: 0;
   width: 100%;
 `;
