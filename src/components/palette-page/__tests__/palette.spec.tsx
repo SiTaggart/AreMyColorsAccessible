@@ -1,10 +1,10 @@
-import { render } from "@testing-library/react";
 import { PaletteDataProvider } from "../../../context/palette";
+import { renderWithRouter } from "../../../test/render-with-router";
 import { PalettePage } from "..";
 
 describe("Palette Page", (): void => {
   it("renders without crashing", (): void => {
-    const { asFragment } = render(
+    const { asFragment } = renderWithRouter(
       <PaletteDataProvider>
         <PalettePage />
       </PaletteDataProvider>,

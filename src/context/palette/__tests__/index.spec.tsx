@@ -1,7 +1,29 @@
 /* eslint-disable react/display-name */
 import * as React from "react";
-import { renderHook, act, RenderHookResult } from "@testing-library/react";
+import { act, renderHook, waitFor } from "@testing-library/react";
+import { createMemoryHistory, RouterContextProvider } from "@tanstack/react-router";
+import type { PalettePageQueryString } from "../../../types";
+import { getRouter } from "../../../router";
+import { parsePaletteSearch } from "../../../utils/route-search";
 import { PaletteDataProvider, usePaletteData, PaletteContextProps } from "..";
+
+const renderPaletteDataHook = (
+  queryString?: Partial<PalettePageQueryString>,
+  initialEntry = "/palette",
+) => {
+  const history = createMemoryHistory({ initialEntries: [initialEntry] });
+  const router = getRouter();
+  const wrapper = ({ children }: { children?: React.ReactNode }): React.ReactElement => (
+    <RouterContextProvider history={history} router={router}>
+      <PaletteDataProvider queryString={queryString}>{children}</PaletteDataProvider>
+    </RouterContextProvider>
+  );
+
+  return {
+    history,
+    ...renderHook((): PaletteContextProps => usePaletteData(), { wrapper }),
+  };
+};
 
 const normalizeContrast = (value: unknown): unknown => {
   if (typeof value === "number") {
@@ -15,7 +37,7 @@ const normalizeContrast = (value: unknown): unknown => {
   if (value !== null && typeof value === "object") {
     return Object.fromEntries(
       Object.entries(value)
-        .filter(([key]) => key !== "apca")
+        .filter(([key]) => key !== "algorithm" && key !== "apca")
         .map(([key, entry]) => [key, normalizeContrast(entry)]),
     );
   }
@@ -27,20 +49,15 @@ const expectPaletteData = (actual: unknown, expected: unknown): void => {
   expect(normalizeContrast(actual)).toEqual(normalizeContrast(expected));
 };
 
-describe("useSiteData hook", (): void => {
-  const wrapper = ({ children }: { children?: React.ReactNode }): React.ReactElement => (
-    <PaletteDataProvider>{children}</PaletteDataProvider>
-  );
-
-  let renderedHook: RenderHookResult<PaletteContextProps, PaletteContextProps>;
+describe("usePaletteData hook", (): void => {
+  let renderedHook: ReturnType<typeof renderPaletteDataHook>;
 
   beforeEach((): void => {
-    renderedHook = renderHook(() => usePaletteData(), {
-      wrapper,
-    });
+    renderedHook = renderPaletteDataHook();
   });
 
   it("should set context by default", (): void => {
+    expect(renderedHook.result.current.paletteData.algorithm).toBe("wcag2");
     expectPaletteData(renderedHook.result.current.paletteData, {
       colorCombos: [],
       colors: [],
@@ -685,6 +702,67 @@ describe("useSiteData hook", (): void => {
     });
     expect(renderedHook.result.current.paletteData.colorCombos).toEqual(coloursCombos);
     expect(renderedHook.result.current.paletteData.hasError).toBeTruthy();
+  });
+
+  it("honors a parsed algorithm without colors", (): void => {
+    const { result } = renderPaletteDataHook({ algorithm: "apca" }, "/palette?algorithm=apca");
+    expect(result.current.paletteData.algorithm).toBe("apca");
+    expect(result.current.paletteData.colors).toStrictEqual([]);
+  });
+
+  it("falls back to WCAG for an invalid parsed algorithm", (): void => {
+    const { result } = renderPaletteDataHook(
+      parsePaletteSearch({ algorithm: "future" }),
+      "/palette?algorithm=future",
+    );
+    expect(result.current.paletteData.algorithm).toBe("wcag2");
+  });
+
+  it("updates the algorithm and URL without changing colors", async (): Promise<void> => {
+    const colors = ["#fff", "#000"];
+    const { history, result } = renderPaletteDataHook(
+      { colors },
+      "/palette?colors=%23fff&colors=%23000",
+    );
+    const colorCombos = result.current.paletteData.colorCombos;
+
+    act((): void => {
+      result.current.handleAlgorithmChange("apca");
+    });
+
+    expect(result.current.paletteData.algorithm).toBe("apca");
+    expect(result.current.paletteData.colors).toStrictEqual(colors);
+    expect(result.current.paletteData.colorCombos).toBe(colorCombos);
+    await waitFor((): void => {
+      const search = new URLSearchParams(history.location.search);
+      expect(search.get("algorithm")).toBe("apca");
+      expect(search.getAll("colors")).toStrictEqual(colors);
+    });
+
+    act((): void => {
+      result.current.handleAlgorithmChange("wcag2");
+    });
+
+    await waitFor((): void => {
+      expect(new URLSearchParams(history.location.search).has("algorithm")).toBe(false);
+    });
+  });
+
+  it("preserves APCA when colors update", async (): Promise<void> => {
+    const { history, result } = renderPaletteDataHook(
+      { algorithm: "apca", colors: ["#fff", "#000"] },
+      "/palette?algorithm=apca&colors=%23fff&colors=%23000",
+    );
+
+    act((): void => {
+      result.current.handleColorChange("#ccc", 0);
+    });
+
+    expect(result.current.paletteData.algorithm).toBe("apca");
+    expect(result.current.paletteData.colors).toStrictEqual(["#ccc", "#000"]);
+    await waitFor((): void => {
+      expect(new URLSearchParams(history.location.search).get("algorithm")).toBe("apca");
+    });
   });
 });
 /* eslint-enable react/display-name */
