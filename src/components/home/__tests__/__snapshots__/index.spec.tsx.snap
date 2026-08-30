@@ -619,6 +619,28 @@ exports[`Home > renders without crashing 1`] = `
             </div>
           </div>
         </div>
+        <fieldset>
+          <legend>
+            Contrast algorithm
+          </legend>
+          <label>
+            <input
+              checked=""
+              name="contrast-algorithm"
+              type="radio"
+              value="wcag2"
+            />
+            WCAG 2.x
+          </label>
+          <label>
+            <input
+              name="contrast-algorithm"
+              type="radio"
+              value="apca"
+            />
+            APCA
+          </label>
+        </fieldset>
       </div>
     </div>
   </main>
