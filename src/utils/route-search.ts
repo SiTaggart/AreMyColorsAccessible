@@ -1,8 +1,4 @@
-import type {
-  ContrastAlgorithm,
-  HomePageQueryString,
-  PalettePageQueryString,
-} from "../types";
+import type { ContrastAlgorithm, HomePageQueryString, PalettePageQueryString } from "../types";
 
 const searchString = (value: unknown): string | undefined =>
   typeof value === "string" ? value : undefined;
@@ -10,9 +6,7 @@ const searchString = (value: unknown): string | undefined =>
 export const isContrastAlgorithm = (value: unknown): value is ContrastAlgorithm =>
   value === "wcag2" || value === "apca";
 
-export const parseSiteSearch = (
-  search: Record<string, unknown>,
-): Partial<HomePageQueryString> => {
+export const parseSiteSearch = (search: Record<string, unknown>): Partial<HomePageQueryString> => {
   const algorithm = search.algorithm;
   const background = searchString(search.background);
   const textColor = searchString(search.textColor);
