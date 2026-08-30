@@ -732,7 +732,7 @@ exports[`ColorMatrix > renders without crashing 1`] = `
               >
                 <span
                   class="emotion-81"
-                  title="Color contrast ratio"
+                  title="Contrast Ratio"
                 >
                   1.61 : 1
                 </span>
@@ -777,7 +777,7 @@ exports[`ColorMatrix > renders without crashing 1`] = `
               >
                 <span
                   class="emotion-81"
-                  title="Color contrast ratio"
+                  title="Contrast Ratio"
                 >
                   4.48 : 1
                 </span>
@@ -822,7 +822,7 @@ exports[`ColorMatrix > renders without crashing 1`] = `
               >
                 <span
                   class="emotion-81"
-                  title="Color contrast ratio"
+                  title="Contrast Ratio"
                 >
                   21 : 1
                 </span>
@@ -879,7 +879,7 @@ exports[`ColorMatrix > renders without crashing 1`] = `
               >
                 <span
                   class="emotion-81"
-                  title="Color contrast ratio"
+                  title="Contrast Ratio"
                 >
                   1.61 : 1
                 </span>
@@ -929,7 +929,7 @@ exports[`ColorMatrix > renders without crashing 1`] = `
               >
                 <span
                   class="emotion-81"
-                  title="Color contrast ratio"
+                  title="Contrast Ratio"
                 >
                   2.79 : 1
                 </span>
@@ -974,7 +974,7 @@ exports[`ColorMatrix > renders without crashing 1`] = `
               >
                 <span
                   class="emotion-81"
-                  title="Color contrast ratio"
+                  title="Contrast Ratio"
                 >
                   13.08 : 1
                 </span>
@@ -1031,7 +1031,7 @@ exports[`ColorMatrix > renders without crashing 1`] = `
               >
                 <span
                   class="emotion-81"
-                  title="Color contrast ratio"
+                  title="Contrast Ratio"
                 >
                   4.48 : 1
                 </span>
@@ -1076,7 +1076,7 @@ exports[`ColorMatrix > renders without crashing 1`] = `
               >
                 <span
                   class="emotion-81"
-                  title="Color contrast ratio"
+                  title="Contrast Ratio"
                 >
                   2.79 : 1
                 </span>
@@ -1126,7 +1126,7 @@ exports[`ColorMatrix > renders without crashing 1`] = `
               >
                 <span
                   class="emotion-81"
-                  title="Color contrast ratio"
+                  title="Contrast Ratio"
                 >
                   4.69 : 1
                 </span>
@@ -1183,7 +1183,7 @@ exports[`ColorMatrix > renders without crashing 1`] = `
               >
                 <span
                   class="emotion-81"
-                  title="Color contrast ratio"
+                  title="Contrast Ratio"
                 >
                   21 : 1
                 </span>
@@ -1228,7 +1228,7 @@ exports[`ColorMatrix > renders without crashing 1`] = `
               >
                 <span
                   class="emotion-81"
-                  title="Color contrast ratio"
+                  title="Contrast Ratio"
                 >
                   13.08 : 1
                 </span>
@@ -1273,7 +1273,7 @@ exports[`ColorMatrix > renders without crashing 1`] = `
               >
                 <span
                   class="emotion-81"
-                  title="Color contrast ratio"
+                  title="Contrast Ratio"
                 >
                   4.69 : 1
                 </span>
