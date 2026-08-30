@@ -1,3 +1,4 @@
+import { fireEvent } from "@testing-library/react";
 import { PaletteDataProvider } from "../../../context/palette";
 import { renderWithRouter } from "../../../test/render-with-router";
 import { PalettePage } from "..";
@@ -20,7 +21,10 @@ describe("Palette Page", (): void => {
     );
 
     const apca = getByRole("radio", { name: "APCA" });
-    apca.click();
-    expect(apca).toBeChecked();
+    fireEvent.click(apca);
+    expect(apca).toBeInstanceOf(HTMLInputElement);
+    if (apca instanceof HTMLInputElement) {
+      expect(apca.checked).toBe(true);
+    }
   });
 });
