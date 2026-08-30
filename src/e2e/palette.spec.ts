@@ -1,7 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
 
-const search = (page: Page): string => new URL(page.url()).search;
-
 const open = async (page: Page, path = "/palette"): Promise<void> => {
   await page.goto(path);
   await page.waitForLoadState("networkidle");
@@ -26,7 +24,9 @@ test.describe("Palette", () => {
 
     await expect(page.locator('thead [data-testid="colorMatrix-th"]')).toHaveCount(3);
     await expect(page.locator('tbody [data-testid="colorMatrix-tr"]')).toHaveCount(3);
-    await expect.poll(() => search(page)).toBe("?colors=%23ccc&colors=%23fff&colors=%23000");
+    await expect
+      .poll(() => new URL(page.url()).searchParams.get("colors"))
+      .toBe(JSON.stringify(["#ccc", "#fff", "#000"]));
   });
 
   test("shows an error for an invalid color", async ({ page }) => {
@@ -51,7 +51,9 @@ test.describe("Palette", () => {
         'tbody [data-testid="colorMatrix-tr"]:nth-child(1) > [data-testid="colorMatrix-th"]',
       ),
     ).toContainText("#A52A2A");
-    await expect.poll(() => search(page)).toBe("?colors=brown&colors=blue&colors=pink&colors=red");
+    await expect
+      .poll(() => new URL(page.url()).searchParams.get("colors"))
+      .toBe(JSON.stringify(["brown", "blue", "pink", "red"]));
   });
 
   test("updates matrix results when the hue slider changes", async ({ page }) => {
@@ -66,8 +68,8 @@ test.describe("Palette", () => {
       ),
     ).toContainText("#FF6A00");
     await expect
-      .poll(() => search(page))
-      .toBe("?colors=orange&colors=%23FF6A00&colors=pink&colors=red");
+      .poll(() => new URL(page.url()).searchParams.get("colors"))
+      .toBe(JSON.stringify(["orange", "#FF6A00", "pink", "red"]));
   });
 
   test("switches populated cards to APCA and updates the URL", async ({ page }) => {
