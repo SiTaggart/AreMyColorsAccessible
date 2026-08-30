@@ -22,9 +22,6 @@ describe("Palette Page", (): void => {
 
     const apca = getByRole("radio", { name: "APCA" });
     fireEvent.click(apca);
-    expect(apca).toBeInstanceOf(HTMLInputElement);
-    if (apca instanceof HTMLInputElement) {
-      expect(apca.checked).toBe(true);
-    }
+    expect(getByRole("radio", { checked: true, name: "APCA" })).toBe(apca);
   });
 });
