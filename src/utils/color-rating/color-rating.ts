@@ -5,18 +5,21 @@ export interface Accessibility {
   aaLarge: boolean;
 }
 
+export type OverallRating = "Yup" | "Kinda" | "Nope";
+export type WcagRating = "AAA" | "AA" | "Fail";
+
 export interface ColorRating {
-  bold: string;
-  large: string;
-  overall: string;
-  small: string;
+  bold: WcagRating;
+  large: WcagRating;
+  overall: OverallRating;
+  small: WcagRating;
 }
 
 const colorRating = (accessibility: Accessibility): ColorRating => {
-  let small: string;
-  let bold: string;
-  let large: string;
-  let overall = "Nope";
+  let small: WcagRating;
+  let bold: WcagRating;
+  let large: WcagRating;
+  let overall: OverallRating = "Nope";
 
   if (accessibility.aaa) {
     small = "AAA";

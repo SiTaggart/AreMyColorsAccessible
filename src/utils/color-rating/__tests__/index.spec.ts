@@ -1,3 +1,4 @@
+import { apcaRating } from "../apca-rating";
 import { colorRating } from "../color-rating";
 
 describe("utils/colorRating", (): void => {
@@ -59,5 +60,55 @@ describe("utils/colorRating", (): void => {
       overall: "Nope",
       small: "Fail",
     });
+  });
+});
+
+describe("utils/apcaRating", (): void => {
+  it.each([
+    {
+      contentText: true,
+      expected: "Yup",
+      largeText: true,
+    },
+    {
+      contentText: false,
+      expected: "Kinda",
+      largeText: true,
+    },
+    {
+      contentText: false,
+      expected: "Nope",
+      largeText: false,
+    },
+  ] as const)(
+    "returns $expected from the readability results",
+    ({ contentText, expected, largeText }): void => {
+      expect(
+        apcaRating({
+          lc: 60,
+          readability: {
+            contentText: { meets: contentText, thresholdLc: 60 },
+            largeText: { meets: largeText, thresholdLc: 45 },
+          },
+        }).overall,
+      ).toBe(expected);
+    },
+  );
+
+  it.each([
+    { expected: true, lc: 14.99 },
+    { expected: true, lc: -14.99 },
+    { expected: false, lc: 15 },
+    { expected: false, lc: -15 },
+  ])("sets showSeriously to $expected for Lc $lc", ({ expected, lc }): void => {
+    expect(
+      apcaRating({
+        lc,
+        readability: {
+          contentText: { meets: false, thresholdLc: 60 },
+          largeText: { meets: false, thresholdLc: 45 },
+        },
+      }).showSeriously,
+    ).toBe(expected);
   });
 });
