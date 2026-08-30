@@ -70,9 +70,7 @@ const About: React.FC = (): ReactElement => (
         only Large does (45+). <strong>Nope</strong> is below that. <strong>Seriously?</strong> is
         just a dig when contrast is awful.
       </P>
-      <P>
-        APCA row targets: Fluent 90, Body 75, Content 60, Large 45, Minimum 30, Non-Text 15.
-      </P>
+      <P>APCA row targets: Fluent 90, Body 75, Content 60, Large 45, Minimum 30, Non-Text 15.</P>
       <P>
         Building upon and heavily influenced by the excellent{" "}
         <Link href="http://jxnblk.com/colorable/">Colorable</Link>, I wanted more context around the
