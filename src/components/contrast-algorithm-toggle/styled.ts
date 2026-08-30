@@ -13,7 +13,7 @@ export const StyledFieldset = styled.fieldset<{ align: "start" | "center" }>`
 export const StyledLegend = styled.legend`
   display: block;
   font-size: 1.2rem;
-  margin: 0 0 0.15rem;
+  margin: 0 0 10px;
   padding: 0;
   width: 100%;
 `;
