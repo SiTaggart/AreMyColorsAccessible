@@ -67,8 +67,7 @@ const About: React.FC = (): ReactElement => (
       </P>
       <P>
         For APCA, <strong>Yup</strong> means Content passes (Lc 60+). <strong>Kinda</strong> means
-        only Large does (45+). <strong>Nope</strong> is below that. <strong>Seriously?</strong> is
-        just a dig when contrast is awful.
+        only Large does (45+). <strong>Nope</strong> is below that.
       </P>
       <P>APCA row targets: Fluent 90, Body 75, Content 60, Large 45, Minimum 30, Non-Text 15.</P>
       <P>

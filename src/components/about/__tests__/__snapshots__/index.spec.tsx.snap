@@ -163,11 +163,7 @@ exports[`About > renders without crashing 1`] = `
         <strong>
           Nope
         </strong>
-         is below that. 
-        <strong>
-          Seriously?
-        </strong>
-         is just a dig when contrast is awful.
+         is below that.
       </p>
       <p
         class="emotion-3"
