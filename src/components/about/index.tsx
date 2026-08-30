@@ -56,12 +56,20 @@ const About: React.FC = (): ReactElement => (
         </P>
       </Blockquote>
       <P>
-        For text-based information to be perceivable by all users regardless of level of sight and
-        to safely meet WCAG 2.0, AA requirements, you should aim for a minimum contrast ratio of
-        4.5:1 for all text content. There are 2 exceptions to this; large text that is 18pt or 24px
-        and above or <strong>bold</strong> text that is 14pt or 18px and above, where the minimum
-        contrast ratio can be 3.0:1
+        Aim for 4.5:1 to meet WCAG AA. Large text (18pt / 24px+) or <strong>bold</strong> text (14pt
+        / 18px+) can pass at 3:1. AAA wants 7:1 for normal text and 4.5:1 for large or bold. Small,
+        Bold and Large show how you do at both.
       </P>
+      <Heading as="h2">Two algorithms</Heading>
+      <P>
+        This site uses WCAG 2 and APCA. Flip between them on the home page or the palette. WCAG
+        gives a contrast ratio with AA/AAA. APCA gives an Lc score instead.
+      </P>
+      <P>
+        For APCA, <strong>Yup</strong> means Body passes (Lc 75+). <strong>Kinda</strong> means
+        Content or Large still pass (60+ / 45+). <strong>Nope</strong> is below that.
+      </P>
+      <P>APCA row targets: Fluent 90, Body 75, Content 60, Large 45, Minimum 30, Non-Text 15.</P>
       <P>
         Building upon and heavily influenced by the excellent{" "}
         <Link href="http://jxnblk.com/colorable/">Colorable</Link>, I wanted more context around the
@@ -73,7 +81,7 @@ const About: React.FC = (): ReactElement => (
       <P>
         Built by <Link href="http://www.simontaggart.com">Simon Taggart</Link>,{" "}
         <Link href="https://github.com/SiTaggart/AreMyColorsAccessible">code on GitHub</Link>,{" "}
-        <Link href="https://netlify.com">hosted on Netlify</Link>.
+        <Link href="https://www.cloudflare.com">hosted on Cloudflare</Link>.
       </P>
     </Layout>
   </Container>

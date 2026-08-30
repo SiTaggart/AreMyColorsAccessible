@@ -1,10 +1,12 @@
-import { render } from "@testing-library/react";
 import { SiteDataProvider } from "../../../context/home";
+import { renderWithRouter } from "../../../test/render-with-router";
+import { vi } from "vitest";
+import * as contrastResults from "../../../utils/contrast-results";
 import { Results } from "..";
 
 describe("Results", (): void => {
   it("renders without crashing", (): void => {
-    const { asFragment } = render(
+    const { asFragment } = renderWithRouter(
       <SiteDataProvider>
         <Results />
       </SiteDataProvider>,
@@ -13,9 +15,10 @@ describe("Results", (): void => {
   });
 
   it("should render a triple a result correctly", (): void => {
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
+          algorithm: "wcag2",
           background: "#000",
           colorCombos: [],
           isLight: true,
@@ -32,9 +35,10 @@ describe("Results", (): void => {
   });
 
   it("should render a large text triple a result correctly", (): void => {
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
+          algorithm: "wcag2",
           background: "#666",
           colorCombos: [],
           isLight: true,
@@ -51,9 +55,10 @@ describe("Results", (): void => {
   });
 
   it("should render a large text double a result correctly", (): void => {
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
+          algorithm: "wcag2",
           background: "#000",
           colorCombos: [],
           isLight: true,
@@ -70,9 +75,10 @@ describe("Results", (): void => {
   });
 
   it("should render a nope a result correctly", (): void => {
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
+          algorithm: "wcag2",
           background: "#000",
           colorCombos: [],
           isLight: true,
@@ -89,9 +95,10 @@ describe("Results", (): void => {
   });
 
   it("should render a seriously? a result correctly", (): void => {
-    const { getByTestId } = render(
+    const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
+          algorithm: "wcag2",
           background: "#000",
           colorCombos: [],
           isLight: true,
@@ -106,9 +113,10 @@ describe("Results", (): void => {
   });
 
   it("should set the font color of seriously? to #343334 on light backgrounds", (): void => {
-    const { asFragment } = render(
+    const { asFragment } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
+          algorithm: "wcag2",
           background: "#000",
           colorCombos: [],
           isLight: true,
@@ -119,5 +127,109 @@ describe("Results", (): void => {
       </SiteDataProvider>,
     );
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  it("renders APCA results without WCAG requirements", (): void => {
+    const { getByText, queryByText } = renderWithRouter(
+      <SiteDataProvider
+        initialSiteData={{
+          algorithm: "apca",
+          background: "#000",
+          colorCombos: [],
+          isLight: true,
+          textColor: "#fff",
+        }}
+      >
+        <Results />
+      </SiteDataProvider>,
+    );
+
+    expect(getByText("APCA Lc")).not.toBeNull();
+    expect(queryByText("AA: 4.5 AAA: 7.0")).toBeNull();
+  });
+
+  it("renders an APCA Yup with readability rows", (): void => {
+    const { getByTestId, getByText } = renderWithRouter(
+      <SiteDataProvider
+        initialSiteData={{
+          algorithm: "apca",
+          background: "#000",
+          colorCombos: [],
+          isLight: true,
+          textColor: "#fff",
+        }}
+      >
+        <Results />
+      </SiteDataProvider>,
+    );
+
+    expect(getByTestId("contrastResults-heading").textContent).toBe("Yup");
+    expect(getByText(/Body Text/)).not.toBeNull();
+    expect(getByText(/Content Text/)).not.toBeNull();
+    expect(getByText(/Large Text/)).not.toBeNull();
+  });
+
+  it("renders an APCA Kinda when Content passes but Body fails", (): void => {
+    const { getByTestId } = renderWithRouter(
+      <SiteDataProvider
+        initialSiteData={{
+          algorithm: "apca",
+          background: "#888888",
+          colorCombos: [],
+          isLight: true,
+          textColor: "#ffffff",
+        }}
+      >
+        <Results />
+      </SiteDataProvider>,
+    );
+
+    expect(getByTestId("contrastResults-heading").textContent).toBe("Kinda");
+  });
+
+  it("renders Seriously? for very low APCA contrast", (): void => {
+    const { getByTestId } = renderWithRouter(
+      <SiteDataProvider
+        initialSiteData={{
+          algorithm: "apca",
+          background: "#fff",
+          colorCombos: [],
+          isLight: true,
+          textColor: "#fff",
+        }}
+      >
+        <Results />
+      </SiteDataProvider>,
+    );
+
+    expect(getByTestId("contrastResults-heading").textContent).toBe("Nope");
+    expect(getByTestId("contrastResults-seriously")).not.toBeNull();
+  });
+
+  it("renders Unavailable when APCA data is missing", (): void => {
+    const spy = vi.spyOn(contrastResults, "getContrastDisplayResult").mockReturnValue({
+      heading: "Unavailable",
+      metricLabel: "APCA Lc",
+      metricValue: "Unavailable",
+      rows: [],
+      showSeriously: false,
+    });
+
+    const { getByTestId } = renderWithRouter(
+      <SiteDataProvider
+        initialSiteData={{
+          algorithm: "apca",
+          background: "#000",
+          colorCombos: [],
+          isLight: true,
+          textColor: "#fff",
+        }}
+      >
+        <Results />
+      </SiteDataProvider>,
+    );
+
+    expect(getByTestId("contrastResults-heading").textContent).toBe("Unavailable");
+    spy.mockRestore();
   });
 });

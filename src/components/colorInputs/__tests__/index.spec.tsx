@@ -6,6 +6,7 @@ import * as HomeContext from "../../../context/home";
 describe("ColorInputs", (): void => {
   let colorCombos: Array<ColorCombo> | false;
   let mockContext: HomeContext.HomeContextInterface;
+  let handleAlgorithmChange: HomeContext.HomeContextInterface["handleAlgorithmChange"];
   let handleBackgroundColorInputChange: (value: string) => void;
   let handleTextColorInputChange: (value: string) => void;
 
@@ -14,6 +15,7 @@ describe("ColorInputs", (): void => {
   );
 
   beforeAll((): void => {
+    handleAlgorithmChange = vi.fn();
     handleBackgroundColorInputChange = vi.fn<(value: string) => void>();
     handleTextColorInputChange = vi.fn<(value: string) => void>();
   });
@@ -23,9 +25,11 @@ describe("ColorInputs", (): void => {
     colorCombos = ColorCombos(["#fff", "#000"]);
     if (colorCombos !== false) {
       mockContext = {
+        handleAlgorithmChange,
         handleBackgroundColorInputChange,
         handleTextColorInputChange,
         siteData: {
+          algorithm: "wcag2",
           background: "#000",
           colorCombos,
           isLight: false,
@@ -50,6 +54,12 @@ describe("ColorInputs", (): void => {
     const { getByTestId } = render(<ColorInputs />);
     fireEvent.change(getByTestId("background"), { target: { value: "#ccc" } });
     expect(handleBackgroundColorInputChange).toHaveBeenCalledWith("#ccc");
+  });
+
+  it("should call the handleAlgorithmChange callback on algorithm change", (): void => {
+    const { getByRole } = render(<ColorInputs />);
+    fireEvent.click(getByRole("radio", { name: "APCA" }));
+    expect(handleAlgorithmChange).toHaveBeenCalledWith("apca");
   });
 
   it("should call the handleTextColorInputChange callback on text color slider change", (): void => {

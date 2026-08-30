@@ -1,18 +1,18 @@
 import * as React from "react";
+import { useNavigate } from "@tanstack/react-router";
 import Color from "color";
-import qs from "query-string";
-import isEmpty from "lodash/isEmpty";
-import debounce from "lodash/debounce";
 import ColorCombos, { ColorCombo } from "color-combos";
-import { PalettePageQueryString } from "../../types";
+import { ContrastAlgorithm, PalettePageQueryString } from "../../types";
 
 export interface PaletteContextProps {
+  handleAlgorithmChange: (algorithm: ContrastAlgorithm) => void;
   handleColorChange: (value: string, index: number) => void;
   handleNewColor: (colors: string) => void;
   paletteData: PaletteState;
   setPaletteData: React.Dispatch<React.SetStateAction<PaletteState>>;
 }
-interface PaletteState {
+export interface PaletteState {
+  algorithm: ContrastAlgorithm;
   colorCombos: Array<ColorCombo>;
   colors: Array<string>;
   hasError: boolean;
@@ -59,33 +59,37 @@ const isValidColor = (hex: string): Color | false => {
   return color;
 };
 
-const getColorCombos = (colors: Array<string>): Array<ColorCombo> | false => ColorCombos(colors);
+const getColorCombos = (colors: Array<string>): Array<ColorCombo> | false =>
+  ColorCombos(colors, { uniq: false });
 
 const getInitialState = (
   querystring: Partial<PalettePageQueryString> | undefined,
 ): PaletteState => {
+  const algorithm = querystring?.algorithm ?? "wcag2";
   let colors: Array<string> = [];
   let colorCombos: Array<ColorCombo> = [];
+  const queryColors = querystring?.colors;
 
-  if (querystring !== undefined && !isEmpty(querystring) && Array.isArray(querystring.colors)) {
-    const initialColorCombos = getColorCombos(querystring.colors);
+  if (Array.isArray(queryColors)) {
+    const initialColorCombos = getColorCombos(queryColors);
     if (initialColorCombos) {
-      colors = querystring.colors;
+      colors = queryColors;
       colorCombos = initialColorCombos;
     }
   }
 
   return {
+    algorithm,
     colorCombos,
     colors,
     hasError: false,
   };
 };
 
-const updateHash = debounce((state): void => {
-  const query = `?${qs.stringify({ colors: state.colors })}`;
-  window.history.pushState(state, "Palette checker - Are My Colours Accessible", query);
-}, 200);
+const getPaletteSearch = (state: PaletteState): PalettePageQueryString => ({
+  ...(state.algorithm === "apca" ? { algorithm: state.algorithm } : {}),
+  colors: state.colors,
+});
 
 // eslint-disable-next-line unicorn/no-useless-undefined
 const PaletteContext = React.createContext<PaletteContextProps | undefined>(undefined);
@@ -103,30 +107,26 @@ const PaletteDataProvider: React.FC<PaletteDataProviderProps> = ({
   queryString,
 }: PaletteDataProviderProps): React.ReactElement => {
   const [paletteData, setPaletteData] = React.useState<PaletteState>(getInitialState(queryString));
+  const navigate = useNavigate({ from: "/palette" });
 
-  const isInitial = React.useRef<boolean>(false);
-
-  const [state] = React.useMemo(
-    (): [PaletteState, React.Dispatch<PaletteState>] => [paletteData, setPaletteData],
-    [paletteData],
+  const updateSearch = React.useCallback(
+    (nextState: PaletteState): void => {
+      void navigate({
+        replace: true,
+        search: getPaletteSearch(nextState),
+      });
+    },
+    [navigate],
   );
-
-  React.useEffect((): void => {
-    if (isInitial.current) {
-      updateHash(state);
-    } else {
-      isInitial.current = true;
-    }
-  }, [state]);
 
   const mergeColorsWithState = React.useCallback(
     (colors: Array<string>): Array<string> => {
       const filteredColors: Array<string> = colors.filter(
-        (color): boolean => !(state.colors as Array<string>).includes(color),
+        (color): boolean => !paletteData.colors.includes(color),
       );
-      return [...state.colors, ...filteredColors];
+      return [...paletteData.colors, ...filteredColors];
     },
-    [state.colors],
+    [paletteData.colors],
   );
 
   const updateColors = React.useCallback(
@@ -134,26 +134,29 @@ const PaletteDataProvider: React.FC<PaletteDataProviderProps> = ({
       let newColorCombos: Array<ColorCombo>;
       if (valid) {
         const combos = getColorCombos(colors);
-        newColorCombos = combos === false ? state.colorCombos : combos;
+        newColorCombos = combos === false ? paletteData.colorCombos : combos;
       } else {
-        newColorCombos = state.colorCombos;
+        newColorCombos = paletteData.colorCombos;
       }
-      setPaletteData({
+      const nextState = {
+        ...paletteData,
         colorCombos: newColorCombos,
         colors,
         hasError: false,
-      });
+      };
+      setPaletteData(nextState);
+      updateSearch(nextState);
     },
-    [state.colorCombos],
+    [paletteData, updateSearch],
   );
 
   const handleColorChange = React.useCallback(
     (value: string, index: number): void => {
-      const newColors: Array<string> = [...state.colors];
+      const newColors: Array<string> = [...paletteData.colors];
       newColors[index] = value;
       updateColors(newColors, !!isValidColor(value));
     },
-    [state.colors, updateColors],
+    [paletteData.colors, updateColors],
   );
 
   const handleNewColor = React.useCallback(
@@ -163,22 +166,35 @@ const PaletteDataProvider: React.FC<PaletteDataProviderProps> = ({
       const mergedColors: Array<string> = mergeColorsWithState(colorsArray);
 
       if (convertedColors === false) {
-        setPaletteData({ ...state, hasError: true });
+        setPaletteData({ ...paletteData, hasError: true });
       } else {
         updateColors(mergedColors, true);
       }
     },
-    [mergeColorsWithState, state, updateColors],
+    [mergeColorsWithState, paletteData, updateColors],
+  );
+
+  const handleAlgorithmChange = React.useCallback(
+    (algorithm: ContrastAlgorithm): void => {
+      const nextState = {
+        ...paletteData,
+        algorithm,
+      };
+      setPaletteData(nextState);
+      updateSearch(nextState);
+    },
+    [paletteData, updateSearch],
   );
 
   const providerValue = React.useMemo(
     () => ({
+      handleAlgorithmChange,
       handleColorChange,
       handleNewColor,
-      paletteData: state,
+      paletteData,
       setPaletteData,
     }),
-    [handleColorChange, handleNewColor, state],
+    [handleAlgorithmChange, handleColorChange, handleNewColor, paletteData],
   );
 
   return <PaletteContext.Provider value={providerValue}>{children}</PaletteContext.Provider>;

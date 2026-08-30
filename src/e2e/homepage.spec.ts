@@ -16,6 +16,8 @@ test.describe("Homepage", () => {
   test("renders the overall rating heading", async ({ page }) => {
     await open(page);
     await expect(page.getByTestId("contrastResults-heading")).toContainText("Yup");
+    await expect(page.getByText("Contrast Ratio")).toBeVisible();
+    await expect(page.getByRole("radio", { name: "WCAG 2.x" })).toBeChecked();
   });
 
   test("renders the default background color", async ({ page }) => {
@@ -32,9 +34,7 @@ test.describe("Homepage", () => {
     await expect(page.getByTestId("contrastResults-heading")).toContainText("Nope");
     await expect
       .poll(() => search(page))
-      .toBe(
-        "?background=%231276CE&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=false&textColor=%23ccc",
-      );
+      .toBe("?background=%231276CE&isLight=false&textColor=%23ccc");
   });
 
   test("updates body color and rating from the background input", async ({ page }) => {
@@ -46,9 +46,7 @@ test.describe("Homepage", () => {
     await expect(page.getByTestId("contrastResults-heading")).toContainText("Nope");
     await expect
       .poll(() => search(page))
-      .toBe(
-        "?background=%23ccc&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=true&textColor=%23FFFFFF",
-      );
+      .toBe("?background=%23ccc&isLight=true&textColor=%23FFFFFF");
   });
 
   test("updates from the text colour lightness slider", async ({ page }) => {
@@ -70,10 +68,7 @@ test.describe("Homepage", () => {
   });
 
   test("renders from query string parameters", async ({ page }) => {
-    await open(
-      page,
-      "/?background=%23B9DDF8&colorCombos=%5Bobject%20Object%5D&colorCombos=%5Bobject%20Object%5D&isLight=true&textColor=%23B25334",
-    );
+    await open(page, "/?background=%23B9DDF8&isLight=true&textColor=%23B25334");
 
     await expect(page.locator("body")).toHaveCSS("background-color", "rgb(185, 221, 248)");
     await expect(page.locator("body")).toHaveCSS("color", "rgb(178, 83, 52)");
@@ -98,6 +93,39 @@ test.describe("Homepage", () => {
     await expect(page.locator("body")).toHaveCSS("background-color", "rgb(0, 0, 0)");
     await expect(page.locator("body")).toHaveCSS("color", "rgb(255, 255, 255)");
     await expect(page.getByTestId("contrastResults-heading")).toContainText("Yup");
+  });
+
+  test("switches to APCA without serializing runtime color combinations", async ({ page }) => {
+    await open(page);
+
+    await page.getByRole("radio", { name: "APCA" }).check();
+
+    await expect(page.getByText("APCA Lc")).toBeVisible();
+    await expect.poll(() => new URL(page.url()).searchParams.get("algorithm")).toBe("apca");
+    await expect.poll(() => page.url()).not.toContain("colorCombos=");
+  });
+
+  test("starts in APCA from a color deep link", async ({ page }) => {
+    await open(page, "/?algorithm=apca&textColor=%23fff&background=%23000");
+
+    await expect(page.getByRole("radio", { name: "APCA" })).toBeChecked();
+    await expect(page.getByText("APCA Lc")).toBeVisible();
+  });
+
+  test("keeps an algorithm-only APCA deep link", async ({ page }) => {
+    await open(page, "/?algorithm=apca");
+
+    await expect(page.getByRole("radio", { name: "APCA" })).toBeChecked();
+    await expect(page.getByText("APCA Lc")).toBeVisible();
+    await expect.poll(() => new URL(page.url()).searchParams.get("algorithm")).toBe("apca");
+  });
+
+  test("renders equal colors safely in APCA", async ({ page }) => {
+    await open(page, "/?algorithm=apca&textColor=%23777&background=%23777");
+
+    await expect(page.getByTestId("contrastResults-heading")).toContainText("Nope");
+    await expect(page.getByText("APCA Lc")).toBeVisible();
+    await expect(page.getByTestId("contrastResults-seriously")).toHaveText("Seriously?");
   });
 
   test("navigates through footer links", async ({ page }) => {

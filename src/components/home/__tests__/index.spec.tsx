@@ -1,10 +1,10 @@
-import { render } from "@testing-library/react";
 import { Home } from "..";
 import { SiteDataProvider } from "../../../context/home";
+import { renderWithRouter } from "../../../test/render-with-router";
 
 describe("Home", (): void => {
   it("renders without crashing", (): void => {
-    const { asFragment } = render(
+    const { asFragment } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
           background: "#000",

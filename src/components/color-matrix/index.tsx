@@ -5,8 +5,11 @@ import { ColorCombo } from "color-combos";
 import { ColorCard } from "../color-card";
 import { FormInput } from "../form-input";
 import { HslSliders } from "../hsl-sliders";
+import type { ContrastAlgorithm } from "../../types";
+import { getContrastDisplayResult } from "../../utils/contrast-results";
 
 export interface ColorMatrixProps {
+  algorithm: ContrastAlgorithm;
   colorCombos: Array<ColorCombo>;
   colors: Array<string>;
   onColorChange: (newColor: string, index: number) => void;
@@ -35,6 +38,7 @@ const StyledColorMatrixTd = styled.td`
 `;
 
 const ColorMatrix: React.FC<ColorMatrixProps> = ({
+  algorithm,
   colorCombos,
   colors,
   onColorChange,
@@ -80,8 +84,9 @@ const ColorMatrix: React.FC<ColorMatrixProps> = ({
               <StyledColorMatrixTh data-testid="colorMatrix-th" scope="row">
                 {color.hex}
               </StyledColorMatrixTh>
-              {color.combinations.map(
-                (combo, comboIndex): ReactElement => (
+              {color.combinations.map((combo, comboIndex): ReactElement => {
+                const result = getContrastDisplayResult(combo, algorithm, "compact");
+                return (
                   <React.Fragment key={comboIndex}>
                     {index === comboIndex && <StyledColorMatrixTd>&nbsp;</StyledColorMatrixTd>}
                     <StyledColorMatrixTd
@@ -90,14 +95,16 @@ const ColorMatrix: React.FC<ColorMatrixProps> = ({
                       }}
                     >
                       <ColorCard
-                        accessibility={combo.accessibility!}
                         color={color.hex}
-                        contrast={combo.contrast!}
+                        heading={result.heading}
+                        metricLabel={result.metricLabel}
+                        metricValue={result.metricValue}
+                        rows={result.rows}
                       />
                     </StyledColorMatrixTd>
                   </React.Fragment>
-                ),
-              )}
+                );
+              })}
             </StyledColorMatrixTr>
           ),
         )}

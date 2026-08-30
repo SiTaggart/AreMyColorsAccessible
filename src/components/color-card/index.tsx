@@ -1,12 +1,12 @@
 import React, { ReactElement } from "react";
 import styled, { CSSObject } from "@emotion/styled";
-import { Levels } from "../../types";
-import { colorRating } from "../../utils/color-rating";
+import type { ContrastDisplayResult } from "../../utils/contrast-results";
 
-export interface ColorCardProps {
-  accessibility: Levels;
+export interface ColorCardProps extends Pick<
+  ContrastDisplayResult,
+  "heading" | "metricLabel" | "metricValue" | "rows"
+> {
   color: string;
-  contrast: number;
   isNotImportant?: boolean;
 }
 
@@ -66,32 +66,29 @@ const StyledColorCardPill = styled.span<StyledColorCardPillProps>`
 `;
 
 const ColorCard: React.FC<ColorCardProps> = ({
-  accessibility,
   color,
-  contrast,
+  heading,
   isNotImportant,
+  metricLabel,
+  metricValue,
+  rows,
 }: ColorCardProps): ReactElement<HTMLDivElement> => {
-  const rating = colorRating(accessibility);
-
   return (
     <StyledColorCard data-testid="colorCard" isNotImportant={isNotImportant}>
       <StyledCardRow>
-        <StyledColorCardPill title="Color contrast ratio">
-          {Number.parseFloat(contrast.toFixed(2))} : 1
-        </StyledColorCardPill>
+        <StyledColorCardPill title={metricLabel}>{metricValue}</StyledColorCardPill>
       </StyledCardRow>
       <StyledCardRow>
         <StyledColorSwatch color={color} data-testid="colorCard-swatch">
-          {rating.overall}
+          {heading}
         </StyledColorSwatch>
       </StyledCardRow>
       <StyledCardRow>
-        <StyledColorCardPill status={rating.small === "Fail" ? "error" : "success"}>
-          Small: {rating.small}
-        </StyledColorCardPill>
-        <StyledColorCardPill status={rating.large === "Fail" ? "error" : "success"}>
-          Large: {rating.large}
-        </StyledColorCardPill>
+        {rows.map((row) => (
+          <StyledColorCardPill key={row.label} status={row.meets ? "success" : "error"}>
+            {row.label}: {row.value}
+          </StyledColorCardPill>
+        ))}
       </StyledCardRow>
     </StyledColorCard>
   );

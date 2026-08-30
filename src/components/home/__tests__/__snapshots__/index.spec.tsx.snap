@@ -315,6 +315,81 @@ exports[`Home > renders without crashing 1`] = `
   background: currentColor;
 }
 
+.emotion-56 {
+  border: 0;
+  color: inherit;
+  margin: 0;
+  min-width: 0;
+  padding: 0 1rem 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.emotion-57 {
+  display: block;
+  float: left;
+  font-size: 1.2rem;
+  line-height: 1;
+  margin: 0 0 10px;
+  padding: 0;
+  width: 100%;
+}
+
+.emotion-58 {
+  clear: both;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-59 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding-bottom: 0.35em;
+  position: relative;
+  -webkit-transition: font-weight 150ms ease-out,text-decoration-color 150ms ease-out;
+  transition: font-weight 150ms ease-out,text-decoration-color 150ms ease-out;
+}
+
+.emotion-59:has(input:checked) {
+  font-weight: 700;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+.emotion-59:has(input:focus-visible) {
+  outline: currentColor dashed 2px;
+  outline-offset: 3px;
+}
+
+.emotion-60 {
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 <main
     class="emotion-0"
   >
@@ -619,6 +694,42 @@ exports[`Home > renders without crashing 1`] = `
             </div>
           </div>
         </div>
+        <fieldset
+          class="emotion-56"
+        >
+          <legend
+            class="emotion-57"
+          >
+            Algorithm
+          </legend>
+          <div
+            class="emotion-58"
+          >
+            <label
+              class="emotion-59"
+            >
+              <input
+                checked=""
+                class="emotion-60"
+                name="contrast-algorithm"
+                type="radio"
+                value="wcag2"
+              />
+              WCAG 2.x
+            </label>
+            <label
+              class="emotion-59"
+            >
+              <input
+                class="emotion-60"
+                name="contrast-algorithm"
+                type="radio"
+                value="apca"
+              />
+              APCA
+            </label>
+          </div>
+        </fieldset>
       </div>
     </div>
   </main>

@@ -1,13 +1,12 @@
 import * as React from "react";
+import { useNavigate } from "@tanstack/react-router";
 import Color from "color";
-import isEmpty from "lodash/isEmpty";
-import debounce from "lodash/debounce";
-import qs from "query-string";
-import ColorCombos, { ColorCombo, Combination } from "color-combos";
-import { SiteData } from "../../types";
+import ColorCombos, { ColorCombo } from "color-combos";
+import { ContrastAlgorithm, HomePageQueryString, SiteData } from "../../types";
 
 export interface HomeContextInterface {
   handleBackgroundColorInputChange: (value: string) => void;
+  handleAlgorithmChange: (algorithm: ContrastAlgorithm) => void;
   handleTextColorInputChange: (value: string) => void;
   siteData: SiteData;
 }
@@ -37,13 +36,18 @@ const isValidColor = (value: string): Color | false => {
   return color;
 };
 
+const getColorCombos = (colors: Array<string>): Array<ColorCombo> => {
+  const combos = ColorCombos(colors, { uniq: false });
+  return combos === false ? [] : combos;
+};
+
 const setInitialContext = (initialSiteData: Partial<SiteData> | undefined): SiteData => {
+  const algorithm = initialSiteData?.algorithm ?? "wcag2";
   let textColor = "#FFFFFF";
   let background = "#1276CE";
   let isLight = false;
   if (
     initialSiteData !== undefined &&
-    !isEmpty(initialSiteData) &&
     typeof initialSiteData.textColor === "string" &&
     typeof initialSiteData.background === "string" &&
     isValidColor(initialSiteData.textColor) &&
@@ -57,31 +61,23 @@ const setInitialContext = (initialSiteData: Partial<SiteData> | undefined): Site
         : checkBackgroundLightness(background);
   }
 
-  const initialCombos = ColorCombos([textColor, background]) as Array<ColorCombo>;
   return {
+    algorithm,
     background,
-    colorCombos: initialCombos,
+    colorCombos: getColorCombos([textColor, background]),
     isLight,
     textColor,
   };
 };
 
-const createFakeCombination = (color: Array<number>, hex: string): Combination => ({
-  accessibility: { aa: false, aaLarge: false, aaa: false, aaaLarge: false },
-  color,
-  contrast: 1,
-  hex,
-  model: "rgb",
-  valpha: 1,
-});
-
-const createDuplicateCombination = (combos: Array<ColorCombo>): Array<ColorCombo> => {
-  const color = combos[0].color === undefined ? [] : combos[0].color;
-  const dupeCombo = {
-    ...combos[0],
-    combinations: [createFakeCombination(color, combos[0].hex)],
+const getHomeSearch = (siteData: SiteData): HomePageQueryString => {
+  const { algorithm, background, isLight, textColor } = siteData;
+  return {
+    ...(algorithm === "apca" ? { algorithm } : {}),
+    background,
+    isLight,
+    textColor,
   };
-  return [dupeCombo, dupeCombo];
 };
 
 // eslint-disable-next-line unicorn/no-useless-undefined
@@ -100,88 +96,85 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = ({
   ...props
 }: SiteDataProviderProps): React.ReactElement => {
   const [siteData, setSiteData] = React.useState<SiteData>(setInitialContext(initialSiteData));
+  const navigate = useNavigate({ from: "/" });
 
-  const isInitial = React.useRef<boolean>(false);
-
-  const [state] = React.useMemo(
-    (): [SiteData, React.Dispatch<SiteData>] => [siteData, setSiteData],
-    [siteData],
+  const updateSearch = React.useCallback(
+    (nextState: SiteData): void => {
+      void navigate({
+        replace: true,
+        search: getHomeSearch(nextState),
+      });
+    },
+    [navigate],
   );
-
-  const updateHash = React.useMemo(
-    () =>
-      debounce((nextState: SiteData): void => {
-        const query = `?${qs.stringify({
-          background: nextState.background,
-          colorCombos: nextState.colorCombos,
-          isLight: nextState.isLight,
-          textColor: nextState.textColor,
-        })}`;
-        window.history.pushState(nextState, "Are My Colors Accessible", query);
-      }, 200),
-    [],
-  );
-
-  React.useEffect((): void => {
-    if (isInitial.current) {
-      updateHash(state);
-    } else {
-      isInitial.current = true;
-    }
-  }, [state, updateHash]);
 
   const setNewColorCombo = React.useCallback(
     (textColor: string, backgroundColor: string): void => {
-      let newCombos: Array<ColorCombo> | false = ColorCombos([textColor, backgroundColor]);
-      if (newCombos) {
-        if (textColor === backgroundColor) {
-          newCombos = createDuplicateCombination(newCombos);
-        }
-        setSiteData({
-          ...state,
-          background: backgroundColor,
-          colorCombos: newCombos,
-          isLight: checkBackgroundLightness(backgroundColor),
-          textColor,
-        });
-      }
+      const nextState = {
+        ...siteData,
+        background: backgroundColor,
+        colorCombos: getColorCombos([textColor, backgroundColor]),
+        isLight: checkBackgroundLightness(backgroundColor),
+        textColor,
+      };
+      setSiteData(nextState);
+      updateSearch(nextState);
     },
-    [state],
+    [siteData, updateSearch],
   );
 
   const handleBackgroundColorInputChange = React.useCallback(
     (value: string): void => {
-      setSiteData({
-        ...state,
+      const nextState = {
+        ...siteData,
         background: value,
-      });
+      };
       if (isValidColor(value)) {
-        setNewColorCombo(state.textColor, value);
+        setNewColorCombo(siteData.textColor, value);
+      } else {
+        setSiteData(nextState);
+        updateSearch(nextState);
       }
     },
-    [setNewColorCombo, state],
+    [setNewColorCombo, siteData, updateSearch],
   );
 
   const handleTextColorInputChange = React.useCallback(
     (value: string): void => {
-      setSiteData({
-        ...state,
+      const nextState = {
+        ...siteData,
         textColor: value,
-      });
+      };
       if (isValidColor(value)) {
-        setNewColorCombo(value, state.background);
+        setNewColorCombo(value, siteData.background);
+      } else {
+        setSiteData(nextState);
+        updateSearch(nextState);
       }
     },
-    [setNewColorCombo, state],
+    [setNewColorCombo, siteData, updateSearch],
+  );
+
+  const handleAlgorithmChange = React.useCallback(
+    (algorithm: ContrastAlgorithm): void => {
+      const nextState = {
+        ...siteData,
+        algorithm,
+      };
+      setSiteData(nextState);
+      updateSearch(nextState);
+    },
+    [siteData, updateSearch],
   );
 
   const providerValue = React.useMemo(
     () => ({
+      handleAlgorithmChange,
       handleBackgroundColorInputChange,
       handleTextColorInputChange,
-      siteData: state,
+      siteData,
     }),
-    [handleBackgroundColorInputChange, handleTextColorInputChange, state],
+    [handleAlgorithmChange, handleBackgroundColorInputChange, handleTextColorInputChange, siteData],
   );
 
   return <HomeContext.Provider value={providerValue} {...props} />;

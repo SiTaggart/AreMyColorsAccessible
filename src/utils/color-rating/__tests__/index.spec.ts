@@ -1,3 +1,6 @@
+import ColorCombos from "color-combos";
+import { getContrastDisplayResult } from "../../contrast-results";
+import { apcaRating } from "../apca-rating";
 import { colorRating } from "../color-rating";
 
 describe("utils/colorRating", (): void => {
@@ -59,5 +62,71 @@ describe("utils/colorRating", (): void => {
       overall: "Nope",
       small: "Fail",
     });
+  });
+});
+
+describe("utils/apcaRating", (): void => {
+  it.each([
+    {
+      bodyText: true,
+      expected: "Yup",
+      largeText: true,
+    },
+    {
+      bodyText: false,
+      expected: "Kinda",
+      largeText: true,
+    },
+    {
+      bodyText: false,
+      expected: "Nope",
+      largeText: false,
+    },
+  ] as const)(
+    "returns $expected from the readability results",
+    ({ bodyText, expected, largeText }): void => {
+      expect(
+        apcaRating({
+          lc: 60,
+          readability: {
+            bodyText: { meets: bodyText, thresholdLc: 75 },
+            largeText: { meets: largeText, thresholdLc: 45 },
+          },
+        }).overall,
+      ).toBe(expected);
+    },
+  );
+
+  it.each([
+    { expected: true, lc: 14.99 },
+    { expected: true, lc: -14.99 },
+    { expected: false, lc: 15 },
+    { expected: false, lc: -15 },
+  ])("sets showSeriously to $expected for Lc $lc", ({ expected, lc }): void => {
+    expect(
+      apcaRating({
+        lc,
+        readability: {
+          bodyText: { meets: false, thresholdLc: 75 },
+          largeText: { meets: false, thresholdLc: 45 },
+        },
+      }).showSeriously,
+    ).toBe(expected);
+  });
+
+  it("rates a real Content-pass Body-fail pair as Kinda", (): void => {
+    const colorCombos = ColorCombos(["#ffffff", "#888888"], { uniq: false });
+    if (colorCombos === false) {
+      throw new Error("Expected mid-Lc colors to produce combinations");
+    }
+    const combination = colorCombos[0]?.combinations[0];
+    if (combination?.apca === undefined) {
+      throw new Error("Expected mid-Lc combination to include APCA data");
+    }
+
+    expect(combination.apca.readability.contentText.meets).toBe(true);
+    expect(combination.apca.readability.bodyText.meets).toBe(false);
+    expect(apcaRating(combination.apca).overall).toBe("Kinda");
+    expect(getContrastDisplayResult(combination, "apca", "full").heading).toBe("Kinda");
   });
 });
