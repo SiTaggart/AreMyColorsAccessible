@@ -59,7 +59,8 @@ const isValidColor = (hex: string): Color | false => {
   return color;
 };
 
-const getColorCombos = (colors: Array<string>): Array<ColorCombo> | false => ColorCombos(colors);
+const getColorCombos = (colors: Array<string>): Array<ColorCombo> | false =>
+  ColorCombos(colors, { uniq: false });
 
 const getInitialState = (
   querystring: Partial<PalettePageQueryString> | undefined,

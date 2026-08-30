@@ -157,19 +157,14 @@ const SiteDataProvider: React.FunctionComponent<SiteDataProviderProps> = ({
 
   const handleAlgorithmChange = React.useCallback(
     (algorithm: ContrastAlgorithm): void => {
-      setSiteData((currentState) => ({
-        ...currentState,
+      const nextState = {
+        ...siteData,
         algorithm,
-      }));
-      void navigate({
-        replace: true,
-        search: (currentSearch: Partial<HomePageQueryString>) => ({
-          ...currentSearch,
-          algorithm: algorithm === "apca" ? algorithm : undefined,
-        }),
-      });
+      };
+      setSiteData(nextState);
+      updateSearch(nextState);
     },
-    [navigate],
+    [siteData, updateSearch],
   );
 
   const providerValue = React.useMemo(

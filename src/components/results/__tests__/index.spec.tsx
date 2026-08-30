@@ -1,5 +1,7 @@
 import { SiteDataProvider } from "../../../context/home";
 import { renderWithRouter } from "../../../test/render-with-router";
+import { vi } from "vitest";
+import * as contrastResults from "../../../utils/contrast-results";
 import { Results } from "..";
 
 describe("Results", (): void => {
@@ -144,5 +146,90 @@ describe("Results", (): void => {
 
     expect(getByText("APCA Lc")).not.toBeNull();
     expect(queryByText("AA: 4.5 AAA: 7.0")).toBeNull();
+  });
+
+  it("renders an APCA Yup with readability rows", (): void => {
+    const { getByTestId, getByText } = renderWithRouter(
+      <SiteDataProvider
+        initialSiteData={{
+          algorithm: "apca",
+          background: "#000",
+          colorCombos: [],
+          isLight: true,
+          textColor: "#fff",
+        }}
+      >
+        <Results />
+      </SiteDataProvider>,
+    );
+
+    expect(getByTestId("contrastResults-heading").textContent).toBe("Yup");
+    expect(getByText(/Body Text/)).not.toBeNull();
+    expect(getByText(/Content Text/)).not.toBeNull();
+    expect(getByText(/Large Text/)).not.toBeNull();
+  });
+
+  it("renders an APCA Kinda when Content passes but Body fails", (): void => {
+    const { getByTestId } = renderWithRouter(
+      <SiteDataProvider
+        initialSiteData={{
+          algorithm: "apca",
+          background: "#888888",
+          colorCombos: [],
+          isLight: true,
+          textColor: "#ffffff",
+        }}
+      >
+        <Results />
+      </SiteDataProvider>,
+    );
+
+    expect(getByTestId("contrastResults-heading").textContent).toBe("Kinda");
+  });
+
+  it("renders Seriously? for very low APCA contrast", (): void => {
+    const { getByTestId } = renderWithRouter(
+      <SiteDataProvider
+        initialSiteData={{
+          algorithm: "apca",
+          background: "#fff",
+          colorCombos: [],
+          isLight: true,
+          textColor: "#fff",
+        }}
+      >
+        <Results />
+      </SiteDataProvider>,
+    );
+
+    expect(getByTestId("contrastResults-heading").textContent).toBe("Nope");
+    expect(getByTestId("contrastResults-seriously")).not.toBeNull();
+  });
+
+  it("renders Unavailable when APCA data is missing", (): void => {
+    const spy = vi.spyOn(contrastResults, "getContrastDisplayResult").mockReturnValue({
+      heading: "Unavailable",
+      metricLabel: "APCA Lc",
+      metricValue: "Unavailable",
+      rows: [],
+      showSeriously: false,
+    });
+
+    const { getByTestId } = renderWithRouter(
+      <SiteDataProvider
+        initialSiteData={{
+          algorithm: "apca",
+          background: "#000",
+          colorCombos: [],
+          isLight: true,
+          textColor: "#fff",
+        }}
+      >
+        <Results />
+      </SiteDataProvider>,
+    );
+
+    expect(getByTestId("contrastResults-heading").textContent).toBe("Unavailable");
+    spy.mockRestore();
   });
 });

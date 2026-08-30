@@ -764,5 +764,30 @@ describe("usePaletteData hook", (): void => {
       expect(new URLSearchParams(history.location.search).get("algorithm")).toBe("apca");
     });
   });
+
+  it("keeps real APCA data when colors are equal", (): void => {
+    const { result } = renderPaletteDataHook(
+      { algorithm: "apca", colors: ["#fff", "#fff"] },
+      "/palette?algorithm=apca&colors=%23fff&colors=%23fff",
+    );
+    expect(result.current.paletteData.colors).toStrictEqual(["#fff", "#fff"]);
+    expect(result.current.paletteData.colorCombos).toHaveLength(2);
+    expect(result.current.paletteData.colorCombos[0]?.combinations[0]?.apca?.lc).toBe(0);
+  });
+
+  it("keeps real APCA data when a color is updated to match another", (): void => {
+    const { result } = renderPaletteDataHook(
+      { algorithm: "apca", colors: ["#fff", "#000"] },
+      "/palette?algorithm=apca&colors=%23fff&colors=%23000",
+    );
+
+    act((): void => {
+      result.current.handleColorChange("#fff", 1);
+    });
+
+    expect(result.current.paletteData.colors).toStrictEqual(["#fff", "#fff"]);
+    expect(result.current.paletteData.colorCombos).toHaveLength(2);
+    expect(result.current.paletteData.colorCombos[0]?.combinations[0]?.apca?.lc).toBe(0);
+  });
 });
 /* eslint-enable react/display-name */

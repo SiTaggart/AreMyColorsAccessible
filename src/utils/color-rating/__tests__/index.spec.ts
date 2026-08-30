@@ -1,3 +1,5 @@
+import ColorCombos from "color-combos";
+import { getContrastDisplayResult } from "../../contrast-results";
 import { apcaRating } from "../apca-rating";
 import { colorRating } from "../color-rating";
 
@@ -110,5 +112,21 @@ describe("utils/apcaRating", (): void => {
         },
       }).showSeriously,
     ).toBe(expected);
+  });
+
+  it("rates a real Content-pass Body-fail pair as Kinda", (): void => {
+    const colorCombos = ColorCombos(["#ffffff", "#888888"], { uniq: false });
+    if (colorCombos === false) {
+      throw new Error("Expected mid-Lc colors to produce combinations");
+    }
+    const combination = colorCombos[0]?.combinations[0];
+    if (combination?.apca === undefined) {
+      throw new Error("Expected mid-Lc combination to include APCA data");
+    }
+
+    expect(combination.apca.readability.contentText.meets).toBe(true);
+    expect(combination.apca.readability.bodyText.meets).toBe(false);
+    expect(apcaRating(combination.apca).overall).toBe("Kinda");
+    expect(getContrastDisplayResult(combination, "apca", "full").heading).toBe("Kinda");
   });
 });
