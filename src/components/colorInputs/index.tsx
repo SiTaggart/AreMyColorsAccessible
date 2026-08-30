@@ -5,12 +5,14 @@ import { FormInput } from "../form-input";
 import { FormLabel } from "../form-label";
 import { HslSliders } from "../hsl-sliders";
 import { useSiteData } from "../../context/home";
+import { ContrastAlgorithmToggle } from "../contrast-algorithm-toggle";
 
 const ColorInputs: React.FC = (): ReactElement => {
   const {
+    handleAlgorithmChange,
     handleBackgroundColorInputChange,
     handleTextColorInputChange,
-    siteData: { background, colorCombos, isLight, textColor },
+    siteData: { algorithm, background, colorCombos, isLight, textColor },
   } = useSiteData();
 
   const formTextColor = isLight ? "#343334" : "#fff";
@@ -54,6 +56,7 @@ const ColorInputs: React.FC = (): ReactElement => {
           value={colorCombos[1].hex}
         />
       </FormControl>
+      <ContrastAlgorithmToggle algorithm={algorithm} onChange={handleAlgorithmChange} />
     </Form>
   );
 };

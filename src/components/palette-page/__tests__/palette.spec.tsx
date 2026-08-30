@@ -11,4 +11,16 @@ describe("Palette Page", (): void => {
     );
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it("selects the APCA algorithm", (): void => {
+    const { getByRole } = renderWithRouter(
+      <PaletteDataProvider>
+        <PalettePage />
+      </PaletteDataProvider>,
+    );
+
+    const apca = getByRole("radio", { name: "APCA" });
+    apca.click();
+    expect(apca).toBeChecked();
+  });
 });

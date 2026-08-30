@@ -56,6 +56,12 @@ describe("ColorInputs", (): void => {
     expect(handleBackgroundColorInputChange).toHaveBeenCalledWith("#ccc");
   });
 
+  it("should call the handleAlgorithmChange callback on algorithm change", (): void => {
+    const { getByRole } = render(<ColorInputs />);
+    fireEvent.click(getByRole("radio", { name: "APCA" }));
+    expect(handleAlgorithmChange).toHaveBeenCalledWith("apca");
+  });
+
   it("should call the handleTextColorInputChange callback on text color slider change", (): void => {
     const { getByTestId } = render(<ColorInputs />);
     fireEvent.change(getByTestId("textColor-hsl-Lightness"), { target: { value: 12 } });

@@ -16,6 +16,7 @@ describe("Results", (): void => {
     const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
+          algorithm: "wcag2",
           background: "#000",
           colorCombos: [],
           isLight: true,
@@ -35,6 +36,7 @@ describe("Results", (): void => {
     const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
+          algorithm: "wcag2",
           background: "#666",
           colorCombos: [],
           isLight: true,
@@ -54,6 +56,7 @@ describe("Results", (): void => {
     const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
+          algorithm: "wcag2",
           background: "#000",
           colorCombos: [],
           isLight: true,
@@ -73,6 +76,7 @@ describe("Results", (): void => {
     const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
+          algorithm: "wcag2",
           background: "#000",
           colorCombos: [],
           isLight: true,
@@ -92,6 +96,7 @@ describe("Results", (): void => {
     const { getByTestId } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
+          algorithm: "wcag2",
           background: "#000",
           colorCombos: [],
           isLight: true,
@@ -109,6 +114,7 @@ describe("Results", (): void => {
     const { asFragment } = renderWithRouter(
       <SiteDataProvider
         initialSiteData={{
+          algorithm: "wcag2",
           background: "#000",
           colorCombos: [],
           isLight: true,
@@ -119,5 +125,24 @@ describe("Results", (): void => {
       </SiteDataProvider>,
     );
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  it("renders APCA results without WCAG requirements", (): void => {
+    const { getByText, queryByText } = renderWithRouter(
+      <SiteDataProvider
+        initialSiteData={{
+          algorithm: "apca",
+          background: "#000",
+          colorCombos: [],
+          isLight: true,
+          textColor: "#fff",
+        }}
+      >
+        <Results />
+      </SiteDataProvider>,
+    );
+
+    expect(getByText("APCA Lc")).not.toBeNull();
+    expect(queryByText("AA: 4.5 AAA: 7.0")).toBeNull();
   });
 });

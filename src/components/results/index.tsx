@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { useSiteData } from "../../context/home";
-import { colorRating } from "../../utils/color-rating";
+import { getContrastDisplayResult } from "../../utils/contrast-results";
 import {
   ContrastResult,
   ContrastResultDesc,
@@ -30,23 +30,20 @@ const AreYouSerious: React.FC<AreYouSeriousProps> = ({
   );
 };
 
+const wcagRowTestIds: Record<string, string> = {
+  "Bold Text 18px and over": "contrastResult-rating-bold",
+  "Large Text 24px and over": "contrastResult-rating-large",
+  "Small Text": "contrastResult-rating-small",
+};
+
+const getRowTestId = (label: string): string =>
+  wcagRowTestIds[label] ??
+  `contrastResult-rating-${label.toLowerCase().replaceAll(/[^a-z0-9]+/g, "-")}`;
+
 const Results: React.FC = (): ReactElement => {
   const { siteData } = useSiteData();
   const colorInfo = siteData.colorCombos[0].combinations[0];
-  const contrast = colorInfo.contrast || 0;
-  const accessibility = colorInfo.accessibility || {
-    aa: false,
-    aaa: false,
-    aaaLarge: false,
-    aaLarge: false,
-  };
-  const ratio = Number.parseFloat(contrast.toFixed(2));
-  const colorRatings = colorRating(accessibility);
-  const areYouSerious = ratio < 1.3 ? true : undefined;
-  const boldTextRating = colorRatings.bold;
-  const largeTextRating = colorRatings.large;
-  const overallRating = colorRatings.overall;
-  const smallTextRating = colorRatings.small;
+  const result = getContrastDisplayResult(colorInfo, siteData.algorithm, "full");
 
   return (
     <ContrastResults>
@@ -56,43 +53,40 @@ const Results: React.FC = (): ReactElement => {
         as="h1"
         data-testid="contrastResults-heading"
       >
-        {overallRating}
+        {result.heading}
       </ContrastResultsHeading>
+      {result.rows.map((row) => {
+        const description = (
+          <>
+            {row.label}
+            {row.requirement && (
+              <>
+                <br />
+                {row.requirement}
+              </>
+            )}
+          </>
+        );
+        return (
+          <ContrastResult key={row.label}>
+            <ContrastResultDesc isLarge={row.label === "Large Text 24px and over"}>
+              {row.label === "Bold Text 18px and over" ? (
+                <strong>{description}</strong>
+              ) : (
+                description
+              )}
+            </ContrastResultDesc>
+            <ContrastResultRating as="h2" data-testid={getRowTestId(row.label)}>
+              {row.value}
+            </ContrastResultRating>
+          </ContrastResult>
+        );
+      })}
       <ContrastResult>
-        <ContrastResultDesc>
-          Small Text
-          <br />
-          AA: 4.5 AAA: 7.0
-        </ContrastResultDesc>
-        <ContrastResultRating as="h2" data-testid="contrastResult-rating-small">
-          {smallTextRating}
-        </ContrastResultRating>
+        <ContrastResultDesc>{result.metricLabel}</ContrastResultDesc>
+        <ContrastResultRating as="h2">{result.metricValue}</ContrastResultRating>
       </ContrastResult>
-      <ContrastResult>
-        <ContrastResultDesc>
-          <strong>
-            Bold Text 18px and over <br />
-            AA: 3.0 AAA: 4.5
-          </strong>
-        </ContrastResultDesc>
-        <ContrastResultRating as="h2" data-testid="contrastResult-rating-bold">
-          {boldTextRating}
-        </ContrastResultRating>
-      </ContrastResult>
-      <ContrastResult>
-        <ContrastResultDesc isLarge>
-          Large Text 24px and over <br />
-          AA: 3.0 AAA: 4.5
-        </ContrastResultDesc>
-        <ContrastResultRating as="h2" data-testid="contrastResult-rating-large">
-          {largeTextRating}
-        </ContrastResultRating>
-      </ContrastResult>
-      <ContrastResult>
-        <ContrastResultDesc>Contrast Ratio</ContrastResultDesc>
-        <ContrastResultRating as="h2">{`${ratio} : 1`}</ContrastResultRating>
-      </ContrastResult>
-      {areYouSerious && <AreYouSerious isLight={siteData.isLight} />}
+      {result.showSeriously && <AreYouSerious isLight={siteData.isLight} />}
     </ContrastResults>
   );
 };

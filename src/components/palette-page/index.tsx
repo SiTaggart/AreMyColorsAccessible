@@ -3,9 +3,11 @@ import * as React from "react";
 import { PaletteInput } from "../palette-input";
 import { ColorMatrix } from "../color-matrix";
 import { usePaletteData } from "../../context/palette";
+import { ContrastAlgorithmToggle } from "../contrast-algorithm-toggle";
 
 const PalettePage: React.FC = (): React.ReactElement => {
-  const { handleColorChange, handleNewColor, paletteData } = usePaletteData();
+  const { handleAlgorithmChange, handleColorChange, handleNewColor, paletteData } =
+    usePaletteData();
   return (
     <>
       <PaletteInput
@@ -16,6 +18,7 @@ const PalettePage: React.FC = (): React.ReactElement => {
         }
         onColorAdd={handleNewColor}
       />
+      <ContrastAlgorithmToggle algorithm={paletteData.algorithm} onChange={handleAlgorithmChange} />
       <ColorMatrix
         colorCombos={paletteData.colorCombos}
         colors={paletteData.colors}
