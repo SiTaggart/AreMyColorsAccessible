@@ -66,8 +66,8 @@ const About: React.FC = (): ReactElement => (
         gives a contrast ratio with AA/AAA. APCA gives an Lc score instead.
       </P>
       <P>
-        For APCA, <strong>Yup</strong> means Content passes (Lc 60+). <strong>Kinda</strong> means
-        only Large does (45+). <strong>Nope</strong> is below that.
+        For APCA, <strong>Yup</strong> means Body passes (Lc 75+). <strong>Kinda</strong> means
+        Content or Large still pass (60+ / 45+). <strong>Nope</strong> is below that.
       </P>
       <P>APCA row targets: Fluent 90, Body 75, Content 60, Large 45, Minimum 30, Non-Text 15.</P>
       <P>

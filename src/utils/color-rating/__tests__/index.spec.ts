@@ -66,28 +66,28 @@ describe("utils/colorRating", (): void => {
 describe("utils/apcaRating", (): void => {
   it.each([
     {
-      contentText: true,
+      bodyText: true,
       expected: "Yup",
       largeText: true,
     },
     {
-      contentText: false,
+      bodyText: false,
       expected: "Kinda",
       largeText: true,
     },
     {
-      contentText: false,
+      bodyText: false,
       expected: "Nope",
       largeText: false,
     },
   ] as const)(
     "returns $expected from the readability results",
-    ({ contentText, expected, largeText }): void => {
+    ({ bodyText, expected, largeText }): void => {
       expect(
         apcaRating({
           lc: 60,
           readability: {
-            contentText: { meets: contentText, thresholdLc: 60 },
+            bodyText: { meets: bodyText, thresholdLc: 75 },
             largeText: { meets: largeText, thresholdLc: 45 },
           },
         }).overall,
@@ -105,7 +105,7 @@ describe("utils/apcaRating", (): void => {
       apcaRating({
         lc,
         readability: {
-          contentText: { meets: false, thresholdLc: 60 },
+          bodyText: { meets: false, thresholdLc: 75 },
           largeText: { meets: false, thresholdLc: 45 },
         },
       }).showSeriously,

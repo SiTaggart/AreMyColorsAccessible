@@ -3,7 +3,7 @@ import type { OverallRating } from "./color-rating";
 
 export interface ApcaRatingInput {
   lc: ApcaAccessibility["lc"];
-  readability: Pick<ApcaAccessibility["readability"], "contentText" | "largeText">;
+  readability: Pick<ApcaAccessibility["readability"], "bodyText" | "largeText">;
 }
 
 export interface ApcaRating {
@@ -14,7 +14,7 @@ export interface ApcaRating {
 const apcaRating = ({ lc, readability }: ApcaRatingInput): ApcaRating => {
   let overall: OverallRating = "Nope";
 
-  if (readability.contentText.meets) {
+  if (readability.bodyText.meets) {
     overall = "Yup";
   } else if (readability.largeText.meets) {
     overall = "Kinda";

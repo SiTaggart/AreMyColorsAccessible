@@ -71,8 +71,8 @@ describe("getContrastDisplayResult", (): void => {
         lc: 80,
         readability: {
           ...baseApca.readability,
-          contentText: {
-            ...baseApca.readability.contentText,
+          bodyText: {
+            ...baseApca.readability.bodyText,
             meets: false,
           },
           largeText: {
