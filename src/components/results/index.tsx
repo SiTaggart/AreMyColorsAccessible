@@ -61,6 +61,7 @@ const Results: React.FC = (): ReactElement => {
             {row.label}
             {row.requirement && (
               <>
+                {" "}
                 <br />
                 {row.requirement}
               </>
