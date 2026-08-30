@@ -2,11 +2,13 @@
 
 > **For Hermes:** Use `subagent-driven-development` to implement this plan task-by-task after Simon approves it. Work in an isolated git worktree. Do not implement from this planning PR.
 
-**Goal:** Add a site-wide contrast algorithm selector so users can switch between the current WCAG 2.x contrast ratio checks and APCA contrast checks.
+**Goal:** Add a per-page, URL-shareable contrast algorithm selector so users can switch between the current WCAG 2.x contrast ratio checks and APCA contrast checks on the home and palette pages. Algorithm state is not site-wide: in-app navigation may reset it unless the user carries `algorithm` in the URL (same pattern as colors today).
 
-**Architecture:** Keep WCAG 2.x as the default and preserve existing behavior unless the user explicitly selects APCA. Store the selected algorithm in context state and the URL query string for shareable/deep-linked checks. Centralize algorithm-specific display logic in a utility so `Results`, `ColorCard`, and future API work do not each invent their own APCA interpretation.
+**Architecture:** Keep WCAG 2.x as the default and preserve existing behavior unless the user explicitly selects APCA. Store the selected algorithm in each page context and in that page's URL search. Write algorithm search updates through TanStack Router `navigate({ search, replace: true })` rather than deepening the existing `pushState` path. Split pure rating (`colorRating` / `apcaRating`) from thin display formatting so `Results`, `ColorMatrix`/`ColorCard`, and a future API path do not each invent their own APCA interpretation.
 
-**Tech Stack:** React 19, TanStack Router, TypeScript, `color-combos@1.2.1`, Vitest, Playwright, Bun.
+**Tech Stack:** React 19, TanStack Router, TypeScript, `color-combos@1.2.1` (via `apca-w3@0.1.9`), Vitest, Playwright, Bun.
+
+**APCA profile:** Results in this app come from `color-combos@1.2.1` / `apca-w3@0.1.9`. Dependency bumps or threshold changes that alter shared-URL outcomes are product-contract changes, not silent chores.
 
 ---
 
@@ -20,42 +22,46 @@
   - `combination.apca.lc`
   - `combination.apca.polarity`
   - `combination.apca.minimumFontSize`
-  - `combination.apca.readability.{fluentText, bodyText, contentText, largeText, minimumText, nonText}`
+  - `combination.apca.readability.{fluentText, bodyText, contentText, largeText, minimumText, nonText}` each `{ thresholdLc, meets }`
+- Library readability bands (absolute Lc): fluent 90, body 75, content 60, large 45, minimum 30, nonText 15.
+- Home still has two `ColorCombos` call sites; only the interactive equal-color path uses `createFakeCombination` (WCAG-only, no `apca`). Init/deep-link equal colors with default `uniq: true` yield empty `combinations` and can crash `Results`.
+- Home URL writes currently stringify `colorCombos` into junk `[object Object]` query params. Palette already separates `PalettePageQueryString` from runtime state.
+- `/about` reuses home `parseSiteSearch` + `SiteDataProvider` for theming only; copy is WCAG 2.0. Out of scope for this PR (follow-up).
 - No project-local `AGENTS.md`, `CLAUDE.md`, or `.codex` instructions were found in this repo worktree.
-- `main` currently includes the fix-forward dependency update from PR #1465, so this plan assumes APCA metadata exists but still requires defensive fallback for missing `apca`.
 
-## Product decisions proposed
+## Product decisions (locked)
 
-1. **Default algorithm:** `wcag2`.
-   - Existing URLs and behavior stay compatible.
-2. **User-facing labels:**
+1. **Scope:** per-page, URL-shareable — not site-wide. Footer/nav need not preserve `algorithm`.
+2. **Default algorithm:** `wcag2`. Existing URLs and behavior stay compatible.
+3. **User-facing labels:**
    - Toggle labels: `WCAG 2.x` and `APCA`.
    - WCAG metric label: `Contrast Ratio`.
    - APCA metric label: `APCA Lc`.
-3. **APCA copy:** do **not** use AA/AAA language in APCA mode.
-   - APCA is a different model, not WCAG 2 conformance with new labels.
-   - Keep the app's existing three-level personality/conformance framing: `Yep`, `Kinda`, and `Nope`, with `Seriously?` retained for extreme failures.
-4. **APCA headline thresholds:** base the APCA headline on absolute Lc (`Math.abs(lc)`) while preserving signed Lc in the metric display.
-   - `Yep`: `|Lc| >= 60` — target for normal/body text readability, roughly analogous to the current WCAG `4.5` clear-pass level.
-   - `Kinda`: `45 <= |Lc| < 60` — acceptable only with larger/bolder or less demanding text use, roughly analogous to the current WCAG large-text compromise around `3.5`.
-   - `Nope`: `15 <= |Lc| < 45` — not good enough for the app's headline conformance.
-   - `Seriously?`: `|Lc| < 15`, including same-colour/near-zero contrast cases.
-5. **URL state:** add `algorithm=apca` only when APCA is selected.
-   - Omit or default `algorithm` to WCAG for cleaner backward-compatible URLs.
-6. **API scope for first implementation:** keep `/api/are-they` and slash command WCAG-only.
-   - Add APCA API support later as a separate PR if wanted. Mixing UI and API response-shape changes in one PR is unnecessary blast radius.
-7. **Same foreground/background colors:** remove or replace the fake duplicate combination path so APCA data is available for equal-color checks.
-   - Current `createFakeCombination` only includes WCAG fields and would leave APCA undefined.
+4. **APCA copy:** do **not** use AA/AAA language in APCA mode.
+   - Keep the app's personality framing: `Yup`, `Kinda`, and `Nope` (spell **`Yup`**, matching current `colorRating` / e2e / smoke).
+   - `Seriously?` is **not** a heading value. It remains an additive overlay (`showSeriously`) for extreme fails in both modes:
+     - WCAG: rounded ratio `< 1.3` (existing behavior; heading stays `Nope`).
+     - APCA: `|Lc| < 15` / `nonText` fail band (heading stays `Nope`).
+5. **APCA headline rating:** derive from library `apca.readability.*.meets`, not hardcoded magic numbers that can drift from rows:
+   - `Yup` when `contentText.meets` (library band 60).
+   - `Kinda` when not Yup but `largeText.meets` (library band 45).
+   - `Nope` otherwise.
+   - Note: Body (75) can fail under a Yup headline at Lc 65; that is expected — label rows clearly as APCA readability, not AA/AAA.
+6. **URL state:**
+   - Add `algorithm=apca` only when APCA is selected; omit when `wcag2`.
+   - Invalid/missing algorithm → `wcag2`.
+   - Parse `algorithm` **independently of color validity** (bare `/?algorithm=apca` must stick).
+   - Algorithm search writes go through `navigate({ search: ..., replace: true })`.
+   - Introduce `HomePageQueryString` (`textColor`, `background`, `isLight`, `algorithm`) separate from runtime `SiteData` (adds `colorCombos`). Stop writing `colorCombos` into the query string; update homepage e2e exact-URL asserts accordingly.
+7. **API scope:** keep `/api/are-they` and slash command WCAG-only for this PR.
+   - When APCA API support lands later, `getRating` should reuse shared `colorRating` / `apcaRating` for words while preserving its own contrast string format / response shape.
+8. **Equal colors:** always call home `ColorCombos([text, bg], { uniq: false })` in **both** `setInitialContext` and `setNewColorCombo`. Delete `createFakeCombination` and `createDuplicateCombination`. Add deep-link e2e for equal colors.
+9. **Palette compact rows:** Body, Content, Large on cards; full readability rows on home Results.
+10. **Matrix polarity:** under APCA, cells `(i,j)` and `(j,i)` can show different signed Lc (directional). Expected; do not treat as a bug.
 
-## Review decisions and open questions
+## Open questions
 
-- APCA headline should retain the app's `Yep` / `Kinda` / `Nope` personality rather than switching to neutral `Pass` / `Partial` / `Fail` language.
-  - Use `|Lc| >= 60` for `Yep`, `45 <= |Lc| < 60` for `Kinda`, `15 <= |Lc| < 45` for `Nope`, and `|Lc| < 15` for `Seriously?`.
-  - Keep supporting row labels explicit and non-WCAG so users do not confuse APCA guidance with AA/AAA conformance.
-- Which APCA rows should appear in compact palette cards?
-  - Recommendation: show `Body`, `Content`, and `Large`; keep full APCA rows on the two-color home result.
-- Should APCA API support be in this PR?
-  - Recommendation: no, first PR should ship UI mode only.
+None blocking. About-page APCA copy is an explicit follow-up.
 
 ---
 
@@ -63,7 +69,7 @@
 
 ### Task 1: Add shared contrast algorithm types and query parsing
 
-**Objective:** Introduce a typed algorithm value and route parsing without changing existing behavior.
+**Objective:** Introduce a typed algorithm value and route parsing without changing existing WCAG behavior.
 
 **Files:**
 
@@ -77,17 +83,21 @@
    ```ts
    export type ContrastAlgorithm = "wcag2" | "apca";
    ```
-2. Extend `SiteData` with:
+2. Add `HomePageQueryString`:
    ```ts
-   algorithm: ContrastAlgorithm;
+   export interface HomePageQueryString {
+     background?: string;
+     textColor?: string;
+     isLight?: boolean;
+     algorithm?: ContrastAlgorithm;
+   }
    ```
-3. Extend `PalettePageQueryString` with:
-   ```ts
-   algorithm: ContrastAlgorithm;
-   ```
-4. Add an `isContrastAlgorithm(value: unknown): value is ContrastAlgorithm` helper in `route-search.ts`.
-5. Parse `algorithm` in `parseSiteSearch` and `parsePaletteSearch` only when valid.
-6. Add tests for valid `algorithm=apca`, valid `algorithm=wcag2`, invalid algorithm ignored, and omitted algorithm default behavior.
+3. Keep runtime `SiteData` as colors + `colorCombos` + `isLight` + `algorithm` (or compose from query + combos — whichever stays clearest). Do **not** treat `colorCombos` as a search field.
+4. Extend `PalettePageQueryString` with optional `algorithm`.
+5. Add `isContrastAlgorithm(value: unknown): value is ContrastAlgorithm` in `route-search.ts`.
+6. Change `parseSiteSearch` to return `Partial<HomePageQueryString>` (not `Partial<SiteData>`). Parse `algorithm` only when valid.
+7. Parse `algorithm` in `parsePaletteSearch` the same way.
+8. Tests: valid `apca` / `wcag2`, invalid ignored, omitted defaults, algorithm present without colors.
 
 **Verification:**
 
@@ -97,27 +107,25 @@ bunx vitest run src/utils/__tests__/route-search.spec.ts
 
 Expected: route-search tests pass.
 
-### Task 2: Persist algorithm in home context
+### Task 2: Persist algorithm in home context + equal-color fix + router URL writes
 
-**Objective:** Store and update the selected algorithm on the two-color home page.
+**Objective:** Store/update algorithm on the home page; fix equal-color crashes; stop junk `colorCombos` URL params.
 
 **Files:**
 
 - Modify: `src/context/home/index.tsx`
+- Modify: `src/routes/index.tsx` (and `about.tsx` only if search typing requires it)
 - Test: `src/context/home/__tests__/index.spec.tsx`
 
 **Steps:**
 
-1. Extend `HomeContextInterface` with:
-   ```ts
-   handleAlgorithmChange: (algorithm: ContrastAlgorithm) => void;
-   ```
-2. Default `setInitialContext()` to `algorithm: "wcag2"`.
-3. Respect `initialSiteData.algorithm` when valid.
-4. Include `algorithm` in the URL update, preferably omitting it when `wcag2` if that fits existing query-string conventions.
-5. Implement `handleAlgorithmChange` as a state-only update; it should not recalculate color combos.
-6. Fix equal-color combination handling so APCA data is not lost. Prefer `ColorCombos([textColor, backgroundColor], { uniq: false })` if supported by current `color-combos`; otherwise include an APCA fallback object for the fake duplicate combination.
-7. Update home context tests for default WCAG, parsed APCA, invalid algorithm fallback, algorithm update preserving colors, and equal-color APCA safety.
+1. Extend `HomeContextInterface` with `handleAlgorithmChange`.
+2. Default algorithm to `"wcag2"`. Respect parsed `algorithm` even when colors fall back to defaults.
+3. Call `ColorCombos([textColor, background], { uniq: false })` in **both** `setInitialContext` and `setNewColorCombo`.
+4. Delete `createFakeCombination` and `createDuplicateCombination`.
+5. `handleAlgorithmChange` updates state only (no combo recompute) and syncs search via `navigate({ search, replace: true })`, omitting `algorithm` when `wcag2`.
+6. Color-driven URL updates: write only `HomePageQueryString` fields (no `colorCombos`). Prefer router navigate for consistency once algorithm uses it; if color updates stay on a debounce path temporarily, still never serialize `colorCombos`.
+7. Tests: default WCAG, parsed APCA, invalid fallback, algorithm without colors, algorithm update preserves colors, equal-color init and update both expose real `apca` (e.g. `lc: 0`).
 
 **Verification:**
 
@@ -129,7 +137,7 @@ Expected: home context tests pass.
 
 ### Task 3: Persist algorithm in palette context
 
-**Objective:** Store and update the selected algorithm on the palette page.
+**Objective:** Store/update algorithm on the palette page with the same URL rules.
 
 **Files:**
 
@@ -139,17 +147,12 @@ Expected: home context tests pass.
 
 **Steps:**
 
-1. Extend `PaletteState` with `algorithm: ContrastAlgorithm`.
-2. Extend `PaletteContextProps` with:
-   ```ts
-   handleAlgorithmChange: (algorithm: ContrastAlgorithm) => void;
-   ```
-3. Default `getInitialState()` to `algorithm: "wcag2"`.
-4. Respect `queryString.algorithm` when valid.
-5. Include `algorithm` in palette URL updates, preserving existing `colors` behavior.
-6. Ensure `updateColors()` preserves `state.algorithm`.
-7. Pass `algorithm` through `PalettePage` to `ColorMatrix`.
-8. Add tests for default WCAG, parsed APCA, algorithm update preserving colors/combinations, and URL state.
+1. Extend `PaletteState` / `PaletteContextProps` with `algorithm` and `handleAlgorithmChange`.
+2. Default `"wcag2"`. Respect `queryString.algorithm` even when `colors` are absent/invalid.
+3. Sync algorithm via `navigate({ search, replace: true })`; preserve `colors`; omit `algorithm` when `wcag2`.
+4. Ensure `updateColors()` preserves `state.algorithm`.
+5. Pass `algorithm` and `handleAlgorithmChange` through `PalettePage` (toggle mount is Task 6b; matrix wiring is Task 7).
+6. Tests: default, parsed APCA, algorithm-only URL, update preserves colors/combos, URL state.
 
 **Verification:**
 
@@ -161,29 +164,19 @@ Expected: palette context tests pass.
 
 ### Task 4: Add reusable algorithm toggle component
 
-**Objective:** Provide one accessible UI control for choosing WCAG 2.x or APCA.
+**Objective:** One accessible control for WCAG 2.x vs APCA.
 
 **Files:**
 
 - Create: `src/components/contrast-algorithm-toggle/index.tsx`
-- Create or modify: `src/components/contrast-algorithm-toggle/styled.ts`
+- Create: `src/components/contrast-algorithm-toggle/styled.ts` (if needed)
 - Test: `src/components/contrast-algorithm-toggle/__tests__/index.spec.tsx`
-- Modify: export barrel only if this repo uses one for components; otherwise import directly.
 
 **Steps:**
 
-1. Implement a controlled component:
-   ```ts
-   interface ContrastAlgorithmToggleProps {
-     algorithm: ContrastAlgorithm;
-     onChange: (algorithm: ContrastAlgorithm) => void;
-   }
-   ```
-2. Render as a `fieldset`/radio group or segmented control with accessible labels:
-   - `WCAG 2.x`
-   - `APCA`
-3. Use real radio inputs unless styling makes that impossible. Do not use a div-only toggle.
-4. Add tests that selecting each option calls `onChange` with the expected typed value.
+1. Controlled props: `{ algorithm, onChange }`.
+2. Real radio inputs in a `fieldset` (or equivalent), labels `WCAG 2.x` and `APCA`. No div-only toggle.
+3. Tests: selecting each option calls `onChange` with the typed value.
 
 **Verification:**
 
@@ -193,78 +186,60 @@ bunx vitest run src/components/contrast-algorithm-toggle/__tests__/index.spec.ts
 
 Expected: toggle component tests pass.
 
-### Task 5: Centralize WCAG/APCA result formatting
+### Task 5: Split rating from display formatting
 
-**Objective:** Keep rendering components dumb and ensure APCA terminology is consistent.
+**Objective:** Pure APCA rating beside `colorRating`; thin formatter for UI variants.
 
 **Files:**
 
+- Modify: `src/utils/color-rating/` (add `apca-rating` or extend module; keep `colorRating` outputs exact)
 - Create: `src/utils/contrast-results/index.ts`
 - Create: `src/utils/contrast-results/__tests__/index.spec.ts`
-- Possibly modify: `src/utils/color-rating/index.ts`
+- Create/modify matching `color-rating` tests
 
 **Steps:**
 
-1. Define a render-friendly result shape, for example:
+1. Add `apcaRating(apca)` (or `apcaRating(lc, readability)`) returning at least:
    ```ts
-   interface ContrastDisplayResult {
-     heading: string;
-     metricLabel: string;
-     metricValue: string;
-     rows: Array<{
-       id: string;
-       label: string;
-       description: string;
-       rating: string;
-       passes: boolean;
-     }>;
-     showSeriously: boolean;
-   }
+   { overall: "Yup" | "Kinda" | "Nope"; showSeriously: boolean }
    ```
-2. Implement `getContrastDisplayResult(combination, algorithm)`.
-3. For WCAG:
-   - Preserve current `colorRating(accessibility)` outputs exactly.
-   - Preserve `Contrast Ratio` formatting as `N : 1`.
-   - Preserve `Seriously?` behavior when rounded ratio is `< 1.3`.
-4. For APCA:
-   - Format `lc` as signed `Lc`, rounded to one decimal or integer consistently.
-   - Preserve the sign in display, but use `Math.abs(lc)` for headline thresholds.
-   - Keep app personality in the headline: `Yep` for `|Lc| >= 60`, `Kinda` for `45 <= |Lc| < 60`, `Nope` for `15 <= |Lc| < 45`, and `Seriously?` for `|Lc| < 15`.
-   - Treat the thresholds as AMCA display guidance, not WCAG AA/AAA conformance.
-   - Use APCA readability rows from `combination.apca.readability` for supporting details.
-   - Do not render AA/AAA copy.
-   - Handle missing `apca` safely with a clear `Unavailable` state instead of crashing.
-5. Unit-test WCAG preservation, APCA formatting, APCA missing fallback, APCA headline threshold boundaries, `Seriously?` near-zero behavior, and threshold row output.
+   - Derive `overall` from `readability.contentText.meets` / `largeText.meets` as in product decision 5.
+   - `showSeriously` when `|Lc| < 15` (or `!nonText.meets` with near-zero handling) — overlay only, never as `overall`.
+2. Keep `colorRating` returning `"Yup"` / `"Kinda"` / `"Nope"` exactly as today; WCAG `showSeriously` stays ratio `< 1.3` at the display layer (or shared helper).
+3. Implement `getContrastDisplayResult(combination, algorithm, variant: "full" | "compact")` that:
+   - Calls `colorRating` or `apcaRating` for words.
+   - Returns `{ heading, metricLabel, metricValue, rows, showSeriously }`.
+   - `full`: home Results rows (WCAG small/bold/large + ratio; APCA full readability set).
+   - `compact`: card rows — WCAG small/large (current); APCA Body / Content / Large only.
+4. APCA: signed Lc in `metricValue`; no AA/AAA copy; missing `apca` → clear Unavailable state.
+5. Unit-test WCAG preservation, APCA derivation from `meets`, Seriously overlay boundaries, compact vs full row sets, missing `apca`.
 
 **Verification:**
 
 ```bash
-bunx vitest run src/utils/contrast-results/__tests__/index.spec.ts
+bunx vitest run src/utils/color-rating src/utils/contrast-results/__tests__/index.spec.ts
 ```
 
-Expected: result formatting tests pass.
+Expected: rating + formatting tests pass.
 
-### Task 6: Update home page rendering
+### Task 6: Wire toggle + home Results
 
-**Objective:** Show the toggle and render the two-color result in either WCAG or APCA mode.
+**Objective:** Mount the toggle on home and render Results from the shared formatter.
 
 **Files:**
 
-- Modify: `src/components/colorInputs/index.tsx` or `src/components/home/index.tsx` depending on best layout fit
+- Modify: `src/components/colorInputs/index.tsx` and/or `src/components/home/index.tsx`
 - Modify: `src/components/results/index.tsx`
-- Test: `src/components/results/__tests__/index.spec.tsx`
-- Possibly update snapshots used by home/results tests
+- Modify: `src/components/palette-page/index.tsx` (mount toggle here too)
+- Tests: results + related
 
 **Steps:**
 
-1. Wire `ContrastAlgorithmToggle` to `useSiteData()`.
-2. In `Results`, call `getContrastDisplayResult(colorInfo, siteData.algorithm)`.
-3. Render rows from the utility result rather than hard-coded WCAG rows.
-4. Keep the current WCAG DOM/test IDs where reasonable to avoid unnecessary test churn.
-5. Add APCA-specific test assertions:
-   - APCA mode shows `APCA Lc`.
-   - APCA mode does not show `AA: 4.5 AAA: 7.0`.
-   - WCAG mode still shows current labels and ratings.
+1. Wire `ContrastAlgorithmToggle` on **home** to `useSiteData().handleAlgorithmChange`.
+2. Wire the same toggle on **palette** to `usePaletteData().handleAlgorithmChange` (required; e2e depends on it).
+3. In `Results`, use `getContrastDisplayResult(..., "full")`. Heading from `heading`; render `AreYouSerious` (or equivalent) only when `showSeriously`.
+4. Keep WCAG DOM/test IDs where reasonable.
+5. Assertions: APCA shows `APCA Lc`, no `AA: 4.5 AAA: 7.0`; WCAG unchanged; Seriously overlay still works for near-zero pairs.
 
 **Verification:**
 
@@ -276,24 +251,21 @@ Expected: home rendering tests pass.
 
 ### Task 7: Update palette matrix/card rendering
 
-**Objective:** Render palette matrix cards using the selected algorithm.
+**Objective:** Algorithm-aware matrix without putting APCA policy inside `ColorCard`.
 
 **Files:**
 
 - Modify: `src/components/color-matrix/index.tsx`
 - Modify: `src/components/color-card/index.tsx`
-- Test: `src/components/color-matrix/__tests__/index.spec.tsx`
-- Test: `src/components/color-card/__tests__/index.spec.tsx`
+- Tests for both
 
 **Steps:**
 
-1. Add `algorithm: ContrastAlgorithm` to `ColorMatrixProps`.
-2. Pass `algorithm` from palette context through `PalettePage` into `ColorMatrix`.
-3. Change `ColorCard` props to accept the full `combination` plus `algorithm`, or add optional `apca` while keeping WCAG props. Prefer full combination if it simplifies utility reuse.
-4. In `ColorCard`, render compact output from `getContrastDisplayResult()`:
-   - WCAG: keep current ratio, small, large, and headline behavior.
-   - APCA: show `APCA Lc`, headline, and compact rows for `Body`, `Content`, and `Large`.
-5. Add tests for WCAG unchanged and APCA card rendering.
+1. Pass `algorithm` into `ColorMatrix`.
+2. `ColorMatrix` calls `getContrastDisplayResult(combination, algorithm, "compact")` and passes a display-oriented props object into `ColorCard`.
+3. `ColorCard` keeps the row swatch `color` prop (foreground). Do **not** drop it in favor of `combination.hex` alone (`combination.hex` is the other color / background cell).
+4. Prefer: card accepts display result + `color` (dumb). Avoid teaching the card `algorithm` or APCA row ids.
+5. Tests: WCAG cards unchanged; APCA shows Lc + Body/Content/Large; polarity asymmetry `(i,j)` vs `(j,i)` may differ under APCA (assert understanding, not equality).
 
 **Verification:**
 
@@ -305,7 +277,7 @@ Expected: palette card/matrix tests pass.
 
 ### Task 8: Add browser coverage
 
-**Objective:** Prove the user can switch algorithms and deep-link to APCA.
+**Objective:** Prove toggle, deep links, equal-color safety, and cleaned home URLs.
 
 **Files:**
 
@@ -314,16 +286,16 @@ Expected: palette card/matrix tests pass.
 
 **Steps:**
 
-1. Add home-page e2e coverage:
-   - default page shows WCAG contrast ratio.
-   - selecting APCA changes visible result to APCA Lc.
-   - URL reflects `algorithm=apca`.
-   - loading `/?algorithm=apca&textColor=...&background=...` starts in APCA mode.
-2. Add palette e2e coverage:
-   - default palette remains WCAG.
-   - selecting APCA changes cards to APCA Lc.
-   - URL preserves colors and adds algorithm.
-   - loading `/palette?colors=...&algorithm=apca` starts in APCA mode.
+1. Home:
+   - default shows WCAG contrast ratio / `Yup` personality as today.
+   - selecting APCA shows APCA Lc; URL gets `algorithm=apca` without `colorCombos=[object Object]`.
+   - `/?algorithm=apca&textColor=...&background=...` starts in APCA.
+   - `/?algorithm=apca` alone keeps APCA after default colors load.
+   - equal colors deep link (`textColor` === `background`) does not crash; APCA mode safe.
+2. Palette:
+   - default WCAG; selecting APCA updates cards and URL.
+   - `/palette?colors=...&algorithm=apca` starts in APCA.
+3. Update any exact home URL assertions that previously required junk `colorCombos` params.
 
 **Verification:**
 
@@ -335,33 +307,19 @@ Expected: Playwright suite passes.
 
 ### Task 9: Full validation and PR polish
 
-**Objective:** Ensure the implementation is CI-clean and reviewable.
-
-**Files:**
-
-- Update only files touched by the implementation.
-- Do not commit generated artifacts: `dist`, `.wrangler`, `worker-configuration.d.ts`, `node_modules`.
+**Objective:** CI-clean implementation PR after this plan is approved.
 
 **Steps:**
 
-1. Run focused tests as each task lands.
-2. Run full local gate:
+1. Focused tests per task, then full gate:
    ```bash
    bun run format:check && bun run lint && bun run test
    bun run build
    bun run smoke:routes && bun run e2e && bun run deploy:dry-run
    ```
-3. Review diff:
-   ```bash
-   git diff --check
-   git status --short
-   git diff --stat origin/main...HEAD
-   ```
-4. Commit with a conventional commit message:
-   ```bash
-   git commit -m "feat: add APCA contrast algorithm toggle"
-   ```
-5. Push and open the implementation PR only after this plan is approved.
+2. Do not commit `dist`, `.wrangler`, `worker-configuration.d.ts`, `node_modules`.
+3. Conventional commit, e.g. `feat: add APCA contrast algorithm toggle`.
+4. Implement on a fresh branch/worktree — do not reuse this planning branch.
 
 ---
 
@@ -369,43 +327,31 @@ Expected: Playwright suite passes.
 
 Use a fresh worktree and subagents. Do not reuse the planning branch.
 
-1. Create a branch:
-   ```bash
-   git fetch origin main --prune
-   git worktree add -b feat/apca-contrast-algorithm-toggle \
-     /opt/data/workspace/github/SiTaggart/AreMyColorsAccessible-apca-impl \
-     origin/main
-   ```
-2. Use Codex for implementation tasks where useful. Preferred command pattern:
-   ```bash
-   HOME=/opt/data/home codex exec \
-     -C /opt/data/workspace/github/SiTaggart/AreMyColorsAccessible-apca-impl \
-     -m gpt-5.5 \
-     -c 'model_reasoning_effort="xhigh"' \
-     -s workspace-write \
-     -o /tmp/codex-apca-task-last.md \
-     - < /tmp/codex-apca-task.md
-   ```
-3. If Codex rejects `gpt-5.5` or `xhigh`, stop and report the exact CLI/provider limitation instead of silently downgrading.
-4. Review subagent output yourself; do not trust agent self-reporting.
-5. Run the full validation gate locally and watch GitHub CI after push.
+1. Create a branch from latest `main`.
+2. Implement task-by-task; review agent output yourself.
+3. Run the full validation gate locally and watch GitHub CI after push.
 
 ## Acceptance criteria
 
-- WCAG 2.x remains the default everywhere.
-- Existing WCAG results and labels are preserved in WCAG mode.
-- Users can switch to APCA from the home page and palette page.
-- APCA mode displays APCA Lc and APCA-specific readability labels, not AA/AAA labels.
-- APCA mode keeps the app's `Yep` / `Kinda` / `Nope` headline language, with `Seriously?` for `|Lc| < 15`.
-- Selected algorithm is shareable via URL query string.
-- Invalid query-string algorithm values are ignored/fall back to WCAG.
-- Equal foreground/background colors do not crash and produce safe APCA output.
+- WCAG 2.x remains the default on home and palette.
+- Existing WCAG results and labels are preserved in WCAG mode (`Yup` / `Kinda` / `Nope`).
+- Users can switch to APCA from **both** the home page and the palette page (toggle mounted on each).
+- APCA mode displays APCA Lc and APCA readability labels, not AA/AAA labels.
+- Headline stays `Yup` / `Kinda` / `Nope` in both modes; `Seriously?` is overlay-only.
+- APCA headline derives from library `readability` `meets` flags (content / large).
+- Selected algorithm is shareable via that page's URL query string (`algorithm=apca` when selected).
+- Invalid or absent algorithm values fall back to WCAG; algorithm parses without requiring valid colors.
+- Equal foreground/background colors do not crash on init or edit and expose real APCA data.
+- Home URLs no longer include `colorCombos=[object Object]`.
+- About-page APCA explanation is out of scope (follow-up).
 - Unit tests, build/typecheck, route smoke tests, Playwright tests, and Wrangler dry-run deploy all pass.
 
 ## Risks and mitigations
 
-- **APCA terminology confusion:** avoid AA/AAA copy in APCA mode and label it clearly as APCA Lc/readability guidance.
-- **Missing APCA metadata:** handle `combination.apca` as optional even though current dependency provides it.
-- **URL churn:** preserve existing behavior and only add `algorithm` when needed.
-- **Snapshot churn:** centralize display logic first, then update snapshots deliberately.
-- **API contract creep:** keep API WCAG-only for this PR unless explicitly approved.
+- **APCA terminology confusion:** avoid AA/AAA copy in APCA mode; label Lc/readability clearly. Expect Body fail under Yup when 60 ≤ |Lc| < 75.
+- **Missing APCA metadata:** treat `combination.apca` as optional; Unavailable state.
+- **URL churn:** omit `algorithm` when `wcag2`; use `replace: true` for toggle writes.
+- **Per-page reset:** documented; not a bug if footer navigation drops `algorithm`.
+- **Snapshot churn:** centralize rating/display first, then update snapshots deliberately.
+- **API contract creep:** keep API WCAG-only; note shared rating reuse for a later APCA API PR.
+- **Profile drift:** pin expectations to `color-combos@1.2.1` / `apca-w3@0.1.9` until an intentional bump.
