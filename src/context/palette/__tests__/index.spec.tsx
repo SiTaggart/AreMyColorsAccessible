@@ -736,7 +736,7 @@ describe("usePaletteData hook", (): void => {
     await waitFor((): void => {
       const search = new URLSearchParams(history.location.search);
       expect(search.get("algorithm")).toBe("apca");
-      expect(search.getAll("colors")).toStrictEqual(colors);
+      expect(search.get("colors")).toBe(JSON.stringify(colors));
     });
 
     act((): void => {
