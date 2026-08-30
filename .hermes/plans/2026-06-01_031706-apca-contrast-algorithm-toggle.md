@@ -200,11 +200,17 @@ Expected: toggle component tests pass.
 **Steps:**
 
 1. Add `apcaRating(apca)` (or `apcaRating(lc, readability)`) returning at least:
+
    ```ts
-   { overall: "Yup" | "Kinda" | "Nope"; showSeriously: boolean }
+   {
+     overall: "Yup" | "Kinda" | "Nope";
+     showSeriously: boolean;
+   }
    ```
+
    - Derive `overall` from `readability.contentText.meets` / `largeText.meets` as in product decision 5.
    - `showSeriously` when `|Lc| < 15` (or `!nonText.meets` with near-zero handling) — overlay only, never as `overall`.
+
 2. Keep `colorRating` returning `"Yup"` / `"Kinda"` / `"Nope"` exactly as today; WCAG `showSeriously` stays ratio `< 1.3` at the display layer (or shared helper).
 3. Implement `getContrastDisplayResult(combination, algorithm, variant: "full" | "compact")` that:
    - Calls `colorRating` or `apcaRating` for words.
