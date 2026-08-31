@@ -51,7 +51,7 @@
     "@cloudflare/vite-plugin": "1.40.0",
     "@emotion/jest": "11.14.2",
     "@nkzw/eslint-plugin": "2.0.0",
-    "@nkzw/oxlint-config": "1.2.1",
+    "@nkzw/oxlint-config": "2.0.1",
     "@playwright/test": "1.60.0",
     "@tanstack/react-router-devtools": "1.167.0",
     "@testing-library/dom": "10.4.1",
