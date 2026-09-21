@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useNavigate } from "@tanstack/react-router";
-import Color from "color";
+import Color, { type ColorInstance } from "color";
 import ColorCombos, { ColorCombo } from "color-combos";
 import { ContrastAlgorithm, PalettePageQueryString } from "../../types";
 
@@ -22,9 +22,9 @@ interface PaletteDataProviderProps {
   queryString?: Partial<PalettePageQueryString>;
 }
 
-const convertColorStringsToColors = (colorStrings: Array<string>): Array<Color> | false => {
+const convertColorStringsToColors = (colorStrings: Array<string>): Array<ColorInstance> | false => {
   let isValidColor = true;
-  const colorTypes: Array<Color> = [];
+  const colorTypes: Array<ColorInstance> = [];
 
   // eslint-disable-next-line unicorn/no-array-for-each
   colorStrings.forEach((color: string): void => {
@@ -49,8 +49,8 @@ const convertColorValuesToArray = (colors: string): Array<string> => {
   return dedupedColors;
 };
 
-const isValidColor = (hex: string): Color | false => {
-  let color: Color | false = false;
+const isValidColor = (hex: string): ColorInstance | false => {
+  let color: ColorInstance | false = false;
   try {
     color = Color(hex);
   } catch {
@@ -162,7 +162,8 @@ const PaletteDataProvider: React.FC<PaletteDataProviderProps> = ({
   const handleNewColor = React.useCallback(
     (colors: string): void => {
       const colorsArray: Array<string> = convertColorValuesToArray(colors);
-      const convertedColors: Array<Color> | false = convertColorStringsToColors(colorsArray);
+      const convertedColors: Array<ColorInstance> | false =
+        convertColorStringsToColors(colorsArray);
       const mergedColors: Array<string> = mergeColorsWithState(colorsArray);
 
       if (convertedColors === false) {

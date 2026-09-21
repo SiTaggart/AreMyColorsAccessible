@@ -3,31 +3,18 @@ import Color from "color";
 import { HSLSliders } from "./styled";
 import { HSLSlider } from "../hsl-slider";
 
-interface HSLColorTypes extends Color {
-  color: Array<number>;
-}
-const roundHSLValues = ({ color }: Partial<HSLColorTypes>): HSLColor => {
-  let hue = 0;
-  let saturation = 0;
-  let lightness = 0;
-  if (color) {
-    [hue, saturation, lightness] = color;
-  }
-  return {
-    hue: Math.round(hue),
-    lightness: Math.round(lightness),
-    saturation: Math.round(saturation),
-  };
-};
-
 interface HSLColor {
   hue: number;
   lightness: number;
   saturation: number;
 }
 const convertToHSL = (hex: string): HSLColor => {
-  const hsl: Partial<HSLColorTypes> = Color(hex).hsl();
-  return roundHSLValues(hsl);
+  const hsl = Color(hex).hsl();
+  return {
+    hue: Math.round(hsl.hue()),
+    lightness: Math.round(hsl.lightness()),
+    saturation: Math.round(hsl.saturationl()),
+  };
 };
 
 interface HslSliderProps {
