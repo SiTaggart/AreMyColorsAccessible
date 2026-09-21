@@ -22,7 +22,7 @@ const wcagCombination: Combination = {
     aaaLarge: true,
     aaLarge: true,
   },
-  contrast: 4.658_034_537_943_552,
+  contrast: 4.658034537943552,
   hex: "#000000",
 };
 

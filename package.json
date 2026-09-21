@@ -69,7 +69,7 @@
     "eslint-plugin-unused-imports": "4.4.1",
     "jsdom": "30.0.1",
     "oxfmt": "0.53.0",
-    "oxlint": "1.68.0",
+    "oxlint": "1.85.0",
     "typescript": "7.0.2",
     "vite": "8.0.16",
     "vitest": "5.0.1",
