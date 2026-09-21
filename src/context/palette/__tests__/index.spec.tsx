@@ -90,7 +90,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 0, 255],
-              contrast: 2.148_936_170_212_766,
+              contrast: 2.148936170212766,
               hex: "#0000FF",
               model: "rgb",
               valpha: 1,
@@ -98,7 +98,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 128, 0],
-              contrast: 1.284_839_971_661_46,
+              contrast: 1.28483997166146,
               hex: "#008000",
               model: "rgb",
               valpha: 1,
@@ -114,7 +114,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
-              contrast: 2.148_936_170_212_766,
+              contrast: 2.148936170212766,
               hex: "#FF0000",
               model: "rgb",
               valpha: 1,
@@ -122,7 +122,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 128, 0],
-              contrast: 1.672_532_157_786_094_3,
+              contrast: 1.6725321577860943,
               hex: "#008000",
               model: "rgb",
               valpha: 1,
@@ -138,7 +138,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
-              contrast: 1.284_839_971_661_46,
+              contrast: 1.28483997166146,
               hex: "#FF0000",
               model: "rgb",
               valpha: 1,
@@ -146,7 +146,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 0, 255],
-              contrast: 1.672_532_157_786_094_3,
+              contrast: 1.6725321577860943,
               hex: "#0000FF",
               model: "rgb",
               valpha: 1,
@@ -174,7 +174,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [255, 192, 203],
-              contrast: 6.124_225_406_859_997,
+              contrast: 6.124225406859997,
               hex: "#FFC0CB",
               model: "rgb",
               valpha: 1,
@@ -182,7 +182,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [255, 165, 0],
-              contrast: 4.769_614_668_743_367,
+              contrast: 4.769614668743367,
               hex: "#FFA500",
               model: "rgb",
               valpha: 1,
@@ -198,7 +198,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [128, 0, 128],
-              contrast: 6.124_225_406_859_997,
+              contrast: 6.124225406859997,
               hex: "#800080",
               model: "rgb",
               valpha: 1,
@@ -206,7 +206,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 165, 0],
-              contrast: 1.284_008_422_523_894_1,
+              contrast: 1.2840084225238941,
               hex: "#FFA500",
               model: "rgb",
               valpha: 1,
@@ -222,7 +222,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [128, 0, 128],
-              contrast: 4.769_614_668_743_367,
+              contrast: 4.769614668743367,
               hex: "#800080",
               model: "rgb",
               valpha: 1,
@@ -230,7 +230,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 192, 203],
-              contrast: 1.284_008_422_523_894_1,
+              contrast: 1.2840084225238941,
               hex: "#FFC0CB",
               model: "rgb",
               valpha: 1,
@@ -302,7 +302,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: true },
               color: [255, 0, 0],
-              contrast: 3.998_476_770_753_998_5,
+              contrast: 3.9984767707539985,
               hex: "#FF0000",
               model: "rgb",
               valpha: 1,
@@ -318,7 +318,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: true },
               color: [255, 255, 255],
-              contrast: 3.998_476_770_753_998_5,
+              contrast: 3.9984767707539985,
               hex: "#FFFFFF",
               model: "rgb",
               valpha: 1,
@@ -444,7 +444,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 0, 255],
-              contrast: 2.148_936_170_212_766,
+              contrast: 2.148936170212766,
               hex: "#0000FF",
               model: "rgb",
               valpha: 1,
@@ -452,7 +452,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [128, 0, 128],
-              contrast: 2.355_641_379_714_500_6,
+              contrast: 2.3556413797145006,
               hex: "#800080",
               model: "rgb",
               valpha: 1,
@@ -468,7 +468,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
-              contrast: 2.148_936_170_212_766,
+              contrast: 2.148936170212766,
               hex: "#FF0000",
               model: "rgb",
               valpha: 1,
@@ -476,7 +476,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [128, 0, 128],
-              contrast: 1.096_189_552_936_450_7,
+              contrast: 1.0961895529364507,
               hex: "#800080",
               model: "rgb",
               valpha: 1,
@@ -492,7 +492,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
-              contrast: 2.355_641_379_714_500_6,
+              contrast: 2.3556413797145006,
               hex: "#FF0000",
               model: "rgb",
               valpha: 1,
@@ -500,7 +500,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 0, 255],
-              contrast: 1.096_189_552_936_450_7,
+              contrast: 1.0961895529364507,
               hex: "#0000FF",
               model: "rgb",
               valpha: 1,
@@ -531,7 +531,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
-              contrast: 2.024_762_644_185_438_7,
+              contrast: 2.0247626441854387,
               hex: "#FF0000",
               model: "rgb",
               valpha: 1,
@@ -539,7 +539,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [128, 0, 128],
-              contrast: 4.769_614_668_743_367,
+              contrast: 4.769614668743367,
               hex: "#800080",
               model: "rgb",
               valpha: 1,
@@ -555,7 +555,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 165, 0],
-              contrast: 2.024_762_644_185_438_7,
+              contrast: 2.0247626441854387,
               hex: "#FFA500",
               model: "rgb",
               valpha: 1,
@@ -563,7 +563,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [128, 0, 128],
-              contrast: 2.355_641_379_714_500_6,
+              contrast: 2.3556413797145006,
               hex: "#800080",
               model: "rgb",
               valpha: 1,
@@ -579,7 +579,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: true, aaa: false, aaaLarge: true, aaLarge: true },
               color: [255, 165, 0],
-              contrast: 4.769_614_668_743_367,
+              contrast: 4.769614668743367,
               hex: "#FFA500",
               model: "rgb",
               valpha: 1,
@@ -587,7 +587,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
-              contrast: 2.355_641_379_714_500_6,
+              contrast: 2.3556413797145006,
               hex: "#FF0000",
               model: "rgb",
               valpha: 1,
@@ -618,7 +618,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: true },
               color: [0, 0, 255],
-              contrast: 4.351_085_682_185_73,
+              contrast: 4.35108568218573,
               hex: "#0000FF",
               model: "rgb",
               valpha: 1,
@@ -626,7 +626,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
-              contrast: 2.024_762_644_185_438_7,
+              contrast: 2.0247626441854387,
               hex: "#FF0000",
               model: "rgb",
               valpha: 1,
@@ -642,7 +642,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: true },
               color: [255, 165, 0],
-              contrast: 4.351_085_682_185_73,
+              contrast: 4.35108568218573,
               hex: "#FFA500",
               model: "rgb",
               valpha: 1,
@@ -650,7 +650,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 0, 0],
-              contrast: 2.148_936_170_212_766,
+              contrast: 2.148936170212766,
               hex: "#FF0000",
               model: "rgb",
               valpha: 1,
@@ -666,7 +666,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [255, 165, 0],
-              contrast: 2.024_762_644_185_438_7,
+              contrast: 2.0247626441854387,
               hex: "#FFA500",
               model: "rgb",
               valpha: 1,
@@ -674,7 +674,7 @@ describe("usePaletteData hook", (): void => {
             {
               accessibility: { aa: false, aaa: false, aaaLarge: false, aaLarge: false },
               color: [0, 0, 255],
-              contrast: 2.148_936_170_212_766,
+              contrast: 2.148936170212766,
               hex: "#0000FF",
               model: "rgb",
               valpha: 1,
