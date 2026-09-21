@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useNavigate } from "@tanstack/react-router";
-import Color from "color";
+import Color, { type ColorInstance } from "color";
 import ColorCombos, { ColorCombo } from "color-combos";
 import { ContrastAlgorithm, HomePageQueryString, SiteData } from "../../types";
 
@@ -26,8 +26,8 @@ const checkBackgroundLightness = (hex: string): boolean => {
   return light;
 };
 
-const isValidColor = (value: string): Color | false => {
-  let color: Color | false = false;
+const isValidColor = (value: string): ColorInstance | false => {
+  let color: ColorInstance | false = false;
   try {
     color = Color(value);
   } catch {
