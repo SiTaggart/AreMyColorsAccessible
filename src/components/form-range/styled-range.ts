@@ -71,10 +71,12 @@ export const StyledRange = styled.input`
   &::-webkit-slider-thumb {
     ${thumb};
     -webkit-appearance: none;
-    margin-top: ${(-Number.parseInt(trackBorderWidth.replace("px", ""), 10) * 2 +
-      Number.parseInt(trackHeight.replace("px", ""), 10)) /
-      2 -
-    Number.parseInt(thumbHeight.replace("px", ""), 10) / 2}px;
+    margin-top: ${
+      (-Number.parseInt(trackBorderWidth.replace("px", ""), 10) * 2 +
+        Number.parseInt(trackHeight.replace("px", ""), 10)) /
+        2 -
+      Number.parseInt(thumbHeight.replace("px", ""), 10) / 2
+    }px;
   }
 
   &:focus::-webkit-slider-runnable-track {
