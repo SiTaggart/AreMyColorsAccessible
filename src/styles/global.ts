@@ -18,17 +18,8 @@ const globalStyles = css`
 
   body {
     font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen-Sans,
-      Ubuntu,
-      Cantarell,
-      "Helvetica Neue",
-      Arial,
-      sans-serif;
+      system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+      Cantarell, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.4;
   }
 

@@ -106,23 +106,21 @@ const HslSliders: React.FC<HslSliderProps> = memo(
 
     return (
       <HSLSliders data-testid="form-hsl-sliders" variant={variant}>
-        {hslRanges.map(
-          (range): ReactElement => (
-            <HSLSlider
-              data-testid={`${id}-${range.label}`}
-              id={`${id}-${range.label}`}
-              key={`${id}-${range.label}`}
-              label={range.label}
-              max={range.max}
-              min={range.min}
-              onChange={range.handleOnChange}
-              onInput={range.handleOnChange}
-              symbol={range.symbol}
-              value={range.value}
-              variant={variant}
-            />
-          ),
-        )}
+        {hslRanges.map((range): ReactElement => (
+          <HSLSlider
+            data-testid={`${id}-${range.label}`}
+            id={`${id}-${range.label}`}
+            key={`${id}-${range.label}`}
+            label={range.label}
+            max={range.max}
+            min={range.min}
+            onChange={range.handleOnChange}
+            onInput={range.handleOnChange}
+            symbol={range.symbol}
+            value={range.value}
+            variant={variant}
+          />
+        ))}
       </HSLSliders>
     );
   },

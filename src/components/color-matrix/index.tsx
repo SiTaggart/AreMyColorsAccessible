@@ -52,62 +52,58 @@ const ColorMatrix: React.FC<ColorMatrixProps> = ({
               width: "6rem",
             }}
           />
-          {colorCombos.map(
-            (color, index): ReactElement => (
-              <StyledColorMatrixTh data-testid="colorMatrix-th" key={index} scope="col">
-                <FormInput
-                  ariaLabel="hex colour code"
-                  css={{
-                    marginBottom: "0.5rem",
-                  }}
-                  data-testid={`colorhex-${index}`}
-                  id={`colorhex-${index}`}
-                  onChange={(e): void => onColorChange(e.target.value, index)}
-                  value={colors[index]}
-                />
-                <HslSliders
-                  data-testid={`hsl-${index}`}
-                  id={`hsl-${index}`}
-                  onChange={(hex): void => onColorChange(hex, index)}
-                  value={color.hex}
-                  variant="compact"
-                />
-              </StyledColorMatrixTh>
-            ),
-          )}
+          {colorCombos.map((color, index): ReactElement => (
+            <StyledColorMatrixTh data-testid="colorMatrix-th" key={index} scope="col">
+              <FormInput
+                ariaLabel="hex colour code"
+                css={{
+                  marginBottom: "0.5rem",
+                }}
+                data-testid={`colorhex-${index}`}
+                id={`colorhex-${index}`}
+                onChange={(e): void => onColorChange(e.target.value, index)}
+                value={colors[index]}
+              />
+              <HslSliders
+                data-testid={`hsl-${index}`}
+                id={`hsl-${index}`}
+                onChange={(hex): void => onColorChange(hex, index)}
+                value={color.hex}
+                variant="compact"
+              />
+            </StyledColorMatrixTh>
+          ))}
         </StyledColorMatrixTr>
       </thead>
       <tbody>
-        {colorCombos.map(
-          (color, index): ReactElement => (
-            <StyledColorMatrixTr data-testid="colorMatrix-tr" key={index}>
-              <StyledColorMatrixTh data-testid="colorMatrix-th" scope="row">
-                {color.hex}
-              </StyledColorMatrixTh>
-              {color.combinations.map((combo, comboIndex): ReactElement => {
-                const result = getContrastDisplayResult(combo, algorithm, "compact");
-                return (
-                  <React.Fragment key={comboIndex}>
-                    {index === comboIndex && <StyledColorMatrixTd>&nbsp;</StyledColorMatrixTd>}
-                    <StyledColorMatrixTd
-                      style={{
-                        backgroundColor: combo.hex,
-                      }}
-                    >
-                      <ColorCard
-                        color={color.hex}
-                        heading={result.heading}
-                        metricLabel={result.metricLabel}
-                        metricValue={result.metricValue}
-                        rows={result.rows}
-                      />
-                    </StyledColorMatrixTd>
-                  </React.Fragment>
-                );
-              })}
-            </StyledColorMatrixTr>
-          ),
-        )}
+        {colorCombos.map((color, index): ReactElement => (
+          <StyledColorMatrixTr data-testid="colorMatrix-tr" key={index}>
+            <StyledColorMatrixTh data-testid="colorMatrix-th" scope="row">
+              {color.hex}
+            </StyledColorMatrixTh>
+            {color.combinations.map((combo, comboIndex): ReactElement => {
+              const result = getContrastDisplayResult(combo, algorithm, "compact");
+              return (
+                <React.Fragment key={comboIndex}>
+                  {index === comboIndex && <StyledColorMatrixTd>&nbsp;</StyledColorMatrixTd>}
+                  <StyledColorMatrixTd
+                    style={{
+                      backgroundColor: combo.hex,
+                    }}
+                  >
+                    <ColorCard
+                      color={color.hex}
+                      heading={result.heading}
+                      metricLabel={result.metricLabel}
+                      metricValue={result.metricValue}
+                      rows={result.rows}
+                    />
+                  </StyledColorMatrixTd>
+                </React.Fragment>
+              );
+            })}
+          </StyledColorMatrixTr>
+        ))}
       </tbody>
     </StyledColorMatrixTable>
   </StyledColorMatrix>
