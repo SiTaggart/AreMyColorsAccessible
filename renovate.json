@@ -10,6 +10,11 @@
     {
       "matchPackageNames": ["query-string"],
       "allowedVersions": "<8.0.0"
+    },
+    {
+      "groupName": "oxlint",
+      "matchPackageNames": ["@nkzw/oxlint-config", "oxlint"],
+      "separateMajorMinor": false
     }
   ]
 }
