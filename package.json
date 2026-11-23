@@ -50,7 +50,7 @@
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.69.1",
     "@emotion/jest": "11.14.2",
-    "@nkzw/eslint-plugin": "2.0.0",
+    "@nkzw/eslint-plugin": "3.0.0",
     "@nkzw/oxlint-config": "2.0.1",
     "@playwright/test": "1.65.1",
     "@tanstack/react-router-devtools": "1.167.3",
